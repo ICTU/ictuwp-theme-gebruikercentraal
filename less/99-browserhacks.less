@@ -1,0 +1,38 @@
+.browserhacks() {
+
+// Gebruiker Centraal - 99-browserhacks.less
+// ----------------------------------------------------------------------------------
+// bevat CSS voor stomme browsers
+// ----------------------------------------------------------------------------------
+// @package gebruiker-centraal
+// @author  Paul van Buuren
+// @license GPL-2.0+
+// @version 3.6.3
+// @desc.   Archive pagina
+// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+
+
+  .ie8, .ie7, .ie6 {
+      img {
+        height: auto;
+        width: auto; /* IE8 */
+      }
+  }
+
+
+  .ie6, .ie7 {
+      
+      .content {
+        width: ( @break_fullwidth - ( ( 4 * @gutter ) + @sidebar_width ) ) ;
+      }
+      .nav-primary {
+          li {
+              display: inline;
+          }
+      }
+      .social-media {
+          .visuallyhidden();
+      }
+  
+  }  
+}

@@ -1,0 +1,990 @@
+
+.pagetypes() {
+
+// Gebruiker Centraal - 70-pagetypes.less
+// ----------------------------------------------------------------------------------
+// bevat CSS voor de diverse type pagina's
+// ----------------------------------------------------------------------------------
+// @package gebruiker-centraal
+// @author  Paul van Buuren
+// @license GPL-2.0+
+// @version 3.7.10
+// @desc.   Share buttons on mobile screens.
+// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+
+// ================================================================================
+.backgroundsettings(@content_bg_color, @text: '') {
+}
+.backgroundsettings_test(@content_bg_color, @text: '') {
+  &:before {
+    content: '@{text}: @content_bg_color: @{content_bg_color}';
+    background: yellow;
+    border: 1px solid black;
+    color: black;
+    padding: .5em;
+  }
+}
+// ================================================================================
+.superpadding() {
+  padding-left: 4em;
+  padding-right: 4em;
+}
+
+// ================================================================================
+
+//@lichtgrijs: green;
+@pijltje: ( 1.3 * @padding);
+@transform: ( ( -1 * @pijltje ) + 3px );
+@avatar: 82px;
+
+// ================================================================================
+
+.single,
+.single-event {  
+
+  .content {
+    
+    article {
+      background: @wit;
+    }
+
+    .wrap.excerpt,
+    .wrap.event-links,
+    .contains-author-box,
+    .wrap.description,
+    header {
+      margin-bottom: 1em;
+    }
+    .contains-author-box {
+      clear: both;
+      float: none;
+    }
+
+    
+  }
+
+  .site-inner {
+
+    margin: 0 auto;
+    max-width: 100%;
+      
+    header {
+      position: relative;
+      margin-top: 2em;
+      padding-left: 4em;
+      
+      h1 {
+        margin: 0;
+        padding: 0;
+      }
+  
+      .date-badge {
+        .datebadge_groot(@groen_1, 3em);
+      }  
+  
+      .meta,
+      .entry-meta {
+        border-bottom: 2px solid @border_grijs;
+        padding-bottom: 1em;
+        color: @txt_grijs;  
+      }
+    }
+
+    .authorbox_css_pijl_top();
+  }  
+
+  
+  #comments,
+  #respond {
+    margin: 0 auto 4em auto;
+    max-width: @break_fullwidth;
+    padding: 0;
+
+      h3, h2 {
+        padding-left: 1em;
+        font-family: @headerfont;
+        .fontsize(30);
+        text-transform: uppercase;
+      }
+    
+  }
+  #comments {
+    #respond {
+      background: none;
+      form {
+        background: @wit;
+        padding: 1em;
+        overflow: hidden;
+      }
+    }
+  }
+
+
+  .entry-comments {
+    background: none;
+  }
+
+  .entry-content {
+    .meta {
+      border-bottom: 2px solid @border_grijs;
+    }
+  }
+
+  
+}  
+
+
+.single {
+
+  @media only screen and (min-width: @break_tablet ) {
+    .content {
+      #comments,
+      .entry-content {
+        .superpadding();
+      }
+    }
+    .entry-content,
+    header {
+      position: relative;
+    }
+  }
+}
+
+.single .entry-content,
+.page .entry-header {
+
+
+  @media only screen and (max-width: ( @break_tablet - 1 ) ) {
+
+    .share-buttons {
+      overflow: hidden;
+      margin: 3px 0 1em 0;
+      text-align: center;
+      
+      li {
+        display: inline-block;
+        float: none;
+      }
+    }  
+  }  
+  @media only screen and (min-width: @break_tablet ) {
+  
+    position: relative;
+  
+    .share-buttons {
+    
+      
+      
+      position: absolute;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+    
+      li {
+        display: block;
+        float: none;
+      }
+    }
+  }
+}
+
+.page {
+  
+  @media only screen and (min-width: @break_tablet ) {
+    .content {
+      #comments,
+      .entry-content {
+        .superpadding();
+      }
+    }
+    .entry-header {
+      .superpadding();
+      .entry-title {
+        padding-top: .5em;
+      }
+    }
+    .entry-content,
+    header {
+      position: relative;
+    }
+  }
+}
+
+
+body {
+  background: @wit;
+  .backgroundsettings(@wit, 'body ');
+}
+
+.site-inner {
+  background: @content_bg_color;
+  .backgroundsettings(@content_bg_color, '.site-inner');
+}
+
+body.home,
+.archive,
+.category,
+.page-template-page_evenementen,
+.single-event,
+.page-template-page_actieteam,
+.page-template-page_alle-auteurs {
+
+
+  background: @light_gray;
+  .backgroundsettings(@sitecontainer_bg, '.site-inner');
+    
+  .site-inner {
+    background: @sitecontainer_bg;
+    .backgroundsettings(@sitecontainer_bg, '.archive, .category, .page-template-page_evenementen, .single-event: -> .site-inner');
+  }
+}
+
+.author {
+
+    .authorbox_css_pijl_bottom(@wit);
+
+    .contains-author-box {
+      clear: both;
+      float: none;
+    }
+    .bg-color {
+    }
+  
+}
+
+.single {
+
+  background: @light_gray;
+  .backgroundsettings(@sitecontainer_bg, '.single');
+    
+  .site-inner {
+    background: @sitecontainer_bg;
+    .backgroundsettings(@sitecontainer_bg, '.single: -> .site-inner');
+  }
+}
+
+.page-template-page_actieteam,
+.page-template-page_alle-auteurs {
+    .authorbox_css( @wit );
+
+    .actieteam {
+      
+      margin-bottom: 3em;
+      
+      .contains-author-box {
+        .standardboxshadow();
+      } 
+
+      .contains-author-box + .contains-author-box {
+        margin-top: 1em;
+      }
+
+    }
+}
+
+.single-event {
+  .content {
+    background: @bodybgcolor;
+  }  
+}
+
+.home {
+  .breadcrumb {
+    &:after {
+      content: ' ';
+      display: block;
+      background: @breadcrumb_bg_color;
+      height: ( 3 * @padding );
+      width: 100%;
+      display: block;
+    }
+  }
+  .site-inner {
+    margin-top: ( -3 * @padding );
+  }
+}
+
+.manifest {
+  background: @groen_2;
+  padding: 0 0 @padding 0;
+  color: @wit;
+  margin-bottom: ( 3 * @padding );
+  .standardboxshadow();
+  
+  header {
+    padding:  @padding;
+    background: @groen_1;
+    h1 {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .content {
+    padding:  @padding;
+  }
+  a {
+    color: @wit;
+  }
+  a.cta {
+    .knoppify(transparent, #00832A, #0CA13B, #1BB24B, @wit, 32, 0);
+    text-transform: uppercase;
+  }
+  ul {
+  
+    li {
+      display: list-item;
+      padding: 0 2em 0 .3em;
+      margin-left: .2em;
+      .iconaddbullet('../images/bullet.svg', @wit);
+    }
+  }          
+}
+
+// ========================================================================
+#event_map {
+  width: 100%;
+  background: @groen_2;
+  
+  h2 {
+    a, & {
+      color: @wit;
+    }
+    a {
+      text-decoration: none;
+      
+      &:hover,
+      &:focus,
+      &:active {
+        text-decoration: underline;
+      }
+    }
+  }
+  &.geen-programma {
+    padding: @padding;
+    overflow: hidden;
+    color: @wit;
+  }
+
+  .em-map-balloon {
+    color: @txt !important;
+    font-family: @bodyfont;
+  }
+}
+// ========================================================================
+#event_map_en_programma {
+  background: @groen_2;
+  padding: 0 @padding @padding @padding;
+  overflow: hidden;
+  color: @wit;
+  margin-bottom: 3em;
+
+  h2 {
+    margin-top: .5em;
+    margin-bottom: 0;
+  }
+
+  #event_map {
+    overflow: hidden;
+    float: none;
+
+    .em-location-map-container,
+    [itemprop="address"] {
+      float: left;
+    }
+    
+    .em-location-map-container  {
+      width: 60%;
+      margin: 0;
+    }
+
+    [itemprop="address"] {
+        width: 40%;
+        padding-left: 1em;
+    }
+
+  }
+}
+// ========================================================================
+.entry-content {
+  .event-program {
+    &, li {
+      display: block;
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+      width: 100%;
+    }
+    
+    li {
+      overflow: hidden;
+      float: none;
+      clear: both;
+      border-top: 1px solid @wit; // @wit;
+      border-bottom: 1px solid @wit; // @wit;
+      padding-top: @padding;
+      
+      
+      & + li {
+        border-top-style: none;
+      }
+    }
+    p {
+      margin: 0;
+    }
+    
+    span, & {
+      display: inline-block;
+      overflow: hidden;
+    }
+    span {
+      padding: 0 1em 1em 0;
+      float: left;
+      
+      &.beschrijving {
+        width: 99%;
+      }
+      &.tijd {
+        width: @programa_tijd_width;
+      }
+    }        
+    span + .beschrijving {
+      width: @programa_desc_width;
+    }
+  }
+}
+    
+// ========================================================================
+
+.page-template-page_evenementen,
+.single-event {
+
+  .entry-content {
+    .luiewijvenshizzle();
+  }
+}
+    
+// ========================================================================
+
+.andere-bijeenkomsten {
+  background: @groen_1;
+  margin: 1em 0 2em 0;
+  
+  .wrap {
+    padding: 1em;
+  }
+  h2, p {
+    color: @wit;
+    text-align: center;
+  }
+  h2 {
+    font-family: @headerfont;
+    .fontsize(36);
+    padding-top: 0;
+  }
+  ul {
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;        
+    
+    &, li {
+      list-style: none;
+    }
+    li {
+      margin: .5em;
+      padding-left: 0;
+      display: inline-block;
+      
+    }
+    a {
+      .knoppify(transparent, #00832A, #0CA13B, #1BB24B, @wit, 24, 0);
+      text-transform: uppercase;
+    }      
+  }      
+}
+    
+// ========================================================================
+
+#em-wrapper {
+  
+  section {
+    .standardboxshadow();
+    position: relative;
+    overflow: hidden;
+  }
+  
+  section + section {
+    margin-top: .5em;
+  }
+
+  
+  section a {
+    text-decoration: none;
+    display: block;
+    background: @wit;
+    
+    header {
+      position: relative;
+      padding: @padding @padding 0 60px;
+
+      h3 {
+        margin: 0;
+        padding: 0 0 .2em 0;
+      }
+    }
+    .excerpt {
+      border-top: 2px solid @border_grijs;
+      margin: 0 @padding;
+      padding: @padding 0;
+      .fontsize(14);
+    }
+    .excerpt,
+    .meta {
+      color: @txt_grijs;  
+    }
+
+    .datebadge();
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: @groen_4;
+
+    .ezelsoortje();
+
+      &,
+      .excerpt,
+      .meta {
+        color: @txt;
+      }
+
+      .excerpt {
+        border-color: @groen_1;
+      }
+
+      .date-badge {
+        border-color: @txt;
+      }
+    }
+  }      
+}
+    
+// ========================================================================
+
+.single-event {
+  
+  .content {
+    
+    .em-booking {
+      h2 {
+        padding: @padding;
+      }
+
+      .booking-message,
+      form {
+        background: @wit;
+        color: @txt;
+        padding: @padding;
+        margin: 0;
+      }
+    }
+    
+    
+  }
+
+
+}
+
+.event-bookings {
+  background: @blauw5;
+  color: @wit;
+}
+
+.attendees-list {
+  background: @blauw6;
+  color: @wit;
+  padding: @padding;
+
+  .event-aanmeldingen {
+    display: inline-block;
+    background: transparent url('images/icon-calendar.png') no-repeat left center;
+    margin-left: 2em;
+    .icon_pin_fill('../images/icon-calendar.svg', @wit);
+    padding-left: 20px;
+    font-family: @bodyfont;
+    font-size: 14px;
+    text-transform: none;
+    font-weight: normal;
+  }
+  
+  .event-attendees {
+    overflow: hidden;
+
+    &, li {
+      list-style: none;
+      padding-left: 0;
+      margin-left: 0;
+    }
+
+    li {
+      margin: 0;
+      padding: 0;    
+      
+      span {
+        border-top: 1px solid #0F90B2;
+        display: block;
+        padding: .5em 0;
+        margin: 0 2em 0 0;
+      }
+    }
+  }
+}
+      
+
+.em-location-map-container {
+  width: 100%;
+  height: 400px;
+  margin-right: @padding;
+}
+
+    // ========================================================================
+
+
+  @media only screen and (min-width: @break_tablet ) {
+
+    .manifest {
+      ul {
+        clear: both;
+        display: block;
+        float: none;
+        overflow: hidden;
+        margin-left: 0;
+        
+        li {
+          display: list-item;
+          float: left;
+          width: 48%;
+          padding: 0 2em 0 .3em;
+          margin-left: .2em;
+          margin-bottom: 1em;
+          clear: left;
+        }
+        li:nth-child(2n+2) {
+          clear: right;
+        }
+      } 
+    }
+    
+    .home {
+
+      #home-widgets {
+        overflow: hidden;
+      }
+      
+      #home-widgets-left {
+        width: 60%;
+      }
+      #home-widgets-right {
+        width: 40%;
+      }
+      #home-widgets-left,
+      #home-widgets-right {
+        float: left;
+        overflow: hidden;
+        display: inline-block;
+        padding: 0 1em 1em 0;
+      }
+    }
+  
+
+    .single-event {
+
+      .wrap.excerpt,
+      .wrap.description {
+          position: relative;
+      }
+      .share-buttons {
+        position: absolute;
+        left: 0;
+        top: 0;
+        li {
+          display: block;
+          float: none;
+        }
+      }
+      .entry,
+      .content {
+        padding: 0;
+      }
+      .content {
+
+        h2 {
+          padding-top: 0;
+          margin-top: 0;
+        }
+
+        .wrap.excerpt,
+        .wrap.event-links,
+        .contains-author-box,
+        .wrap.description,
+        #event_map.geen-programma,
+        header {
+          .superpadding();
+        }
+
+      }
+    } 
+
+
+
+    .event-attendees {
+
+
+      li {
+        width: 50%;
+        float: left;
+      }
+
+      li:nth-child(odd) {
+        clear: left;
+      }
+
+      li:nth-child(even) {
+        span {
+          margin: 0;              
+        }
+      }
+      
+      li {
+        &:first-child, 
+        &:nth-child(2) {
+          span {
+          	border-style: none;
+          }
+        }
+      }
+
+
+      /* http://lea.verou.me/2011/01/styling-children-based-on-their-number-with-css3/ */
+      /* one item */
+      li:first-child:nth-last-child(1) {
+      	width: 100% !important;
+      }          
+
+      /* if 1, 2, or 3 items */
+      li:first-child:nth-last-child(1),
+      li:first-child:nth-last-child(2),
+      li:first-child:nth-last-child(2) ~ li,
+      li:first-child:nth-last-child(3),
+      li:first-child:nth-last-child(3) ~ li {
+        span {
+          border-top: 1px solid #0F90B2;
+        }
+      }
+    }
+
+       
+  }
+
+  @media only screen and (min-width: @break_fullwidth ) {
+
+
+
+    #event_map_en_programma {
+
+      
+      #programma,
+      #event_map {
+        width: 50%;
+        float: left;
+      }
+
+      #event_map {
+        padding-right: 1em;
+
+  
+        .em-location-map-container,
+        [itemprop="address"] {
+          width: 100%;
+          margin: 0;
+          float: none;
+        }
+  
+        [itemprop="address"] {
+            padding-left: 0;
+        }
+        
+        &.geen-programma {
+          .em-location-map-container,
+          [itemprop="address"] {
+            width: 50%;
+            float: left;
+          }
+        }
+      }
+    }
+    #event_map {
+      &.geen-programma {
+        .em-location-map-container,
+        [itemprop="address"] {
+          width: 50%;
+          margin: 0;
+          float: left;
+        }
+        [itemprop="address"] {
+            padding-left: 1em;
+        }
+        
+      }
+    }
+
+    .em-booking-login,
+    .em-booking-form {
+      .login.username,
+      .login.password,
+      .booking.phone.half,
+      .booking.spaces,
+      .booking.name,
+      .booking.email {
+         width: 50%;
+         float: left;
+    
+         input,
+         select {
+           height: 37px;
+         }
+         
+      }
+      .booking.phone.half,
+      .login.username,
+      .booking.name {
+        padding-right: 1em;        
+      }
+      .booking.spaces,
+      .login.password,
+      .booking.email {
+        padding-left: 1em;        
+      }
+    }
+  }
+}
+
+.archive_page() {
+
+  .archive {
+
+    .featuredimage_blogarchive( @featimg_mobile_width, @featimg_mobile_height  );
+
+    .entry + .entry {
+      border-top: 2px solid @lichtgrijs;
+    }
+
+    .archive-list {
+      overflow: hidden;
+      .blogberichtshared( @featimg_mobile_height, @readmore_width, @readmore_height, ( @featimg_mobile_height - ( 2 * @padding ) )  );
+
+      padding: 0;
+      margin-bottom: 4em;
+      
+      section {
+        background: @wit;
+      }
+
+      p, 
+      h2, 
+      .entry,
+      header,
+      .widget-wrap {
+        padding: 0;
+        margin: 0;
+      }
+
+      h2 {
+        color: @txt;
+      }
+      .entry {
+    
+        a {
+          padding: 1em;
+          margin: 0;
+        }    
+      }    
+
+      .random_bg_images('images/blog-feature-image-default.png', 'images/blog-feature-image-default.svg');
+    }
+  }
+
+  @media only screen and (min-width: @break_tablet ) {
+
+    .archive {
+
+      .featuredimage_blogarchive( @featimg_tablet_width, @featimg_tablet_height  );
+
+      .entry.enorm-huge {
+        min-height: @featimg_tablet_enorm_huge;
+
+        &.entry {
+          a {
+            padding: 0;
+            min-height: @featimg_tablet_enorm_huge;
+            
+            &:hover,
+            &:focus,
+            &:active {
+              .bloginfo {
+                border: 1px solid @txt;
+              }
+            }
+            
+          }
+        }
+      
+        .feature-image {
+          display: block;
+          float: none;
+          clear: both;
+          min-height: @featimg_tablet_enorm_huge;
+          width: 100%;
+        }  
+
+        .bloginfo {
+          background: @wit;
+          border: 1px solid transparent;
+          overflow: hidden;
+          z-index: 999;
+          position: absolute;
+          bottom: @padding;
+          left: @padding;
+          margin: 0 @padding 0 0;
+          padding: @padding;
+        }
+      }  
+    }
+  }
+
+  @media only screen and (min-width: @break_fullwidth ) {
+
+    .archive {
+
+      .featuredimage_blogarchive( @featimg_desktop_width, @featimg_desktop_height  );
+
+      .entry.enorm-huge {
+        min-height: @featimg_desktop_enorm_huge;
+
+        &.entry {
+          a {
+            padding: 0;
+            min-height: @featimg_desktop_enorm_huge;
+          }
+        }
+        .feature-image {
+          min-height: @featimg_desktop_enorm_huge;
+        }  
+        .feature-image {
+          min-height: @featimg_desktop_enorm_huge;
+          border-color: red;
+          width: 100%;
+        }  
+      }  
+    }
+  }
+}

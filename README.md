@@ -1,4 +1,4 @@
-# Gebruiker Centraal WordPress theme
+# Gebruiker Centraal
 
 'gebruiker-centraal' is ontwikkeld als WordPress-theme voor [gebruikercentraal.nl](http://www.gebruikercentraal.nl). Opdrachtgever is ICTU (ICT Uitvoeringsorganisatie). Ontwikkelaar is Paul van Buuren ([WBVB Rotterdam](https://wbvb.nl)). 
 
@@ -10,4 +10,6 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 
 ## Version history
 
-* 3.8.3 - CF7 form for mailinglist plugin.
+* 3.8.2 - CF7 form for mailinglist plugin.
+
+

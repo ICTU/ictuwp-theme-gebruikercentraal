@@ -1,0 +1,172 @@
+.footerstyling() {
+
+// Gebruiker Centraal - 81-footers.less
+// ----------------------------------------------------------------------------------
+// bevat CSS voor de styling van footers
+// ----------------------------------------------------------------------------------
+// @package gebruiker-centraal
+// @author  Paul van Buuren
+// @license GPL-2.0+
+// @version 3.7.5
+// @desc.   Beta-versie voor live-gang. CSS-corrections. Post - file-uploads. Corrections for mobile menu button. Widget-corrections.
+// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+
+  
+  /*
+  Footer Widgets
+  ---------------------------------------------------------------------------------------------------- */
+  
+  .site-footer,
+  .footer-widgets {
+    color: @txt;
+    clear: both;
+    padding: 0;
+    .fontsize(14);
+    text-align: left;
+    &, a {
+      color: @wit;
+    }
+    
+    .wrap {
+      color: @wit;
+    }
+    .widget {
+      margin: 0 0 1em 0;
+      overflow: hidden;
+    }
+    .widgettitle {
+      color: @wit;
+      padding-top: 0;
+      margin-top: 0;
+      font-family: @headerfont;
+      .fontsize(22);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    li, ul {
+      margin-left: 0;
+      padding-left: 0;
+    }
+    ul ul {
+      margin-left: 1em;
+    }
+    li {
+      list-style-type: none;
+      margin-bottom: ( @padding / 2 );
+      word-wrap: break-word;
+    }
+    
+    .search-form input:focus {
+      border: 1px solid @wit;
+    }
+  }
+
+  .footer-widgets {
+    background: @header_bg_color;
+    padding: ( 2 * @padding ) 0 @padding 0;
+
+    .widget-area {
+      margin: 0 1em;
+    }
+
+    ul.menu {
+        overflow: hidden;
+        padding-left: 0;
+        
+        li {
+            display: inline-block;
+            float: left;
+            margin: 0 @padding ( @padding / 2 ) 0;
+        }
+        li + li {
+            &:before {
+                content: '|';
+                display: inline-block;
+                float: left;
+                margin: 0 ( @padding / 1 ) 0 0;
+            }
+        }
+        a {
+            font-weight: normal;
+            text-decoration: none;
+            text-transform: lowercase;
+
+            &:hover,
+            &:focus,
+            &:active {
+              text-decoration: underline;
+              color: @wit;
+            }
+            
+        }
+    }
+      
+    
+  }
+  .site-footer {
+    background: @breadcrumb_bg_color;
+    padding: @padding 0;
+    
+    .widget-title {
+      .visuallyhidden();
+    }
+
+    ul.menu {
+      float: right;
+      margin: 0;
+
+        li {
+            display: inline-block;
+            float: left;
+            margin: 0 @padding ( @padding / 2 ) 0;
+            
+            a {
+              color: @bsitefooter_a_color;
+              text-transform: lowercase;
+              text-decoration: none;
+              
+              &:hover,
+              &:focus,
+              &:active {
+                text-decoration: underline;
+                color: @wit;
+              }
+            }
+        }
+
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+  
+  @media only screen and (max-width: ( @break_phone ) ) {
+      .footer-widgets-1,
+      .footer-widgets-2, 
+      .footer-widgets-3 {
+        width: 100%;
+      }
+  }
+  
+  
+
+
+  @media only screen and (min-width: @break_fullwidth ) {
+  
+    .footer-widgets {
+      .widget-area {
+        margin: 0;
+      }
+    }
+
+    .footer-widgets-1,
+    .footer-widgets-2, 
+    .footer-widgets-3 {
+      width: 49.9%;
+      float: left;
+    }
+  }
+}
+
+

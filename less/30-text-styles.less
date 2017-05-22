@@ -1,0 +1,299 @@
+
+.basefont() {
+
+// Gebruiker Centraal - 30-text-styles.less
+// ----------------------------------------------------------------------------------
+// bevat gedeelde CSS voor zowel de front-end styling als admin WYSIWYG editor
+// ----------------------------------------------------------------------------------
+// @package gebruiker-centraal
+// @author  Paul van Buuren
+// @license GPL-2.0+
+// @version 3.7.1
+// @desc.   actieteampagina, actieteam-widget, skiplinks, 404
+// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+
+
+
+  color: @txt;
+  font-family: @bodyfont;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.625;    
+}
+
+.textstyles() {
+    // wordt gebruikt in 
+    // - editor-styles.less
+    // - style.less
+    // - login-form.less
+
+    .write-defaults();
+    .write-table();
+    .write-headings();    
+}
+
+.write-defaults() {
+
+    // wordt gebruikt in 
+    // - mailtemplate.less
+    // .textstyles()     
+    
+    a {
+      color: @a-content-color;
+      text-decoration: underline;
+    }
+    
+    a img {
+      margin-bottom: -4px;
+      margin-bottom: -0.4rem;
+    }
+    
+    a:hover {
+      color: @a-content-hover-color;
+    }
+    
+    p {
+      margin: 0 0 @padding 0;
+      padding: 0;
+    }
+    
+    
+    ol,
+    ul {
+      padding: 0 0 0 @padding;
+    }
+    
+    blockquote,
+    blockquote::before {
+      color: @txt;
+    }
+    
+    blockquote {
+      margin: @padding;
+    }
+    
+    blockquote::before {
+      content: "\201C";
+      display: block;
+      .fontsize(30);
+      height: 0;
+      left: ( -1 * @padding );
+      position: relative;
+      top: ( -1 * @padding );
+    }
+    
+    .entry-content code {
+      background-color: @code-bg;
+      color: @txt;
+    }
+    
+    cite {
+      font-style: normal;
+    }
+    
+
+    p {
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        -o-hyphens: auto;
+        hyphens: auto;
+    }
+    
+    .attachment a,
+    .gallery a {
+      border: none;
+    }
+    
+    
+    ol li {
+      list-style-type: decimal;
+    }
+    
+    ul li {
+      list-style-image: url('images/bullet.png');      
+      .iconaddbullet('../images/bullet.svg', @txt);
+    }
+    
+    ol ol,
+    ul ul {
+      margin-bottom: 0;
+    }
+    
+    .infoblock {
+        background: @lichtgrijs;
+        border: 1px solid @border_grijs;
+        padding: 1em;
+        margin: 1em 0;
+    }
+
+    
+    img.centered,
+    .aligncenter {
+      display: block;
+      margin: 0 auto @padding;
+    }
+    
+    .alignleft {
+      float: left;
+      text-align: left;
+    }
+    
+    .alignright {
+      float: right;
+      text-align: right;
+    }
+    
+    img.alignleft,
+    .wp-caption.alignleft {
+      margin: ( @padding / 3 ) ( @padding / 2 ) @padding 0;
+    }
+    
+    img.alignright,
+    .wp-caption.alignright {
+      margin: ( @padding / 3 ) 0 @padding ( @padding / 2 );
+    }
+
+    .wp-caption.alignnone {
+      margin: ( @padding / 3 ) 0 0 0;
+    }
+    
+    .wp-caption-text {
+      .fontsize(12);
+      font-weight: normal;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      line-height: 1.4;
+      padding: ( @padding / 2 ) 0;
+    }
+
+    .alignright .wp-caption-text {
+        margin-left: 10px;
+        margin-bottom: 0 !important;
+    }
+    .alignleft .wp-caption-text {
+        margin-right: 10px;
+        margin-bottom: 0 !important;
+    }
+    
+    .gallery-caption {
+      border-bottom: none;
+    }
+    
+
+}
+
+.write-headings() {
+
+    b,strong {
+        font-weight: bold;
+        -webkit-hyphens: manual;
+        -moz-hyphens: manual;
+        -ms-hyphens: manual;
+        -o-hyphens: manual;
+        hyphens: manual;
+    }
+
+
+    /* Headings
+    --------------------------------------------- */
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+//      color: @header_color;
+      font-weight: normal; 
+      line-height: 1.2;
+      margin: ( @gutter / 2 ) 0 ( @gutter / 4 );
+        padding: 1em 0 .3em 0;
+        
+        a {
+            color: @txt;
+            text-decoration: none;
+            
+            &:hover, &:focus, &:active {
+                color: @a_hover;
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    h1 {
+      .fontsize( @fontsize_title_h1 );
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-family: @headerfont;
+      font-weight: normal;
+    }
+    
+    .content h2 {
+      letter-spacing: 1px;
+      .fontsize( @fontsize_title_h2 );
+      text-transform: uppercase;
+      font-family: @headerfont;
+      font-weight: normal;
+    }
+    
+    h3, .sidebar h2 {
+      .fontsize( @fontsize_title_h3 );
+    }
+    
+    h4 {
+      .fontsize( @fontsize_title_h4 );
+    }
+    
+    h5 {
+      .fontsize( @fontsize_title_h5 );
+    }
+    
+    h6 {
+      .fontsize( @fontsize_title_h6 );
+    }
+
+    
+}
+
+.write-table() {
+  
+  /* Tables
+  --------------------------------------------- */
+  
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    line-height: 1.4;
+    margin-bottom: @padding;
+    width: 100%;
+    
+    .time {
+      width: 20%;
+      min-width: 80px;
+    }
+    .topic, .presentor {
+      width: 30%;
+    }
+    .topic {
+      width: 45%;
+    }
+    
+    tbody {
+//      border-top: 1px solid @border_color;
+    }
+    
+    th,
+    td {
+      text-align: left;
+      vertical-align: top;
+      padding-bottom: .4em;
+    }
+    
+    th {
+      .bold-font();
+      text-transform: uppercase;
+    }
+  }
+}
+

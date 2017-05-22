@@ -1,0 +1,53 @@
+/* colors, sizes */
+/* colors, sizes */
+.debugmessage {
+  background: #C42C76;
+  color: #fff;
+  padding: .5em;
+  font-size: 12px;
+  font-family: 'Bodyfont light', Helvetica, Arial, sans-serif;
+  margin: 0 .3em .3em 0;
+  border: 1px solid #fff;
+  overflow: hidden;
+}
+h1:before,
+h2:before,
+h3:before,
+h4:before,
+h5:before,
+h6:before {
+  content: 'header';
+  background: #C42C76;
+  color: #fff;
+  padding: .5em;
+  font-size: 16px;
+  display: block;
+  font-family: 'Bodyfont light', Helvetica, Arial, sans-serif;
+  float: left;
+  margin: 0 .3em .3em 0;
+  border: 1px solid #fff;
+}
+h1:before {
+  background: #c02b73;
+  content: 'H1';
+}
+h2:before {
+  background: #9a235d;
+  content: 'H2';
+}
+h3:before {
+  background: #711944;
+  content: 'H3';
+}
+h4:before {
+  background: #47102b;
+  content: 'H4';
+}
+h5:before {
+  background: #1d0712;
+  content: 'H5';
+}
+h6:before {
+  background: #000000;
+  content: 'H6';
+}

@@ -1,0 +1,1227 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Gebruiker Centraal v1.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-22 11:11+0200\n"
+"PO-Revision-Date: 2016-04-22 11:17+0200\n"
+"Last-Translator: paul_vb <vanbuuren@gmail.com>\n"
+"Language-Team: \n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions.php:138
+msgid "Home"
+msgstr ""
+
+#: functions.php:147
+msgid "Auteursarchief"
+msgstr ""
+
+#: functions.php:149
+msgid "Label"
+msgstr ""
+
+#: functions.php:150
+msgid "Datum-archief"
+msgstr ""
+
+#: functions.php:151
+msgid "Zoekresultaat"
+msgstr ""
+
+#: functions.php:152
+msgid "Taxonomie"
+msgstr ""
+
+#: functions.php:154
+msgid "Oeps"
+msgstr ""
+
+#: functions.php:194 shared.php:622
+msgid "Lees: \""
+msgstr ""
+
+#: functions.php:304
+msgid "Zegt het voort:"
+msgstr ""
+
+#: functions.php:304
+msgid "Deel op Twitter"
+msgstr ""
+
+#: functions.php:305
+msgid "Deel op Facebook"
+msgstr ""
+
+#: functions.php:306
+msgid "Deel op LinkedIn"
+msgstr ""
+
+#: functions.php:307
+msgid "Deel op Google+"
+msgstr ""
+
+#: functions.php:612
+msgid "Please write your Email!"
+msgstr ""
+
+#: functions.php:613
+msgid "Saving..."
+msgstr "Opslaan..."
+
+#: functions.php:647
+msgctxt "Skiplinks"
+msgid "Direct naar belangrijkste content"
+msgstr "Direct naar belangrijkste content"
+
+#: functions.php:648
+msgctxt "Skiplinks"
+msgid "Direct naar hoofdnavigatie"
+msgstr "Direct naar hoofdnavigatie"
+
+#: functions.php:649
+msgctxt "Skiplinks"
+msgid "Direct naar zoeken"
+msgstr "Direct naar zoeken"
+
+# @ gebruikercentraal
+# @ genesis
+#: functions.php:661
+msgid "Not found, error 404"
+msgstr "Sorry. Fout 404: bestand niet gevonden."
+
+# @ gebruikercentraal
+# @ genesis
+#: functions.php:668
+#, php-format
+msgid ""
+"The page you are looking for no longer exists. Perhaps you can return back "
+"to the site's <a href=\"%s\">homepage</a> and see if you can find what you "
+"are looking for. Or, you can try finding it by using the search form below."
+msgstr ""
+"We konden niet vinden waar je om vroeg. Misschien helpt het om naar de <a "
+"href=\"%s\">homepage</a> te gaan. Je kunt ook zoeken via het zoekformulier "
+"hieronder. En daaronder staat alle op deze site bekende content. <a href=\\"
+"\"/contact/\\\">Neem anders contact met ons op</a>."
+
+# @ gebruikercentraal
+# @ genesis
+#: functions.php:705
+msgid "Pages:"
+msgstr "Pagina's:"
+
+# @ gebruikercentraal
+# @ genesis
+#: functions.php:710
+msgid "Recent Posts:"
+msgstr "Artikelen:"
+
+#: functions.php:718
+msgid "Optimaal digitaal:"
+msgstr "Optimaal digitaal:"
+
+#: functions.php:730
+#, php-format
+msgid "View all post filed under %s"
+msgstr "Alle berichten onder %s\t"
+
+# @ gebruikercentraal
+# @ genesis
+#: functions.php:739
+msgid "Categories:"
+msgstr "Categorieën:"
+
+# @ gebruikercentraal
+# @ genesis
+#: functions.php:744
+msgid "Authors:"
+msgstr "Auteurs:"
+
+#: functions.php:899
+msgid "Widget in de site footer"
+msgstr ""
+
+#: functions.php:901
+msgid "Ruimte voor widgets in de site footer. Hier bijvoorbeeld footerlinks."
+msgstr ""
+
+#: functions.php:942
+msgid "Home-widget links"
+msgstr ""
+
+#: functions.php:944
+msgid "Hier kun je de widgets plaatsen voor events en blogberichten"
+msgstr ""
+
+#: functions.php:973
+msgid "Home-widget rechts"
+msgstr ""
+
+#: functions.php:975
+msgid "Hier kun je de widgets plaatsen voor o.m. het actieteam"
+msgstr ""
+
+#: functions.php:1303
+msgctxt "CTA om mail te versturen aan organisator"
+msgid "mail"
+msgstr ""
+
+#: functions.php:1566
+msgctxt "Kopje op evenementpagina"
+msgid "Programma"
+msgstr ""
+
+#: functions.php:1609
+msgctxt "Kopje op evenementpagina"
+msgid "Links"
+msgstr ""
+
+# @ gebruikercentraal
+#: includes/widgets.php:52
+msgid "Toont de naam van de gebruiker, bij wijze van welkomstgroet."
+msgstr ""
+
+#: includes/widgets.php:61
+msgid "GC - hallo"
+msgstr ""
+
+# @ gebruikercentraal
+# @ genesis
+#: includes/widgets.php:141 widgets/gc-actieteam-widget.php:38
+#: widgets/gc-e-newsletter.php:90 widgets/gc-footer-widget.php:37
+#: widgets/gc-footer-widget.php:41 widgets/gc-user-welcome-widget.php:149
+msgid "Title"
+msgstr ""
+
+# @ gebruikercentraal
+#: includes/widgets.php:145 widgets/gc-user-welcome-widget.php:153
+msgid "Select Menu:"
+msgstr ""
+
+# @ gebruikercentraal
+#: includes/widgets.php:147 widgets/gc-user-welcome-widget.php:155
+msgid "&mdash; Select &mdash;"
+msgstr ""
+
+# @ gebruikercentraal
+# @ genesis
+#: page_blog.php:21 search.php:20
+msgid "Search Results for:"
+msgstr "Zoekresultaten voor: "
+
+#: page_contentpagina.php:24 page_overzichtspagina.php:32
+msgid "Zie ook:"
+msgstr ""
+
+#: page_mailinglijst.php:32 page_mailinglijst.php:40
+msgid ""
+"We hebben onvoldoende informatie ontvangen.<br />Vul alsnog de vereiste "
+"velden in."
+msgstr ""
+
+#: page_mailinglijst.php:34
+msgid "Vul een mail-adres in, alsjeblieft."
+msgstr ""
+
+#: page_mailinglijst.php:42
+msgid "E-mailadres lijkt ongeldig."
+msgstr ""
+
+#: page_mailinglijst.php:119
+msgid "Geef aan voor welke mailinglijsten je je in of uit wilt schrijven"
+msgstr ""
+
+#: page_mailinglijst.php:129
+msgid "Newsletters:"
+msgstr ""
+
+#: page_mailinglijst.php:151
+msgid "Save Subscribes"
+msgstr "Inschrijvingen opslaan"
+
+#: page_mailinglijst.php:153
+msgid "Unsubscribe from all newsletters"
+msgstr "Abonnement op alle nieuwsbrieven opzeggen"
+
+#: page_mailinglijst.php:163
+msgid "Meld je aan voor onze nieuwsbrief"
+msgstr ""
+
+#: page_mailinglijst.php:165 widgets/gc-e-newsletter.php:255
+msgid "Your Email:"
+msgstr "Je mailadres:"
+
+#: page_mailinglijst.php:181
+msgid "Subscribe on Newsletters"
+msgstr "Abonneer je op de nieuwsbrief"
+
+# @ gebruikercentraal
+#: plugins/events-manager-x/placeholders/bookingform.php:102
+msgid "Of als je al een account hebt"
+msgstr "Of, als je al een account hebt"
+
+# @ gebruikercentraal
+#: plugins/events-manager-x/templates/my-bookings.php:40
+#: plugins/events-manager/forms/event-editor.php:12
+#: plugins/events-manager/forms/event-editor.php:109
+#: plugins/events-manager/forms/event-editor.php:111
+#: plugins/events-manager/templates/my-bookings.php:41
+msgid "Event"
+msgstr "Evenement"
+
+# @ gebruikercentraal
+#: plugins/events-manager-x/templates/my-bookings.php:41
+msgid "Aantal"
+msgstr "Aantal"
+
+# @ gebruikercentraal
+#: plugins/events-manager-x/templates/my-bookings.php:42
+#: plugins/events-manager/templates/my-bookings.php:44
+msgid "Status"
+msgstr "Status"
+
+# @ gebruikercentraal
+#: plugins/events-manager-x/templates/my-bookings.php:67
+#: plugins/events-manager/templates/my-bookings.php:71
+msgid "Cancel"
+msgstr "Annuleren"
+
+# @ gebruikercentraal
+#: plugins/events-manager-x/templates/my-bookings.php:83
+#: plugins/events-manager/templates/my-bookings.php:87
+msgid "You do not have any bookings."
+msgstr ""
+"Je hebt je voor geen enkel evenement aangemeld, voor zover we weten. <a href="
+"\"/evenementen/\">Naar het overzicht van alle aankomende evenementen</a>."
+
+# @ gebruikercentraal
+#: plugins/events-manager-x/templates/my-bookings.php:94
+#: plugins/events-manager/templates/my-bookings.php:98
+#, php-format
+msgid "Please <a href=\"%s\">Log In</a> to view your bookings."
+msgstr "<a href=\"%s\">Log in</a> om je aanmeldingen te bekijken."
+
+#: plugins/events-manager/formats/single_event_format.php:20
+msgid "aanmeldingen"
+msgstr ""
+
+#: plugins/events-manager/forms/bookingform/booking-fields.php:12
+#: plugins/events-manager/tables/events.php:62
+#: plugins/events-manager/tables/locations.php:44
+#: plugins/events-manager/tables/locations.php:55
+#: plugins/events-manager/templates/bookings-event-printable.php:24
+msgid "Name"
+msgstr "Naam"
+
+#: plugins/events-manager/forms/bookingform/booking-fields.php:16
+msgid "Phone"
+msgstr "Telefoon"
+
+#: plugins/events-manager/forms/bookingform/booking-fields.php:20
+#: plugins/events-manager/templates/bookings-event-printable.php:25
+msgid "E-mail"
+msgstr "E-mail"
+
+#: plugins/events-manager/forms/bookingform/booking-fields.php:26
+#: plugins/events-manager/templates/bookings-event-printable.php:28
+msgid "Comment"
+msgstr "Reactie"
+
+#: plugins/events-manager/forms/bookingform/ticket-single.php:38
+#: plugins/events-manager/forms/bookingform/tickets-list.php:45
+msgid "N/A"
+msgstr "Niet beschikbaar"
+
+#: plugins/events-manager/forms/event-editor.php:12
+#: plugins/events-manager/forms/location-editor.php:11
+#, php-format
+msgid "You do not have the rights to manage this %s."
+msgstr ""
+
+#: plugins/events-manager/forms/event-editor.php:109
+#: plugins/events-manager/forms/location-editor.php:65
+#, php-format
+msgid "Submit %s"
+msgstr "Verzend\t %s"
+
+#: plugins/events-manager/forms/event-editor.php:111
+#: plugins/events-manager/forms/location-editor.php:67
+#, php-format
+msgid "Update %s"
+msgstr "%s bijwerken"
+
+#: plugins/events-manager/forms/event/attributes.php:43
+#, php-format
+msgid ""
+"You don't have any custom attributes defined in any of your Events Manager "
+"template settings. Please add them the <a href='%s'>settings page</a>"
+msgstr ""
+
+#: plugins/events-manager/forms/event/attributes.php:50
+#: plugins/events-manager/forms/location/attributes.php:50
+msgid "Deprecated Attributes"
+msgstr ""
+
+#: plugins/events-manager/forms/event/attributes.php:51
+msgid ""
+"If you see any attributes under here, that means they're not used in Events "
+"Manager formats. To add them, you need to add the custom attribute again to "
+"a formatting option in the settings page. To remove any of these deprecated "
+"attributes, give it a blank value and save."
+msgstr ""
+
+#: plugins/events-manager/forms/event/attributes.php:83
+#: plugins/events-manager/forms/location/attributes.php:83
+msgid ""
+"In order to use attributes, you must define some in your templates, "
+"otherwise they'll never show. Go to Events > Settings > General to add "
+"attribute placeholders."
+msgstr ""
+
+#: plugins/events-manager/forms/event/booking-stats.php:12
+msgid "Available Spaces"
+msgstr ""
+
+#: plugins/events-manager/forms/event/booking-stats.php:13
+msgid "Confirmed Spaces"
+msgstr ""
+
+#: plugins/events-manager/forms/event/booking-stats.php:14
+msgid "Pending Spaces"
+msgstr ""
+
+#: plugins/events-manager/forms/event/booking-stats.php:20
+msgid "No responses yet!"
+msgstr ""
+
+#: plugins/events-manager/forms/event/booking-stats.php:27
+msgid "manage bookings"
+msgstr ""
+
+#: plugins/events-manager/forms/event/booking-stats.php:28
+msgid "printable view"
+msgstr ""
+
+#: plugins/events-manager/forms/event/booking-stats.php:30
+msgid "export csv"
+msgstr ""
+
+#: plugins/events-manager/forms/event/bookings-ticket-form.php:50
+#: plugins/events-manager/forms/event/bookings-ticket-form.php:51
+#: plugins/events-manager/forms/event/bookings-ticket-form.php:69
+#: plugins/events-manager/forms/event/bookings-ticket-form.php:70
+#: plugins/events-manager/forms/event/bookings.php:146
+#: plugins/events-manager/forms/event/bookings.php:147
+#, php-format
+msgctxt "before or after"
+msgid "%s the event starts"
+msgstr ""
+
+#: plugins/events-manager/forms/event/bookings-ticket-form.php:50
+#: plugins/events-manager/forms/event/bookings-ticket-form.php:69
+#: plugins/events-manager/forms/event/bookings.php:146
+msgid "Before"
+msgstr ""
+
+#: plugins/events-manager/forms/event/bookings-ticket-form.php:51
+#: plugins/events-manager/forms/event/bookings-ticket-form.php:70
+#: plugins/events-manager/forms/event/bookings.php:147
+msgid "After"
+msgstr ""
+
+#: plugins/events-manager/forms/event/bookings-ticket-form.php:86
+msgid "Everyone"
+msgstr ""
+
+#: plugins/events-manager/forms/event/bookings-ticket-form.php:92
+msgid "Restrict to"
+msgstr ""
+
+#: plugins/events-manager/forms/event/bookings.php:8
+msgid "Enable registration for this event"
+msgstr ""
+
+#: plugins/events-manager/forms/event/bookings.php:85
+#: plugins/events-manager/forms/event/bookings.php:90
+#: plugins/events-manager/forms/event/bookings.php:144
+msgid "day(s)"
+msgstr ""
+
+#: plugins/events-manager/forms/event/bookings.php:149
+msgid "at"
+msgstr ""
+
+#: plugins/events-manager/forms/event/categories-public.php:13
+msgid "Category:"
+msgstr ""
+
+#: plugins/events-manager/forms/event/featured-image-public.php:12
+msgid "No image uploaded for this event yet"
+msgstr ""
+
+#: plugins/events-manager/forms/event/featured-image-public.php:15
+#: plugins/events-manager/forms/location/featured-image-public.php:16
+msgid "Upload/change picture"
+msgstr ""
+
+#: plugins/events-manager/forms/event/featured-image-public.php:18
+#: plugins/events-manager/forms/location/featured-image-public.php:19
+msgid "Delete Image?"
+msgstr ""
+
+#: plugins/events-manager/forms/event/group.php:22
+msgid "Not a Group Event"
+msgstr ""
+
+#: plugins/events-manager/forms/event/group.php:40
+msgid ""
+"Select a group you admin to attach this event to it. Note that all other "
+"admins of that group can modify the booking."
+msgstr ""
+
+#: plugins/events-manager/forms/event/group.php:43
+msgid ""
+"As a site admin, you see all group events, users will only be able to choose "
+"groups they are admins of."
+msgstr ""
+
+#: plugins/events-manager/forms/event/group.php:47
+msgid "No groups defined yet."
+msgstr ""
+
+#: plugins/events-manager/forms/event/location.php:9
+msgid "This event does not have a physical location."
+msgstr ""
+
+#: plugins/events-manager/forms/event/location.php:32
+msgid "Location:"
+msgstr ""
+
+#: plugins/events-manager/forms/event/location.php:35
+msgid "No Location"
+msgstr ""
+
+#: plugins/events-manager/forms/event/location.php:65
+msgid "Location Name:"
+msgstr ""
+
+#: plugins/events-manager/forms/event/location.php:70
+msgid ""
+"Create a location or start typing to search a previously created location."
+msgstr ""
+
+#: plugins/events-manager/forms/event/location.php:71
+msgid "You cannot edit saved locations here."
+msgstr ""
+
+#: plugins/events-manager/forms/event/location.php:71
+msgid "Reset this form to create a location or search again."
+msgstr ""
+
+#: plugins/events-manager/forms/event/location.php:75
+#: plugins/events-manager/forms/location/where.php:12
+msgid "Address:"
+msgstr ""
+
+#: plugins/events-manager/forms/event/location.php:81
+#: plugins/events-manager/forms/location/where.php:18
+msgid "City/Town:"
+msgstr ""
+
+#: plugins/events-manager/forms/event/location.php:87
+#: plugins/events-manager/forms/location/where.php:24
+msgid "State/County:"
+msgstr ""
+
+#: plugins/events-manager/forms/event/location.php:93
+#: plugins/events-manager/forms/location/where.php:30
+msgid "Postcode:"
+msgstr ""
+
+#: plugins/events-manager/forms/event/location.php:99
+#: plugins/events-manager/forms/location/where.php:36
+msgid "Region:"
+msgstr ""
+
+#: plugins/events-manager/forms/event/location.php:105
+#: plugins/events-manager/forms/location/where.php:43
+msgid "Country:"
+msgstr ""
+
+#: plugins/events-manager/forms/event/location.php:108
+#: plugins/events-manager/forms/location/where.php:46
+msgid "none selected"
+msgstr ""
+
+#: plugins/events-manager/forms/event/recurring-when.php:11
+#: plugins/events-manager/forms/event/when-with-recurring.php:33
+msgid "This event repeats"
+msgstr ""
+
+#: plugins/events-manager/forms/event/recurring-when.php:14
+#: plugins/events-manager/forms/event/when-with-recurring.php:36
+msgid "Daily"
+msgstr ""
+
+#: plugins/events-manager/forms/event/recurring-when.php:14
+#: plugins/events-manager/forms/event/when-with-recurring.php:36
+msgid "Weekly"
+msgstr ""
+
+#: plugins/events-manager/forms/event/recurring-when.php:14
+#: plugins/events-manager/forms/event/when-with-recurring.php:36
+msgid "Monthly"
+msgstr ""
+
+#: plugins/events-manager/forms/event/recurring-when.php:14
+#: plugins/events-manager/forms/event/when-with-recurring.php:36
+msgid "Yearly"
+msgstr ""
+
+#: plugins/events-manager/forms/event/recurring-when.php:18
+#: plugins/events-manager/forms/event/when-with-recurring.php:40
+msgid "every"
+msgstr ""
+
+#: plugins/events-manager/forms/event/recurring-when.php:20
+#: plugins/events-manager/forms/event/when-with-recurring.php:42
+msgid "day"
+msgstr ""
+
+#: plugins/events-manager/forms/event/recurring-when.php:21
+#: plugins/events-manager/forms/event/when-with-recurring.php:43
+msgid "days"
+msgstr ""
+
+#: plugins/events-manager/forms/event/recurring-when.php:22
+#: plugins/events-manager/forms/event/when-with-recurring.php:44
+msgid "week on"
+msgstr ""
+
+#: plugins/events-manager/forms/event/recurring-when.php:23
+#: plugins/events-manager/forms/event/when-with-recurring.php:45
+msgid "weeks on"
+msgstr ""
+
+#: plugins/events-manager/forms/event/recurring-when.php:24
+#: plugins/events-manager/forms/event/when-with-recurring.php:46
+msgid "month on the"
+msgstr ""
+
+#: plugins/events-manager/forms/event/recurring-when.php:25
+#: plugins/events-manager/forms/event/when-with-recurring.php:47
+msgid "months on the"
+msgstr ""
+
+#: plugins/events-manager/forms/event/recurring-when.php:26
+#: plugins/events-manager/forms/event/when-with-recurring.php:48
+msgid "year"
+msgstr ""
+
+#: plugins/events-manager/forms/event/recurring-when.php:27
+#: plugins/events-manager/forms/event/when-with-recurring.php:49
+msgid "years"
+msgstr ""
+
+#: plugins/events-manager/forms/event/recurring-when.php:37
+#: plugins/events-manager/forms/event/when-with-recurring.php:60
+msgid "first"
+msgstr ""
+
+#: plugins/events-manager/forms/event/recurring-when.php:37
+#: plugins/events-manager/forms/event/when-with-recurring.php:60
+msgid "second"
+msgstr ""
+
+#: plugins/events-manager/forms/event/recurring-when.php:37
+#: plugins/events-manager/forms/event/when-with-recurring.php:60
+msgid "third"
+msgstr ""
+
+#: plugins/events-manager/forms/event/recurring-when.php:37
+#: plugins/events-manager/forms/event/when-with-recurring.php:60
+msgid "fourth"
+msgstr ""
+
+#: plugins/events-manager/forms/event/recurring-when.php:37
+#: plugins/events-manager/forms/event/when-with-recurring.php:60
+msgid "last"
+msgstr ""
+
+#: plugins/events-manager/forms/event/recurring-when.php:44
+#: plugins/events-manager/forms/event/when-with-recurring.php:67
+msgid "of each month"
+msgstr ""
+
+#: plugins/events-manager/forms/event/recurring-when.php:49
+#: plugins/events-manager/forms/event/when-with-recurring.php:14
+msgid "Recurrences span from "
+msgstr ""
+
+#: plugins/events-manager/forms/event/recurring-when.php:52
+#: plugins/events-manager/forms/event/recurring-when.php:59
+#: plugins/events-manager/forms/event/when-with-recurring.php:18
+#: plugins/events-manager/forms/event/when-with-recurring.php:19
+#: plugins/events-manager/forms/event/when-with-recurring.php:27
+#: plugins/events-manager/forms/event/when.php:11
+#: plugins/events-manager/forms/event/when.php:18
+msgid "to"
+msgstr ""
+
+#: plugins/events-manager/forms/event/recurring-when.php:57
+#: plugins/events-manager/forms/event/when-with-recurring.php:24
+msgid "Events start from"
+msgstr ""
+
+#: plugins/events-manager/forms/event/recurring-when.php:61
+#: plugins/events-manager/forms/event/when-with-recurring.php:29
+#: plugins/events-manager/forms/event/when.php:20
+msgid "All day"
+msgstr ""
+
+#: plugins/events-manager/forms/event/recurring-when.php:64
+#: plugins/events-manager/forms/event/when-with-recurring.php:70
+#, php-format
+msgid "Each event spans %s day(s)"
+msgstr ""
+
+#: plugins/events-manager/forms/event/recurring-when.php:66
+#: plugins/events-manager/forms/event/when-with-recurring.php:72
+msgid ""
+"For a recurring event, a one day event will be created on each recurring "
+"date within this date range."
+msgstr ""
+
+#: plugins/events-manager/forms/event/when-with-recurring.php:12
+msgid "This is a recurring event."
+msgstr ""
+
+#: plugins/events-manager/forms/event/when-with-recurring.php:15
+#: plugins/events-manager/forms/event/when.php:8
+msgid "From "
+msgstr ""
+
+#: plugins/events-manager/forms/event/when-with-recurring.php:25
+#: plugins/events-manager/forms/event/when.php:16
+msgid "Event starts at"
+msgstr ""
+
+#: plugins/events-manager/forms/event/when.php:23
+msgid ""
+"This event spans every day between the beginning and end date, with start/"
+"end times applying to each day."
+msgstr ""
+
+#: plugins/events-manager/forms/location-editor.php:11
+msgid "location"
+msgstr ""
+
+#: plugins/events-manager/forms/location-editor.php:65
+#: plugins/events-manager/forms/location-editor.php:67
+#: plugins/events-manager/tables/events.php:64
+msgid "Location"
+msgstr ""
+
+#: plugins/events-manager/forms/location/attributes.php:43
+#, php-format
+msgid ""
+"You don't have any custom attributes defined in any of your Locations "
+"Manager template settings. Please add them the <a href='%s'>settings page</a>"
+msgstr ""
+
+#: plugins/events-manager/forms/location/attributes.php:51
+msgid ""
+"If you see any attributes under here, that means they're not used in "
+"Locations Manager formats. To add them, you need to add the custom attribute "
+"again to a formatting option in the settings page. To remove any of these "
+"deprecated attributes, give it a blank value and save."
+msgstr ""
+
+#: plugins/events-manager/forms/location/featured-image-public.php:13
+msgid "No image uploaded for this location yet"
+msgstr ""
+
+#: plugins/events-manager/forms/location/where.php:7
+msgid ""
+"If you're using the Google Maps, the more detail you provide, the more "
+"accurate Google can be at finding your location. If your address isn't being "
+"found, please <a href='http://maps.google.com'>try it on maps.google.com</a> "
+"by adding all the fields below separated by commas."
+msgstr ""
+
+#: plugins/events-manager/forms/map-container.php:5
+msgid "Location not found"
+msgstr ""
+
+#: plugins/events-manager/placeholders/attendeeslist.php:8
+#, php-format
+msgid "%s aanmelding"
+msgid_plural "%s aanmeldingen"
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugins/events-manager/placeholders/locationmap.php:21
+#: plugins/events-manager/templates/map-global.php:14
+msgid "Loading Map...."
+msgstr ""
+
+#: plugins/events-manager/placeholders/locationmap.php:36
+msgctxt "Single event"
+msgid "Map Unavailable"
+msgstr "Geen locatie ingevoerd\t"
+
+#: plugins/events-manager/tables/events.php:14
+#: plugins/events-manager/tables/locations.php:5
+msgid "Add New"
+msgstr ""
+
+#: plugins/events-manager/tables/events.php:21
+msgid "Upcoming"
+msgstr ""
+
+#: plugins/events-manager/tables/events.php:23
+#: plugins/events-manager/tables/events.php:107
+msgid "Pending"
+msgstr ""
+
+#: plugins/events-manager/tables/events.php:26
+msgid "Draft"
+msgstr ""
+
+#: plugins/events-manager/tables/events.php:28
+msgid "Past Events"
+msgstr ""
+
+#: plugins/events-manager/tables/events.php:31
+#: plugins/events-manager/tables/events.php:36
+msgid "Search Events"
+msgstr ""
+
+#: plugins/events-manager/tables/events.php:65
+msgid "Date and time"
+msgstr ""
+
+#: plugins/events-manager/tables/events.php:113
+#: plugins/events-manager/tables/events.php:147
+msgid "Delete"
+msgstr ""
+
+#: plugins/events-manager/tables/events.php:118
+msgid "Duplicate this event"
+msgstr ""
+
+#: plugins/events-manager/tables/events.php:141
+msgid ""
+"WARNING! You will delete ALL recurrences of this event, including booking "
+"history associated with any event in this recurrence. To keep booking "
+"information, go to the relevant single event and save it to detach it from "
+"this recurrence series."
+msgstr ""
+
+#: plugins/events-manager/tables/events.php:145
+msgid "Edit Recurring Events"
+msgstr ""
+
+#: plugins/events-manager/tables/locations.php:11
+#, php-format
+msgid "My %s"
+msgstr ""
+
+#: plugins/events-manager/tables/locations.php:11
+#: plugins/events-manager/tables/locations.php:14
+msgid "Locations"
+msgstr ""
+
+#: plugins/events-manager/tables/locations.php:14
+#, php-format
+msgid "All %s"
+msgstr ""
+
+#: plugins/events-manager/tables/locations.php:22
+msgid "Bulk Actions"
+msgstr ""
+
+#: plugins/events-manager/tables/locations.php:24
+msgid "Delete selected"
+msgstr ""
+
+#: plugins/events-manager/tables/locations.php:27
+msgid "Apply"
+msgstr ""
+
+#: plugins/events-manager/tables/locations.php:45
+#: plugins/events-manager/tables/locations.php:56
+msgid "Address"
+msgstr ""
+
+#: plugins/events-manager/tables/locations.php:46
+#: plugins/events-manager/tables/locations.php:57
+msgid "State"
+msgstr ""
+
+#: plugins/events-manager/tables/locations.php:47
+#: plugins/events-manager/tables/locations.php:58
+msgid "Country"
+msgstr ""
+
+#: plugins/events-manager/templates/bookings-event-printable.php:13
+#: plugins/events-manager/templates/bookings-event-printable.php:18
+#, php-format
+msgid "Bookings for %s"
+msgstr ""
+
+#: plugins/events-manager/templates/bookings-event-printable.php:21
+msgid "Bookings data"
+msgstr ""
+
+#: plugins/events-manager/templates/bookings-event-printable.php:26
+msgid "Phone number"
+msgstr ""
+
+#: plugins/events-manager/templates/bookings-event-printable.php:27
+#: plugins/events-manager/templates/my-bookings.php:43
+msgid "Spaces"
+msgstr ""
+
+#: plugins/events-manager/templates/bookings-event-printable.php:44
+msgid "Booked"
+msgstr ""
+
+#: plugins/events-manager/templates/bookings-event-printable.php:49
+msgid "Available"
+msgstr ""
+
+#: plugins/events-manager/templates/event-single.php:24
+msgid "zit vol"
+msgstr ""
+
+#: plugins/events-manager/templates/my-bookings.php:42
+msgid "Date"
+msgstr ""
+
+#: shared.php:485
+msgid "Meer lezen"
+msgstr ""
+
+#: shared.php:506
+msgid "Reacties"
+msgstr ""
+
+#: shared.php:528
+msgid "Reageer"
+msgstr ""
+
+#: shared.php:532
+msgctxt "reactieformulier"
+msgid "Je naam:"
+msgstr ""
+
+#: shared.php:537
+msgctxt "reactieformulier"
+msgid "Je mailadres:"
+msgstr ""
+
+#: shared.php:545
+msgid "Plaats reactie"
+msgstr ""
+
+#: shared.php:546
+msgctxt "reactieformulier"
+msgid "Je reactie:"
+msgstr ""
+
+#: shared.php:730
+msgctxt "begroeting inlogmail"
+msgid "Hallo,"
+msgstr "Beste gebruiker,"
+
+#: shared.php:732
+msgctxt "inlogmail"
+msgid ""
+"We kregen via de website het verzoek om een nieuw wachtwoord te sturen voor "
+"het account met de inlognaam:"
+msgstr ""
+"We kregen via de website het verzoek om een nieuw wachtwoord te sturen voor "
+"het account met de inlognaam:"
+
+#: shared.php:735
+msgctxt "inlogmail"
+msgid "Om je wachtwoord opnieuw in te stellen, klik je op deze link:"
+msgstr "Om je wachtwoord opnieuw in te stellen, klik je op deze link:"
+
+#: shared.php:742
+msgctxt "inlogmail"
+msgid "Deze link is maar 1 keer te gebruiken."
+msgstr ""
+
+#: shared.php:744
+msgctxt "inlogmail"
+msgid "Als je geen nieuw wachtwoord wilt, hoef je niets te doen."
+msgstr "Als je geen nieuw wachtwoord wilt, hoef je niets te doen."
+
+#: shared.php:747
+msgctxt "afsluiting inlogmail"
+msgid "Met vriendelijke groet,"
+msgstr "Met vriendelijke groet,"
+
+#: shared.php:749
+msgctxt "afsluiting inlogmail"
+msgid "het Gebruiker Centraal-team"
+msgstr "het Gebruiker Centraal-team"
+
+#: widgets/ZZZ_groups-widget.php:39
+msgid "Lijst van actieve, veel-gebruikte en meest recente groepen"
+msgstr ""
+
+#: widgets/ZZZ_groups-widget.php:42
+msgctxt "widget name"
+msgid "Gebruiker Centraal - groepen"
+msgstr ""
+
+#: widgets/ZZZ_groups-widget.php:68 widgets/ZZZ_groups-widget.php:156
+msgid "Groups"
+msgstr ""
+
+#: widgets/ZZZ_groups-widget.php:92 widgets/ZZZ_groups-widget.php:178
+msgid "Newest"
+msgstr ""
+
+#: widgets/ZZZ_groups-widget.php:93 widgets/ZZZ_groups-widget.php:179
+msgid "Active"
+msgstr ""
+
+#: widgets/ZZZ_groups-widget.php:94 widgets/ZZZ_groups-widget.php:180
+msgid "Popular"
+msgstr ""
+
+#: widgets/ZZZ_groups-widget.php:112 widgets/ZZZ_groups-widget.php:227
+#, php-format
+msgid "created %s"
+msgstr ""
+
+#: widgets/ZZZ_groups-widget.php:114 widgets/ZZZ_groups-widget.php:229
+#, php-format
+msgid "active %s"
+msgstr ""
+
+#: widgets/ZZZ_groups-widget.php:134
+msgid "There are no groups to display."
+msgstr ""
+
+#: widgets/ZZZ_groups-widget.php:169
+msgid "Title:"
+msgstr ""
+
+#: widgets/ZZZ_groups-widget.php:171
+msgid "Link widget title to Groups directory"
+msgstr ""
+
+#: widgets/ZZZ_groups-widget.php:173
+msgid "Max groups to show:"
+msgstr ""
+
+#: widgets/ZZZ_groups-widget.php:176
+msgid "Default groups to show:"
+msgstr ""
+
+#: widgets/ZZZ_groups-widget.php:245
+msgid "No groups matched the current filter."
+msgstr ""
+
+#: widgets/gc-actieteam-widget.php:14
+msgid "Widget voor het tonen van de actieteamleden"
+msgstr ""
+
+#: widgets/gc-berichten-widget.php:31
+msgid "Titel:"
+msgstr ""
+
+#: widgets/gc-berichten-widget.php:39
+msgid "Aantal:"
+msgstr ""
+
+#: widgets/gc-e-newsletter.php:13
+msgid ""
+"Aangepaste versie van de e-newsletter widget voor het inschrijven op de "
+"nieuwsbrief."
+msgstr ""
+
+#: widgets/gc-e-newsletter.php:14
+msgid "GC - Mailinglijstwidget"
+msgstr ""
+
+# @ gebruikercentraal
+#: widgets/gc-e-newsletter.php:66
+msgid "Subscribe to our Newsletters"
+msgstr ""
+
+# @ gebruikercentraal
+#: widgets/gc-e-newsletter.php:95
+msgid "Ask the name?"
+msgstr "Voornaam verplicht?"
+
+# @ gebruikercentraal
+#: widgets/gc-e-newsletter.php:99
+msgid "Show Groups?"
+msgstr ""
+
+# @ gebruikercentraal
+#: widgets/gc-e-newsletter.php:106
+msgid "Automatically subscribe to following groups:"
+msgstr "Automatisch toevoegen aan deze mailinglijsten:"
+
+#: widgets/gc-e-newsletter.php:113 widgets/gc-footer-widget.php:46
+msgid "Linkt naar pagina:"
+msgstr ""
+
+#: widgets/gc-e-newsletter.php:220
+msgid "Schrijf je in via deze pagina"
+msgstr ""
+
+#: widgets/gc-e-newsletter.php:223
+msgid "Je instellingen voor de nieuwsbrief"
+msgstr ""
+
+#: widgets/gc-e-newsletter.php:239
+msgid ""
+"Voer een geldig e-mailadres in om voortaan via mail op de hoogte gehouden te "
+"worden van alles nieuws rond Gebruiker Centraal"
+msgstr ""
+
+#: widgets/gc-e-newsletter.php:261
+msgid "Your Name:"
+msgstr ""
+
+# @ gebruikercentraal
+#: widgets/gc-e-newsletter.php:267 widgets/gc-e-newsletter.php:348
+msgid "Subscribe to:"
+msgstr ""
+
+#: widgets/gc-e-newsletter.php:287 widgets/gc-e-newsletter.php:307
+msgid "Subscribe"
+msgstr ""
+
+# @ gebruikercentraal
+#: widgets/gc-e-newsletter.php:326 widgets/gc-e-newsletter.php:366
+msgid "Unsubscribe"
+msgstr ""
+
+# @ gebruikercentraal
+#: widgets/gc-e-newsletter.php:363
+msgid "Save Subscriptions"
+msgstr ""
+
+# @ gebruikercentraal
+#: widgets/gc-e-newsletter.php:377
+msgid "Subscribe to Newsletters"
+msgstr ""
+
+#: widgets/gc-event-widget.php:13
+msgid "GC event widget"
+msgstr ""
+
+#: widgets/gc-event-widget.php:22
+msgid "alle events"
+msgstr ""
+
+#: widgets/gc-event-widget.php:23
+msgid "De agenda is leeg"
+msgstr ""
+
+#: widgets/gc-event-widget.php:26
+msgid "start date, start time, event name"
+msgstr ""
+
+#: widgets/gc-event-widget.php:27
+msgid "name, start date, start time"
+msgstr ""
+
+#: widgets/gc-event-widget.php:28
+msgid "name, end date, end time"
+msgstr ""
+
+#: widgets/gc-event-widget.php:29
+msgid "end date, end time, event name"
+msgstr ""
+
+#: widgets/gc-event-widget.php:35
+msgid "Toont een lijst van events"
+msgstr ""
+
+#: widgets/gc-event-widget.php:146
+msgid "all events"
+msgstr ""
+
+#: widgets/gc-event-widget.php:211
+msgid "Ascending"
+msgstr ""
+
+#: widgets/gc-event-widget.php:212
+msgid "Descending"
+msgstr ""
+
+#: widgets/gc-event-widget.php:250
+msgid "No events message"
+msgstr ""
+
+#: widgets/gc-footer-widget.php:11
+msgid "Ruimte voor korte informatie over de site en een doorklik."
+msgstr ""
+
+#: widgets/gc-footer-widget.php:44
+msgid "Korte beschrijving van de site:"
+msgstr ""
+
+#: widgets/gc-footer-widget.php:67 widgets/gc-footer-widget.php:81
+msgid "Meer over Gebruiker Centraal"
+msgstr ""
+
+#: widgets/gc-user-welcome-widget.php:54
+msgid ""
+"Toont de naam van de gebruiker, bij wijze van welkomstgroet. Alleen "
+"zichtbaar voor ingelogde gebruikers."
+msgstr ""
+
+#: widgets/gc-user-welcome-widget.php:63
+msgid "GC - Welkomstwidget voor ingelogde gebruikers"
+msgstr ""
+
+# @ gebruikercentraal
+#: widgets/gc-user-welcome-widget.php:97
+msgid "Je bent ingelogd als"
+msgstr ""
+
+# @ gebruikercentraal
+#~ msgid "Widget login-pagina (ingelogd)"
+#~ msgstr "Widget login-pagina (ingelogd)"
+
+# @ gebruikercentraal
+#~ msgid "Widget login-pagina (niet ingelogd)"
+#~ msgstr "Widget login-pagina (niet ingelogd)"
+
+#~ msgid "Deze tip is niet gekoppeld aan een thema"
+#~ msgstr "Deze tip is niet gekoppeld aan een thema"
+
+# @ genesis
+#~ msgid "Sorry, no content matched your criteria."
+#~ msgstr "Sorry, we kunnen niet vinden wat je zoekt."
+
+# @ gebruikercentraal
+# @ genesis
+#~ msgid "Monthly:"
+#~ msgstr "Per maand:"
+
+# @ gebruikercentraal
+# @ email-newsletter
+#~ msgid "Please use correct email!"
+#~ msgstr "X1 Gebruik een geldig e-mailadres!"

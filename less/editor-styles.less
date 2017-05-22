@@ -1,0 +1,65 @@
+
+// Gebruiker Centraal - editor-styles.less
+// ----------------------------------------------------------------------------------
+// bevat includes en selectors voor het genereren van editor.css.
+// deze wordt gebruikt in de WYSIWYG-editor
+// ----------------------------------------------------------------------------------
+// @package gebruiker-centraal
+// @author  Paul van Buuren
+// @license GPL-2.0+
+// @version 3.6.3
+// @desc.   Archive pagina
+// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+
+
+@import "00-mixins.less";          // colors, sizes 
+@import "30-text-styles.less";     // font-styles, shared with admin editor-styles.less 
+
+* {
+    .basefont();
+}
+
+.textstyles();
+
+h2 {
+  .fontsize( @fontsize_title_h3 );
+  text-transform: uppercase;
+    .bold-font();
+}
+
+@waarschuwing:        'Deze tekst bevat nog verkeerde opmaakcode. Selecteer de tekst en klik op de gum-knop om dit weg te halen';
+@waarschuwingbold:       'Deze tekst is vet. Als je een tussenkopje wil maken, gebruik dan h2, h3, h4. Vette tekst leidt erg af; van harte afgeraden.';
+@waarschuwingunderlined:   'Onderstreepte tekst impliceert een link. Niet gebruiken, alsjeblieft.';
+
+strong, b, span[style*="font"], span[style*="underline"], u {
+    background: red !important;
+    color: white !important;
+    padding: .4em 0;
+}
+strong, b {
+    font-weight: bold;
+}
+strong, b, span[style*="font"], span[style*="underline"], u  {
+    &:before { 
+        background: yellow url('opmaak-verwijderen.png') no-repeat .4em .4em !important;
+        content: @waarschuwing;
+        display: block;
+        padding: .4em .4em .4em 42px;
+        font-family: sans-serif;
+        font-size: 10px;
+        line-height: 16px;
+        width:  180px;
+        border: 1px solid black;
+        float: left;
+        color: black !important;
+    }
+}
+span[style*="font"]:before { 
+    content: @waarschuwing;
+}
+span[style*="underline"]:before, u:before {
+    content: @waarschuwingunderlined;
+}
+strong:before, b:before {
+    content: @waarschuwingbold;
+}

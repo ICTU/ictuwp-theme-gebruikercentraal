@@ -1,0 +1,44 @@
+.printstyles() {
+
+// Gebruiker Centraal - 90-printstyles.less
+// ----------------------------------------------------------------------------------
+// bevat CSS voor print-versies van de pagina's
+// ----------------------------------------------------------------------------------
+// @package gebruiker-centraal
+// @author  Paul van Buuren
+// @license GPL-2.0+
+// @version 3.6.3
+// @desc.   Archive pagina
+// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+
+
+  @media only print {
+  
+      body, body>div {
+          font-size: 12px;
+      }
+      
+      table {
+          h1, h2, h3, h4, h5, h6 {
+              font-size: 1.4em;
+          }
+      }
+      h1, h2, h3, h4, h5, h6 {
+          font-size: 1.4em;
+      }
+  
+      .heroimage, 
+      .site-header .widget-area {
+          display: none;
+          visibility: hidden;
+      }
+      .site-inner,
+      .wrap,
+      .content, 
+      .sidebar {
+          margin: 0;
+          width: 100%;
+          max-width: 100%;
+      }
+  }
+}

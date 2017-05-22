@@ -1,0 +1,2484 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: E-Newsletter v2.7.1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-04-28 15:09+0100\n"
+"PO-Revision-Date: 2015-04-29 00:15+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.7.5\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: /shared-paul-files/Webs/ICTU/Gebruiker Centraal/"
+"development/wp-content/plugins/e-newsletter\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: /shared-paul-files/Webs/ICTU/Gebruiker Centraal/"
+"development/wp-content/plugins/e-newsletter\n"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:83
+msgid "There was an issue determining plugin path or url"
+msgstr "Er ging iets met met de folders voor de plugin"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:93
+msgid "Create Newsletters"
+msgstr "Nieuwe nieuwsbrieven"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:94
+msgid "Edit Newsletters"
+msgstr "Bewerken nieuwsbrieven"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:95
+msgid "Send Newsletters"
+msgstr "Versturen nieuwsbrieven"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:96
+msgid "Delete Newsletters"
+msgstr "Verwijderen nieuwsbrieven"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:97
+msgid "Create Newsletter Groups"
+msgstr "Nieuwe nieuwsbriefgroepen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:98
+msgid "Edit Newsletter Groups"
+msgstr "Bewerken nieuwsbriefgroepen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:99
+msgid "Delete Newsletter Groups"
+msgstr "Verwijderen nieuwsbriefgroepen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:100
+msgid "Change Newsletter Groups"
+msgstr "Wijzig nieuwsbriefgroepen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:101
+msgid "View Newsletter Members"
+msgstr "Bekijken nieuwsbriefabonnees"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:102
+msgid "Add Newsletter Members"
+msgstr "Toevoegen nieuwsbriefabonnees"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:103
+msgid "Edit Newsletter Members"
+msgstr "Bewerken nieuwsbriefabonnees"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:104
+msgid "Delete Newsletter Members"
+msgstr "Verwijderen nieuwsbriefabonnees"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:105
+msgid "Add Members To Group"
+msgstr "Abonnees aan groep toevoegen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:106
+msgid "Delete Members From Group"
+msgstr "Abonnees uit groep verwijderen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:107
+msgid "Save Newsletter Settings"
+msgstr "Opslaan nieuwsbrief-instellingen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:108
+msgid "View Dashboard Page"
+msgstr "Dashboard-pagina bekijken"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:109
+msgid "Import Members"
+msgstr "Importeren abonnees"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:110
+msgid "First Time Install"
+msgstr "Eerst installatie"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:111
+msgid "Un-Install Newsletter Data"
+msgstr "De-installeren nieuwsbrief plugin"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:362
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-groups.php:99
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:440
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:147
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters.php:141
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:16
+msgid "Edit"
+msgstr "Bewerken"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:363
+msgid "Close"
+msgstr "Sluiten"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:364
+msgid "Save"
+msgstr "Opslaan"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:365
+msgid "Please write Email of the member"
+msgstr "Voer een mailadres in"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:366
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:78
+msgid "Show the New Member / Import forms"
+msgstr "Toon de importfunctie voor nieuwe abonnees"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:367
+msgid "Hide the New Member / Import forms"
+msgstr "Verberg de importfunctie voor nieuwe abonnees"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:368
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:80
+msgid "Show the export Members form"
+msgstr "Toon de exportfunctie voor abonnees"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:369
+msgid "Hide the export Members form"
+msgstr "Verberg de exportfunctie voor abonnees"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:370
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:371
+msgid "Please use proper email"
+msgstr "Gebruik het juiste mailadres"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:372
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:480
+msgid "Are you sure?"
+msgstr "Weet u het zeker?"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:373
+msgid "Save Groups"
+msgstr "Opslaan groepen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:374
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:436
+msgid "Change groups"
+msgstr "Groepen wijzigen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:375
+msgid "Please select members."
+msgstr "Selecteer abonnees."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:377
+msgid "Please write SMTP Outgoing Server, or select another Sending Method!"
+msgstr "Specificeer de SMTP-server of kies een andere verzendmethode."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:425
+msgid "Error: Wrong subscription data!"
+msgstr "Fout: ongeldige abonneegegevens."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:444
+msgid "Successful subscription!"
+msgstr "Aanmelding geslaagd!"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:447
+msgid "Member already subscribed!"
+msgstr "Abonnee staat al op de lijst."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:451
+msgid "There was a problem while subscribing!"
+msgstr "Aanmelding mislukt."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:500
+msgid "The Newsletter has been copied!"
+msgstr "De nieuwsbrief is gekopieerd."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:512
+msgid "The Newsletter is deleted!"
+msgstr "De nieuwsbrief is verwijderd."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:550
+msgid "Group is deleted!"
+msgstr "Groep is verwijderd."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:628
+msgid "Members are added to the group!"
+msgstr "Abonnees toegevoegd aan de groep."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:656
+msgid "Groups are changed!"
+msgstr "Groepen gewijzigd."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:669
+msgid "Members are deleted from the group!"
+msgstr "Abonnees verwijderd uit de groep."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:744
+msgid "eNewsletter data are deleted."
+msgstr "eNewsletter data verwijderd."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:764
+#, php-format
+msgid ""
+"Please <strong><a href=\"%s\" title=\"Install Now &raquo;\">configure and "
+"install eNewsletter</a></strong> to use all available features. <small><a "
+"style=\"color:red;\" href=\"%s\">(dismiss)</a></small>"
+msgstr ""
+"<strong><a href=\"%s\">Installeer eNewsletter</a></strong> om alle opties te "
+"kunnen gebruiken. <small><a style=\"color:red;\" href=\"%s\">(niet meer "
+"tonen)</a></small>"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:941
+msgid "This email is already used!"
+msgstr "Dit mailadres wordt al gebruikt."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:947
+msgid "This email is already subscribed!"
+msgstr "Dit mailadres staat al op de lijst."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:969
+msgid "Confirmation email has been sent! Please confirm subscription."
+msgstr ""
+"De bevestigingsmail is verstuurd. Klik op de link daarin om uw abonnement te "
+"bevestigen."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:971
+msgid ""
+"Failed to send opt-in email, please contact us and inform about this error."
+msgstr "Het sturen van de bevestigingsmail is mislukt. Wilt u ons dit melden?"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:984
+msgid "The new member is added!"
+msgstr "De nieuwe abonnee is toegevoegd."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:994
+msgid "Please use correct email!"
+msgstr "Gebruik een geldig mailadres."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1027
+msgid "You have been successfully subscribed!"
+msgstr "Uw aanmelding is gelukt."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1065
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1095
+msgid "You are subscribed successfully!"
+msgstr "Uw aanmelding is gelukt."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1068
+msgid "Error occured while subscribing!"
+msgstr "Uw aanmelding is mislukt."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1091
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1107
+msgid "Subscribes were saved!"
+msgstr "Aanmeldingen opgeslagen."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1102
+msgid "You have been successfully unsubscribed!"
+msgstr "U staat niet meer op de mailinglijst."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1132
+msgid "User updated!"
+msgstr "Abonneegegevens bijgewerkt."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1134
+msgid "Updating user failed!"
+msgstr "Abonneegegevens niet bijgewerkt."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1148
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1152
+msgid "You are unsubscribed!"
+msgstr "U hebt zich uitgeschreven."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1154
+msgid "You are already unsubscribed or are not subscribed yet!"
+msgstr "U had zich al uitgeschreven of u stond niet op de lijst."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1173
+msgid "Member deleted!"
+msgstr "Abonnee verwijderd."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1175
+msgid "No members to delete!"
+msgstr "Er kunnen geen abonnees verwijderd worden."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1177
+msgid "Members deleted!"
+msgstr "Abonnees verwijderd."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1273
+msgid "Multisite users newsletters"
+msgstr "Multisite nieuwsbrieven"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1277
+msgid "Recieve newsletters for site admins"
+msgstr "Nieuwsbrieven voor site-admins"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1280
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-groups.php:89
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:483
+msgid "Yes"
+msgstr "Ja"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1281
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-groups.php:91
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:482
+msgid "No"
+msgstr "Nee"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1346
+msgid "The group has been modified."
+msgstr "De groep is gewijzigd."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1350
+msgid "The group already exists!"
+msgstr "De groep bestaat al."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1353
+msgid "The group has been created."
+msgstr "De groep is aangemaakt."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1576
+msgid "All members have already received it or no user is subscribed!"
+msgstr ""
+"Alle mail aan de lijst is al verstuurd of er zijn geen abonnees voor deze "
+"lijst."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1579
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1594
+msgid "Members are added to CRON list"
+msgstr "Abonnees toegevoegd aan de CRON-job."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1607
+msgid "Members are removed from CRON list"
+msgstr "Abonnees verwijderd uit de CRON-job."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1681
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1688
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1700
+msgid "Error when updating DB."
+msgstr "Fout bij het bijwerken van de database."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1691
+msgid "Error sending email. Please check outgoing email settings."
+msgstr ""
+"Fout bij het versturen van mail. Controleer de mailinstellingen, alstublieft."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1974
+msgid "No valid newsletter ID supplied."
+msgstr "Geen geldig ID voor de nieuwsbrief."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1991
+msgid "Your test email has been sent."
+msgstr "Testmail is verzonden."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1993
+msgid ""
+"Failed to send test email! Make sure that entered email is correct and also "
+"check outgoing email settings."
+msgstr ""
+"Testmail is niet verzonden. Controleer of u het juiste mailadres hebt "
+"ingevoerd en of de mailinstellingen voor het versturen correct zijn."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:1995
+msgid "Failed to generate email body."
+msgstr "Samenstellen van de e-mail is niet gelukt."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2055
+msgid ""
+"Failed to send test email! - Please check your outgoing email settings and "
+"server config to see if selected ports are open. Error details: "
+msgstr ""
+"Testmail is niet verzonden. Controleer: de mailinstellingen voor het "
+"versturen, de serverconfiguratie en of de ingevoerde poortnummers gebruikt "
+"kunnen worden. Foutdetails: "
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2058
+msgid ""
+"Test message successfully sent! Feel free to save your settings. Please keep "
+"in mind that your server may limit the number of allowed messages to be sent "
+"per hour/day/week."
+msgstr ""
+"Testmail is verzonden! Sla uw  instellingen op. Realiseert u zich wel dat uw "
+"systeembeheerder een limiet kan hebben ingesteld op het aantal mailtjes dat "
+"per uur / dag / week verzonden mag worden."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2066
+msgid "PHP Imap not supported"
+msgstr "PHP Imap wordt niet ondersteund."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2081
+msgid "Failed to send test email! Please check your outgoing email settings."
+msgstr ""
+"Versturen van testmail is niet gelukt. Controleer uw e-mailinstellingen, "
+"alstublieft."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2107
+msgid ""
+"Failed to connect while checking bounces! Please check your bounce settings "
+"and server config to see if selected ports are open. Error details: "
+msgstr ""
+"Fout bij het controleren van geweigerde mail. Controleer uw instellingen en "
+"serverconfiguratie: zijn de ingevoerde poortnummers beschikbaar? Details: "
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2128
+msgid "Successfully connected! Feel free to save your settings."
+msgstr "Verbinding geslaagd. Sla uw instellingen op."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2136
+msgid "Bounce test message not found!"
+msgstr "Testmail voor geweigerde mail niet gevonden."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2152
+msgid "Confirm newsletter subscription"
+msgstr "Bevestig de inschrijving op de nieuwsbrief"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2214
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2226
+msgid "eNewsletter"
+msgstr "eNewsletter"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2215
+msgid "Reports"
+msgstr "Rapportage"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2216
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:31
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters.php:31
+msgid "Newsletters"
+msgstr "Nieuwsbrieven"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2217
+msgid "Create Newsletter"
+msgstr "Nieuwe nieuwsbrief"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2218
+msgid "Member Groups"
+msgstr "Mailinglijsten"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2219
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-groups.php:57
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:72
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:34
+msgid "Members"
+msgstr "Abonnees"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2220
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/builder/class.builder.php:505
+msgid "Settings"
+msgstr "Instellingen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2223
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-subscribe.php:29
+msgid "My Subscriptions"
+msgstr "Mijn abonnementen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2227
+msgid "Install Settings"
+msgstr "Installatie-instellingen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2279
+msgid "Select groups for this user:"
+msgstr "Selecteer mailinglijsten voor deze abonnee:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2284
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:472
+msgid "Subscribed"
+msgstr "Aangemeld"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2297
+msgid "Please create some groups."
+msgstr "Voeg mailinglijsten toe."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2323
+msgid "Please write your Email!"
+msgstr "Voer uw mailadres in."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2324
+msgid "Saving..."
+msgstr "Opslaan..."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2386
+msgid "Your Email:"
+msgstr "E-mailadres:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2392
+msgid "Your Name:"
+msgstr "Naam:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2398
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2483
+msgid "Subscribe to:"
+msgstr "Abonneren op:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2418
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2439
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:175
+msgid "Subscribe"
+msgstr "Abonneren"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2458
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2507
+msgid "Unsubscribe"
+msgstr "Afmelden"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2502
+msgid "Save Subscriptions"
+msgstr "Opslaan"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/e-newsletter.php:2518
+msgid "Subscribe to Newsletters"
+msgstr "Aanmelden voor mailinglijsten"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/builder/class.builder.php:24
+msgid "Something is wrong, we can not determine what your trying to do."
+msgstr "Er ging iets fout en we hebben geen flauw idee wat. Onze excuses."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/builder/class.builder.php:165
+msgid "Save Newsletter"
+msgstr "Opslaan nieuwsbrief"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/builder/class.builder.php:166
+msgid "Activate Theme"
+msgstr "Theme gebruiken"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/builder/class.builder.php:205
+msgid "Choose template"
+msgstr "Kies een template"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/builder/class.builder.php:254
+msgid "You have unsaved data in this newsletter."
+msgstr "U hebt deze nieuwsbrief nog niet opgeslagen."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/builder/class.builder.php:389
+msgid "Images"
+msgstr "Plaatjes"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/builder/class.builder.php:422
+msgid "Colors"
+msgstr "Kleuren"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/builder/class.builder.php:432
+msgid "Background Color"
+msgstr "Achtergrondkleur"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/builder/class.builder.php:444
+msgid "Body Text Color"
+msgstr "Body tekstkleur"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/builder/class.builder.php:456
+msgid "Alternative Text Color"
+msgstr "Alternatieve tekstkleur"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/builder/class.builder.php:469
+msgid "Title Text Color"
+msgstr "Tekstkleur voor titel"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/builder/class.builder.php:481
+msgid "Link Color"
+msgstr "Link-kleur"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/builder/class.builder.php:494
+msgid "Email Title"
+msgstr "Titel voor e-mail"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/builder/class.builder.php:509
+msgid "Content"
+msgstr "Inhoud"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/builder/class.builder.php:513
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/builder/class.preview-control.php:11
+msgid "Send Preview"
+msgstr "Stuur voorbeeldmail"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/builder/class.builder.php:561
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters.php:71
+msgid "Template"
+msgstr "Template"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/builder/class.builder.php:566
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:99
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters.php:64
+msgid "Email Subject"
+msgstr "Onderwerp voor de mail"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/builder/class.builder.php:571
+msgid "From Name"
+msgstr "Naam afzender"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/builder/class.builder.php:576
+msgid "From Email"
+msgstr "E-mail afzender"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/builder/class.builder.php:581
+msgid "Bounce Email"
+msgstr "Bounce e-mail"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/builder/class.builder.php:586
+msgid "Email Content"
+msgstr "Inhoud e-mail"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/builder/class.builder.php:591
+msgid "Branding HTML/text"
+msgstr "HTML / tekst voor <em>branding</em>"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/builder/class.builder.php:596
+msgid "Contact Info"
+msgstr "Contactgegevens"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/builder/class.builder.php:601
+msgid "Send Preview To Email (Save First)"
+msgstr "Voorbeeldmail versturen (eerst opslaan)"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/builder/class.preview-control.php:23
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/builder/class.preview-control.php:31
+msgid "Sending..."
+msgstr "Versturen..."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/builder/class.preview-control.php:48
+msgid ""
+"Do you want to save newsletter before sending? It is needed to see latest "
+"changes."
+msgstr ""
+"Wilt u eerst opslaan voordat u de mail verstuurt? Hiermee worden de laatste "
+"wijzigingen zichtbaar."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/class.functions.php:602
+msgid "eNewsletter Groups"
+msgstr "eNewsletter-groepen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/class.functions.php:614
+msgid "Membership Plugin Levels"
+msgstr "Membership Plugin Levels"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/class.functions.php:630
+msgid "WordPress User Roles"
+msgstr "WordPress autorisatieniveau"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/class.functions.php:639
+msgid "Admins of all sites"
+msgstr "Beheerders van alle sites"
+
+# @ default
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/class.functions.php:933
+msgid "every 2 min"
+msgstr "elke 2 minuten"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/class.functions.php:1104
+msgid "From"
+msgstr "Van"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/class.functions.php:1105
+msgid "Not interested anymore?"
+msgstr "Wil je deze nieuwsbrief niet meer ontvangen?"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/class.functions.php:1106
+msgid "Unsubscribe Instantly."
+msgstr "meld je hier af."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/class.functions.php:1655
+msgid "Import is finished successfully,"
+msgstr "Import is gelukt."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/class.functions.php:1655
+msgid "members are added or subscribed to group(s)."
+msgstr "abonnees toegevoegd aan mailinglijsten."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/class.functions.php:1658
+msgid "These emails already exist in member list:"
+msgstr "Deze mailadressen staan al op de mailinglijst:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/class.functions.php:1666
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/class.functions.php:1678
+msgid "...and "
+msgstr "...en"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/class.functions.php:1670
+msgid "These emails are incorrect:"
+msgstr "Foutieve mailadressen:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/class.functions.php:1690
+msgid "Import ERROR: Problem with uploading of the file!"
+msgstr "Fout bij importeren. Bestand kon niet geüpload worden."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/class.functions.php:1694
+msgid ""
+"Import ERROR: Please change permission for the folder /wp-content/uploads/"
+msgstr ""
+"Fout bij importeren. Wijzig permissies voor de map: /wp-content/uploads/"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/class.functions.php:1846
+msgid "The Plugin is installed!"
+msgstr "Plug-in geïnstalleerd."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/class.functions.php:1850
+msgid "The Settings are saved!"
+msgstr "Instellingen opgeslagen."
+
+# @ default
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/class.wd_help_tooltips.php:296
+msgid "Help"
+msgstr "Hulp"
+
+# @ default
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/class.wp_widgets.php:6
+msgid "Allow people to subscribe to your newsletter database."
+msgstr "Gebruikers toestaan om zich te abonneren op nieuwsbrieven."
+
+# @ default
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/class.wp_widgets.php:7
+msgid "eNewsletter: Subscribe"
+msgstr "eNewsletter: abonneer je"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/class.wp_widgets.php:48
+msgid "Subscribe to our Newsletters"
+msgstr "Abonneer je op onze mailinglijsten"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/class.wp_widgets.php:71
+msgid "Title"
+msgstr "Titel"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/class.wp_widgets.php:76
+msgid "Ask the name?"
+msgstr "Naam verplicht?"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/class.wp_widgets.php:80
+msgid "Show Groups?"
+msgstr "Toon mailinglijsten?"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/class.wp_widgets.php:87
+msgid "Automatically subscribe to following groups:"
+msgstr "Automatisch toevoegen aan deze mailinglijsten:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-groups.php:12
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:354
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:37
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:206
+msgid "Groups"
+msgstr "Mailinglijsten"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-groups.php:13
+msgid "This page contains the list of all groups."
+msgstr "Op deze pagina het overzicht van alle mailinglijsten."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-groups.php:15
+msgid "Create New Group"
+msgstr "Nieuwe mailinglijst"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-groups.php:22
+msgid "Group Name:"
+msgstr "Naam mailinglijst:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-groups.php:30
+msgid "public users can join this group"
+msgstr "iedereen kan zich aanmelden voor deze mailinglijst"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-groups.php:35
+msgid "Add Group"
+msgstr "Mailinglijst toevoegen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-groups.php:40
+msgid "List of Groups:"
+msgstr "Overzicht mailinglijsten:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-groups.php:48
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters.php:50
+msgid "ID"
+msgstr "ID"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-groups.php:51
+msgid "Group Name"
+msgstr "Naam mailinglijst"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-groups.php:54
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:479
+msgid "Public"
+msgstr "Openbaar"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-groups.php:60
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:357
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:111
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters.php:85
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:253
+msgid "Actions"
+msgstr "Acties"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-groups.php:101
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:445
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:465
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:144
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters.php:131
+msgid "Delete"
+msgstr "Verwijderen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-groups.php:108
+msgid "No groups found."
+msgstr "Geen mailinglijsten gevonden."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:73
+msgid "At this page you can manage your members."
+msgstr "Pagina voor het beheren van abonneegegevens."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:74
+msgid ""
+"Note: edits made to members will not sync to wordpress user but they will "
+"the other way around."
+msgstr ""
+"NB: wijzigingen aan abonneegegevens worden niet doorgegevens aan de "
+"WordPress-gebruikersgegevens. Andersom echter wel."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:94
+msgid "Create the new member:"
+msgstr "Nieuwe abonnee toevoegen:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:99
+msgid "Member Email:"
+msgstr "Mailadres abonnee:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:107
+msgid "First Name:"
+msgstr "Voornaam:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:115
+msgid "Last Name:"
+msgstr "Achternaam:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:125
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:233
+msgid "Groups:"
+msgstr "Mailinglijsten:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:142
+msgid "Add Member"
+msgstr "Abonnee toevoegen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:154
+msgid "Import members:"
+msgstr "Abonnees importeren:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:159
+msgid ""
+"Note: The file should have the next columns: Email (required), First Name "
+"(not required), Last Name (not required). Without headers."
+msgstr ""
+"NB: het bestand moet deze kolommen bevatten: Mailadres (verplicht), voornaam "
+"(niet verplicht), achternaam (niet verplicht). Geen kolomtitels."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:159
+msgid "Sample File"
+msgstr "Voorbeeldbestand"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:164
+msgid "From .csv file:"
+msgstr "Van .csv bestand:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:172
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:254
+msgid "Separated by:"
+msgstr "Kolomscheiding:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:177
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:259
+msgid "Comma"
+msgstr "komma"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:180
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:262
+msgid "Semicolon"
+msgstr "puntkomma"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:189
+msgid "Assign with group:"
+msgstr "Toevoegen aan mailinglijst:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:205
+msgid "Import members"
+msgstr "Abonnees importeren"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:226
+msgid "Export Members to file"
+msgstr "Abonnees naar bestand exporteren"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:238
+msgid "Ungrouped"
+msgstr "Niet op een mailinglijst"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:271
+msgid "Exports Members"
+msgstr "Abonnees exporteren"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:285
+msgid "Show All"
+msgstr "Alles tonen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:287
+msgid "Show Ungrouped"
+msgstr "Toon leden zonder mailinglijst"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:289
+msgid "Show Bounced"
+msgstr "Toon geweigerde"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:291
+msgid "Show Unsubscribed"
+msgstr "Toon afgemeld"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:296
+msgid "Search Members"
+msgstr "Zoek leden"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:309
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:173
+msgid "WP ID"
+msgstr "WP ID"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:314
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:177
+msgid "Email Address"
+msgstr "E-mailadres"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:321
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:182
+msgid "Name"
+msgstr "Naam"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:328
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:187
+msgid "Join Date"
+msgstr "Inschrijfdatum"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:335
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:40
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:192
+msgid "Sent"
+msgstr "Verstuurd"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:342
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:43
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:105
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:197
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters.php:79
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:247
+msgid "Opened"
+msgstr "Geopend"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:349
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:46
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:108
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:202
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters.php:82
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:250
+msgid "Bounced"
+msgstr "Geweigerd"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:414
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:475
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:272
+msgid "Unsubscribed"
+msgstr "Afgemeld"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:452
+msgid "No members found."
+msgstr "Geen abonnees."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:458
+msgid "Bulk Actions"
+msgstr "Bulk-acties"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:461
+msgid "Add to group"
+msgstr "Aan mailinglijst toevoegen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:462
+msgid "Delete from group"
+msgstr "Afmelden voor mailinglijst"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:470
+msgid "Group List"
+msgstr "Mailinglijst"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:485
+msgid "Apply"
+msgstr "Toepassen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:490
+msgid "member(s)"
+msgstr "abonnee(s)"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:491
+msgid "by"
+msgstr "door"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:497
+msgid "All"
+msgstr "Alle"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-members.php:499
+msgid "per page."
+msgstr "per pagina."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:23
+msgid "Newsletters Dashboard"
+msgstr "Dashboard nieuwsbrieven"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:24
+msgid "Take a look at newsletter reports."
+msgstr "Bekijk de rapportages."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:26
+msgid "Statistics for current members:"
+msgstr "Statistieken voor huidige abonnees:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:49
+msgid "Waiting"
+msgstr "In de wacht"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:52
+msgid "CRON"
+msgstr "CRON"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:53
+msgid "enabled"
+msgstr "ingeschakeld"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:53
+msgid "disabled"
+msgstr "uitgeschakeld"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:91
+msgid "5 Latest Newsletters:"
+msgstr "De 5 meest recente nieuwsbrieven:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:96
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters.php:57
+msgid "Create Date"
+msgstr "Aanmaakdatum"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:102
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters.php:76
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:244
+msgid "Sent To"
+msgstr "Verstuurd aan"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:134
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:137
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:140
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters.php:120
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters.php:123
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters.php:126
+msgid "members"
+msgstr "abonnees"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:150
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters.php:146
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:316
+msgid "Send"
+msgstr "Verstuur"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:164
+msgid "Create New Newsletter"
+msgstr "Nieuwe nieuwsbrief"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters-dashboard.php:168
+msgid "5 Latest Members:"
+msgstr "5 meest recente abonnees:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters.php:33
+msgid "Create New"
+msgstr "Aanmaken"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters.php:36
+msgid "This page contains the list of all Newsletters."
+msgstr "Overzicht van alle nieuwsbrieven."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters.php:37
+msgid ""
+"Note: please store your custom themes in enewsletter-custom-themes folder "
+"located in wp-content/uploads(+/siteID/ if activated on a single blog of a "
+"multi-site install)."
+msgstr ""
+"NB: zet uw custom templates in de folder wp-content/uploads/enewsletter-"
+"custom-themes/. Of wp-content/uploads/(+/siteID/enewsletter-custom-themes/ "
+"als dit een multisite-installatie is."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters.php:136
+msgid "Clone"
+msgstr "Kopieren"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-newsletters.php:154
+msgid "No newsletters found."
+msgstr "Geen nieuwsbrieven gevonden."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:16
+msgid "Send Newsletter:"
+msgstr "Verstuur nieuwsbrief:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:18
+msgid "At this page you can send newsletter to the selected groups."
+msgstr ""
+"Vanaf deze pagina kunt u nieuwsbrieven versturen naar de geselecteerde "
+"mailinglijsten."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:33
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:73
+msgid "Sending"
+msgstr "Bezig"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:43
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:74
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:78
+msgid "Pause"
+msgstr "Pauzeren"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:44
+msgid "Pause, and send by WP-CRON"
+msgstr "Pauzeren en via WP-CRON versturen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:45
+msgid "Go Back"
+msgstr "Ga terug."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:79
+msgid "Continue"
+msgstr "Doorgaan"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:111
+msgid "Done"
+msgstr "Klaar"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:141
+msgid "Select which groups you would like to send to:"
+msgstr "Selecteer de mailinglijsten waarnaar u mail wilt sturen:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:149
+msgid "All Active Members"
+msgstr "Alle actieve abonnees"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:157
+msgid "Please keep in mind emails are not being sent to unsubscribed users."
+msgstr ""
+"NB: aan abonnees die zich hebben uitgeschreven wordt geen mail verstuurd."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:162
+msgid "Don't resend to people that had this newsletter sent to."
+msgstr "Verstuur niet opnieuw aan abonnees die deze nieuwsbrief al ontvingen."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:167
+msgid "Send to bounced members."
+msgstr "Stuur aan adressen die eerder de mail bouncten."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:175
+msgid "Send newsletter now"
+msgstr "Verstuur nieuwsbrief nu"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:176
+msgid "Send in background (by CRON)"
+msgstr "Verstuur in de achtergrond (via CRON)"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:178
+msgid "Send:"
+msgstr "Verstuur:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:178
+msgid "As fast as possible."
+msgstr "Zo snel mogelijk."
+
+# @ default
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:201
+#, php-format
+msgid "%1$s-%2$s"
+msgstr "%1$s-%2$s"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:213
+msgid "Set"
+msgstr "Instellen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:214
+msgid "Cancel/Unset"
+msgstr "Annuleren"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:229
+msgid "Previous sending:"
+msgstr "Vorige mailing:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:235
+msgid "Start Date"
+msgstr "Startdatum"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:238
+msgid "Waiting send (manually)"
+msgstr "Wachtrij (handmatig)"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:241
+msgid "Waiting send (cron)"
+msgstr "Wachtrij (CRON)"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:311
+msgid "Remove from CRON list"
+msgstr "Van CRON-lijst verwijderen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:319
+msgid "Add to CRON list"
+msgstr "Aan CRON-lijst toevoegen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:322
+msgid "Continue Send"
+msgstr "Doorgaan met versturen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-send-newsletter.php:339
+msgid "Total:"
+msgstr "Totaal:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:2
+msgid "eNewsletter Settings"
+msgstr "eNewsletter instellingen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:5
+msgid "eNewsletter plugin Installation"
+msgstr "eNewsletter plugin installatie"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:35
+msgid "General Settings"
+msgstr "Algemene instellingen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:36
+msgid "Outgoing Email Settings"
+msgstr "Instellingen uitgaande mail"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:37
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:339
+msgid "Bounce Settings"
+msgstr "Bounce instellingen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:38
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:418
+msgid "User Permissions"
+msgstr "Gebruikerspermissies"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:40
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:473
+msgid "Uninstall"
+msgstr "Deïnstalleren"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:44
+msgid "Default Info Settings"
+msgstr "Standaard informatie"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:49
+msgid "From name:"
+msgstr "Naam afzender:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:53
+msgid "Default \"from\" name when sending newsletters."
+msgstr "Standaard naam afzender voor nieuwsbrieven."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:58
+msgid "Branding:"
+msgstr "Branding:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:63
+msgid "Default branding html/text will be added to the top of each email."
+msgstr "Wordt bovenaan de mail toegevoegd."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:63
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:73
+msgid "It can be easily changed for each newsletter"
+msgstr "Kan eenvoudig voor elke nieuwsbrief gewijzigd worden"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:68
+msgid "Contact information:"
+msgstr "Contactgegevens:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:73
+msgid "Default contact information will be added to the bottom of each email."
+msgstr "Contactinformatie wordt toegevoegd onderaan de mail."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:78
+msgid "View email in browser:"
+msgstr "Bekijk deze e-mail in een browser:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:81
+msgid ""
+"<a href=\"{VIEW_LINK}\" title=\"View e-mail in browser\">View e-mail in "
+"browser</a>"
+msgstr "<a href=\"{VIEW_LINK}\">bekijk deze mail in je browser</a>"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:83
+msgid ""
+"This HTML message will be visible before newsletter starts so user have "
+"ability to display email in browser. Use \"{VIEW_LINK}\" as link. Leave "
+"blank to disable."
+msgstr ""
+"Deze HTML-tekst is zichtbaar voor het begin van de mail. Hierdoor kan de "
+"lezer de mail bekijken in zijn browser. Gebruik \"{VIEW_LINK}\" als link. "
+"Laat leeg als je het niet wilt gebruiken."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:88
+msgid "Preview mail:"
+msgstr "Toon preview:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:92
+msgid "Default email adress to send previews to."
+msgstr "Standaard mailadres om previews naar te sturen."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:97
+msgid "Default User Subscribe/Unsubscribe Settings"
+msgstr "Standaard instellingen voor aan- en afmelden."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:102
+msgid "Double Opt In:"
+msgstr "Dubbele Opt In:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:105
+msgid "Enable:"
+msgstr "Inschakelen:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:107
+msgid "Subject:"
+msgstr "Onderwerp:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:108
+msgid "Please confirm your email"
+msgstr "Bevestig uw e-mailadres"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:109
+msgid ""
+"If enabled, members will get confirmation email with configured subject to "
+"subscribe to newsletters (only for not registered users)"
+msgstr ""
+"Als dit ingeschakeld is, krijgen abonnees een bevestigingsmail om zich op te "
+"geven voor mailinglijsten (alleen voor niet-geregistreerde gebruikers)"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:109
+msgid "Do not leave subject blank."
+msgstr "Onderwerp mag niet leeg zijn."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:115
+msgid "Default Groups:"
+msgstr "Standaard mailinglijsten:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:135
+msgid "You have not created any member groups yet."
+msgstr "U hebt nog geen mailinglijsten aangemaakt."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:139
+msgid ""
+"Default groups to add user to after subscription (even if nothing is "
+"selected in subscribe widget)."
+msgstr ""
+"Standaard mailinglijsten waaraan gebruiker wordt toegevoegd (als hij niets "
+"heeft geselecteerd in de widget)."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:145
+msgid "Welcome Newsletter:"
+msgstr "Welkomstmail:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:149
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:176
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:306
+msgid "Disable"
+msgstr "Uitschakelen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:161
+msgid "Default newsletter that will be sent on user subscription."
+msgstr "Nieuwsbrief die verstuurd wordt als iemand zich abonneert."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:167
+msgid "WordPress User registration:"
+msgstr "Als iemand zich op de site registreert:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:178
+msgid ""
+"Choose if user registering(with WordPress) to your site is automatically "
+"subscribed to newsletter."
+msgstr ""
+"Kies of een gebruiker die zich op uw site registreert ook automatisch op de "
+"mailinglijst moet worden gezet."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:184
+msgid "Subscribed Page ID:"
+msgstr "Pagina ID na abonneren:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:188
+msgid ""
+"Add ID of page that you want to display after user subscribes. You can use "
+"[enewsletter_subscribe_message] shortcode inside it to display subscribe "
+"status message. Leave blank to disable."
+msgstr ""
+"Gebruik het ID van de pagina die je wilt tonen nadat een gebruiker zich "
+"ingeschreven heeft. Je kunt daar [enewsletter_subscribe_message] als "
+"shortcode gebruiken om de status-boodschap te tonen. Laat leeg als je dit "
+"niet wilt gebruiken."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:194
+msgid "Unsubscribe Page ID:"
+msgstr "Pagina ID na opzeggen:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:198
+msgid ""
+"Add ID of page that you want to display after user unsubscribes. You can use "
+"[enewsletter_unsubscribe_message] shortcode inside it to display unsubscribe "
+"status message. Leave blank to disable."
+msgstr ""
+"Gebruik het ID van de pagina die je wilt tonen nadat een gebruiker zich van "
+"een mailinglijst uitgeschreven heeft. Je kunt daar "
+"[enewsletter_unsubscribe_message] als shortcode gebruiken om de status-"
+"boodschap te tonen. Laat leeg als je dit niet wilt gebruiken."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:206
+msgid "Outgoing SMTP Email Settings"
+msgstr "Instellingen voor SMTP"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:211
+msgid "Email Sending Method:"
+msgstr "Manier van versturen:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:215
+msgid "SMTP (recommended)"
+msgstr "SMTP (aangeraden)"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:218
+msgid ""
+"The SMTP method allows you to use your SMTP server (or Gmail, Yahoo, Hotmail "
+"etc. ) for sending newsletters and emails. It's usually the best choice, "
+"especially if your host has restrictions on sending email and to help you to "
+"avoid being blacklisted as a SPAM sender"
+msgstr ""
+"Via de SMTP-methode kunt u via uw SMTP-server (of die van Gmail, Yahoo, "
+"Hotmail) mail versturen. Meestal is dit de beste optie, vooral als uw "
+"systeembeheerder beperkingen heeft gesteld aan het versturen van mail. "
+"Hierdoor voorkomt u dat u als spammer wordt aangemerkt."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:221
+msgid "PHP mail"
+msgstr "PHP mail"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:223
+msgid ""
+"This method uses php functions for sending newsletters and emails. Be "
+"careful because some hosts may set restrictions on using this method. If you "
+"can't edit settings of your server, we recommend to use the SMTP method for "
+"optimal results!"
+msgstr ""
+"Deze methode gebruikt PHP-functies voor het versturen van nieuwsbrieven. Dit "
+"werkt niet op alle hosts, doordat de systeembeheerder beperkingen kan hebben "
+"ingesteld. Als u dit niet kunt wijzigen raden we de SMTP-methode aan."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:228
+msgid "From email:"
+msgstr "E-mailadres afzender:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:232
+msgid "Default \"from\" email address when sending newsletters."
+msgstr "Standaard \"Van\" e-mailadres voor nieuwsbrieven (afzendadres)"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:233
+msgid ""
+"Note: for SMTP method - in \"From email\" you should only use email related "
+"with your SMTP server!"
+msgstr ""
+"NB: voor de SMTP methor: in het afzendadres moet u alleen het adres invoeren "
+"dat correspondeert met uw SMTP-gegevens."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:234
+msgid ""
+"Note2: for PHP mail method - in \"From email\" you should only use email "
+"with domain configured for your server!"
+msgstr ""
+"NB: voor de PHP mail method: gebruik alleen de domeinnaam van deze server "
+"als afzendadres."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:241
+msgid "SMTP Outgoing Server"
+msgstr "SMTP Outgoing Server"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:244
+msgid "The hostname for the SMTP account, eg: mail."
+msgstr "De hostname voor het SMTP account, bijvoorbeeld: mail."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:248
+msgid "SMTP Username:"
+msgstr "SMTP gebruikersnaam:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:251
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:258
+msgid "(leave blank for none)"
+msgstr "(mag leeggelaten worden)"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:255
+msgid "SMTP Password:"
+msgstr "SMTP wachtwoord:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:258
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:385
+msgid " (For security, saved password lenght does not match preview)"
+msgstr "(lengte van het wachtwoord wijkt af van de preview)"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:262
+msgid "SMTP Port"
+msgstr "SMTP poort"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:265
+msgid "Defaults to 25.  Gmail uses 465 or 587"
+msgstr "Meestal 25.  Gmail gebruikt 465 of 587"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:269
+msgid "Secure SMTP?"
+msgstr "Secure SMTP?"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:276
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:398
+msgid "None"
+msgstr "geen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:277
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:399
+msgid "SSL"
+msgstr "SSL"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:278
+msgid "TLS"
+msgstr "TLS"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:280
+msgid "Choose an optional type of connection"
+msgstr "Kies verbindingstype"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:286
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:406
+msgid "Test Connection"
+msgstr "Verbinding testen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:287
+msgid "We will send test email on configured from email address."
+msgstr "We sturen een testmail naar het ingevoerde afzendersadres."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:293
+msgid "CRON Email Sending Settings"
+msgstr "Instellingen voor mail via CRON"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:297
+msgid "CRON Email Sending:"
+msgstr "Versturen van mail via CRON:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:305
+msgid "Enable"
+msgstr "Inschakelen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:308
+msgid "('Disable' - not use CRON for sending emails)"
+msgstr "('uitschakelen' -geen CRON gebruiken voor versturen van mail)"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:313
+msgid "Limitations:"
+msgstr "Beperkingen:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:318
+msgid "(0 or blank for unlimited)"
+msgstr "(0 of leeg voor ongelimiteerd)"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:319
+msgid "emails per"
+msgstr "e-mails per"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:325
+msgid "Hour"
+msgstr "uur"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:326
+msgid "Day"
+msgstr "dag"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:327
+msgid "Month"
+msgstr "maand"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:329
+msgid "and wait"
+msgstr "en wacht"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:331
+msgid "second(s) between each email"
+msgstr "seconden tussen elke mail"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:344
+msgid "Please enable \"IMAP\" PHP extension for bounce to work."
+msgstr ""
+"Schakel de \"IMAP\" PHP extensie in om bounce-mailafhandeling mogelijk te "
+"maken."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:350
+msgid ""
+"This controls how bounce emails are handled by the system. Please create a "
+"new separate POP3 email account to handle bounce emails. Enter these POP3 "
+"email details below."
+msgstr ""
+"Dit bepaalt hoe bounce-mail wordt afgehandeld. Maak hiervoor een apart POP3-"
+"mailadres aan en voer de gegevens daarvan hieronder in."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:354
+msgid "Email Address:"
+msgstr "E-mailadres:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:357
+msgid ""
+"Email address where bounce emails will be sent by default (might be "
+"overwritten by server)"
+msgstr ""
+"Mailadres waarnaar bounce-mail wordt verstuurd (afhankelijk van "
+"serverinstellingen)"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:361
+msgid "POP3 Host:"
+msgstr "POP3 host:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:364
+msgid "The hostname for the POP3 account, eg: mail."
+msgstr "De hostname voor het POP3 account, bijvoorbeeld: mail."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:368
+msgid "POP3 Port"
+msgstr "POP3 poort"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:371
+msgid "Defaults to 110 or 995 with SSL enabled"
+msgstr "Meestal 110 of 995 met SSL enabled"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:375
+msgid "POP3 Username:"
+msgstr "POP3 gebruikersnaam:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:378
+msgid ""
+"Username for this bounce email account (usually the same as the above email "
+"address) "
+msgstr ""
+"Gebruikersnaam voor het bounce-adres (meestal hetzelfde als het mailadres)"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:382
+msgid "POP3 Password:"
+msgstr "POP3 wachtwoord:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:385
+msgid "Password to access this bounce email account"
+msgstr "Wachtwoord voor dit bounce-account"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:390
+msgid "Secure POP3?:"
+msgstr "Beveiligde POP3?:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:407
+msgid ""
+"We will send test email on Bounce address and will try read this email and "
+"delete after(this part might not be possible)"
+msgstr ""
+"Hier proberen we een mail te versturen aan het bounce-adres en de mail "
+"daarna te verwijderen (dit is niet altijd mogelijk)"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:419
+msgid ""
+"Here you can set your desired permissions for each user role on your site"
+msgstr "Hier kun je per gebruikersrol permissies toekennen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:431
+msgid "Capability"
+msgstr "Permissie:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:451
+msgid "Groups permissions"
+msgstr "Groepspermissies"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:455
+msgid "Public group access:"
+msgstr "Toegang tot openbare mailinglijst:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:462
+msgid "Registered users"
+msgstr "Geregistreerde gebruikers"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:463
+msgid "Nobody"
+msgstr "Niemand"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:465
+msgid ""
+"Choose what type of user can subscribe to non public groups. <small>Keep in "
+"mind that users can still be added to all type of groups in eNewsletter "
+"members admin page.</small>"
+msgstr ""
+"Kies welk type gebruiker zich kan abonneren op niet-openbare nieuwsbrieven."
+"<small>NB: gebruikers kunnen via de admin-pagina in eNewsletter aan alle "
+"nieuwsbrieven worden toegevoegd.</small>"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:474
+msgid ""
+"Here you can delete all data associated with the plugin from the database."
+msgstr "Hier kun je alle gegevens van deze plugin uit de database verwijderen."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:476
+msgid "Delete data"
+msgstr "Data verwijderen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:477
+msgid ""
+"Delete all plugin's data from DB and remove enewsletter-custom-themes folder."
+msgstr ""
+"Alle gegevens verwijderen uit de database en de enewsletter-custom-themes "
+"folder verwijderen."
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:494
+msgid "Install"
+msgstr "Installeren"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-settings.php:496
+msgid "Save all Settings"
+msgstr "Alle instellingen opslaan"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-subscribe.php:30
+msgid "At this page you can Subscribe or Unsubcribe to Newsletters"
+msgstr "Hier kunt u zich aan- of afmelden voor mailinglijsten"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-subscribe.php:43
+msgid "Newsletters:"
+msgstr "Nieuwsbrieven:"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-subscribe.php:64
+msgid "Save Subscribes"
+msgstr "Abonnementen opslaan"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-subscribe.php:65
+msgid "Unsubscribe from all newsletters"
+msgstr "Alle abonnementen opzeggen"
+
+# @ email-newsletter
+#: /shared-paul-files/Webs/ICTU/Gebruiker
+#: Centraal/development/wp-content/plugins/e-newsletter/email-newsletter-files/page-subscribe.php:74
+msgid "Subscribe on Newsletters"
+msgstr "Aanmelden voor nieuwsbrieven"

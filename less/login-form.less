@@ -1,0 +1,122 @@
+
+// Gebruiker Centraal - loging-form.less
+// ----------------------------------------------------------------------------------
+// bevat CSS overwrites voor de WP-inlogpagina's
+// ----------------------------------------------------------------------------------
+// @package gebruiker-centraal
+// @author  Paul van Buuren
+// @license GPL-2.0+
+// @version 3.6.3
+// @desc.   Archive pagina
+// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+
+
+@import "00-mixins.less";          // colors, sizes 
+@import "30-text-styles.less";     // font-styles, shared with admin editor-styles.less 
+
+
+  
+.button-shared-pijltje-1() {
+    background: @button-normal url('images/arrow-wit.png') no-repeat right center;
+    background-image: url('images/arrow-wit.svg'), none;
+}
+
+.button-shared-pijltje-1-hover() {
+//    background: @button-hover url('pijltje-roze.png') no-repeat right center;
+//    background-image: url('images/pijltje-roze.svg'), none;
+}
+
+
+
+
+.fontface2();
+
+
+
+.textstyles();
+
+
+body#error-page {
+    background: @blauw3;
+    padding-bottom: 3em;
+
+}
+
+body.login, #error-page {
+    
+    background: @blauw3;
+    padding-bottom: 3em;
+
+    div#login {
+
+        padding-top: 2%;
+
+        .basefont();
+     
+        h1 {
+            a {
+                background-image: url(../images/meisje-gebruiker-centraal.png);
+                padding-bottom: 30px;
+            }
+        }
+
+        form#loginform, form#lostpasswordform, form#registerform {
+            p, label {
+                color: @txt;
+            }
+                
+            p {
+                &.forgetmenot {
+                    input#rememberme {
+                        
+                    }
+                }
+
+                &.submit {
+                    clear: both;
+                    
+                    input#wp-submit {
+                        .button-shared();
+
+                      height: auto !important;
+                      line-height: 1 !important;
+                      text-shadow: none;
+                      border-radius: 4px;
+                    }
+                }
+            }
+
+            input {
+                &#user_login, &#user_pass, &#user_email {
+                    .inputborder-shared();
+                }
+            }
+        }
+        form#lostpasswordform p.submit {
+            
+            input#wp-submit {
+//                min-height: 120px;
+                padding-left: 3px;
+//                padding-right: 3px;
+        text-align: right;
+        white-space: normal;
+            }
+        }
+
+        #nav, #backtoblog {
+            &, a {
+                color: @wit;
+            }
+        }
+
+    }
+
+    /*
+    Social login Widget
+    ---------------------------------------------------------------------------------------------------- */
+    .socialoginblock();
+
+    
+}
+
+

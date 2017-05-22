@@ -1,0 +1,291 @@
+.header-logo() {
+
+// Gebruiker Centraal - 85-header-logo.less
+// ----------------------------------------------------------------------------------
+// bevat CSS voor de header en het logo
+// ----------------------------------------------------------------------------------
+// @package gebruiker-centraal
+// @author  Paul van Buuren
+// @license GPL-2.0+
+// @version 3.7.1
+// @desc.   actieteampagina, actieteam-widget, skiplinks, 404
+// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+
+
+
+    .title-area {
+        margin: 0;
+      float: left;
+  }  
+  
+  .site-header {
+  
+    background-color: @header_bg_color;
+    padding-top: @padding;
+    
+    .wrap {
+      position: relative;
+    }
+  
+    #sitelogo {
+      float: left;
+      display: inline-block;
+      position: absolute;
+      width: @logowidth;
+      height: @logoheight;
+      top: ( @padding / 2 );
+      left: ( @padding / 2 );
+      background: transparent url('images/logo-mobile.png') no-repeat left top;
+      background-image: url('images/logo-mobile.svg'), none;
+
+      a {
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+      
+      img {
+        .visuallyhidden();
+      }
+    }
+  
+  
+      .wrap {
+          a {
+              &, &:visited, &:hover, &:focus, &:active {
+                  color: @wit;
+              }
+          }
+      }
+      
+      .site-title {
+          .fontsize( 27 );
+          letter-spacing: 1px;
+        text-transform: uppercase;
+          font-family: @headerfont;
+          margin: 0 0 0 @logowidth;
+      }
+  }
+
+
+  @media only screen and (min-width: @break_fullwidth ) {
+    .site-header {
+      #sitelogo {
+        width: @logo_desktop_width;
+        height: @logo_desktop_height;
+
+              background-image: url('images/logo-desktop.svg');
+              background-image: url('images/logo-desktop.svg'), none;
+
+      }
+        .site-title {
+          margin-left: @logo_desktop_width;
+      }
+    }
+    .breadcrumb {
+      .wrap {
+          padding-left: @logo_desktop_width;
+      }
+    }
+  }
+}
+  
+
+.ongebruiktecode() {
+
+    
+    .title-area {
+        margin: 0;
+
+      float: left;
+      font-weight: normal;
+//      width: ( @break_fullwidth - ( @gutter + @sidebar_width ) ) ;
+      overflow: hidden;
+
+        background-image: url('images/mobiel.png');
+        background-image: url('images/mobiel.svg'), none;
+        
+        background-size: 102px 45px;
+        background-repeat: no-repeat;
+        background-position: right top;
+
+    
+    }
+    
+    .site-title {
+        .fontsize( 27 );
+        font-size-adjust: .6;
+    
+      line-height: 1.25;
+        margin: 0 @padding;
+      text-transform: uppercase;
+      padding: 0;
+    
+    
+        // beta label          
+      a:after {
+//          content: ' beta 2.0';
+          content: @versie;
+          display: inline-block;
+          .fontsize( 12 );
+          padding: 6px;
+          color: @wit;   
+          background: rgba(red(@violet), green(@violet), blue(@violet), .8);
+          margin-left: -2px;
+          margin-top: -6px;
+            font-family: @bodyfont;
+                
+            transform: rotate(348deg);
+            -webkit-transform: rotate(348deg);
+            -moz-transform: rotate(348deg);
+            -o-transform: rotate(348deg);
+            -ms-transform: rotate(348deg);          
+            
+            text-shadow: 2px 1px 0 #444,
+                2px 2px 0 #777;
+    
+      }
+    }
+    
+    .site-description {
+      color: lighten( @txt, 20% );
+      line-height: 1;
+      margin: ( @padding / 2 ) 0;
+      padding: @padding;
+        font-family: @bodyfont;
+      .fontsize(14);
+    }
+    
+    /* Full width header, no widgets */
+    
+    .header-full-width .title-area,
+    .header-full-width .site-title {
+//      width: 100%;
+    }
+    
+    
+    .header-image .site-title a {
+      float: left;
+      text-indent: -9999em;
+      width: 100%;    
+      min-height: 60px;
+    }
+
+    @media only screen and (max-width: ( @break_fullwidth  - 1 ) ) {
+
+        .site-title {
+          .fontsize( 27 );
+          line-height: 1.4;
+            a:after {
+              font-size: .2em;
+            }
+        }
+
+      .title-area {
+//        width: 300px;
+      }
+      
+
+        
+    }
+    
+    @media only screen and (max-width: ( @break_tablet ) ) {
+    
+        .site-header .wrap {
+            background-size: 90px 90px;
+            background-position: right center;
+        
+            .site-title {
+                text-align: left;      
+                max-width: 100%;
+            .fontsize( 27 );
+                background-position: right top;
+            }      
+//            .widget-area {
+//              visibility: hidden;
+//              display: none;
+//          }
+        }
+    }
+
+
+    @media only screen and (max-width: 350px ) {
+    
+        .site-header .wrap {
+
+            .site-title {
+                text-align: left;      
+                max-width: 240px;
+                .fontsize( 32 );
+            }      
+            .widget-area {
+              visibility: hidden;
+              display: none;
+          }
+        }
+    }
+
+
+    @media only screen and (min-width: ( @break_tablet ) ) {
+
+        .title-area {
+        
+            background-image: url('images/tablet.png');
+            background-image: url('images/tablet.svg'), none;
+            
+            background-size: 102px @logoheight;
+        }
+
+        .site-header {
+    
+            .title-area {
+                float: left;
+            }        
+            
+            .site-title {
+            .fontsize( 27 );
+            }         
+    
+            .site-description {
+              .fontsize(16);
+                color: @blauw;
+            }
+        }
+    }
+
+    @media only screen and (min-width: @break_fullwidth ) {
+
+        .header-image .site-header {
+            .wrap {
+                background-position: @bigmargin @bigmargin;
+    
+                .title-area {
+//                    width: @logowidth + @bigmargin;
+                }        
+              .site-title {
+                  margin-top: @bigmargin;
+              }
+                .site-description {
+                  padding: @padding @bigmargin;
+                  width: 100%;
+                }
+    
+                .widget-area {
+                  margin-top: @bigmargin;
+                  padding: 0;
+                }
+            }
+        }
+    
+        .site-header {
+            .title-area h1 {
+//                padding-left: @padding;
+            }
+        }
+
+        .title-area {
+            background-image: none;
+        }
+
+    }
+}
