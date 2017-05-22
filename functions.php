@@ -9,7 +9,7 @@
 // @author  Paul van Buuren
 // @license GPL-2.0+
 // @version 3.8.3
-// @desc.   Code-opschoning
+// @desc.   Code-opschoning.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -844,7 +844,7 @@ function gc_wbvb_add_berichten_widget_css() {
 
     $args = array(
         'post_type'             =>  'post',
-        'posts_per_page'        =>  $aantalberichten, 
+        'posts_per_page'        =>  5, 
         'ignore_sticky_posts'   =>  1, 
         'order'                 =>  'DESC',
         'orderby'               =>  'date'
