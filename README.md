@@ -10,6 +10,11 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 
 ## Version history
 
+
+
+* 3.8.3 - Code-opschoning.
 * 3.8.2 - CF7 form for mailinglist plugin.
 
-
+## To do
+* Shared code opschonen: shared.php bevat functies voor zowel gebruiker-centraal als voor optimaal-digitaal
+* Event Manager plugin voegt ten onrechte jquery code toe, voordat jQuery include
