@@ -85,7 +85,7 @@ require_once( GC_FOLDER . '/widgets/gc-user-welcome-widget.php' );
 require_once( GC_FOLDER . '/widgets/gc-event-widget.php' );
 require_once( GC_FOLDER . '/widgets/gc-berichten-widget.php' );
 require_once( GC_FOLDER . '/widgets/gc-footer-widget.php' );
-require_once( GC_FOLDER . '/shared.php' );
+require_once( GC_FOLDER . '/includes/common-functions.php' );
 
 
 //========================================================================================================

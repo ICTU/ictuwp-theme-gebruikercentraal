@@ -1,7 +1,7 @@
 <?php
 
 ///
-// Gebruiker Centraal - shared.php
+// Gebruiker Centraal - common-functions.php
 // ----------------------------------------------------------------------------------
 // Gedeelde code tussen gebruiker-centraal en optimaal-digitaal
 // ----------------------------------------------------------------------------------
@@ -376,28 +376,6 @@ function be_default_category_title( $headline, $term ) {
 }
 add_filter( 'genesis_term_meta_headline', 'be_default_category_title', 10, 2 );
 
-
-//========================================================================================================
-// buddypress functions
-//========================================================================================================
-
-
-function my_custom_bp_mofile( $mofile, $domain ){
-    if( 'buddypress' == $domain ){
-         $mofile = trailingslashit( WP_LANG_DIR ) . basename( $mofile );
-    }
-    return $mofile;
-}
-add_filter( 'load_textdomain_mofile', 'my_custom_bp_mofile', 10, 2 );
-
-
-
-//========================================================================================================
-if( function_exists('register_field_group') ):
-
-    
-    
- endif;
 
 //========================================================================================================
 

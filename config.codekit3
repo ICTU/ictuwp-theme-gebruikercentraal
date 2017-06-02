@@ -1611,6 +1611,12 @@
 		"oAP": "\/includes\/author-box.php",
 		"oF": 0
 		},
+	"\/includes\/common-functions.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/common-functions.php",
+		"oF": 0
+		},
 	"\/includes\/custom-fields-types.php": {
 		"ft": 8192,
 		"oA": 0,
@@ -2909,12 +2915,6 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/search.php",
-		"oF": 0
-		},
-	"\/shared.php": {
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/shared.php",
 		"oF": 0
 		},
 	"\/single.php": {
