@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.7.5
-// @desc.   Beta-versie voor live-gang. CSS-corrections. Post - file-uploads. Corrections for mobile menu button. Widget-corrections.
+// @version 3.8.4
+// @desc.   Submenu styling.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -148,6 +148,42 @@
       text-align: left;
     }
     
+    .menu-item-has-children {
+      span[itemprop="name"] {
+        padding-right: 1.25em;
+        position: relative;
+        &:after {
+          content: ' ';
+          background: url('images/pijltje-wit-down.svg');
+          background-repeat: no-repeat;
+          background-position: center center;
+          color: white;
+          display: block;
+          width: 16px;
+          height: 16px;
+          position: absolute;
+          right: 0;
+          top: 2px;
+        }
+      }
+      .sub-menu {
+        a {
+          padding-left: 1.25em;
+          background-image: url('images/pijltje-wit.svg');
+          background-repeat: no-repeat;
+          background-position: left center;
+          background-size: 16px 16px;
+        }
+        span[itemprop="name"] {
+          padding-right: 0;
+          &:after {
+            content: '';
+            display: none;
+          }
+        }
+      }
+    }
+    
     a {
       border: none;
       color: @wit;
@@ -193,15 +229,11 @@
     }
     
     .sub-menu a {
-      background: lighten(@nav_wrap_bg, 10%);
+      background-color: @header_bg_color;
       border-top: none;
       .fontsize(14);
       position: relative;
       width: 200px;
-      
-      &:hover {
-        background: lighten(@nav_wrap_bg, 20%);
-      }
     }
     
     .sub-menu .sub-menu {
@@ -253,10 +285,6 @@
   /* Site Header Navigation
   --------------------------------------------- */
   
-  .site-header .sub-menu {
-    border-top: 1px solid #eee;
-  }
-  
   .site-header .sub-menu .sub-menu {
     margin-top: -55px;
   }
@@ -301,6 +329,14 @@
           li {
             margin: 0;
             padding: 0 @padding;
+            
+            .sub-menu {
+              &, li {
+                padding-left: 0;
+                padding-right: 0;
+              }
+            }
+            
           }
 
         }

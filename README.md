@@ -8,10 +8,11 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Victor Zuydweg
 * Paul van Buuren: paul@wbvb.nl
 
+## Current version:
+3.8.4 - Submenu styling.
+
 ## Version history
-
-
-
+* 3.8.4 - Submenu styling.
 * 3.8.3 - Code-opschoning.
 * 3.8.2 - CF7 form for mailinglist plugin.
 

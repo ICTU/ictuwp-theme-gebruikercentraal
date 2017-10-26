@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.8.3
-// @desc.   Code-opschoning.
+// @version 3.8.4
+// @desc.   Submenu styling.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.8.3' );
-define( 'CHILD_THEME_DESCRIPTION', "3.8.3 - Code-opschoning." );
+define( 'CHILD_THEME_VERSION', '3.8.4' );
+define( 'CHILD_THEME_DESCRIPTION', "3.8.4 - Submenu styling." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>pijltje-wit-down</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="pijltje-wit-down" stroke-width="2" stroke="#FFFFFF">
+            <g id="witte-pijl-2" transform="translate(3.000000, 5.000000)">
+                <polyline id="witte-pijl" transform="translate(5.000000, 2.361111) rotate(90.000000) translate(-5.000000, -2.361111) " points="2.63888889 -2.63888889 7.36111111 2.36111111 2.63888889 7.36111111"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
