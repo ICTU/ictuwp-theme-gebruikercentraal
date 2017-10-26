@@ -22,7 +22,7 @@ require_once( get_template_directory() . '/lib/init.php' );
  * Define child theme constants.
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
-define( 'CHILD_THEME_URL', 'http://wbvb.nl/themes/gebruikercentraal' );
+define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
 define( 'CHILD_THEME_VERSION', '3.8.3' );
 define( 'CHILD_THEME_DESCRIPTION', "3.8.3 - Code-opschoning." );
 
