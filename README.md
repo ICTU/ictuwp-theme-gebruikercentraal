@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-3.9.1 - Toevoegen posttypes voor klantcontact-in-beeld.
+3.9.2 - Broodkruimelpad iets gewijzigd voor taxonomieen.
 
 ## Version history
+* 3.9.2 - Broodkruimelpad iets gewijzigd voor taxonomieen.
 * 3.9.1 - Toevoegen posttypes voor klantcontact-in-beeld.
 * 3.8.4 - Submenu styling.
 * 3.8.3 - Code-opschoning.

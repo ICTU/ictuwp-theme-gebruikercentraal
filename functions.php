@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.9.1
-// @desc.   Toevoegen posttypes voor klantcontact-in-beeld.
+// @version 3.9.2
+// @desc.   Broodkruimelpad iets gewijzigd voor taxonomieen.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.9.1' );
-define( 'CHILD_THEME_DESCRIPTION', "3.9.1 - Toevoegen posttypes voor klantcontact-in-beeld." );
+define( 'CHILD_THEME_VERSION', '3.9.2' );
+define( 'CHILD_THEME_DESCRIPTION', "3.9.2 - Broodkruimelpad iets gewijzigd voor taxonomieen." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 
@@ -253,7 +253,6 @@ function gc_wbvb_breadcrumb_args( $args ) {
     echo 'de ACF custom fields plugin is niet actief.';
   }
 
-  
 	$args['home']                     = __( "Home", 'gebruikercentraal' );
 	$args['sep']                      = $separator;
 	$args['list_sep']                 = ', '; // Genesis 1.5 and later
@@ -265,9 +264,20 @@ function gc_wbvb_breadcrumb_args( $args ) {
 	$args['labels']['prefix']         = ''; // __( "prefix", 'gebruikercentraal' );
 	$args['labels']['category']       = ''; //__( "Categorie", 'gebruikercentraal' );
 	$args['labels']['tag']            = __( "Label", 'gebruikercentraal' ) . $separator;
-	$args['labels']['date']           = __( "Datum-archief", 'gebruikercentraal' );
-	$args['labels']['search']         = __( "Zoekresultaat", 'gebruikercentraal' );
-	$args['labels']['tax']            = __( "Taxonomie", 'gebruikercentraal' );
+	$args['labels']['date']           = __( "Datum-archief", 'gebruikercentraal' ) . $separator;
+	$args['labels']['search']         = __( "Zoekresultaat", 'gebruikercentraal' ) . $separator;
+	$args['labels']['tax']            = '';
+
+  if ( isset( $wp_query->query_vars['taxonomy'] ) ) {
+    
+    $tax = $wp_query->query_vars['taxonomy'];
+    $labels = get_taxonomy_labels( $tax );
+  	$args['labels']['tax']            = $labels->singular_name . $separator;
+
+  }
+  return $args;
+
+	
 	$args['labels']['post_type']      = ''; //__( "Berichten", 'gebruikercentraal' );
 	$args['labels']['404']            = __( "Oeps", 'gebruikercentraal' );
 
