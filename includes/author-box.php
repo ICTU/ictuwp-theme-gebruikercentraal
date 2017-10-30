@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.8.3
-// @desc.   Code-opschoning.
+// @version 3.9.1
+// @desc.   Toevoegen posttypes voor klantcontact-in-beeld.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
   
   
@@ -111,6 +111,10 @@ function gc_wbvb_authorbox_actieteamlid( $userid ) {
 
 
 function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = '' ) {
+
+  if ( ( GC_KLANTCONTACT_BEELDEN_CPT == get_post_type() ) || ( GC_KLANTCONTACT_BRIEF_CPT == get_post_type() ) )  {
+    return;
+  }  
 
     global $default_persoon_plaatje;
     

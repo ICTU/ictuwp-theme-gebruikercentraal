@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.8.3
-// @desc.   Code-opschoning.
+// @version 3.9.1
+// @desc.   Toevoegen posttypes voor klantcontact-in-beeld.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -26,7 +26,7 @@ function gc_wbvb_show_related_content() {
         
         if( $gridcontent ): 
 
-            echo '<h2>' . __( "Zie ook:", 'gebruikercentraal' ) . '</h2><div class="related">';
+            echo '<h2>' . __( "Zie ook:", 'gebruikercentraal' ) . '</h2><div class="related page_contentpagina">';
 
 
             foreach( $gridcontent as $post): 

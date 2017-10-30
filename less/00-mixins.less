@@ -6,8 +6,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.7.9
-// @desc.   Corrected CSS for error / success messages.
+// @version 3.9.1
+// @desc.   Toevoegen posttypes voor klantcontact-in-beeld.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 @import "01-socmed-color-codes.less";              // colors, sizes 
@@ -935,6 +935,7 @@
     }
     .bloginfo {
       margin-left: @width;
+  		width: ~"calc(100% - @{width})";
     }
     .feature-image {
       width: @width;
@@ -1060,6 +1061,7 @@
     position: relative;
     padding-right: ( @bbs_readmore_width + @padding );
     min-height: @bbs_excerpt_height;
+    
     &:after {
       .cta_pijl(@bbs_readmore_width, @bbs_readmore_height);
     }

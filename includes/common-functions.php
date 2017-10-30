@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.8.3
-// @desc.   Code-opschoning.
+// @version 3.9.1
+// @desc.   Toevoegen posttypes voor klantcontact-in-beeld.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 ///
 
@@ -200,7 +200,7 @@ function add_defer_to_javascripts( $url )
         }
         else {
             if ( // comment the following line out add 'defer' to all scripts
-        //        FALSE === strpos( $url, 'contact-form-7' ) or
+                FALSE === strpos( $url, 'jquery.js' ) or
                 FALSE === strpos( $url, '.js' )
             )
             { // not our file
@@ -216,7 +216,7 @@ function add_defer_to_javascripts( $url )
 
 }
 
-add_filter( 'clean_url', 'add_defer_to_javascripts', 11, 1 );
+//add_filter( 'clean_url', 'add_defer_to_javascripts', 11, 1 );
 
 
 

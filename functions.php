@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.8.4
-// @desc.   Submenu styling.
+// @version 3.9.1
+// @desc.   Toevoegen posttypes voor klantcontact-in-beeld.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.8.4' );
-define( 'CHILD_THEME_DESCRIPTION', "3.8.4 - Submenu styling." );
+define( 'CHILD_THEME_VERSION', '3.9.1' );
+define( 'CHILD_THEME_DESCRIPTION', "3.9.1 - Toevoegen posttypes voor klantcontact-in-beeld." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 
@@ -57,6 +57,16 @@ define( 'ID_SINGLE_CSS', 'single-post' );
 
 define( 'SOC_MED_NO', 'socmed_nee' );
 define( 'SOC_MED_YES', 'socmed_ja' );
+
+define( 'GC_BRIEVENCONTEXT', 'briefcpt' );
+define( 'GC_BEELDENCONTEXT', 'beeldcpt' );
+
+define( 'GC_KLANTCONTACT_BEELDEN_CPT', 'beeld' );
+define( 'GC_KLANTCONTACT_BRIEF_CPT', 'brief' );
+define( 'GC_TAX_LICENTIE', 'licentie' );
+define( 'GC_TAX_ORGANISATIE', 'organisatie' );
+
+
 
 
 add_image_size( HALFWIDTH, 380, 9999, false );
@@ -98,7 +108,7 @@ $genesis_js_no_js->run();
 
 //========================================================================================================
 // custom post types, custom taxonomies, custom fields (ACF)
-require_once( GC_FOLDER . '/includes/custom-fields-types.php' );
+require_once( GC_FOLDER . '/includes/custom-fields-and-post-types.php' );
 
 //========================================================================================================
 
@@ -338,13 +348,25 @@ function gc_wbvb_post_append_postinfo($post_info) {
     	if ( 'event' == get_post_type() ) {
         	return '';
     	}
+    	elseif ( GC_KLANTCONTACT_BEELDEN_CPT == get_post_type() ) {
+      	if ( is_single() ) {
+        	return do_shortcode('[post_terms taxonomy="' . GC_TAX_LICENTIE . '" before=""] - [post_terms taxonomy="' . GC_TAX_ORGANISATIE . '" before=""]');
+      	}
+      	else {
+      	}
+    	}
+    	elseif ( GC_KLANTCONTACT_BRIEF_CPT == get_post_type() ) {
+      	if ( is_single() ) {
+        	return do_shortcode('[post_terms taxonomy="' . GC_TAX_ORGANISATIE . '" before=""]');
+      	}
+    	}
     	elseif ( 'post' == get_post_type() ) {
-        	if ( is_single() ) {
-          	return  __('Geschreven door', 'gebruikercentraal' ) . ': ' . '[post_author_posts_link]';
-        	}
-        	else {
-            	return '[post_author_posts_link] [post_date] [post_comments] ' . $socialmedia_icoontjes ;
-        	}
+      	if ( is_single() ) {
+        	return  __('Geschreven door', 'gebruikercentraal' ) . ': ' . '[post_author_posts_link]';
+      	}
+      	else {
+          	return '[post_author_posts_link] [post_date] [post_comments] ' . $socialmedia_icoontjes ;
+      	}
     	} 
     	else {
         	return '[post_date]';
@@ -355,22 +377,24 @@ function gc_wbvb_post_append_postinfo($post_info) {
 
 function gc_wbvb_get_date_badge() {
 
-    $publishdate  = get_the_date();
+  $publishdate  = get_the_date();
 
-    if ( date("Y") == get_the_date( 'Y' ) ) {
-      $jaar =  '';
-    }
-    else {
-      $jaar =  '<span class="jaar">' . get_the_date( 'Y' ) . '</span>';
-    }
-  
-  	echo ' <span class="date-badge" itemprop="datePublished" content="' . $publishdate . '"><span class="dag">' . get_the_date( 'd' ) . '</span> <span class="maand">' . get_the_date( 'M' ) . '</span>' . $jaar . '</span>';
+  if ( date("Y") == get_the_date( 'Y' ) ) {
+    $jaar =  '';
+  }
+  else {
+    $jaar =  '<span class="jaar">' . get_the_date( 'Y' ) . '</span>';
+  }
+
+	echo ' <span class="date-badge" itemprop="datePublished" content="' . $publishdate . '"><span class="dag">' . get_the_date( 'd' ) . '</span> <span class="maand">' . get_the_date( 'M' ) . '</span>' . $jaar . '</span>';
 
 }
 
 //========================================================================================================
 
 function gc_wbvb_add_single_socialmedia_buttons() {
+  
+  global $post;
 
   $socialmedia_icoontjes    = SOC_MED_YES;
   
@@ -560,7 +584,12 @@ function gc_wbvb_add_skip_link( ) {
 //========================================================================================================
 
 function gc_wbvb_check_actieteamlid() {
-    // checken of dit een lid van het actieteam is
+
+  if ( ( GC_KLANTCONTACT_BEELDEN_CPT == get_post_type() ) || ( GC_KLANTCONTACT_BRIEF_CPT == get_post_type() ) )  {
+    return;
+  }  
+  
+  // checken of dit een lid van het actieteam is
 
   if ( is_author() ) {
 
@@ -687,29 +716,6 @@ function gc_wbvb_404() {
           		<?php wp_get_archives(  array( 'type' => 'postbypost'  ) ); ?>
           	</ul>
   
-  			<?php 
-  				if ( taxonomy_exists( GC_TIPTHEMA ) ) { ?>
-          
-  	        	<h2><?php _e( 'Optimaal digitaal:', 'gebruikercentraal' ); ?></h2>
-  	        		<?php 
-  	
-  					$args = array( 'hide_empty' => 1 );
-  					
-  					$terms = get_terms( GC_TIPTHEMA, $args );
-  					if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
-  					    $count = count( $terms );
-  					    $i = 0;
-  					    $term_list = '<ul>';
-  					    foreach ( $terms as $term ) {
-  					        $i++;
-  					    	$term_list .= '<li><a href="' . get_term_link( $term ) . '" title="' . sprintf( __( 'View all post filed under %s', 'gebruikercentraal' ), $term->name ) . '">' . $term->name . '</a></li>';
-  					    }
-  					    $term_list .= '</ul>';
-  					    echo $term_list;
-  					}				
-  				}
-  			
-  			?>
           
           	<h2><?php _e( 'Categories:', 'gebruikercentraal' ); ?></h2>
           	<ul>
@@ -755,28 +761,29 @@ function gc_wbvb_add_blog_single_css() {
 
   if ( have_posts() ) : 
   
+    $countertje = 0;
   
     while ( have_posts() ) : the_post();
   
       // do loop stuff
       $countertje++;
-      $getid        = get_the_ID();
-      $permalink    = get_permalink( $getid );
+      $postid       = get_the_ID();
+      $permalink    = get_permalink( $postid );
       $publishdate  = get_the_date();
-      $theID        = 'featured_image_post_' . $getid;
+      $theID        = 'featured_image_post_' . $postid;
       $the_image_ID = 'image_' . $theID;
       $extra_class  = '';
       $class        = 'feature-image noimage';
   
       // check of het eerste bericht een enorme afbeelding heeft
   
-      if (has_post_thumbnail( $getid ) ) {
-        $image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), IMG_SIZE_HUGE );
+      if (has_post_thumbnail( $postid ) ) {
+        $image = wp_get_attachment_image_src( get_post_thumbnail_id( $postid ), IMG_SIZE_HUGE );
 
         if ( $image[1] >= IMG_SIZE_HUGE_MIN_WIDTH ) {
 
 			    foreach ( $imgbreakpoints as $breakpoint ) {
-            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), $breakpoint['img_size_archive_list'] );
+            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $postid ), $breakpoint['img_size_archive_list'] );
             $BLOGBERICHTEN_CSS .= '@media only screen and ('  . $breakpoint['direction'] .  '-width: ' . $breakpoint['width'] . " ) {\n";
             $BLOGBERICHTEN_CSS .= " .content:before { \n";
             $BLOGBERICHTEN_CSS .= "   content: ' ';\n";
@@ -795,14 +802,14 @@ function gc_wbvb_add_blog_single_css() {
         }
         else {
 
-          $image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), 'medium' );
+          $image = wp_get_attachment_image_src( get_post_thumbnail_id( $postid ), 'medium' );
 
           if ( $image[0] ) {
   
             foreach ( $imgbreakpoints as $breakpoint ) {
               if ( $breakpoint['content-before'] ) {
 
-                $image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), $breakpoint['img_size_single'] );
+                $image = wp_get_attachment_image_src( get_post_thumbnail_id( $postid ), $breakpoint['img_size_single'] );
 
                 $BLOGBERICHTEN_CSS .= '@media only screen and ('  . $breakpoint['direction'] .  '-width: ' . $breakpoint['width'] . " ) {\n";
                 $BLOGBERICHTEN_CSS .= " .content .entry-content:before { \n";
@@ -893,6 +900,77 @@ function gc_wbvb_add_berichten_widget_css() {
 
 //========================================================================================================
 
+function gc_wbvb_add_beeldbank_foto_css() {
+
+  global $imgbreakpoints;
+  global $post;
+
+  wp_enqueue_style(
+    ID_BLOGBERICHTEN_CSS,
+    WBVB_THEMEFOLDER . '/blogberichten.css'
+  );
+
+  $BLOGBERICHTEN_CSS  = '';
+  $countertje         = 0;
+
+  $brief_page_overview          = get_field('brief_page_overview', 'option');
+  $beelden_page_overview        = get_field('beelden_page_overview', 'option');
+  
+  $post_type = GC_KLANTCONTACT_BEELDEN_CPT;
+  if ( $brief_page_overview == $post->ID ) {
+    $post_type = GC_KLANTCONTACT_BRIEF_CPT;
+  }
+
+	$paged  = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+  $args   = array(
+          'post_type'       => $post_type,
+          'post_status'     => 'publish',
+          'paged'           => $paged
+        );
+  
+  $wp_query = new WP_Query( $args );
+
+  if ( $wp_query->have_posts() ) : 
+  
+  
+    while ( $wp_query->have_posts() ) : $wp_query->the_post();
+  
+      // do loop stuff
+      $countertje++;
+      $getid        = get_the_ID();
+      $theID        = 'featured_image_post_' . $getid;
+      $the_image_ID = 'image_' . $theID;
+  
+    	if ( GC_KLANTCONTACT_BEELDEN_CPT == get_post_type( $getid ) ) {
+
+    		$attachment     = get_field('beeld_foto', $getid );
+    		if ( isset( $attachment['ID'] ) ) {
+          $image = wp_get_attachment_image_src( $attachment['ID'], 'medium' );
+        }
+    	}
+      elseif (has_post_thumbnail( $getid ) ) {
+        $image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), 'medium' );
+      }
+
+      if ( isset( $image[0] ) ) {
+        $BLOGBERICHTEN_CSS .= '#' . $the_image_ID . " { ";
+        $BLOGBERICHTEN_CSS .= "background-image: url('" . $image[0] . "'); /* gc_wbvb_add_beeldbank_foto_css */ ";
+        $BLOGBERICHTEN_CSS .= "} ";
+      }
+
+    endwhile; /** end of one post **/
+
+  else : /** if no posts exist **/
+
+  endif; /** end loop **/
+
+
+  wp_add_inline_style( ID_BLOGBERICHTEN_CSS, $BLOGBERICHTEN_CSS );
+
+}	    
+
+//========================================================================================================
+
 function gc_wbvb_add_blog_archive_css() {
 
   global $imgbreakpoints;
@@ -915,6 +993,7 @@ function gc_wbvb_add_blog_archive_css() {
       // do loop stuff
       $countertje++;
       $getid        = get_the_ID();
+      $posttype     = get_post_type( $getid );
       $permalink    = get_permalink( $getid );
       $publishdate  = get_the_date();
       $theID        = 'featured_image_post_' . $getid;
@@ -923,9 +1002,9 @@ function gc_wbvb_add_blog_archive_css() {
       $class        = 'feature-image noimage';
   
       // check of het eerste bericht een enorme afbeelding heeft
-      if ( $countertje == 1 ) {
+      if ( $countertje == 1 && 'post' == $posttype ) {
   
-          if (has_post_thumbnail( $getid ) ) {
+        	if (has_post_thumbnail( $getid ) ) {
             $image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), IMG_SIZE_HUGE );
   
             if ( $image[1] >= IMG_SIZE_HUGE_MIN_WIDTH ) {
@@ -960,16 +1039,25 @@ function gc_wbvb_add_blog_archive_css() {
           }
       }
       else {
-        if (has_post_thumbnail( $getid ) ) {
-          $image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), 'medium' );
-    
-          if ( $image[0] ) {
-            $BLOGBERICHTEN_CSS .= '#' . $the_image_ID . " { \n";
-            $BLOGBERICHTEN_CSS .= "background-image: url('" . $image[0] . "');\n";
-            $BLOGBERICHTEN_CSS .= "} \n";
-            $class = 'feature-image';
+
+      	if ( GC_KLANTCONTACT_BEELDEN_CPT == get_post_type( $getid ) ) {
+
+      		$attachment     = get_field('beeld_foto', $getid );
+      		if ( isset( $attachment['ID'] ) ) {
+            $image = wp_get_attachment_image_src( $attachment['ID'], 'medium' );
           }
+      	}
+        elseif (has_post_thumbnail( $getid ) ) {
+          $image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), 'medium' );
         }
+
+        if ( $image[0] ) {
+          $BLOGBERICHTEN_CSS .= '#' . $the_image_ID . " { \n";
+          $BLOGBERICHTEN_CSS .= "background-image: url('" . $image[0] . "');\n";
+          $BLOGBERICHTEN_CSS .= "} \n";
+          $class = 'feature-image';
+        }
+        
       }
     
     endwhile; /** end of one post **/
@@ -1554,6 +1642,79 @@ function gc_wbvb_post_get_downloads() {
 
 //========================================================================================================
 
+function gc_wbvb_beelden_brieven_show_connected_files() {
+  
+  if ( GC_KLANTCONTACT_BEELDEN_CPT == get_post_type() ) {
+    $titel          = "Brieven";
+    $beschrijving   = "Deze foto wordt gebruikt in deze brieven gebruikt:";
+  } 
+  else {
+    $titel          = "Foto's";
+    $beschrijving   = "Deze brief gebruikt deze foto's:";
+  }
+
+  $return = '';
+
+  if ( function_exists( 'have_rows' ) ) {
+
+    $posts = get_field('beelden_brieven_connectie');
+
+    if( $posts ) {    
+
+      $return = '<div class="connected-files for-' . get_post_type() . '"><h2>' . $titel . '</h2>';
+      if ( $beschrijving ) {
+        $return .= '<p>' . $beschrijving . '</p>';
+      }
+      $return .= '<ul class="link-list">';
+      
+      // loop through the rows of data
+      foreach( $posts as $p ) {
+
+        $plaatje = '';
+        $size   = BLOG_SINGLE_MOBILE;
+
+        if (has_post_thumbnail( $p->ID ) ) {
+  
+          $image  = wp_get_attachment_image_src( get_post_thumbnail_id( $p->ID ), $size );
+          if ( isset( $image[0] ) ) {
+            $plaatje = '<img src="' . $image[0] . '" alt="" width="' . $image[1] . '" height="' . $image[2] . '" />';
+          }
+  
+        }
+        else {
+      		$attachment     = get_field('beeld_foto', $p->ID );
+      		if ( isset( $attachment['ID'] ) ) {
+
+            // thumbnail
+            $thumb  = $attachment['sizes'][ $size ];
+            $width  = $attachment['sizes'][ $size . '-width' ];
+            $height = $attachment['sizes'][ $size . '-height' ];
+        		
+            $plaatje = '<img src="' . $thumb . '" alt="' . $attachment['alt'] . '" width="' . $width . '" height="' . $height . '" />';
+          }
+        }
+        
+        
+        $return .= '<li><a href="' . get_permalink( $p->ID ) . '" itemprop="url">' . $plaatje . ' ' . get_the_title( $p->ID ) . '</a></li>';
+      
+      }
+      
+      $return .= '</ul>';
+      $return .= '</div>';
+    }
+    else {
+      
+    } 
+  } 
+  else {
+    echo 'de ACF custom fields plugin is niet actief.';
+  }
+   
+  echo $return;
+}
+
+//========================================================================================================
+
 
 function gc_wbvb_post_get_links() {
 
@@ -1722,6 +1883,7 @@ function gc_wbvb_archive_loop() {
     // do loop stuff
     $countertje++;
     $getid        = get_the_ID();
+    $posttype     = get_post_type( $getid );
     $permalink    = get_permalink( $getid );
     $publishdate  = get_the_date();
     $theID        = 'featured_image_post_' . $getid;
@@ -1738,7 +1900,9 @@ function gc_wbvb_archive_loop() {
           if ( $image[1] >= IMG_SIZE_HUGE_MIN_WIDTH ) {
 
             $class      = 'feature-image';
-            $extra_class  = ' enorm-huge';
+            if ( 'post' == $posttype ) {
+              $extra_class  = ' enorm-huge';
+            }
     
           }
           else {
@@ -1833,10 +1997,10 @@ function gc_wbvb_add_taxonomy_description() {
     if ( $term->name )
         $headline = sprintf( '<h1 class="archive-title">%s</h1>', strip_tags( $term->name ) );
         
-    if ( $term->meta['headline'] )
+    if ( isset( $term->meta['headline'] ) )
         $headline = sprintf( '<h1 class="archive-title">%s</h1>', strip_tags( $term->meta['headline'] ) );
         
-    if ( $term->meta['intro_text'] )
+    if ( isset( $term->meta['intro_text'] ) )
         $intro_text = apply_filters( 'genesis_term_intro_text_output', $term->meta['intro_text'] );
 
     if ( $term->description ) {
@@ -1950,7 +2114,7 @@ function gc_wbvb_new_default_avatar ( $avatar_defaults ) {
 
 //========================================================================================================
 
-function modify_contact_methods($profile_fields) {
+function gc_wbvb_modify_contact_methods($profile_fields) {
 
 	// Add new fields
 	$profile_fields['linkedin']     = 'LinkedIn profiel';
@@ -1965,7 +2129,7 @@ function modify_contact_methods($profile_fields) {
 
 	return $profile_fields;
 }
-add_filter('user_contactmethods', 'modify_contact_methods');
+add_filter('user_contactmethods', 'gc_wbvb_modify_contact_methods');
 
 
 //========================================================================================================
@@ -1986,3 +2150,204 @@ function wbvb_set_hsts_policy() {
 
 //========================================================================================================
 
+function gc_wbvb_get_human_filesize($bytes, $decimals = 2) {
+  $sz = 'BKMGTP';
+  $factor = floor((strlen($bytes) - 1) / 3);
+  return sprintf("%.{$decimals}f", $bytes / pow(1024, $factor)) . @$sz[$factor] . 'B';
+}
+
+//========================================================================================================
+
+add_filter( 'genesis_single_crumb',   'wbvb_modernista_breadcrumb_add_newspage', 10, 2 );
+add_filter( 'genesis_page_crumb',     'wbvb_modernista_breadcrumb_add_newspage', 10, 2 );
+add_filter( 'genesis_archive_crumb',  'wbvb_modernista_breadcrumb_add_newspage', 10, 2 );
+
+function wbvb_modernista_breadcrumb_add_newspage( $crumb, $args ) {
+	
+	global $post;
+
+  $span_before_start  = '<span class="breadcrumb-link-wrap" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">';  
+  $span_between_start = '<span itemprop="name">';  
+  $span_before_end    = '</span>';  
+  
+	if ( is_singular( GC_KLANTCONTACT_BEELDEN_CPT ) && ( get_field('beelden_page_overview', 'option') ) ) {
+
+		$actueelpageid    = get_field('beelden_page_overview', 'option');
+		$actueelpagetitle = get_the_title( $actueelpageid );
+		
+		if ( $actueelpageid ) {
+      $crumb = gc_wbvb_breadcrumbstring( $actueelpageid, $args );
+		}
+	}
+
+	if ( is_singular( GC_KLANTCONTACT_BRIEF_CPT ) && ( get_field('brief_page_overview', 'option') ) ) {
+
+		$currentpageID  = get_field('brief_page_overview', 'option');
+
+		if ( $currentpageID ) {
+      $crumb = gc_wbvb_breadcrumbstring( $currentpageID, $args );
+		}
+	}
+
+	return $crumb;
+
+}
+
+//========================================================================================================
+
+function gc_wbvb_breadcrumbstring( $currentpageID, $args ) {
+  global $post;
+  $crumb = '';
+  $countertje = 0;
+
+	if ( $currentpageID ) {
+		$crumb = '<a href="' . get_permalink( $currentpageID ) . '">' . get_the_title( $currentpageID ) .'</a>' . $args['sep'] . ' ' . get_the_title( $post->ID );
+    $postparents = get_post_ancestors( $currentpageID );
+    foreach( $postparents as $postparent ) {
+  	  $countertje ++;	
+			$crumb = '<a href="' . get_permalink( $postparent ) . '">' . get_the_title( $postparent ) .'</a>' . $args['sep'] . $crumb;
+    }
+	}
+
+	return $crumb;
+	
+}
+
+//========================================================================================================
+
+remove_action( 'genesis_after_endwhile', 'genesis_posts_nav' );
+
+add_action( 'genesis_after_endwhile', 'wbvb_modernista_prev_next_post_nav' );
+
+//========================================================================================================
+ 
+function wbvb_modernista_prev_next_post_nav() {
+
+	$label 			= get_post_type();
+//	$labelprev	= __( 'Vorige', 'genesis' ) . ' ' . $label;
+//	$labelnext	= __( 'Nieuwere', 'genesis' ) . ' ' . $label;
+	$labelprev	= __( 'Vorige', 'genesis' );
+	$labelnext	= __( 'Volgende', 'genesis' );
+
+	$prev_link = get_previous_posts_link( apply_filters( 'genesis_prev_link_text', $labelprev ) );
+	$next_link = get_next_posts_link( apply_filters( 'genesis_next_link_text', $labelnext ) );
+
+
+	if ( get_previous_posts_link() || get_next_posts_link() ) {
+		echo '<nav class="pagination">';
+		if ( is_single() ) {
+			previous_post_link( '<div class="pagination-previous alignleft">%link</div>', '%title' );
+			next_post_link( '<div class="pagination-next alignright">%link</div>', '%title' );
+		}
+		else {
+
+			$pagination = $prev_link ? sprintf( '<div class="pagination-previous alignleft">%s</div>', $prev_link ) : '';
+			$pagination .= $next_link ? sprintf( '<div class="pagination-next alignright">%s</div>', $next_link ) : '';
+	
+			genesis_markup( array(
+				'open'    => '<div %s>',
+				'close'   => '</div>',
+				'content' => $pagination,
+				'context' => 'archive-pagination',
+			) );
+
+		}
+		echo '</nav><!-- .prev-next-navigation -->';
+  }
+}
+
+//========================================================================================================
+
+
+add_action( 'genesis_before', 'gc_wbvb_check_page_style' );
+
+add_action( 'wp_enqueue_scripts', 'gc_wbvb_add_beeldbank_foto_css' ); // sorry, overhead. maar het moet maar
+
+
+function gc_wbvb_check_page_style() {
+
+  if ( ! is_admin() ) {
+
+    global $post;
+    global $wp_query;
+  
+    $brief_page_overview          = get_field('brief_page_overview', 'option');
+    $beelden_page_overview        = get_field('beelden_page_overview', 'option');
+
+    if ( ( 'page'    == get_post_type() ) &&  ( $brief_page_overview == $post->ID ||  $beelden_page_overview == $post->ID ) ) {
+      add_action( 'genesis_entry_content', 'gc_wbvb_page_add_archive_for_cpt', 12 );
+    }
+  }
+}
+
+//========================================================================================================
+
+function gc_wbvb_page_add_archive_for_cpt() {
+  
+  global $post;
+//  global $post;
+  global $wp_query;
+
+  $brief_page_overview          = get_field('brief_page_overview', 'option');
+  $beelden_page_overview        = get_field('beelden_page_overview', 'option');
+
+  if ( 'page'    == get_post_type() ) {
+
+
+    if ( $brief_page_overview == $post->ID ||  $beelden_page_overview == $post->ID ) {
+
+      $post_type = GC_KLANTCONTACT_BEELDEN_CPT;
+      
+      if ( $brief_page_overview == $post->ID ) {
+        $post_type = GC_KLANTCONTACT_BRIEF_CPT;
+      }
+
+    	$paged  = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+      $args   = array(
+              'post_type'       => $post_type,
+              'post_status'     => 'publish',
+              'paged'           => $paged
+            );
+      
+      $wp_query = new WP_Query( $args );
+      
+      if ( $wp_query->have_posts() ) : 
+      
+        echo '<div class="beeldbank for-' . $post_type . '">';
+        gc_wbvb_archive_loop();
+        echo '</div>';
+
+    	  do_action( 'genesis_after_endwhile' );    
+        
+      endif;
+      wp_reset_query();
+
+      remove_action( 'genesis_after_endwhile', 'genesis_posts_nav' );
+      remove_action( 'genesis_after_endwhile', 'wbvb_modernista_prev_next_post_nav' );
+      
+      
+    }
+    
+  }
+  else {
+    return;
+  }
+}
+
+//========================================================================================================
+
+add_action( 'init', 'rhswp_dossiercontext_add_rewrite_rules');
+
+//define( 'GC_KLANTCONTACT_BEELDEN_CPT', 'beeld' );
+//define( 'GC_KLANTCONTACT_BRIEF_CPT', 'brief' );
+
+
+function rhswp_dossiercontext_add_rewrite_rules() {
+
+  add_rewrite_rule( '(.+?)(/' . GC_BEELDENCONTEXT . '/)(.+?)/?$', 'index.php?name=$matches[3]&post_type=' . GC_KLANTCONTACT_BEELDEN_CPT, 'top');
+
+  add_rewrite_rule( '(.+?)(/' . GC_BRIEVENCONTEXT . '/)(.+?)/?$', 'index.php?name=$matches[3]&post_type=' . GC_KLANTCONTACT_BRIEF_CPT, 'top');
+
+}
+
+//========================================================================================================

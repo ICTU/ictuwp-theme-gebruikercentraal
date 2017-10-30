@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.7.10
-// @desc.   Share buttons on mobile screens.
+// @version 3.9.1
+// @desc.   Toevoegen posttypes voor klantcontact-in-beeld.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 // ================================================================================
@@ -733,7 +733,20 @@ body.home,
 
       }
     } 
-
+    
+    .blokje {
+      overflow: hidden;
+      width: 50%;
+      float: left;
+      display: block;
+      
+      img {
+        margin-bottom: 1em;
+      }
+      img, a.download {
+        float: right;
+      }
+    }
 
 
     .event-attendees {
@@ -870,6 +883,7 @@ body.home,
 
 .archive_page() {
 
+  .beeldbank,
   .archive {
 
     .featuredimage_blogarchive( @featimg_mobile_width, @featimg_mobile_height  );
@@ -915,7 +929,8 @@ body.home,
 
   @media only screen and (min-width: @break_tablet ) {
 
-    .archive {
+  .beeldbank,
+  .archive {
 
       .featuredimage_blogarchive( @featimg_tablet_width, @featimg_tablet_height  );
 
@@ -963,7 +978,8 @@ body.home,
 
   @media only screen and (min-width: @break_fullwidth ) {
 
-    .archive {
+  .beeldbank,
+  .archive {
 
       .featuredimage_blogarchive( @featimg_desktop_width, @featimg_desktop_height  );
 

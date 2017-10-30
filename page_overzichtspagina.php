@@ -1,16 +1,16 @@
 <?php
 
 /**
- * Gebruiker Centraal - page_overzichtspagina.php
- * ----------------------------------------------------------------------------------
- * Pagina met child-pages
- * ----------------------------------------------------------------------------------
- * @package gebruiker-centraal
- * @author  Paul van Buuren
- * @license GPL-2.0+
- * @version 3.4.11
- * @desc.   Tabs to spaces, tabs to spaces
- * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// Gebruiker Centraal - page_overzichtspagina.php
+// ----------------------------------------------------------------------------------
+// Pagina met child-pages
+// ----------------------------------------------------------------------------------
+// @package gebruiker-centraal
+// @author  Paul van Buuren
+// @license GPL-2.0+
+// @version 3.9.1
+// @desc.   Toevoegen posttypes voor klantcontact-in-beeld.
+// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
  */
 
 
@@ -34,7 +34,7 @@ function gc_wbvb_show_page_overzichtspagina() {
 
     if ( function_exists( 'get_field' ) ) {
         if ($children) {
-            echo '<h2>' . __( "Zie ook:", 'gebruikercentraal' ) . '</h2><div class="related">';
+            echo '<h2>' . __( "Zie ook:", 'gebruikercentraal' ) . '</h2><div class="related page_overzichtspagina">';
     
             foreach( $children as $post): 
                 setup_postdata($post); 
