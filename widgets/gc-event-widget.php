@@ -8,8 +8,8 @@
  * @package gebruiker-centraal
  * @author  Paul van Buuren
  * @license GPL-2.0+
- * @version 3.7.1
- * @desc.   actieteampagina, actieteam-widget, skiplinks, 404
+ * @version 3.9.3a
+ * @desc.   Bug in datum voor events op homepage.
  * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
  */
 
@@ -118,7 +118,7 @@ class GC_event_widget extends WP_Widget {
             $jaar =  '';
           }
           else {
-            $jaar =  '<span class="jaar">' . get_the_date( 'Y' ) . '</span>';
+            $jaar =  '<span class="jaar">' . date_i18n('Y', $eventstart) . '</span>';
           }
             
 

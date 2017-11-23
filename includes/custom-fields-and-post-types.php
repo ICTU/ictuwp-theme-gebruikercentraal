@@ -944,8 +944,6 @@ if ( $samenvattingverplicht ) {
 
 endif;
 
-
-
 //========================================================================================================
 
 // Add support for Genesis layouts to force a different layout for tips
@@ -954,6 +952,8 @@ add_post_type_support( GC_KLANTCONTACT_BEELDEN_CPT, 'genesis-layouts' );
 
 // register custom post types
 add_action( 'init', 'fn_gc_wbvb_register_cpts' );
+
+//========================================================================================================
 
 function fn_gc_wbvb_register_cpts() {
 
@@ -1126,9 +1126,9 @@ https://www.advancedcustomfields.com/resources/bidirectional-relationships/
 function bidirectional_acf_update_value( $value, $post_id, $field  ) {
 	
 	// vars
-	$field_name = $field['name'];
-	$field_key = $field['key'];
-	$global_name = 'is_updating_' . $field_name;
+	$field_name   = $field['name'];
+	$field_key    = $field['key'];
+	$global_name  = 'is_updating_' . $field_name;
 	
 	
 	// bail early if this filter was triggered from the update_field() function called within the loop below
@@ -1214,14 +1214,15 @@ function bidirectional_acf_update_value( $value, $post_id, $field  ) {
 	
 	
 	// return
-    return $value;
-    
+  return $value;
+  
 }
 
 add_filter('acf/update_value/name=beelden_brieven_connectie', 'bidirectional_acf_update_value', 10, 3);
 
 
 //========================================================================================================
+// ADD ALL ACF FIELDS FOR klantcontact in beeld
 
 if( function_exists('acf_add_local_field_group') ):
   

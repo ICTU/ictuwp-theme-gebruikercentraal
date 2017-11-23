@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.9.2
-// @desc.   Broodkruimelpad iets gewijzigd voor taxonomieen.
+// @version 3.9.3a
+// @desc.   Bug in datum voor events op homepage.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.9.2' );
-define( 'CHILD_THEME_DESCRIPTION', "3.9.2 - Broodkruimelpad iets gewijzigd voor taxonomieen." );
+define( 'CHILD_THEME_VERSION', '3.9.3a' );
+define( 'CHILD_THEME_DESCRIPTION', "3.9.3a - Bug in datum voor events op homepage." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 
