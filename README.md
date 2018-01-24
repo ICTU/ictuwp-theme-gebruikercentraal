@@ -9,10 +9,11 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-3.9.3a - Bug in datum voor events op homepage.
+3.9.4 - Bug in single-brief.php opgelost.
 
 ## Version history
-* 3.9.3a - Bug in datum voor events op homepage.
+* 3.9.4 - Bug in single-brief.php opgelost.
+* 3.9.3 - Bug in datum voor events op homepage.
 * 3.9.2 - Broodkruimelpad iets gewijzigd voor taxonomieen.
 * 3.9.1 - Toevoegen posttypes voor klantcontact-in-beeld.
 * 3.8.4 - Submenu styling.

@@ -8,7 +8,7 @@
  * @package gebruiker-centraal
  * @author  Paul van Buuren
  * @license GPL-2.0+
- * @version 3.9.3a
+ * @version 3.9.3
  * @desc.   Bug in datum voor events op homepage.
  * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
  */

@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.9.1
-// @desc.   Toevoegen posttypes voor klantcontact-in-beeld.
+// @version 3.9.4
+// @desc.   Bug in single-brief.php opgelost.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -35,21 +35,19 @@ genesis();
 function gc_wbvb_add_tweedeveld() {
 
   global $post;
-
+  $thecontents = get_the_content();
   
   if ( function_exists( 'get_field' ) && get_field('brief_extra_info') ) {
 		$brief_extra_info     = wpautop( get_field('brief_extra_info') );
 		echo $brief_extra_info;
 	}
   elseif ( has_excerpt() ) {
-    echo '<p class="">';
-    echo 'er is een excerpt';
-    echo '</p>';
   }
-
-  echo '<p class="blokje">';
-  echo get_the_content();
-  echo '</p>';
+  if ( $thecontents ) {
+    echo '<div class="blokje">';
+    echo $thecontents;
+    echo '</div>';
+  }
   
 }
 
