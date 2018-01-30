@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.9.1
-// @desc.   Toevoegen posttypes voor klantcontact-in-beeld.
+// @version 3.9.5
+// @desc.   CSS-bugs en verbeteringen. Event-widget netter gemaakt.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 // ================================================================================
@@ -323,7 +323,12 @@ body.home,
     padding:  @padding;
   }
   a {
-    color: @wit;
+    &, 
+    &:active,
+    &:focus,
+    &:hover {
+      color: @wit;
+    }
   }
   a.cta {
     .knoppify(transparent, #00832A, #0CA13B, #1BB24B, @wit, 32, 0);

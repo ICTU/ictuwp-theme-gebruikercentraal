@@ -6,8 +6,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.9.1
-// @desc.   Toevoegen posttypes voor klantcontact-in-beeld.
+// @version 3.9.5
+// @desc.   CSS-bugs en verbeteringen. Event-widget netter gemaakt.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 @import "01-socmed-color-codes.less";              // colors, sizes 
@@ -70,7 +70,7 @@
 
 @hover_widget_txt_color: @txt;
 
-@oranje:                #F7941E; // ondermeer gebruikt voor indactie 'vol'
+@oranje:                #F7941E; // ondermeer gebruikt voor 'vol'
 
 // koeleuren voor de navigatiedinges ===============================================
 @nav_bg:                @wit;
@@ -565,7 +565,7 @@
 
 //=========================================================================================================
 
-.knoppify(@bordercolor: @blauw5, @box_shadow: @blauw5, @ctacolor: @blauw5, @bg_color: transparent, @fontcolor: @wit, @fontsize: 32, @borderwidth: 1px) {
+.knoppify(@bordercolor: @blauw5, @box_shadow: @blauw5, @ctacolor: @blauw5, @bg_color: transparent, @fontcolor: @wit, @fontsize: 32, @borderwidth: 1px, @color_arrow: @wit) {
   
   background-color: @bg_color;
   display: table-cell;
@@ -584,7 +584,7 @@
   &:focus,
   &:active {
     text-decoration: underline;
-    color: @wit;
+    color: @fontcolor;
   }
   
   &:after {
@@ -597,9 +597,11 @@
     display: block;
     float: right;
     background: @ctacolor url('images/arrow-wit.png') no-repeat left center;
-    background-image: url('images/arrow-wit.svg'), none;
+    .pijltje_wit('../images/arrow-wit.svg', @color_arrow);
   }
 }
+
+
 
 //=========================================================================================================
 
@@ -658,6 +660,7 @@
 }
 
 //=========================================================================================================
+
 .iconaddbullet(@src, @fill-new) {
 
     @data-uri:          data-uri('image/svg+xml;charset=UTF-8', "@{src}");
@@ -667,6 +670,20 @@
     @replace-src:       replace("@{data-uri}", @replace-default, @replace-new, "g");
 
   list-style-image: e(@replace-src);
+
+}
+
+//=========================================================================================================
+
+.pijltje_wit(@src, @fill-new) {
+
+    @data-uri:          data-uri('image/svg+xml;charset=UTF-8', "@{src}");
+
+    @replace-default:   escape('fill="#FFFFFF"');
+    @replace-new:       escape('fill="@{fill-new}"');
+    @replace-src:       replace("@{data-uri}", @replace-default, @replace-new, "g");
+
+  background-image: e(@replace-src);
 
 }
 

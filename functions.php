@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.9.4
-// @desc.   Bug in single-brief.php opgelost.
+// @version 3.9.5
+// @desc.   CSS-bugs en verbeteringen. Event-widget netter gemaakt.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.9.4' );
-define( 'CHILD_THEME_DESCRIPTION', "3.9.4 - Bug in single-brief.php opgelost." );
+define( 'CHILD_THEME_VERSION', '3.9.5' );
+define( 'CHILD_THEME_DESCRIPTION', "3.9.5 - CSS-bugs en verbeteringen. Event-widget netter gemaakt." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 
@@ -292,7 +292,9 @@ add_filter('genesis_seo_title', 'gc_wbvb_add_site_title' );
 // Add additional custom style to site header
 function gc_wbvb_add_site_title( $title ) {
 	
-	$title = '<div id="sitelogo"><a href="' . esc_url( home_url( '/' ) ) . '"><img alt="Logo Gebruiker Centraal" src="' . WBVB_THEMEFOLDER . '/images/logo-mobile.png" /></a></div>' . $title;
+//	$title = '<div id="sitelogo"><a href="' . esc_url( home_url( '/' ) ) . '"><img alt="Logo Gebruiker Centraal" src="' . WBVB_THEMEFOLDER . '/images/logo-mobile.png" /></a></div>' . $title;
+
+	$title = '<div id="sitelogo"><img alt="Logo Gebruiker Centraal" src="' . WBVB_THEMEFOLDER . '/images/logo-mobile.png" /></div>' . $title;
 
 	return $title;
 	

@@ -8,8 +8,8 @@
  * @package gebruiker-centraal
  * @author  Paul van Buuren
  * @license GPL-2.0+
- * @version 3.9.3
- * @desc.   Bug in datum voor events op homepage.
+ * @version 3.9.5
+ * @desc.   CSS-bugs en verbeteringen. Event-widget netter gemaakt.
  * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
  */
 
@@ -19,24 +19,24 @@ class GC_event_widget extends WP_Widget {
   
     /** constructor */
   public function __construct() {
-      $this->defaults = array(
-        'title'        => __('GC event widget','gc-events-manager'),
-        'scope'       => 'future',
-        'order'       => 'ASC',
-        'limit'       => 5,
-        'category'      => 0,
-        'format'       => '<li>#_EVENTLINK<ul><li>#_EVENTDATES</li><li>#_LOCATIONTOWN</li></ul></li>',
-        'nolistwrap'    => false,
-        'orderby'       => 'event_start_date,event_start_time,event_name',
-      'all_events'     => 0,
-      'all_events_text'  => __('alle events', 'gebruikercentraal'),
-      'no_events_text'  => '<li>'.__('De agenda is leeg', 'gebruikercentraal').'</li>'
-      );
+    $this->defaults = array(
+      'title'           => __('GC event widget','gc-events-manager'),
+      'scope'           => 'future',
+      'order'           => 'ASC',
+      'limit'           => 5,
+      'category'        => 0,
+      'format'          => '<li>#_EVENTLINK<ul><li>#_EVENTDATES</li><li>#_LOCATIONTOWN</li></ul></li>',
+      'nolistwrap'      => false,
+      'orderby'         => 'event_start_date,event_start_time,event_name',
+      'all_events'      => 0,
+      'all_events_text' => __('alle events', 'gebruikercentraal'),
+      'no_events_text'  => __('De agenda is leeg', 'gebruikercentraal') 
+    );
     $this->em_orderby_options = apply_filters('em_settings_events_default_orderby_ddm', array(
-      'event_start_date,event_start_time,event_name' => __('start date, start time, event name','gebruikercentraal'),
-      'event_name,event_start_date,event_start_time' => __('name, start date, start time','gebruikercentraal'),
-      'event_name,event_end_date,event_end_time' => __('name, end date, end time','gebruikercentraal'),
-      'event_end_date,event_end_time,event_name' => __('end date, end time, event name','gebruikercentraal'),
+      'event_start_date,event_start_time,event_name'  => __('start date, start time, event name','gebruikercentraal'),
+      'event_name,event_start_date,event_start_time'  => __('name, start date, start time','gebruikercentraal'),
+      'event_name,event_end_date,event_end_time'      => __('name, end date, end time','gebruikercentraal'),
+      'event_end_date,event_end_time,event_name'      => __('end date, end time, event name','gebruikercentraal'),
     )); 
 
 
@@ -54,21 +54,13 @@ class GC_event_widget extends WP_Widget {
       $instance = array_merge($this->defaults, $instance);
       $instance = $this->fix_scope($instance); // depcreciate  
       
-      echo $args['before_widget'];
-      
-      if( !empty($instance['title']) ){
-        echo $args['before_title'];
-        echo apply_filters('widget_title',$instance['title'], $instance, $this->id_base);
-        echo $args['after_title'];
-      }
-      
+
       //remove owner searches
       $instance['owner'] = false;
-      
-      
+
       //add li tags to old widgets that have no forced li wrappers
       if ( !preg_match('/^<li/i', trim($instance['format'])) ) $instance['format'] = '<li>'. $instance['format'] .'</li>';
-      if (!preg_match('/^<li/i', trim($instance['no_events_text'])) ) $instance['no_events_text'] = '<li>'.$instance['no_events_text'].'</li>';
+      if (!preg_match('/^<li/i', trim($instance['no_events_text'])) ) $instance['no_events_text'] = $instance['no_events_text'] ;
 
       //orderby fix for previous versions with old orderby values
       if( !array_key_exists($instance['orderby'], $this->em_orderby_options) ){
@@ -91,6 +83,14 @@ class GC_event_widget extends WP_Widget {
       $icounter      = 0;
       
       if ( count($events) > 0 ){
+
+        echo $args['before_widget'];
+
+        if( !empty($instance['title']) ){
+          echo $args['before_title'];
+          echo apply_filters('widget_title',$instance['title'], $instance, $this->id_base);
+          echo $args['after_title'];
+        }
         
         echo '<div class="bg-color">';
         
@@ -150,17 +150,19 @@ class GC_event_widget extends WP_Widget {
         }
         
         echo '</div>';
+
+        if ( !empty($instance['all_events']) ){
+          $events_link = (!empty($instance['all_events_text'])) ? em_get_link($instance['all_events_text']) : em_get_link(__('all events','gebruikercentraal'));
+          echo $events_link;
+        }
         
+        echo $args['after_widget'];
+
       }
       else{
-        echo $instance['no_events_text'];
-      }
-      if ( !empty($instance['all_events']) ){
-        $events_link = (!empty($instance['all_events_text'])) ? em_get_link($instance['all_events_text']) : em_get_link(__('all events','gebruikercentraal'));
-        echo $events_link;
+//        echo $instance['no_events_text'];
       }
       
-      echo $args['after_widget'];
 
     }
 
