@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.9.5
-// @desc.   CSS-bugs en verbeteringen. Event-widget netter gemaakt.
+// @version 3.9.6
+// @desc.   CSS voor admin-editor aangepast.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.9.5' );
-define( 'CHILD_THEME_DESCRIPTION', "3.9.5 - CSS-bugs en verbeteringen. Event-widget netter gemaakt." );
+define( 'CHILD_THEME_VERSION', '3.9.6' );
+define( 'CHILD_THEME_DESCRIPTION', "3.9.6 - CSS voor admin-editor aangepast." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 
@@ -1155,7 +1155,7 @@ ul#' . ID_SKIPLINKS . ' li {
 */
 
 function admin_append_editor_styles() {
-    add_editor_style(WBVB_THEMEFOLDER . '/css/editor-styles.css?v3');
+    add_editor_style(WBVB_THEMEFOLDER . '/css/editor-styles.css?v=' . CHILD_THEME_VERSION );
 }
 
 add_action( 'init', 'admin_append_editor_styles' );

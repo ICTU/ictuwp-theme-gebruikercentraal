@@ -6,8 +6,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.9.5
-// @desc.   CSS-bugs en verbeteringen. Event-widget netter gemaakt.
+// @version 3.9.6
+// @desc.   CSS voor admin-editor aangepast.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 @import "01-socmed-color-codes.less";              // colors, sizes 
@@ -1320,4 +1320,98 @@
 }
 
 //=========================================================================================================
+
+.calltoactionstyling() {
+  
+  
+  a.cta {
+    .knoppify(transparent, #00832A, #0CA13B, #1BB24B, @wit, 24, 0);
+    display: block;
+    float: right;
+    text-transform: uppercase;
+  }
+  
+  
+  @call_to_action_2nd_link_achtergrond:           darken( @wit, 10% );
+  @call_to_action_2nd_link_schaduw:               darken( @call_to_action_2nd_link_achtergrond, 20% );
+  @call_to_action_2nd_link_pijltje_achtergrond:   @light_gray;
+  @call_to_action_2nd_link_color:                 @txt;
+  @call_to_action_2nd_bg:                         @blauw6;
+  @call_to_action_2nd_border:                     @call_to_action_2nd_link_pijltje_achtergrond;
+  
+  
+  
+  @call_to_action_link_achtergrond:           #1BB24B;
+  @call_to_action_link_schaduw:               #00832A;
+  @call_to_action_link_pijltje_achtergrond:   #0CA13B;
+  @call_to_action_link_color:                 @wit;
+  
+  @call_to_action_bg:                         @wit;
+  @call_to_action_color:                      @txt;
+  @call_to_action_border:                     @blauw6;
+  
+  
+  .call-to-action {
+    background: @call_to_action_bg;
+    border: 1px solid @call_to_action_border;
+  
+    background: @heelerglichtgrijs;
+    border-color: @heelerglichtgrijs;
+  
+    padding: 1em;
+    margin: 0 0 1em 0;
+    color: @call_to_action_color;
+    overflow: hidden;
+  
+    p {
+      margin-bottom: 0;
+      & + p {
+        margin-top: 1em;
+      }
+    }
+    
+    a, p, h2, h3, h4, h5, h6 {
+      color: @call_to_action_color;
+    }
+    
+  
+    h2, h3, h4, h5, h6 {
+      padding: 0;    
+      margin: 0;    
+    }
+  
+    a.cta {
+      .knoppify(transparent, @call_to_action_link_schaduw, @call_to_action_link_pijltje_achtergrond, @call_to_action_link_achtergrond, @call_to_action_link_color, 24, 0, @call_to_action_link_color);
+    }
+  }
+  .call-to-action.secondary {
+    background: @heelerglichtgrijs;
+    border-color: @heelerglichtgrijs;
+    
+    a.cta {
+      .knoppify(transparent, @call_to_action_2nd_link_schaduw, @call_to_action_2nd_link_pijltje_achtergrond, @call_to_action_2nd_link_achtergrond, @call_to_action_2nd_link_color, 24, 0, @call_to_action_2nd_link_color);
+    }
+  }
+  
+  
+  @media only screen and (min-width: @break_tablet ) {
+    .call-to-action.floatright {
+      max-width: 50%;
+      float: right;
+      margin-left: 1em;
+  
+      a.cta {
+        display: inline-block;
+        float: right;
+        clear: both;
+      }
+    }
+  }
+
+}
+
+//=========================================================================================================
+
+
+
 

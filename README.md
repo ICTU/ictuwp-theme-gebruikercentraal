@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-3.9.5
+3.9.6
 
 ## Version history
+* 3.9.6 - CSS voor admin-editor aangepast.
 * 3.9.5 - CSS-bugs en verbeteringen. CTA-blokken toegevoegd. Event-widget netter gemaakt.
 * 3.9.4 - Bug in single-brief.php opgelost.
 * 3.9.3 - Bug in datum voor events op homepage.

@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.9.1
-// @desc.   Toevoegen posttypes voor klantcontact-in-beeld.
+// @version 3.9.6
+// @desc.   CSS voor admin-editor aangepast.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 ///
 
@@ -262,6 +262,9 @@ function admin_set_tinymce_options( $settings ) {
     $settings['style_formats'] = '[
             {title: "Streamer", block: "aside", classes: "pullquote"},
             {title: "Infoblok", block: "div", classes: "infoblock"},
+            {title: "Call To Action (primair)", block: "div", classes: "call-to-action"},
+            {title: "Call To Action (50% breed)", block: "div", classes: "call-to-action floatright"},
+            {title: "Call To Action (secundair)", block: "div", classes: "call-to-action secondary"},
     ]';
 
 //        {title: "Interviewvraag", inline: "i", classes: "interview"}
@@ -273,6 +276,19 @@ add_filter('tiny_mce_before_init', 'admin_set_tinymce_options');
 
 //========================================================================================================
 
+/**
+ *  Remove the h1 tag from the WordPress editor.
+ *
+ *  @param   array  $settings  The array of editor settings
+ *  @return  array             The modified edit settings
+ */
+function remove_h1_from_editor( $settings ) {
+  $settings['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;Heading 4=h4;Heading 5=h5;Heading 6=h6;Preformatted=pre;';
+  return $settings;
+}
+
+ 
+add_filter('tiny_mce_before_init', 'remove_h1_from_editor');
 
 //========================================================================================================
 
