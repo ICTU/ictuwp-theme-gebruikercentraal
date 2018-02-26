@@ -1,3 +1,4 @@
+/*!
 
 // Gebruiker Centraal - editor-styles.less
 // ----------------------------------------------------------------------------------
@@ -7,10 +8,11 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.9.6
-// @desc.   CSS voor admin-editor aangepast.
+// @version 3.10.2
+// @desc.   Styling voor 'niet zo, maar zo' images op richtlijnen-pagina.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
+*/
 
 @import "00-mixins.less";          // colors, sizes 
 @import "30-text-styles.less";     // font-styles, shared with admin editor-styles.less 
@@ -20,6 +22,20 @@
 }
 
 .textstyles();
+
+.wp-caption,
+.alignleft,
+.alignright,
+.mceTemp {
+  & + p,
+  & + ol,
+  & + ul,
+  & + dl,
+  & + h2 {
+    clear: both;
+  }
+}
+
 
 h2 {
   .fontsize( @fontsize_title_h3 );

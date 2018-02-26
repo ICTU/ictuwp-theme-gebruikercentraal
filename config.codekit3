@@ -16,11 +16,2837 @@
 		"oAP": "\/.gitignore",
 		"oF": 0
 		},
+	"\/404.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/404.php",
+		"oF": 0
+		},
+	"\/archive.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/archive.php",
+		"oF": 0
+		},
+	"\/blogberichten.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/blogberichten-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/comments.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/comments.php",
+		"oF": 0
+		},
+	"\/css\/addenda-tips.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/css\/addenda-tips-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/css\/blanco.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/css\/blanco-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/css\/buddypress-mentions.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/css\/buddypress-mentions-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/css\/editor-styles.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/css\/editor-styles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/css\/header.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/css\/header-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/css\/login-form.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/css\/login-form-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/css\/opmaak-verwijderen.png": {
+		"ft": 32768,
+		"iS": 44194,
+		"oA": 0,
+		"oAP": "\/css\/opmaak-verwijderen.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/css\/revenge.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/css\/revenge-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"\/distribute.sh": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/distribute.sh",
+		"oF": 0
+		},
+	"\/fonts\/icons.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/icons.eot",
+		"oF": 0
+		},
+	"\/fonts\/icons.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/fonts\/icons.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/fonts\/icons.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/icons.ttf",
+		"oF": 0
+		},
+	"\/fonts\/icons.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/icons.woff",
+		"oF": 0
+		},
+	"\/fonts\/leaguegothic.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/leaguegothic.eot",
+		"oF": 0
+		},
+	"\/fonts\/leaguegothic.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/fonts\/leaguegothic.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/fonts\/leaguegothic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/leaguegothic.ttf",
+		"oF": 0
+		},
+	"\/fonts\/leaguegothic.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/leaguegothic.woff",
+		"oF": 0
+		},
+	"\/fonts\/montserrat-light-webfont.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/montserrat-light-webfont.eot",
+		"oF": 0
+		},
+	"\/fonts\/montserrat-light-webfont.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/fonts\/montserrat-light-webfont.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/fonts\/montserrat-light-webfont.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/montserrat-light-webfont.ttf",
+		"oF": 0
+		},
+	"\/fonts\/montserrat-light-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/montserrat-light-webfont.woff",
+		"oF": 0
+		},
+	"\/fonts\/montserrat-light-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/montserrat-light-webfont.woff2",
+		"oF": 0
+		},
+	"\/fonts\/montserrat-regular-webfont.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/montserrat-regular-webfont.eot",
+		"oF": 0
+		},
+	"\/fonts\/montserrat-regular-webfont.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/fonts\/montserrat-regular-webfont.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/fonts\/montserrat-regular-webfont.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/montserrat-regular-webfont.ttf",
+		"oF": 0
+		},
+	"\/fonts\/montserrat-regular-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/montserrat-regular-webfont.woff",
+		"oF": 0
+		},
+	"\/fonts\/montserrat-regular-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/montserrat-regular-webfont.woff2",
+		"oF": 0
+		},
+	"\/fonts\/montserrat-unused-fonts.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/montserrat-unused-fonts.zip",
+		"oF": 0
+		},
+	"\/functions.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/functions.php",
+		"oF": 0
+		},
+	"\/header.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/header.php",
+		"oF": 0
+		},
+	"\/images\/apple-touch-icon-114x114-precomposed.png": {
+		"ft": 32768,
+		"iS": 4690,
+		"oA": 0,
+		"oAP": "\/images\/apple-touch-icon-114x114-precomposed.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/apple-touch-icon-120x120-precomposed.png": {
+		"ft": 32768,
+		"iS": 5140,
+		"oA": 0,
+		"oAP": "\/images\/apple-touch-icon-120x120-precomposed.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/apple-touch-icon-144x144-precomposed.png": {
+		"ft": 32768,
+		"iS": 7223,
+		"oA": 0,
+		"oAP": "\/images\/apple-touch-icon-144x144-precomposed.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/apple-touch-icon-152x152-precomposed.png": {
+		"ft": 32768,
+		"iS": 7248,
+		"oA": 0,
+		"oAP": "\/images\/apple-touch-icon-152x152-precomposed.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/apple-touch-icon-57x57-precomposed.png": {
+		"ft": 32768,
+		"iS": 1998,
+		"oA": 0,
+		"oAP": "\/images\/apple-touch-icon-57x57-precomposed.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/apple-touch-icon-60x60-precomposed.png": {
+		"ft": 32768,
+		"iS": 2006,
+		"oA": 0,
+		"oAP": "\/images\/apple-touch-icon-60x60-precomposed.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/apple-touch-icon-72x72-precomposed.png": {
+		"ft": 32768,
+		"iS": 2034,
+		"oA": 0,
+		"oAP": "\/images\/apple-touch-icon-72x72-precomposed.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/apple-touch-icon-76x76-precomposed.png": {
+		"ft": 32768,
+		"iS": 2042,
+		"oA": 0,
+		"oAP": "\/images\/apple-touch-icon-76x76-precomposed.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/apple-touch-icon-precomposed.png": {
+		"ft": 32768,
+		"iS": 2040,
+		"oA": 0,
+		"oAP": "\/images\/apple-touch-icon-precomposed.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/arrow-wit.png": {
+		"ft": 32768,
+		"iS": 240,
+		"oA": 0,
+		"oAP": "\/images\/arrow-wit.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/arrow-wit.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/arrow-wit.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/blog-feature-image-default.png": {
+		"ft": 32768,
+		"iS": 24780,
+		"oA": 0,
+		"oAP": "\/images\/blog-feature-image-default.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/blog-feature-image-default.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/blog-feature-image-default.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/breadcrumb-separator.png": {
+		"ft": 32768,
+		"iS": 148,
+		"oA": 0,
+		"oAP": "\/images\/breadcrumb-separator.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/breadcrumb-separator.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/breadcrumb-separator.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/bullet.png": {
+		"ft": 32768,
+		"iS": 91,
+		"oA": 0,
+		"oAP": "\/images\/bullet.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/bullet.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/bullet.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/cta-pijl.png": {
+		"ft": 32768,
+		"iS": 325,
+		"oA": 0,
+		"oAP": "\/images\/cta-pijl.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/cta-pijl.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/cta-pijl.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/cta-pijl@2x.png": {
+		"ft": 32768,
+		"iS": 614,
+		"oA": 0,
+		"oAP": "\/images\/cta-pijl@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/custom-avatar.png": {
+		"ft": 32768,
+		"iS": 36556,
+		"oA": 0,
+		"oAP": "\/images\/custom-avatar.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/desktop.png": {
+		"ft": 32768,
+		"iS": 9498,
+		"oA": 0,
+		"oAP": "\/images\/desktop.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/desktop.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/desktop.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/facebook-promotional-1024w.png": {
+		"ft": 32768,
+		"iS": 51505,
+		"oA": 0,
+		"oAP": "\/images\/facebook-promotional-1024w.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/facebook-promotional-16w.png": {
+		"ft": 32768,
+		"iS": 494,
+		"oA": 0,
+		"oAP": "\/images\/facebook-promotional-16w.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/favicon.ico": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/images\/favicon.ico",
+		"oF": 0
+		},
+	"\/images\/featured-image-default.png": {
+		"ft": 32768,
+		"iS": 10164,
+		"oA": 0,
+		"oAP": "\/images\/featured-image-default.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/featured-image-default.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/featured-image-default.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/featured.png": {
+		"ft": 32768,
+		"iS": 8628,
+		"oA": 0,
+		"oAP": "\/images\/featured.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/footer-logo.png": {
+		"ft": 32768,
+		"iS": 10943,
+		"oA": 0,
+		"oAP": "\/images\/footer-logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/footer-logo.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/footer-logo.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/gc-404 copy.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/gc-404 copy.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/gc-404.png": {
+		"ft": 32768,
+		"iS": 25164,
+		"oA": 0,
+		"oAP": "\/images\/gc-404.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/gc-404.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/gc-404.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/gc-404@2x.png": {
+		"ft": 32768,
+		"iS": 57170,
+		"oA": 0,
+		"oAP": "\/images\/gc-404@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/gebroken-glas.jpg": {
+		"ft": 16384,
+		"iS": 49952,
+		"oA": 0,
+		"oAP": "\/images\/gebroken-glas.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/images\/gravatar.png": {
+		"ft": 32768,
+		"iS": 2033,
+		"oA": 0,
+		"oAP": "\/images\/gravatar.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/hamburger.png": {
+		"ft": 32768,
+		"iS": 103,
+		"oA": 0,
+		"oAP": "\/images\/hamburger.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/hamburger.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/hamburger.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/header-image.png": {
+		"ft": 32768,
+		"iS": 9389,
+		"oA": 0,
+		"oAP": "\/images\/header-image.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/header.jpg": {
+		"ft": 16384,
+		"iS": 600808,
+		"oA": 0,
+		"oAP": "\/images\/header.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/images\/high-res.jpg": {
+		"ft": 16384,
+		"iS": 14174,
+		"oA": 0,
+		"oAP": "\/images\/high-res.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/images\/icon-calendar.png": {
+		"ft": 32768,
+		"iS": 451,
+		"oA": 0,
+		"oAP": "\/images\/icon-calendar.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/icon-calendar.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/icon-calendar.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/icon-calendar@2x.png": {
+		"ft": 32768,
+		"iS": 914,
+		"oA": 0,
+		"oAP": "\/images\/icon-calendar@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/icon-circle-check.png": {
+		"ft": 32768,
+		"iS": 439,
+		"oA": 0,
+		"oAP": "\/images\/icon-circle-check.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/icon-circle-check.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/icon-circle-check.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/icon-circle-error.png": {
+		"ft": 32768,
+		"iS": 515,
+		"oA": 0,
+		"oAP": "\/images\/icon-circle-error.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/icon-circle-error.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/icon-circle-error.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/icon-facebook.png": {
+		"ft": 32768,
+		"iS": 293,
+		"oA": 0,
+		"oAP": "\/images\/icon-facebook.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/icon-facebook.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/icon-facebook.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/icon-facebook@2x.png": {
+		"ft": 32768,
+		"iS": 411,
+		"oA": 0,
+		"oAP": "\/images\/icon-facebook@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/icon-googleplus.png": {
+		"ft": 32768,
+		"iS": 657,
+		"oA": 0,
+		"oAP": "\/images\/icon-googleplus.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/icon-googleplus.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/icon-googleplus.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/icon-googleplus@2x.png": {
+		"ft": 32768,
+		"iS": 1241,
+		"oA": 0,
+		"oAP": "\/images\/icon-googleplus@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/icon-knop-groen-hover.png": {
+		"ft": 32768,
+		"iS": 425,
+		"oA": 0,
+		"oAP": "\/images\/icon-knop-groen-hover.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/icon-knop-groen-hover.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/icon-knop-groen-hover.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/icon-knop-groen-hover@2x.png": {
+		"ft": 32768,
+		"iS": 913,
+		"oA": 0,
+		"oAP": "\/images\/icon-knop-groen-hover@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/icon-knop-groen.png": {
+		"ft": 32768,
+		"iS": 452,
+		"oA": 0,
+		"oAP": "\/images\/icon-knop-groen.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/icon-knop-groen.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/icon-knop-groen.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/icon-knop-groen@2x.png": {
+		"ft": 32768,
+		"iS": 975,
+		"oA": 0,
+		"oAP": "\/images\/icon-knop-groen@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/icon-linkedin.png": {
+		"ft": 32768,
+		"iS": 438,
+		"oA": 0,
+		"oAP": "\/images\/icon-linkedin.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/icon-linkedin.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/icon-linkedin.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/icon-linkedin@2x.png": {
+		"ft": 32768,
+		"iS": 791,
+		"oA": 0,
+		"oAP": "\/images\/icon-linkedin@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/icon-mail.png": {
+		"ft": 32768,
+		"iS": 257,
+		"oA": 0,
+		"oAP": "\/images\/icon-mail.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/icon-mail.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/icon-mail.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/icon-mail@2x.png": {
+		"ft": 32768,
+		"iS": 498,
+		"oA": 0,
+		"oAP": "\/images\/icon-mail@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/icon-personallink.png": {
+		"ft": 32768,
+		"iS": 644,
+		"oA": 0,
+		"oAP": "\/images\/icon-personallink.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/icon-personallink.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/icon-personallink.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/icon-personallink@2x.png": {
+		"ft": 32768,
+		"iS": 1383,
+		"oA": 0,
+		"oAP": "\/images\/icon-personallink@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/icon-phone.png": {
+		"ft": 32768,
+		"iS": 332,
+		"oA": 0,
+		"oAP": "\/images\/icon-phone.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/icon-phone.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/icon-phone.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/icon-phone@2x.png": {
+		"ft": 32768,
+		"iS": 647,
+		"oA": 0,
+		"oAP": "\/images\/icon-phone@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/icon-pin.png": {
+		"ft": 32768,
+		"iS": 398,
+		"oA": 0,
+		"oAP": "\/images\/icon-pin.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/icon-pin.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/icon-pin.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/icon-place.png": {
+		"ft": 32768,
+		"iS": 372,
+		"oA": 0,
+		"oAP": "\/images\/icon-place.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/icon-place.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/icon-place.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/icon-place@2x.png": {
+		"ft": 32768,
+		"iS": 795,
+		"oA": 0,
+		"oAP": "\/images\/icon-place@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/icon-precomposed.png": {
+		"ft": 32768,
+		"iS": 2003,
+		"oA": 0,
+		"oAP": "\/images\/icon-precomposed.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/icon-price.png": {
+		"ft": 32768,
+		"iS": 392,
+		"oA": 0,
+		"oAP": "\/images\/icon-price.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/icon-price.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/icon-price.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/icon-price@2x.png": {
+		"ft": 32768,
+		"iS": 740,
+		"oA": 0,
+		"oAP": "\/images\/icon-price@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/icon-time.png": {
+		"ft": 32768,
+		"iS": 451,
+		"oA": 0,
+		"oAP": "\/images\/icon-time.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/icon-time.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/icon-time.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/icon-time@2x.png": {
+		"ft": 32768,
+		"iS": 889,
+		"oA": 0,
+		"oAP": "\/images\/icon-time@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/icon-twitter.png": {
+		"ft": 32768,
+		"iS": 548,
+		"oA": 0,
+		"oAP": "\/images\/icon-twitter.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/icon-twitter.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/icon-twitter.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/icon-twitter@2x.png": {
+		"ft": 32768,
+		"iS": 1110,
+		"oA": 0,
+		"oAP": "\/images\/icon-twitter@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/logo-desktop.png": {
+		"ft": 32768,
+		"iS": 5012,
+		"oA": 0,
+		"oAP": "\/images\/logo-desktop.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/logo-desktop.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/logo-desktop.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/logo-mobile.png": {
+		"ft": 32768,
+		"iS": 2572,
+		"oA": 0,
+		"oAP": "\/images\/logo-mobile.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/logo-mobile.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/logo-mobile.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/low-res.jpg": {
+		"ft": 16384,
+		"iS": 5937,
+		"oA": 0,
+		"oAP": "\/images\/low-res.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/images\/med-res.jpg": {
+		"ft": 16384,
+		"iS": 10577,
+		"oA": 0,
+		"oAP": "\/images\/med-res.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/images\/meisje-gebruiker-centraal.png": {
+		"ft": 32768,
+		"iS": 36556,
+		"oA": 0,
+		"oAP": "\/images\/meisje-gebruiker-centraal.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/meisje-gebruiker-centraal.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/meisje-gebruiker-centraal.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/meisje-gebruiker-centraal32w.png": {
+		"ft": 32768,
+		"iS": 1421,
+		"oA": 0,
+		"oAP": "\/images\/meisje-gebruiker-centraal32w.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/mobiel.png": {
+		"ft": 32768,
+		"iS": 2460,
+		"oA": 0,
+		"oAP": "\/images\/mobiel.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/mobiel.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/mobiel.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/nav-icon-links.png": {
+		"ft": 32768,
+		"iS": 329,
+		"oA": 0,
+		"oAP": "\/images\/nav-icon-links.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/nav-icon-links.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/nav-icon-links.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/nav-icon-links@2x.png": {
+		"ft": 32768,
+		"iS": 669,
+		"oA": 0,
+		"oAP": "\/images\/nav-icon-links@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/nav-icon-rechts.png": {
+		"ft": 32768,
+		"iS": 317,
+		"oA": 0,
+		"oAP": "\/images\/nav-icon-rechts.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/nav-icon-rechts.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/nav-icon-rechts.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/nav-icon-rechts@2x.png": {
+		"ft": 32768,
+		"iS": 618,
+		"oA": 0,
+		"oAP": "\/images\/nav-icon-rechts@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/pijltje-groen.png": {
+		"ft": 32768,
+		"iS": 587,
+		"oA": 0,
+		"oAP": "\/images\/pijltje-groen.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/pijltje-groen.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/pijltje-groen.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/pijltje-roze-back.png": {
+		"ft": 32768,
+		"iS": 365,
+		"oA": 0,
+		"oAP": "\/images\/pijltje-roze-back.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/pijltje-roze-back.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/pijltje-roze-back.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/pijltje-roze.png": {
+		"ft": 32768,
+		"iS": 367,
+		"oA": 0,
+		"oAP": "\/images\/pijltje-roze.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/pijltje-roze.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/pijltje-roze.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/pijltje-txt-back.png": {
+		"ft": 32768,
+		"iS": 323,
+		"oA": 0,
+		"oAP": "\/images\/pijltje-txt-back.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/pijltje-txt-back.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/pijltje-txt-back.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/pijltje-txt.png": {
+		"ft": 32768,
+		"iS": 324,
+		"oA": 0,
+		"oAP": "\/images\/pijltje-txt.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/pijltje-txt.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/pijltje-txt.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/pijltje-wit-back.png": {
+		"ft": 32768,
+		"iS": 223,
+		"oA": 0,
+		"oAP": "\/images\/pijltje-wit-back.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/pijltje-wit-back.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/pijltje-wit-back.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/pijltje-wit-down.png": {
+		"ft": 32768,
+		"iS": 229,
+		"oA": 0,
+		"oAP": "\/images\/pijltje-wit-down.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/pijltje-wit-down.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/pijltje-wit-down.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/pijltje-wit.png": {
+		"ft": 32768,
+		"iS": 223,
+		"oA": 0,
+		"oAP": "\/images\/pijltje-wit.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/pijltje-wit.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/pijltje-wit.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/search-button.png": {
+		"ft": 32768,
+		"iS": 274,
+		"oA": 0,
+		"oAP": "\/images\/search-button.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/sprite.png": {
+		"ft": 32768,
+		"iS": 2524,
+		"oA": 0,
+		"oAP": "\/images\/sprite.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/tablet.png": {
+		"ft": 32768,
+		"iS": 23435,
+		"oA": 0,
+		"oAP": "\/images\/tablet.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/tablet.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/tablet.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/vergrootglas.png": {
+		"ft": 32768,
+		"iS": 256,
+		"oA": 0,
+		"oAP": "\/images\/vergrootglas.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/vergrootglas.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/vergrootglas.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/voorbeeld-persoon-1.png": {
+		"ft": 32768,
+		"iS": 9607,
+		"oA": 0,
+		"oAP": "\/images\/voorbeeld-persoon-1.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/voorbeeld-persoon-1.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/voorbeeld-persoon-1.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/voorbeeld-persoon-2.png": {
+		"ft": 32768,
+		"iS": 12410,
+		"oA": 0,
+		"oAP": "\/images\/voorbeeld-persoon-2.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/voorbeeld-persoon-2.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/voorbeeld-persoon-2.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/includes\/author-box.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/author-box.php",
+		"oF": 0
+		},
+	"\/includes\/common-functions.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/common-functions.php",
+		"oF": 0
+		},
+	"\/includes\/custom-fields-and-post-types.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/custom-fields-and-post-types.php",
+		"oF": 0
+		},
+	"\/includes\/widgets.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/widgets.php",
+		"oF": 0
+		},
+	"\/js\/commentform.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/min\/commentform-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/criticalcss.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/min\/criticalcss-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/menu.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/min\/menu-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/min\/commentform-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/min\/min\/commentform-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/min\/menu-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/min\/min\/menu-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/languages\/e-newsletters\/email-newsletter-nl_NL.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/languages\/e-newsletters\/email-newsletter-nl_NL.mo",
+		"oF": 0
+		},
+	"\/languages\/e-newsletters\/email-newsletter-nl_NL.po": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/languages\/e-newsletters\/email-newsletter-nl_NL.po",
+		"oF": 0
+		},
+	"\/languages\/nl_NL.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/languages\/nl_NL.mo",
+		"oF": 0
+		},
+	"\/languages\/nl_NL.po": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/languages\/nl_NL.po",
+		"oF": 0
+		},
+	"\/languages\/xx_XX.pot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/languages\/xx_XX.pot",
+		"oF": 0
+		},
+	"\/less\/00-mixins.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/00-mixins.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
+	"\/less\/01-socmed-color-codes.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/01-socmed-color-codes.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
+	"\/less\/02-normalize.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/02-normalize.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
+	"\/less\/30-text-styles.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/30-text-styles.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
+	"\/less\/40-forms.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/40-forms.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
+	"\/less\/50-menu.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/50-menu.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
+	"\/less\/60-sidebar-widgets.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/60-sidebar-widgets.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
+	"\/less\/70-pagetypes.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/70-pagetypes.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
+	"\/less\/80-structure.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/80-structure.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
+	"\/less\/81-footers.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/81-footers.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
+	"\/less\/82-pagination.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/82-pagination.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
+	"\/less\/85-header-logo.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/85-header-logo.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
+	"\/less\/90-printstyles.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/90-printstyles.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
+	"\/less\/99-browserhacks.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/99-browserhacks.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
+	"\/less\/blogberichten.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/blogberichten.css",
+		"oF": 2,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
+	"\/less\/editor-styles.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/editor-styles.css",
+		"oF": 0,
+		"oS": 1,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
+	"\/less\/login-form.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/login-form.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
+	"\/less\/mailtemplate-met-link.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/mailtemplate-met-link.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
+	"\/less\/mailtemplate-zonder-link.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/mailtemplate-zonder-link.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
+	"\/less\/mailtemplate.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/mailtemplate.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
+	"\/less\/style.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/style.css",
+		"oF": 2,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
+	"\/mailing-templates\/double_optin.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/mailing-templates\/double_optin.html",
+		"oF": 0
+		},
+	"\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/assets\/gebruiker-centraal-logo-boven.png": {
+		"ft": 32768,
+		"iS": 5465,
+		"oA": 0,
+		"oAP": "\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/assets\/gebruiker-centraal-logo-boven.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/assets\/gebruiker-centraal-logo-onder.png": {
+		"ft": 32768,
+		"iS": 2603,
+		"oA": 0,
+		"oAP": "\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/assets\/gebruiker-centraal-logo-onder.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/assets\/gebruiker-centraal-logo.jpg": {
+		"ft": 16384,
+		"iS": 5183,
+		"oA": 0,
+		"oAP": "\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/assets\/gebruiker-centraal-logo.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/index.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/index.php",
+		"oF": 0
+		},
+	"\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/screenshot.jpg": {
+		"ft": 16384,
+		"iS": 20591,
+		"oA": 0,
+		"oAP": "\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/screenshot.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/style.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/style-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/style_header.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/style_header-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/template.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/template.html",
+		"oF": 0
+		},
+	"\/mailing-templates\/gebruikercentraal-v2\/assets\/gebruiker-centraal-logo-boven.png": {
+		"ft": 32768,
+		"iS": 5460,
+		"oA": 0,
+		"oAP": "\/mailing-templates\/gebruikercentraal-v2\/assets\/gebruiker-centraal-logo-boven.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/mailing-templates\/gebruikercentraal-v2\/assets\/gebruiker-centraal-logo-onder.png": {
+		"ft": 32768,
+		"iS": 2603,
+		"oA": 0,
+		"oAP": "\/mailing-templates\/gebruikercentraal-v2\/assets\/gebruiker-centraal-logo-onder.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/mailing-templates\/gebruikercentraal-v2\/assets\/gebruiker-centraal-logo.jpg": {
+		"ft": 16384,
+		"iS": 5183,
+		"oA": 0,
+		"oAP": "\/mailing-templates\/gebruikercentraal-v2\/assets\/gebruiker-centraal-logo.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/mailing-templates\/gebruikercentraal-v2\/assets\/mailondertekening-meisje-gebruiker-centraal.png": {
+		"ft": 32768,
+		"iS": 78151,
+		"oA": 0,
+		"oAP": "\/mailing-templates\/gebruikercentraal-v2\/assets\/mailondertekening-meisje-gebruiker-centraal.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/mailing-templates\/gebruikercentraal-v2\/index.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/mailing-templates\/gebruikercentraal-v2\/index.php",
+		"oF": 0
+		},
+	"\/mailing-templates\/gebruikercentraal-v2\/screenshot.jpg": {
+		"ft": 16384,
+		"iS": 20591,
+		"oA": 0,
+		"oAP": "\/mailing-templates\/gebruikercentraal-v2\/screenshot.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/mailing-templates\/gebruikercentraal-v2\/style.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/mailing-templates\/gebruikercentraal-v2\/style-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/mailing-templates\/gebruikercentraal-v2\/style_header.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/mailing-templates\/gebruikercentraal-v2\/style_header-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/mailing-templates\/gebruikercentraal-v2\/template.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/mailing-templates\/gebruikercentraal-v2\/template.html",
+		"oF": 0
+		},
+	"\/mailing-templates\/gebruikercentraal\/images\/disco.gif": {
+		"ft": 4194304,
+		"iS": 128,
+		"oA": 0,
+		"oAP": "\/mailing-templates\/gebruikercentraal\/images\/disco.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/mailing-templates\/gebruikercentraal\/images\/header-html-mail-gebruiker-centraal.jpg": {
+		"ft": 16384,
+		"iS": 6125,
+		"oA": 0,
+		"oAP": "\/mailing-templates\/gebruikercentraal\/images\/header-html-mail-gebruiker-centraal.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/mailing-templates\/gebruikercentraal\/images\/header-html-mail-gebruiker-centraal.png": {
+		"ft": 32768,
+		"iS": 11953,
+		"oA": 0,
+		"oAP": "\/mailing-templates\/gebruikercentraal\/images\/header-html-mail-gebruiker-centraal.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/mailing-templates\/gebruikercentraal\/index.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/mailing-templates\/gebruikercentraal\/index.php",
+		"oF": 0
+		},
+	"\/mailing-templates\/gebruikercentraal\/screenshot.jpg": {
+		"ft": 16384,
+		"iS": 4055,
+		"oA": 0,
+		"oAP": "\/mailing-templates\/gebruikercentraal\/screenshot.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/mailing-templates\/gebruikercentraal\/style.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/mailing-templates\/gebruikercentraal\/style-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/mailing-templates\/gebruikercentraal\/style_header.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/mailing-templates\/gebruikercentraal\/style_header-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/mailing-templates\/gebruikercentraal\/template.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/mailing-templates\/gebruikercentraal\/template.html",
+		"oF": 0
+		},
+	"\/nojs.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/nojs.php",
+		"oF": 0
+		},
+	"\/page.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page.php",
+		"oF": 0
+		},
+	"\/page_actieteam.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page_actieteam.php",
+		"oF": 0
+		},
+	"\/page_alle-auteurs.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page_alle-auteurs.php",
+		"oF": 0
+		},
+	"\/page_archive.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page_archive.php",
+		"oF": 0
+		},
+	"\/page_blog.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page_blog.php",
+		"oF": 0
+		},
+	"\/page_contentpagina.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page_contentpagina.php",
+		"oF": 0
+		},
+	"\/page_evenement.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page_evenement.php",
+		"oF": 0
+		},
+	"\/page_evenementen.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page_evenementen.php",
+		"oF": 0
+		},
+	"\/page_home.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page_home.php",
+		"oF": 0
+		},
+	"\/page_login.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page_login.php",
+		"oF": 0
+		},
+	"\/page_mailinglijst.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page_mailinglijst.php",
+		"oF": 0
+		},
+	"\/page_newsletterarchive.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page_newsletterarchive.php",
+		"oF": 0
+		},
+	"\/page_overzichtspagina.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page_overzichtspagina.php",
+		"oF": 0
+		},
+	"\/page_sitemap.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page_sitemap.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/formats\/event_list_item_format.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/formats\/event_list_item_format.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/formats\/event_list_item_format_footer.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/formats\/event_list_item_format_footer.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/formats\/event_list_item_format_header.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/formats\/event_list_item_format_header.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/formats\/event_single_format.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/formats\/event_single_format.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/formats\/location_event_list_item_footer_format.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/formats\/location_event_list_item_footer_format.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/formats\/location_event_list_item_format.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/formats\/location_event_list_item_format.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/formats\/location_event_list_item_header_format.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/formats\/location_event_list_item_header_format.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/formats\/readme.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/formats\/readme.txt",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/formats\/single_event_format.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/formats\/single_event_format.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/forms\/bookingform\/booking-fields.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/forms\/bookingform\/booking-fields.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/forms\/bookingform\/login.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/forms\/bookingform\/login.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/forms\/bookingform\/ticket-single.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/forms\/bookingform\/ticket-single.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/forms\/bookingform\/tickets-list.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/forms\/bookingform\/tickets-list.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/forms\/event-editor.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/forms\/event-editor.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/forms\/event\/attributes-public.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/forms\/event\/attributes-public.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/forms\/event\/attributes.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/forms\/event\/attributes.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/forms\/event\/booking-stats.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/forms\/event\/booking-stats.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/forms\/event\/bookings-ticket-form.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/forms\/event\/bookings-ticket-form.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/forms\/event\/bookings.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/forms\/event\/bookings.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/forms\/event\/categories-public.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/forms\/event\/categories-public.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/forms\/event\/featured-image-public.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/forms\/event\/featured-image-public.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/forms\/event\/group.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/forms\/event\/group.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/forms\/event\/location.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/forms\/event\/location.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/forms\/event\/recurring-when.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/forms\/event\/recurring-when.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/forms\/event\/when-with-recurring.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/forms\/event\/when-with-recurring.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/forms\/event\/when.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/forms\/event\/when.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/forms\/location-editor.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/forms\/location-editor.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/forms\/location\/attributes-public.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/forms\/location\/attributes-public.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/forms\/location\/attributes.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/forms\/location\/attributes.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/forms\/location\/featured-image-public.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/forms\/location\/featured-image-public.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/forms\/location\/where.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/forms\/location\/where.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/forms\/map-container.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/forms\/map-container.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/forms\/readme.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/forms\/readme.txt",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/forms\/ticket-form.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/forms\/ticket-form.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/forms\/tickets-form.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/forms\/tickets-form.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/placeholders\/attendees.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/placeholders\/attendees.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/placeholders\/attendeeslist.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/placeholders\/attendeeslist.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/placeholders\/attendeespendinglist.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/placeholders\/attendeespendinglist.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/placeholders\/bookingbutton.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/placeholders\/bookingbutton.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/placeholders\/bookingform.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/placeholders\/bookingform.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/placeholders\/categories.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/placeholders\/categories.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/placeholders\/eventcategoriesimages.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/placeholders\/eventcategoriesimages.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/placeholders\/eventtags.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/placeholders\/eventtags.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/placeholders\/locationmap.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/placeholders\/locationmap.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/placeholders\/readme.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/placeholders\/readme.txt",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/tables\/events.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/tables\/events.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/tables\/locations.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/tables\/locations.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/tables\/readme.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/tables\/readme.txt",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/templates\/bookings-event-printable.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/templates\/bookings-event-printable.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/templates\/calendar-day.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/templates\/calendar-day.php",
 		"oF": 0
 		},
 	"\/plugins\/events-manager\/templates\/calendar-full.php": {
@@ -65,6 +2891,20 @@
 		"oAP": "\/plugins\/events-manager\/templates\/events-calendar.php",
 		"oF": 0
 		},
+	"\/plugins\/events-manager\/templates\/events-list-grouped.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/templates\/events-list-grouped.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/templates\/events-list.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/templates\/events-list.php",
+		"oF": 0
+		},
 	"\/plugins\/events-manager\/templates\/events-search.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -77,6 +2917,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/plugins\/events-manager\/templates\/ical.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/templates\/location-single.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/templates\/location-single.php",
 		"oF": 0
 		},
 	"\/plugins\/events-manager\/templates\/locations-list.php": {
@@ -100,11 +2947,105 @@
 		"oAP": "\/plugins\/events-manager\/templates\/map-global.php",
 		"oF": 0
 		},
+	"\/plugins\/events-manager\/templates\/my-bookings.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/templates\/my-bookings.php",
+		"oF": 0
+		},
 	"\/plugins\/events-manager\/templates\/readme.txt": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/plugins\/events-manager\/templates\/readme.txt",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/templates\/rss.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/templates\/rss.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/templates\/search\/categories.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/templates\/search\/categories.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/templates\/search\/geo-units.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/templates\/search\/geo-units.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/templates\/search\/geo.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/plugins\/events-manager\/templates\/search\/min\/geo-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/plugins\/events-manager\/templates\/search\/geo.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/templates\/search\/geo.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/templates\/search\/location-countries.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/templates\/search\/location-countries.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/templates\/search\/location-regions.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/templates\/search\/location-regions.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/templates\/search\/location-states.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/templates\/search\/location-states.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/templates\/search\/location-towns.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/templates\/search\/location-towns.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/templates\/search\/location.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/templates\/search\/location.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/templates\/search\/scope.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/templates\/search\/scope.php",
+		"oF": 0
+		},
+	"\/plugins\/events-manager\/templates\/search\/search.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/plugins\/events-manager\/templates\/search\/search.php",
 		"oF": 0
 		},
 	"\/plugins\/events-manager\/templates\/tag-single.php": {

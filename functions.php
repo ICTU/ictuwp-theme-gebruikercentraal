@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.10.1
-// @desc.   Bugfixes voor get_field, create_function en 404-pagina.
+// @version 3.10.2
+// @desc.   Styling voor 'niet zo, maar zo' images op richtlijnen-pagina.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.10.1' );
-define( 'CHILD_THEME_DESCRIPTION', "3.10.1 - Bugfixes voor get_field, create_function en 404-pagina." );
+define( 'CHILD_THEME_VERSION', '3.10.2' );
+define( 'CHILD_THEME_DESCRIPTION', "3.10.2 - Styling voor 'niet zo, maar zo' images op richtlijnen-pagina." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 
@@ -2358,13 +2358,13 @@ function gc_wbvb_page_add_archive_for_cpt() {
 
 //========================================================================================================
 
-add_action( 'init', 'rhswp_dossiercontext_add_rewrite_rules');
+add_action( 'init', 'gc_wbvb_dossiercontext_add_rewrite_rules');
 
 //define( 'GC_KLANTCONTACT_BEELDEN_CPT', 'beeld' );
 //define( 'GC_KLANTCONTACT_BRIEF_CPT', 'brief' );
 
 
-function rhswp_dossiercontext_add_rewrite_rules() {
+function gc_wbvb_dossiercontext_add_rewrite_rules() {
 
   add_rewrite_rule( '(.+?)(/' . GC_BEELDENCONTEXT . '/)(.+?)/?$', 'index.php?name=$matches[3]&post_type=' . GC_KLANTCONTACT_BEELDEN_CPT, 'top');
 
@@ -2373,3 +2373,19 @@ function rhswp_dossiercontext_add_rewrite_rules() {
 }
 
 //========================================================================================================
+
+/*Remove empty paragraph tags from the_content*/
+function gc_wbvb_remove_empty_paragraphs($content) {
+
+    /*$pattern = "/<p[^>]*><\\/p[^>]*>/";   
+    $content = preg_replace($pattern, '', $content);*/
+    $content = str_replace("<p></p>","",$content);
+    return $content;
+}
+
+add_filter('the_content', 'gc_wbvb_remove_empty_paragraphs', 99999 );
+
+
+//========================================================================================================
+
+

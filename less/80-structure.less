@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.9.1
-// @desc.   Toevoegen posttypes voor klantcontact-in-beeld.
+// @version 3.10.2
+// @desc.   Styling voor 'niet zo, maar zo' images op richtlijnen-pagina.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -94,6 +94,7 @@
   .content {
     float: right;
     width: ( @break_fullwidth - ( @gutter + @sidebar_width ) ) ;
+//    width: 100%;
   }
   
   .content-sidebar .content,
@@ -108,22 +109,45 @@
     width: ( @break_fullwidth - ( 2 * ( @gutter + @sidebar_width ) ) );
   }
   
-  .full-width-content .content {
-    width: 100%;
-    min-height: 400px;
-    .entry {
-      padding-left: .5em;
-      padding-right: .5em;
-    }
-    article.entry {
+  
+  .full-width-content {
+
+    .content {
+      width: 100%;
       min-height: 400px;
-    }
-    .widget {
       .entry {
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: .5em;
+        padding-right: .5em;
+      }
+      article.entry {
+        min-height: 400px;
+      }
+      .widget {
+        .entry {
+          padding-left: 0;
+          padding-right: 0;
+        }
       }
     }
+//    }
+  }
+
+  .full-width-content.search {
+    .content {
+      min-height: inherit;
+    }
+  }
+
+  .search {
+    section a {
+      text-decoration: none;
+      
+      &:hover,
+      &:active,
+      &:focus {
+        text-decoration: underline;
+      }
+    }    
   }
 
   .home.full-width-content .content {
