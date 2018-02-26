@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.9.5
-// @desc.   CSS-bugs en verbeteringen. Event-widget netter gemaakt.
+// @version 3.10.1
+// @desc.   Bugfixes voor get_field, create_function en 404-pagina.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 // ================================================================================
@@ -342,7 +342,17 @@ body.home,
       margin-left: .2em;
       .iconaddbullet('../images/bullet.svg', @wit);
     }
-  }          
+  }    
+  .blocks {
+    div {
+    }      
+
+    h2, h3, h4, h5, h6 {
+      padding: 0;    
+      margin: 0;    
+    }
+    
+  }      
 }
 
 // ========================================================================
@@ -676,7 +686,18 @@ body.home,
         li:nth-child(2n+2) {
           clear: right;
         }
-      } 
+      }
+
+      .blocks {
+        display: flex;
+        div {
+          flex: 1;
+          & + div {
+            padding-left: 1em;
+          }   
+        }      
+      }      
+       
     }
     
     .home {

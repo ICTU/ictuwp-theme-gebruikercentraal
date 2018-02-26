@@ -1,18 +1,15 @@
 <?php
 
-/**
- * Gebruiker Centraal - gc-berichten-widget.php
- * ----------------------------------------------------------------------------------
- * Widget voor het tonen van berichten. Gebruik deze vooral op de homepage
- * ----------------------------------------------------------------------------------
- * @package gebruiker-centraal
- * @author  Paul van Buuren
- * @license GPL-2.0+
- * @version 3.7.1
- * @desc.   actieteampagina, actieteam-widget, skiplinks, 404
- * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
- */
-
+// Gebruiker Centraal - gc-berichten-widget.php
+// ----------------------------------------------------------------------------------
+// Widget voor het tonen van berichten. Gebruik deze vooral op de homepage
+// ----------------------------------------------------------------------------------
+// @package gebruiker-centraal
+// @author  Paul van Buuren
+// @license GPL-2.0+
+// @version 3.10.1
+// @desc.   Bugfixes voor get_field, create_function en 404-pagina.
+// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
 //========================================================================================================
@@ -175,6 +172,9 @@ class GC_berichten_widget extends WP_Widget {
  
 }
 
+function GC_berichten_widget_init() {
+  return register_widget("GC_berichten_widget");
+}
 
-add_action( 'widgets_init', create_function('', 'return register_widget("GC_berichten_widget");') );
+add_action( 'widgets_init', 'GC_berichten_widget_init' );
 

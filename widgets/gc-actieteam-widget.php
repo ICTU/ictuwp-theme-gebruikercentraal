@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.8.3
-// @desc.   Code-opschoning.
+// @version 3.10.1
+// @desc.   Bugfixes voor get_field, create_function en 404-pagina.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -204,8 +204,11 @@ $comma_separated = maybe_serialize( $actieteamleden_temp );
  
 }
 
+function gc_actieteam_widget_init() {
+  return register_widget("gc_actieteam_widget");
+}
 
-add_action( 'widgets_init', create_function('', 'return register_widget("gc_actieteam_widget");') );
+add_action( 'widgets_init', 'gc_actieteam_widget_init' );
 
 //========================================================================================================
 

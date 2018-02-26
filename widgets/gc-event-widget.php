@@ -1,17 +1,15 @@
 <?php
 
-/**
- * Gebruiker Centraal - gc-event-widget.php
- * ----------------------------------------------------------------------------------
- * Widget voor inschrijvingen op de nieuwsbrief
- * ----------------------------------------------------------------------------------
- * @package gebruiker-centraal
- * @author  Paul van Buuren
- * @license GPL-2.0+
- * @version 3.9.5
- * @desc.   CSS-bugs en verbeteringen. Event-widget netter gemaakt.
- * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
- */
+// Gebruiker Centraal - gc-event-widget.php
+// ----------------------------------------------------------------------------------
+// Widget voor inschrijvingen op de nieuwsbrief
+// ----------------------------------------------------------------------------------
+// @package gebruiker-centraal
+// @author  Paul van Buuren
+// @license GPL-2.0+
+// @version 3.10.1
+// @desc.   Bugfixes voor get_field, create_function en 404-pagina.
+// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 class GC_event_widget extends WP_Widget {
   
@@ -285,8 +283,14 @@ class GC_event_widget extends WP_Widget {
     }
 }
 
-if ( function_exists( 'em_get_scopes' ) ) {
-  add_action('widgets_init', create_function('', 'return register_widget("GC_event_widget");'));
+
+
+function GC_event_widget_init() {
+  return register_widget("GC_event_widget");
 }
 
-?>
+if ( function_exists( 'em_get_scopes' ) ) {
+  add_action( 'widgets_init', 'GC_event_widget_init' );
+}
+
+//========================================================================================================

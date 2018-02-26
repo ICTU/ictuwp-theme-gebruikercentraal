@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.9.6
-// @desc.   CSS voor admin-editor aangepast.
+// @version 3.10.1
+// @desc.   Bugfixes voor get_field, create_function en 404-pagina.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.9.6' );
-define( 'CHILD_THEME_DESCRIPTION', "3.9.6 - CSS voor admin-editor aangepast." );
+define( 'CHILD_THEME_VERSION', '3.10.1' );
+define( 'CHILD_THEME_DESCRIPTION', "3.10.1 - Bugfixes voor get_field, create_function en 404-pagina." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 
@@ -715,19 +715,29 @@ function gc_wbvb_404() {
          if ( is_404() ) {
               gc_wbvb_404_no_posts_content();
           }
-  
+
+          $count_pages = wp_count_posts('page');  
+          if ( $count_pages ) {
           ?>
+            <h2><?php _e( 'Pages:', 'gebruikercentraal' ); ?></h2>
+            <ul>
+              <?php wp_list_pages( 'exclude=78,80&title_li=' ); ?>
+            </ul>
+          <?php  	
+          }  
+
+          $maxnr        = 20;
+          $count_posts  = wp_count_posts();  
+
           
-          	<h2><?php _e( 'Pages:', 'gebruikercentraal' ); ?></h2>
+          if ( $count_posts->publish > 1 ) {
+
+            echo '<h2>' . sprintf( __( 'De laatste %s blog-artikelen', 'gebruikercentraal' ), $maxnr ) . '</h2>'; 
+
+            ?>
           	<ul>
-          		<?php wp_list_pages( 'exclude=78,80&title_li=' ); ?>
+          		<?php wp_get_archives(  array( 'type' => 'postbypost', 'limit' => $maxnr  ) ); ?>
           	</ul>
-          
-          	<h2><?php _e( 'Blog-artikelen:', 'gebruikercentraal' ); ?></h2>
-          	<ul>
-          		<?php wp_get_archives(  array( 'type' => 'postbypost'  ) ); ?>
-          	</ul>
-  
           
           	<h2><?php _e( 'Categories:', 'gebruikercentraal' ); ?></h2>
           	<ul>
@@ -738,8 +748,8 @@ function gc_wbvb_404() {
           	<ul>
           		<?php wp_list_authors( 'exclude_admin=0&optioncount=0' ); ?>
           	</ul>
-          
-          <?php
+            <?php  	
+          }  
   
   		echo '</div>';
   

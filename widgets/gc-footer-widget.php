@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.7.7
-// @desc.   Added author overview page, alignment avatars homepage.
+// @version 3.10.1
+// @desc.   Bugfixes voor get_field, create_function en 404-pagina.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -116,18 +116,14 @@ class gc_show_footer_widget extends WP_Widget {
         echo '</div>';
         echo $after_widget;
     }
- 
 }
 
 
-add_action( 'widgets_init', create_function('', 'return register_widget("gc_show_footer_widget");') );
+function gc_show_footer_widget_init() {
+  return register_widget("gc_show_footer_widget");
+}
+
+add_action( 'widgets_init', 'gc_show_footer_widget_init' );
 
 //========================================================================================================
-
-//define( 'ID_BLOGBERICHTEN_CSS', 'blogberichtencss' );
-
-function gc_wbvb_add_css2() {
-
-
-}
 
