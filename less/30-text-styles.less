@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.10.2
-// @desc.   Styling voor 'niet zo, maar zo' images op richtlijnen-pagina.
+// @version 3.10.3
+// @desc.   Bugfixes voor NZMZ en w.v.t.t.k.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -179,30 +179,62 @@
     clear: both;
     overflow: hidden;
     width: 100%;
-    background: @light_gray;
-    display: flex;
     margin-bottom: 1em;
+    @media only screen and (min-width: @break_tablet ) {
+      background: @light_gray;
+      display: flex;
+    }    
     
     .wp-caption-text {
       border-bottom-style: none;
       font-size: 1.6rem;      
     }
 
-    .alignleft,
-    .alignright {
-      max-width: 49% !important;
-      width: 49%;
+@breakpoint_nzmz: ( 2 * 300px );
+
+
+    .good-example,
+    .bad-example,
+    .wp-caption {
+      width: 100%;
+      max-width: 100% !important;
+      padding: 1.5em;
+
+      // for smaller screens
+      @media only screen and (max-width: @breakpoint_nzmz ) {
+        border: .5em solid @light_gray;
+        border-top-width: .25em;
+        border-bottom-width: .25em;
+        margin-top: 0;
+
+        &:first-of-type {      
+          border-top-width: .5em;
+        }
+        &:last-of-type {      
+          border-bottom-width: .5em;
+        }
+      }
+      
+      @media only screen and (min-width: @breakpoint_nzmz ) {
+        max-width: 49% !important;
+        width: 49%;
+        flex: 1;
+        margin: 1% .5% 1% .5%;
+      }
+    }
+
+    .wp-caption {
       text-align: center;
       background: @wit;
-      margin: 1% .5% 1% .5%;
-      padding: 1.5em;
-      flex: 1;
 
-      &:first-of-type {      
-        margin-left: 1%;
-      }
-      &:last-of-type {      
-        margin-right: 1%;
+
+      @media only screen and (min-width: @breakpoint_nzmz ) {
+        &:first-of-type {      
+          margin-left: 1%;
+        }
+        &:last-of-type {      
+          margin-right: 1%;
+        }
       }
     }
 
@@ -212,32 +244,36 @@
       
       &:after {
         content: ' ';
-        height: 30px;
-        width: 30px;
+        color: @wit;
+        text-indent: 25px;
         display: block;
-        border-radius: 50%;
-        background: red;
+        border-radius: 8px;
+        background-color: @mess_ok_color;
         position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 999;
-        transform: translate3d( .25em, -.25em, 0 );
+        top: 4px;
+        right: 4px;
         background-repeat: no-repeat;
-        background-position: center center;
+        background-position: -10px center;
         background-size: 75% 75%;
+        padding-right: 5px;
       }      
     }
 
     .good-example {
       &:after {
+        content: 'maar zo';
         background-color: @mess_ok_color;
         background-image: url('images/icon-circle-check.svg');
+        background-position: -20px center;
       }
     }
     .bad-example {
       &:after {
+        content: 'niet zo';
         background-color: @mess_error_color;
         background-image: url('images/icon-circle-error.svg');
+        background-position: -15px center;
+        text-indent: 24px;
       }
     }
     

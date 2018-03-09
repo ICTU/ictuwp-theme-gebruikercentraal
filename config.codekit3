@@ -7,7 +7,7 @@
 		"uuidString": "F739CC51-1ABE-4F0E-A0E2-DDC4D4432249"
 		}
 	],
-"creatorBuild": "26268",
+"creatorBuild": "26330",
 "files": {
 	"\/.gitignore": {
 		"cB": 0,
@@ -104,6 +104,26 @@
 		"ma": 0,
 		"oA": 2,
 		"oAP": "\/css\/login-form-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/css\/mailtemplate-met-link.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/css\/mailtemplate-met-link-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/css\/mailtemplate-zonder-link.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/css\/mailtemplate-zonder-link-min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -2135,21 +2155,21 @@
 		"sU": 0
 		},
 	"\/less\/style.less": {
-		"aP": 0,
-		"bl": 0,
+		"aP": 1,
+		"bl": 1,
 		"dJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
-		"ma": 0,
+		"ma": 1,
 		"oA": 0,
 		"oAP": "\/style.css",
 		"oF": 2,
-		"oS": 0,
+		"oS": 1,
 		"rU": 0,
-		"sI": 0,
-		"sM": 0,
-		"sU": 0
+		"sI": 1,
+		"sM": 1,
+		"sU": 1
 		},
 	"\/mailing-templates\/double_optin.html": {
 		"cB": 0,

@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.10.2
-// @desc.   Styling voor 'niet zo, maar zo' images op richtlijnen-pagina.
+// @version 3.10.3
+// @desc.   Bugfixes voor NZMZ en w.v.t.t.k.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.10.2' );
-define( 'CHILD_THEME_DESCRIPTION', "3.10.2 - Styling voor 'niet zo, maar zo' images op richtlijnen-pagina." );
+define( 'CHILD_THEME_VERSION', '3.10.3' );
+define( 'CHILD_THEME_DESCRIPTION', "3.10.3 - Bugfixes voor NZMZ en w.v.t.t.k." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 

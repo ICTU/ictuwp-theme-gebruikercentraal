@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-3.10.2
+3.10.3
 
 ## Version history
+* 3.10.3 - Bugfixes voor NZMZ en w.v.t.t.k.
 * 3.10.2 - Styling voor 'niet zo, maar zo' images op richtlijnen-pagina.
 * 3.10.1 - Bugfixes voor get_field, create_function en 404-pagina.
 * 3.9.6 - CSS voor admin-editor aangepast.
