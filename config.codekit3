@@ -1793,6 +1793,13 @@
 		"oAP": "\/languages\/e-newsletters\/email-newsletter-nl_NL.po",
 		"oF": 0
 		},
+	"\/languages\/gebruikercentraal.pot": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/languages\/gebruikercentraal.pot",
+		"oF": 0
+		},
 	"\/languages\/nl_NL.mo": {
 		"cB": 0,
 		"ft": 8192,
@@ -1805,13 +1812,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/languages\/nl_NL.po",
-		"oF": 0
-		},
-	"\/languages\/xx_XX.pot": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/languages\/xx_XX.pot",
 		"oF": 0
 		},
 	"\/less\/00-mixins.less": {

@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.10.3
-// @desc.   Bugfixes voor NZMZ en w.v.t.t.k.
+// @version 3.10.4
+// @desc.   Vertalingen bijgewerkt.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.10.3' );
-define( 'CHILD_THEME_DESCRIPTION', "3.10.3 - Bugfixes voor NZMZ en w.v.t.t.k." );
+define( 'CHILD_THEME_VERSION', '3.10.4' );
+define( 'CHILD_THEME_DESCRIPTION', "3.10.4 - Vertalingen bijgewerkt." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 
@@ -66,8 +66,12 @@ define( 'GC_KLANTCONTACT_BRIEF_CPT', 'brief' );
 define( 'GC_TAX_LICENTIE', 'licentie' );
 define( 'GC_TAX_ORGANISATIE', 'organisatie' );
 
+//========================================================================================================
 
+// prepare for translation
+load_child_theme_textdomain( 'gebruikercentraal', GC_FOLDER . '/languages' );
 
+//========================================================================================================
 
 add_image_size( HALFWIDTH, 380, 9999, false );
 add_image_size( BLOG_SINGLE_MOBILE, 120, 9999, false );
@@ -114,6 +118,14 @@ require_once( GC_FOLDER . '/includes/custom-fields-and-post-types.php' );
 
 // functions for the author box
 require_once( GC_FOLDER . '/includes/author-box.php' );
+
+//========================================================================================================
+
+//* Add HTML5 markup structure
+add_theme_support( 'html5' );
+
+//* Add viewport meta tag for mobile browsers
+add_theme_support( 'genesis-responsive-viewport' );
 
 //========================================================================================================
 
@@ -261,8 +273,8 @@ function gc_wbvb_breadcrumb_args( $args ) {
 	$args['heirarchial_attachments']  = true; // Genesis 1.5 and later
 	$args['heirarchial_categories']   = true; // Genesis 1.5 and later
 	$args['display']                  = true;
-	$args['labels']['prefix']         = ''; // __( "prefix", 'gebruikercentraal' );
-	$args['labels']['category']       = ''; //__( "Categorie", 'gebruikercentraal' );
+	$args['labels']['prefix']         = '';
+	$args['labels']['category']       = '';
 	$args['labels']['tag']            = __( "Label", 'gebruikercentraal' ) . $separator;
 	$args['labels']['date']           = __( "Datum-archief", 'gebruikercentraal' ) . $separator;
 	$args['labels']['search']         = __( "Zoekresultaat", 'gebruikercentraal' ) . $separator;
@@ -739,12 +751,12 @@ function gc_wbvb_404() {
           		<?php wp_get_archives(  array( 'type' => 'postbypost', 'limit' => $maxnr  ) ); ?>
           	</ul>
           
-          	<h2><?php _e( 'Categories:', 'gebruikercentraal' ); ?></h2>
+          	<h2><?php _e( 'Onderwerpen:', 'gebruikercentraal' ); ?></h2>
           	<ul>
           		<?php wp_list_categories( 'sort_column=name&title_li=' ); ?>
           	</ul>
           
-          	<h2><?php _e( 'Authors:', 'gebruikercentraal' ); ?></h2>
+          	<h2><?php _e( 'Auteurs:', 'gebruikercentraal' ); ?></h2>
           	<ul>
           		<?php wp_list_authors( 'exclude_admin=0&optioncount=0' ); ?>
           	</ul>

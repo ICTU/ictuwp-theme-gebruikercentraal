@@ -1,17 +1,15 @@
 <?php 
 
-/**
- * Gebruiker Centraal
- * ----------------------------------------------------------------------------------
- * Vormgeving en structuur voor de comments
- * ----------------------------------------------------------------------------------
- * @package gebruiker-centraal
- * @author  Paul van Buuren
- * @license GPL-2.0+
- * @version 3.6.6
- * @desc.   mobile menu, infoblock, naming convention functions
- * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
- */
+// Gebruiker Centraal
+// ----------------------------------------------------------------------------------
+// Vormgeving en structuur voor de comments
+// ----------------------------------------------------------------------------------
+// @package gebruiker-centraal
+// @author  Paul van Buuren
+// @license GPL-2.0+
+// @version 3.10.4
+// @desc.   Vertalingen bijgewerkt.
+// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
 if ( post_password_required() ) {

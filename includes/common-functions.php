@@ -8,29 +8,11 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.9.6
-// @desc.   CSS voor admin-editor aangepast.
+// @version 3.10.4
+// @desc.   Vertalingen bijgewerkt.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 ///
 
-
-
-
-//* Start the engine
-include_once( get_template_directory() . '/lib/init.php' );
-
-// prepare for translation
-load_child_theme_textdomain('gebruikercentraal', GC_FOLDER . '/languages' );
-
-
-$errormessage = '';
-
-
-//* Add HTML5 markup structure
-add_theme_support( 'html5' );
-
-//* Add viewport meta tag for mobile browsers
-add_theme_support( 'genesis-responsive-viewport' );
 
 
 // Geen footer
@@ -53,35 +35,18 @@ define( 'ID_MAINNAV', 'mainnav' );
 define( 'ID_ZOEKEN', 'zoeken' );
 define( 'ID_SKIPLINKS', 'skiplinks' );
 
-
-
-
-
-//========================================================================================================
-
-$padding = 16;
-
-add_image_size( 'uitgelicht', ( 10 * $padding ), ( 10 * $padding ), false );
-
-
-
 //========================================================================================================
 
 add_filter( 'get_search_form', 'gc_wbvb_add_id_to_search_form', 21 );
 
 
 function gc_wbvb_add_id_to_search_form( $form ) {
-
-    $form = str_replace("<form", '<form tabindex="-1" id="' . ID_ZOEKEN . '" ', $form);
-
-  return apply_filters( 'genesis_search_form', $form );
+	
+	return apply_filters( 'genesis_search_form', str_replace("<form", '<form tabindex="-1" id="' . ID_ZOEKEN . '" ', $form) );
 
 }
 
 //========================================================================================================
-
-
-
 
 add_filter( 'genesis_do_nav', 'override_do_nav', 10, 3 );
 
@@ -119,6 +84,7 @@ add_filter( 'genesis_attr_site-inner', 'theme_add_content_id', 15 );
 
 
 //========================================================================================================
+
 function showdebug($file = '', $extra = '') {
 
   if ( WP_THEME_DEBUG && WP_DEBUG ) {
@@ -134,7 +100,6 @@ function showdebug($file = '', $extra = '') {
     echo '</span>';
   }
 }
-
 
 //========================================================================================================
 
