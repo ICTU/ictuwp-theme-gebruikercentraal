@@ -228,8 +228,8 @@ img.alignright,
   top: 4px;
   right: 4px;
   background-repeat: no-repeat;
-  background-position: -10px center;
-  background-size: 75% 75%;
+  background-position: 4px center;
+  background-size: 20px 20px;
   padding-right: 5px;
 }
 .image-examples .good-example:after,
@@ -237,14 +237,13 @@ img.alignright,
   content: 'maar zo';
   background-color: #1BB24B;
   background-image: url('images/icon-circle-check.svg');
-  background-position: -20px center;
+  background-position: 4px center;
 }
 .image-examples .bad-example:after,
 .nietzomaarzo .bad-example:after {
   content: 'niet zo';
   background-color: #C42C76;
   background-image: url('images/icon-circle-error.svg');
-  background-position: -15px center;
   text-indent: 24px;
 }
 .wp-caption-text {

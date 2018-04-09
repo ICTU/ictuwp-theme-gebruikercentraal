@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.10.4
-// @desc.   Vertalingen bijgewerkt.
+// @version 3.10.5
+// @desc.   CSS bugs: image hoogte important en achtergrondplaatje bij nzmz.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.10.4' );
-define( 'CHILD_THEME_DESCRIPTION', "3.10.4 - Vertalingen bijgewerkt." );
+define( 'CHILD_THEME_VERSION', '3.10.5' );
+define( 'CHILD_THEME_DESCRIPTION', "3.10.5 - CSS bugs: image hoogte important en achtergrondplaatje bij nzmz." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 

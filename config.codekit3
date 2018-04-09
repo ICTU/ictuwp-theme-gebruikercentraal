@@ -706,6 +706,28 @@
 		"opt": 0,
 		"q": 100
 		},
+	"\/images\/gravatar-full.png": {
+		"ft": 32768,
+		"iS": 58018,
+		"oA": 0,
+		"oAP": "\/images\/gravatar-full.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/images\/gravatar-small.png": {
+		"ft": 32768,
+		"iS": 4269,
+		"oA": 0,
+		"oAP": "\/images\/gravatar-small.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"\/images\/gravatar.png": {
 		"ft": 32768,
 		"iS": 2033,
@@ -716,6 +738,16 @@
 		"opt": 1,
 		"oT": 1,
 		"q": 100
+		},
+	"\/images\/gravatar.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/gravatar.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"\/images\/hamburger.png": {
 		"ft": 32768,
@@ -2172,7 +2204,7 @@
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
-		"ma": 1,
+		"ma": 0,
 		"oA": 0,
 		"oAP": "\/style.css",
 		"oF": 2,

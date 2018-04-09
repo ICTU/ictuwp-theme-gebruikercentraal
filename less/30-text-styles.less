@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.10.3
-// @desc.   Bugfixes voor NZMZ en w.v.t.t.k.
+// @version 3.10.5
+// @desc.   CSS bugs: image hoogte important en achtergrondplaatje bij nzmz.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -238,44 +238,43 @@
       }
     }
 
-    .good-example,
-    .bad-example {
-      position: relative;
-      
-      &:after {
-        content: ' ';
-        color: @wit;
-        text-indent: 25px;
-        display: block;
-        border-radius: 8px;
-        background-color: @mess_ok_color;
-        position: absolute;
-        top: 4px;
-        right: 4px;
-        background-repeat: no-repeat;
-        background-position: -10px center;
-        background-size: 75% 75%;
-        padding-right: 5px;
-      }      
-    }
+		.good-example,
+		.bad-example {
+			position: relative;
+			
+			&:after {
+				content: ' ';
+				color: @wit;
+				text-indent: 25px;
+				display: block;
+				border-radius: 8px;
+				background-color: @mess_ok_color;
+				position: absolute;
+				top: 4px;
+				right: 4px;
+				background-repeat: no-repeat;
+				background-position: 4px center;
+				background-size: 20px 20px;
+				padding-right: 5px;
+			}      
+		}
 
-    .good-example {
-      &:after {
-        content: 'maar zo';
-        background-color: @mess_ok_color;
-        background-image: url('images/icon-circle-check.svg');
-        background-position: -20px center;
-      }
-    }
-    .bad-example {
-      &:after {
-        content: 'niet zo';
-        background-color: @mess_error_color;
-        background-image: url('images/icon-circle-error.svg');
-        background-position: -15px center;
-        text-indent: 24px;
-      }
-    }
+		.good-example {
+			&:after {
+				content: 'maar zo';
+				background-color: @mess_ok_color;
+				background-image: url('images/icon-circle-check.svg');
+				background-position: 4px center;
+			}
+		}
+		.bad-example {
+			&:after {
+				content: 'niet zo';
+				background-color: @mess_error_color;
+				background-image: url('images/icon-circle-error.svg');
+				text-indent: 24px;
+			}
+		}
     
   }
   
