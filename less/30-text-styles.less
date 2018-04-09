@@ -8,7 +8,7 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.10.5
+// @version 3.10.6
 // @desc.   CSS bugs: image hoogte important en achtergrondplaatje bij nzmz.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
@@ -180,9 +180,12 @@
     overflow: hidden;
     width: 100%;
     margin-bottom: 1em;
+    
     @media only screen and (min-width: @break_tablet ) {
       background: @light_gray;
       display: flex;
+      padding-top: .5em;
+      padding-bottom: .5em;
     }    
     
     .wp-caption-text {
@@ -219,7 +222,7 @@
         max-width: 49% !important;
         width: 49%;
         flex: 1;
-        margin: 1% .5% 1% .5%;
+        margin: 0 .5% 0 .5%;
       }
     }
 
@@ -253,7 +256,7 @@
 				top: 4px;
 				right: 4px;
 				background-repeat: no-repeat;
-				background-position: 4px center;
+				background-position: 3px center;
 				background-size: 20px 20px;
 				padding-right: 5px;
 			}      
