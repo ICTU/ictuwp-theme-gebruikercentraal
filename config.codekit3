@@ -7,7 +7,7 @@
 		"uuidString": "F739CC51-1ABE-4F0E-A0E2-DDC4D4432249"
 		}
 	],
-"creatorBuild": "26330",
+"creatorBuild": "26680",
 "files": {
 	"\/.gitignore": {
 		"cB": 0,
@@ -699,6 +699,7 @@
 	"\/images\/gebroken-glas.jpg": {
 		"ft": 16384,
 		"iS": 49952,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/images\/gebroken-glas.jpg",
 		"oF": 0,
@@ -784,6 +785,7 @@
 	"\/images\/header.jpg": {
 		"ft": 16384,
 		"iS": 600808,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/images\/header.jpg",
 		"oF": 0,
@@ -794,6 +796,7 @@
 	"\/images\/high-res.jpg": {
 		"ft": 16384,
 		"iS": 14174,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/images\/high-res.jpg",
 		"oF": 0,
@@ -1336,6 +1339,7 @@
 	"\/images\/low-res.jpg": {
 		"ft": 16384,
 		"iS": 5937,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/images\/low-res.jpg",
 		"oF": 0,
@@ -1346,6 +1350,7 @@
 	"\/images\/med-res.jpg": {
 		"ft": 16384,
 		"iS": 10577,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/images\/med-res.jpg",
 		"oF": 0,
@@ -2246,6 +2251,7 @@
 	"\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/assets\/gebruiker-centraal-logo.jpg": {
 		"ft": 16384,
 		"iS": 5183,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/assets\/gebruiker-centraal-logo.jpg",
 		"oF": 0,
@@ -2263,6 +2269,7 @@
 	"\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/screenshot.jpg": {
 		"ft": 16384,
 		"iS": 20591,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/screenshot.jpg",
 		"oF": 0,
@@ -2322,6 +2329,7 @@
 	"\/mailing-templates\/gebruikercentraal-v2\/assets\/gebruiker-centraal-logo.jpg": {
 		"ft": 16384,
 		"iS": 5183,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/mailing-templates\/gebruikercentraal-v2\/assets\/gebruiker-centraal-logo.jpg",
 		"oF": 0,
@@ -2350,6 +2358,7 @@
 	"\/mailing-templates\/gebruikercentraal-v2\/screenshot.jpg": {
 		"ft": 16384,
 		"iS": 20591,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/mailing-templates\/gebruikercentraal-v2\/screenshot.jpg",
 		"oF": 0,
@@ -2395,6 +2404,7 @@
 	"\/mailing-templates\/gebruikercentraal\/images\/header-html-mail-gebruiker-centraal.jpg": {
 		"ft": 16384,
 		"iS": 6125,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/mailing-templates\/gebruikercentraal\/images\/header-html-mail-gebruiker-centraal.jpg",
 		"oF": 0,
@@ -2423,6 +2433,7 @@
 	"\/mailing-templates\/gebruikercentraal\/screenshot.jpg": {
 		"ft": 16384,
 		"iS": 4055,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/mailing-templates\/gebruikercentraal\/screenshot.jpg",
 		"oF": 0,
@@ -3273,7 +3284,8 @@
 	"creationDate": 502823265,
 	"displayValue": "ICTU Gebruiker Centraal",
 	"displayValueWasSetByUser": 1,
-	"iconImageName": "\/images\/meisje-gebruiker-centraal.png"
+	"iconImageName": "\/images\/apple-touch-icon-144x144-precomposed.png",
+	"iconImageWasSetByUser": 0
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -5076,6 +5088,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
+		"outputFormat": 0,
 		"quality": 100
 		},
 	"languageDefaultsJS": {

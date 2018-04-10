@@ -90,7 +90,7 @@ class gc_actieteam_widget extends WP_Widget {
 
   }
   else {
-    echo 'de ACF custom fields plugin is niet actief.';
+    echo ACF_PLUGIN_NOT_ACTIVE_WARNING;
   }
 
 
@@ -195,7 +195,7 @@ $comma_separated = maybe_serialize( $actieteamleden_temp );
 
   }
   else {
-    echo 'de ACF custom fields plugin is niet actief.';
+    echo ACF_PLUGIN_NOT_ACTIVE_WARNING;
   }
     
     

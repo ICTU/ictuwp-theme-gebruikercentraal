@@ -48,7 +48,7 @@ function gc_wbvb_show_related_content() {
         endif; 
     }
     else {
-      echo 'de ACF custom fields plugin is niet actief.';
+	    echo ACF_PLUGIN_NOT_ACTIVE_WARNING;
     }
 
 

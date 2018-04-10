@@ -24,7 +24,7 @@ require_once( get_template_directory() . '/lib/init.php' );
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
 define( 'CHILD_THEME_VERSION', '3.10.6' );
-define( 'CHILD_THEME_DESCRIPTION', "3.10.6 - CSS bugs: image hoogte important en achtergrondplaatje bij nzmz." );
+define( 'CHILD_THEME_DESCRIPTION', "3.10.6	 - CSS bugs: image hoogte important en achtergrondplaatje bij nzmz." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 
@@ -65,6 +65,11 @@ define( 'GC_KLANTCONTACT_BEELDEN_CPT', 'beeld' );
 define( 'GC_KLANTCONTACT_BRIEF_CPT', 'brief' );
 define( 'GC_TAX_LICENTIE', 'licentie' );
 define( 'GC_TAX_ORGANISATIE', 'organisatie' );
+
+
+define( 'ACF_PLUGIN_NOT_ACTIVE_WARNING', '<p style="position: absolute; top: 3em; left: 3em; display: block; padding: .5em; background: yellow; color: black;">de ACF custom fields plugin is niet actief.</p>' );
+
+
 
 //========================================================================================================
 
@@ -242,6 +247,7 @@ add_action( 'genesis_after_header', 'genesis_do_breadcrumbs' );
 
 //* Modify breadcrumb arguments.
 add_filter( 'genesis_breadcrumb_args', 'gc_wbvb_breadcrumb_args' );
+
 function gc_wbvb_breadcrumb_args( $args ) {
   
   $separator = '<span class="separator">&nbsp;</span>';
@@ -262,7 +268,7 @@ function gc_wbvb_breadcrumb_args( $args ) {
 
   }
   else {
-    echo 'de ACF custom fields plugin is niet actief.';
+    echo ACF_PLUGIN_NOT_ACTIVE_WARNING;
   }
 
 	$args['home']                     = __( "Home", 'gebruikercentraal' );
@@ -629,8 +635,8 @@ function gc_wbvb_check_actieteamlid() {
         
         
         if ( $author_id == $acf_userid ) {
-        
-          if( get_field('actieteampagina_link', 'option') ) {
+
+          if( function_exists( 'get_field' ) && get_field('actieteampagina_link', 'option') ) {
             $auteursoverzichtpagina_url   = get_field('actieteampagina_link', 'option');
             $auteursoverzichtpagina_start = '<a href="' . $auteursoverzichtpagina_url . '" class="cta">' ;
             $auteursoverzichtpagina_end   = '</a>';
@@ -944,11 +950,17 @@ function gc_wbvb_add_beeldbank_foto_css() {
     WBVB_THEMEFOLDER . '/blogberichten.css'
   );
 
-  $BLOGBERICHTEN_CSS  = '';
-  $countertje         = 0;
+  $BLOGBERICHTEN_CSS  					= '';
+  $countertje         					= 0;
+  $brief_page_overview          = '';
+  $beelden_page_overview        = '';
 
-  $brief_page_overview          = get_field('brief_page_overview', 'option');
-  $beelden_page_overview        = get_field('beelden_page_overview', 'option');
+  if ( function_exists( 'get_field' ) ) {
+	
+	  $brief_page_overview        = get_field('brief_page_overview', 'option');
+	  $beelden_page_overview      = get_field('beelden_page_overview', 'option');
+
+	}
   
   $post_type = GC_KLANTCONTACT_BEELDEN_CPT;
   if ( $brief_page_overview == $post->ID ) {
@@ -975,7 +987,7 @@ function gc_wbvb_add_beeldbank_foto_css() {
       $theID        = 'featured_image_post_' . $getid;
       $the_image_ID = 'image_' . $theID;
   
-    	if ( GC_KLANTCONTACT_BEELDEN_CPT == get_post_type( $getid ) ) {
+    	if ( function_exists( 'get_field' ) && GC_KLANTCONTACT_BEELDEN_CPT == get_post_type( $getid ) ) {
 
     		$attachment     = get_field('beeld_foto', $getid );
     		if ( isset( $attachment['ID'] ) ) {
@@ -1074,7 +1086,7 @@ function gc_wbvb_add_blog_archive_css() {
       }
       else {
 
-      	if ( GC_KLANTCONTACT_BEELDEN_CPT == get_post_type( $getid ) ) {
+	    	if ( function_exists( 'get_field' ) && GC_KLANTCONTACT_BEELDEN_CPT == get_post_type( $getid )  ) {
 
       		$attachment     = get_field('beeld_foto', $getid );
       		if ( isset( $attachment['ID'] ) ) {
@@ -1595,7 +1607,7 @@ function gc_wbvb_event_get_programma() {
     }    
   }
   else {
-    echo 'de ACF custom fields plugin is niet actief.';
+    echo ACF_PLUGIN_NOT_ACTIVE_WARNING;
   }
 
   
@@ -1668,7 +1680,7 @@ function gc_wbvb_post_get_downloads() {
     } 
   } 
   else {
-    echo 'de ACF custom fields plugin is niet actief.';
+    echo ACF_PLUGIN_NOT_ACTIVE_WARNING;
   }
    
   return $return;
@@ -1716,7 +1728,13 @@ function gc_wbvb_beelden_brieven_show_connected_files() {
   
         }
         else {
-      		$attachment     = get_field('beeld_foto', $p->ID );
+
+      		$attachment     = '';
+
+		    	if ( function_exists( 'get_field' ) ) {
+	      		$attachment     = get_field('beeld_foto', $p->ID );
+					}
+						      		
       		if ( isset( $attachment['ID'] ) ) {
 
             // thumbnail
@@ -1741,7 +1759,7 @@ function gc_wbvb_beelden_brieven_show_connected_files() {
     } 
   } 
   else {
-    echo 'de ACF custom fields plugin is niet actief.';
+    echo ACF_PLUGIN_NOT_ACTIVE_WARNING;
   }
    
   echo $return;
@@ -1782,7 +1800,7 @@ function gc_wbvb_post_get_links() {
     }
   }
   else {
-    echo 'de ACF custom fields plugin is niet actief.';
+    echo ACF_PLUGIN_NOT_ACTIVE_WARNING;
   }
   return $return;
 }
@@ -2204,22 +2222,24 @@ function wbvb_modernista_breadcrumb_add_newspage( $crumb, $args ) {
   $span_between_start = '<span itemprop="name">';  
   $span_before_end    = '</span>';  
   
-	if ( is_singular( GC_KLANTCONTACT_BEELDEN_CPT ) && ( get_field('beelden_page_overview', 'option') ) ) {
-
-		$actueelpageid    = get_field('beelden_page_overview', 'option');
-		$actueelpagetitle = get_the_title( $actueelpageid );
-		
-		if ( $actueelpageid ) {
-      $crumb = gc_wbvb_breadcrumbstring( $actueelpageid, $args );
+	if ( function_exists( 'get_field' ) ) {
+		if ( is_singular( GC_KLANTCONTACT_BEELDEN_CPT ) && ( get_field('beelden_page_overview', 'option') ) ) {
+	
+			$actueelpageid    = get_field('beelden_page_overview', 'option');
+			$actueelpagetitle = get_the_title( $actueelpageid );
+			
+			if ( $actueelpageid ) {
+	      $crumb = gc_wbvb_breadcrumbstring( $actueelpageid, $args );
+			}
 		}
-	}
-
-	if ( is_singular( GC_KLANTCONTACT_BRIEF_CPT ) && ( get_field('brief_page_overview', 'option') ) ) {
-
-		$currentpageID  = get_field('brief_page_overview', 'option');
-
-		if ( $currentpageID ) {
-      $crumb = gc_wbvb_breadcrumbstring( $currentpageID, $args );
+	
+		if ( is_singular( GC_KLANTCONTACT_BRIEF_CPT ) && ( get_field('brief_page_overview', 'option') ) ) {
+	
+			$currentpageID  = get_field('brief_page_overview', 'option');
+	
+			if ( $currentpageID ) {
+	      $crumb = gc_wbvb_breadcrumbstring( $currentpageID, $args );
+			}
 		}
 	}
 
@@ -2304,9 +2324,17 @@ function gc_wbvb_check_page_style() {
 
     global $post;
     global $wp_query;
-  
-    $brief_page_overview          = get_field('brief_page_overview', 'option');
-    $beelden_page_overview        = get_field('beelden_page_overview', 'option');
+
+	  $brief_page_overview          = '';
+	  $beelden_page_overview        = '';
+	
+	  if ( function_exists( 'get_field' ) ) {
+	
+		  $brief_page_overview        = get_field('brief_page_overview', 'option');
+		  $beelden_page_overview      = get_field('beelden_page_overview', 'option');
+	
+	  }
+
 
     if ( ( 'page'    == get_post_type() ) &&  ( $brief_page_overview == $post->ID ||  $beelden_page_overview == $post->ID ) ) {
       add_action( 'genesis_entry_content', 'gc_wbvb_page_add_archive_for_cpt', 12 );
@@ -2322,8 +2350,15 @@ function gc_wbvb_page_add_archive_for_cpt() {
 //  global $post;
   global $wp_query;
 
-  $brief_page_overview          = get_field('brief_page_overview', 'option');
-  $beelden_page_overview        = get_field('beelden_page_overview', 'option');
+  $brief_page_overview          = '';
+  $beelden_page_overview        = '';
+
+  if ( function_exists( 'get_field' ) ) {
+
+	  $brief_page_overview        = get_field('brief_page_overview', 'option');
+	  $beelden_page_overview      = get_field('beelden_page_overview', 'option');
+
+  }
 
   if ( 'page'    == get_post_type() ) {
 

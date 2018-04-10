@@ -282,7 +282,7 @@ function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = 
 
     }
     else {
-      $output = 'de ACF custom fields plugin is niet actief.';
+			$output =  ACF_PLUGIN_NOT_ACTIVE_WARNING;
     }
 
 
