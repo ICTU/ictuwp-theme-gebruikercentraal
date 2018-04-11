@@ -7,13 +7,11 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.9.5
-// @desc.   CSS-bugs en verbeteringen. Event-widget netter gemaakt.
+// @version 3.11.2
+// @desc.   Betere styling voor template homepage. Mogelijkheid andere content op homepage te zetten.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
-
-//* Template Name: GC - Pagina met blog-artikelen
 
 add_filter('genesis_attr_entry-header', 'gc_wbvb_add_wrap_class');
 add_filter('genesis_attr_entry-content', 'gc_wbvb_add_wrap_class');
@@ -24,24 +22,6 @@ add_filter('genesis_attr_entry-footer', 'gc_wbvb_add_wrap_class');
 
 showdebug(__FILE__, '/');
 
-  
-if ( is_home() || is_front_page() ) {
-  
-  remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
-  remove_action( 'genesis_after_header', 'genesis_do_breadcrumbs' );
-  remove_action( 'genesis_loop', 'genesis_do_loop' );
-  
-  add_action( 'genesis_loop', 'gc_wbvb_home_manifest', 1 );
-  add_action( 'wp_enqueue_scripts', 'gc_wbvb_add_berichten_widget_css' );
-  add_action( 'genesis_after_header', 'gc_wbvb_home_append_to_header', 11 );
-  
-}
-elseif ( is_archive() ) {
-  
-  remove_action( 'genesis_loop', 'genesis_do_loop' );
-  add_action( 'genesis_loop', 'gc_wbvb_archive_loop' );
-  
-}
 
 genesis();
 

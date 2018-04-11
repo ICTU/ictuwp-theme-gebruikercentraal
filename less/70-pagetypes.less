@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.10.1
-// @desc.   Bugfixes voor get_field, create_function en 404-pagina.
+// @version 3.11.2
+// @desc.   Betere styling voor template homepage. Mogelijkheid andere content op homepage te zetten.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 // ================================================================================
@@ -221,7 +221,7 @@ body {
   .backgroundsettings(@content_bg_color, '.site-inner');
 }
 
-body.home,
+.page-template-page_home,
 .archive,
 .category,
 .page-template-page_evenementen,
@@ -288,7 +288,9 @@ body.home,
   }  
 }
 
-.home {
+
+
+.page-template-page_home {
   .breadcrumb {
     &:after {
       content: ' ';
@@ -697,7 +699,6 @@ body.home,
           }   
         }      
       }      
-       
     }
     
     .home {

@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.11.1
-// @desc.   Optie om zoekform in menubalk uit te zetten. ACF waarschuwing toegevoegd en ACF checks verbeterd.
+// @version 3.11.2
+// @desc.   Betere styling voor template homepage. Mogelijkheid andere content op homepage te zetten.
 
 
 $samenvattingverplicht = false;
