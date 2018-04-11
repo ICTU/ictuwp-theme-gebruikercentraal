@@ -552,224 +552,248 @@ if ( $samenvattingverplicht ) {
     //====================================================================================================
     // Mogelijkheid om het actieteam samen te stellen 
     // via admin > weergave > Theme-instelling
-  acf_add_local_field_group(array (
-    'key' => 'group_56f9ba1b8e7d5',
-    'title' => 'Actieteam',
-    'fields' => array (
-
-		array (
-			'key' => 'field_TtPaXjcfYKXuU',
-			'label' => 'Auteursoverzicht',
-			'name' => 'auteursoverzichtpagina_link',
-			'type' => 'page_link',
-			'instructions' => 'Selecteer de pagina met het overzicht van alle auteurs. Deze pagina wordt gebruikt in de breadcrumb.',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'post_type' => array (
-				0 => 'page',
-			),
-			'taxonomy' => array (
-			),
-			'allow_null' => 1,
-			'multiple' => 0,
-		),      
-		array (
-			'key' => 'field_5756a88c109a8',
-			'label' => 'Link naar actieteampagina',
-			'name' => 'actieteampagina_link',
-			'type' => 'page_link',
-			'instructions' => 'Selecteer de pagina met het actieteamoverzicht.',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array (
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'post_type' => array (
-				0 => 'page',
-			),
-			'taxonomy' => array (
-			),
-			'allow_null' => 1,
-			'multiple' => 0,
-		),      
-      array (
-        'key' => 'field_56f9ba32641f5',
-        'label' => 'Actieteamleden',
-        'name' => 'actieteamleden',
-        'type' => 'repeater',
-        'instructions' => '',
-        'required' => 0,
-        'conditional_logic' => 0,
-        'wrapper' => array (
-          'width' => '',
-          'class' => '',
-          'id' => '',
-        ),
-        'collapsed' => 'field_56f9ba50641f6',
-        'min' => '',
-        'max' => '',
-        'layout' => 'table',
-        'button_label' => 'Nieuwe regel',
-        'sub_fields' => array (
-          array (
-            'key' => 'field_56f9ba50641f6',
-            'label' => 'Actielid',
-            'name' => 'actielid',
-            'type' => 'user',
-            'instructions' => '',
-            'required' => 0,
-            'conditional_logic' => 0,
-            'wrapper' => array (
-              'width' => '',
-              'class' => '',
-              'id' => '',
-            ),
-            'role' => '',
-            'allow_null' => 0,
-            'multiple' => 0,
-          ),
-        ),
-      ),
-    ),
-    'location' => array (
-      array (
-        array (
-          'param' => 'options_page',
-          'operator' => '==',
-          'value' => 'instellingen',
-        ),
-      ),
-    ),
-    'menu_order' => 0,
-    'position' => 'normal',
-    'style' => 'default',
-    'label_placement' => 'top',
-    'instruction_placement' => 'label',
-    'hide_on_screen' => '',
-    'active' => 1,
-    'description' => '',
-  ));
+	  acf_add_local_field_group(array (
+	    'key' => 'group_56f9ba1b8e7d5',
+	    'title' => 'Theme-instellingen',
+	    'fields' => array (
+	
+				array(
+					'key' => 'field_5acce486d19d5',
+					'label' => 'Toon zoekformulier in het menu',
+					'name' => 'toon_zoekformulier_in_het_menu',
+					'type' => 'radio',
+					'instructions' => '',
+					'required' => 1,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'choices' => array(
+						'ja' => 'Ja, toon zoekformulier',
+						'nee' => 'Nee, verberg zoekformulier',
+					),
+					'allow_null' => 0,
+					'other_choice' => 0,
+					'save_other_choice' => 0,
+					'default_value' => 'ja',
+					'layout' => 'vertical',
+					'return_format' => 'value',
+				),
+		
+				array (
+					'key' => 'field_TtPaXjcfYKXuU',
+					'label' => 'Auteursoverzicht',
+					'name' => 'auteursoverzichtpagina_link',
+					'type' => 'page_link',
+					'instructions' => 'Selecteer de pagina met het overzicht van alle auteurs. Deze pagina wordt gebruikt in de breadcrumb.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array (
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'post_type' => array (
+						0 => 'page',
+					),
+					'taxonomy' => array (
+					),
+					'allow_null' => 1,
+					'multiple' => 0,
+				),      
+				array (
+					'key' => 'field_5756a88c109a8',
+					'label' => 'Link naar actieteampagina',
+					'name' => 'actieteampagina_link',
+					'type' => 'page_link',
+					'instructions' => 'Selecteer de pagina met het actieteamoverzicht.',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array (
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'post_type' => array (
+						0 => 'page',
+					),
+					'taxonomy' => array (
+					),
+					'allow_null' => 1,
+					'multiple' => 0,
+				),      
+	      array (
+	        'key' => 'field_56f9ba32641f5',
+	        'label' => 'Actieteamleden',
+	        'name' => 'actieteamleden',
+	        'type' => 'repeater',
+	        'instructions' => '',
+	        'required' => 0,
+	        'conditional_logic' => 0,
+	        'wrapper' => array (
+	          'width' => '',
+	          'class' => '',
+	          'id' => '',
+	        ),
+	        'collapsed' => 'field_56f9ba50641f6',
+	        'min' => '',
+	        'max' => '',
+	        'layout' => 'table',
+	        'button_label' => 'Nieuwe regel',
+	        'sub_fields' => array (
+	          array (
+	            'key' => 'field_56f9ba50641f6',
+	            'label' => 'Actielid',
+	            'name' => 'actielid',
+	            'type' => 'user',
+	            'instructions' => '',
+	            'required' => 0,
+	            'conditional_logic' => 0,
+	            'wrapper' => array (
+	              'width' => '',
+	              'class' => '',
+	              'id' => '',
+	            ),
+	            'role' => '',
+	            'allow_null' => 0,
+	            'multiple' => 0,
+	          ),
+	        ),
+	      ),
+	    ),
+	    'location' => array (
+	      array (
+	        array (
+	          'param' => 'options_page',
+	          'operator' => '==',
+	          'value' => 'instellingen',
+	        ),
+	      ),
+	    ),
+	    'menu_order' => 0,
+	    'position' => 'normal',
+	    'style' => 'default',
+	    'label_placement' => 'top',
+	    'instruction_placement' => 'label',
+	    'hide_on_screen' => '',
+	    'active' => 1,
+	    'description' => '',
+	  ));
   
     //========================================================================================================
-    
-  
-  acf_add_local_field_group(array (
-    'key' => 'group_56f9c31e473af',
-    'title' => 'Auteursinfo (foto en functiebeschrijving)',
-    'fields' => array (
-      array (
-        'key' => 'field_56f9c332b8b28',
-        'label' => 'Auteursfoto',
-        'name' => 'auteursfoto',
-        'type' => 'image',
-        'instructions' => '',
-        'required' => 0,
-        'conditional_logic' => 0,
-        'wrapper' => array (
-          'width' => '',
-          'class' => '',
-          'id' => '',
-        ),
-        'return_format' => 'array',
-        'preview_size' => 'thumbnail',
-        'library' => 'all',
-        'min_width' => '',
-        'min_height' => '',
-        'min_size' => '',
-        'max_width' => '',
-        'max_height' => '',
-        'max_size' => '',
-        'mime_types' => '',
-      ),
-      array (
-        'key' => 'field_56fbcffa55f14',
-        'label' => 'Functiebeschrijving',
-        'name' => 'functiebeschrijving',
-        'type' => 'textarea',
-        'instructions' => 'Deze wordt getoond naast de naam van een actieteamlid. Beperk deze tot twee regels, of tien woorden.',
-        'required' => 0,
-        'conditional_logic' => 0,
-        'wrapper' => array (
-          'width' => '',
-          'class' => '',
-          'id' => '',
-        ),
-        'default_value' => '',
-        'placeholder' => '',
-        'maxlength' => '',
-        'rows' => 2,
-        'new_lines' => 'br',
-        'readonly' => 0,
-        'disabled' => 0,
-      ),
-      array (
 
-          'key' => 'field_5718dd1d6340d',
-          'label' => 'Publiek mailadres',
-          'name' => 'publiek_mailadres',
-          'type' => 'email',
-          'instructions' => '(optioneel) op dit adres mag deze gebruiker gemaild worden',
-          'required' => 0,
-          'conditional_logic' => 0,
-          'wrapper' => array (
-            'width' => '',
-            'class' => '',
-            'id' => '',
-          ),
-          'default_value' => '',
-          'placeholder' => '',
-          'prepend' => '',
-          'append' => '',
-
-
-      ),
-      array (
-
-          'key' => 'field_rdQRmbVD6WhuF',
-          'label' => 'Publiek telefoonnumer',
-          'name' => 'publiek_telefoonnummer',
-          'type' => 'text',
-          'instructions' => '(optioneel) op dit adres mag deze gebruiker gebeld worden',
-          'required' => 0,
-          'conditional_logic' => 0,
-          'wrapper' => array (
-            'width' => '',
-            'class' => '',
-            'id' => '',
-          ),
-          'default_value' => '',
-          'placeholder' => '',
-          'prepend' => '',
-          'append' => '',
-
-
-      ),
-    ),
-    'location' => array (
-      array (
-        array (
-          'param' => 'user_form',
-          'operator' => '==',
-          'value' => 'all',
-        ),
-      ),
-    ),
-    'menu_order' => 0,
-    'position' => 'acf_after_title',
-    'style' => 'default',
-    'label_placement' => 'top',
-    'instruction_placement' => 'label',
-    'hide_on_screen' => '',
-    'active' => 1,
-    'description' => '',
-  ));
+	  acf_add_local_field_group(array (
+	    'key' => 'group_56f9c31e473af',
+	    'title' => 'Auteursinfo (foto en functiebeschrijving)',
+	    'fields' => array (
+	      array (
+	        'key' => 'field_56f9c332b8b28',
+	        'label' => 'Auteursfoto',
+	        'name' => 'auteursfoto',
+	        'type' => 'image',
+	        'instructions' => '',
+	        'required' => 0,
+	        'conditional_logic' => 0,
+	        'wrapper' => array (
+	          'width' => '',
+	          'class' => '',
+	          'id' => '',
+	        ),
+	        'return_format' => 'array',
+	        'preview_size' => 'thumbnail',
+	        'library' => 'all',
+	        'min_width' => '',
+	        'min_height' => '',
+	        'min_size' => '',
+	        'max_width' => '',
+	        'max_height' => '',
+	        'max_size' => '',
+	        'mime_types' => '',
+	      ),
+	      array (
+	        'key' => 'field_56fbcffa55f14',
+	        'label' => 'Functiebeschrijving',
+	        'name' => 'functiebeschrijving',
+	        'type' => 'textarea',
+	        'instructions' => 'Deze wordt getoond naast de naam van een actieteamlid. Beperk deze tot twee regels, of tien woorden.',
+	        'required' => 0,
+	        'conditional_logic' => 0,
+	        'wrapper' => array (
+	          'width' => '',
+	          'class' => '',
+	          'id' => '',
+	        ),
+	        'default_value' => '',
+	        'placeholder' => '',
+	        'maxlength' => '',
+	        'rows' => 2,
+	        'new_lines' => 'br',
+	        'readonly' => 0,
+	        'disabled' => 0,
+	      ),
+	      array (
+	
+	          'key' => 'field_5718dd1d6340d',
+	          'label' => 'Publiek mailadres',
+	          'name' => 'publiek_mailadres',
+	          'type' => 'email',
+	          'instructions' => '(optioneel) op dit adres mag deze gebruiker gemaild worden',
+	          'required' => 0,
+	          'conditional_logic' => 0,
+	          'wrapper' => array (
+	            'width' => '',
+	            'class' => '',
+	            'id' => '',
+	          ),
+	          'default_value' => '',
+	          'placeholder' => '',
+	          'prepend' => '',
+	          'append' => '',
+	
+	
+	      ),
+	      array (
+	
+	          'key' => 'field_rdQRmbVD6WhuF',
+	          'label' => 'Publiek telefoonnumer',
+	          'name' => 'publiek_telefoonnummer',
+	          'type' => 'text',
+	          'instructions' => '(optioneel) op dit adres mag deze gebruiker gebeld worden',
+	          'required' => 0,
+	          'conditional_logic' => 0,
+	          'wrapper' => array (
+	            'width' => '',
+	            'class' => '',
+	            'id' => '',
+	          ),
+	          'default_value' => '',
+	          'placeholder' => '',
+	          'prepend' => '',
+	          'append' => '',
+	
+	
+	      ),
+	    ),
+	    'location' => array (
+	      array (
+	        array (
+	          'param' => 'user_form',
+	          'operator' => '==',
+	          'value' => 'all',
+	        ),
+	      ),
+	    ),
+	    'menu_order' => 0,
+	    'position' => 'acf_after_title',
+	    'style' => 'default',
+	    'label_placement' => 'top',
+	    'instruction_placement' => 'label',
+	    'hide_on_screen' => '',
+	    'active' => 1,
+	    'description' => '',
+	  ));
 
   acf_add_local_field_group(array (
   	'key' => 'group_5746c72e50d7b',

@@ -253,9 +253,19 @@ function gc_wbvb_breadcrumb_args( $args ) {
   $separator = '<span class="separator">&nbsp;</span>';
 
   $auteursoverzichtpagina_start = '';
-  $auteursoverzichtpagina_end   = $separator;
+	$auteursoverzichtpagina_end   = $separator;
+	$showsearchform 							= true;
   
   if ( function_exists( 'get_field' ) ) {
+
+    $showsearchform   						= get_field('toon_zoekformulier_in_het_menu', 'option');
+    
+    if ( 'nee' == $showsearchform ) {
+      $showsearchform   					= false;
+    }
+    else {
+      $showsearchform   					= true;
+    }
 
     if( get_field('auteursoverzichtpagina_link', 'option') ):
       $auteursoverzichtpagina_url   = get_field('auteursoverzichtpagina_link', 'option');
@@ -275,7 +285,12 @@ function gc_wbvb_breadcrumb_args( $args ) {
 	$args['sep']                      = $separator;
 	$args['list_sep']                 = ', '; // Genesis 1.5 and later
 	$args['prefix']                   = '<div class="breadcrumb"><div class="wrap"><nav class="breadlist">';
-	$args['suffix']                   = '</nav>' . get_search_form(false) . '</div></div>';
+	if ( $showsearchform ) {
+		$args['suffix']                 = '</nav>' . get_search_form(false) . '</div></div>';
+	}
+	else {
+		$args['suffix']                 = '</nav></div></div>';
+	}
 	$args['heirarchial_attachments']  = true; // Genesis 1.5 and later
 	$args['heirarchial_categories']   = true; // Genesis 1.5 and later
 	$args['display']                  = true;
@@ -2432,7 +2447,5 @@ function gc_wbvb_remove_empty_paragraphs($content) {
 
 add_filter('the_content', 'gc_wbvb_remove_empty_paragraphs', 99999 );
 
-
 //========================================================================================================
-
 
