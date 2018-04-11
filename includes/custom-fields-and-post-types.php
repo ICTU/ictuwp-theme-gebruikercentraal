@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.10.1
-// @desc.   Bugfixes voor get_field, create_function en 404-pagina.
+// @version 3.11.1
+// @desc.   Optie om zoekform in menubalk uit te zetten. ACF waarschuwing toegevoegd en ACF checks verbeterd.
 
 
 $samenvattingverplicht = false;

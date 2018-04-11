@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.9.1
-// @desc.   Toevoegen posttypes voor klantcontact-in-beeld.
+// @version 3.11.1
+// @desc.   Optie om zoekform in menubalk uit te zetten. ACF waarschuwing toegevoegd en ACF checks verbeterd.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 

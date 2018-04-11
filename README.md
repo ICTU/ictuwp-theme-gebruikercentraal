@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-3.10.6
+3.11.1
 
 ## Version history
+* 3.11.1 - Optie om zoekform in menubalk uit te zetten. ACF waarschuwing toegevoegd en ACF checks verbeterd.
 * 3.10.6 - CSS bugs: image hoogte important en achtergrondplaatje bij nzmz.
 * 3.10.4 - Vertalingen bijgewerkt.
 * 3.10.2 - Styling voor 'niet zo, maar zo' images op richtlijnen-pagina.
