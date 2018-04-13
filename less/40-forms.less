@@ -8,7 +8,7 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.11.3a
+// @version 3.11.3
 // @desc.   Styling voor gravity forms.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
@@ -454,7 +454,18 @@
     background: @button-normal url('images/icon-knop-groen-inverse.png') no-repeat left center;
     background-image: url('images/icon-knop-groen-inverse.svg'), none;
 		
+		& + input[type="button"].gform_next_button {
+			float: right;
+			clear: right;
+		}
+
 	}
+	.gform_save_link {
+		display: block;
+		clear: both;
+		margin-top: 1em;
+	}
+
 
     
 }
