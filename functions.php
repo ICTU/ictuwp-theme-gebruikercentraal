@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.11.2
-// @desc.   Betere styling voor template homepage. Mogelijkheid andere content op homepage te zetten.
+// @version 3.11.3
+// @desc.   Styling voor gravity forms.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.11.2' );
-define( 'CHILD_THEME_DESCRIPTION', "3.11.2	 - Betere styling voor template homepage. Mogelijkheid andere content op homepage te zetten." );
+define( 'CHILD_THEME_VERSION', '3.11.3' );
+define( 'CHILD_THEME_DESCRIPTION', "3.11.3	 - Styling voor gravity forms." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 

@@ -6,8 +6,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.9.6
-// @desc.   CSS voor admin-editor aangepast.
+// @version 3.11.3
+// @desc.   Styling voor gravity forms.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 @import "01-socmed-color-codes.less";              // colors, sizes 
@@ -246,27 +246,27 @@
 
 
 .button-shared() {
-
-  box-shadow: none;
-  color: @wit;
-  cursor: pointer;
-  text-transform: uppercase;
-  width: auto;
-  .inputpadding();
-  border: 2px solid @button-normal;
-  padding: ( @padding / 2 ) ( @padding * 2 ) ( @padding / 2 ) @padding;
-  border-radius: 0;
-  .button-shared-pijltje-1();
-  
-  .button_font_shared();
-  
-  &:hover,
-  &:active,
-  &:focus {
-      color: @button-normal;
-        text-decoration: underline;
-        .button-shared-pijltje-1-hover();
-  }
+	
+	box-shadow: none;
+	color: @wit;
+	cursor: pointer;
+	text-transform: uppercase;
+	width: auto;
+	.inputpadding();
+	border: 2px solid @button-normal;
+	padding: ( @padding / 2 ) ( @padding * 2 ) ( @padding / 2 ) @padding;
+	border-radius: 0;
+	.button-shared-pijltje-1();
+	
+	.button_font_shared();
+	
+	&:hover,
+	&:active,
+	&:focus {
+		color: @button-normal;
+		text-decoration: underline;
+		.button-shared-pijltje-1-hover();
+	}
 }
 
 

@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-3.11.2
+3.11.3
 
 ## Version history
+* 3.11.3 - Styling voor gravity forms.
 * 3.11.2 - Betere styling voor template homepage. Mogelijkheid andere content op homepage te zetten.
 * 3.11.1 - Optie om zoekform in menubalk uit te zetten. ACF waarschuwing toegevoegd en ACF checks verbeterd.
 * 3.10.6 - CSS bugs: image hoogte important en achtergrondplaatje bij nzmz.

@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.9.1
-// @desc.   Toevoegen posttypes voor klantcontact-in-beeld.
+// @version 3.11.3a
+// @desc.   Styling voor gravity forms.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -85,53 +85,48 @@
   
   .sidebar,
   .footer-widgets,
-  .site-header {
-  
-  
-      input[type="text"],
-      input[type="password"],
-      input[type="color"],
-      input[type="date"],
-      input[type="datetime"],
-      input[type="datetime-local"],
-      input[type="email"],
-      input[type="month"],
-      input[type="number"],
-      input[type="range"],
-      input[type="tel"],
-      input[type="time"],
-      input[type="url"],
-      input[type="week"],
-      input[type="search"] {
-        border-color: lighten(@sidebarwidget, 10%);
-      }
-          
-      button,
-      input[type="button"],
-      input[type="reset"],
-      input[type="submit"] {
-        background-color: @button-sidebar-normal;
-        color: @button-sidebar-normal-color;
-        border-color: @button-sidebar-normal;
-//        font-weight: bold;
-//          letter-spacing: 1px;
-
-      .button_font_shared();
-
-  
-        &:hover,
-        &:active,
-        &:focus {
-            color: @txt;
-            border-color: @button-sidebar-normal;
-//              background: transparent url('pijltje-groen.png') no-repeat right center;
-//              background-image: url('images/pijltje-groen.svg'), none;
-        background-color: @wit;
-              text-decoration: none;
-//              font-weight: bold;
-        }
-      }
-  }
+	.site-header {
+		
+		
+		input[type="text"],
+		input[type="password"],
+		input[type="color"],
+		input[type="date"],
+		input[type="datetime"],
+		input[type="datetime-local"],
+		input[type="email"],
+		input[type="month"],
+		input[type="number"],
+		input[type="range"],
+		input[type="tel"],
+		input[type="time"],
+		input[type="url"],
+		input[type="week"],
+		input[type="search"] {
+			border-color: lighten(@sidebarwidget, 10%);
+		}
+		
+		button,
+		input[type="button"],
+		input[type="reset"],
+		input[type="submit"] {
+			background-color: @button-sidebar-normal;
+			color: @button-sidebar-normal-color;
+			border-color: @button-sidebar-normal;
+			
+			.button_font_shared();
+			
+			
+			&:hover,
+			&:active,
+			&:focus {
+				color: @txt;
+				border-color: @button-sidebar-normal;
+				background-color: @wit;
+				text-decoration: none;
+			}
+		}
+	}
   
   
   
@@ -445,5 +440,21 @@
     
   }
   
+  
+  // meuk voor Gravity Forms 
+  .gform_page_footer {
+	  margin-bottom: 1em;
+  }
+  
+
+	input[type="button"].gform_previous_button {
+	  padding-left: ( @padding * 2 );
+	  padding-right: @padding;
+
+    background: @button-normal url('images/icon-knop-groen-inverse.png') no-repeat left center;
+    background-image: url('images/icon-knop-groen-inverse.svg'), none;
+		
+	}
+
     
 }
