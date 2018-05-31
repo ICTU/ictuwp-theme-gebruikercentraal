@@ -12,6 +12,7 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 3.11.4
 
 ## Version history
+* 3.11.5 - Bug removed that caused empty author page.
 * 3.11.4 - Revised Gravity Forms styling.
 * 3.11.2 - Betere styling voor template homepage. Mogelijkheid andere content op homepage te zetten.
 * 3.11.1 - Optie om zoekform in menubalk uit te zetten. ACF waarschuwing toegevoegd en ACF checks verbeterd.

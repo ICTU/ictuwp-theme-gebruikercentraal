@@ -30,6 +30,13 @@
 		"oAP": "\/archive.php",
 		"oF": 0
 		},
+	"\/author.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/author.php",
+		"oF": 0
+		},
 	"\/blogberichten.css": {
 		"aP": 0,
 		"bl": 0,

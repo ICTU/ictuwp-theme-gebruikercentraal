@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.9.1
-// @desc.   Toevoegen posttypes voor klantcontact-in-beeld.
+// @version 3.11.5
+// @desc.   Bug removed that caused empty author page.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
   
   
@@ -135,7 +135,6 @@ function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = 
       $sectiondiv = '<section class="author-box wrap" itemprop="organizer" itemscope="itemscope" itemtype="http://schema.org/Person">';
     }
 
-    
     if ( $default_persoon_plaatje == 'voorbeeld-persoon-2.png' ) {
     	$default_persoon_plaatje = 'voorbeeld-persoon-1.png';
     }
@@ -148,12 +147,7 @@ function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = 
         $acf_userid             = "user_" . $userid;       
 
         $user_info              = get_userdata($userid);
-        
-//        dovardump($user_info);
 
-//        the_author_meta('twitter');
-//        the_author_meta('facebook');
-        
         $gebruikersnaam         = $user_info->display_name;
         $functiebeschrijving    = get_field('functiebeschrijving', $acf_userid);
         $biografie              =( $user_info->description ) ? $user_info->description : '';

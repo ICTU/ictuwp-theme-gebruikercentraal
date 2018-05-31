@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.11.3
-// @desc.   Styling voor gravity forms.
+// @version 3.11.5
+// @desc.   Bug removed that caused empty author page.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.11.3' );
-define( 'CHILD_THEME_DESCRIPTION', "3.11.3	 - Styling voor gravity forms." );
+define( 'CHILD_THEME_VERSION', '3.11.5' );
+define( 'CHILD_THEME_DESCRIPTION', "3.11.5	 - Bug removed that caused empty author page." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 
@@ -955,10 +955,18 @@ function gc_wbvb_add_berichten_widget_css() {
 
 //========================================================================================================
 
+add_action( 'wp_enqueue_scripts', 'gc_wbvb_add_beeldbank_foto_css' ); // sorry, overhead. maar het moet maar
+
 function gc_wbvb_add_beeldbank_foto_css() {
 
   global $imgbreakpoints;
   global $post;
+
+	// bail early. Only use this CSS for beelden & brieven
+	$post_type_check = array( GC_KLANTCONTACT_BEELDEN_CPT, GC_KLANTCONTACT_BRIEF_CPT );
+	if ( ! is_post_type_archive( $post_type_check ) ) {
+		return;
+	}
 
   wp_enqueue_style(
     ID_BLOGBERICHTEN_CSS,
@@ -977,24 +985,23 @@ function gc_wbvb_add_beeldbank_foto_css() {
 
 	}
   
-  $post_type = GC_KLANTCONTACT_BEELDEN_CPT;
+  $mypost_type = GC_KLANTCONTACT_BEELDEN_CPT;
   if ( $brief_page_overview == $post->ID ) {
-    $post_type = GC_KLANTCONTACT_BRIEF_CPT;
+    $mypost_type = GC_KLANTCONTACT_BRIEF_CPT;
   }
 
 	$paged  = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
   $args   = array(
-          'post_type'       => $post_type,
+          'post_type'       => $mypost_type,
           'post_status'     => 'publish',
           'paged'           => $paged
         );
   
-  $wp_query = new WP_Query( $args );
+  $wp_query_css = new WP_Query( $args );
 
-  if ( $wp_query->have_posts() ) : 
-  
-  
-    while ( $wp_query->have_posts() ) : $wp_query->the_post();
+  if ( $wp_query_css->have_posts() ) : 
+	
+    while ( $wp_query_css->have_posts() ) : $wp_query_css->the_post();
   
       // do loop stuff
       $countertje++;
@@ -1003,7 +1010,6 @@ function gc_wbvb_add_beeldbank_foto_css() {
       $the_image_ID = 'image_' . $theID;
   
     	if ( function_exists( 'get_field' ) && GC_KLANTCONTACT_BEELDEN_CPT == get_post_type( $getid ) ) {
-
     		$attachment     = get_field('beeld_foto', $getid );
     		if ( isset( $attachment['ID'] ) ) {
           $image = wp_get_attachment_image_src( $attachment['ID'], 'medium' );
@@ -1014,7 +1020,7 @@ function gc_wbvb_add_beeldbank_foto_css() {
       }
 
       if ( isset( $image[0] ) ) {
-        $BLOGBERICHTEN_CSS .= '#' . $the_image_ID . " { ";
+        $BLOGBERICHTEN_CSS .= "\n" . '#' . $the_image_ID . " { ";
         $BLOGBERICHTEN_CSS .= "background-image: url('" . $image[0] . "'); /* gc_wbvb_add_beeldbank_foto_css */ ";
         $BLOGBERICHTEN_CSS .= "} ";
       }
@@ -1025,6 +1031,9 @@ function gc_wbvb_add_beeldbank_foto_css() {
 
   endif; /** end loop **/
 
+	// reset
+	wp_reset_postdata();
+	wp_reset_query();
 
   wp_add_inline_style( ID_BLOGBERICHTEN_CSS, $BLOGBERICHTEN_CSS );
 
@@ -2330,9 +2339,6 @@ function wbvb_modernista_prev_next_post_nav() {
 
 add_action( 'genesis_before', 'gc_wbvb_check_page_style' );
 
-add_action( 'wp_enqueue_scripts', 'gc_wbvb_add_beeldbank_foto_css' ); // sorry, overhead. maar het moet maar
-
-
 function gc_wbvb_check_page_style() {
 
   if ( ! is_admin() ) {
@@ -2352,6 +2358,7 @@ function gc_wbvb_check_page_style() {
 
 
     if ( ( 'page'    == get_post_type() ) &&  ( $brief_page_overview == $post->ID ||  $beelden_page_overview == $post->ID ) ) {
+	    // FOUT!!!
       add_action( 'genesis_entry_content', 'gc_wbvb_page_add_archive_for_cpt', 12 );
     }
   }
