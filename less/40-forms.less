@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.11.3
-// @desc.   Styling voor gravity forms.
+// @version 3.11.4
+// @desc.   Revised Gravity Forms styling.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -466,6 +466,58 @@
 		margin-top: 1em;
 	}
 
+@rbinputmaxwidth2: 20px;
+@rbinputmaxwidth: ( 2 * @rbinputmaxwidth2 );
+
+	.gf_page_steps {
+		border-bottom: 3px solid red;
+		display: flex;
+		.gf_step {
+			border: 1px solid red;
+			border-bottom: 3px solid white;
+			padding: .5em 1em;
+			flex: 1;
+			margin: .25em .25em -3px .25em;
+			
+			.gf_step_label {
+				visibility: hidden;
+			}
+			&.gf_step_active {
+				.gf_step_label {
+					visibility: visible;
+				}
+			}
+		}
+	}
+
+
+	.gform_page_fields {
+		
+		
+		ul {
+			&, li {
+				list-style: none;
+				padding-left: 0;
+				margin-left: 0;
+			}		
+			li {
+				overflow: hidden;
+				
+				input {
+					margin: .5%;
+					width: @rbinputmaxwidth; 
+					display: block;
+					float: left;
+					
+					& + label {
+						display: block;
+						float: left;
+			  		max-width: ~"calc(99% - @{rbinputmaxwidth})";
+					}
+				}
+			}
+		}		
+	}
 
     
 }
