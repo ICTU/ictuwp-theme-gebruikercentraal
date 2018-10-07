@@ -58,4 +58,3 @@ function gc_wbvb_show_related_content() {
 genesis();
 
 
-// b3JkZXJfaWQ9NDY1Mzd8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE0LTEyLTE4IDA2OjAzOjIz
