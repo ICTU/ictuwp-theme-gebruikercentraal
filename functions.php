@@ -791,13 +791,18 @@ function gc_wbvb_404() {
 }
 
 //========================================================================================================
-function dovardump($data, $description = '' ) {
-    if ( $description ) {
-      echo '<h1>' . $description . ':</h1>';
-    }
-    echo '<pre>';
-    var_dump($data);
-    echo '</pre>';
+
+if (! function_exists( 'dovardump' ) ) {
+
+  function dovardump($data, $description = '' ) {
+      if ( $description ) {
+        echo '<h1>' . $description . ':</h1>';
+      }
+      echo '<pre>';
+      var_dump($data);
+      echo '</pre>';
+  }	    
+
 }	    
 
 //========================================================================================================
@@ -2127,12 +2132,12 @@ function gc_wbvb_paging_previous ( $text ) {
 
 function eo_prev_next_post_nav() {
   
-    if ( is_single() ) {
+    if ( is_single() && ( in_array(get_post_type(), array('post', GC_KLANTCONTACT_BEELDEN_CPT, GC_KLANTCONTACT_BRIEF_CPT ) ) ) ) {
 
         echo '<nav class="pagination">';
         previous_post_link( '<div class="pagination-previous alignleft">%link</div>', '%title' );
         next_post_link( '<div class="pagination-next alignright">%link</div>', '%title' );
-        echo '</nav><!-- .prev-next-navigation -->';
+        echo '</nav><!-- .eo_prev_next_post_nav -->';
  
     }
  
@@ -2313,7 +2318,8 @@ function wbvb_modernista_prev_next_post_nav() {
 
 	if ( get_previous_posts_link() || get_next_posts_link() ) {
 		echo '<nav class="pagination">';
-		if ( is_single() ) {
+//		if ( is_single() ) {
+    if ( is_single() && ( in_array(get_post_type(), array('post', GC_KLANTCONTACT_BEELDEN_CPT, GC_KLANTCONTACT_BRIEF_CPT ) ) ) ) {
 			previous_post_link( '<div class="pagination-previous alignleft">%link</div>', '%title' );
 			next_post_link( '<div class="pagination-next alignright">%link</div>', '%title' );
 		}
@@ -2330,7 +2336,7 @@ function wbvb_modernista_prev_next_post_nav() {
 			) );
 
 		}
-		echo '</nav><!-- .prev-next-navigation -->';
+    echo '</nav><!-- .wbvb_modernista_prev_next_post_nav -->';
   }
 }
 
