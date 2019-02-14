@@ -108,7 +108,7 @@
 .beeldbank .archive-list .entry a:focus .excerpt:after,
 .archive .archive-list .entry a:focus .excerpt:after {
   box-shadow: 3px 3px 0px #a1a1a1;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3Csvg%20width%3D%227px%22%20height%3D%2213px%22%20viewBox%3D%220%200%207%2013%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0A%20%20%20%20%3C!--%20Generator%3A%20Sketch%203.6.1%20(26313)%20-%20http%3A%2F%2Fwww.bohemiancoding.com%2Fsketch%20--%3E%0A%20%20%20%20%3Ctitle%3Ecta-pijl%3C%2Ftitle%3E%0A%20%20%20%20%3Cdesc%3ECreated%20with%20Sketch.%3C%2Fdesc%3E%0A%20%20%20%20%3Cdefs%3E%3C%2Fdefs%3E%0A%20%20%20%20%3Cg%20id%3D%22Page-1%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M1.43603516%2C0%20L0%2C1.87664462%20L3.49723918%2C5.97633786%20L0%2C10.0762255%20L1.43603516%2C12.296875%20L7.0599347%2C5.97633786%20L1.43603516%2C0%20Z%22%20id%3D%22cta-pijl%22%20fill%3D%22%23002F3E%22%3E%3C%2Fpath%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20height%3D%2213%22%20viewBox%3D%220%200%207%2013%22%20width%3D%227%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m1.43603516%200-1.43603516%201.87664462%203.49723918%204.09969324-3.49723918%204.09988764%201.43603516%202.2206495%205.62389954-6.32053714z%22%20fill%3D%22%23009f33%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E");
 }
 .beeldbank .archive-list .entry a:hover:after,
 .archive .archive-list .entry a:hover:after,

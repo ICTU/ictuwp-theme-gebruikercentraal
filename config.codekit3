@@ -1,5 +1,5 @@
 {
-"AAInfo": "This is a CodeKit 3 project config file. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. Doing so will cause CodeKit to crash and\/or corrupt your project. I know it looks like JSON, but it is *not*. Many numbers in this file are 64-bit long long bitFlags, which JSON does not support. These numbers *cannot* be treated as discrete values and if you attempt to parse this file as standard JSON with any public JSON parser, these values will be corrupted. This file is not backwards-compatible with CodeKit 1 or 2. For more information, see https:\/\/codekitapp.com\/",
+"AAInfo": "This is a CodeKit 3 project config file. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. Doing so will cause CodeKit to crash and/or corrupt your project. I know it looks like JSON, but it is *not*. Many numbers in this file are 64-bit long long bitFlags, which JSON does not support. These numbers *cannot* be treated as discrete values and if you attempt to parse this file as standard JSON with any public JSON parser, these values will be corrupted. This file is not backwards-compatible with CodeKit 1 or 2. For more information, see https://codekitapp.com/",
 "buildSteps": [
 	{
 		"name": "Process All Remaining Files and Folders",
@@ -7,3182 +7,3196 @@
 		"uuidString": "F739CC51-1ABE-4F0E-A0E2-DDC4D4432249"
 		}
 	],
-"creatorBuild": "26680",
+"creatorBuild": "28905",
 "files": {
-	"\/.gitignore": {
+	"/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/.gitignore",
+		"oAP": "/.gitignore",
 		"oF": 0
 		},
-	"\/404.php": {
+	"/404.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/404.php",
+		"oAP": "/404.php",
 		"oF": 0
 		},
-	"\/archive.php": {
+	"/archive.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/archive.php",
+		"oAP": "/archive.php",
 		"oF": 0
 		},
-	"\/author.php": {
+	"/author.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 1,
-		"oAP": "\/author.php",
+		"oAP": "/author.php",
 		"oF": 0
 		},
-	"\/blogberichten.css": {
+	"/blogberichten.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 2,
-		"oAP": "\/blogberichten-min.css",
+		"oAP": "/blogberichten-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"\/comments.php": {
+	"/comments.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/comments.php",
+		"oAP": "/comments.php",
 		"oF": 0
 		},
-	"\/css\/addenda-tips.css": {
+	"/css/addenda-tips.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 2,
-		"oAP": "\/css\/addenda-tips-min.css",
+		"oAP": "/css/addenda-tips-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"\/css\/blanco.css": {
+	"/css/blanco.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 2,
-		"oAP": "\/css\/blanco-min.css",
+		"oAP": "/css/blanco-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"\/css\/buddypress-mentions.css": {
+	"/css/buddypress-mentions.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 2,
-		"oAP": "\/css\/buddypress-mentions-min.css",
+		"oAP": "/css/buddypress-mentions-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"\/css\/editor-styles.css": {
+	"/css/editor-styles.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 2,
-		"oAP": "\/css\/editor-styles-min.css",
+		"oAP": "/css/editor-styles-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"\/css\/header.css": {
+	"/css/header.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 2,
-		"oAP": "\/css\/header-min.css",
+		"oAP": "/css/header-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"\/css\/login-form.css": {
+	"/css/login-form.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 2,
-		"oAP": "\/css\/login-form-min.css",
+		"oAP": "/css/login-form-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"\/css\/mailtemplate-met-link.css": {
+	"/css/mailtemplate-met-link.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 2,
-		"oAP": "\/css\/mailtemplate-met-link-min.css",
+		"oAP": "/css/mailtemplate-met-link-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"\/css\/mailtemplate-zonder-link.css": {
+	"/css/mailtemplate-zonder-link.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 2,
-		"oAP": "\/css\/mailtemplate-zonder-link-min.css",
+		"oAP": "/css/mailtemplate-zonder-link-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"\/css\/opmaak-verwijderen.png": {
+	"/css/opmaak-verwijderen.png": {
 		"ft": 32768,
 		"iS": 44194,
 		"oA": 0,
-		"oAP": "\/css\/opmaak-verwijderen.png",
+		"oAP": "/css/opmaak-verwijderen.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/css\/revenge.css": {
+	"/css/revenge.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 2,
-		"oAP": "\/css\/revenge-min.css",
+		"oAP": "/css/revenge-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"\/distribute.sh": {
+	"/distribute.sh": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/distribute.sh",
+		"oAP": "/distribute.sh",
 		"oF": 0
 		},
-	"\/fonts\/icons.eot": {
+	"/fonts/icons.eot": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/fonts\/icons.eot",
+		"oAP": "/fonts/icons.eot",
 		"oF": 0
 		},
-	"\/fonts\/icons.svg": {
+	"/fonts/icons.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/fonts\/icons.svg",
+		"oAP": "/fonts/icons.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/fonts\/icons.ttf": {
+	"/fonts/icons.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/fonts\/icons.ttf",
+		"oAP": "/fonts/icons.ttf",
 		"oF": 0
 		},
-	"\/fonts\/icons.woff": {
+	"/fonts/icons.woff": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/fonts\/icons.woff",
+		"oAP": "/fonts/icons.woff",
 		"oF": 0
 		},
-	"\/fonts\/leaguegothic.eot": {
+	"/fonts/leaguegothic.eot": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/fonts\/leaguegothic.eot",
+		"oAP": "/fonts/leaguegothic.eot",
 		"oF": 0
 		},
-	"\/fonts\/leaguegothic.svg": {
+	"/fonts/leaguegothic.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/fonts\/leaguegothic.svg",
+		"oAP": "/fonts/leaguegothic.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/fonts\/leaguegothic.ttf": {
+	"/fonts/leaguegothic.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/fonts\/leaguegothic.ttf",
+		"oAP": "/fonts/leaguegothic.ttf",
 		"oF": 0
 		},
-	"\/fonts\/leaguegothic.woff": {
+	"/fonts/leaguegothic.woff": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/fonts\/leaguegothic.woff",
+		"oAP": "/fonts/leaguegothic.woff",
 		"oF": 0
 		},
-	"\/fonts\/montserrat-light-webfont.eot": {
+	"/fonts/montserrat-light-webfont.eot": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/fonts\/montserrat-light-webfont.eot",
+		"oAP": "/fonts/montserrat-light-webfont.eot",
 		"oF": 0
 		},
-	"\/fonts\/montserrat-light-webfont.svg": {
+	"/fonts/montserrat-light-webfont.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/fonts\/montserrat-light-webfont.svg",
+		"oAP": "/fonts/montserrat-light-webfont.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/fonts\/montserrat-light-webfont.ttf": {
+	"/fonts/montserrat-light-webfont.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/fonts\/montserrat-light-webfont.ttf",
+		"oAP": "/fonts/montserrat-light-webfont.ttf",
 		"oF": 0
 		},
-	"\/fonts\/montserrat-light-webfont.woff": {
+	"/fonts/montserrat-light-webfont.woff": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/fonts\/montserrat-light-webfont.woff",
+		"oAP": "/fonts/montserrat-light-webfont.woff",
 		"oF": 0
 		},
-	"\/fonts\/montserrat-light-webfont.woff2": {
+	"/fonts/montserrat-light-webfont.woff2": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/fonts\/montserrat-light-webfont.woff2",
+		"oAP": "/fonts/montserrat-light-webfont.woff2",
 		"oF": 0
 		},
-	"\/fonts\/montserrat-regular-webfont.eot": {
+	"/fonts/montserrat-regular-webfont.eot": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/fonts\/montserrat-regular-webfont.eot",
+		"oAP": "/fonts/montserrat-regular-webfont.eot",
 		"oF": 0
 		},
-	"\/fonts\/montserrat-regular-webfont.svg": {
+	"/fonts/montserrat-regular-webfont.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/fonts\/montserrat-regular-webfont.svg",
+		"oAP": "/fonts/montserrat-regular-webfont.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/fonts\/montserrat-regular-webfont.ttf": {
+	"/fonts/montserrat-regular-webfont.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/fonts\/montserrat-regular-webfont.ttf",
+		"oAP": "/fonts/montserrat-regular-webfont.ttf",
 		"oF": 0
 		},
-	"\/fonts\/montserrat-regular-webfont.woff": {
+	"/fonts/montserrat-regular-webfont.woff": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/fonts\/montserrat-regular-webfont.woff",
+		"oAP": "/fonts/montserrat-regular-webfont.woff",
 		"oF": 0
 		},
-	"\/fonts\/montserrat-regular-webfont.woff2": {
+	"/fonts/montserrat-regular-webfont.woff2": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/fonts\/montserrat-regular-webfont.woff2",
+		"oAP": "/fonts/montserrat-regular-webfont.woff2",
 		"oF": 0
 		},
-	"\/fonts\/montserrat-unused-fonts.zip": {
+	"/fonts/montserrat-unused-fonts.zip": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/fonts\/montserrat-unused-fonts.zip",
+		"oAP": "/fonts/montserrat-unused-fonts.zip",
 		"oF": 0
 		},
-	"\/functions.php": {
+	"/functions.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/functions.php",
+		"oAP": "/functions.php",
 		"oF": 0
 		},
-	"\/gravatar.png": {
+	"/gravatar.png": {
 		"ft": 32768,
 		"iS": 2752,
 		"oA": 0,
-		"oAP": "\/gravatar.png",
+		"oAP": "/gravatar.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/header.php": {
+	"/header.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/header.php",
+		"oAP": "/header.php",
 		"oF": 0
 		},
-	"\/images\/apple-touch-icon-114x114-precomposed.png": {
+	"/images/apple-touch-icon-114x114-precomposed.png": {
 		"ft": 32768,
 		"iS": 4690,
 		"oA": 0,
-		"oAP": "\/images\/apple-touch-icon-114x114-precomposed.png",
+		"oAP": "/images/apple-touch-icon-114x114-precomposed.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/apple-touch-icon-120x120-precomposed.png": {
+	"/images/apple-touch-icon-120x120-precomposed.png": {
 		"ft": 32768,
 		"iS": 5140,
 		"oA": 0,
-		"oAP": "\/images\/apple-touch-icon-120x120-precomposed.png",
+		"oAP": "/images/apple-touch-icon-120x120-precomposed.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/apple-touch-icon-144x144-precomposed.png": {
+	"/images/apple-touch-icon-144x144-precomposed.png": {
 		"ft": 32768,
 		"iS": 7223,
 		"oA": 0,
-		"oAP": "\/images\/apple-touch-icon-144x144-precomposed.png",
+		"oAP": "/images/apple-touch-icon-144x144-precomposed.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/apple-touch-icon-152x152-precomposed.png": {
+	"/images/apple-touch-icon-152x152-precomposed.png": {
 		"ft": 32768,
 		"iS": 7248,
 		"oA": 0,
-		"oAP": "\/images\/apple-touch-icon-152x152-precomposed.png",
+		"oAP": "/images/apple-touch-icon-152x152-precomposed.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/apple-touch-icon-57x57-precomposed.png": {
+	"/images/apple-touch-icon-57x57-precomposed.png": {
 		"ft": 32768,
 		"iS": 1998,
 		"oA": 0,
-		"oAP": "\/images\/apple-touch-icon-57x57-precomposed.png",
+		"oAP": "/images/apple-touch-icon-57x57-precomposed.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/apple-touch-icon-60x60-precomposed.png": {
+	"/images/apple-touch-icon-60x60-precomposed.png": {
 		"ft": 32768,
 		"iS": 2006,
 		"oA": 0,
-		"oAP": "\/images\/apple-touch-icon-60x60-precomposed.png",
+		"oAP": "/images/apple-touch-icon-60x60-precomposed.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/apple-touch-icon-72x72-precomposed.png": {
+	"/images/apple-touch-icon-72x72-precomposed.png": {
 		"ft": 32768,
 		"iS": 2034,
 		"oA": 0,
-		"oAP": "\/images\/apple-touch-icon-72x72-precomposed.png",
+		"oAP": "/images/apple-touch-icon-72x72-precomposed.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/apple-touch-icon-76x76-precomposed.png": {
+	"/images/apple-touch-icon-76x76-precomposed.png": {
 		"ft": 32768,
 		"iS": 2042,
 		"oA": 0,
-		"oAP": "\/images\/apple-touch-icon-76x76-precomposed.png",
+		"oAP": "/images/apple-touch-icon-76x76-precomposed.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/apple-touch-icon-precomposed.png": {
+	"/images/apple-touch-icon-precomposed.png": {
 		"ft": 32768,
 		"iS": 2040,
 		"oA": 0,
-		"oAP": "\/images\/apple-touch-icon-precomposed.png",
+		"oAP": "/images/apple-touch-icon-precomposed.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/arrow-wit.png": {
+	"/images/arrow-wit.png": {
 		"ft": 32768,
 		"iS": 240,
 		"oA": 0,
-		"oAP": "\/images\/arrow-wit.png",
+		"oAP": "/images/arrow-wit.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/arrow-wit.svg": {
+	"/images/arrow-wit.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/arrow-wit.svg",
+		"oAP": "/images/arrow-wit.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/blog-feature-image-default.png": {
+	"/images/blog-feature-image-default.png": {
 		"ft": 32768,
 		"iS": 24780,
 		"oA": 0,
-		"oAP": "\/images\/blog-feature-image-default.png",
+		"oAP": "/images/blog-feature-image-default.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/blog-feature-image-default.svg": {
+	"/images/blog-feature-image-default.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/blog-feature-image-default.svg",
+		"oAP": "/images/blog-feature-image-default.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/breadcrumb-separator.png": {
+	"/images/breadcrumb-separator.png": {
 		"ft": 32768,
 		"iS": 148,
 		"oA": 0,
-		"oAP": "\/images\/breadcrumb-separator.png",
+		"oAP": "/images/breadcrumb-separator.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/breadcrumb-separator.svg": {
+	"/images/breadcrumb-separator.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/breadcrumb-separator.svg",
+		"oAP": "/images/breadcrumb-separator.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/bullet.png": {
+	"/images/bullet.png": {
 		"ft": 32768,
 		"iS": 91,
 		"oA": 0,
-		"oAP": "\/images\/bullet.png",
+		"oAP": "/images/bullet.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/bullet.svg": {
+	"/images/bullet.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/bullet.svg",
+		"oAP": "/images/bullet.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/cta-pijl.png": {
+	"/images/cta-pijl.png": {
 		"ft": 32768,
 		"iS": 325,
 		"oA": 0,
-		"oAP": "\/images\/cta-pijl.png",
+		"oAP": "/images/cta-pijl.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/cta-pijl.svg": {
+	"/images/cta-pijl.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/cta-pijl.svg",
+		"oAP": "/images/cta-pijl.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/cta-pijl@2x.png": {
+	"/images/cta-pijl@2x.png": {
 		"ft": 32768,
 		"iS": 614,
 		"oA": 0,
-		"oAP": "\/images\/cta-pijl@2x.png",
+		"oAP": "/images/cta-pijl@2x.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/custom-avatar.png": {
+	"/images/custom-avatar.png": {
 		"ft": 32768,
 		"iS": 36556,
 		"oA": 0,
-		"oAP": "\/images\/custom-avatar.png",
+		"oAP": "/images/custom-avatar.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/desktop.png": {
+	"/images/desktop.png": {
 		"ft": 32768,
 		"iS": 9498,
 		"oA": 0,
-		"oAP": "\/images\/desktop.png",
+		"oAP": "/images/desktop.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/desktop.svg": {
+	"/images/desktop.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/desktop.svg",
+		"oAP": "/images/desktop.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/facebook-promotional-1024w.png": {
+	"/images/facebook-promotional-1024w.png": {
 		"ft": 32768,
 		"iS": 51505,
 		"oA": 0,
-		"oAP": "\/images\/facebook-promotional-1024w.png",
+		"oAP": "/images/facebook-promotional-1024w.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/facebook-promotional-16w.png": {
+	"/images/facebook-promotional-16w.png": {
 		"ft": 32768,
 		"iS": 494,
 		"oA": 0,
-		"oAP": "\/images\/facebook-promotional-16w.png",
+		"oAP": "/images/facebook-promotional-16w.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/favicon.ico": {
+	"/images/favicon.ico": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/images\/favicon.ico",
+		"oAP": "/images/favicon.ico",
 		"oF": 0
 		},
-	"\/images\/featured-image-default.png": {
+	"/images/featured-image-default.png": {
 		"ft": 32768,
 		"iS": 10164,
 		"oA": 0,
-		"oAP": "\/images\/featured-image-default.png",
+		"oAP": "/images/featured-image-default.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/featured-image-default.svg": {
+	"/images/featured-image-default.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/featured-image-default.svg",
+		"oAP": "/images/featured-image-default.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/featured.png": {
+	"/images/featured.png": {
 		"ft": 32768,
 		"iS": 8628,
 		"oA": 0,
-		"oAP": "\/images\/featured.png",
+		"oAP": "/images/featured.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/footer-logo.png": {
+	"/images/footer-logo.png": {
 		"ft": 32768,
 		"iS": 10943,
 		"oA": 0,
-		"oAP": "\/images\/footer-logo.png",
+		"oAP": "/images/footer-logo.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/footer-logo.svg": {
+	"/images/footer-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/footer-logo.svg",
+		"oAP": "/images/footer-logo.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/gc-404 copy.svg": {
+	"/images/gc-404 copy.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/gc-404 copy.svg",
+		"oAP": "/images/gc-404 copy.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/gc-404.png": {
+	"/images/gc-404.png": {
 		"ft": 32768,
 		"iS": 25164,
 		"oA": 0,
-		"oAP": "\/images\/gc-404.png",
+		"oAP": "/images/gc-404.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/gc-404.svg": {
+	"/images/gc-404.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/gc-404.svg",
+		"oAP": "/images/gc-404.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/gc-404@2x.png": {
+	"/images/gc-404@2x.png": {
 		"ft": 32768,
 		"iS": 57170,
 		"oA": 0,
-		"oAP": "\/images\/gc-404@2x.png",
+		"oAP": "/images/gc-404@2x.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/gebroken-glas.jpg": {
+	"/images/gebroken-glas.jpg": {
 		"ft": 16384,
 		"iS": 49952,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/images\/gebroken-glas.jpg",
+		"oAP": "/images/gebroken-glas.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/images\/gravatar-full.png": {
+	"/images/gravatar-full.png": {
 		"ft": 32768,
 		"iS": 58018,
 		"oA": 0,
-		"oAP": "\/images\/gravatar-full.png",
+		"oAP": "/images/gravatar-full.png",
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/gravatar-small.png": {
+	"/images/gravatar-small.png": {
 		"ft": 32768,
 		"iS": 4269,
 		"oA": 0,
-		"oAP": "\/images\/gravatar-small.png",
+		"oAP": "/images/gravatar-small.png",
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/gravatar.png": {
+	"/images/gravatar.png": {
 		"ft": 32768,
 		"iS": 2033,
 		"oA": 0,
-		"oAP": "\/images\/gravatar.png",
+		"oAP": "/images/gravatar.png",
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/gravatar.svg": {
+	"/images/gravatar.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/gravatar.svg",
+		"oAP": "/images/gravatar.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/hamburger.png": {
+	"/images/hamburger.png": {
 		"ft": 32768,
 		"iS": 103,
 		"oA": 0,
-		"oAP": "\/images\/hamburger.png",
+		"oAP": "/images/hamburger.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/hamburger.svg": {
+	"/images/hamburger.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/hamburger.svg",
+		"oAP": "/images/hamburger.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/header-image.png": {
+	"/images/header-image.png": {
 		"ft": 32768,
 		"iS": 9389,
 		"oA": 0,
-		"oAP": "\/images\/header-image.png",
+		"oAP": "/images/header-image.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/header.jpg": {
+	"/images/header.jpg": {
 		"ft": 16384,
 		"iS": 600808,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/images\/header.jpg",
+		"oAP": "/images/header.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/images\/high-res.jpg": {
+	"/images/high-res.jpg": {
 		"ft": 16384,
 		"iS": 14174,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/images\/high-res.jpg",
+		"oAP": "/images/high-res.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/images\/icon-calendar.png": {
+	"/images/icon-calendar.png": {
 		"ft": 32768,
 		"iS": 451,
 		"oA": 0,
-		"oAP": "\/images\/icon-calendar.png",
+		"oAP": "/images/icon-calendar.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-calendar.svg": {
+	"/images/icon-calendar.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/icon-calendar.svg",
+		"oAP": "/images/icon-calendar.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/icon-calendar@2x.png": {
+	"/images/icon-calendar@2x.png": {
 		"ft": 32768,
 		"iS": 914,
 		"oA": 0,
-		"oAP": "\/images\/icon-calendar@2x.png",
+		"oAP": "/images/icon-calendar@2x.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-circle-check.png": {
+	"/images/icon-circle-check.png": {
 		"ft": 32768,
 		"iS": 439,
 		"oA": 0,
-		"oAP": "\/images\/icon-circle-check.png",
+		"oAP": "/images/icon-circle-check.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-circle-check.svg": {
+	"/images/icon-circle-check.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/icon-circle-check.svg",
+		"oAP": "/images/icon-circle-check.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/icon-circle-error.png": {
+	"/images/icon-circle-error.png": {
 		"ft": 32768,
 		"iS": 515,
 		"oA": 0,
-		"oAP": "\/images\/icon-circle-error.png",
+		"oAP": "/images/icon-circle-error.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-circle-error.svg": {
+	"/images/icon-circle-error.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/icon-circle-error.svg",
+		"oAP": "/images/icon-circle-error.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/icon-facebook.png": {
+	"/images/icon-facebook.png": {
 		"ft": 32768,
 		"iS": 293,
 		"oA": 0,
-		"oAP": "\/images\/icon-facebook.png",
+		"oAP": "/images/icon-facebook.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-facebook.svg": {
+	"/images/icon-facebook.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/icon-facebook.svg",
+		"oAP": "/images/icon-facebook.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/icon-facebook@2x.png": {
+	"/images/icon-facebook@2x.png": {
 		"ft": 32768,
 		"iS": 411,
 		"oA": 0,
-		"oAP": "\/images\/icon-facebook@2x.png",
+		"oAP": "/images/icon-facebook@2x.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-googleplus.png": {
+	"/images/icon-googleplus.png": {
 		"ft": 32768,
 		"iS": 657,
 		"oA": 0,
-		"oAP": "\/images\/icon-googleplus.png",
+		"oAP": "/images/icon-googleplus.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-googleplus.svg": {
+	"/images/icon-googleplus.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/icon-googleplus.svg",
+		"oAP": "/images/icon-googleplus.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/icon-googleplus@2x.png": {
+	"/images/icon-googleplus@2x.png": {
 		"ft": 32768,
 		"iS": 1241,
 		"oA": 0,
-		"oAP": "\/images\/icon-googleplus@2x.png",
+		"oAP": "/images/icon-googleplus@2x.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-knop-groen-hover.png": {
+	"/images/icon-knop-groen-hover.png": {
 		"ft": 32768,
 		"iS": 425,
 		"oA": 0,
-		"oAP": "\/images\/icon-knop-groen-hover.png",
+		"oAP": "/images/icon-knop-groen-hover.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-knop-groen-hover.svg": {
+	"/images/icon-knop-groen-hover.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/icon-knop-groen-hover.svg",
+		"oAP": "/images/icon-knop-groen-hover.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/icon-knop-groen-hover@2x.png": {
+	"/images/icon-knop-groen-hover@2x.png": {
 		"ft": 32768,
 		"iS": 913,
 		"oA": 0,
-		"oAP": "\/images\/icon-knop-groen-hover@2x.png",
+		"oAP": "/images/icon-knop-groen-hover@2x.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-knop-groen-inverse.png": {
+	"/images/icon-knop-groen-inverse.png": {
 		"ft": 32768,
 		"iS": 414,
 		"oA": 0,
-		"oAP": "\/images\/icon-knop-groen-inverse.png",
+		"oAP": "/images/icon-knop-groen-inverse.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-knop-groen-inverse.svg": {
+	"/images/icon-knop-groen-inverse.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/icon-knop-groen-inverse.svg",
+		"oAP": "/images/icon-knop-groen-inverse.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/icon-knop-groen-inverse@2x.png": {
+	"/images/icon-knop-groen-inverse@2x.png": {
 		"ft": 32768,
 		"iS": 928,
 		"oA": 0,
-		"oAP": "\/images\/icon-knop-groen-inverse@2x.png",
+		"oAP": "/images/icon-knop-groen-inverse@2x.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-knop-groen.png": {
+	"/images/icon-knop-groen.png": {
 		"ft": 32768,
 		"iS": 452,
 		"oA": 0,
-		"oAP": "\/images\/icon-knop-groen.png",
+		"oAP": "/images/icon-knop-groen.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-knop-groen.svg": {
+	"/images/icon-knop-groen.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/icon-knop-groen.svg",
+		"oAP": "/images/icon-knop-groen.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/icon-knop-groen@2x.png": {
+	"/images/icon-knop-groen@2x.png": {
 		"ft": 32768,
 		"iS": 975,
 		"oA": 0,
-		"oAP": "\/images\/icon-knop-groen@2x.png",
+		"oAP": "/images/icon-knop-groen@2x.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-linkedin.png": {
+	"/images/icon-linkedin.png": {
 		"ft": 32768,
 		"iS": 438,
 		"oA": 0,
-		"oAP": "\/images\/icon-linkedin.png",
+		"oAP": "/images/icon-linkedin.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-linkedin.svg": {
+	"/images/icon-linkedin.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/icon-linkedin.svg",
+		"oAP": "/images/icon-linkedin.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/icon-linkedin@2x.png": {
+	"/images/icon-linkedin@2x.png": {
 		"ft": 32768,
 		"iS": 791,
 		"oA": 0,
-		"oAP": "\/images\/icon-linkedin@2x.png",
+		"oAP": "/images/icon-linkedin@2x.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-mail.png": {
+	"/images/icon-mail.png": {
 		"ft": 32768,
 		"iS": 257,
 		"oA": 0,
-		"oAP": "\/images\/icon-mail.png",
+		"oAP": "/images/icon-mail.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-mail.svg": {
+	"/images/icon-mail.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/icon-mail.svg",
+		"oAP": "/images/icon-mail.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/icon-mail@2x.png": {
+	"/images/icon-mail@2x.png": {
 		"ft": 32768,
 		"iS": 498,
 		"oA": 0,
-		"oAP": "\/images\/icon-mail@2x.png",
+		"oAP": "/images/icon-mail@2x.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-personallink.png": {
+	"/images/icon-personallink.png": {
 		"ft": 32768,
 		"iS": 644,
 		"oA": 0,
-		"oAP": "\/images\/icon-personallink.png",
+		"oAP": "/images/icon-personallink.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-personallink.svg": {
+	"/images/icon-personallink.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/icon-personallink.svg",
+		"oAP": "/images/icon-personallink.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/icon-personallink@2x.png": {
+	"/images/icon-personallink@2x.png": {
 		"ft": 32768,
 		"iS": 1383,
 		"oA": 0,
-		"oAP": "\/images\/icon-personallink@2x.png",
+		"oAP": "/images/icon-personallink@2x.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-phone.png": {
+	"/images/icon-phone.png": {
 		"ft": 32768,
 		"iS": 332,
 		"oA": 0,
-		"oAP": "\/images\/icon-phone.png",
+		"oAP": "/images/icon-phone.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-phone.svg": {
+	"/images/icon-phone.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/icon-phone.svg",
+		"oAP": "/images/icon-phone.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/icon-phone@2x.png": {
+	"/images/icon-phone@2x.png": {
 		"ft": 32768,
 		"iS": 647,
 		"oA": 0,
-		"oAP": "\/images\/icon-phone@2x.png",
+		"oAP": "/images/icon-phone@2x.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-pin.png": {
+	"/images/icon-pin.png": {
 		"ft": 32768,
 		"iS": 398,
 		"oA": 0,
-		"oAP": "\/images\/icon-pin.png",
+		"oAP": "/images/icon-pin.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-pin.svg": {
+	"/images/icon-pin.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/icon-pin.svg",
+		"oAP": "/images/icon-pin.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/icon-place.png": {
+	"/images/icon-place.png": {
 		"ft": 32768,
 		"iS": 372,
 		"oA": 0,
-		"oAP": "\/images\/icon-place.png",
+		"oAP": "/images/icon-place.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-place.svg": {
+	"/images/icon-place.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/icon-place.svg",
+		"oAP": "/images/icon-place.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/icon-place@2x.png": {
+	"/images/icon-place@2x.png": {
 		"ft": 32768,
 		"iS": 795,
 		"oA": 0,
-		"oAP": "\/images\/icon-place@2x.png",
+		"oAP": "/images/icon-place@2x.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-precomposed.png": {
+	"/images/icon-precomposed.png": {
 		"ft": 32768,
 		"iS": 2003,
 		"oA": 0,
-		"oAP": "\/images\/icon-precomposed.png",
+		"oAP": "/images/icon-precomposed.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-price.png": {
+	"/images/icon-price.png": {
 		"ft": 32768,
 		"iS": 392,
 		"oA": 0,
-		"oAP": "\/images\/icon-price.png",
+		"oAP": "/images/icon-price.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-price.svg": {
+	"/images/icon-price.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/icon-price.svg",
+		"oAP": "/images/icon-price.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/icon-price@2x.png": {
+	"/images/icon-price@2x.png": {
 		"ft": 32768,
 		"iS": 740,
 		"oA": 0,
-		"oAP": "\/images\/icon-price@2x.png",
+		"oAP": "/images/icon-price@2x.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-time.png": {
+	"/images/icon-time.png": {
 		"ft": 32768,
 		"iS": 451,
 		"oA": 0,
-		"oAP": "\/images\/icon-time.png",
+		"oAP": "/images/icon-time.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-time.svg": {
+	"/images/icon-time.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/icon-time.svg",
+		"oAP": "/images/icon-time.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/icon-time@2x.png": {
+	"/images/icon-time@2x.png": {
 		"ft": 32768,
 		"iS": 889,
 		"oA": 0,
-		"oAP": "\/images\/icon-time@2x.png",
+		"oAP": "/images/icon-time@2x.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-twitter.png": {
+	"/images/icon-twitter.png": {
 		"ft": 32768,
 		"iS": 548,
 		"oA": 0,
-		"oAP": "\/images\/icon-twitter.png",
+		"oAP": "/images/icon-twitter.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/icon-twitter.svg": {
+	"/images/icon-twitter.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/icon-twitter.svg",
+		"oAP": "/images/icon-twitter.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/icon-twitter@2x.png": {
+	"/images/icon-twitter@2x.png": {
 		"ft": 32768,
 		"iS": 1110,
 		"oA": 0,
-		"oAP": "\/images\/icon-twitter@2x.png",
+		"oAP": "/images/icon-twitter@2x.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/logo-desktop.png": {
+	"/images/logo-desktop.png": {
 		"ft": 32768,
 		"iS": 5012,
 		"oA": 0,
-		"oAP": "\/images\/logo-desktop.png",
+		"oAP": "/images/logo-desktop.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/logo-desktop.svg": {
+	"/images/logo-desktop.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/logo-desktop.svg",
+		"oAP": "/images/logo-desktop.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/logo-mobile.png": {
+	"/images/logo-mobile.png": {
 		"ft": 32768,
 		"iS": 2572,
 		"oA": 0,
-		"oAP": "\/images\/logo-mobile.png",
+		"oAP": "/images/logo-mobile.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/logo-mobile.svg": {
+	"/images/logo-mobile.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/logo-mobile.svg",
+		"oAP": "/images/logo-mobile.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/low-res.jpg": {
+	"/images/low-res.jpg": {
 		"ft": 16384,
 		"iS": 5937,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/images\/low-res.jpg",
+		"oAP": "/images/low-res.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/images\/med-res.jpg": {
+	"/images/med-res.jpg": {
 		"ft": 16384,
 		"iS": 10577,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/images\/med-res.jpg",
+		"oAP": "/images/med-res.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/images\/meisje-gebruiker-centraal.png": {
+	"/images/meisje-gebruiker-centraal.png": {
 		"ft": 32768,
 		"iS": 36556,
 		"oA": 0,
-		"oAP": "\/images\/meisje-gebruiker-centraal.png",
+		"oAP": "/images/meisje-gebruiker-centraal.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/meisje-gebruiker-centraal.svg": {
+	"/images/meisje-gebruiker-centraal.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/meisje-gebruiker-centraal.svg",
+		"oAP": "/images/meisje-gebruiker-centraal.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/meisje-gebruiker-centraal32w.png": {
+	"/images/meisje-gebruiker-centraal32w.png": {
 		"ft": 32768,
 		"iS": 1421,
 		"oA": 0,
-		"oAP": "\/images\/meisje-gebruiker-centraal32w.png",
+		"oAP": "/images/meisje-gebruiker-centraal32w.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/mobiel.png": {
+	"/images/mobiel.png": {
 		"ft": 32768,
 		"iS": 2460,
 		"oA": 0,
-		"oAP": "\/images\/mobiel.png",
+		"oAP": "/images/mobiel.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/mobiel.svg": {
+	"/images/mobiel.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/mobiel.svg",
+		"oAP": "/images/mobiel.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/nav-icon-links.png": {
+	"/images/nav-icon-links.png": {
 		"ft": 32768,
 		"iS": 329,
 		"oA": 0,
-		"oAP": "\/images\/nav-icon-links.png",
+		"oAP": "/images/nav-icon-links.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/nav-icon-links.svg": {
+	"/images/nav-icon-links.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/nav-icon-links.svg",
+		"oAP": "/images/nav-icon-links.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/nav-icon-links@2x.png": {
+	"/images/nav-icon-links@2x.png": {
 		"ft": 32768,
 		"iS": 669,
 		"oA": 0,
-		"oAP": "\/images\/nav-icon-links@2x.png",
+		"oAP": "/images/nav-icon-links@2x.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/nav-icon-rechts.png": {
+	"/images/nav-icon-rechts.png": {
 		"ft": 32768,
 		"iS": 317,
 		"oA": 0,
-		"oAP": "\/images\/nav-icon-rechts.png",
+		"oAP": "/images/nav-icon-rechts.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/nav-icon-rechts.svg": {
+	"/images/nav-icon-rechts.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/nav-icon-rechts.svg",
+		"oAP": "/images/nav-icon-rechts.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/nav-icon-rechts@2x.png": {
+	"/images/nav-icon-rechts@2x.png": {
 		"ft": 32768,
 		"iS": 618,
 		"oA": 0,
-		"oAP": "\/images\/nav-icon-rechts@2x.png",
+		"oAP": "/images/nav-icon-rechts@2x.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/pijltje-groen.png": {
+	"/images/pijltje-groen.png": {
 		"ft": 32768,
 		"iS": 587,
 		"oA": 0,
-		"oAP": "\/images\/pijltje-groen.png",
+		"oAP": "/images/pijltje-groen.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/pijltje-groen.svg": {
+	"/images/pijltje-groen.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/pijltje-groen.svg",
+		"oAP": "/images/pijltje-groen.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/pijltje-roze-back.png": {
+	"/images/pijltje-roze-back.png": {
 		"ft": 32768,
 		"iS": 365,
 		"oA": 0,
-		"oAP": "\/images\/pijltje-roze-back.png",
+		"oAP": "/images/pijltje-roze-back.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/pijltje-roze-back.svg": {
+	"/images/pijltje-roze-back.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/pijltje-roze-back.svg",
+		"oAP": "/images/pijltje-roze-back.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/pijltje-roze.png": {
+	"/images/pijltje-roze.png": {
 		"ft": 32768,
 		"iS": 367,
 		"oA": 0,
-		"oAP": "\/images\/pijltje-roze.png",
+		"oAP": "/images/pijltje-roze.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/pijltje-roze.svg": {
+	"/images/pijltje-roze.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/pijltje-roze.svg",
+		"oAP": "/images/pijltje-roze.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/pijltje-txt-back.png": {
+	"/images/pijltje-txt-back.png": {
 		"ft": 32768,
 		"iS": 323,
 		"oA": 0,
-		"oAP": "\/images\/pijltje-txt-back.png",
+		"oAP": "/images/pijltje-txt-back.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/pijltje-txt-back.svg": {
+	"/images/pijltje-txt-back.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/pijltje-txt-back.svg",
+		"oAP": "/images/pijltje-txt-back.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/pijltje-txt.png": {
+	"/images/pijltje-txt.png": {
 		"ft": 32768,
 		"iS": 324,
 		"oA": 0,
-		"oAP": "\/images\/pijltje-txt.png",
+		"oAP": "/images/pijltje-txt.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/pijltje-txt.svg": {
+	"/images/pijltje-txt.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/pijltje-txt.svg",
+		"oAP": "/images/pijltje-txt.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/pijltje-wit-back.png": {
+	"/images/pijltje-wit-back.png": {
 		"ft": 32768,
 		"iS": 223,
 		"oA": 0,
-		"oAP": "\/images\/pijltje-wit-back.png",
+		"oAP": "/images/pijltje-wit-back.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/pijltje-wit-back.svg": {
+	"/images/pijltje-wit-back.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/pijltje-wit-back.svg",
+		"oAP": "/images/pijltje-wit-back.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/pijltje-wit-down.png": {
+	"/images/pijltje-wit-down.png": {
 		"ft": 32768,
 		"iS": 229,
 		"oA": 0,
-		"oAP": "\/images\/pijltje-wit-down.png",
+		"oAP": "/images/pijltje-wit-down.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/pijltje-wit-down.svg": {
+	"/images/pijltje-wit-down.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/pijltje-wit-down.svg",
+		"oAP": "/images/pijltje-wit-down.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/pijltje-wit.png": {
+	"/images/pijltje-wit.png": {
 		"ft": 32768,
 		"iS": 223,
 		"oA": 0,
-		"oAP": "\/images\/pijltje-wit.png",
+		"oAP": "/images/pijltje-wit.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/pijltje-wit.svg": {
+	"/images/pijltje-wit.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/pijltje-wit.svg",
+		"oAP": "/images/pijltje-wit.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/search-button.png": {
+	"/images/search-button.png": {
 		"ft": 32768,
 		"iS": 274,
 		"oA": 0,
-		"oAP": "\/images\/search-button.png",
+		"oAP": "/images/search-button.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/sprite.png": {
+	"/images/sprite.png": {
 		"ft": 32768,
 		"iS": 2524,
 		"oA": 0,
-		"oAP": "\/images\/sprite.png",
+		"oAP": "/images/sprite.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/tablet.png": {
+	"/images/tablet.png": {
 		"ft": 32768,
 		"iS": 23435,
 		"oA": 0,
-		"oAP": "\/images\/tablet.png",
+		"oAP": "/images/tablet.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/tablet.svg": {
+	"/images/tablet.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/tablet.svg",
+		"oAP": "/images/tablet.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/vergrootglas.png": {
+	"/images/vergrootglas.png": {
 		"ft": 32768,
 		"iS": 256,
 		"oA": 0,
-		"oAP": "\/images\/vergrootglas.png",
+		"oAP": "/images/vergrootglas.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/vergrootglas.svg": {
+	"/images/vergrootglas.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/vergrootglas.svg",
+		"oAP": "/images/vergrootglas.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/voorbeeld-persoon-1.png": {
+	"/images/voorbeeld-persoon-1.png": {
 		"ft": 32768,
 		"iS": 9607,
 		"oA": 0,
-		"oAP": "\/images\/voorbeeld-persoon-1.png",
+		"oAP": "/images/voorbeeld-persoon-1.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/voorbeeld-persoon-1.svg": {
+	"/images/voorbeeld-persoon-1.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/voorbeeld-persoon-1.svg",
+		"oAP": "/images/voorbeeld-persoon-1.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/voorbeeld-persoon-2.png": {
+	"/images/voorbeeld-persoon-2.png": {
 		"ft": 32768,
 		"iS": 12410,
 		"oA": 0,
-		"oAP": "\/images\/voorbeeld-persoon-2.png",
+		"oAP": "/images/voorbeeld-persoon-2.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/voorbeeld-persoon-2.svg": {
+	"/images/voorbeeld-persoon-2.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/voorbeeld-persoon-2.svg",
+		"oAP": "/images/voorbeeld-persoon-2.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/includes\/author-box.php": {
+	"/includes/author-box.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/author-box.php",
+		"oAP": "/includes/author-box.php",
 		"oF": 0
 		},
-	"\/includes\/common-functions.php": {
+	"/includes/common-functions.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/common-functions.php",
+		"oAP": "/includes/common-functions.php",
 		"oF": 0
 		},
-	"\/includes\/custom-fields-and-post-types.php": {
+	"/includes/custom-fields-and-post-types.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/custom-fields-and-post-types.php",
+		"oAP": "/includes/custom-fields-and-post-types.php",
 		"oF": 0
 		},
-	"\/includes\/widgets.php": {
+	"/includes/widgets.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/widgets.php",
+		"oAP": "/includes/widgets.php",
 		"oF": 0
 		},
-	"\/js\/commentform.js": {
+	"/js/commentform.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/min\/commentform-min.js",
+		"oAP": "/js/min/commentform-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/criticalcss.js": {
+	"/js/criticalcss.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/min\/criticalcss-min.js",
+		"oAP": "/js/min/criticalcss-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/menu.js": {
+	"/js/menu.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/min\/menu-min.js",
+		"oAP": "/js/min/menu-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/min\/commentform-min.js": {
+	"/js/min/commentform-min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/min\/min\/commentform-min-min.js",
+		"oAP": "/js/min/min/commentform-min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/min\/menu-min.js": {
+	"/js/min/menu-min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/min\/min\/menu-min-min.js",
+		"oAP": "/js/min/min/menu-min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/languages\/e-newsletters\/email-newsletter-nl_NL.mo": {
+	"/languages/e-newsletters/email-newsletter-nl_NL.mo": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/languages\/e-newsletters\/email-newsletter-nl_NL.mo",
+		"oAP": "/languages/e-newsletters/email-newsletter-nl_NL.mo",
 		"oF": 0
 		},
-	"\/languages\/e-newsletters\/email-newsletter-nl_NL.po": {
+	"/languages/e-newsletters/email-newsletter-nl_NL.po": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/languages\/e-newsletters\/email-newsletter-nl_NL.po",
+		"oAP": "/languages/e-newsletters/email-newsletter-nl_NL.po",
 		"oF": 0
 		},
-	"\/languages\/gebruikercentraal.pot": {
+	"/languages/en_US.mo": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/languages\/gebruikercentraal.pot",
+		"oAP": "/languages/en_US.mo",
 		"oF": 0
 		},
-	"\/languages\/nl_NL.mo": {
+	"/languages/en_US.po": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/languages\/nl_NL.mo",
+		"oAP": "/languages/en_US.po",
 		"oF": 0
 		},
-	"\/languages\/nl_NL.po": {
+	"/languages/gebruikercentraal.pot": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/languages\/nl_NL.po",
+		"oAP": "/languages/gebruikercentraal.pot",
 		"oF": 0
 		},
-	"\/less\/00-mixins.less": {
+	"/languages/nl_NL.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "/languages/nl_NL.mo",
+		"oF": 0
+		},
+	"/languages/nl_NL.po": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "/languages/nl_NL.po",
+		"oF": 0
+		},
+	"/less/00-mixins.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/css\/00-mixins.css",
+		"oAP": "/css/00-mixins.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/less\/01-socmed-color-codes.less": {
+	"/less/01-socmed-color-codes.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/css\/01-socmed-color-codes.css",
+		"oAP": "/css/01-socmed-color-codes.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/less\/02-normalize.less": {
+	"/less/02-normalize.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/css\/02-normalize.css",
+		"oAP": "/css/02-normalize.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/less\/30-text-styles.less": {
+	"/less/30-text-styles.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/css\/30-text-styles.css",
+		"oAP": "/css/30-text-styles.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/less\/40-forms.less": {
+	"/less/40-forms.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/css\/40-forms.css",
+		"oAP": "/css/40-forms.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/less\/50-menu.less": {
+	"/less/50-menu.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/css\/50-menu.css",
+		"oAP": "/css/50-menu.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/less\/60-sidebar-widgets.less": {
+	"/less/60-sidebar-widgets.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/css\/60-sidebar-widgets.css",
+		"oAP": "/css/60-sidebar-widgets.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/less\/70-pagetypes.less": {
+	"/less/70-pagetypes.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/css\/70-pagetypes.css",
+		"oAP": "/css/70-pagetypes.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/less\/80-structure.less": {
+	"/less/80-structure.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/css\/80-structure.css",
+		"oAP": "/css/80-structure.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/less\/81-footers.less": {
+	"/less/81-footers.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/css\/81-footers.css",
+		"oAP": "/css/81-footers.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/less\/82-pagination.less": {
+	"/less/82-pagination.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/css\/82-pagination.css",
+		"oAP": "/css/82-pagination.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/less\/85-header-logo.less": {
+	"/less/85-header-logo.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/css\/85-header-logo.css",
+		"oAP": "/css/85-header-logo.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/less\/90-printstyles.less": {
+	"/less/90-printstyles.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/css\/90-printstyles.css",
+		"oAP": "/css/90-printstyles.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/less\/99-browserhacks.less": {
+	"/less/99-browserhacks.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/css\/99-browserhacks.css",
+		"oAP": "/css/99-browserhacks.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/less\/blogberichten.less": {
+	"/less/blogberichten.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 0,
-		"oAP": "\/blogberichten.css",
+		"oAP": "/blogberichten.css",
 		"oF": 2,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/less\/editor-styles.less": {
+	"/less/editor-styles.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 0,
-		"oAP": "\/css\/editor-styles.css",
+		"oAP": "/css/editor-styles.css",
 		"oF": 0,
 		"oS": 1,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/less\/login-form.less": {
+	"/less/login-form.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 0,
-		"oAP": "\/css\/login-form.css",
+		"oAP": "/css/login-form.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/less\/mailtemplate-met-link.less": {
+	"/less/mailtemplate-met-link.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 0,
-		"oAP": "\/css\/mailtemplate-met-link.css",
+		"oAP": "/css/mailtemplate-met-link.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/less\/mailtemplate-zonder-link.less": {
+	"/less/mailtemplate-zonder-link.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 0,
-		"oAP": "\/css\/mailtemplate-zonder-link.css",
+		"oAP": "/css/mailtemplate-zonder-link.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/less\/mailtemplate.less": {
+	"/less/mailtemplate.less": {
 		"aP": 0,
 		"bl": 0,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
+		"mS": 0,
 		"oA": 1,
-		"oAP": "\/css\/mailtemplate.css",
+		"oAP": "/css/mailtemplate.css",
 		"oF": 0,
 		"oS": 0,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 0,
-		"sM": 0,
 		"sU": 0
 		},
-	"\/less\/style.less": {
+	"/less/style.less": {
 		"aP": 1,
 		"bl": 1,
-		"dJ": 0,
+		"eJ": 0,
 		"ft": 1,
 		"ie": 1,
 		"iI": 0,
 		"ma": 1,
+		"mS": 0,
 		"oA": 0,
-		"oAP": "\/style.css",
+		"oAP": "/style.css",
 		"oF": 2,
 		"oS": 1,
-		"rU": 0,
+		"rwU": 0,
 		"sI": 1,
-		"sM": 1,
 		"sU": 1
 		},
-	"\/mailing-templates\/double_optin.html": {
+	"/mailing-templates/double_optin.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/mailing-templates\/double_optin.html",
+		"oAP": "/mailing-templates/double_optin.html",
 		"oF": 0
 		},
-	"\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/assets\/gebruiker-centraal-logo-boven.png": {
+	"/mailing-templates/gebruikercentraal-v2-zonder-uitschrijflink/assets/gebruiker-centraal-logo-boven.png": {
 		"ft": 32768,
 		"iS": 5465,
 		"oA": 0,
-		"oAP": "\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/assets\/gebruiker-centraal-logo-boven.png",
+		"oAP": "/mailing-templates/gebruikercentraal-v2-zonder-uitschrijflink/assets/gebruiker-centraal-logo-boven.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/assets\/gebruiker-centraal-logo-onder.png": {
+	"/mailing-templates/gebruikercentraal-v2-zonder-uitschrijflink/assets/gebruiker-centraal-logo-onder.png": {
 		"ft": 32768,
 		"iS": 2603,
 		"oA": 0,
-		"oAP": "\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/assets\/gebruiker-centraal-logo-onder.png",
+		"oAP": "/mailing-templates/gebruikercentraal-v2-zonder-uitschrijflink/assets/gebruiker-centraal-logo-onder.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/assets\/gebruiker-centraal-logo.jpg": {
+	"/mailing-templates/gebruikercentraal-v2-zonder-uitschrijflink/assets/gebruiker-centraal-logo.jpg": {
 		"ft": 16384,
 		"iS": 5183,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/assets\/gebruiker-centraal-logo.jpg",
+		"oAP": "/mailing-templates/gebruikercentraal-v2-zonder-uitschrijflink/assets/gebruiker-centraal-logo.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/index.php": {
+	"/mailing-templates/gebruikercentraal-v2-zonder-uitschrijflink/index.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/index.php",
+		"oAP": "/mailing-templates/gebruikercentraal-v2-zonder-uitschrijflink/index.php",
 		"oF": 0
 		},
-	"\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/screenshot.jpg": {
+	"/mailing-templates/gebruikercentraal-v2-zonder-uitschrijflink/screenshot.jpg": {
 		"ft": 16384,
 		"iS": 20591,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/screenshot.jpg",
+		"oAP": "/mailing-templates/gebruikercentraal-v2-zonder-uitschrijflink/screenshot.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/style.css": {
+	"/mailing-templates/gebruikercentraal-v2-zonder-uitschrijflink/style.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 2,
-		"oAP": "\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/style-min.css",
+		"oAP": "/mailing-templates/gebruikercentraal-v2-zonder-uitschrijflink/style-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/style_header.css": {
+	"/mailing-templates/gebruikercentraal-v2-zonder-uitschrijflink/style_header.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 2,
-		"oAP": "\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/style_header-min.css",
+		"oAP": "/mailing-templates/gebruikercentraal-v2-zonder-uitschrijflink/style_header-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/template.html": {
+	"/mailing-templates/gebruikercentraal-v2-zonder-uitschrijflink/template.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/mailing-templates\/gebruikercentraal-v2-zonder-uitschrijflink\/template.html",
+		"oAP": "/mailing-templates/gebruikercentraal-v2-zonder-uitschrijflink/template.html",
 		"oF": 0
 		},
-	"\/mailing-templates\/gebruikercentraal-v2\/assets\/gebruiker-centraal-logo-boven.png": {
+	"/mailing-templates/gebruikercentraal-v2/assets/gebruiker-centraal-logo-boven.png": {
 		"ft": 32768,
 		"iS": 5460,
 		"oA": 0,
-		"oAP": "\/mailing-templates\/gebruikercentraal-v2\/assets\/gebruiker-centraal-logo-boven.png",
+		"oAP": "/mailing-templates/gebruikercentraal-v2/assets/gebruiker-centraal-logo-boven.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/mailing-templates\/gebruikercentraal-v2\/assets\/gebruiker-centraal-logo-onder.png": {
+	"/mailing-templates/gebruikercentraal-v2/assets/gebruiker-centraal-logo-onder.png": {
 		"ft": 32768,
 		"iS": 2603,
 		"oA": 0,
-		"oAP": "\/mailing-templates\/gebruikercentraal-v2\/assets\/gebruiker-centraal-logo-onder.png",
+		"oAP": "/mailing-templates/gebruikercentraal-v2/assets/gebruiker-centraal-logo-onder.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/mailing-templates\/gebruikercentraal-v2\/assets\/gebruiker-centraal-logo.jpg": {
+	"/mailing-templates/gebruikercentraal-v2/assets/gebruiker-centraal-logo.jpg": {
 		"ft": 16384,
 		"iS": 5183,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/mailing-templates\/gebruikercentraal-v2\/assets\/gebruiker-centraal-logo.jpg",
+		"oAP": "/mailing-templates/gebruikercentraal-v2/assets/gebruiker-centraal-logo.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/mailing-templates\/gebruikercentraal-v2\/assets\/mailondertekening-meisje-gebruiker-centraal.png": {
+	"/mailing-templates/gebruikercentraal-v2/assets/mailondertekening-meisje-gebruiker-centraal.png": {
 		"ft": 32768,
 		"iS": 78151,
 		"oA": 0,
-		"oAP": "\/mailing-templates\/gebruikercentraal-v2\/assets\/mailondertekening-meisje-gebruiker-centraal.png",
+		"oAP": "/mailing-templates/gebruikercentraal-v2/assets/mailondertekening-meisje-gebruiker-centraal.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/mailing-templates\/gebruikercentraal-v2\/index.php": {
+	"/mailing-templates/gebruikercentraal-v2/index.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/mailing-templates\/gebruikercentraal-v2\/index.php",
+		"oAP": "/mailing-templates/gebruikercentraal-v2/index.php",
 		"oF": 0
 		},
-	"\/mailing-templates\/gebruikercentraal-v2\/screenshot.jpg": {
+	"/mailing-templates/gebruikercentraal-v2/screenshot.jpg": {
 		"ft": 16384,
 		"iS": 20591,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/mailing-templates\/gebruikercentraal-v2\/screenshot.jpg",
+		"oAP": "/mailing-templates/gebruikercentraal-v2/screenshot.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/mailing-templates\/gebruikercentraal-v2\/style.css": {
+	"/mailing-templates/gebruikercentraal-v2/style.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 2,
-		"oAP": "\/mailing-templates\/gebruikercentraal-v2\/style-min.css",
+		"oAP": "/mailing-templates/gebruikercentraal-v2/style-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"\/mailing-templates\/gebruikercentraal-v2\/style_header.css": {
+	"/mailing-templates/gebruikercentraal-v2/style_header.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 2,
-		"oAP": "\/mailing-templates\/gebruikercentraal-v2\/style_header-min.css",
+		"oAP": "/mailing-templates/gebruikercentraal-v2/style_header-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"\/mailing-templates\/gebruikercentraal-v2\/template.html": {
+	"/mailing-templates/gebruikercentraal-v2/template.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/mailing-templates\/gebruikercentraal-v2\/template.html",
+		"oAP": "/mailing-templates/gebruikercentraal-v2/template.html",
 		"oF": 0
 		},
-	"\/mailing-templates\/gebruikercentraal\/images\/disco.gif": {
+	"/mailing-templates/gebruikercentraal/images/disco.gif": {
 		"ft": 4194304,
 		"iS": 128,
 		"oA": 0,
-		"oAP": "\/mailing-templates\/gebruikercentraal\/images\/disco.gif",
+		"oAP": "/mailing-templates/gebruikercentraal/images/disco.gif",
 		"oF": 0,
 		"opt": 0
 		},
-	"\/mailing-templates\/gebruikercentraal\/images\/header-html-mail-gebruiker-centraal.jpg": {
+	"/mailing-templates/gebruikercentraal/images/header-html-mail-gebruiker-centraal.jpg": {
 		"ft": 16384,
 		"iS": 6125,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/mailing-templates\/gebruikercentraal\/images\/header-html-mail-gebruiker-centraal.jpg",
+		"oAP": "/mailing-templates/gebruikercentraal/images/header-html-mail-gebruiker-centraal.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/mailing-templates\/gebruikercentraal\/images\/header-html-mail-gebruiker-centraal.png": {
+	"/mailing-templates/gebruikercentraal/images/header-html-mail-gebruiker-centraal.png": {
 		"ft": 32768,
 		"iS": 11953,
 		"oA": 0,
-		"oAP": "\/mailing-templates\/gebruikercentraal\/images\/header-html-mail-gebruiker-centraal.png",
+		"oAP": "/mailing-templates/gebruikercentraal/images/header-html-mail-gebruiker-centraal.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"\/mailing-templates\/gebruikercentraal\/index.php": {
+	"/mailing-templates/gebruikercentraal/index.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/mailing-templates\/gebruikercentraal\/index.php",
+		"oAP": "/mailing-templates/gebruikercentraal/index.php",
 		"oF": 0
 		},
-	"\/mailing-templates\/gebruikercentraal\/screenshot.jpg": {
+	"/mailing-templates/gebruikercentraal/screenshot.jpg": {
 		"ft": 16384,
 		"iS": 4055,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "\/mailing-templates\/gebruikercentraal\/screenshot.jpg",
+		"oAP": "/mailing-templates/gebruikercentraal/screenshot.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"\/mailing-templates\/gebruikercentraal\/style.css": {
+	"/mailing-templates/gebruikercentraal/style.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 2,
-		"oAP": "\/mailing-templates\/gebruikercentraal\/style-min.css",
+		"oAP": "/mailing-templates/gebruikercentraal/style-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"\/mailing-templates\/gebruikercentraal\/style_header.css": {
+	"/mailing-templates/gebruikercentraal/style_header.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 2,
-		"oAP": "\/mailing-templates\/gebruikercentraal\/style_header-min.css",
+		"oAP": "/mailing-templates/gebruikercentraal/style_header-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"\/mailing-templates\/gebruikercentraal\/template.html": {
+	"/mailing-templates/gebruikercentraal/template.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/mailing-templates\/gebruikercentraal\/template.html",
+		"oAP": "/mailing-templates/gebruikercentraal/template.html",
 		"oF": 0
 		},
-	"\/nojs.php": {
+	"/nojs.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/nojs.php",
+		"oAP": "/nojs.php",
 		"oF": 0
 		},
-	"\/page.php": {
+	"/page.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/page.php",
+		"oAP": "/page.php",
 		"oF": 0
 		},
-	"\/page_actieteam.php": {
+	"/page_actieteam.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/page_actieteam.php",
+		"oAP": "/page_actieteam.php",
 		"oF": 0
 		},
-	"\/page_alle-auteurs.php": {
+	"/page_alle-auteurs.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/page_alle-auteurs.php",
+		"oAP": "/page_alle-auteurs.php",
 		"oF": 0
 		},
-	"\/page_archive.php": {
+	"/page_archive.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/page_archive.php",
+		"oAP": "/page_archive.php",
 		"oF": 0
 		},
-	"\/page_blog.php": {
+	"/page_blog.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/page_blog.php",
+		"oAP": "/page_blog.php",
 		"oF": 0
 		},
-	"\/page_contentpagina.php": {
+	"/page_contentpagina.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/page_contentpagina.php",
+		"oAP": "/page_contentpagina.php",
 		"oF": 0
 		},
-	"\/page_evenement.php": {
+	"/page_evenement.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/page_evenement.php",
+		"oAP": "/page_evenement.php",
 		"oF": 0
 		},
-	"\/page_evenementen.php": {
+	"/page_evenementen.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/page_evenementen.php",
+		"oAP": "/page_evenementen.php",
 		"oF": 0
 		},
-	"\/page_home.php": {
+	"/page_home.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/page_home.php",
+		"oAP": "/page_home.php",
 		"oF": 0
 		},
-	"\/page_login.php": {
+	"/page_login.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/page_login.php",
+		"oAP": "/page_login.php",
 		"oF": 0
 		},
-	"\/page_mailinglijst.php": {
+	"/page_mailinglijst.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/page_mailinglijst.php",
+		"oAP": "/page_mailinglijst.php",
 		"oF": 0
 		},
-	"\/page_newsletterarchive.php": {
+	"/page_newsletterarchive.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/page_newsletterarchive.php",
+		"oAP": "/page_newsletterarchive.php",
 		"oF": 0
 		},
-	"\/page_overzichtspagina.php": {
+	"/page_overzichtspagina.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/page_overzichtspagina.php",
+		"oAP": "/page_overzichtspagina.php",
 		"oF": 0
 		},
-	"\/page_sitemap.php": {
+	"/page_sitemap.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/page_sitemap.php",
+		"oAP": "/page_sitemap.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/formats\/event_list_item_format.php": {
+	"/plugins/events-manager/formats/event_list_item_format.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/formats\/event_list_item_format.php",
+		"oAP": "/plugins/events-manager/formats/event_list_item_format.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/formats\/event_list_item_format_footer.php": {
+	"/plugins/events-manager/formats/event_list_item_format_footer.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/formats\/event_list_item_format_footer.php",
+		"oAP": "/plugins/events-manager/formats/event_list_item_format_footer.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/formats\/event_list_item_format_header.php": {
+	"/plugins/events-manager/formats/event_list_item_format_header.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/formats\/event_list_item_format_header.php",
+		"oAP": "/plugins/events-manager/formats/event_list_item_format_header.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/formats\/event_single_format.php": {
+	"/plugins/events-manager/formats/event_single_format.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/formats\/event_single_format.php",
+		"oAP": "/plugins/events-manager/formats/event_single_format.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/formats\/location_event_list_item_footer_format.php": {
+	"/plugins/events-manager/formats/location_event_list_item_footer_format.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/formats\/location_event_list_item_footer_format.php",
+		"oAP": "/plugins/events-manager/formats/location_event_list_item_footer_format.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/formats\/location_event_list_item_format.php": {
+	"/plugins/events-manager/formats/location_event_list_item_format.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/formats\/location_event_list_item_format.php",
+		"oAP": "/plugins/events-manager/formats/location_event_list_item_format.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/formats\/location_event_list_item_header_format.php": {
+	"/plugins/events-manager/formats/location_event_list_item_header_format.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/formats\/location_event_list_item_header_format.php",
+		"oAP": "/plugins/events-manager/formats/location_event_list_item_header_format.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/formats\/readme.txt": {
+	"/plugins/events-manager/formats/readme.txt": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/formats\/readme.txt",
+		"oAP": "/plugins/events-manager/formats/readme.txt",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/formats\/single_event_format.php": {
+	"/plugins/events-manager/formats/single_event_format.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/formats\/single_event_format.php",
+		"oAP": "/plugins/events-manager/formats/single_event_format.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/forms\/bookingform\/booking-fields.php": {
+	"/plugins/events-manager/forms/bookingform/booking-fields.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/forms\/bookingform\/booking-fields.php",
+		"oAP": "/plugins/events-manager/forms/bookingform/booking-fields.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/forms\/bookingform\/login.php": {
+	"/plugins/events-manager/forms/bookingform/login.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/forms\/bookingform\/login.php",
+		"oAP": "/plugins/events-manager/forms/bookingform/login.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/forms\/bookingform\/ticket-single.php": {
+	"/plugins/events-manager/forms/bookingform/ticket-single.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/forms\/bookingform\/ticket-single.php",
+		"oAP": "/plugins/events-manager/forms/bookingform/ticket-single.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/forms\/bookingform\/tickets-list.php": {
+	"/plugins/events-manager/forms/bookingform/tickets-list.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/forms\/bookingform\/tickets-list.php",
+		"oAP": "/plugins/events-manager/forms/bookingform/tickets-list.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/forms\/event-editor.php": {
+	"/plugins/events-manager/forms/event-editor.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/forms\/event-editor.php",
+		"oAP": "/plugins/events-manager/forms/event-editor.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/forms\/event\/attributes-public.php": {
+	"/plugins/events-manager/forms/event/attributes-public.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/forms\/event\/attributes-public.php",
+		"oAP": "/plugins/events-manager/forms/event/attributes-public.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/forms\/event\/attributes.php": {
+	"/plugins/events-manager/forms/event/attributes.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/forms\/event\/attributes.php",
+		"oAP": "/plugins/events-manager/forms/event/attributes.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/forms\/event\/booking-stats.php": {
+	"/plugins/events-manager/forms/event/booking-stats.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/forms\/event\/booking-stats.php",
+		"oAP": "/plugins/events-manager/forms/event/booking-stats.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/forms\/event\/bookings-ticket-form.php": {
+	"/plugins/events-manager/forms/event/bookings-ticket-form.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/forms\/event\/bookings-ticket-form.php",
+		"oAP": "/plugins/events-manager/forms/event/bookings-ticket-form.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/forms\/event\/bookings.php": {
+	"/plugins/events-manager/forms/event/bookings.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/forms\/event\/bookings.php",
+		"oAP": "/plugins/events-manager/forms/event/bookings.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/forms\/event\/categories-public.php": {
+	"/plugins/events-manager/forms/event/categories-public.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/forms\/event\/categories-public.php",
+		"oAP": "/plugins/events-manager/forms/event/categories-public.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/forms\/event\/featured-image-public.php": {
+	"/plugins/events-manager/forms/event/featured-image-public.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/forms\/event\/featured-image-public.php",
+		"oAP": "/plugins/events-manager/forms/event/featured-image-public.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/forms\/event\/group.php": {
+	"/plugins/events-manager/forms/event/group.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/forms\/event\/group.php",
+		"oAP": "/plugins/events-manager/forms/event/group.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/forms\/event\/location.php": {
+	"/plugins/events-manager/forms/event/location.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/forms\/event\/location.php",
+		"oAP": "/plugins/events-manager/forms/event/location.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/forms\/event\/recurring-when.php": {
+	"/plugins/events-manager/forms/event/recurring-when.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/forms\/event\/recurring-when.php",
+		"oAP": "/plugins/events-manager/forms/event/recurring-when.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/forms\/event\/when-with-recurring.php": {
+	"/plugins/events-manager/forms/event/when-with-recurring.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/forms\/event\/when-with-recurring.php",
+		"oAP": "/plugins/events-manager/forms/event/when-with-recurring.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/forms\/event\/when.php": {
+	"/plugins/events-manager/forms/event/when.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/forms\/event\/when.php",
+		"oAP": "/plugins/events-manager/forms/event/when.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/forms\/location-editor.php": {
+	"/plugins/events-manager/forms/location-editor.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/forms\/location-editor.php",
+		"oAP": "/plugins/events-manager/forms/location-editor.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/forms\/location\/attributes-public.php": {
+	"/plugins/events-manager/forms/location/attributes-public.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/forms\/location\/attributes-public.php",
+		"oAP": "/plugins/events-manager/forms/location/attributes-public.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/forms\/location\/attributes.php": {
+	"/plugins/events-manager/forms/location/attributes.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/forms\/location\/attributes.php",
+		"oAP": "/plugins/events-manager/forms/location/attributes.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/forms\/location\/featured-image-public.php": {
+	"/plugins/events-manager/forms/location/featured-image-public.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/forms\/location\/featured-image-public.php",
+		"oAP": "/plugins/events-manager/forms/location/featured-image-public.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/forms\/location\/where.php": {
+	"/plugins/events-manager/forms/location/where.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/forms\/location\/where.php",
+		"oAP": "/plugins/events-manager/forms/location/where.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/forms\/map-container.php": {
+	"/plugins/events-manager/forms/map-container.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/forms\/map-container.php",
+		"oAP": "/plugins/events-manager/forms/map-container.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/forms\/readme.txt": {
+	"/plugins/events-manager/forms/readme.txt": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/forms\/readme.txt",
+		"oAP": "/plugins/events-manager/forms/readme.txt",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/forms\/ticket-form.php": {
+	"/plugins/events-manager/forms/ticket-form.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/forms\/ticket-form.php",
+		"oAP": "/plugins/events-manager/forms/ticket-form.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/forms\/tickets-form.php": {
+	"/plugins/events-manager/forms/tickets-form.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/forms\/tickets-form.php",
+		"oAP": "/plugins/events-manager/forms/tickets-form.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/placeholders\/attendees.php": {
+	"/plugins/events-manager/placeholders/attendees.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/placeholders\/attendees.php",
+		"oAP": "/plugins/events-manager/placeholders/attendees.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/placeholders\/attendeeslist.php": {
+	"/plugins/events-manager/placeholders/attendeeslist.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/placeholders\/attendeeslist.php",
+		"oAP": "/plugins/events-manager/placeholders/attendeeslist.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/placeholders\/attendeespendinglist.php": {
+	"/plugins/events-manager/placeholders/attendeespendinglist.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/placeholders\/attendeespendinglist.php",
+		"oAP": "/plugins/events-manager/placeholders/attendeespendinglist.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/placeholders\/bookingbutton.php": {
+	"/plugins/events-manager/placeholders/bookingbutton.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/placeholders\/bookingbutton.php",
+		"oAP": "/plugins/events-manager/placeholders/bookingbutton.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/placeholders\/bookingform.php": {
+	"/plugins/events-manager/placeholders/bookingform.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/placeholders\/bookingform.php",
+		"oAP": "/plugins/events-manager/placeholders/bookingform.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/placeholders\/categories.php": {
+	"/plugins/events-manager/placeholders/categories.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/placeholders\/categories.php",
+		"oAP": "/plugins/events-manager/placeholders/categories.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/placeholders\/eventcategoriesimages.php": {
+	"/plugins/events-manager/placeholders/eventcategoriesimages.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/placeholders\/eventcategoriesimages.php",
+		"oAP": "/plugins/events-manager/placeholders/eventcategoriesimages.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/placeholders\/eventtags.php": {
+	"/plugins/events-manager/placeholders/eventtags.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/placeholders\/eventtags.php",
+		"oAP": "/plugins/events-manager/placeholders/eventtags.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/placeholders\/locationmap.php": {
+	"/plugins/events-manager/placeholders/locationmap.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/placeholders\/locationmap.php",
+		"oAP": "/plugins/events-manager/placeholders/locationmap.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/placeholders\/readme.txt": {
+	"/plugins/events-manager/placeholders/readme.txt": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/placeholders\/readme.txt",
+		"oAP": "/plugins/events-manager/placeholders/readme.txt",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/tables\/events.php": {
+	"/plugins/events-manager/tables/events.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/tables\/events.php",
+		"oAP": "/plugins/events-manager/tables/events.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/tables\/locations.php": {
+	"/plugins/events-manager/tables/locations.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/tables\/locations.php",
+		"oAP": "/plugins/events-manager/tables/locations.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/tables\/readme.txt": {
+	"/plugins/events-manager/tables/readme.txt": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/tables\/readme.txt",
+		"oAP": "/plugins/events-manager/tables/readme.txt",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/bookings-event-printable.php": {
+	"/plugins/events-manager/templates/bookings-event-printable.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/templates\/bookings-event-printable.php",
+		"oAP": "/plugins/events-manager/templates/bookings-event-printable.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/calendar-day.php": {
+	"/plugins/events-manager/templates/calendar-day.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/templates\/calendar-day.php",
+		"oAP": "/plugins/events-manager/templates/calendar-day.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/calendar-full.php": {
+	"/plugins/events-manager/templates/calendar-full.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/plugins\/events-manager\/templates\/calendar-full.php",
+		"oAP": "/plugins/events-manager/templates/calendar-full.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/calendar-small.php": {
+	"/plugins/events-manager/templates/calendar-small.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/plugins\/events-manager\/templates\/calendar-small.php",
+		"oAP": "/plugins/events-manager/templates/calendar-small.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/categories-list.php": {
+	"/plugins/events-manager/templates/categories-list.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/plugins\/events-manager\/templates\/categories-list.php",
+		"oAP": "/plugins/events-manager/templates/categories-list.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/category-single.php": {
+	"/plugins/events-manager/templates/category-single.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/plugins\/events-manager\/templates\/category-single.php",
+		"oAP": "/plugins/events-manager/templates/category-single.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/event-single.php": {
+	"/plugins/events-manager/templates/event-single.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/plugins\/events-manager\/templates\/event-single.php",
+		"oAP": "/plugins/events-manager/templates/event-single.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/events-calendar.php": {
+	"/plugins/events-manager/templates/events-calendar.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/plugins\/events-manager\/templates\/events-calendar.php",
+		"oAP": "/plugins/events-manager/templates/events-calendar.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/events-list-grouped.php": {
+	"/plugins/events-manager/templates/events-list-grouped.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/templates\/events-list-grouped.php",
+		"oAP": "/plugins/events-manager/templates/events-list-grouped.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/events-list.php": {
+	"/plugins/events-manager/templates/events-list.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/templates\/events-list.php",
+		"oAP": "/plugins/events-manager/templates/events-list.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/events-search.php": {
+	"/plugins/events-manager/templates/events-search.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/plugins\/events-manager\/templates\/events-search.php",
+		"oAP": "/plugins/events-manager/templates/events-search.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/ical.php": {
+	"/plugins/events-manager/templates/ical.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/plugins\/events-manager\/templates\/ical.php",
+		"oAP": "/plugins/events-manager/templates/ical.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/location-single.php": {
+	"/plugins/events-manager/templates/location-single.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/templates\/location-single.php",
+		"oAP": "/plugins/events-manager/templates/location-single.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/locations-list.php": {
+	"/plugins/events-manager/templates/locations-list.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/plugins\/events-manager\/templates\/locations-list.php",
+		"oAP": "/plugins/events-manager/templates/locations-list.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/locations-search.php": {
+	"/plugins/events-manager/templates/locations-search.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/plugins\/events-manager\/templates\/locations-search.php",
+		"oAP": "/plugins/events-manager/templates/locations-search.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/map-global.php": {
+	"/plugins/events-manager/templates/map-global.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/plugins\/events-manager\/templates\/map-global.php",
+		"oAP": "/plugins/events-manager/templates/map-global.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/my-bookings.php": {
+	"/plugins/events-manager/templates/my-bookings.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/templates\/my-bookings.php",
+		"oAP": "/plugins/events-manager/templates/my-bookings.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/readme.txt": {
+	"/plugins/events-manager/templates/readme.txt": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/templates\/readme.txt",
+		"oAP": "/plugins/events-manager/templates/readme.txt",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/rss.php": {
+	"/plugins/events-manager/templates/rss.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/templates\/rss.php",
+		"oAP": "/plugins/events-manager/templates/rss.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/search\/categories.php": {
+	"/plugins/events-manager/templates/search/categories.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/templates\/search\/categories.php",
+		"oAP": "/plugins/events-manager/templates/search/categories.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/search\/geo-units.php": {
+	"/plugins/events-manager/templates/search/geo-units.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/templates\/search\/geo-units.php",
+		"oAP": "/plugins/events-manager/templates/search/geo-units.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/search\/geo.js": {
+	"/plugins/events-manager/templates/search/geo.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/plugins\/events-manager\/templates\/search\/min\/geo-min.js",
+		"oAP": "/plugins/events-manager/templates/search/min/geo-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/plugins\/events-manager\/templates\/search\/geo.php": {
+	"/plugins/events-manager/templates/search/geo.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/templates\/search\/geo.php",
+		"oAP": "/plugins/events-manager/templates/search/geo.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/search\/location-countries.php": {
+	"/plugins/events-manager/templates/search/location-countries.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/templates\/search\/location-countries.php",
+		"oAP": "/plugins/events-manager/templates/search/location-countries.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/search\/location-regions.php": {
+	"/plugins/events-manager/templates/search/location-regions.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/templates\/search\/location-regions.php",
+		"oAP": "/plugins/events-manager/templates/search/location-regions.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/search\/location-states.php": {
+	"/plugins/events-manager/templates/search/location-states.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/templates\/search\/location-states.php",
+		"oAP": "/plugins/events-manager/templates/search/location-states.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/search\/location-towns.php": {
+	"/plugins/events-manager/templates/search/location-towns.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/templates\/search\/location-towns.php",
+		"oAP": "/plugins/events-manager/templates/search/location-towns.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/search\/location.php": {
+	"/plugins/events-manager/templates/search/location.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/templates\/search\/location.php",
+		"oAP": "/plugins/events-manager/templates/search/location.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/search\/scope.php": {
+	"/plugins/events-manager/templates/search/scope.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/templates\/search\/scope.php",
+		"oAP": "/plugins/events-manager/templates/search/scope.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/search\/search.php": {
+	"/plugins/events-manager/templates/search/search.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/plugins\/events-manager\/templates\/search\/search.php",
+		"oAP": "/plugins/events-manager/templates/search/search.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/tag-single.php": {
+	"/plugins/events-manager/templates/tag-single.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/plugins\/events-manager\/templates\/tag-single.php",
+		"oAP": "/plugins/events-manager/templates/tag-single.php",
 		"oF": 0
 		},
-	"\/plugins\/events-manager\/templates\/tags-list.php": {
+	"/plugins/events-manager/templates/tags-list.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/plugins\/events-manager\/templates\/tags-list.php",
+		"oAP": "/plugins/events-manager/templates/tags-list.php",
 		"oF": 0
 		},
-	"\/README.html": {
+	"/README.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/README.html",
+		"oAP": "/README.html",
 		"oF": 0
 		},
-	"\/README.md": {
+	"/README.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 0,
@@ -3191,7 +3205,7 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 0,
-		"oAP": "\/README.html",
+		"oAP": "/README.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -3200,116 +3214,109 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/readme.txt": {
+	"/readme.txt": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/readme.txt",
+		"oAP": "/readme.txt",
 		"oF": 0
 		},
-	"\/screenshot.png": {
+	"/screenshot.png": {
 		"ft": 32768,
 		"iS": 87524,
 		"oA": 0,
-		"oAP": "\/screenshot.png",
+		"oAP": "/screenshot.png",
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/search.php": {
+	"/search.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/search.php",
+		"oAP": "/search.php",
 		"oF": 0
 		},
-	"\/single-beeld.php": {
+	"/single-beeld.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/single-beeld.php",
+		"oAP": "/single-beeld.php",
 		"oF": 0
 		},
-	"\/single-brief.php": {
+	"/single-brief.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/single-brief.php",
+		"oAP": "/single-brief.php",
 		"oF": 0
 		},
-	"\/single.php": {
+	"/single.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/single.php",
+		"oAP": "/single.php",
 		"oF": 0
 		},
-	"\/style.css": {
+	"/style.css": {
 		"aP": 0,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 2,
-		"oAP": "\/style-min.css",
+		"oAP": "/style-min.css",
 		"oF": 0,
 		"oS": 0
 		},
-	"\/style.css.map": {
+	"/style.css.map": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/style.css.map",
+		"oAP": "/style.css.map",
 		"oF": 0
 		},
-	"\/verhuizing-hmd-domeinen.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/verhuizing-hmd-domeinen.txt",
-		"oF": 0
-		},
-	"\/widgets\/gc-actieteam-widget.php": {
+	"/widgets/gc-actieteam-widget.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/widgets\/gc-actieteam-widget.php",
+		"oAP": "/widgets/gc-actieteam-widget.php",
 		"oF": 0
 		},
-	"\/widgets\/gc-berichten-widget.php": {
+	"/widgets/gc-berichten-widget.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/widgets\/gc-berichten-widget.php",
+		"oAP": "/widgets/gc-berichten-widget.php",
 		"oF": 0
 		},
-	"\/widgets\/gc-e-newsletter.php": {
+	"/widgets/gc-e-newsletter.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/widgets\/gc-e-newsletter.php",
+		"oAP": "/widgets/gc-e-newsletter.php",
 		"oF": 0
 		},
-	"\/widgets\/gc-event-widget.php": {
+	"/widgets/gc-event-widget.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/widgets\/gc-event-widget.php",
+		"oAP": "/widgets/gc-event-widget.php",
 		"oF": 0
 		},
-	"\/widgets\/gc-footer-widget.php": {
+	"/widgets/gc-footer-widget.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/widgets\/gc-footer-widget.php",
+		"oAP": "/widgets/gc-footer-widget.php",
 		"oF": 0
 		},
-	"\/widgets\/gc-user-welcome-widget.php": {
+	"/widgets/gc-user-welcome-widget.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "\/widgets\/gc-user-welcome-widget.php",
+		"oAP": "/widgets/gc-user-welcome-widget.php",
 		"oF": 0
 		}
 	},
@@ -3317,9 +3324,9 @@
 	{
 		"enabled": 1,
 		"name": "Hook #1",
-		"predicateDataBase64Encoded": "YnBsaXN0MDDUAQIDBAUGYmNYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK8QFgcIDxQcJicqMTU6Oz5CRktMT1VZXV9VJG51bGzTCQoLDA0OXxAXTlNDb21wb3VuZFByZWRpY2F0ZVR5cGVfEA9OU1N1YnByZWRpY2F0ZXNWJGNsYXNzEAKAAoAV0hALERNaTlMub2JqZWN0c6ESgAOAFNQLFRYXGBkaG18QEU5TUmlnaHRFeHByZXNzaW9uXxAQTlNMZWZ0RXhwcmVzc2lvbl8QE05TUHJlZGljYXRlT3BlcmF0b3KAE4AOgASAEdUdHh8gCyEiIyQlWU5TT3BlcmFuZF5OU1NlbGVjdG9yTmFtZV8QEE5TRXhwcmVzc2lvblR5cGVbTlNBcmd1bWVudHOABoAFEAOACIANXHZhbHVlRm9yS2V5OtIfCygpEAGAB9IrLC0uWiRjbGFzc25hbWVYJGNsYXNzZXNfEBBOU1NlbGZFeHByZXNzaW9uoy0vMFxOU0V4cHJlc3Npb25YTlNPYmplY3TSEAsyNKEzgAmADNMLHzY3ODlZTlNLZXlQYXRogAsQCoAKXWlucHV0RnVsbFBhdGjSKyw8PV8QHE5TS2V5UGF0aFNwZWNpZmllckV4cHJlc3Npb26jPC8w0issP0BeTlNNdXRhYmxlQXJyYXmjP0EwV05TQXJyYXnSKyxDRF8QE05TS2V5UGF0aEV4cHJlc3Npb26kQ0UvMF8QFE5TRnVuY3Rpb25FeHByZXNzaW9u00cfC0hJSl8QD05TQ29uc3RhbnRWYWx1ZYAPEACAEF8QEmdlYnJ1aWtlci1jZW50cmFhbNIrLE1OXxAZTlNDb25zdGFudFZhbHVlRXhwcmVzc2lvbqNNLzDUC1BRUlNJKFRaTlNNb2RpZmllcldOU0ZsYWdzXk5TT3BlcmF0b3JUeXBlgBIQY9IrLFZXXxAVTlNJblByZWRpY2F0ZU9wZXJhdG9yo1ZYMF8QE05TUHJlZGljYXRlT3BlcmF0b3LSKyxaW18QFU5TQ29tcGFyaXNvblByZWRpY2F0ZaNaXDBbTlNQcmVkaWNhdGXSKyxBXqJBMNIrLGBhXxATTlNDb21wb3VuZFByZWRpY2F0ZaNgXDBfEA9OU0tleWVkQXJjaGl2ZXLRZGVUcm9vdIABAAgAEQAaACMALQAyADcAUABWAF0AdwCJAJAAkgCUAJYAmwCmAKgAqgCsALUAyQDcAPIA9AD2APgA+gEFAQ8BHgExAT0BPwFBAUMBRQFHAVQBWQFbAV0BYgFtAXYBiQGNAZoBowGoAaoBrAGuAbUBvwHBAcMBxQHTAdgB9wH7AgACDwITAhsCIAI2AjsCUgJZAmsCbQJvAnEChgKLAqcCqwK0Ar8CxwLWAtgC2gLfAvcC+wMRAxYDLgMyAz4DQwNGA0sDYQNlA3cDegN\/AAAAAAAAAgEAAAAAAAAAZgAAAAAAAAAAAAAAAAAAA4E=",
+		"predicateDataBase64Encoded": "YnBsaXN0MDDUAQIDBAUGYmNYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK8QFgcIDxQcJicqMTU6Oz5CRktMT1VZXV9VJG51bGzTCQoLDA0OXxAXTlNDb21wb3VuZFByZWRpY2F0ZVR5cGVfEA9OU1N1YnByZWRpY2F0ZXNWJGNsYXNzEAKAAoAV0hALERNaTlMub2JqZWN0c6ESgAOAFNQLFRYXGBkaG18QEU5TUmlnaHRFeHByZXNzaW9uXxAQTlNMZWZ0RXhwcmVzc2lvbl8QE05TUHJlZGljYXRlT3BlcmF0b3KAE4AOgASAEdUdHh8gCyEiIyQlWU5TT3BlcmFuZF5OU1NlbGVjdG9yTmFtZV8QEE5TRXhwcmVzc2lvblR5cGVbTlNBcmd1bWVudHOABoAFEAOACIANXHZhbHVlRm9yS2V5OtIfCygpEAGAB9IrLC0uWiRjbGFzc25hbWVYJGNsYXNzZXNfEBBOU1NlbGZFeHByZXNzaW9uoy0vMFxOU0V4cHJlc3Npb25YTlNPYmplY3TSEAsyNKEzgAmADNMLHzY3ODlZTlNLZXlQYXRogAsQCoAKXWlucHV0RnVsbFBhdGjSKyw8PV8QHE5TS2V5UGF0aFNwZWNpZmllckV4cHJlc3Npb26jPC8w0issP0BeTlNNdXRhYmxlQXJyYXmjP0EwV05TQXJyYXnSKyxDRF8QE05TS2V5UGF0aEV4cHJlc3Npb26kQ0UvMF8QFE5TRnVuY3Rpb25FeHByZXNzaW9u00cfC0hJSl8QD05TQ29uc3RhbnRWYWx1ZYAPEACAEF8QEmdlYnJ1aWtlci1jZW50cmFhbNIrLE1OXxAZTlNDb25zdGFudFZhbHVlRXhwcmVzc2lvbqNNLzDUC1BRUlNJKFRaTlNNb2RpZmllcldOU0ZsYWdzXk5TT3BlcmF0b3JUeXBlgBIQY9IrLFZXXxAVTlNJblByZWRpY2F0ZU9wZXJhdG9yo1ZYMF8QE05TUHJlZGljYXRlT3BlcmF0b3LSKyxaW18QFU5TQ29tcGFyaXNvblByZWRpY2F0ZaNaXDBbTlNQcmVkaWNhdGXSKyxBXqJBMNIrLGBhXxATTlNDb21wb3VuZFByZWRpY2F0ZaNgXDBfEA9OU0tleWVkQXJjaGl2ZXLRZGVUcm9vdIABAAgAEQAaACMALQAyADcAUABWAF0AdwCJAJAAkgCUAJYAmwCmAKgAqgCsALUAyQDcAPIA9AD2APgA+gEFAQ8BHgExAT0BPwFBAUMBRQFHAVQBWQFbAV0BYgFtAXYBiQGNAZoBowGoAaoBrAGuAbUBvwHBAcMBxQHTAdgB9wH7AgACDwITAhsCIAI2AjsCUgJZAmsCbQJvAnEChgKLAqcCqwK0Ar8CxwLWAtgC2gLfAvcC+wMRAxYDLgMyAz4DQwNGA0sDYQNlA3cDegN/AAAAAAAAAgEAAAAAAAAAZgAAAAAAAAAAAAAAAAAAA4E=",
 		"runOrder": 0,
-		"scriptSourceString": "\nsh '\/shared-paul-files\/Webs\/git-repos\/gebruiker-centraal-wordpress-theme\/distribute.sh' &>\/dev\/null\n",
+		"scriptSourceString": "\nsh '/shared-paul-files/Webs/git-repos/gebruiker-centraal-wordpress-theme/distribute.sh' &>/dev/null\n",
 		"scriptType": 1,
 		"uuidString": "D74556F3-B189-44E8-A456-05FCB526A1E1"
 		}
@@ -3330,7 +3337,7 @@
 	"creationDate": 502823265,
 	"displayValue": "ICTU Gebruiker Centraal",
 	"displayValueWasSetByUser": 1,
-	"iconImageName": "\/images\/apple-touch-icon-144x144-precomposed.png",
+	"iconImageName": "/images/apple-touch-icon-144x144-precomposed.png",
 	"iconImageWasSetByUser": 0
 	},
 "projectSettings": {
@@ -3338,141 +3345,94 @@
 	"alwaysUseExternalServer": 1,
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
-	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
 	"autoprefixerEnableIEGrid": 0,
+	"babel7PresetType": 1,
+	"babelAllowRCFiles": 0,
 	"babelAuxiliaryCommentAfter": "",
 	"babelAuxiliaryCommentBefore": "",
-	"babelConfigFileHandlingType": 0,
+	"babelConfigType": 0,
 	"babelCustomPluginsList": "",
 	"babelCustomPresetsList": "",
 	"babelInsertModuleIDs": 0,
 	"babelModuleID": "",
 	"babelNoComments": 0,
 	"babelPlugins": {
+		"arrow-functions": {
+			"active": 0
+			},
 		"async-generator-functions": {
 			"active": 0
 			},
 		"async-to-generator": {
 			"active": 0
 			},
-		"async-to-module-method": {
+		"block-scoped-functions": {
+			"active": 0
+			},
+		"block-scoping": {
 			"active": 0
 			},
 		"class-properties": {
 			"active": 0
 			},
+		"classes": {
+			"active": 0
+			},
+		"computed-properties": {
+			"active": 0
+			},
 		"decorators": {
 			"active": 0
 			},
-		"decorators-legacy": {
+		"destructuring": {
 			"active": 0
 			},
 		"do-expressions": {
 			"active": 0
 			},
-		"es2015-arrow-functions": {
+		"dotall-regex": {
 			"active": 0
 			},
-		"es2015-block-scoped-functions": {
-			"active": 0
-			},
-		"es2015-block-scoping": {
-			"active": 0
-			},
-		"es2015-classes": {
-			"active": 0
-			},
-		"es2015-computed-properties": {
-			"active": 0
-			},
-		"es2015-constants": {
-			"active": 0
-			},
-		"es2015-destructuring": {
-			"active": 0
-			},
-		"es2015-duplicate-keys": {
-			"active": 0
-			},
-		"es2015-for-of": {
-			"active": 0
-			},
-		"es2015-function-name": {
-			"active": 0
-			},
-		"es2015-literals": {
-			"active": 0
-			},
-		"es2015-modules-amd": {
-			"active": 0
-			},
-		"es2015-modules-commonjs": {
-			"active": 0
-			},
-		"es2015-modules-systemjs": {
-			"active": 0
-			},
-		"es2015-modules-umd": {
-			"active": 0
-			},
-		"es2015-object-super": {
-			"active": 0
-			},
-		"es2015-parameters": {
-			"active": 0
-			},
-		"es2015-shorthand-properties": {
-			"active": 0
-			},
-		"es2015-spread": {
-			"active": 0
-			},
-		"es2015-sticky-regex": {
-			"active": 0
-			},
-		"es2015-template-literals": {
-			"active": 0
-			},
-		"es2015-typeof-symbol": {
-			"active": 0
-			},
-		"es2015-unicode-regex": {
-			"active": 0
-			},
-		"es3-member-expression-literals": {
-			"active": 0
-			},
-		"es3-property-literals": {
-			"active": 0
-			},
-		"es5-property-mutators": {
-			"active": 0
-			},
-		"eval": {
+		"duplicate-keys": {
 			"active": 0
 			},
 		"exponentiation-operator": {
 			"active": 0
 			},
-		"export-extensions": {
+		"export-default-from": {
+			"active": 0
+			},
+		"export-namespace-from": {
 			"active": 0
 			},
 		"external-helpers": {
 			"active": 0
 			},
-		"flow-comments": {
+		"flow-strip-types": {
 			"active": 0
 			},
-		"flow-strip-types": {
+		"for-of": {
 			"active": 0
 			},
 		"function-bind": {
 			"active": 0
 			},
-		"inline-environment-variables": {
+		"function-name": {
+			"active": 0
+			},
+		"function-sent": {
+			"active": 0
+			},
+		"instanceof": {
 			"active": 0
 			},
 		"jscript": {
+			"active": 0
+			},
+		"literals": {
+			"active": 0
+			},
+		"logical-assignment-operators": {
 			"active": 0
 			},
 		"member-expression-literals": {
@@ -3484,7 +3444,28 @@
 		"minify-booleans": {
 			"active": 0
 			},
+		"modules-amd": {
+			"active": 0
+			},
+		"modules-commonjs": {
+			"active": 0
+			},
+		"modules-systemjs": {
+			"active": 0
+			},
+		"modules-umd": {
+			"active": 0
+			},
+		"new-target": {
+			"active": 0
+			},
 		"node-env-inline": {
+			"active": 0
+			},
+		"nullish-coalescing-operator": {
+			"active": 0
+			},
+		"numeric-separator": {
 			"active": 0
 			},
 		"object-assign": {
@@ -3496,7 +3477,25 @@
 		"object-set-prototype-of-to-assign": {
 			"active": 0
 			},
+		"object-super": {
+			"active": 0
+			},
+		"optional-catch-binding": {
+			"active": 0
+			},
+		"optional-chaining": {
+			"active": 0
+			},
+		"parameters": {
+			"active": 0
+			},
+		"pipeline-operator": {
+			"active": 0
+			},
 		"property-literals": {
+			"active": 0
+			},
+		"property-mutators": {
 			"active": 0
 			},
 		"proto-to-assign": {
@@ -3532,53 +3531,46 @@
 		"remove-debugger": {
 			"active": 0
 			},
+		"reserved-words": {
+			"active": 0
+			},
 		"runtime": {
+			"active": 0
+			},
+		"shorthand-properties": {
 			"active": 0
 			},
 		"simplify-comparison-operators": {
 			"active": 0
 			},
+		"spread": {
+			"active": 0
+			},
+		"sticky-regex": {
+			"active": 0
+			},
 		"strict-mode": {
 			"active": 0
 			},
-		"syntax-async-generators": {
+		"template-literals": {
 			"active": 0
 			},
-		"syntax-class-properties": {
+		"throw-expressions": {
 			"active": 0
 			},
-		"syntax-decorators": {
-			"active": 0
-			},
-		"syntax-do-expressions": {
-			"active": 0
-			},
-		"syntax-export-extensions": {
-			"active": 0
-			},
-		"syntax-flow": {
-			"active": 0
-			},
-		"syntax-function-bind": {
-			"active": 0
-			},
-		"syntax-function-sent": {
-			"active": 0
-			},
-		"syntax-jsx": {
-			"active": 0
-			},
-		"syntax-object-rest-spread": {
-			"active": 0
-			},
-		"undeclared-variables-check": {
+		"typeof-symbol": {
 			"active": 0
 			},
 		"undefined-to-void": {
 			"active": 0
+			},
+		"unicode-property-regex": {
+			"active": 0
+			},
+		"unicode-regex": {
+			"active": 0
 			}
 		},
-	"babelPresetType": 193,
 	"babelRetainLines": 0,
 	"bowerAbbreviatedPath": "bower_components",
 	"bowerAutoCreateInfoFile": 1,
@@ -3587,6 +3579,7 @@
 	"bowerSaveDevDependencies": 0,
 	"bowerUseExactVersion": 0,
 	"browserRefreshDelay": 0,
+	"browserslistString": ">0.2%, last 2 versions, Firefox ESR, not dead",
 	"buildFolderActive": 0,
 	"buildFolderName": "build",
 	"cleanBuild": 1,
@@ -3944,6 +3937,10 @@
 			"active": 0,
 			"optionString": "'always', {exceptAfterSingleLine: false}"
 			},
+		"max-classes-per-file": {
+			"active": 0,
+			"optionString": "1"
+			},
 		"max-depth": {
 			"active": 0,
 			"optionString": "{'max': 4}"
@@ -3955,6 +3952,10 @@
 		"max-lines": {
 			"active": 0,
 			"optionString": "{'max': 300, 'skipBlankLines': true, 'skipComments': true}"
+			},
+		"max-lines-per-function": {
+			"active": 0,
+			"optionString": "{'max': 50, 'skipBlankLines': true, 'skipComments': true, 'IIFEs': false}"
 			},
 		"max-nested-callbacks": {
 			"active": 0,
@@ -4000,6 +4001,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-async-promise-executor": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-await-in-loop": {
 			"active": 0,
 			"optionString": ""
@@ -4018,10 +4023,6 @@
 			},
 		"no-case-declarations": {
 			"active": 1,
-			"optionString": ""
-			},
-		"no-catch-shadow": {
-			"active": 0,
 			"optionString": ""
 			},
 		"no-class-assign": {
@@ -4220,9 +4221,13 @@
 			"active": 0,
 			"optionString": "{'ignore': [], 'ignoreArrayIndexes': true, 'enforceConst': false, 'detectObjects': false}"
 			},
+		"no-misleading-character-class": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-mixed-operators": {
 			"active": 0,
-			"optionString": "{'groups': [['+', '-', '*', '\/', '%', '**'], ['&', '|', '^', '~', '<<', '>>', '>>>'], ['==', '!=', '===', '!==', '>', '>=', '<', '<='], ['&&', '||'], ['in', 'instanceof']], 'allowSamePrecedence': true}"
+			"optionString": "{'groups': [['+', '-', '*', '/', '%', '**'], ['&', '|', '^', '~', '<<', '>>', '>>>'], ['==', '!=', '===', '!==', '>', '>=', '<', '<='], ['&&', '||'], ['in', 'instanceof']], 'allowSamePrecedence': true}"
 			},
 		"no-mixed-requires": {
 			"active": 0,
@@ -4576,6 +4581,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"prefer-object-spread": {
+			"active": 0,
+			"optionString": ""
+			},
 		"prefer-promise-reject-errors": {
 			"active": 0,
 			"optionString": "{'allowEmptyReject': false}"
@@ -4604,6 +4613,10 @@
 			"active": 0,
 			"optionString": "'always'"
 			},
+		"require-atomic-updates": {
+			"active": 0,
+			"optionString": ""
+			},
 		"require-await": {
 			"active": 0,
 			"optionString": ""
@@ -4611,6 +4624,10 @@
 		"require-jsdoc": {
 			"active": 0,
 			"optionString": "{'require': {'FunctionDeclaration': true, 'MethodDefinition': false, 'ClassDeclaration': false}}"
+			},
+		"require-unicode-regexp": {
+			"active": 0,
+			"optionString": ""
 			},
 		"require-yield": {
 			"active": 0,
@@ -4666,7 +4683,7 @@
 			},
 		"spaced-comment": {
 			"active": 0,
-			"optionString": "'always', {'line': {'markers': ['\/'], 'exceptions': ['-', '+']}, 'block': {'markers': ['!'], 'exceptions': ['*'], 'balanced': false}}"
+			"optionString": "'always', {'line': {'markers': ['/'], 'exceptions': ['-', '+']}, 'block': {'markers': ['!'], 'exceptions': ['*'], 'balanced': false}}"
 			},
 		"strict": {
 			"active": 0,
@@ -4726,7 +4743,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http:\/\/gcimport.devserver:8201",
+	"externalServerAddress": "http://gcimport.devserver:8201",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",
@@ -5121,7 +5138,6 @@
 		"escapeHTMLCharacters": 0,
 		"noEscapeInAttributes": 0,
 		"outputFormat": 2,
-		"outputStyle": 0,
 		"shouldRunCacheBuster": 0,
 		"useCDATA": 0,
 		"useDoubleQuotes": 0,
@@ -5140,7 +5156,7 @@
 	"languageDefaultsJS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*-min.js",
-		"autoOutputPathRelativePath": "\/min",
+		"autoOutputPathRelativePath": "/min",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 2,
@@ -5172,19 +5188,19 @@
 		"allowInsecureImports": 0,
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.css",
-		"autoOutputPathRelativePath": "..\/css",
+		"autoOutputPathRelativePath": "../css",
 		"autoOutputPathReplace1": "less",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 2,
 		"createSourceMap": 0,
-		"disableJavascript": 0,
+		"enableJavascript": 0,
 		"ieCompatibility": 1,
+		"mathStyle": 0,
 		"outputStyle": 0,
-		"relativeURLS": 0,
+		"rewriteURLStyle": 0,
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"strictImports": 0,
-		"strictMath": 0,
 		"strictUnits": 0
 		},
 	"languageDefaultsMARKDOWN": {
@@ -5240,7 +5256,7 @@
 	"languageDefaultsSASS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.css",
-		"autoOutputPathRelativePath": "..\/css",
+		"autoOutputPathRelativePath": "../css",
 		"autoOutputPathReplace1": "sass",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 2,
@@ -5269,7 +5285,7 @@
 	"languageDefaultsSTYLUS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.css",
-		"autoOutputPathRelativePath": "..\/css",
+		"autoOutputPathRelativePath": "../css",
 		"autoOutputPathReplace1": "stylus",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 2,
@@ -5293,36 +5309,70 @@
 	"languageDefaultsTS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.js",
-		"autoOutputPathRelativePath": "\/js",
+		"autoOutputPathRelativePath": "/js",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 2,
 		"createDeclarationFile": 0,
 		"createSourceMap": 0,
-		"jsxMode": 0,
 		"minifyOutput": 0,
 		"moduleResolutionType": 0,
 		"moduleType": 0,
-		"noImplicitAny": 0,
-		"preserveConstEnums": 0,
 		"removeComments": 0,
-		"suppressImplicitAnyIndexErrors": 0,
 		"targetECMAVersion": 0
 		},
 	"languageDefaultsUserDefined": [
 		],
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, /storage/framework/sessions, node_modules",
 	"sourceFolderName": "source",
 	"susyVersion": 3,
+	"tsAllowSyntheticDefaultImports": 0,
+	"tsAllowUnreachableCode": 0,
+	"tsAllowUnusedLabels": 0,
+	"tsAlwaysStrict": 0,
+	"tsDownlevelIteration": 0,
+	"tsEmitBOM": 0,
+	"tsEmitDecoratorMetadata": 0,
+	"tsESModuleInterop": 0,
+	"tsForceConsistentCasingInFileNames": 0,
+	"tsImportHelpers": 0,
+	"tsIsolatedModules": 0,
+	"tsJSXFactory": "React.createElement",
+	"tsKeyofStringsOnly": 0,
+	"tsNoEmitHelpers": 0,
+	"tsNoFallthroughCasesInSwitch": 0,
+	"tsNoImplicitAny": 0,
+	"tsNoImplicitReturns": 0,
+	"tsNoImplicitThis": 0,
+	"tsNoImplicitUseStrict": 0,
+	"tsNoLib": 0,
+	"tsNoResolve": 0,
+	"tsNoStrictGenericChecks": 0,
+	"tsNoUnusedLocals": 0,
+	"tsNoUnusedParameters": 0,
+	"tsPreserveConstEnums": 0,
+	"tsPreserveSymlinks": 0,
+	"tsResolveJsonModule": 0,
+	"tsSkipLibCheck": 0,
+	"tsStrictFunctionTypes": 0,
+	"tsStrictNullChecks": 0,
+	"tsStrictPropertyInitialization": 0,
+	"tsStripInternal": 0,
+	"tsSuppressExcessPropertyErrors": 0,
+	"tsSuppressImplicitAnyIndexErrors": 0,
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {
-		"ascii-only": {
+		"arguments": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"ascii_only": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"bare-returns": {
+		"bare_returns": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -5330,11 +5380,11 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"bracketize": {
+		"braces": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"cascade": {
+		"collapse_vars": {
 			"active": 1,
 			"flagValue": -1
 			},
@@ -5358,6 +5408,10 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"directives": {
+			"active": 1,
+			"flagValue": -1
+			},
 		"drop_console": {
 			"active": 0,
 			"flagValue": -1
@@ -5374,7 +5428,15 @@
 			"active": 1,
 			"flagValue": -1
 			},
+		"expression": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"hoist_funs": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"hoist_props": {
 			"active": 1,
 			"flagValue": -1
 			},
@@ -5382,20 +5444,32 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"if_return": {
+		"html5_comments": {
 			"active": 1,
 			"flagValue": -1
 			},
-		"indent-level": {
+		"ie8": {
 			"active": 0,
-			"flagValue": 4
+			"flagValue": -1
+			},
+		"if_return": {
+			"active": 1,
+			"flagValue": -1
 			},
 		"indent-start": {
 			"active": 0,
 			"flagValue": 0
 			},
-		"inline-script": {
+		"indent_level": {
 			"active": 0,
+			"flagValue": 4
+			},
+		"inline": {
+			"active": 1,
+			"flagValue": 3
+			},
+		"inline_script": {
+			"active": 1,
 			"flagValue": -1
 			},
 		"join_vars": {
@@ -5410,6 +5484,14 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"keep_infinity": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"keep_quoted_props": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"loops": {
 			"active": 1,
 			"flagValue": -1
@@ -5418,12 +5500,20 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"max-line-len": {
+		"max_line_len": {
 			"active": 1,
 			"flagValue": 32000
 			},
 		"negate_iife": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"passes": {
+			"active": 1,
+			"flagValue": 1
+			},
+		"preserve_line": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"properties": {
@@ -5434,12 +5524,20 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"quote-keys": {
+		"quote_keys": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"screw-ie8": {
-			"active": 0,
+		"quote_style": {
+			"active": 1,
+			"flagValue": 0
+			},
+		"reduce_funcs": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"reduce_vars": {
+			"active": 1,
 			"flagValue": -1
 			},
 		"semicolons": {
@@ -5450,23 +5548,51 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"sort": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"space-colon": {
+		"shebang": {
 			"active": 1,
 			"flagValue": -1
 			},
-		"support-ie8": {
-			"active": 0,
+		"side_effects": {
+			"active": 1,
+			"flagValue": -1
+			},
+		"switches": {
+			"active": 1,
 			"flagValue": -1
 			},
 		"toplevel": {
 			"active": 0,
 			"flagValue": -1
 			},
+		"typeofs": {
+			"active": 1,
+			"flagValue": -1
+			},
 		"unsafe": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_comps": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_Function": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_math": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_proto": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_regexp": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_undefined": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -5478,9 +5604,17 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"webkit": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"width": {
 			"active": 1,
 			"flagValue": 80
+			},
+		"wrap_iife": {
+			"active": 0,
+			"flagValue": -1
 			}
 		},
 	"uglifyReservedNamesString": "$",

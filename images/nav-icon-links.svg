@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="8px" height="13px" viewBox="0 0 8 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 3.8.2 (29753) - http://www.bohemiancoding.com/sketch -->
-    <title>nav-icon-links</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="nav-icon-links" fill="#00586F">
-            <polygon transform="translate(3.529967, 6.295880) scale(-1, -1) translate(-3.529967, -6.295880) " points="1.43603516 0.421193232 -8.81072992e-13 2.21428288 3.49723918 6.13144303 -8.81072992e-13 10.048789 1.43603516 12.1705671 7.0599347 6.13144303"></polygon>
-        </g>
-    </g>
-</svg>
+<svg height="13" viewBox="0 0 8 13" width="8" xmlns="http://www.w3.org/2000/svg"><path d="m1.43603516.42119323-1.43603516 1.79308965 3.49723918 3.91716015-3.49723918 3.91734597 1.43603516 2.1217781 5.62389954-6.03912407z" fill="#00586f" fill-rule="evenodd" transform="matrix(-1 0 0 -1 7.059934 12.59176)"/></svg>

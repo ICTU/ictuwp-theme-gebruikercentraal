@@ -1,14 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
-    <title>icon-circle-error</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="icon-circle-error" fill="#FFFFFF">
-            <g transform="translate(10.000000, 10.000000)" id="Combined-Shape">
-                <path d="M7.11526199,10 L0,2.88473801 L2.88473801,1.42108547e-14 L10,7.11526199 L17.115262,0 L20,2.88473801 L12.884738,10 L20,17.115262 L17.115262,20 L10,12.884738 L2.88473801,20 L-3.55271368e-15,17.115262 L7.11526199,10 Z"></path>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg height="40" viewBox="0 0 40 40" width="40" xmlns="http://www.w3.org/2000/svg"><path d="m7.11526199 10-7.11526199-7.11526199 2.88473801-2.88473801 7.11526199 7.11526199 7.115262-7.11526199 2.884738 2.88473801-7.115262 7.11526199 7.115262 7.115262-2.884738 2.884738-7.115262-7.115262-7.11526199 7.115262-2.88473801-2.884738z" fill="#fff" fill-rule="evenodd" transform="translate(10 10)"/></svg>

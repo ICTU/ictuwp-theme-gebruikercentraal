@@ -1,13 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="25px" height="40px" viewBox="0 0 25 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
-    <title>icon-knop-groen-hover</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="icon-knop-groen-hover">
-            <rect id="Rectangle-14" fill="#FFFFFF" x="-2.69131967" y="0" width="30.7579391" height="40"></rect>
-            <polygon id="Page-1" fill="#0F6229" points="11.4360352 14.438966 10 16.219896 13.4972392 20.1104922 10 24.0012729 11.4360352 26.1086624 17.0599347 20.1104922"></polygon>
-        </g>
-    </g>
-</svg>
+<svg height="40" viewBox="0 0 25 40" width="25" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="m-2.69132 0h30.757939v40h-30.757939z" fill="#fff"/><path d="m11.4360352 14.438966-1.4360352 1.78093 3.4972392 3.8905962-3.4972392 3.8907807 1.4360352 2.1073895 5.6238995-5.9981702z" fill="#0f6229"/></g></svg>

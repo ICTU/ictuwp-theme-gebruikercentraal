@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="25px" height="40px" viewBox="0 0 25 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
-    <title>icon-knop-groen-inverse</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="icon-knop-groen-inverse" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <rect id="Rectangle-14" fill="#167B2F" x="-2.69131967" y="0" width="30.7579391" height="40"></rect>
-        <polygon id="Page-1" fill="#FFFFFF" transform="translate(12.529967, 19.834848) scale(-1, 1) translate(-12.529967, -19.834848) " points="10.4360352 14 9 15.7809299 12.4972392 19.6715262 9 23.5623069 10.4360352 25.6696964 16.0599347 19.6715262"></polygon>
-    </g>
-</svg>
+<svg height="40" viewBox="0 0 25 40" width="25" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="m-2.69132 0h30.757939v40h-30.757939z" fill="#167b2f"/><path d="m10.4360352 14-1.4360352 1.7809299 3.4972392 3.8905963-3.4972392 3.8907807 1.4360352 2.1073895 5.6238995-5.9981702z" fill="#fff" transform="matrix(-1 0 0 1 25.059934 0)"/></g></svg>

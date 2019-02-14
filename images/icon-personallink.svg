@@ -1,13 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="20px" height="17px" viewBox="0 0 20 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
-    <title>icon-personallink</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="icon-personallink" fill="#00586F">
-            <polygon id="icon-personallink-3" points="11.0724375 14.7001462 13.064022 16.7648779 19.7026367 9.88243896 13.064022 3 11.0724375 5.06473169 15.7194679 9.88243896"></polygon>
-            <polygon id="icon-personallink-2" points="8.63019918 5.06473169 6.63861475 3 0 9.88243896 6.63861475 16.7648779 8.63019918 14.7001462 3.98316885 9.88243896"></polygon>
-        </g>
-    </g>
-</svg>
+<svg height="17" viewBox="0 0 20 17" width="20" xmlns="http://www.w3.org/2000/svg"><g fill="#00586f" fill-rule="evenodd"><path d="m11.0724375 14.7001462 1.9915845 2.0647317 6.6386147-6.88243894-6.6386147-6.88243896-1.9915845 2.06473169 4.6470304 4.81770727z"/><path d="m8.63019918 5.06473169-1.99158443-2.06473169-6.63861475 6.88243896 6.63861475 6.88243894 1.99158443-2.0647317-4.64703033-4.81770724z"/></g></svg>
