@@ -1,17 +1,17 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Gebruiker Centraal (3.10.4)\n"
-"POT-Creation-Date: 2019-02-14 09:30+0100\n"
-"PO-Revision-Date: 2019-02-14 09:31+0100\n"
+"Project-Id-Version: Gebruiker Centraal\n"
+"POT-Creation-Date: 2019-02-14 09:18+0100\n"
+"PO-Revision-Date: 2019-02-14 09:20+0100\n"
 "Last-Translator: Paul van Buuren <paul@wbvb.nl>\n"
-"Language-Team: paul@wbvb.nl\n"
-"Language: nl_NL\n"
+"Language-Team: Paul van Buuren <paul@wbvb.nl>\n"
+"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.2.1\n"
 "X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -28,11 +28,11 @@ msgstr ""
 
 #: comments.php:46
 msgid "Comments are closed."
-msgstr "Reageren is niet mogelijk."
+msgstr ""
 
 #: functions.php:283
-msgid "Authors"
-msgstr "Auteurs"
+msgid "Auteurs"
+msgstr ""
 
 #: functions.php:293
 msgid "Home"
@@ -44,19 +44,19 @@ msgstr ""
 
 #: functions.php:309
 msgid "Date archive"
-msgstr "Datum-archief"
+msgstr ""
 
 #: functions.php:310
 msgid "Search result"
-msgstr "Zoekresultaat"
+msgstr ""
 
 #: functions.php:324
 msgid "Whoops"
-msgstr "Ai, foutje"
+msgstr ""
 
 #: functions.php:346
-msgid "Read: '"
-msgstr "Lees '"
+msgid "Lees: \""
+msgstr ""
 
 #: functions.php:411
 msgid "Geschreven door"
@@ -107,7 +107,7 @@ msgstr ""
 
 #: functions.php:699
 msgid "Not found, error 404"
-msgstr "Niet gevonden (fout 404)"
+msgstr ""
 
 #: functions.php:710
 #, php-format
@@ -116,12 +116,10 @@ msgid ""
 "to the site's <a href=\"%s\">homepage</a> and see if you can find what you "
 "are looking for. Or, you can try finding it by using the search form below."
 msgstr ""
-"De pagina die je opvroeg bestaat niet (meer). Wellicht vind je wat je zoekt "
-"via de <a href=\"%s\">homepage</a>.  Of je kunt zoeken op de website."
 
 #: functions.php:756
 msgid "Pages:"
-msgstr "Pagina's:"
+msgstr ""
 
 #: functions.php:769
 #, php-format
@@ -185,11 +183,11 @@ msgstr ""
 
 #: functions.php:1859
 msgid "Older Comments"
-msgstr "Eerdere reacties"
+msgstr ""
 
 #: functions.php:1863
 msgid "Newer Comments"
-msgstr "Recentere reacties"
+msgstr ""
 
 #: functions.php:1901
 msgid "Je reactie moet nog beoordeeld worden"
@@ -358,8 +356,8 @@ msgstr ""
 msgid "Select Menu:"
 msgstr ""
 
-#: includes/widgets.php:153
-msgid " - Select - "
+#: includes/widgets.php:153 widgets/gc-user-welcome-widget.php:159
+msgid "&mdash; Select &mdash;"
 msgstr ""
 
 #: page_contentpagina.php:29 page_overzichtspagina.php:37
@@ -1374,7 +1372,7 @@ msgstr ""
 
 #: search.php:33
 msgid "Search Results for:"
-msgstr "Zoekresultaten voor:"
+msgstr ""
 
 #: widgets/gc-actieteam-widget.php:27
 msgid "Widget voor het tonen van de actieteamleden"
@@ -1601,10 +1599,6 @@ msgstr ""
 msgid "Je bent ingelogd als"
 msgstr ""
 
-#: widgets/gc-user-welcome-widget.php:159
-msgid "- Select -"
-msgstr "- Selecteer -"
-
 #. Theme Name of the plugin/theme
 msgid "Gebruiker Centraal"
 msgstr ""
@@ -1676,6 +1670,3 @@ msgstr ""
 #. Template Name of the plugin/theme
 msgid "Author Page"
 msgstr ""
-
-#~ msgid "&mdash; Select &mdash;"
-#~ msgstr "- selecteer -"

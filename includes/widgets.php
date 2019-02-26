@@ -1,16 +1,16 @@
 <?php
 
 /**
- * Gebruiker Centraal - widgets.php
- * ----------------------------------------------------------------------------------
- * Gebruiker Centraal - widgets
- * ----------------------------------------------------------------------------------
- * @package gebruiker-centraal
- * @author  Paul van Buuren
- * @license GPL-2.0+
- * @version 3.7.1
- * @desc.   actieteampagina, actieteam-widget, skiplinks, 404
- * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// Gebruiker Centraal - widgets.php
+// ----------------------------------------------------------------------------------
+// Gebruiker Centraal - widgets
+// ----------------------------------------------------------------------------------
+// @package gebruiker-centraal
+// @author  Paul van Buuren
+// @license GPL-2.0+
+// @version 3.12.1
+// @desc.   Renamed functions for better sharing.
+// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
  */
  
 
@@ -150,7 +150,7 @@ class GC_WBVB_WIDGET_user_welcome extends WP_Widget {
     <p>
       <label for="<?php echo $this->get_field_id('nav_menu'); ?>"><?php _e('Select Menu:'); ?></label>
       <select id="<?php echo $this->get_field_id('nav_menu'); ?>" name="<?php echo $this->get_field_name('nav_menu'); ?>">
-        <option value="0"><?php _e( '&mdash; Select &mdash;' ) ?></option>
+        <option value="0"><?php _e( ' - Select - ' ) ?></option>
     <?php
       foreach ( $menus as $menu ) {
         echo '<option value="' . $menu->term_id . '"'

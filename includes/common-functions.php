@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.10.4
-// @desc.   Vertalingen bijgewerkt.
+// @version 3.12.1
+// @desc.   Renamed functions for better sharing.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 ///
 
@@ -17,23 +17,6 @@
 
 // Geen footer
 remove_action( 'genesis_footer', 'genesis_do_footer' );
-
-$siteURL = get_stylesheet_directory_uri();
-$siteURL =  preg_replace('|https://|i', '//', $siteURL );
-$siteURL =  preg_replace('|http://|i', '//', $siteURL );
-
-
-define( 'WBVB_THEMEFOLDER', $siteURL );
-
-
-/**
-* Constants
-*/
-
-define( 'ID_MAINCONTENT', 'maincontent' );
-define( 'ID_MAINNAV', 'mainnav' );
-define( 'ID_ZOEKEN', 'zoeken' );
-define( 'ID_SKIPLINKS', 'skiplinks' );
 
 //========================================================================================================
 
@@ -85,20 +68,24 @@ add_filter( 'genesis_attr_site-inner', 'theme_add_content_id', 15 );
 
 //========================================================================================================
 
-function showdebug($file = '', $extra = '') {
+if ( !function_exists( 'showdebug' ) ) {
 
-  if ( WP_THEME_DEBUG && WP_DEBUG ) {
-    
-    $break = Explode('/', $file);
-    $pfile = $break[count($break) - 1]; 
-    
-    echo '<hr><span class="debugmessage" title="' . $file . '">' . $pfile;
-    if ( $extra ) {
-      echo ' - ' . $extra;
+  function showdebug($file = '', $extra = '') {
+  
+    if ( WP_THEME_DEBUG && WP_DEBUG ) {
+      
+      $break = Explode('/', $file);
+      $pfile = $break[count($break) - 1]; 
+      
+      echo '<hr><span class="debugmessage" title="' . $file . '">' . $pfile;
+      if ( $extra ) {
+        echo ' - ' . $extra;
+      }
+      echo '<br/>R: ' . WP_THEME_DEBUG . ' / D: ' .  WP_DEBUG;
+      echo '</span>';
     }
-    echo '<br/>R: ' . WP_THEME_DEBUG . ' / D: ' .  WP_DEBUG;
-    echo '</span>';
   }
+
 }
 
 //========================================================================================================
@@ -572,13 +559,22 @@ add_filter ( 'genesis_edit_post_link' , '__return_false' );
 
 //========================================================================================================
 //* Display a custom Gravatar
-add_filter( 'avatar_defaults', 'sp_gravatar' );
-function sp_gravatar ($avatar) {
-  $custom_avatar = WBVB_THEMEFOLDER . '/images/gravatar.png';
-  $avatar[$custom_avatar] = "Custom Gravatar";
-  return $avatar;
-}
+add_filter( 'avatar_defaults', 'gc_shared_gravatar' );
 
+//========================================================================================================
+
+if ( !function_exists( 'gc_shared_gravatar' ) ) {
+
+  function gc_shared_gravatar ($avatar) {
+
+    $custom_avatar = WBVB_THEMEFOLDER . '/images/gravatar.png';
+    $avatar[$custom_avatar] = "Custom Gravatar";
+    return $avatar;
+
+  }
+  
+}
+  
 //========================================================================================================
 /** Conditional html element classes */
 //remove_action( 'genesis_doctype', 'genesis_do_doctype' );
@@ -602,10 +598,14 @@ function gc_wbvb_set_doctype() {
 
 //========================================================================================================
 
-
 //* Password reset activation E-mail -> Body
-add_filter( 'retrieve_password_message', 'wpse_retrieve_password_message', 10, 2 );
-function wpse_retrieve_password_message( $message, $key ){
+add_filter( 'retrieve_password_message', 'gc_shared_retrieve_password_message', 10, 2 );
+
+//========================================================================================================
+
+if ( !function_exists( 'gc_shared_retrieve_password_message' ) ) {
+
+  function gc_shared_retrieve_password_message( $message, $key ){
     $user_data = '';
     // If no value is posted, return false
     if( ! isset( $_POST['user_login'] )  ){
@@ -613,7 +613,7 @@ function wpse_retrieve_password_message( $message, $key ){
     }
     // Fetch user information from user_login
     if ( strpos( $_POST['user_login'], '@' ) ) {
-
+  
         $user_data = get_user_by( 'email', trim( $_POST['user_login'] ) );
     } else {
         $login = trim($_POST['user_login']);
@@ -625,7 +625,7 @@ function wpse_retrieve_password_message( $message, $key ){
     $user_login = $user_data->user_login;
     $user_email = $user_data->user_email;
     $hostname  = network_site_url();
-
+  
     // Setting up message for retrieve password
     $message = '<p>' . _x( "Hallo,", 'begroeting inlogmail', 'gebruikercentraal' ) . '</p>';
     $message .= "\n\n";
@@ -648,29 +648,93 @@ function wpse_retrieve_password_message( $message, $key ){
     $message .= "\n";
     $message .=  _x( "het Gebruiker Centraal-team", 'afsluiting inlogmail', 'gebruikercentraal' ) . "</p>";
     $message .= "\n\n<a href=\"" . $hostname . "\">" . $_SERVER["HTTP_HOST"] . "</a><br />\n\n" . '<img src="' . $hostname . '/mailingassets/mailondertekening-meisje-gebruiker-centraal.png"/>';
-
+  
     // Return completed message for retrieve password
     return $message;
     
+  }  
+
 }  
 
-
-
-
 //========================================================================================================
-  
 
-function gc_wbvb_debug_css() {
+function gc_shared_add_debug_css() {
   
   if ( WP_THEME_DEBUG && WP_DEBUG ) {
+
     wp_enqueue_style( 'debug-header-check', WBVB_THEMEFOLDER . '/css/header.css', array(), CHILD_THEME_VERSION );
     wp_enqueue_style( 'debug-css', WBVB_THEMEFOLDER . '/css/revenge.css', array(), CHILD_THEME_VERSION );
-    
-//    $custom_css = '#' . ID_SKIPLINKS . '{list-style-type:none;list-style-image:none}#' . ID_SKIPLINKS . ' li{background:0 0;margin-bottom:0}#' . ID_SKIPLINKS . ' li a{position:absolute;top:-1000px;left:50px}#' . ID_SKIPLINKS . ' li a:active,#' . ID_SKIPLINKS . ' li a:focus{position:relative;top:0}';
-//    wp_add_inline_style( 'debug-header-check', $custom_css );
-  
+
   }
 
 }
+
 //========================================================================================================
+
+// Add additional custom style to site header
+function gc_shared_add_site_title_and_logo( $title ) {
+
+	$title = '<div id="sitelogo"><img alt="Logo Gebruiker Centraal" src="' . WBVB_THEMEFOLDER . '/images/logo-mobile.png" /></div>' . $title;
+
+	return $title;
+	
+}
+
+//========================================================================================================
+
+function gc_shared_add_menu_script() {
+
+  if ( ! is_admin() ) {
+    wp_enqueue_script( 'gc-shared-menu', WBVB_THEMEFOLDER . '/js/menu.js', '', '', true );
+  }
   
+}
+
+//========================================================================================================
+
+function gc_shared_add_class_to_header( $attributes ) {
+
+	$attributes['class'] .= ' js-header';
+	return $attributes;
+
+}
+
+//========================================================================================================
+
+function gc_shared_add_class_to_menu( $attributes ) {
+
+	$attributes['class'] .= ' js-menu';
+	return $attributes;
+
+}
+
+//========================================================================================================
+
+function gc_shared_add_wrap_class($attributes) {
+	$attributes['class'] .= ' wrap';
+	return $attributes;
+}
+
+//========================================================================================================
+
+function gc_shared_add_id_to_search_form( $form ) {
+
+  $form = str_replace("<form", '<form tabindex="-1" id="' . ID_ZOEKEN . '" ', $form);
+
+  // remove the submit button
+  $tag_regex = "/<input[^>]*\btype=\"submit\"[^>]*>/i";
+  $form = preg_replace( $tag_regex, '<button id="search-submit" class="searchSubmit" name="search-submit" type="submit" title="' . _x( 'Zoeken', 'label zoekknop', 'wp-rijkshuisstijl' ) . '">' . _x( 'Zoeken', 'label zoekknop', 'wp-rijkshuisstijl' ) . '</button>', $form );
+
+  return apply_filters( 'genesis_search_form', $form );
+
+}
+
+//========================================================================================================
+
+
+//========================================================================================================
+
+
+//========================================================================================================
+
+

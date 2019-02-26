@@ -1,16 +1,16 @@
 <?php
 
 /**
- * Gebruiker Centraal - gc-welcome-widget.php
- * ----------------------------------------------------------------------------------
- * Welkomstbericht voor ingelogde gebruikers. Kan een custom menu tonen.
- * ----------------------------------------------------------------------------------
- * @package gebruiker-centraal
- * @author  Paul van Buuren
- * @license GPL-2.0+
- * @version 3.7.1
- * @desc.   actieteampagina, actieteam-widget, skiplinks, 404
- * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// Gebruiker Centraal - gc-welcome-widget.php
+// ----------------------------------------------------------------------------------
+// Welkomstbericht voor ingelogde gebruikers. Kan een custom menu tonen.
+// ----------------------------------------------------------------------------------
+// @package gebruiker-centraal
+// @author  Paul van Buuren
+// @license GPL-2.0+
+// @version 3.12.1
+// @desc.   Renamed functions for better sharing.
+// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
  */
 
 
@@ -24,7 +24,7 @@ add_action( 'widgets_init', 'gc_wbvb_load_widgets' );
 /**
  * Register widgets for use in the Gebruiker Centraal theme.
  *
- * @since 1.7.0
+// @since 1.7.0
  */
 function gc_wbvb_load_widgets() {
   register_widget( 'GC_WBVB_WIDGET_user_welcome' );
@@ -39,7 +39,7 @@ class GC_WBVB_WIDGET_user_welcome extends WP_Widget {
   /**
    * Holds widget settings defaults, populated in constructor.
    *
-   * @var array
+  // @var array
    */
   protected $defaults;
 
@@ -71,8 +71,8 @@ class GC_WBVB_WIDGET_user_welcome extends WP_Widget {
   /**
    * Echo the widget content.
    *
-   * @param array $args Display arguments including before_title, after_title, before_widget, and after_widget.
-   * @param array $instance The settings for the particular instance of the widget
+  // @param array $args Display arguments including before_title, after_title, before_widget, and after_widget.
+  // @param array $instance The settings for the particular instance of the widget
    */
   function widget( $args, $instance ) {
 
@@ -118,9 +118,9 @@ class GC_WBVB_WIDGET_user_welcome extends WP_Widget {
    * The newly calculated value of $instance should be returned.
    * If "false" is returned, the instance won't be saved/updated.
    *
-   * @param array $new_instance New settings for this instance as input by the user via form()
-   * @param array $old_instance Old settings for this instance
-   * @return array Settings to save or bool false to cancel saving
+  // @param array $new_instance New settings for this instance as input by the user via form()
+  // @param array $old_instance Old settings for this instance
+  // @return array Settings to save or bool false to cancel saving
    */
   function update( $new_instance, $old_instance ) {
 
@@ -136,7 +136,7 @@ class GC_WBVB_WIDGET_user_welcome extends WP_Widget {
   /**
    * Echo the settings update form.
    *
-   * @param array $instance Current settings
+  // @param array $instance Current settings
    */
   function form( $instance ) {
 
@@ -156,7 +156,7 @@ class GC_WBVB_WIDGET_user_welcome extends WP_Widget {
     <p>
       <label for="<?php echo $this->get_field_id('nav_menu'); ?>"><?php _e('Select Menu:', 'gebruikercentraal' ); ?></label>
       <select id="<?php echo $this->get_field_id('nav_menu'); ?>" name="<?php echo $this->get_field_name('nav_menu'); ?>">
-        <option value="0"><?php _e( '&mdash; Select &mdash;', 'gebruikercentraal' ) ?></option>
+        <option value="0"><?php _e( '- Select -', 'gebruikercentraal' ) ?></option>
     <?php
       foreach ( $menus as $menu ) {
         echo '<option value="' . $menu->term_id . '"'

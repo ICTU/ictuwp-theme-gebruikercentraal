@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.10.2
-// @desc.   Styling voor 'niet zo, maar zo' images op richtlijnen-pagina.
+// @version 3.12.1
+// @desc.   Renamed functions for better sharing.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -112,15 +112,25 @@
   
   .full-width-content {
 
+    &.home,
+    &.search,
+    &.single {
+      .content {
+        @media only screen and (min-width: @break_fullwidth ) {
+//          border: 1px solid red;
+          min-height: 400px;
+        }
+      }
+    }
+
     .content {
       width: 100%;
-      min-height: 400px;
       .entry {
         padding-left: .5em;
         padding-right: .5em;
       }
       article.entry {
-        min-height: 400px;
+//        min-height: 400px;
       }
       .widget {
         .entry {
@@ -134,7 +144,7 @@
 
   .full-width-content.search {
     .content {
-      min-height: inherit;
+//      min-height: inherit;
     }
   }
 
@@ -151,7 +161,7 @@
   }
 
   .home.full-width-content .content {
-    min-height: 320px;
+//    min-height: 320px;
     .entry {
       padding-left: 0;
       padding-right: 0;

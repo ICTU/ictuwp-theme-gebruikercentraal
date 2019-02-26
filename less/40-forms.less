@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.11.4
-// @desc.   Revised Gravity Forms styling.
+// @version 3.12.1
+// @desc.   Renamed functions for better sharing.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -177,56 +177,85 @@
   /* Contact Form 7
   --------------------------------------------- */
   .wpcf7 {
-      padding: 0;
+    padding: 0;
+    margin: 0;
+    
+    .wpcf7-display-none {
+      display: none;
+    }
+    
+    .wpcf7-response-output {
+      padding: .5em;
+      color: @txt;
+      .mess_ok();
+    }
+    
+    .wpcf7-not-valid-tip {
+      padding: .1em .5em .5em .5em;
+      .mess_error();
+      //        border-width: 2px;
+      transform: translateY(-2px);
+      width: 100%;
+      display: inline-block;
+      border-top-color: lighten(@mess_error_color,35%);
+      &:before {
+        content: '!';
+        color: @wit;
+        background: @mess_error_color;
+        padding: 0 .5em;
+        margin-right: .5em;
+        .fontsize(18);
+        font-weight: normal;
+      }
+    }
+    input.wpcf7-not-valid {
+      border-color: @mess_error_color;
+    }
+    .wpcf7-validation-errors {
+      .mess_error();
+    }
+    .screen-reader-response {
+      position: absolute;
+      overflow: hidden;
+      clip: rect(1px, 1px, 1px, 1px);
+      height: 1px;
+      width: 1px;
       margin: 0;
-  
-      .wpcf7-display-none {
-        display: none;
-      }
-  
-      .wpcf7-response-output {
-          padding: .5em;
-          color: @txt;
-          .mess_ok();
-      }
-  
-      .wpcf7-not-valid-tip {
-          padding: .1em .5em .5em .5em;
-          .mess_error();
-  //        border-width: 2px;
-          transform: translateY(-2px);
-          width: 100%;
-          display: inline-block;
-          border-top-color: lighten(@mess_error_color,35%);
-          &:before {
-              content: '!';
-              color: @wit;
-              background: @mess_error_color;
-              padding: 0 .5em;
-              margin-right: .5em;
-              .fontsize(18);
-              font-weight: normal;
-          }
-      }
-      input.wpcf7-not-valid {
-          border-color: @mess_error_color;
-      }
-      .wpcf7-validation-errors {
-          .mess_error();
-      }
-      .screen-reader-response {
-        position: absolute;
-        overflow: hidden;
-        clip: rect(1px, 1px, 1px, 1px);
-        height: 1px;
-        width: 1px;
-        margin: 0;
-        padding: 0;
-        border: 0;
-      }
-  
+      padding: 0;
+      border: 0;
+    }
+    
+    fieldset,
+    .wpcf7-checkbox,
+    .wpcf7-radio {
+      overflow: hidden;
+      display: block;
       
+      legend {
+        padding: 0;
+        margin: 0;
+      }
+
+      // collection of list items with radiobuttons
+      
+      .wpcf7-list-item {
+        display: block;
+        clear: both;
+        float: none;
+        padding-left: .5em;
+        .wpcf7-list-item-label {
+          display: inline-block;
+          margin-left: .5em;
+          margin-right: .5em;
+          & + .wpcf7-list-item-label {
+            margin-top: .5em;
+          }
+        }
+      }
+    }
+    
   }
+  
   .sidebar .wpcf7 {
       .wpcf7-not-valid-tip {
           color: @wit;
@@ -470,10 +499,10 @@
 @rbinputmaxwidth: ( 2 * @rbinputmaxwidth2 );
 
 	.gf_page_steps {
-		border-bottom: 3px solid red;
+//		border-bottom: 3px solid red;
 		display: flex;
 		.gf_step {
-			border: 1px solid red;
+//			border: 1px solid red;
 			border-bottom: 3px solid white;
 			padding: .5em 1em;
 			flex: 1;

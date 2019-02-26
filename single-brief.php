@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.9.4
-// @desc.   Bug in single-brief.php opgelost.
+// @version 3.12.1
+// @desc.   Renamed functions for better sharing.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -22,9 +22,9 @@ add_action( 'genesis_entry_content', 'gc_wbvb_add_tweedeveld', 13 );
 add_action( 'genesis_entry_content', 'gc_wbvb_add_download_brief', 14 );
 add_action( 'genesis_entry_content', 'gc_wbvb_beelden_brieven_show_connected_files', 15 );
 
-add_filter('genesis_attr_entry-header', 'gc_wbvb_add_wrap_class');
-add_filter('genesis_attr_entry-content', 'gc_wbvb_add_wrap_class');
-add_filter('genesis_attr_entry-footer', 'gc_wbvb_add_wrap_class');
+add_filter('genesis_attr_entry-header', 'gc_shared_add_wrap_class');
+add_filter('genesis_attr_entry-content', 'gc_shared_add_wrap_class');
+add_filter('genesis_attr_entry-footer', 'gc_shared_add_wrap_class');
 
 
 

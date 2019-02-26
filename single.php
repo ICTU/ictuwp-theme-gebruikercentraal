@@ -1,16 +1,16 @@
 <?php
 
 /**
- * Gebruiker Centraal - single.php
- * ----------------------------------------------------------------------------------
- * pagina
- * ----------------------------------------------------------------------------------
- * @package gebruiker-centraal
- * @author  Paul van Buuren
- * @license GPL-2.0+
- * @version 3.7.1
- * @desc.   actieteampagina, actieteam-widget, skiplinks, 404
- * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// Gebruiker Centraal - single.php
+// ----------------------------------------------------------------------------------
+// pagina
+// ----------------------------------------------------------------------------------
+// @package gebruiker-centraal
+// @author  Paul van Buuren
+// @license GPL-2.0+
+// @version 3.12.1
+// @desc.   Renamed functions for better sharing.
+// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
  */
 
 showdebug(__FILE__, '/');
@@ -23,9 +23,9 @@ add_action( 'genesis_entry_content', 'eo_prev_next_post_nav', 20 );
 add_action( 'genesis_entry_content', 'gc_wbvb_post_print_links', 10 );
 add_action( 'genesis_entry_content', 'gc_wbvb_post_print_downloads', 11 );
 
-add_filter('genesis_attr_entry-header', 'gc_wbvb_add_wrap_class');
-add_filter('genesis_attr_entry-content', 'gc_wbvb_add_wrap_class');
-add_filter('genesis_attr_entry-footer', 'gc_wbvb_add_wrap_class');
+add_filter('genesis_attr_entry-header', 'gc_shared_add_wrap_class');
+add_filter('genesis_attr_entry-content', 'gc_shared_add_wrap_class');
+add_filter('genesis_attr_entry-footer', 'gc_shared_add_wrap_class');
 
 
 

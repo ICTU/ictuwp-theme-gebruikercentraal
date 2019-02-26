@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.11.5
-// @desc.   Bug removed that caused empty author page.
+// @version 3.12.1
+// @desc.   Renamed functions for better sharing.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.11.5' );
-define( 'CHILD_THEME_DESCRIPTION', "3.11.5	 - Bug removed that caused empty author page." );
+define( 'CHILD_THEME_VERSION', '3.12.1' );
+define( 'CHILD_THEME_DESCRIPTION', "3.12.1	 - Renamed functions for better sharing." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 
@@ -69,7 +69,16 @@ define( 'GC_TAX_ORGANISATIE', 'organisatie' );
 
 define( 'ACF_PLUGIN_NOT_ACTIVE_WARNING', '<p style="position: absolute; top: 3em; left: 3em; display: block; padding: .5em; background: yellow; color: black;">de ACF custom fields plugin is niet actief.</p>' );
 
+define( 'ID_MAINCONTENT', 'maincontent' );
+define( 'ID_MAINNAV', 'mainnav' );
+define( 'ID_ZOEKEN', 'zoeken' );
+define( 'ID_SKIPLINKS', 'skiplinks' );
 
+$siteURL = get_stylesheet_directory_uri();
+$siteURL =  preg_replace('|https://|i', '//', $siteURL );
+$siteURL =  preg_replace('|http://|i', '//', $siteURL );
+
+define( 'WBVB_THEMEFOLDER', $siteURL );
 
 //========================================================================================================
 
@@ -271,7 +280,7 @@ function gc_wbvb_breadcrumb_args( $args ) {
       $auteursoverzichtpagina_url   = get_field('auteursoverzichtpagina_link', 'option');
       $auteursoverzichtpagina_start = '<a href="' . $auteursoverzichtpagina_url . '">' ;
       $auteursoverzichtpagina_end   = '</a>' . $separator;
-    	$args['labels']['author']     = $auteursoverzichtpagina_start . __( "Auteurs", 'gebruikercentraal' ) . $auteursoverzichtpagina_end;
+    	$args['labels']['author']     = $auteursoverzichtpagina_start . __( "Authors", 'gebruikercentraal' ) . $auteursoverzichtpagina_end;
     else:
     	$args['labels']['author']     = '';
     endif;
@@ -297,8 +306,8 @@ function gc_wbvb_breadcrumb_args( $args ) {
 	$args['labels']['prefix']         = '';
 	$args['labels']['category']       = '';
 	$args['labels']['tag']            = __( "Label", 'gebruikercentraal' ) . $separator;
-	$args['labels']['date']           = __( "Datum-archief", 'gebruikercentraal' ) . $separator;
-	$args['labels']['search']         = __( "Zoekresultaat", 'gebruikercentraal' ) . $separator;
+	$args['labels']['date']           = __( "Date archive", 'gebruikercentraal' ) . $separator;
+	$args['labels']['search']         = __( "Search result", 'gebruikercentraal' ) . $separator;
 	$args['labels']['tax']            = '';
 
   if ( isset( $wp_query->query_vars['taxonomy'] ) ) {
@@ -312,7 +321,7 @@ function gc_wbvb_breadcrumb_args( $args ) {
 
 	
 	$args['labels']['post_type']      = ''; //__( "Berichten", 'gebruikercentraal' );
-	$args['labels']['404']            = __( "Oeps", 'gebruikercentraal' );
+	$args['labels']['404']            = __( "Whoops", 'gebruikercentraal' );
 
 
   return $args;
@@ -320,18 +329,10 @@ function gc_wbvb_breadcrumb_args( $args ) {
 }
 
 //========================================================================================================
-add_filter('genesis_seo_title', 'gc_wbvb_add_site_title' );
 
-// Add additional custom style to site header
-function gc_wbvb_add_site_title( $title ) {
-	
-//	$title = '<div id="sitelogo"><a href="' . esc_url( home_url( '/' ) ) . '"><img alt="Logo Gebruiker Centraal" src="' . WBVB_THEMEFOLDER . '/images/logo-mobile.png" /></a></div>' . $title;
+// logo structure shared with OD theme
+add_filter('genesis_seo_title', 'gc_shared_add_site_title_and_logo' );
 
-	$title = '<div id="sitelogo"><img alt="Logo Gebruiker Centraal" src="' . WBVB_THEMEFOLDER . '/images/logo-mobile.png" /></div>' . $title;
-
-	return $title;
-	
-}
 //========================================================================================================
 
 add_action( 'genesis_after_entry_content', 'gc_wbvb_after_entry_content' );
@@ -342,7 +343,7 @@ function gc_wbvb_after_entry_content() {
     global $post;
 
     if ( ! is_singular() ) {
-    	printf( '<div class="read-more"><a href="' . get_permalink() . '">%s%s%s', __( "Lees: \"", 'gebruikercentraal' ) , get_the_title(), '"</a></div>' );
+    	printf( '<div class="read-more"><a href="' . get_permalink() . '">%s%s%s', __( "Read: '", 'gebruikercentraal' ) , get_the_title(), "'</a></div>" );
     }
 }
 
@@ -600,7 +601,7 @@ function debugmessage($message, $tag = 'p', $context = '') {
 add_action( 'wp_enqueue_scripts', 'gc_wbvb_add_css' );
 
 if ( WP_DEBUG ) {
-    add_action( 'wp_enqueue_scripts', 'gc_wbvb_debug_css' );
+    add_action( 'wp_enqueue_scripts', 'gc_shared_add_debug_css' );
 }
 
 //========================================================================================================
@@ -2145,38 +2146,12 @@ function eo_prev_next_post_nav() {
 
 //========================================================================================================
 
-function gc_wbvb_add_wrap_class($attributes) {
-	$attributes['class'] .= ' wrap';
-	return $attributes;
-}
+add_action( 'wp_enqueue_scripts', 'gc_shared_add_menu_script' );
 
 //========================================================================================================
 
-add_action( 'wp_enqueue_scripts', 'wbvb_jqscripts' );
-
-function wbvb_jqscripts() {
-  if ( ! is_admin() ) {
-//    wp_enqueue_script( 'wbvb-modernista-menu', WBVB_THEMEFOLDER . '/js/min/menu-min.js', '', '', true );
-    wp_enqueue_script( 'wbvb-modernista-menu', WBVB_THEMEFOLDER . '/js/menu.js', '', '', true );
-  }
-}
-
-//========================================================================================================
-
-//add_filter( 'genesis_attr_site-header', 'add_class_to_header' );
-
-function add_class_to_header( $attributes ) {
-	$attributes['class'] .= ' js-header';
-	return $attributes;
-}
-
-add_filter( 'genesis_attr_nav-primary', 'add_class_to_menu' );
-add_filter( 'genesis_attr_nav-secondary', 'add_class_to_menu' );
-
-function add_class_to_menu( $attributes ) {
-	$attributes['class'] .= ' js-menu';
-	return $attributes;
-}
+add_filter( 'genesis_attr_nav-primary', 'gc_shared_add_class_to_menu' );
+add_filter( 'genesis_attr_nav-secondary', 'gc_shared_add_class_to_menu' );
 
 //========================================================================================================
 
