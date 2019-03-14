@@ -7,11 +7,12 @@
 		"uuidString": "F739CC51-1ABE-4F0E-A0E2-DDC4D4432249"
 		}
 	],
-"creatorBuild": "28905",
+"creatorBuild": "29156",
 "files": {
 	"/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/.gitignore",
 		"oF": 0
@@ -19,6 +20,7 @@
 	"/404.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/404.php",
 		"oF": 0
@@ -26,6 +28,7 @@
 	"/archive.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/archive.php",
 		"oF": 0
@@ -33,6 +36,7 @@
 	"/author.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 1,
 		"oAP": "/author.php",
 		"oF": 0
@@ -50,6 +54,7 @@
 	"/comments.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/comments.php",
 		"oF": 0
@@ -158,6 +163,7 @@
 	"/distribute.sh": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/distribute.sh",
 		"oF": 0
@@ -165,6 +171,7 @@
 	"/fonts/icons.eot": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/fonts/icons.eot",
 		"oF": 0
@@ -182,6 +189,7 @@
 	"/fonts/icons.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/fonts/icons.ttf",
 		"oF": 0
@@ -189,6 +197,7 @@
 	"/fonts/icons.woff": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/fonts/icons.woff",
 		"oF": 0
@@ -196,6 +205,7 @@
 	"/fonts/leaguegothic.eot": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/fonts/leaguegothic.eot",
 		"oF": 0
@@ -213,6 +223,7 @@
 	"/fonts/leaguegothic.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/fonts/leaguegothic.ttf",
 		"oF": 0
@@ -220,6 +231,7 @@
 	"/fonts/leaguegothic.woff": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/fonts/leaguegothic.woff",
 		"oF": 0
@@ -227,6 +239,7 @@
 	"/fonts/montserrat-light-webfont.eot": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/fonts/montserrat-light-webfont.eot",
 		"oF": 0
@@ -244,6 +257,7 @@
 	"/fonts/montserrat-light-webfont.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/fonts/montserrat-light-webfont.ttf",
 		"oF": 0
@@ -251,6 +265,7 @@
 	"/fonts/montserrat-light-webfont.woff": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/fonts/montserrat-light-webfont.woff",
 		"oF": 0
@@ -258,6 +273,7 @@
 	"/fonts/montserrat-light-webfont.woff2": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/fonts/montserrat-light-webfont.woff2",
 		"oF": 0
@@ -265,6 +281,7 @@
 	"/fonts/montserrat-regular-webfont.eot": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/fonts/montserrat-regular-webfont.eot",
 		"oF": 0
@@ -282,6 +299,7 @@
 	"/fonts/montserrat-regular-webfont.ttf": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/fonts/montserrat-regular-webfont.ttf",
 		"oF": 0
@@ -289,6 +307,7 @@
 	"/fonts/montserrat-regular-webfont.woff": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/fonts/montserrat-regular-webfont.woff",
 		"oF": 0
@@ -296,6 +315,7 @@
 	"/fonts/montserrat-regular-webfont.woff2": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/fonts/montserrat-regular-webfont.woff2",
 		"oF": 0
@@ -303,6 +323,7 @@
 	"/fonts/montserrat-unused-fonts.zip": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/fonts/montserrat-unused-fonts.zip",
 		"oF": 0
@@ -310,6 +331,7 @@
 	"/functions.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/functions.php",
 		"oF": 0
@@ -328,6 +350,7 @@
 	"/header.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/header.php",
 		"oF": 0
@@ -604,6 +627,7 @@
 	"/images/favicon.ico": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/images/favicon.ico",
 		"oF": 0
@@ -1752,8 +1776,8 @@
 		"oA": 0,
 		"oAP": "/images/voorbeeld-persoon-1.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1773,8 +1797,8 @@
 		"oA": 0,
 		"oAP": "/images/voorbeeld-persoon-2.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1791,6 +1815,7 @@
 	"/includes/author-box.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/includes/author-box.php",
 		"oF": 0
@@ -1798,6 +1823,7 @@
 	"/includes/common-functions.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/includes/common-functions.php",
 		"oF": 0
@@ -1805,6 +1831,7 @@
 	"/includes/custom-fields-and-post-types.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/includes/custom-fields-and-post-types.php",
 		"oF": 0
@@ -1812,11 +1839,13 @@
 	"/includes/widgets.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/includes/widgets.php",
 		"oF": 0
 		},
 	"/js/commentform.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -1827,6 +1856,7 @@
 		"tS": 0
 		},
 	"/js/criticalcss.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -1837,6 +1867,7 @@
 		"tS": 0
 		},
 	"/js/menu.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -1847,6 +1878,7 @@
 		"tS": 0
 		},
 	"/js/min/commentform-min.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -1857,6 +1889,7 @@
 		"tS": 0
 		},
 	"/js/min/menu-min.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -1869,6 +1902,7 @@
 	"/languages/e-newsletters/email-newsletter-nl_NL.mo": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/languages/e-newsletters/email-newsletter-nl_NL.mo",
 		"oF": 0
@@ -1876,6 +1910,7 @@
 	"/languages/e-newsletters/email-newsletter-nl_NL.po": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/languages/e-newsletters/email-newsletter-nl_NL.po",
 		"oF": 0
@@ -1883,6 +1918,7 @@
 	"/languages/en_US.mo": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/languages/en_US.mo",
 		"oF": 0
@@ -1890,6 +1926,7 @@
 	"/languages/en_US.po": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/languages/en_US.po",
 		"oF": 0
@@ -1897,6 +1934,7 @@
 	"/languages/gebruikercentraal.pot": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/languages/gebruikercentraal.pot",
 		"oF": 0
@@ -1904,6 +1942,7 @@
 	"/languages/nl_NL.mo": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/languages/nl_NL.mo",
 		"oF": 0
@@ -1911,6 +1950,7 @@
 	"/languages/nl_NL.po": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/languages/nl_NL.po",
 		"oF": 0
@@ -2275,6 +2315,7 @@
 	"/mailing-templates/double_optin.html": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/mailing-templates/double_optin.html",
 		"oF": 0
@@ -2315,6 +2356,7 @@
 	"/mailing-templates/gebruikercentraal-v2-zonder-uitschrijflink/index.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/mailing-templates/gebruikercentraal-v2-zonder-uitschrijflink/index.php",
 		"oF": 0
@@ -2353,6 +2395,7 @@
 	"/mailing-templates/gebruikercentraal-v2-zonder-uitschrijflink/template.html": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/mailing-templates/gebruikercentraal-v2-zonder-uitschrijflink/template.html",
 		"oF": 0
@@ -2404,6 +2447,7 @@
 	"/mailing-templates/gebruikercentraal-v2/index.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/mailing-templates/gebruikercentraal-v2/index.php",
 		"oF": 0
@@ -2442,6 +2486,7 @@
 	"/mailing-templates/gebruikercentraal-v2/template.html": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/mailing-templates/gebruikercentraal-v2/template.html",
 		"oF": 0
@@ -2479,6 +2524,7 @@
 	"/mailing-templates/gebruikercentraal/index.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/mailing-templates/gebruikercentraal/index.php",
 		"oF": 0
@@ -2517,6 +2563,7 @@
 	"/mailing-templates/gebruikercentraal/template.html": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/mailing-templates/gebruikercentraal/template.html",
 		"oF": 0
@@ -2524,6 +2571,7 @@
 	"/nojs.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/nojs.php",
 		"oF": 0
@@ -2531,6 +2579,7 @@
 	"/page.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/page.php",
 		"oF": 0
@@ -2538,6 +2587,7 @@
 	"/page_actieteam.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/page_actieteam.php",
 		"oF": 0
@@ -2545,6 +2595,7 @@
 	"/page_alle-auteurs.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/page_alle-auteurs.php",
 		"oF": 0
@@ -2552,6 +2603,7 @@
 	"/page_archive.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/page_archive.php",
 		"oF": 0
@@ -2559,6 +2611,7 @@
 	"/page_blog.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/page_blog.php",
 		"oF": 0
@@ -2566,6 +2619,7 @@
 	"/page_contentpagina.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/page_contentpagina.php",
 		"oF": 0
@@ -2573,6 +2627,7 @@
 	"/page_evenement.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/page_evenement.php",
 		"oF": 0
@@ -2580,6 +2635,7 @@
 	"/page_evenementen.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/page_evenementen.php",
 		"oF": 0
@@ -2587,6 +2643,7 @@
 	"/page_home.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/page_home.php",
 		"oF": 0
@@ -2594,6 +2651,7 @@
 	"/page_login.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/page_login.php",
 		"oF": 0
@@ -2601,6 +2659,7 @@
 	"/page_mailinglijst.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/page_mailinglijst.php",
 		"oF": 0
@@ -2608,6 +2667,7 @@
 	"/page_newsletterarchive.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/page_newsletterarchive.php",
 		"oF": 0
@@ -2615,6 +2675,7 @@
 	"/page_overzichtspagina.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/page_overzichtspagina.php",
 		"oF": 0
@@ -2622,6 +2683,7 @@
 	"/page_sitemap.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/page_sitemap.php",
 		"oF": 0
@@ -2629,6 +2691,7 @@
 	"/plugins/events-manager/formats/event_list_item_format.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/formats/event_list_item_format.php",
 		"oF": 0
@@ -2636,6 +2699,7 @@
 	"/plugins/events-manager/formats/event_list_item_format_footer.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/formats/event_list_item_format_footer.php",
 		"oF": 0
@@ -2643,6 +2707,7 @@
 	"/plugins/events-manager/formats/event_list_item_format_header.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/formats/event_list_item_format_header.php",
 		"oF": 0
@@ -2650,6 +2715,7 @@
 	"/plugins/events-manager/formats/event_single_format.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/formats/event_single_format.php",
 		"oF": 0
@@ -2657,6 +2723,7 @@
 	"/plugins/events-manager/formats/location_event_list_item_footer_format.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/formats/location_event_list_item_footer_format.php",
 		"oF": 0
@@ -2664,6 +2731,7 @@
 	"/plugins/events-manager/formats/location_event_list_item_format.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/formats/location_event_list_item_format.php",
 		"oF": 0
@@ -2671,6 +2739,7 @@
 	"/plugins/events-manager/formats/location_event_list_item_header_format.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/formats/location_event_list_item_header_format.php",
 		"oF": 0
@@ -2678,6 +2747,7 @@
 	"/plugins/events-manager/formats/readme.txt": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/formats/readme.txt",
 		"oF": 0
@@ -2685,20 +2755,15 @@
 	"/plugins/events-manager/formats/single_event_format.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/formats/single_event_format.php",
-		"oF": 0
-		},
-	"/plugins/events-manager/forms/bookingform/booking-fields.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/plugins/events-manager/forms/bookingform/booking-fields.php",
 		"oF": 0
 		},
 	"/plugins/events-manager/forms/bookingform/login.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/forms/bookingform/login.php",
 		"oF": 0
@@ -2706,6 +2771,7 @@
 	"/plugins/events-manager/forms/bookingform/ticket-single.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/forms/bookingform/ticket-single.php",
 		"oF": 0
@@ -2713,13 +2779,23 @@
 	"/plugins/events-manager/forms/bookingform/tickets-list.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/forms/bookingform/tickets-list.php",
+		"oF": 0
+		},
+	"/plugins/events-manager/forms/bookingform/XXX_booking-fields.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/plugins/events-manager/forms/bookingform/XXX_booking-fields.php",
 		"oF": 0
 		},
 	"/plugins/events-manager/forms/event-editor.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/forms/event-editor.php",
 		"oF": 0
@@ -2727,6 +2803,7 @@
 	"/plugins/events-manager/forms/event/attributes-public.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/forms/event/attributes-public.php",
 		"oF": 0
@@ -2734,6 +2811,7 @@
 	"/plugins/events-manager/forms/event/attributes.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/forms/event/attributes.php",
 		"oF": 0
@@ -2741,6 +2819,7 @@
 	"/plugins/events-manager/forms/event/booking-stats.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/forms/event/booking-stats.php",
 		"oF": 0
@@ -2748,6 +2827,7 @@
 	"/plugins/events-manager/forms/event/bookings-ticket-form.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/forms/event/bookings-ticket-form.php",
 		"oF": 0
@@ -2755,6 +2835,7 @@
 	"/plugins/events-manager/forms/event/bookings.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/forms/event/bookings.php",
 		"oF": 0
@@ -2762,6 +2843,7 @@
 	"/plugins/events-manager/forms/event/categories-public.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/forms/event/categories-public.php",
 		"oF": 0
@@ -2769,6 +2851,7 @@
 	"/plugins/events-manager/forms/event/featured-image-public.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/forms/event/featured-image-public.php",
 		"oF": 0
@@ -2776,6 +2859,7 @@
 	"/plugins/events-manager/forms/event/group.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/forms/event/group.php",
 		"oF": 0
@@ -2783,6 +2867,7 @@
 	"/plugins/events-manager/forms/event/location.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/forms/event/location.php",
 		"oF": 0
@@ -2790,6 +2875,7 @@
 	"/plugins/events-manager/forms/event/recurring-when.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/forms/event/recurring-when.php",
 		"oF": 0
@@ -2797,6 +2883,7 @@
 	"/plugins/events-manager/forms/event/when-with-recurring.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/forms/event/when-with-recurring.php",
 		"oF": 0
@@ -2804,6 +2891,7 @@
 	"/plugins/events-manager/forms/event/when.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/forms/event/when.php",
 		"oF": 0
@@ -2811,6 +2899,7 @@
 	"/plugins/events-manager/forms/location-editor.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/forms/location-editor.php",
 		"oF": 0
@@ -2818,6 +2907,7 @@
 	"/plugins/events-manager/forms/location/attributes-public.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/forms/location/attributes-public.php",
 		"oF": 0
@@ -2825,6 +2915,7 @@
 	"/plugins/events-manager/forms/location/attributes.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/forms/location/attributes.php",
 		"oF": 0
@@ -2832,6 +2923,7 @@
 	"/plugins/events-manager/forms/location/featured-image-public.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/forms/location/featured-image-public.php",
 		"oF": 0
@@ -2839,6 +2931,7 @@
 	"/plugins/events-manager/forms/location/where.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/forms/location/where.php",
 		"oF": 0
@@ -2846,6 +2939,7 @@
 	"/plugins/events-manager/forms/map-container.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/forms/map-container.php",
 		"oF": 0
@@ -2853,6 +2947,7 @@
 	"/plugins/events-manager/forms/readme.txt": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/forms/readme.txt",
 		"oF": 0
@@ -2860,6 +2955,7 @@
 	"/plugins/events-manager/forms/ticket-form.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/forms/ticket-form.php",
 		"oF": 0
@@ -2867,6 +2963,7 @@
 	"/plugins/events-manager/forms/tickets-form.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/forms/tickets-form.php",
 		"oF": 0
@@ -2874,6 +2971,7 @@
 	"/plugins/events-manager/placeholders/attendees.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/placeholders/attendees.php",
 		"oF": 0
@@ -2881,6 +2979,7 @@
 	"/plugins/events-manager/placeholders/attendeeslist.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/placeholders/attendeeslist.php",
 		"oF": 0
@@ -2888,6 +2987,7 @@
 	"/plugins/events-manager/placeholders/attendeespendinglist.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/placeholders/attendeespendinglist.php",
 		"oF": 0
@@ -2895,20 +2995,15 @@
 	"/plugins/events-manager/placeholders/bookingbutton.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/placeholders/bookingbutton.php",
-		"oF": 0
-		},
-	"/plugins/events-manager/placeholders/bookingform.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/plugins/events-manager/placeholders/bookingform.php",
 		"oF": 0
 		},
 	"/plugins/events-manager/placeholders/categories.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/placeholders/categories.php",
 		"oF": 0
@@ -2916,6 +3011,7 @@
 	"/plugins/events-manager/placeholders/eventcategoriesimages.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/placeholders/eventcategoriesimages.php",
 		"oF": 0
@@ -2923,6 +3019,7 @@
 	"/plugins/events-manager/placeholders/eventtags.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/placeholders/eventtags.php",
 		"oF": 0
@@ -2930,6 +3027,7 @@
 	"/plugins/events-manager/placeholders/locationmap.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/placeholders/locationmap.php",
 		"oF": 0
@@ -2937,13 +3035,23 @@
 	"/plugins/events-manager/placeholders/readme.txt": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/placeholders/readme.txt",
+		"oF": 0
+		},
+	"/plugins/events-manager/placeholders/XXX_bookingform.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/plugins/events-manager/placeholders/XXX_bookingform.php",
 		"oF": 0
 		},
 	"/plugins/events-manager/tables/events.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/tables/events.php",
 		"oF": 0
@@ -2951,6 +3059,7 @@
 	"/plugins/events-manager/tables/locations.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/tables/locations.php",
 		"oF": 0
@@ -2958,6 +3067,7 @@
 	"/plugins/events-manager/tables/readme.txt": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/tables/readme.txt",
 		"oF": 0
@@ -2965,6 +3075,7 @@
 	"/plugins/events-manager/templates/bookings-event-printable.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/templates/bookings-event-printable.php",
 		"oF": 0
@@ -2972,6 +3083,7 @@
 	"/plugins/events-manager/templates/calendar-day.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/templates/calendar-day.php",
 		"oF": 0
@@ -2979,6 +3091,7 @@
 	"/plugins/events-manager/templates/calendar-full.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/plugins/events-manager/templates/calendar-full.php",
 		"oF": 0
@@ -2986,6 +3099,7 @@
 	"/plugins/events-manager/templates/calendar-small.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/plugins/events-manager/templates/calendar-small.php",
 		"oF": 0
@@ -2993,6 +3107,7 @@
 	"/plugins/events-manager/templates/categories-list.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/plugins/events-manager/templates/categories-list.php",
 		"oF": 0
@@ -3000,6 +3115,7 @@
 	"/plugins/events-manager/templates/category-single.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/plugins/events-manager/templates/category-single.php",
 		"oF": 0
@@ -3007,6 +3123,7 @@
 	"/plugins/events-manager/templates/event-single.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/plugins/events-manager/templates/event-single.php",
 		"oF": 0
@@ -3014,6 +3131,7 @@
 	"/plugins/events-manager/templates/events-calendar.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/plugins/events-manager/templates/events-calendar.php",
 		"oF": 0
@@ -3021,6 +3139,7 @@
 	"/plugins/events-manager/templates/events-list-grouped.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/templates/events-list-grouped.php",
 		"oF": 0
@@ -3028,6 +3147,7 @@
 	"/plugins/events-manager/templates/events-list.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/templates/events-list.php",
 		"oF": 0
@@ -3035,6 +3155,7 @@
 	"/plugins/events-manager/templates/events-search.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/plugins/events-manager/templates/events-search.php",
 		"oF": 0
@@ -3042,6 +3163,7 @@
 	"/plugins/events-manager/templates/ical.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/plugins/events-manager/templates/ical.php",
 		"oF": 0
@@ -3049,6 +3171,7 @@
 	"/plugins/events-manager/templates/location-single.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/templates/location-single.php",
 		"oF": 0
@@ -3056,6 +3179,7 @@
 	"/plugins/events-manager/templates/locations-list.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/plugins/events-manager/templates/locations-list.php",
 		"oF": 0
@@ -3063,6 +3187,7 @@
 	"/plugins/events-manager/templates/locations-search.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/plugins/events-manager/templates/locations-search.php",
 		"oF": 0
@@ -3070,6 +3195,7 @@
 	"/plugins/events-manager/templates/map-global.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/plugins/events-manager/templates/map-global.php",
 		"oF": 0
@@ -3077,6 +3203,7 @@
 	"/plugins/events-manager/templates/my-bookings.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/templates/my-bookings.php",
 		"oF": 0
@@ -3084,6 +3211,7 @@
 	"/plugins/events-manager/templates/readme.txt": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/templates/readme.txt",
 		"oF": 0
@@ -3091,6 +3219,7 @@
 	"/plugins/events-manager/templates/rss.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/templates/rss.php",
 		"oF": 0
@@ -3098,6 +3227,7 @@
 	"/plugins/events-manager/templates/search/categories.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/templates/search/categories.php",
 		"oF": 0
@@ -3105,11 +3235,13 @@
 	"/plugins/events-manager/templates/search/geo-units.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/templates/search/geo-units.php",
 		"oF": 0
 		},
 	"/plugins/events-manager/templates/search/geo.js": {
+		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
@@ -3122,6 +3254,7 @@
 	"/plugins/events-manager/templates/search/geo.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/templates/search/geo.php",
 		"oF": 0
@@ -3129,6 +3262,7 @@
 	"/plugins/events-manager/templates/search/location-countries.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/templates/search/location-countries.php",
 		"oF": 0
@@ -3136,6 +3270,7 @@
 	"/plugins/events-manager/templates/search/location-regions.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/templates/search/location-regions.php",
 		"oF": 0
@@ -3143,6 +3278,7 @@
 	"/plugins/events-manager/templates/search/location-states.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/templates/search/location-states.php",
 		"oF": 0
@@ -3150,6 +3286,7 @@
 	"/plugins/events-manager/templates/search/location-towns.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/templates/search/location-towns.php",
 		"oF": 0
@@ -3157,6 +3294,7 @@
 	"/plugins/events-manager/templates/search/location.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/templates/search/location.php",
 		"oF": 0
@@ -3164,6 +3302,7 @@
 	"/plugins/events-manager/templates/search/scope.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/templates/search/scope.php",
 		"oF": 0
@@ -3171,6 +3310,7 @@
 	"/plugins/events-manager/templates/search/search.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/templates/search/search.php",
 		"oF": 0
@@ -3178,6 +3318,7 @@
 	"/plugins/events-manager/templates/tag-single.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/plugins/events-manager/templates/tag-single.php",
 		"oF": 0
@@ -3185,6 +3326,7 @@
 	"/plugins/events-manager/templates/tags-list.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/plugins/events-manager/templates/tags-list.php",
 		"oF": 0
@@ -3192,6 +3334,7 @@
 	"/README.html": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/README.html",
 		"oF": 0
@@ -3204,6 +3347,7 @@
 		"ema": 1,
 		"eSQ": 1,
 		"ft": 4096,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/README.html",
 		"oF": 0,
@@ -3217,6 +3361,7 @@
 	"/readme.txt": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/readme.txt",
 		"oF": 0
@@ -3235,6 +3380,7 @@
 	"/search.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/search.php",
 		"oF": 0
@@ -3242,6 +3388,7 @@
 	"/single-beeld.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/single-beeld.php",
 		"oF": 0
@@ -3249,6 +3396,7 @@
 	"/single-brief.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/single-brief.php",
 		"oF": 0
@@ -3256,6 +3404,7 @@
 	"/single.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/single.php",
 		"oF": 0
@@ -3273,6 +3422,7 @@
 	"/style.css.map": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 2,
 		"oAP": "/style.css.map",
 		"oF": 0
@@ -3280,6 +3430,7 @@
 	"/widgets/gc-actieteam-widget.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/widgets/gc-actieteam-widget.php",
 		"oF": 0
@@ -3287,6 +3438,7 @@
 	"/widgets/gc-berichten-widget.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/widgets/gc-berichten-widget.php",
 		"oF": 0
@@ -3294,6 +3446,7 @@
 	"/widgets/gc-e-newsletter.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/widgets/gc-e-newsletter.php",
 		"oF": 0
@@ -3301,6 +3454,7 @@
 	"/widgets/gc-event-widget.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/widgets/gc-event-widget.php",
 		"oF": 0
@@ -3308,6 +3462,7 @@
 	"/widgets/gc-footer-widget.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/widgets/gc-footer-widget.php",
 		"oF": 0
@@ -3315,6 +3470,7 @@
 	"/widgets/gc-user-welcome-widget.php": {
 		"cB": 0,
 		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
 		"oAP": "/widgets/gc-user-welcome-widget.php",
 		"oF": 0
@@ -3326,7 +3482,7 @@
 		"name": "Hook #1",
 		"predicateDataBase64Encoded": "YnBsaXN0MDDUAQIDBAUGYmNYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK8QFgcIDxQcJicqMTU6Oz5CRktMT1VZXV9VJG51bGzTCQoLDA0OXxAXTlNDb21wb3VuZFByZWRpY2F0ZVR5cGVfEA9OU1N1YnByZWRpY2F0ZXNWJGNsYXNzEAKAAoAV0hALERNaTlMub2JqZWN0c6ESgAOAFNQLFRYXGBkaG18QEU5TUmlnaHRFeHByZXNzaW9uXxAQTlNMZWZ0RXhwcmVzc2lvbl8QE05TUHJlZGljYXRlT3BlcmF0b3KAE4AOgASAEdUdHh8gCyEiIyQlWU5TT3BlcmFuZF5OU1NlbGVjdG9yTmFtZV8QEE5TRXhwcmVzc2lvblR5cGVbTlNBcmd1bWVudHOABoAFEAOACIANXHZhbHVlRm9yS2V5OtIfCygpEAGAB9IrLC0uWiRjbGFzc25hbWVYJGNsYXNzZXNfEBBOU1NlbGZFeHByZXNzaW9uoy0vMFxOU0V4cHJlc3Npb25YTlNPYmplY3TSEAsyNKEzgAmADNMLHzY3ODlZTlNLZXlQYXRogAsQCoAKXWlucHV0RnVsbFBhdGjSKyw8PV8QHE5TS2V5UGF0aFNwZWNpZmllckV4cHJlc3Npb26jPC8w0issP0BeTlNNdXRhYmxlQXJyYXmjP0EwV05TQXJyYXnSKyxDRF8QE05TS2V5UGF0aEV4cHJlc3Npb26kQ0UvMF8QFE5TRnVuY3Rpb25FeHByZXNzaW9u00cfC0hJSl8QD05TQ29uc3RhbnRWYWx1ZYAPEACAEF8QEmdlYnJ1aWtlci1jZW50cmFhbNIrLE1OXxAZTlNDb25zdGFudFZhbHVlRXhwcmVzc2lvbqNNLzDUC1BRUlNJKFRaTlNNb2RpZmllcldOU0ZsYWdzXk5TT3BlcmF0b3JUeXBlgBIQY9IrLFZXXxAVTlNJblByZWRpY2F0ZU9wZXJhdG9yo1ZYMF8QE05TUHJlZGljYXRlT3BlcmF0b3LSKyxaW18QFU5TQ29tcGFyaXNvblByZWRpY2F0ZaNaXDBbTlNQcmVkaWNhdGXSKyxBXqJBMNIrLGBhXxATTlNDb21wb3VuZFByZWRpY2F0ZaNgXDBfEA9OU0tleWVkQXJjaGl2ZXLRZGVUcm9vdIABAAgAEQAaACMALQAyADcAUABWAF0AdwCJAJAAkgCUAJYAmwCmAKgAqgCsALUAyQDcAPIA9AD2APgA+gEFAQ8BHgExAT0BPwFBAUMBRQFHAVQBWQFbAV0BYgFtAXYBiQGNAZoBowGoAaoBrAGuAbUBvwHBAcMBxQHTAdgB9wH7AgACDwITAhsCIAI2AjsCUgJZAmsCbQJvAnEChgKLAqcCqwK0Ar8CxwLWAtgC2gLfAvcC+wMRAxYDLgMyAz4DQwNGA0sDYQNlA3cDegN/AAAAAAAAAgEAAAAAAAAAZgAAAAAAAAAAAAAAAAAAA4E=",
 		"runOrder": 0,
-		"scriptSourceString": "\nsh '/shared-paul-files/Webs/git-repos/gebruiker-centraal-wordpress-theme/distribute.sh' &>/dev/null\n",
+		"scriptSourceString": "sh '/shared-paul-files/Webs/git-repos/gebruiker-centraal-wordpress-theme/distribute.sh' &>/dev/null",
 		"scriptType": 1,
 		"uuidString": "D74556F3-B189-44E8-A456-05FCB526A1E1"
 		}
@@ -3423,6 +3579,12 @@
 		"function-sent": {
 			"active": 0
 			},
+		"inline-consecutive-adds": {
+			"active": 0
+			},
+		"inline-environment-variables": {
+			"active": 0
+			},
 		"instanceof": {
 			"active": 0
 			},
@@ -3442,6 +3604,36 @@
 			"active": 0
 			},
 		"minify-booleans": {
+			"active": 0
+			},
+		"minify-builtins": {
+			"active": 0
+			},
+		"minify-constant-folding": {
+			"active": 0
+			},
+		"minify-dead-code-elimination": {
+			"active": 0
+			},
+		"minify-flip-comparisons": {
+			"active": 0
+			},
+		"minify-guarded-expressions": {
+			"active": 0
+			},
+		"minify-infinity": {
+			"active": 0
+			},
+		"minify-mangle-names": {
+			"active": 0
+			},
+		"minify-numeric-literals": {
+			"active": 0
+			},
+		"minify-simplify": {
+			"active": 0
+			},
+		"minify-type-constructors": {
 			"active": 0
 			},
 		"modules-amd": {
@@ -3492,6 +3684,9 @@
 		"pipeline-operator": {
 			"active": 0
 			},
+		"private-methods": {
+			"active": 0
+			},
 		"property-literals": {
 			"active": 0
 			},
@@ -3525,10 +3720,16 @@
 		"regenerator": {
 			"active": 0
 			},
+		"regexp-constructors": {
+			"active": 0
+			},
 		"remove-console": {
 			"active": 0
 			},
 		"remove-debugger": {
+			"active": 0
+			},
+		"remove-undefined": {
 			"active": 0
 			},
 		"reserved-words": {
@@ -4477,6 +4678,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-useless-catch": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-useless-computed-key": {
 			"active": 1,
 			"optionString": ""
@@ -4743,7 +4948,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http://gcimport.devserver:8201",
+	"externalServerAddress": "http://rotterdammer.gebruikercentraal.co.uk/",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",
@@ -5139,6 +5344,7 @@
 		"noEscapeInAttributes": 0,
 		"outputFormat": 2,
 		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0,
 		"useCDATA": 0,
 		"useDoubleQuotes": 0,
 		"useUnixNewlines": 0
@@ -5160,6 +5366,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 2,
+		"bundleFormat": 0,
 		"createSourceMap": 0,
 		"minifyOutput": 1,
 		"syntaxCheckerStyle": 1,
@@ -5182,7 +5389,8 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
-		"shouldRunCacheBuster": 0
+		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsLESS": {
 		"allowInsecureImports": 0,
@@ -5221,6 +5429,7 @@
 		"processHTML": 0,
 		"randomFootnoteNumbers": 0,
 		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0,
 		"useCompatibilityMode": 0
 		},
 	"languageDefaultsOTHER": {
@@ -5230,7 +5439,8 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
-		"shouldRunCacheBuster": 0
+		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsPNG": {
 		"autoOutputAction": 0,
@@ -5251,7 +5461,8 @@
 		"autoOutputPathStyle": 0,
 		"compileDebug": 1,
 		"outputStyle": 0,
-		"shouldRunCacheBuster": 0
+		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsSASS": {
 		"autoOutputAction": 0,
@@ -5280,7 +5491,8 @@
 		"outputFormat": 0,
 		"outputStyle": 1,
 		"railsCompatible": 0,
-		"shouldRunCacheBuster": 0
+		"shouldRunCacheBuster": 0,
+		"shouldRunHTMLMinifier": 0
 		},
 	"languageDefaultsSTYLUS": {
 		"autoOutputAction": 0,
@@ -5368,16 +5580,20 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"ascii_only": {
-			"active": 0,
+		"arrows": {
+			"active": 1,
 			"flagValue": -1
 			},
-		"bare_returns": {
+		"ascii_only": {
 			"active": 0,
 			"flagValue": -1
 			},
 		"booleans": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"booleans_as_integers": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"braces": {
@@ -5389,14 +5605,14 @@
 			"flagValue": -1
 			},
 		"comments": {
-			"active": 1,
+			"active": 0,
 			"flagValue": -1
 			},
 		"comparisons": {
 			"active": 1,
 			"flagValue": -1
 			},
-		"compress": {
+		"computed_props": {
 			"active": 1,
 			"flagValue": -1
 			},
@@ -5419,6 +5635,10 @@
 		"drop_debugger": {
 			"active": 1,
 			"flagValue": -1
+			},
+		"ecma": {
+			"active": 1,
+			"flagValue": 5
 			},
 		"eval": {
 			"active": 0,
@@ -5444,10 +5664,6 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"html5_comments": {
-			"active": 1,
-			"flagValue": -1
-			},
 		"ie8": {
 			"active": 0,
 			"flagValue": -1
@@ -5456,13 +5672,13 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"indent-start": {
-			"active": 0,
-			"flagValue": 0
-			},
 		"indent_level": {
 			"active": 0,
 			"flagValue": 4
+			},
+		"indent_start": {
+			"active": 0,
+			"flagValue": 0
 			},
 		"inline": {
 			"active": 1,
@@ -5474,6 +5690,10 @@
 			},
 		"join_vars": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"keep_classnames": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"keep_fargs": {
@@ -5496,13 +5716,13 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"mangle": {
-			"active": 1,
-			"flagValue": -1
-			},
 		"max_line_len": {
 			"active": 1,
 			"flagValue": 32000
+			},
+		"module": {
+			"active": 0,
+			"flagValue": -1
 			},
 		"negate_iife": {
 			"active": 1,
@@ -5511,10 +5731,6 @@
 		"passes": {
 			"active": 1,
 			"flagValue": 1
-			},
-		"preserve_line": {
-			"active": 0,
-			"flagValue": -1
 			},
 		"properties": {
 			"active": 1,
@@ -5538,6 +5754,10 @@
 			},
 		"reduce_vars": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"safari10": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"semicolons": {
@@ -5572,6 +5792,10 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"unsafe_arrows": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"unsafe_comps": {
 			"active": 0,
 			"flagValue": -1
@@ -5581,6 +5805,10 @@
 			"flagValue": -1
 			},
 		"unsafe_math": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"unsafe_methods": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -5608,15 +5836,12 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"width": {
-			"active": 1,
-			"flagValue": 80
-			},
 		"wrap_iife": {
 			"active": 0,
 			"flagValue": -1
 			}
 		},
+	"uglifyMangleNames": 1,
 	"uglifyReservedNamesString": "$",
 	"websiteRelativeRoot": ""
 	},
