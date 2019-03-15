@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.12.1
-// @desc.   Renamed functions for better sharing.
+// @version 3.13.1a
+// @desc.   Extra settings in customizer: choice of logos.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 ///
 
@@ -674,7 +674,13 @@ function gc_shared_add_debug_css() {
 // Add additional custom style to site header
 function gc_shared_add_site_title_and_logo( $title ) {
 
-	$title = '<div id="sitelogo"><img alt="Logo Gebruiker Centraal" src="' . WBVB_THEMEFOLDER . '/images/logo-mobile.png" /></div>' . $title;
+  $class = "gebruikercentraal";
+
+  if ( 'rotterdammer.gebruikercentraal.co.uk' == $_SERVER["HTTP_HOST"] || 'accept.rotterdammer.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] || 'rotterdammer.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] ) { 
+    $class = "rotterdammercentraal";
+  }
+
+	$title = '<div id="sitelogo" class="' . $class . '"><img alt="Logo Gebruiker Centraal" src="' . WBVB_THEMEFOLDER . '/images/logo-mobile.png" /></div>' . $title;
 
 	return $title;
 	

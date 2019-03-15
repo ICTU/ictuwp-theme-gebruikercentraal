@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.12.1
-// @desc.   Renamed functions for better sharing.
+// @version 3.13.1a
+// @desc.   Extra settings in customizer: choice of logos.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -35,8 +35,15 @@
       height: @logoheight;
       top: ( @padding / 2 );
       left: ( @padding / 2 );
-      background: transparent url('images/logo-mobile.png') no-repeat left top;
-      background-image: url('images/logo-mobile.svg'), none;
+      
+      
+      background: transparent url('images/logos/logo-mobile.png') no-repeat left top;
+      background-image: url('images/logos/logo-mobile.svg'), none;
+
+      &.rotterdammercentraal {
+        background: transparent url('images/logos/logo-rotterdammercentraal-mobile.png') no-repeat left top;
+        background-image: url('images/logos/logo-rotterdammercentraal-mobile.svg'), none;
+      }
 
       a {
         display: block;
@@ -72,8 +79,14 @@
       #sitelogo {
         width: @logo_desktop_width;
         height: @logo_desktop_height;
-        background-image: url('images/logo-desktop.svg');
-        background-image: url('images/logo-desktop.svg'), none;
+        background-image: url('images/logos/logo-desktop.svg');
+        background-image: url('images/logos/logo-desktop.svg'), none;
+
+        &.rotterdammercentraal {
+          background: transparent url('images/logos/logo-rotterdammercentraal-desktop.png') no-repeat left top;
+          background-image: url('images/logos/logo-rotterdammercentraal-desktop.svg'), none;
+        }
+        
       }
 
       .site-title {

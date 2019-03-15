@@ -1399,6 +1399,90 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/images/logos/logo-desktop.png": {
+		"ft": 32768,
+		"iS": 5011,
+		"oA": 0,
+		"oAP": "/images/logos/logo-desktop.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/logos/logo-desktop.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/images/logos/logo-desktop.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/images/logos/logo-mobile.png": {
+		"ft": 32768,
+		"iS": 3252,
+		"oA": 0,
+		"oAP": "/images/logos/logo-mobile.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/logos/logo-mobile.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/images/logos/logo-mobile.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/images/logos/logo-rotterdammercentraal-desktop.png": {
+		"ft": 32768,
+		"iS": 2211,
+		"oA": 0,
+		"oAP": "/images/logos/logo-rotterdammercentraal-desktop.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/logos/logo-rotterdammercentraal-desktop.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/images/logos/logo-rotterdammercentraal-desktop.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/images/logos/logo-rotterdammercentraal-mobile.png": {
+		"ft": 32768,
+		"iS": 1661,
+		"oA": 0,
+		"oAP": "/images/logos/logo-rotterdammercentraal-mobile.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/logos/logo-rotterdammercentraal-mobile.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/images/logos/logo-rotterdammercentraal-mobile.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/images/low-res.jpg": {
 		"ft": 16384,
 		"iS": 5937,
@@ -1834,6 +1918,14 @@
 		"hM": 0,
 		"oA": 2,
 		"oAP": "/includes/custom-fields-and-post-types.php",
+		"oF": 0
+		},
+	"/includes/customizer.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/includes/customizer.php",
 		"oF": 0
 		},
 	"/includes/widgets.php": {
@@ -2760,6 +2852,14 @@
 		"oAP": "/plugins/events-manager/formats/single_event_format.php",
 		"oF": 0
 		},
+	"/plugins/events-manager/forms/bookingform/booking-fields.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/plugins/events-manager/forms/bookingform/booking-fields.php",
+		"oF": 0
+		},
 	"/plugins/events-manager/forms/bookingform/login.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -2782,14 +2882,6 @@
 		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/forms/bookingform/tickets-list.php",
-		"oF": 0
-		},
-	"/plugins/events-manager/forms/bookingform/XXX_booking-fields.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/plugins/events-manager/forms/bookingform/XXX_booking-fields.php",
 		"oF": 0
 		},
 	"/plugins/events-manager/forms/event-editor.php": {
@@ -3000,6 +3092,14 @@
 		"oAP": "/plugins/events-manager/placeholders/bookingbutton.php",
 		"oF": 0
 		},
+	"/plugins/events-manager/placeholders/bookingform.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/plugins/events-manager/placeholders/bookingform.php",
+		"oF": 0
+		},
 	"/plugins/events-manager/placeholders/categories.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -3038,14 +3138,6 @@
 		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/placeholders/readme.txt",
-		"oF": 0
-		},
-	"/plugins/events-manager/placeholders/XXX_bookingform.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/plugins/events-manager/placeholders/XXX_bookingform.php",
 		"oF": 0
 		},
 	"/plugins/events-manager/tables/events.php": {
@@ -3369,9 +3461,9 @@
 	"/screenshot.png": {
 		"ft": 32768,
 		"iS": 87524,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/screenshot.png",
-		"oF": 0,
+		"oF": 1,
 		"oIPL": 1,
 		"opt": 1,
 		"oT": 1,

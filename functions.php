@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.12.1
-// @desc.   Renamed functions for better sharing.
+// @version 3.13.1a
+// @desc.   Extra settings in customizer: choice of logos.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.12.1' );
-define( 'CHILD_THEME_DESCRIPTION', "3.12.1	 - Renamed functions for better sharing." );
+define( 'CHILD_THEME_VERSION', '3.13.1a' );
+define( 'CHILD_THEME_DESCRIPTION', "3.13.1a	 - Extra settings in customizer: choice of logos." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 
@@ -127,6 +127,11 @@ $genesis_js_no_js->run();
 //========================================================================================================
 // custom post types, custom taxonomies, custom fields (ACF)
 require_once( GC_FOLDER . '/includes/custom-fields-and-post-types.php' );
+
+//========================================================================================================
+
+// functions for the customizer
+require_once( GC_FOLDER . '/includes/customizer.php' );
 
 //========================================================================================================
 
