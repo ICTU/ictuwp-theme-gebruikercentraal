@@ -1828,14 +1828,6 @@
 		"oAP": "/includes/common-functions.php",
 		"oF": 0
 		},
-	"/includes/custom-fields-and-post-types.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/includes/custom-fields-and-post-types.php",
-		"oF": 0
-		},
 	"/includes/widgets.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1899,20 +1891,20 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"/languages/e-newsletters/email-newsletter-nl_NL.mo": {
+	"/languages/en_GB.mo": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 2,
-		"oAP": "/languages/e-newsletters/email-newsletter-nl_NL.mo",
+		"oAP": "/languages/en_GB.mo",
 		"oF": 0
 		},
-	"/languages/e-newsletters/email-newsletter-nl_NL.po": {
+	"/languages/en_GB.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 2,
-		"oAP": "/languages/e-newsletters/email-newsletter-nl_NL.po",
+		"oAP": "/languages/en_GB.po",
 		"oF": 0
 		},
 	"/languages/en_US.mo": {
@@ -2760,6 +2752,14 @@
 		"oAP": "/plugins/events-manager/formats/single_event_format.php",
 		"oF": 0
 		},
+	"/plugins/events-manager/forms/bookingform/booking-fields.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/plugins/events-manager/forms/bookingform/booking-fields.php",
+		"oF": 0
+		},
 	"/plugins/events-manager/forms/bookingform/login.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -2782,14 +2782,6 @@
 		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/forms/bookingform/tickets-list.php",
-		"oF": 0
-		},
-	"/plugins/events-manager/forms/bookingform/XXX_booking-fields.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/plugins/events-manager/forms/bookingform/XXX_booking-fields.php",
 		"oF": 0
 		},
 	"/plugins/events-manager/forms/event-editor.php": {
@@ -3000,6 +2992,14 @@
 		"oAP": "/plugins/events-manager/placeholders/bookingbutton.php",
 		"oF": 0
 		},
+	"/plugins/events-manager/placeholders/bookingform.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/plugins/events-manager/placeholders/bookingform.php",
+		"oF": 0
+		},
 	"/plugins/events-manager/placeholders/categories.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -3038,14 +3038,6 @@
 		"hM": 0,
 		"oA": 2,
 		"oAP": "/plugins/events-manager/placeholders/readme.txt",
-		"oF": 0
-		},
-	"/plugins/events-manager/placeholders/XXX_bookingform.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/plugins/events-manager/placeholders/XXX_bookingform.php",
 		"oF": 0
 		},
 	"/plugins/events-manager/tables/events.php": {
@@ -3369,9 +3361,9 @@
 	"/screenshot.png": {
 		"ft": 32768,
 		"iS": 87524,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "/screenshot.png",
-		"oF": 0,
+		"oF": 1,
 		"oIPL": 1,
 		"opt": 1,
 		"oT": 1,
