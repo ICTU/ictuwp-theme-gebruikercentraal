@@ -1828,6 +1828,14 @@
 		"oAP": "/includes/common-functions.php",
 		"oF": 0
 		},
+	"/includes/custom-fields-and-post-types.php": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/includes/custom-fields-and-post-types.php",
+		"oF": 0
+		},
 	"/includes/widgets.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -1890,6 +1898,22 @@
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
+		},
+	"/languages/e-newsletters/email-newsletter-nl_NL.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/languages/e-newsletters/email-newsletter-nl_NL.mo",
+		"oF": 0
+		},
+	"/languages/e-newsletters/email-newsletter-nl_NL.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/languages/e-newsletters/email-newsletter-nl_NL.po",
+		"oF": 0
 		},
 	"/languages/en_GB.mo": {
 		"cB": 0,
@@ -2638,14 +2662,6 @@
 		"hM": 0,
 		"oA": 2,
 		"oAP": "/page_home.php",
-		"oF": 0
-		},
-	"/page_login.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/page_login.php",
 		"oF": 0
 		},
 	"/page_mailinglijst.php": {
