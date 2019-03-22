@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.13.1
-// @desc.   Extra settings in customizer: choice of logos.
+// @version 3.13.2
+// @desc.   Manifest op homepage optioneel gemaakt.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.13.1' );
-define( 'CHILD_THEME_DESCRIPTION', "3.13.1	 - Extra settings in customizer: choice of logos." );
+define( 'CHILD_THEME_VERSION', '3.13.2' );
+define( 'CHILD_THEME_DESCRIPTION', "3.13.2	 - Manifest op homepage optioneel gemaakt." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 
@@ -1423,17 +1423,57 @@ genesis_register_sidebar(
     )
 );
 
-
 //========================================================================================================
 
+//* Add class to .site-container
+add_filter('genesis_attr_site-container', 'jive_attributes_st_container');
 
+function jive_attributes_st_container($attributes) {
+
+	global $post;
+	setup_postdata($post);
+
+    if ( function_exists( 'get_field' ) ) {
+      
+      if ( is_page_template('page_home.php')  ) {
+
+        $jaofnee = get_field('link_naar_manifest_toevoegen');
+    
+        if ( 'ja' == $jaofnee ) {
+          	$attributes['class'] .= ' home-with-manifest';
+        	}
+        	else {
+          	$attributes['class'] .= ' home-without-manifest';
+      	}
+    	}
+  }
+
+	return $attributes;
+}
+
+//========================================================================================================
 
 function gc_wbvb_home_manifest() {
 
 	global $post;
 	setup_postdata($post);
+	
+  $leesmeer = '';
+  $class    = 'entry';
 
-	echo '<article class="manifest entry" itemscope="" itemtype="http://schema.org/CreativeWork">';
+  if ( function_exists( 'get_field' ) ) {
+    $jaofnee = get_field('link_naar_manifest_toevoegen');
+
+    if ( 'ja' == $jaofnee ) {
+      $class = 'manifest entry';
+  
+    		if ( get_field('lees-meer-link') && get_field('lees-meer-tekst') ) {
+    			$leesmeer = '<a class="cta" href="' . get_field('lees-meer-link') . '">' . get_field('lees-meer-tekst') . '</a>';
+    		}
+    	}
+  }
+
+	echo '<article class="' . $class . '" itemscope="" itemtype="http://schema.org/CreativeWork">';
 	echo '<header><h1 class="entry-title" itemprop="headline">';
 	the_title();
 	echo '</h1></header>';
@@ -1441,13 +1481,9 @@ function gc_wbvb_home_manifest() {
 
 	the_content();
 
-	if ( function_exists( 'get_field' ) ) {
-		if ( get_field('lees-meer-link') && get_field('lees-meer-tekst') ) {
-			echo '<a class="cta" href="' . get_field('lees-meer-link') . '">' . get_field('lees-meer-tekst') . '</a>';
-		}
-		else {
-		}
-	}
+  echo $leesmeer;
+
+
 	echo '</div>';
 	echo '</article>';
 

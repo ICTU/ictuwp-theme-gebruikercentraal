@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.11.2
-// @desc.   Betere styling voor template homepage. Mogelijkheid andere content op homepage te zetten.
+// @version 3.13.2
+// @desc.   Manifest op homepage optioneel gemaakt.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 // ================================================================================
@@ -291,18 +291,42 @@ body {
 
 
 .page-template-page_home {
-  .breadcrumb {
-    &:after {
-      content: ' ';
-      display: block;
-      background: @breadcrumb_bg_color;
-      height: ( 3 * @padding );
-      width: 100%;
-      display: block;
+  
+  .home-without-manifest {
+    .content {
+      min-height: inherit !important;
+      article.entry {
+        background: @wit;
+        padding: 1em;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        margin-left: .5em;
+        margin-right: .5em;
+        .standardboxshadow();
+        
+        .entry-title {
+          padding-top: 0;
+          padding-bottom: .25em;
+        }
+      }
     }
   }
-  .site-inner {
-    margin-top: ( -3 * @padding );
+  
+  .home-with-manifest {
+    
+    .breadcrumb {
+      &:after {
+        content: ' ';
+        display: block;
+        background: @breadcrumb_bg_color;
+        height: ( 3 * @padding );
+        width: 100%;
+        display: block;
+      }
+    }
+    .site-inner {
+      margin-top: ( -3 * @padding );
+    }
   }
 }
 

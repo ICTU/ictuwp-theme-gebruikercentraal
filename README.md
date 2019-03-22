@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-3.13.1 - Extra settings in customizer: choice of logos.
+3.13.2 - Manifest op homepage optioneel gemaakt.
 
 ## Version history
+* 3.13.2 - Manifest op homepage optioneel gemaakt.
 * 3.13.1 - Extra settings in customizer: choice of logos.
 * 3.12.1 - Renamed functions for better sharing.
 * 3.11.5 - Bug removed that caused empty author page.

@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.13.1
-// @desc.   Extra settings in customizer: choice of logos.
+// @version 3.13.2
+// @desc.   Manifest op homepage optioneel gemaakt.
 
 
 $samenvattingverplicht = false;
@@ -483,70 +483,109 @@ if ( $samenvattingverplicht ) {
     // Mogelijkheid om links naar het manifest op de homepage in te voeren
     // dit geeft een linktekst en een link naar een pagina en wordt alleen getoond bij het wijzigen van 
     // de pagina die ingesteld is als homepage
-    acf_add_local_field_group(array (
-      'key' => 'group_56f3cd69031f7',
-      'title' => 'Manifest (homepage)',
-      'fields' => array (
-        array (
-          'key' => 'field_56f3cfe63fe1a',
-          'label' => 'Link naar meer over Gebruiker Centraal',
-          'name' => 'lees-meer-link',
-          'type' => 'page_link',
-          'instructions' => '',
-          'required' => 0,
-          'conditional_logic' => 0,
-          'wrapper' => array (
-            'width' => '',
-            'class' => '',
-            'id' => '',
-          ),
-          'post_type' => array (
-          ),
-          'taxonomy' => array (
-          ),
-          'allow_null' => 0,
-          'multiple' => 0,
-        ),
-        array (
-          'key' => 'field_56f3d0033fe1b',
-          'label' => 'Lees-meer-tekst',
-          'name' => 'lees-meer-tekst',
-          'type' => 'text',
-          'instructions' => 'Dit wordt de tekst voor de lees-meer-link',
-          'required' => 1,
-          'conditional_logic' => 0,
-          'wrapper' => array (
-            'width' => '',
-            'class' => '',
-            'id' => '',
-          ),
-          'default_value' => 'Meer over Gebruiker Centraal',
-          'placeholder' => '',
-          'prepend' => '',
-          'append' => '',
-          'maxlength' => '',
-          'readonly' => 0,
-          'disabled' => 0,
-        ),
-      ),
-      'location' => array (
-        array (
-          array (
-            'param' => 'page_type',
-            'operator' => '==',
-            'value' => 'front_page',
-          ),
-        ),
-      ),
-      'menu_order' => 0,
-      'position' => 'acf_after_title',
-      'style' => 'default',
-      'label_placement' => 'top',
-      'instruction_placement' => 'label',
-      'hide_on_screen' => '',
-      'active' => 1,
-      'description' => 'De tekst die op deze pagina invoert geldt als <em>manifest</em>. Deze wordt getoond in een afwijkende vormgeving met een doorkliklink',
+
+    acf_add_local_field_group(array(
+    	'key' => 'group_56f3cd69031f7',
+    	'title' => 'GC Home: manifestblok',
+    	'fields' => array(
+    		array(
+    			'key' => 'field_5c94c6dfca247',
+    			'label' => 'Link naar manifest toevoegen?',
+    			'name' => 'link_naar_manifest_toevoegen',
+    			'type' => 'radio',
+    			'instructions' => '',
+    			'required' => 0,
+    			'conditional_logic' => 0,
+    			'wrapper' => array(
+    				'width' => '',
+    				'class' => '',
+    				'id' => '',
+    			),
+    			'choices' => array(
+    				'ja' => 'Ja',
+    				'nee' => 'Nee',
+    			),
+    			'allow_null' => 0,
+    			'other_choice' => 0,
+    			'default_value' => 'nee',
+    			'layout' => 'vertical',
+    			'return_format' => 'value',
+    			'save_other_choice' => 0,
+    		),
+    		array(
+    			'key' => 'field_56f3cfe63fe1a',
+    			'label' => 'Link naar meer over Gebruiker Centraal',
+    			'name' => 'lees-meer-link',
+    			'type' => 'page_link',
+    			'instructions' => '',
+    			'required' => 0,
+    			'conditional_logic' => array(
+    				array(
+    					array(
+    						'field' => 'field_5c94c6dfca247',
+    						'operator' => '==',
+    						'value' => 'ja',
+    					),
+    				),
+    			),
+    			'wrapper' => array(
+    				'width' => '',
+    				'class' => '',
+    				'id' => '',
+    			),
+    			'post_type' => '',
+    			'taxonomy' => '',
+    			'allow_null' => 0,
+    			'allow_archives' => 1,
+    			'multiple' => 0,
+    		),
+    		array(
+    			'key' => 'field_56f3d0033fe1b',
+    			'label' => 'lees-meer-tekst',
+    			'name' => 'lees-meer-tekst',
+    			'type' => 'text',
+    			'instructions' => 'Dit wordt de tekst voor de lees-meer-link',
+    			'required' => 0,
+    			'conditional_logic' => array(
+    				array(
+    					array(
+    						'field' => 'field_5c94c6dfca247',
+    						'operator' => '==',
+    						'value' => 'ja',
+    					),
+    				),
+    			),
+    			'wrapper' => array(
+    				'width' => '',
+    				'class' => '',
+    				'id' => '',
+    			),
+    			'default_value' => 'Meer over Gebruiker Centraal',
+    			'placeholder' => '',
+    			'prepend' => '',
+    			'append' => '',
+    			'maxlength' => '',
+    		),
+    	),
+    	'location' => array(
+    		array(
+    			array(
+    				'param' => 'page_template',
+    				'operator' => '==',
+    				'value' => 'page_home.php',
+    			),
+    		),
+    	),
+    	'menu_order' => 0,
+    	'position' => 'acf_after_title',
+    	'style' => 'default',
+    	'label_placement' => 'top',
+    	'instruction_placement' => 'label',
+    	'hide_on_screen' => '',
+    	'active' => true,
+    	'description' => 'De tekst die op deze pagina invoert geldt als <em>manifest</em>. Deze wordt getoond in een afwijkende vormgeving met een doorkliklink',
     ));
+
 
 
     //====================================================================================================
