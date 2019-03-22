@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.12.1
-// @desc.   Renamed functions for better sharing.
+// @version 3.13.1
+// @desc.   Extra settings in customizer: choice of logos.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -110,11 +110,17 @@
   }
   
   
+
   .full-width-content {
 
     &.home,
+    &.single-stap,
+    &.single-vaardigheid,   
+    &.page,
+    &.page,
     &.search,
     &.single {
+      .entry-content,
       .content {
         @media only screen and (min-width: @break_fullwidth ) {
 //          border: 1px solid red;

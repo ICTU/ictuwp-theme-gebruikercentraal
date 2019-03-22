@@ -1,11 +1,11 @@
-@versie: '3.13.1a';
+@versie: '3.13.1';
 /*!
 Theme Name: Gebruiker Centraal
 Description: Wordpress-theme voor gebruikercentraal.nl
 Author: Paul van Buuren - Tamara de Haas
 Author URI: https://wbvb.nl/
-Version: 3.13.1a
-Version description: 3.13.1a - Extra settings in customizer: choice of logos.
+Version: 3.13.1
+Version description: 3.13.1 - Extra settings in customizer: choice of logos.
 
 Template: genesis
 Template Version: 2.0.2
@@ -47,7 +47,7 @@ License URI: http://www.opensource.org/licenses/gpl-license.php
 <!--                                                            -->
 <!-- ========================================================   -->
 <!--                                                            -->
-	
+
 
 
 */
@@ -59,7 +59,7 @@ License URI: http://www.opensource.org/licenses/gpl-license.php
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.13.1a
+// @version 3.13.1
 // @desc.   Extra settings in customizer: choice of logos.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
@@ -221,15 +221,15 @@ div, article, section, main {
   .fontsize(10);
   line-height: 1;
   min-height: 46px;
-  
+
   .wrap {
     padding-left: @logowidth;
-    
+
     #zoeken {
       float: right;
       margin: 8px 0;
       padding: 0;
-      
+
       input {
         top: 0;
         margin-top: 0;
@@ -244,7 +244,7 @@ div, article, section, main {
     float: left;
     display: inline-block;
   }
-  
+
   .separator {
     display: inline-block;
     margin-left: ( @padding / 3 );
@@ -254,19 +254,19 @@ div, article, section, main {
     width: 20px;
     background: url('images/breadcrumb-separator.png') no-repeat center center;
     .icon_separator_fill('../images/breadcrumb-separator.svg', @groen_2);
-  }  
-  
+  }
+
   &, a {
     color: @wit;
   }
   a {
     text-decoration: none;
     font-family: @bodyfont_bold;
-    
+
     &:hover,
     &:active,
     &:focus {
-      text-decoration: underline;      
+      text-decoration: underline;
     }
   }
 }
@@ -399,7 +399,7 @@ Plugins
     }
 }
 .em-warning {
-    
+
     p {
       padding: ( @padding / 4 ) ( @padding / 2 );
       margin: ( @padding / 2 ) 0;
@@ -416,7 +416,7 @@ Plugins
         }
     }
 }
-    
+
 
 
 /* Gravity Forms
@@ -461,7 +461,7 @@ body .sidebar .widget_oa_social_login .oneall_social_login {
         font-size: .8em;
 //        margin-top: -20px;
     }
-    
+
 }
 
 
@@ -503,46 +503,46 @@ body .sidebar .widget_oa_social_login .oneall_social_login {
     h1, h2, h3, h4, h5, h6 {
         a {
             color: @txt;
-            text-decoration: underline;      
+            text-decoration: underline;
         }
-    } 
+    }
     li {
         margin-bottom: .5em;
-    }   
+    }
     ul li {
         list-style: square;
         overflow: visible;
     }
-    
+
 
     .attachment a,
     .gallery a {
       border: none;
     }
-    
+
     ol,
     p,
     ul,
     .quote-caption {
       margin-bottom: @contentpadding;
     }
-    
+
     ol,
     ul {
       margin-left: @padding;
       padding-left: @padding;
     }
-    
+
     ol li {
       list-style-type: decimal;
     }
-    
-    
+
+
     ol ol,
     ul ul {
       margin-bottom: 0;
     }
-    
+
     .search-form {
       width: 50%;
     }
@@ -553,17 +553,17 @@ body .sidebar .widget_oa_social_login .oneall_social_login {
         margin-left: 0;
         padding-left: 0;
       }
-      
-      
+
+
       li {
         border-top: 1px solid @border_grijs;
         border-bottom: 1px solid @border_grijs;
         margin: 0;
-        
+
         & + li {
           border-top-style: none;
         }
-        
+
         a {
           display: block;
           padding: .8em 0;
@@ -574,13 +574,13 @@ body .sidebar .widget_oa_social_login .oneall_social_login {
           background-image: url('images/cta-pijl.svg'), none;
           background-position: right center;
           background-repeat: no-repeat;
-          
+
           &:hover,
           &:active,
           &:focus {
             text-decoration: underline;
           }
-          
+
         }
       }
 
@@ -590,9 +590,9 @@ body .sidebar .widget_oa_social_login .oneall_social_login {
       li:nth-child(odd) {
         background: @wit;
       }
-      
+
     }
-    
+
 }
 
 
@@ -701,11 +701,11 @@ Accessibility Extras
 }
 /* Display search button */
 .search-form, #search-members-form, #search-groups-form  {
-    input[type="submit"], 
-    input[type="search"], 
+    input[type="submit"],
+    input[type="search"],
     input[type="text"] {
       width: auto;
-        -webkit-appearance: none;  
+        -webkit-appearance: none;
       margin-right: -2px;
     }
 }
@@ -718,10 +718,10 @@ a {
     }
 }
 
-input[type="search"], 
+input[type="search"],
 input[type="text"] {
     &:focus {
-        border-width: 2px;    
+        border-width: 2px;
         box-shadow: 0 0 5px rgba(81, 203, 238, 1);
     }
 }
@@ -807,28 +807,28 @@ a.blocklink {
     .read-more {
         text-align: left;
         margin-top: ( @padding / 2 );
-        
+
         span {
             visibility: hidden;
         }
-        
+
 
     }
 
-    
+
     &:hover,
     &:active,
     &:focus {
 
 //        border-color: @a_hover;
-    
+
         &, .entry-meta {
             color: @a_hover !important;
         }
 
         .entry-title, .read-more {
             text-decoration: underline;
-        } 
+        }
 
         .read-more {
 
@@ -836,7 +836,7 @@ a.blocklink {
               background: @wit url('images/arrow-wit.png') no-repeat -7px center;
               background-image: url('images/arrow-wit.svg'), none;
             }
-            
+
             span {
                 visibility:visible;
             }
@@ -858,9 +858,9 @@ div.related {
         margin-top: 0;
         padding-top: 0;
     }
-    
+
     section {
-        padding: @padding @padding ( 1.5 * @padding ) @padding;        
+        padding: @padding @padding ( 1.5 * @padding ) @padding;
         word-break: break-word;
         position: relative;
         color: @txt;
@@ -869,17 +869,17 @@ div.related {
 
         a {
             text-decoration: none;
-        
+
             .read-more {
                 position: absolute;
                 right: @padding;
                 bottom: @padding;
-        
+
                 text-align: right;
                 span {
                     visibility: hidden;
                 }
-                
+
                 &:after {
                     content: ' ';
                     display: inline-block;
@@ -891,28 +891,28 @@ div.related {
                 background: @wit url('images/arrow-wit.png') no-repeat left center;
                 background-image: url('images/arrow-wit.svg'), none;
 
-        
+
                 }
             }
-        
-            
+
+
             &:hover,
             &:active,
             &:focus {
                 text-decoration: underline;
-        
+
                 .read-more {
-                    
+
                     &:after {
                   background: @wit url('images/arrow-wit.png') no-repeat left center;
                   background-image: url('images/arrow-wit.svg'), none;
                     }
-                    
+
                     span {
                         visibility:visible;
                     }
                 }
-        
+
             }
         }
 
@@ -922,9 +922,9 @@ div.related {
             border-color: @txt;
         }
 
-        
+
     }
-    
+
 }
 
 
@@ -967,7 +967,7 @@ Media Queries
   .sidebar-primary {
 //    width: 300px;
   }
-  
+
 
 
 }
@@ -1026,8 +1026,8 @@ Media Queries
   .three-sixths,
   .two-fourths,
   .two-sixths,
-  .two-thirds, 
-  .site-header .wrap, 
+  .two-thirds,
+  .site-header .wrap,
 //  .site-header .wrap .title-area {
   {
     margin: 0;
@@ -1055,19 +1055,19 @@ Media Queries
     div.related {
 
         display:flex;
-        
+
         flex-flow: row wrap;
         justify-content: flex-start;
-        
-    
+
+
         &, * {
           -webkit-box-sizing: border-box;
           -moz-box-sizing: border-box;
-          
-          box-sizing: border-box;     
+
+          box-sizing: border-box;
         }
-    
-    
+
+
         section {
 
             max-width: ( ( @break_tablet / 2 ) -  @padding );
@@ -1083,9 +1083,9 @@ Media Queries
         }
 
     }
-    
 
-    
+
+
 }
 
 
@@ -1118,7 +1118,7 @@ Media Queries
     .breadcrumb, .author-box, #respond {
 //      padding: 0 @padding 0 @bigmargin;
     }
-    #respond, 
+    #respond,
     .entry-comments {
         margin-top: @padding;
     }
@@ -1128,8 +1128,8 @@ Media Queries
     .entry-comments {
         padding-bottom: @padding;
         ul.children {
-            border-left: 4px solid @light_gray;            
-            border-bottom: 4px solid @light_gray;            
+            border-left: 4px solid @light_gray;
+            border-bottom: 4px solid @light_gray;
             padding-bottom: @padding;
             margin-bottom: ( @padding );
             ul.children {
@@ -1140,12 +1140,12 @@ Media Queries
 
 .lid-actieteam {
   margin-bottom: 2em;
-  
+
   .bg-color {
     background: @wit;
     padding: 0 @padding 2em @padding;
     overflow: hidden;
-    
+
     h2 {
       padding-top: .5em;
     }

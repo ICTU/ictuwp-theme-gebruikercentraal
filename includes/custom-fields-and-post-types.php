@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.11.2
-// @desc.   Betere styling voor template homepage. Mogelijkheid andere content op homepage te zetten.
+// @version 3.13.1
+// @desc.   Extra settings in customizer: choice of logos.
 
 
 $samenvattingverplicht = false;
@@ -493,7 +493,7 @@ if ( $samenvattingverplicht ) {
           'name' => 'lees-meer-link',
           'type' => 'page_link',
           'instructions' => '',
-          'required' => 1,
+          'required' => 0,
           'conditional_logic' => 0,
           'wrapper' => array (
             'width' => '',
@@ -970,179 +970,6 @@ endif;
 
 //========================================================================================================
 
-// Add support for Genesis layouts to force a different layout for tips
-add_post_type_support( GC_KLANTCONTACT_BRIEF_CPT, 'genesis-layouts' );
-add_post_type_support( GC_KLANTCONTACT_BEELDEN_CPT, 'genesis-layouts' );
-
-// register custom post types
-add_action( 'init', 'fn_gc_wbvb_register_cpts' );
-
-//========================================================================================================
-
-function fn_gc_wbvb_register_cpts() {
-
-  // ------------------------------------------------------
-  // brieven
-	$labels = array(
-		"name"                => "Brieven",
-		"singular_name"       => "Brief",
-		"menu_name"           => "Brieven",
-		"all_items"           => "Alle brieven",
-		"add_new"             => "Toevoegen",
-		"add_new_item"        => "Brief toevoegen",
-		"edit"                => "Brief bewerken",
-		"edit_item"           => "Bewerk brief",
-		"new_item"            => "Nieuwe brief",
-		"view"                => "Bekijk",
-		"view_item"           => "Bekijk brief",
-		"search_items"        => "Tips zoeken",
-		"not_found"           => "Geen brieven gevonden",
-		"not_found_in_trash"  => "Geen brieven in de prullenbak",
-		);
-
-  $currentpageID          = '';
-  if ( function_exists( 'get_field' ) ) {
-    $currentpageID          = get_field('brief_page_overview', 'option');
-  }
-  $theslug                = 'brieven';
-  $theslug                = GC_BRIEVENCONTEXT;
-  
-  if ( $currentpageID ) {
-    $theslug  = str_replace( home_url() . '/', '', get_permalink( $currentpageID ) ) . GC_BRIEVENCONTEXT;
-  }
-    
-	$args = array(
-		"labels"              => $labels,
-		"description"         => "Hier voer je de brieven in.",
-		"public"              => true,
-		"show_ui"             => true,
-		"has_archive"         => false,
-		"show_in_menu"        => true,
-		"exclude_from_search" => false,
-		"capability_type"     => "page",
-		"map_meta_cap"        => true,
-		"hierarchical"        => false,
-		"rewrite"             => array( "slug" => $theslug, "with_front" => true ),
-		"query_var"           => true,
-		"menu_position"       => 6,		
-    "menu_icon"           => "dashicons-media-text",		
-		"supports"            => array( "title", "editor", "excerpt", "revisions", "thumbnail", "author" ),		
-	);
-	register_post_type( GC_KLANTCONTACT_BRIEF_CPT	, $args );
-
-  // ------------------------------------------------------
-  // beelden
-	$labels = array(
-		"name"                => "Beelden",
-		"singular_name"       => "Beeld",
-		"menu_name"           => "Beelden",
-		"all_items"           => "Alle beelden",
-		"add_new"             => "Toevoegen",
-		"add_new_item"        => "Beeld toevoegen",
-		"edit"                => "Beeld bewerken",
-		"edit_item"           => "Bewerk beeld",
-		"new_item"            => "Nieuwe beeld",
-		"view"                => "Bekijk",
-		"view_item"           => "Bekijk beeld",
-		"search_items"        => "Tips zoeken",
-		"not_found"           => "Geen beelden gevonden",
-		"not_found_in_trash"  => "Geen beelden in de prullenbak",
-		);
-
-  if ( function_exists( 'get_field' ) ) {
-    $currentpageID        = get_field('beelden_page_overview', 'option');
-  }    
-  $theslug              = GC_BEELDENCONTEXT;
-  
-  if ( $currentpageID ) {
-    $theslug  = str_replace( home_url() . '/', '', get_permalink( $currentpageID ) ) . GC_BEELDENCONTEXT;
-  }
-
-	$args = array(
-		"labels"              => $labels,
-		"description"         => "Hier voer je de beelden in.",
-		"public"              => true,
-		"show_ui"             => true,
-		"has_archive"         => false,
-		"show_in_menu"        => true,
-		"exclude_from_search" => false,
-		"capability_type"     => "page",
-		"map_meta_cap"        => true,
-		"hierarchical"        => false,
-		"rewrite"             => array( "slug" => $theslug, "with_front" => true ),
-		"query_var"           => true,
-		"menu_position"       => 7,		
-    "menu_icon"           => "dashicons-format-image",		
-		"supports"            => array( "title", "editor", "excerpt", "revisions", "author" ),		
-	);
-	register_post_type( GC_KLANTCONTACT_BEELDEN_CPT	, $args );
-
-
-
-	$labels = array(
-		"name"                => "Licentie",
-		"label"               => "Licentie",
-		"menu_name"           => "Licentie",
-		"all_items"           => "Alle licenties",
-		"edit_item"           => "Bewerk licentie",
-		"view_item"           => "Bekijk licentie",
-		"update_item"         => "Licentie bijwerken",
-		"add_new_item"        => "Licentie toevoegen",
-		"new_item_name"       => "Nieuwe licentie",
-		"search_items"        => "Zoek licentie",
-		"popular_items"       => "Meest gebruikte licenties",
-		"separate_items_with_commas" => "Scheid met komma's",
-		"add_or_remove_items" => "Licentie toevoegen of verwijderen",
-		"choose_from_most_used" => "Kies uit de meest gebruikte",
-		"not_found"           => "Niet gevonden",
-		);
-
-	$args = array(
-		"labels"              => $labels,
-		"hierarchical"        => true,
-		"label"               => "Licentie",
-		"show_ui"             => true,
-		"query_var"           => true,
-		"rewrite"             => array( 'slug' => GC_TAX_LICENTIE, 'with_front' => true ),
-		"show_admin_column"   => false,
-	);
-	register_taxonomy( GC_TAX_LICENTIE, array( GC_KLANTCONTACT_BEELDEN_CPT ), $args );
-
-
-	$labels = array(
-		"name"                => "Organisatie",
-		"label"               => "Organisatie",
-		"menu_name"           => "Organisatie",
-		"all_items"           => "Alle organisaties",
-		"edit_item"           => "Bewerk organisatie",
-		"view_item"           => "Bekijk organisatie",
-		"update_item"         => "organisatie bijwerken",
-		"add_new_item"        => "organisatie toevoegen",
-		"new_item_name"       => "Nieuwe organisatie",
-		"search_items"        => "Zoek organisatie",
-		"popular_items"       => "Meest gebruikte organisaties",
-		"separate_items_with_commas" => "Scheid met komma's",
-		"add_or_remove_items" => "organisatie toevoegen of verwijderen",
-		"choose_from_most_used" => "Kies uit de meest gebruikte",
-		"not_found"           => "Niet gevonden",
-		);
-
-	$args = array(
-		"labels"              => $labels,
-		"hierarchical"        => true,
-		"label"               => "Organisatie",
-		"show_ui"             => true,
-		"query_var"           => true,
-		"rewrite"             => array( 'slug' => GC_TAX_ORGANISATIE, 'with_front' => true ),
-		"show_admin_column"   => false,
-	);
-	register_taxonomy( GC_TAX_ORGANISATIE, array( GC_KLANTCONTACT_BEELDEN_CPT, GC_KLANTCONTACT_BRIEF_CPT ), $args );
-
-
-
-
-// End of fn_gc_wbvb_register_cpts()
-}
 
 
 //========================================================================================================

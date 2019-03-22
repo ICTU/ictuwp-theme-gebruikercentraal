@@ -1,6 +1,6 @@
 # Gebruiker Centraal
 
-'gebruiker-centraal' is ontwikkeld als WordPress-theme voor [gebruikercentraal.nl](http://www.gebruikercentraal.nl). Opdrachtgever is ICTU (ICT Uitvoeringsorganisatie). Ontwikkelaar is Paul van Buuren ([WBVB Rotterdam](https://wbvb.nl)). 
+'gebruiker-centraal' is ontwikkeld als WordPress-theme voor [gebruikercentraal.nl](http://www.gebruikercentraal.nl). Opdrachtgever is ICTU (ICT Uitvoeringsorganisatie). Ontwikkelaar is Paul van Buuren ([WBVB Rotterdam](https://wbvb.nl)).
 
 Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.nl)
 
@@ -9,10 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-3.11.4
+3.13.1 - Extra settings in customizer: choice of logos.
 
 ## Version history
-* 3.13.1a - Extra settings in customizer: choice of logos.
+* 3.13.1 - Extra settings in customizer: choice of logos.
 * 3.12.1 - Renamed functions for better sharing.
 * 3.11.5 - Bug removed that caused empty author page.
 * 3.11.4 - Revised Gravity Forms styling.

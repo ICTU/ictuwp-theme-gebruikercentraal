@@ -8,7 +8,7 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.13.1a
+// @version 3.13.1
 // @desc.   Extra settings in customizer: choice of logos.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 ///
@@ -31,7 +31,7 @@ function mytheme_customizer_options( $wp_customize ) {
           'right' => 'right', // Give it a default
       )
   );
-  
+
   $wp_customize->add_control(
     'gc_wbvb_logoimage', //give it an ID
     array(
@@ -40,16 +40,16 @@ function mytheme_customizer_options( $wp_customize ) {
     			'left'  => '<img src="',
     			'right' => 'right',
     		),
-        'section'   => 'title_tagline', //select the section for it to appear under  
+        'section'   => 'title_tagline', //select the section for it to appear under
         'label'     => __( 'gc_wbvb_logoimage Label', 'gebruikercentraal' ),
         'settings'  => 'mytheme_accent_color', //pick the setting it applies to
       )
     );
-  
+
 /*
 
-$wp_customize->add_control( 
-  'setting_id', 
+$wp_customize->add_control(
+  'setting_id',
   array(
   'type' => 'date',
   'priority' => 10, // Within the section.
@@ -64,9 +64,9 @@ $wp_customize->add_control(
   'active_callback' => 'is_front_page',
 ) );
 
-  
+
   $wp_customize->add_control(
-  	'gc_wbvb_customlogo', 
+  	'gc_wbvb_customlogo',
   	array(
   		'label'    => __( 'gc_wbvb_customlogo Label', 'mytheme' ),
   		'section'  => 'title_tagline',
@@ -77,8 +77,8 @@ $wp_customize->add_control(
   			'right' => 'right',
   		),
   	)
-  )  
-*/  
+  )
+*/
 }
 
 //========================================================================================================
@@ -88,12 +88,12 @@ add_action( 'customize_register', 'gc_wbvb_customizer_add_section' );
 function gc_wbvb_customizer_add_section( $wp_customize ) {
 
   $id = 'gc_wbvb_customlogo_section';
-  
+
   $args = array(
       'title'      => __('Visible Section Name','mytheme'),
       'priority'   => 30,
   );
-  
+
 //   $wp_customize->add_section($id, $args);
 
   // Add a footer/copyright information section.
@@ -102,7 +102,7 @@ function gc_wbvb_customizer_add_section( $wp_customize ) {
     'priority' => 105, // Before Widgets.
   ) );
 
-   
+
 }
 
 //========================================================================================================
@@ -113,7 +113,7 @@ add_action('customize_register','gc_wbvb_customizer_options');
  *
  */
 function gc_wbvb_customizer_options( $wp_customize ) {
-  
+
   $wp_customize->add_setting(
         'gc_wbvb_customlogo', //give it an ID
         array(
@@ -122,7 +122,7 @@ function gc_wbvb_customizer_options( $wp_customize ) {
     );
 
   $wp_customize->add_control(
-  	'gc_wbvb_customlogo', 
+  	'gc_wbvb_customlogo',
   	array(
   		'label'    => __( 'gc_wbvb_customlogo Label', 'mytheme' ),
   		'section'  => 'title_tagline',
@@ -138,5 +138,3 @@ function gc_wbvb_customizer_options( $wp_customize ) {
 }
 
 //========================================================================================================
-
-

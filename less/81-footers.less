@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.7.5
-// @desc.   Beta-versie voor live-gang. CSS-corrections. Post - file-uploads. Corrections for mobile menu button. Widget-corrections.
+// @version 3.13.1
+// @desc.   Extra settings in customizer: choice of logos.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
   
@@ -23,6 +23,7 @@
     padding: 0;
     .fontsize(14);
     text-align: left;
+
     &, a {
       color: @wit;
     }
@@ -111,29 +112,31 @@
       .visuallyhidden();
     }
 
-    ul.menu {
-      float: right;
-      margin: 0;
-
+    .widget {
+      
+      ul.menu {
+        float: right;
+        margin: 0;
+        
         li {
-            display: inline-block;
-            float: left;
-            margin: 0 @padding ( @padding / 2 ) 0;
+          display: inline-block;
+          float: left;
+          margin: 0 @padding ( @padding / 2 ) 0;
+          
+          a {
+            color: @bsitefooter_a_color;
+            text-transform: lowercase;
+            text-decoration: none;
             
-            a {
-              color: @bsitefooter_a_color;
-              text-transform: lowercase;
-              text-decoration: none;
-              
-              &:hover,
-              &:focus,
-              &:active {
-                text-decoration: underline;
-                color: @wit;
-              }
+            &:hover,
+            &:focus,
+            &:active {
+              text-decoration: underline;
+              color: @wit;
             }
+          }
         }
-
+      }
     }
 
     p {
