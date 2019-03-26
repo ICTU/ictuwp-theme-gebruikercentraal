@@ -103,7 +103,7 @@ else {
   // no booking availability
   $header_meta_info .= $event_times;
   if ( $EM_Event->location->name ) {
-    dovardump($EM_Event->location, 'LOCATIE');
+//    dovardump($EM_Event->location, 'LOCATIE');
     $header_meta_info .= $EM_Event->location->name;
   }
 }
