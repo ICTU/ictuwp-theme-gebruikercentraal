@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.13.2
-// @desc.   Manifest op homepage optioneel gemaakt.
+// @version 3.13.3
+// @desc.   Styling manifest op home verbeterd. Bullets. Logo Rotterdammer.centraal.nl.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.13.2' );
-define( 'CHILD_THEME_DESCRIPTION', "3.13.2	 - Manifest op homepage optioneel gemaakt." );
+define( 'CHILD_THEME_VERSION', '3.13.3' );
+define( 'CHILD_THEME_DESCRIPTION', "3.13.3	 - Styling manifest op home verbeterd. Bullets. Logo Rotterdammer.centraal.nl." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 

@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.13.2
-// @desc.   Manifest op homepage optioneel gemaakt.
+// @version 3.13.3
+// @desc.   Styling manifest op home verbeterd. Bullets. Logo Rotterdammer.centraal.nl.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 // ================================================================================
@@ -332,9 +332,11 @@ body {
 
 .manifest {
   background: @groen_2;
-  padding: 0 0 @padding 0;
   color: @wit;
   margin-bottom: ( 3 * @padding );
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 0 !important;
   .standardboxshadow();
   
   header {
@@ -366,9 +368,16 @@ body {
       display: list-item;
       padding: 0 2em 0 .3em;
       margin-left: .2em;
+      list-style-image: url('images/bullet-white.png');      
       .iconaddbullet('../images/bullet.svg', @wit);
     }
-  }    
+    
+  } 
+  h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    padding-top: .25em;
+  } 
+     
   .blocks {
     div {
     }      
@@ -377,8 +386,10 @@ body {
       padding: 0;    
       margin: 0;    
     }
-    
   }      
+  .content {
+    min-height: inherit !important;
+  }
 }
 
 // ========================================================================

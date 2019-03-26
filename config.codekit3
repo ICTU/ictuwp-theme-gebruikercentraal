@@ -517,14 +517,35 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/images/bullet-white.png": {
+		"ft": 32768,
+		"iS": 93,
+		"oA": 0,
+		"oAP": "/images/bullet-white.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/bullet-white.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/images/bullet-white.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/images/bullet.png": {
 		"ft": 32768,
 		"iS": 91,
 		"oA": 0,
 		"oAP": "/images/bullet.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1447,8 +1468,8 @@
 		"oA": 0,
 		"oAP": "/images/logos/logo-rotterdammercentraal-desktop.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1468,8 +1489,8 @@
 		"oA": 0,
 		"oAP": "/images/logos/logo-rotterdammercentraal-mobile.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
