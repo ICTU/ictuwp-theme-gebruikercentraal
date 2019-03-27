@@ -36,8 +36,13 @@ genesis_markup( array(
   'context' => 'site-container',
 ) );
 
+
 do_action( 'genesis_before_header' );
+
+
 do_action( 'genesis_header' );
+
+
 do_action( 'genesis_after_header' );
 
 genesis_markup( array(

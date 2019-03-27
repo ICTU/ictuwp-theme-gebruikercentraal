@@ -7,15 +7,13 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.13.3
-// @desc.   Styling manifest op home verbeterd. Bullets. Logo Rotterdammer.centraal.nl.
+// @version 3.13.4
+// @desc.   Site-description zichtbaar gemaakt.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
-
-
-    .title-area {
-        margin: 0;
-      float: left;
+  .title-area {
+    margin: 0;
+    float: left;
   }  
   
   .site-header {
@@ -71,6 +69,10 @@
       font-family: @headerfont;
       margin: 0 0 0 @logowidth;
     }
+    .site-description {
+      margin: 0 0 0 @logowidth;
+      color: @wit;
+    }
   }
 
 
@@ -89,7 +91,8 @@
         
       }
 
-      .site-title {
+      .site-title,
+      .site-description {
         margin-left: @logo_desktop_width;
       }
     }

@@ -1,11 +1,11 @@
-@versie: '3.13.3';
+@versie: '3.13.4';
 /*!
 Theme Name: Gebruiker Centraal
 Description: Wordpress-theme voor gebruikercentraal.nl
 Author: Paul van Buuren - Tamara de Haas
 Author URI: https://wbvb.nl/
-Version: 3.13.3
-Version description: 3.13.3 - Styling manifest op home verbeterd. Bullets. Logo Rotterdammer.centraal.nl.
+Version: 3.13.4
+Version description: 3.13.4 - Site-description zichtbaar gemaakt.
 
 Template: genesis
 Template Version: 2.0.2
@@ -59,8 +59,8 @@ License URI: http://www.opensource.org/licenses/gpl-license.php
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.13.3
-// @desc.   Styling manifest op home verbeterd. Bullets. Logo Rotterdammer.centraal.nl.
+// @version 3.13.4
+// @desc.   Site-description zichtbaar gemaakt.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -466,15 +466,16 @@ body .sidebar .widget_oa_social_login .oneall_social_login {
 
 
 
-.site-title, .entry-title {
-    a {
-      color: @txt;
-      text-decoration: none;
-        &:hover {
-            color: @a_hover;
-            text-decoration: underline;
-        }
+.site-title,
+.entry-title {
+  a {
+    color: @txt;
+    text-decoration: none;
+    &:hover {
+      color: @a_hover;
+      text-decoration: underline;
     }
+  }
 }
 
 

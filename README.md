@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-3.13.3 - Styling manifest op home verbeterd. Bullets. Logo Rotterdammer.centraal.nl.
+3.13.4 - Site-description zichtbaar gemaakt.
 
 ## Version history
+* 3.13.4 - Site-description zichtbaar gemaakt.
 * 3.13.3 - Styling manifest op home verbeterd. Bullets. Logo Rotterdammer.centraal.nl.
 * 3.13.2 - Manifest op homepage optioneel gemaakt.
 * 3.13.1 - Extra settings in customizer: choice of logos.
