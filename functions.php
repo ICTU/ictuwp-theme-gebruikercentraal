@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.13.4
-// @desc.   Site-description zichtbaar gemaakt.
+// @version 3.13.5
+// @desc.   Kleine CSS-wijzigingen voor zoekbox, site-description en event-paginering.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.13.4' );
-define( 'CHILD_THEME_DESCRIPTION', "3.13.4	 - Site-description zichtbaar gemaakt." );
+define( 'CHILD_THEME_VERSION', '3.13.5' );
+define( 'CHILD_THEME_DESCRIPTION', "3.13.5 - Kleine CSS-wijzigingen voor zoekbox, site-description en event-paginering." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 
@@ -2192,6 +2192,7 @@ add_filter( 'theme_page_templates', 'gc_wbvb_remove_genesis_page_templates' );
 //========================================================================================================
 
 add_filter ( 'genesis_next_link_text' , 'gc_wbvb_paging_next' );
+
 function gc_wbvb_paging_next ( $text ) {
 	if ( is_category() ) {
 	    return '<span>' . __( "Ouder", 'gebruikercentraal' ) . '</span>';
@@ -2202,6 +2203,7 @@ function gc_wbvb_paging_next ( $text ) {
 }
 
 add_filter ( 'genesis_prev_link_text' , 'gc_wbvb_paging_previous' );
+
 function gc_wbvb_paging_previous ( $text ) {
 	if ( is_category() ) {
 	    return '<span>' . __( "Nieuwer", 'gebruikercentraal' ) . '</span>';

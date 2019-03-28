@@ -1,11 +1,11 @@
-@versie: '3.13.4';
+@versie: '3.13.5';
 /*!
 Theme Name: Gebruiker Centraal
 Description: Wordpress-theme voor gebruikercentraal.nl
 Author: Paul van Buuren - Tamara de Haas
 Author URI: https://wbvb.nl/
-Version: 3.13.4
-Version description: 3.13.4 - Site-description zichtbaar gemaakt.
+Version: 3.13.5
+Version description: 3.13.5 - Kleine CSS-wijzigingen voor zoekbox, site-description en event-paginering.
 
 Template: genesis
 Template Version: 2.0.2
@@ -59,8 +59,8 @@ License URI: http://www.opensource.org/licenses/gpl-license.php
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.13.4
-// @desc.   Site-description zichtbaar gemaakt.
+// @version 3.13.5
+// @desc.   Kleine CSS-wijzigingen voor zoekbox, site-description en event-paginering.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -236,9 +236,18 @@ div, article, section, main {
         padding: 0 4px;
         height: 25px;
         margin: 0;
+        
+        &[type="search"] {
+          min-width: 180px;
+        }
+
+        &[type="submit"] {
+          border-color: @breadcrumb_bg_color;
+        }
       }
     }
   }
+  
   .breadlist {
     padding-top: @padding;
     float: left;

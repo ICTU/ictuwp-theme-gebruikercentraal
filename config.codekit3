@@ -5069,7 +5069,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http://rotterdammer.gebruikercentraal.co.uk/",
+	"externalServerAddress": "http://live-gebruikercentraal.co.uk/",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",

@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.7.5
-// @desc.   Beta-versie voor live-gang. CSS-corrections. Post - file-uploads. Corrections for mobile menu button. Widget-corrections.
+// @version 3.13.5
+// @desc.   Kleine CSS-wijzigingen voor zoekbox, site-description en event-paginering.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -131,6 +131,7 @@
     .alignright,
     .pagination-previous,
     .alignleft {
+
       @media only screen and (min-width: ( @break_tablet ) ) {
         max-width: 50%;
       }
@@ -253,4 +254,48 @@
       
     }
   }
+
+  // event-manager pagination
+  .em-pagination {
+    display: block;
+    clear: both;
+    float: none;
+    font-size: 150%;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: .25em;
+
+    .page-numbers,
+    strong {
+      text-align: center;
+      display: inline-block;
+    }
+
+    a.page-numbers {
+      text-decoration: none;
+      border: 3px solid transparent;
+      background-color: transparent;
+      padding-left: .5em;
+      padding-right: .5em;
+      
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: @wit;
+        border-color: @txt;
+        text-decoration: underline;
+      }
+      
+    }
+
+    strong {
+      border: 3px solid @txt;
+      background-color: @wit;
+      padding-left: .5em;
+      padding-right: .5em;
+    }
+    
+    
+  }
+  
 }

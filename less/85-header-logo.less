@@ -7,13 +7,19 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.13.4
-// @desc.   Site-description zichtbaar gemaakt.
+// @version 3.13.5
+// @desc.   Kleine CSS-wijzigingen voor zoekbox, site-description en event-paginering.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
+  
+//  @maxbreedtemenu: 650px;
+
+  @maxbreedtemenu: ( @break_fullwidth - 300px );
+  
   .title-area {
     margin: 0;
     float: left;
+  		max-width: ~"calc(100% - @{maxbreedtemenu})";
   }  
   
   .site-header {
@@ -72,6 +78,7 @@
     .site-description {
       margin: 0 0 0 @logowidth;
       color: @wit;
+      font-size: 75%;
     }
   }
 
