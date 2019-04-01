@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.13.5
-// @desc.   Kleine CSS-wijzigingen voor zoekbox, site-description en event-paginering.
+// @version 3.13.6
+// @desc.   Variabelen van inclusie-plugin ook opgenomen in functions.php. Wat CSS-styling voor video en rijksvideo.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.13.5' );
-define( 'CHILD_THEME_DESCRIPTION', "3.13.5 - Kleine CSS-wijzigingen voor zoekbox, site-description en event-paginering." );
+define( 'CHILD_THEME_VERSION', '3.13.6' );
+define( 'CHILD_THEME_DESCRIPTION', "3.13.6 - Variabelen van inclusie-plugin ook opgenomen in functions.php. Wat CSS-styling voor video en rijksvideo." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 
@@ -93,6 +93,65 @@ if ( ! defined( 'GC_TAX_LICENTIE' ) ) {
 if ( ! defined( 'GC_TAX_ORGANISATIE' ) ) {
   define( 'GC_TAX_ORGANISATIE', 'organisatie' );
 }
+
+
+if ( ! defined( 'ICTU_GC_CPT_STAP' ) ) {
+  define( 'ICTU_GC_CPT_STAP', 'stap' );   // slug for custom taxonomy 'document'
+}
+
+if ( ! defined( 'ICTU_GC_CPT_CITAAT' ) ) {
+  define( 'ICTU_GC_CPT_CITAAT', 'citaat' );   // slug for custom taxonomy 'citaat'
+}
+
+if ( ! defined( 'ICTU_GC_CPT_DOELGROEP' ) ) {
+  define( 'ICTU_GC_CPT_DOELGROEP', 'doelgroep' );  // slug for custom post type 'doelgroep'
+}
+
+if ( ! defined( 'ICTU_GC_CPT_VAARDIGHEDEN' ) ) {
+  define( 'ICTU_GC_CPT_VAARDIGHEDEN', 'vaardigheden' );  // slug for custom post type 'nietzomaarzo'
+}
+
+if ( ! defined( 'ICTU_GC_CPT_AANRADER' ) ) {
+  define( 'ICTU_GC_CPT_AANRADER', 'aanrader' );  // slug for custom post type 'nietzomaarzo'
+}
+
+if ( ! defined( 'ICTU_GC_CPT_AFRADER' ) ) {
+  define( 'ICTU_GC_CPT_AFRADER', 'afrader' );  // slug for custom post type 'nietzomaarzo'
+}
+
+if ( ! defined( 'ICTU_GC_CPT_METHODE' ) ) {
+  define( 'ICTU_GC_CPT_METHODE', 'methode' );  // slug for custom post type 'methode'
+}
+
+if ( ! defined( 'ICTU_GC_CPT_PROCESTIP' ) ) {
+  define( 'ICTU_GC_CPT_PROCESTIP', 'procestip' );  // slug for custom post type 'methode'
+}
+
+if ( ! defined( 'ICTU_GC_CT_TIJD' ) ) {
+  define( 'ICTU_GC_CT_TIJD', 'tijd' );  // slug for custom taxonomy 'tijd'
+}
+
+if ( ! defined( 'ICTU_GC_CT_MANKRACHT' ) ) {
+  define( 'ICTU_GC_CT_MANKRACHT', 'mankracht' );  // slug for custom taxonomy 'mankracht'
+}
+
+if ( ! defined( 'ICTU_GC_CT_KOSTEN' ) ) {
+  define( 'ICTU_GC_CT_KOSTEN', 'kosten' );  // slug for custom taxonomy 'kosten'
+}
+
+if ( ! defined( 'ICTU_GC_CT_EXPERTISE' ) ) {
+  define( 'ICTU_GC_CT_EXPERTISE', 'expertise' );  // slug for custom taxonomy 'expertise'
+}
+
+if ( ! defined( 'ICTU_GC_CT_DEELNEMERS' ) ) {
+  define( 'ICTU_GC_CT_DEELNEMERS', 'deelnemers' );  // slug for custom taxonomy 'deelnemers'
+}
+
+if ( ! defined( 'ICTU_GC_CT_ONDERWERP_TIP' ) ) {
+  define( 'ICTU_GC_CT_ONDERWERP_TIP', 'onderwerpen' );  // tax for custom cpt do's & dont's
+}
+
+
 
 define( 'ACF_PLUGIN_NOT_ACTIVE_WARNING', '<p style="position: absolute; top: 3em; left: 3em; display: block; padding: .5em; background: yellow; color: black;">de ACF custom fields plugin is niet actief.</p>' );
 
@@ -457,7 +516,7 @@ function gc_wbvb_get_date_badge() {
         || ( ICTU_GC_CPT_STAP == get_post_type() )
         || ( ICTU_GC_CPT_CITAAT == get_post_type() )
         || ( ICTU_GC_CPT_DOELGROEP == get_post_type() )
-        || ( ICTU_GC_CPT_VAARDIGHEID == get_post_type() )
+        || ( ICTU_GC_CPT_VAARDIGHEDEN == get_post_type() )
         || ( ICTU_GC_CPT_METHODE == get_post_type() )
         )  {
     return;
