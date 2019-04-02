@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.8.2
-// @desc.   Code-opschoning.
+// @version 3.13.5
+// @desc.   Kleine CSS-wijzigingen voor zoekbox, site-description en event-paginering.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -343,7 +343,7 @@
   
     
     input[type="text"] {
-  		max-width: ~"calc(100% - @{knopbreedte})";
+    		max-width: ~"calc(100% - @{knopbreedte})";
     }
     input[type="text"],
     input[type="button"],
@@ -483,7 +483,9 @@
 
     .gc-berichten-widget {
       .entry {
-        min-height: @width;
+        &, a {
+          min-height: ( @width + 1 );
+        }
       }
       .bloginfo {
         margin-left: @width;

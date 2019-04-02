@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.11.2
-// @desc.   Betere styling voor template homepage. Mogelijkheid andere content op homepage te zetten.
+// @version 3.13.2
+// @desc.   Manifest op homepage optioneel gemaakt.
 
 
 $samenvattingverplicht = false;
@@ -483,70 +483,109 @@ if ( $samenvattingverplicht ) {
     // Mogelijkheid om links naar het manifest op de homepage in te voeren
     // dit geeft een linktekst en een link naar een pagina en wordt alleen getoond bij het wijzigen van 
     // de pagina die ingesteld is als homepage
-    acf_add_local_field_group(array (
-      'key' => 'group_56f3cd69031f7',
-      'title' => 'Manifest (homepage)',
-      'fields' => array (
-        array (
-          'key' => 'field_56f3cfe63fe1a',
-          'label' => 'Link naar meer over Gebruiker Centraal',
-          'name' => 'lees-meer-link',
-          'type' => 'page_link',
-          'instructions' => '',
-          'required' => 1,
-          'conditional_logic' => 0,
-          'wrapper' => array (
-            'width' => '',
-            'class' => '',
-            'id' => '',
-          ),
-          'post_type' => array (
-          ),
-          'taxonomy' => array (
-          ),
-          'allow_null' => 0,
-          'multiple' => 0,
-        ),
-        array (
-          'key' => 'field_56f3d0033fe1b',
-          'label' => 'Lees-meer-tekst',
-          'name' => 'lees-meer-tekst',
-          'type' => 'text',
-          'instructions' => 'Dit wordt de tekst voor de lees-meer-link',
-          'required' => 1,
-          'conditional_logic' => 0,
-          'wrapper' => array (
-            'width' => '',
-            'class' => '',
-            'id' => '',
-          ),
-          'default_value' => 'Meer over Gebruiker Centraal',
-          'placeholder' => '',
-          'prepend' => '',
-          'append' => '',
-          'maxlength' => '',
-          'readonly' => 0,
-          'disabled' => 0,
-        ),
-      ),
-      'location' => array (
-        array (
-          array (
-            'param' => 'page_type',
-            'operator' => '==',
-            'value' => 'front_page',
-          ),
-        ),
-      ),
-      'menu_order' => 0,
-      'position' => 'acf_after_title',
-      'style' => 'default',
-      'label_placement' => 'top',
-      'instruction_placement' => 'label',
-      'hide_on_screen' => '',
-      'active' => 1,
-      'description' => 'De tekst die op deze pagina invoert geldt als <em>manifest</em>. Deze wordt getoond in een afwijkende vormgeving met een doorkliklink',
+
+    acf_add_local_field_group(array(
+    	'key' => 'group_56f3cd69031f7',
+    	'title' => 'GC Home: manifestblok',
+    	'fields' => array(
+    		array(
+    			'key' => 'field_5c94c6dfca247',
+    			'label' => 'Link naar manifest toevoegen?',
+    			'name' => 'link_naar_manifest_toevoegen',
+    			'type' => 'radio',
+    			'instructions' => '',
+    			'required' => 0,
+    			'conditional_logic' => 0,
+    			'wrapper' => array(
+    				'width' => '',
+    				'class' => '',
+    				'id' => '',
+    			),
+    			'choices' => array(
+    				'ja' => 'Ja',
+    				'nee' => 'Nee',
+    			),
+    			'allow_null' => 0,
+    			'other_choice' => 0,
+    			'default_value' => 'nee',
+    			'layout' => 'vertical',
+    			'return_format' => 'value',
+    			'save_other_choice' => 0,
+    		),
+    		array(
+    			'key' => 'field_56f3cfe63fe1a',
+    			'label' => 'Link naar meer over Gebruiker Centraal',
+    			'name' => 'lees-meer-link',
+    			'type' => 'page_link',
+    			'instructions' => '',
+    			'required' => 0,
+    			'conditional_logic' => array(
+    				array(
+    					array(
+    						'field' => 'field_5c94c6dfca247',
+    						'operator' => '==',
+    						'value' => 'ja',
+    					),
+    				),
+    			),
+    			'wrapper' => array(
+    				'width' => '',
+    				'class' => '',
+    				'id' => '',
+    			),
+    			'post_type' => '',
+    			'taxonomy' => '',
+    			'allow_null' => 0,
+    			'allow_archives' => 1,
+    			'multiple' => 0,
+    		),
+    		array(
+    			'key' => 'field_56f3d0033fe1b',
+    			'label' => 'lees-meer-tekst',
+    			'name' => 'lees-meer-tekst',
+    			'type' => 'text',
+    			'instructions' => 'Dit wordt de tekst voor de lees-meer-link',
+    			'required' => 0,
+    			'conditional_logic' => array(
+    				array(
+    					array(
+    						'field' => 'field_5c94c6dfca247',
+    						'operator' => '==',
+    						'value' => 'ja',
+    					),
+    				),
+    			),
+    			'wrapper' => array(
+    				'width' => '',
+    				'class' => '',
+    				'id' => '',
+    			),
+    			'default_value' => 'Meer over Gebruiker Centraal',
+    			'placeholder' => '',
+    			'prepend' => '',
+    			'append' => '',
+    			'maxlength' => '',
+    		),
+    	),
+    	'location' => array(
+    		array(
+    			array(
+    				'param' => 'page_template',
+    				'operator' => '==',
+    				'value' => 'page_home.php',
+    			),
+    		),
+    	),
+    	'menu_order' => 0,
+    	'position' => 'acf_after_title',
+    	'style' => 'default',
+    	'label_placement' => 'top',
+    	'instruction_placement' => 'label',
+    	'hide_on_screen' => '',
+    	'active' => true,
+    	'description' => 'De tekst die op deze pagina invoert geldt als <em>manifest</em>. Deze wordt getoond in een afwijkende vormgeving met een doorkliklink',
     ));
+
 
 
     //====================================================================================================
@@ -970,179 +1009,6 @@ endif;
 
 //========================================================================================================
 
-// Add support for Genesis layouts to force a different layout for tips
-add_post_type_support( GC_KLANTCONTACT_BRIEF_CPT, 'genesis-layouts' );
-add_post_type_support( GC_KLANTCONTACT_BEELDEN_CPT, 'genesis-layouts' );
-
-// register custom post types
-add_action( 'init', 'fn_gc_wbvb_register_cpts' );
-
-//========================================================================================================
-
-function fn_gc_wbvb_register_cpts() {
-
-  // ------------------------------------------------------
-  // brieven
-	$labels = array(
-		"name"                => "Brieven",
-		"singular_name"       => "Brief",
-		"menu_name"           => "Brieven",
-		"all_items"           => "Alle brieven",
-		"add_new"             => "Toevoegen",
-		"add_new_item"        => "Brief toevoegen",
-		"edit"                => "Brief bewerken",
-		"edit_item"           => "Bewerk brief",
-		"new_item"            => "Nieuwe brief",
-		"view"                => "Bekijk",
-		"view_item"           => "Bekijk brief",
-		"search_items"        => "Tips zoeken",
-		"not_found"           => "Geen brieven gevonden",
-		"not_found_in_trash"  => "Geen brieven in de prullenbak",
-		);
-
-  $currentpageID          = '';
-  if ( function_exists( 'get_field' ) ) {
-    $currentpageID          = get_field('brief_page_overview', 'option');
-  }
-  $theslug                = 'brieven';
-  $theslug                = GC_BRIEVENCONTEXT;
-  
-  if ( $currentpageID ) {
-    $theslug  = str_replace( home_url() . '/', '', get_permalink( $currentpageID ) ) . GC_BRIEVENCONTEXT;
-  }
-    
-	$args = array(
-		"labels"              => $labels,
-		"description"         => "Hier voer je de brieven in.",
-		"public"              => true,
-		"show_ui"             => true,
-		"has_archive"         => false,
-		"show_in_menu"        => true,
-		"exclude_from_search" => false,
-		"capability_type"     => "page",
-		"map_meta_cap"        => true,
-		"hierarchical"        => false,
-		"rewrite"             => array( "slug" => $theslug, "with_front" => true ),
-		"query_var"           => true,
-		"menu_position"       => 6,		
-    "menu_icon"           => "dashicons-media-text",		
-		"supports"            => array( "title", "editor", "excerpt", "revisions", "thumbnail", "author" ),		
-	);
-	register_post_type( GC_KLANTCONTACT_BRIEF_CPT	, $args );
-
-  // ------------------------------------------------------
-  // beelden
-	$labels = array(
-		"name"                => "Beelden",
-		"singular_name"       => "Beeld",
-		"menu_name"           => "Beelden",
-		"all_items"           => "Alle beelden",
-		"add_new"             => "Toevoegen",
-		"add_new_item"        => "Beeld toevoegen",
-		"edit"                => "Beeld bewerken",
-		"edit_item"           => "Bewerk beeld",
-		"new_item"            => "Nieuwe beeld",
-		"view"                => "Bekijk",
-		"view_item"           => "Bekijk beeld",
-		"search_items"        => "Tips zoeken",
-		"not_found"           => "Geen beelden gevonden",
-		"not_found_in_trash"  => "Geen beelden in de prullenbak",
-		);
-
-  if ( function_exists( 'get_field' ) ) {
-    $currentpageID        = get_field('beelden_page_overview', 'option');
-  }    
-  $theslug              = GC_BEELDENCONTEXT;
-  
-  if ( $currentpageID ) {
-    $theslug  = str_replace( home_url() . '/', '', get_permalink( $currentpageID ) ) . GC_BEELDENCONTEXT;
-  }
-
-	$args = array(
-		"labels"              => $labels,
-		"description"         => "Hier voer je de beelden in.",
-		"public"              => true,
-		"show_ui"             => true,
-		"has_archive"         => false,
-		"show_in_menu"        => true,
-		"exclude_from_search" => false,
-		"capability_type"     => "page",
-		"map_meta_cap"        => true,
-		"hierarchical"        => false,
-		"rewrite"             => array( "slug" => $theslug, "with_front" => true ),
-		"query_var"           => true,
-		"menu_position"       => 7,		
-    "menu_icon"           => "dashicons-format-image",		
-		"supports"            => array( "title", "editor", "excerpt", "revisions", "author" ),		
-	);
-	register_post_type( GC_KLANTCONTACT_BEELDEN_CPT	, $args );
-
-
-
-	$labels = array(
-		"name"                => "Licentie",
-		"label"               => "Licentie",
-		"menu_name"           => "Licentie",
-		"all_items"           => "Alle licenties",
-		"edit_item"           => "Bewerk licentie",
-		"view_item"           => "Bekijk licentie",
-		"update_item"         => "Licentie bijwerken",
-		"add_new_item"        => "Licentie toevoegen",
-		"new_item_name"       => "Nieuwe licentie",
-		"search_items"        => "Zoek licentie",
-		"popular_items"       => "Meest gebruikte licenties",
-		"separate_items_with_commas" => "Scheid met komma's",
-		"add_or_remove_items" => "Licentie toevoegen of verwijderen",
-		"choose_from_most_used" => "Kies uit de meest gebruikte",
-		"not_found"           => "Niet gevonden",
-		);
-
-	$args = array(
-		"labels"              => $labels,
-		"hierarchical"        => true,
-		"label"               => "Licentie",
-		"show_ui"             => true,
-		"query_var"           => true,
-		"rewrite"             => array( 'slug' => GC_TAX_LICENTIE, 'with_front' => true ),
-		"show_admin_column"   => false,
-	);
-	register_taxonomy( GC_TAX_LICENTIE, array( GC_KLANTCONTACT_BEELDEN_CPT ), $args );
-
-
-	$labels = array(
-		"name"                => "Organisatie",
-		"label"               => "Organisatie",
-		"menu_name"           => "Organisatie",
-		"all_items"           => "Alle organisaties",
-		"edit_item"           => "Bewerk organisatie",
-		"view_item"           => "Bekijk organisatie",
-		"update_item"         => "organisatie bijwerken",
-		"add_new_item"        => "organisatie toevoegen",
-		"new_item_name"       => "Nieuwe organisatie",
-		"search_items"        => "Zoek organisatie",
-		"popular_items"       => "Meest gebruikte organisaties",
-		"separate_items_with_commas" => "Scheid met komma's",
-		"add_or_remove_items" => "organisatie toevoegen of verwijderen",
-		"choose_from_most_used" => "Kies uit de meest gebruikte",
-		"not_found"           => "Niet gevonden",
-		);
-
-	$args = array(
-		"labels"              => $labels,
-		"hierarchical"        => true,
-		"label"               => "Organisatie",
-		"show_ui"             => true,
-		"query_var"           => true,
-		"rewrite"             => array( 'slug' => GC_TAX_ORGANISATIE, 'with_front' => true ),
-		"show_admin_column"   => false,
-	);
-	register_taxonomy( GC_TAX_ORGANISATIE, array( GC_KLANTCONTACT_BEELDEN_CPT, GC_KLANTCONTACT_BRIEF_CPT ), $args );
-
-
-
-
-// End of fn_gc_wbvb_register_cpts()
-}
 
 
 //========================================================================================================
@@ -1152,102 +1018,106 @@ https://www.advancedcustomfields.com/resources/bidirectional-relationships/
 */  
   
 
-function bidirectional_acf_update_value( $value, $post_id, $field  ) {
+if ( ! function_exists( 'bidirectional_acf_update_value' ) ) {
 
-  if ( function_exists( 'get_field' ) ) {
-
-  	// vars
-  	$field_name   = $field['name'];
-  	$field_key    = $field['key'];
-  	$global_name  = 'is_updating_' . $field_name;
-  	
-  	
-  	// bail early if this filter was triggered from the update_field() function called within the loop below
-  	// - this prevents an inifinte loop
-  	if( !empty($GLOBALS[ $global_name ]) ) return $value;
-  	
-  	
-  	// set global variable to avoid inifite loop
-  	// - could also remove_filter() then add_filter() again, but this is simpler
-  	$GLOBALS[ $global_name ] = 1;
-  	
-  	
-  	// loop over selected posts and add this $post_id
-  	if( is_array($value) ) {
-  	
-  		foreach( $value as $post_id2 ) {
-  			
-  			// load existing related posts
-  			$value2 = get_field($field_name, $post_id2, false);
-  			
-  			
-  			// allow for selected posts to not contain a value
-  			if( empty($value2) ) {
-  				
-  				$value2 = array();
-  				
-  			}
-  			
-  			
-  			// bail early if the current $post_id is already found in selected post's $value2
-  			if( in_array($post_id, $value2) ) continue;
-  			
-  			
-  			// append the current $post_id to the selected post's 'related_posts' value
-  			$value2[] = $post_id;
-  			
-  			
-  			// update the selected post's value (use field's key for performance)
-  			update_field($field_key, $value2, $post_id2);
-  			
-  		}
-  	
-  	}
-  	
-  	
-  	// find posts which have been removed
-  	$old_value = get_field($field_name, $post_id, false);
-  	
-  	if( is_array($old_value) ) {
-  		
-  		foreach( $old_value as $post_id2 ) {
-  			
-  			// bail early if this value has not been removed
-  			if( is_array($value) && in_array($post_id2, $value) ) continue;
-  			
-  			
-  			// load existing related posts
-  			$value2 = get_field($field_name, $post_id2, false);
-  			
-  			
-  			// bail early if no value
-  			if( empty($value2) ) continue;
-  			
-  			
-  			// find the position of $post_id within $value2 so we can remove it
-  			$pos = array_search($post_id, $value2);
-  			
-  			
-  			// remove
-  			unset( $value2[ $pos] );
-  			
-  			
-  			// update the un-selected post's value (use field's key for performance)
-  			update_field($field_key, $value2, $post_id2);
-  			
-  		}
-  		
-  	}
-  	
-  	
-  	// reset global varibale to allow this filter to function as per normal
-  	$GLOBALS[ $global_name ] = 0;
-	
-  }
-	
-	// return
-  return $value;
+  function bidirectional_acf_update_value( $value, $post_id, $field  ) {
   
+    if ( function_exists( 'get_field' ) ) {
+  
+    	// vars
+    	$field_name   = $field['name'];
+    	$field_key    = $field['key'];
+    	$global_name  = 'is_updating_' . $field_name;
+    	
+    	
+    	// bail early if this filter was triggered from the update_field() function called within the loop below
+    	// - this prevents an inifinte loop
+    	if( !empty($GLOBALS[ $global_name ]) ) return $value;
+    	
+    	
+    	// set global variable to avoid inifite loop
+    	// - could also remove_filter() then add_filter() again, but this is simpler
+    	$GLOBALS[ $global_name ] = 1;
+    	
+    	
+    	// loop over selected posts and add this $post_id
+    	if( is_array($value) ) {
+    	
+    		foreach( $value as $post_id2 ) {
+    			
+    			// load existing related posts
+    			$value2 = get_field($field_name, $post_id2, false);
+    			
+    			
+    			// allow for selected posts to not contain a value
+    			if( empty($value2) ) {
+    				
+    				$value2 = array();
+    				
+    			}
+    			
+    			
+    			// bail early if the current $post_id is already found in selected post's $value2
+    			if( in_array($post_id, $value2) ) continue;
+    			
+    			
+    			// append the current $post_id to the selected post's 'related_posts' value
+    			$value2[] = $post_id;
+    			
+    			
+    			// update the selected post's value (use field's key for performance)
+    			update_field($field_key, $value2, $post_id2);
+    			
+    		}
+    	
+    	}
+    	
+    	
+    	// find posts which have been removed
+    	$old_value = get_field($field_name, $post_id, false);
+    	
+    	if( is_array($old_value) ) {
+    		
+    		foreach( $old_value as $post_id2 ) {
+    			
+    			// bail early if this value has not been removed
+    			if( is_array($value) && in_array($post_id2, $value) ) continue;
+    			
+    			
+    			// load existing related posts
+    			$value2 = get_field($field_name, $post_id2, false);
+    			
+    			
+    			// bail early if no value
+    			if( empty($value2) ) continue;
+    			
+    			
+    			// find the position of $post_id within $value2 so we can remove it
+    			$pos = array_search($post_id, $value2);
+    			
+    			
+    			// remove
+    			unset( $value2[ $pos] );
+    			
+    			
+    			// update the un-selected post's value (use field's key for performance)
+    			update_field($field_key, $value2, $post_id2);
+    			
+    		}
+    		
+    	}
+    	
+    	
+    	// reset global varibale to allow this filter to function as per normal
+    	$GLOBALS[ $global_name ] = 0;
+  	
+    }
+  	
+  	// return
+    return $value;
+    
+  }
+
 }
 
 add_filter('acf/update_value/name=beelden_brieven_connectie', 'bidirectional_acf_update_value', 10, 3);

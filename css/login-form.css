@@ -98,7 +98,7 @@ ol li {
 }
 ul li {
   list-style-image: url('images/bullet.png');
-  list-style-image: url("data:image/svg+xml;charset=UTF-8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3Csvg%20width%3D%226px%22%20height%3D%226px%22%20viewBox%3D%220%200%206%206%22%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%0A%20%20%20%20%3C!--%20Generator%3A%20Sketch%203.6.1%20(26313)%20-%20http%3A%2F%2Fwww.bohemiancoding.com%2Fsketch%20--%3E%0A%20%20%20%20%3Ctitle%3Ebullet%3C%2Ftitle%3E%0A%20%20%20%20%3Cdesc%3ECreated%20with%20Sketch.%3C%2Fdesc%3E%0A%20%20%20%20%3Cdefs%3E%3C%2Fdefs%3E%0A%20%20%20%20%3Cg%20id%3D%22Page-1%22%20stroke%3D%22none%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%20%20%20%20%3Crect%20id%3D%22bullet%22%20fill%3D%22%23002F3E%22%20x%3D%220%22%20y%3D%220%22%20width%3D%226%22%20height%3D%226%22%3E%3C%2Frect%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E");
+  list-style-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20height%3D%226%22%20viewBox%3D%220%200%206%206%22%20width%3D%226%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m0%200h6v6h-6z%22%20fill%3D%22%23002f3e%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E");
 }
 ol ol,
 ul ul {
@@ -152,8 +152,8 @@ img.alignright,
   .nietzomaarzo {
     background: #DEDEDE;
     display: flex;
-    padding-top: .5em;
-    padding-bottom: .5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
   }
 }
 .image-examples .wp-caption-text,
@@ -179,8 +179,8 @@ img.alignright,
   .image-examples .wp-caption,
   .nietzomaarzo .wp-caption {
     border: 0.5em solid #DEDEDE;
-    border-top-width: .25em;
-    border-bottom-width: .25em;
+    border-top-width: 0.25em;
+    border-bottom-width: 0.25em;
     margin-top: 0;
   }
   .image-examples .good-example:first-of-type,
@@ -189,7 +189,7 @@ img.alignright,
   .nietzomaarzo .bad-example:first-of-type,
   .image-examples .wp-caption:first-of-type,
   .nietzomaarzo .wp-caption:first-of-type {
-    border-top-width: .5em;
+    border-top-width: 0.5em;
   }
   .image-examples .good-example:last-of-type,
   .nietzomaarzo .good-example:last-of-type,
@@ -197,7 +197,7 @@ img.alignright,
   .nietzomaarzo .bad-example:last-of-type,
   .image-examples .wp-caption:last-of-type,
   .nietzomaarzo .wp-caption:last-of-type {
-    border-bottom-width: .5em;
+    border-bottom-width: 0.5em;
   }
 }
 @media only screen and (min-width: 600px) {
@@ -210,7 +210,7 @@ img.alignright,
     max-width: 49% !important;
     width: 49%;
     flex: 1;
-    margin: 0 .5% 0 .5%;
+    margin: 0 0.5% 0 0.5%;
   }
 }
 .image-examples .wp-caption,
@@ -310,7 +310,7 @@ table th,
 table td {
   text-align: left;
   vertical-align: top;
-  padding-bottom: .4em;
+  padding-bottom: 0.4em;
 }
 table th {
   font-family: 'Montserrat regular', Helvetica, Arial, sans-serif;
@@ -337,7 +337,7 @@ h6 {
   font-weight: normal;
   line-height: 1.2;
   margin: 8px 0 4px;
-  padding: 1em 0 .3em 0;
+  padding: 1em 0 0.3em 0;
 }
 h1 a,
 h2 a,

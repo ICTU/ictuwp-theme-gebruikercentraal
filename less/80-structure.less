@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.12.1
-// @desc.   Renamed functions for better sharing.
+// @version 3.13.7
+// @desc.   CSS bugs in manifest en site-header.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -110,15 +110,23 @@
   }
   
   
+
   .full-width-content {
 
-    &.home,
+    &.single-stap,
+    &.single-vaardigheid,   
+    &.page,
+    &.page,
     &.search,
     &.single {
+      .entry-content,
       .content {
         @media only screen and (min-width: @break_fullwidth ) {
 //          border: 1px solid red;
           min-height: 400px;
+          &.manifest {
+            min-height: intrinsic;
+          }
         }
       }
     }
@@ -160,14 +168,6 @@
     }    
   }
 
-  .home.full-width-content .content {
-//    min-height: 320px;
-    .entry {
-      padding-left: 0;
-      padding-right: 0;
-      padding-bottom: 4px;
-    }
-  }
   
   /* Primary Sidebar */
   

@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.10.6
-// @desc.   CSS bugs: image hoogte important en achtergrondplaatje bij nzmz.
+// @version 3.13.3
+// @desc.   Styling manifest op home verbeterd. Bullets. Logo Rotterdammer.centraal.nl.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -119,8 +119,9 @@
   
   ul li {
     list-style-image: url('images/bullet.png');      
-    .iconaddbullet('../images/bullet.svg', @txt);
+    .iconaddbullet( '../images/bullet.svg', @txt );
   }
+  
   
   ol ol,
   ul ul {
@@ -327,22 +328,32 @@
     h4,
     h5,
     h6 {
-//      color: @header_color;
       font-weight: normal; 
       line-height: 1.2;
       margin: ( @gutter / 2 ) 0 ( @gutter / 4 );
-        padding: 1em 0 .3em 0;
+      padding: 1em 0 .3em 0;
+      
+      a {
+        color: @txt;
+        text-decoration: none;
         
-        a {
-            color: @txt;
-            text-decoration: none;
-            
-            &:hover, &:focus, &:active {
-                color: @a_hover;
-                text-decoration: underline;
-            }
+        &:hover, &:focus, &:active {
+          color: @a_hover;
+          text-decoration: underline;
         }
+      }
     }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+//      font-family: @headerfont2;
+//      font-weight: bold;
+    }
+
+    
     
     h1 {
       .fontsize( @fontsize_title_h1 );

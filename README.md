@@ -1,6 +1,6 @@
 # Gebruiker Centraal
 
-'gebruiker-centraal' is ontwikkeld als WordPress-theme voor [gebruikercentraal.nl](http://www.gebruikercentraal.nl). Opdrachtgever is ICTU (ICT Uitvoeringsorganisatie). Ontwikkelaar is Paul van Buuren ([WBVB Rotterdam](https://wbvb.nl)). 
+'gebruiker-centraal' is ontwikkeld als WordPress-theme voor [gebruikercentraal.nl](http://www.gebruikercentraal.nl). Opdrachtgever is ICTU (ICT Uitvoeringsorganisatie). Ontwikkelaar is Paul van Buuren ([WBVB Rotterdam](https://wbvb.nl)).
 
 Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.nl)
 
@@ -9,9 +9,16 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-3.11.4
+3.13.7 - CSS bugs in manifest en site-header.
 
 ## Version history
+* 3.13.7 - CSS bugs in manifest en site-header.
+* 3.13.6 - Variabelen van inclusie-plugin ook opgenomen in functions.php. Wat CSS-styling voor video en rijksvideo.
+* 3.13.5 - Kleine CSS-wijzigingen voor zoekbox, site-description en event-paginering.
+* 3.13.4 - Site-description zichtbaar gemaakt.
+* 3.13.3 - Styling manifest op home verbeterd. Bullets. Logo Rotterdammer.centraal.nl.
+* 3.13.2 - Manifest op homepage optioneel gemaakt.
+* 3.13.1 - Extra settings in customizer: choice of logos.
 * 3.12.1 - Renamed functions for better sharing.
 * 3.11.5 - Bug removed that caused empty author page.
 * 3.11.4 - Revised Gravity Forms styling.

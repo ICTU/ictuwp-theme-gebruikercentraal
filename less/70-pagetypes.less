@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.11.2
-// @desc.   Betere styling voor template homepage. Mogelijkheid andere content op homepage te zetten.
+// @version 3.13.7
+// @desc.   CSS bugs in manifest en site-header.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 // ================================================================================
@@ -291,26 +291,53 @@ body {
 
 
 .page-template-page_home {
-  .breadcrumb {
-    &:after {
-      content: ' ';
-      display: block;
-      background: @breadcrumb_bg_color;
-      height: ( 3 * @padding );
-      width: 100%;
-      display: block;
+  
+  .home-without-manifest {
+    .content {
+      min-height: inherit !important;
+      article.entry {
+        background: @wit;
+        padding: 1em;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        margin-left: .5em;
+        margin-right: .5em;
+        .standardboxshadow();
+        
+        .entry-title {
+          padding-top: 0;
+          padding-bottom: .25em;
+        }
+      }
     }
   }
-  .site-inner {
-    margin-top: ( -3 * @padding );
+  
+  .home-with-manifest {
+    
+    .breadcrumb {
+      &:after {
+        content: ' ';
+        display: block;
+        background: @breadcrumb_bg_color;
+        height: ( 3 * @padding );
+        width: 100%;
+        display: block;
+      }
+    }
+    .site-inner {
+      margin-top: ( -3 * @padding );
+    }
   }
 }
 
 .manifest {
   background: @groen_2;
-  padding: 0 0 @padding 0;
   color: @wit;
-  margin-bottom: ( 3 * @padding );
+  margin-bottom: 2em;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 0 !important;
+  overflow: hidden;
   .standardboxshadow();
   
   header {
@@ -322,6 +349,7 @@ body {
     }
   }
   .content {
+    
     padding:  @padding;
   }
   a {
@@ -342,9 +370,16 @@ body {
       display: list-item;
       padding: 0 2em 0 .3em;
       margin-left: .2em;
+      list-style-image: url('images/bullet-white.png');      
       .iconaddbullet('../images/bullet.svg', @wit);
     }
-  }    
+    
+  } 
+  h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    padding-top: .25em;
+  } 
+     
   .blocks {
     div {
     }      
@@ -353,8 +388,10 @@ body {
       padding: 0;    
       margin: 0;    
     }
-    
   }      
+  .content {
+    min-height: inherit !important;
+  }
 }
 
 // ========================================================================
