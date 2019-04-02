@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.13.3
-// @desc.   Styling manifest op home verbeterd. Bullets. Logo Rotterdammer.centraal.nl.
+// @version 3.13.7
+// @desc.   CSS bugs in manifest en site-header.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 // ================================================================================
@@ -333,10 +333,11 @@ body {
 .manifest {
   background: @groen_2;
   color: @wit;
-  margin-bottom: ( 3 * @padding );
+  margin-bottom: 2em;
   padding-left: 0 !important;
   padding-right: 0 !important;
   padding-bottom: 0 !important;
+  overflow: hidden;
   .standardboxshadow();
   
   header {
@@ -348,6 +349,7 @@ body {
     }
   }
   .content {
+    
     padding:  @padding;
   }
   a {

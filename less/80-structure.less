@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.13.2
-// @desc.   Manifest op homepage optioneel gemaakt.
+// @version 3.13.7
+// @desc.   CSS bugs in manifest en site-header.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -124,6 +124,9 @@
         @media only screen and (min-width: @break_fullwidth ) {
 //          border: 1px solid red;
           min-height: 400px;
+          &.manifest {
+            min-height: intrinsic;
+          }
         }
       }
     }

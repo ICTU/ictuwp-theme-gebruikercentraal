@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.13.6
-// @desc.   Variabelen van inclusie-plugin ook opgenomen in functions.php. Wat CSS-styling voor video en rijksvideo.
+// @version 3.13.7
+// @desc.   CSS bugs in manifest en site-header.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.13.6' );
-define( 'CHILD_THEME_DESCRIPTION', "3.13.6 - Variabelen van inclusie-plugin ook opgenomen in functions.php. Wat CSS-styling voor video en rijksvideo." );
+define( 'CHILD_THEME_VERSION', '3.13.7' );
+define( 'CHILD_THEME_DESCRIPTION', "3.13.7 - CSS bugs in manifest en site-header." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 
@@ -893,16 +893,40 @@ function gc_wbvb_404() {
 //========================================================================================================
 
 if (! function_exists( 'dovardump' ) ) {
-
-  function dovardump($data, $description = '' ) {
-      if ( $description ) {
-        echo '<h1>' . $description . ':</h1>';
+  
+  function dovardump( $data, $context = '', $echo = true ) {
+    
+    if ( WP_DEBUG ) {
+      $contextstring  = '';
+      $startstring    = '<div class="debug-context-info">';
+      $endtring       = '</div>';
+      
+      if ( $context ) {
+        error_log( 'context "' . $context . '"' );
+        $contextstring = '<p>Vardump ' . $context . '</p>';        
       }
-      echo '<pre>';
-      var_dump($data);
-      echo '</pre>';
-  }
-
+      
+      if ( is_array( $data ) || is_object( $data ) ) {
+        $theline = "array: " . print_r( $data, false );
+      }
+      else {
+        $theline = $data;
+      }
+      
+      error_log( $theline );
+      
+      if ( $echo ) {      
+        echo $startstring . '<hr>';
+        echo $contextstring;        
+        echo '<pre>';
+        print_r($data);
+        echo '</pre><hr>' . $endtring;
+      }
+      else {
+        return '<hr>' . $contextstring . '<pre>' . print_r($data, true) . '</pre><hr>';
+      }
+    }        
+  }        
 }
 
 //========================================================================================================

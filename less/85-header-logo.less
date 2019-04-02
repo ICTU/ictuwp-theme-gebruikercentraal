@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.13.5
-// @desc.   Kleine CSS-wijzigingen voor zoekbox, site-description en event-paginering.
+// @version 3.13.7
+// @desc.   CSS bugs in manifest en site-header.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
   
@@ -19,7 +19,14 @@
   .title-area {
     margin: 0;
     float: left;
-  		max-width: ~"calc(100% - @{maxbreedtemenu})";
+    
+//border: 2px solid pink;
+
+    @media only screen and (min-width: @break_show_menu_button ) {
+//border: 2px solid red;
+    		max-width: ~"calc(100% - @{maxbreedtemenu})";
+    }  
+
   }  
   
   .site-header {
@@ -74,6 +81,9 @@
       text-transform: uppercase;
       font-family: @headerfont;
       margin: 0 0 0 @logowidth;
+      word-break: break-word;
+      white-space: nowrap;
+      hyphens: none;
     }
     .site-description {
       margin: 0 0 0 @logowidth;
