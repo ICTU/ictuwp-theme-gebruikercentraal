@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.13.7
-// @desc.   CSS bugs in manifest en site-header.
+// @version 3.13.8
+// @desc.   Set correct name and email address for system mail.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.13.7' );
-define( 'CHILD_THEME_DESCRIPTION', "3.13.7 - CSS bugs in manifest en site-header." );
+define( 'CHILD_THEME_VERSION', '3.13.8' );
+define( 'CHILD_THEME_DESCRIPTION', "3.13.8 - Set correct name and email address for system mail." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 
@@ -2603,5 +2603,32 @@ add_filter('the_content', 'gc_wbvb_remove_empty_paragraphs', 99999 );
 
 //========================================================================================================
 
+/**
+ * Set correct values for email sender name and sender email address
+ * @source:   https://premium.wpmudev.org/blog/wordpress-email-settings/
+ *
+ */
 
+function gc_wbvb_filter_wp_mail_from_email( $email ) {
+
+  $blog_admin_email = get_bloginfo( 'admin_email' );
+
+  return $blog_admin_email;
+
+}
+
+
+function gc_wbvb_filter_wp_mail_from_name( $original_email_from ) {
+
+  $blog_title       = get_bloginfo( 'name' );
+
+  return $blog_title;
+
+}
+
+add_filter( 'wp_mail_from', 'gc_wbvb_filter_wp_mail_from_email');
+
+add_filter( 'wp_mail_from_name', 'gc_wbvb_filter_wp_mail_from_name' );
+
+//========================================================================================================
 

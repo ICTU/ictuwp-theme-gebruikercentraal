@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.13.2
-// @desc.   Manifest op homepage optioneel gemaakt.
+// @version 3.13.8
+// @desc.   Set correct name and email address for system mail.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 ///
 
@@ -606,49 +606,54 @@ add_filter( 'retrieve_password_message', 'gc_shared_retrieve_password_message', 
 if ( !function_exists( 'gc_shared_retrieve_password_message' ) ) {
 
   function gc_shared_retrieve_password_message( $message, $key ){
+    
     $user_data = '';
+    $blog_title       = get_bloginfo( 'name' );
+    
     // If no value is posted, return false
     if( ! isset( $_POST['user_login'] )  ){
-            return '';
+      return '';
     }
+    
     // Fetch user information from user_login
     if ( strpos( $_POST['user_login'], '@' ) ) {
-  
-        $user_data = get_user_by( 'email', trim( $_POST['user_login'] ) );
-    } else {
-        $login = trim($_POST['user_login']);
-        $user_data = get_user_by('login', $login);
+      $user_data = get_user_by( 'email', trim( $_POST['user_login'] ) );
     }
+    else {
+      $login = trim($_POST['user_login']);
+      $user_data = get_user_by('login', $login);
+    }
+    
     if( ! $user_data  ){
-        return '';
+      return '';
     }
+    
     $user_login = $user_data->user_login;
     $user_email = $user_data->user_email;
     $hostname  = network_site_url();
-  
-    // Setting up message for retrieve password
-    $message = '<p>' . _x( "Hallo,", 'begroeting inlogmail', 'gebruikercentraal' ) . '</p>';
-    $message .= "\n\n";
-    $message .= '<p>' . _x( "We kregen via de website het verzoek om een nieuw wachtwoord te sturen voor het account met de inlognaam:", 'inlogmail', 'gebruikercentraal' ) . '<br />';
-    $message .= "\n<em>" . $user_login . "</em></p>";
-    $message .= "\n\n";
-    $message .= '<p>' . _x( "Om je wachtwoord opnieuw in te stellen, klik je op deze link:", 'inlogmail', 'gebruikercentraal' ) . '<br />';
-    $message .= '<a href="';
-    $message .= network_site_url("wp-login.php?action=rp&key=$key&login=" . rawurlencode($user_login), 'login');
-    $message .= '">';
-    $message .= network_site_url("wp-login.php?action=rp&key=$key&login=" . rawurlencode($user_login), 'login');
-    $message .= "</a></p>\n\n";
     
-    $message .= '<p>' . _x( "Deze link is maar 1 keer te gebruiken.", 'inlogmail', 'gebruikercentraal' ) . '<br />';
+    // Setting up message for retrieve password
+    $message = _x( "Hallo,", 'begroeting inlogmail', 'gebruikercentraal' );
+    $message .= "\n\n";
+    $message .= _x( "We kregen via de website het verzoek om een nieuw wachtwoord te sturen voor het account met de inlognaam:", 'inlogmail', 'gebruikercentraal' );
+    $message .= "\n" . $user_login;
+    $message .= "\n\n";
+    $message .= _x( "Om je wachtwoord opnieuw in te stellen, klik je op deze link:", 'inlogmail', 'gebruikercentraal' );
+    $message .= "\n";
+    $message .= site_url("wp-login.php?action=rp&key=$key&login=" . rawurlencode($user_login), 'login');
+    $message .= "\n";
+    
+    $message .= _x( "Deze link is maar 1 keer te gebruiken.", 'inlogmail', 'gebruikercentraal' );
     $message .= "\n";
     $message .= _x( "Als je geen nieuw wachtwoord wilt, hoef je niets te doen.", 'inlogmail', 'gebruikercentraal' );
-    $message .= "</p>";
-    
-    $message .= '<p>' . _x( "Met vriendelijke groet,", 'afsluiting inlogmail', 'gebruikercentraal' ) . "<br />";
     $message .= "\n";
-    $message .=  _x( "het Gebruiker Centraal-team", 'afsluiting inlogmail', 'gebruikercentraal' ) . "</p>";
-    $message .= "\n\n<a href=\"" . $hostname . "\">" . $_SERVER["HTTP_HOST"] . "</a><br />\n\n" . '<img src="' . $hostname . '/mailingassets/mailondertekening-meisje-gebruiker-centraal.png"/>';
-  
+    $message .= "\n";
+    
+    $message .= _x( "Met vriendelijke groet,", 'afsluiting inlogmail', 'gebruikercentraal' );
+    $message .= "\n";
+    $message .=  _x( "het Gebruiker Centraal-team", 'afsluiting inlogmail', 'gebruikercentraal' );
+    $message .= "\n";
+    
     // Return completed message for retrieve password
     return $message;
     

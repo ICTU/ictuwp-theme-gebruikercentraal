@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-3.13.7 - CSS bugs in manifest en site-header.
+3.13.8 - Set correct name and email address for system mail.
 
 ## Version history
+* 3.13.8 - Set correct name and email address for system mail.
 * 3.13.7 - CSS bugs in manifest en site-header.
 * 3.13.6 - Variabelen van inclusie-plugin ook opgenomen in functions.php. Wat CSS-styling voor video en rijksvideo.
 * 3.13.5 - Kleine CSS-wijzigingen voor zoekbox, site-description en event-paginering.
