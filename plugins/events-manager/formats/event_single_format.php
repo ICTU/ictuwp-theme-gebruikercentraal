@@ -59,7 +59,7 @@ if ( $event_start_datetime ) {
 $header_meta_info = '';
 $lebookings       = $EM_Event->bookings;
 
-$kostduurquageld  =  __( 'Gratis', 'gebruikercentraal' );
+$kostduurquageld  =  __( 'Free of charge', 'gebruikercentraal' );
 $price_min        = 0;
 $price_max        = 0;
 
@@ -103,7 +103,6 @@ else {
   // no booking availability
   $header_meta_info .= $event_times;
   if ( $EM_Event->location->name ) {
-//    dovardump($EM_Event->location, 'LOCATIE');
     $header_meta_info .= $EM_Event->location->name;
   }
 }
@@ -158,7 +157,7 @@ hier?
         <div id="event_map_en_programma" class="wrap">
             {has_location}
             <div itemprop="location" itemscope itemtype="http://schema.org/Place" id="event_map">
-              <h2>Locatie</h2>
+              <h2><?php echo __( 'Location', 'gebruikercentraal' ) ?></h2>
               #_LOCATIONMAP
               <a itemprop="url" href="#_LOCATIONURL">#_LOCATIONNAME</a>
               <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
@@ -180,7 +179,7 @@ hier?
         ?>
         {has_location}
         <div itemprop="location" itemscope itemtype="http://schema.org/Place" id="event_map" class="wrap">
-          <h2>Locatie</h2>
+          <h2><?php echo __( 'Location', 'gebruikercentraal' ) ?></h2>
           #_LOCATIONMAP
           <a itemprop="url" href="#_LOCATIONURL" itemprop=""><span itemprop="name">#_LOCATIONNAME</span></a>
           <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">

@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.13.8
-// @desc.   Set correct name and email address for system mail.
+// @version 3.14.1b
+// @desc.   Styling & functionaliteit voor formulieren op conference-website.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 ///
 
@@ -460,19 +460,19 @@ function sp_remove_comment_form_allowed_tags( $defaults ) {
   $req        = get_option( 'require_name_email' );
   $aria_req   = ( $req ? ' required aria-required="true"' : '' );
   
-  $defaults['title_reply'] = __('Reageer','gebruikercentraal');
+  $defaults['title_reply'] = __('Join the discussion','gebruikercentraal');
 
-  $defaults['comment_field']          = '<p class="comment-form-comment"><label for="comment">' . _x( 'Je reactie:', 'reactieformulier', 'gebruikercentraal' ) .    '</label><textarea id="comment" name="comment" cols="45" rows="8"' . $aria_req . '>' .    '</textarea></p>';
+  $defaults['comment_field']          = '<p class="comment-form-comment"><label for="comment">' . _x( 'Your reply', 'reactieformulier', 'gebruikercentraal' ) .    '</label><textarea id="comment" name="comment" cols="45" rows="8"' . $aria_req . '>' .    '</textarea></p>';
 
   $defaults['fields'] = array(
 
         'author' =>
-            '<p class="comment author"><label for="author">' . _x( 'Je naam:', 'reactieformulier', 'gebruikercentraal' ) . '</label> ' .
+            '<p class="comment author"><label for="author">' . _x( 'Your name', 'reactieformulier', 'gebruikercentraal' ) . '</label> ' .
             '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
             '" size="30"' . $aria_req . ' /></p>',
         
         'email' =>
-            '<p class="comment email"><label for="email">' . _x( 'Je mailadres:', 'reactieformulier', 'gebruikercentraal' ) . '</label> ' .
+            '<p class="comment email"><label for="email">' . _x( 'Email address', 'reactieformulier', 'gebruikercentraal' ) . '</label> ' .
             '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
             '" size="30"' . $aria_req . ' /></p>'
         );
@@ -480,7 +480,7 @@ function sp_remove_comment_form_allowed_tags( $defaults ) {
   $defaults['must_log_in']            = '';
   $defaults['comment_notes_after']    = '';
   $defaults['comment_notes_before']   = '';
-  $defaults['label_submit']           = __('Plaats reactie','gebruikercentraal');
+  $defaults['label_submit']           = __('Reply','gebruikercentraal');
 
   return $defaults;
 
