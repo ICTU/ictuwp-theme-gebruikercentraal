@@ -11,11 +11,11 @@
 // @desc.   Styling & functionaliteit voor formulieren op conference-website.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
-  
+
   /*
   Footer Widgets
   ---------------------------------------------------------------------------------------------------- */
-  
+
   .site-footer,
   .footer-widgets {
     color: @txt;
@@ -27,7 +27,7 @@
     &, a {
       color: @wit;
     }
-    
+
     .wrap {
       color: @wit;
     }
@@ -56,7 +56,7 @@
       margin-bottom: ( @padding / 2 );
       word-wrap: break-word;
     }
-    
+
     .search-form input:focus {
       border: 1px solid @wit;
     }
@@ -73,7 +73,7 @@
     ul.menu {
         overflow: hidden;
         padding-left: 0;
-        
+
         li {
             display: inline-block;
             float: left;
@@ -98,36 +98,36 @@
               text-decoration: underline;
               color: @wit;
             }
-            
+
         }
     }
-      
-    
+
+
   }
   .site-footer {
     background: @breadcrumb_bg_color;
     padding: @padding 0;
-    
+
     .widget-title {
       .visuallyhidden();
     }
 
     .widget {
-      
+
       ul.menu {
         float: right;
         margin: 0;
-        
+
         li {
           display: inline-block;
           float: left;
           margin: 0 @padding ( @padding / 2 ) 0;
-          
+
           a {
             color: @bsitefooter_a_color;
             text-transform: lowercase;
             text-decoration: none;
-            
+
             &:hover,
             &:focus,
             &:active {
@@ -143,20 +143,20 @@
       margin-bottom: 0;
     }
   }
-  
+
   @media only screen and (max-width: ( @break_phone ) ) {
       .footer-widgets-1,
-      .footer-widgets-2, 
+      .footer-widgets-2,
       .footer-widgets-3 {
         width: 100%;
       }
   }
-  
-  
+
+
 
 
   @media only screen and (min-width: @break_fullwidth ) {
-  
+
     .footer-widgets {
       .widget-area {
         margin: 0;
@@ -164,7 +164,7 @@
     }
 
     .footer-widgets-1,
-    .footer-widgets-2, 
+    .footer-widgets-2,
     .footer-widgets-3 {
       width: 49.9%;
       float: left;
@@ -172,7 +172,7 @@
 
     .footer-widgets-2 {
       padding-right: 1em;
-      
+
       .widget_media_image {
         img {
           float: right;
@@ -180,8 +180,6 @@
         }
       }
     }
-    
+
   }
 }
-
-
