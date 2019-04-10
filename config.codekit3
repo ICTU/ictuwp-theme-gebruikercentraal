@@ -2745,14 +2745,6 @@
 		"oAP": "/page_blog.php",
 		"oF": 0
 		},
-	"/page_conferencebookings.php": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/page_conferencebookings.php",
-		"oF": 0
-		},
 	"/page_contentpagina.php": {
 		"cB": 0,
 		"ft": 8192,

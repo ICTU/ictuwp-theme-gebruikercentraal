@@ -1,20 +1,20 @@
 <?php 
 
 /**
- * Gebruiker Centraal
- * ----------------------------------------------------------------------------------
- * Onderdeel van de vormgeving voor de events-manager
- * ----------------------------------------------------------------------------------
- * @package gebruiker-centraal
- * @author  Paul van Buuren
- * @license GPL-2.0+
- * @version 3.6.6
- * @desc.   mobile menu, infoblock, naming convention functions
- * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
- */
+// Gebruiker Centraal
+// ----------------------------------------------------------------------------------
+// Onderdeel van de vormgeving voor de events-manager
+// ----------------------------------------------------------------------------------
+// @@package gebruiker-centraal
+// @author  Paul van Buuren
+// @license GPL-2.0+
+// @version 3.14.1
+// @desc.   Styling & functionaliteit voor formulieren op conference-website.
+// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// */
 
     
-  showdebug(__FILE__, 'forms bookingform'); 
+  showdebug(__FILE__, '/forms/bookingform'); 
 
 global $allowedposttags;
 global $show_tickets;
@@ -28,7 +28,6 @@ $EM_Ticket = $EM_Event->get_bookings()->get_available_tickets()->get_first();
 debugmessage('show_tickets: ' . $show_tickets, 'h1', 'bookingfields' ); 
 debugmessage('is_user_logged_in: ' . is_user_logged_in(), 'p', 'bookingfields' ); 
 debugmessage('apply_filters(etc): ' . apply_filters('em_booking_form_show_register_form',true), 'p', 'bookingfields' ); 
-
 
 
 if( !is_user_logged_in() && apply_filters('em_booking_form_show_register_form',true) ) { ?>
@@ -90,8 +89,16 @@ debugmessage('(D) ' . $type . ':');
         case 'spaces':
 
 debugmessage('(E) ' . $type . ':'); 
-        
-          if( $EM_Ticket->get_available_spaces() > 1 && ( empty($EM_Ticket->ticket_max) || $EM_Ticket->ticket_max > 1 ) ): //more than one space available        
+
+// #_ATT{groupme}{no grouping|confgroup}
+$groupme      = $EM_Event->output('#_ATT{groupme}');
+
+          //---------------------------------------------------------------------------------------------------------
+          if( 'confgroup' === $groupme ): 
+            // this event is part of a group of events that should have a shared booking form   
+  
+          //---------------------------------------------------------------------------------------------------------
+          elseif( $EM_Ticket->get_available_spaces() > 1 && ( empty($EM_Ticket->ticket_max) || $EM_Ticket->ticket_max > 1 ) ): //more than one space available        
   
 debugmessage('(F) ' . $type . ': more than one space available'); 
   
@@ -100,24 +107,35 @@ debugmessage('(F) ' . $type . ': more than one space available');
             $default = !empty($_REQUEST['em_tickets'][$EM_Ticket->ticket_id]['spaces']) ? $_REQUEST['em_tickets'][$EM_Ticket->ticket_id]['spaces']:0;
             $spaces_options = $EM_Ticket->get_spaces_options(false,$default);
     
-            if( $spaces_options ){
+            if( $spaces_options ) {
+
 debugmessage('(G) ' . $type . ': spaces_options! ' ); 
               echo $spaces_options;
-            }else{
+              
+            }
+            else {
+              
 debugmessage('(H) ' . $type . ': spaces_options N/A ' ); 
               echo "<strong>".__('N/A','events-manager')."</strong>";
+
             }
             
             echo '</p>';
-            
+
             do_action('em_booking_form_ticket_spaces', $EM_Ticket);
           
+          //---------------------------------------------------------------------------------------------------------
           else: //if only one space or ticket max spaces per booking is 1 
   
+debugmessage('(I) ticket_max: ' . $EM_Ticket->ticket_max ); 
+// er zijn tickets ( $EM_Ticket->get_available_spaces() )
+// $EM_Ticket->ticket_max =< 1
           
             echo '<input type="hidden" name="em_tickets[' . $EM_Ticket->ticket_id . '][spaces]" value="1" class="em-ticket-select" />';
             do_action('em_booking_form_ticket_spaces', $EM_Ticket); //do not delete
+            
           endif;
+          //---------------------------------------------------------------------------------------------------------
   
           break;
           

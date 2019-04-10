@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.12.1
-// @desc.   Renamed functions for better sharing.
+// @version 3.14.1
+// @desc.   Styling & functionaliteit voor formulieren op conference-website.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -266,22 +266,151 @@
   }
 
 
+  /* Gravity Forms
+  --------------------------------------------- */
+  .gform_wrapper {
+    ul.gform_fields {
+      
+      padding-top: 0;
+      margin-top: 0;
+      
+      &, li {
+        list-style: none;
+        margin-left: 0;
+        padding-left: 0;
+        
+        li.gfield {
+          margin-bottom: 1em;
+        }
+        h2 {
+          padding-top: 0;
+          margin-top: 0;
+        }
+      }
+    }
+    input[type="submit"],
+    button[type="submit"] {
+      float: right;
+      clear: both;
+    }
+    
+
+    input[type="email"],
+    input[type="text"],
+    textarea,
+    .ginput_complex label {
+    }
+    .ginput_complex label {
+      padding: 0;
+    }
+    
+    .ginput_container_checkbox,
+    .ginput_container_radio {
+      ul {
+        margin-left: 0;
+
+        input[type="checkbox"],
+        input[type="radio"] {
+          margin-right: .5em;          
+          float: left;
+        }
+        li {
+          float: none;
+          clear: both;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+  
+  .gform_save_link {
+    display: block;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  
+  .gform_validation_container {
+    .visuallyhidden();
+  }
+  
+  .conf-days {
+    input[type="checkbox"],
+    input[type="radio"] {
+      margin-top: 1.5em;          
+    }
+  }
+
+  .gform_body {
+    background: @border_grijs;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  /* Event Manager Forms
+  --------------------------------------------- */
   .em-booking-login-form,
   .em-booking-form {
-    overflow: hidden;
-
-      h2,
-      h3 {
-        font-family: @headerfont;
-        text-transform: uppercase;
+  overflow: hidden;
+  
+    h2,
+    h3 {
+      font-family: @headerfont;
+      text-transform: uppercase;
+    }
+  
+    label {
+      font-weight: 700;
+  
+      & + .input-group {
+        display: block;
+        clear: both;
+        float: none;
       }
+    }
+  }
+  
+  select {
+    height: 2.5em;
+  }
 
+  .datelabel {
+    display: inline-block;
+    width: 180px;
+    float: left;
+    background: @txt;
+    color: @wit;
+    padding: .25em .5em;
+    margin-right: 1em;
+  }
+  .input-group {
+    float: none;
+    clear: both;
+    overflow: hidden;
+    
+    div {
+      overflow: hidden;
+      margin-bottom: .25em;
+      background: @sitecontainer_bg;
+    }
+    
+    input[type="checkbox"],
+    input[type="radio"] {
+      float: left;
+      clear: both;
+      margin: .25em .5em .5em .25em;
+      border-color: @txt;
+    }
+    label {
+      float: none;
+      clear: both;
+    }
+  }
+
+  .input-field-what_days_will_you_join_us_f {
     
   }
 
-
-  
-  
 }
 
 

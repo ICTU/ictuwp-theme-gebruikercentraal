@@ -8,7 +8,7 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.14.1b
+// @version 3.14.1
 // @desc.   Styling & functionaliteit voor formulieren op conference-website.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 ///
