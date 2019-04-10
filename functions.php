@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.14.1
-// @desc.   Styling & functionaliteit voor formulieren op conference-website.
+// @version 3.14.3
+// @desc.   Styling voor fieldset en labels in booking form.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.14.1' );
-define( 'CHILD_THEME_DESCRIPTION', "3.14.1 - Styling & functionaliteit voor formulieren op conference-website." );
+define( 'CHILD_THEME_VERSION', '3.14.3' );
+define( 'CHILD_THEME_DESCRIPTION', "3.14.3 - Styling voor fieldset en labels in booking form." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 

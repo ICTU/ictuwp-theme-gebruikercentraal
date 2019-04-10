@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.14.1
-// @desc.   Styling & functionaliteit voor formulieren op conference-website.
+// @version 3.14.3
+// @desc.   Styling voor fieldset en labels in booking form.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -349,14 +349,17 @@
 
   /* Event Manager Forms
   --------------------------------------------- */
+  .content #em-booking {
+    h2,
+    h3 {
+      padding: .75em 1em .25em 0;
+    }
+  }
+  
   .em-booking-login-form,
   .em-booking-form {
     overflow: hidden;
   
-    h2,
-    h3 {
-      padding: 1em 1em 1em 0;
-    }
 
     fieldset,
     p {
