@@ -8,7 +8,7 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.14.3
+// @version 3.14.4
 // @desc.   Styling voor fieldset en labels in booking form.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.14.3' );
-define( 'CHILD_THEME_DESCRIPTION', "3.14.3 - Styling voor fieldset en labels in booking form." );
+define( 'CHILD_THEME_VERSION', '3.14.4' );
+define( 'CHILD_THEME_DESCRIPTION', "3.14.4 - Styling voor fieldset en labels in booking form." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 
@@ -367,7 +367,7 @@ function gc_wbvb_breadcrumb_args( $args ) {
       $showsearchform   					= true;
     }
 
-    if( get_field('auteursoverzichtpagina_link', 'option') ):
+    if ( get_field('auteursoverzichtpagina_link', 'option') ):
       $auteursoverzichtpagina_url   = get_field('auteursoverzichtpagina_link', 'option');
       $auteursoverzichtpagina_start = '<a href="' . $auteursoverzichtpagina_url . '">' ;
       $auteursoverzichtpagina_end   = '</a>' . $separator;
@@ -741,7 +741,7 @@ function gc_wbvb_check_actieteamlid() {
     if ( $author_id = get_query_var( 'author' ) ) { $author = get_user_by( 'id', $author_id ); }
 
 
-    if( have_rows('actieteamleden', 'option') ):
+    if ( have_rows('actieteamleden', 'option') ):
 
       while( have_rows('actieteamleden', 'option') ): the_row();
 
@@ -751,7 +751,7 @@ function gc_wbvb_check_actieteamlid() {
 
         if ( $author_id == $acf_userid ) {
 
-          if( function_exists( 'get_field' ) && get_field('actieteampagina_link', 'option') ) {
+          if ( function_exists( 'get_field' ) && get_field('actieteampagina_link', 'option') ) {
             $auteursoverzichtpagina_url   = get_field('actieteampagina_link', 'option');
             $auteursoverzichtpagina_start = '<a href="' . $auteursoverzichtpagina_url . '" class="cta">' ;
             $auteursoverzichtpagina_end   = '</a>';
@@ -1614,7 +1614,7 @@ endif;
 
 //========================================================================================================
 // options page
-if( function_exists('acf_add_options_page') ):
+if ( function_exists('acf_add_options_page') ):
 
 	$args = array(
 		'slug' => 'instellingen',
@@ -1628,7 +1628,7 @@ endif;
 
 //========================================================================================================
 
-function gc_wbvb_eventmanager_custom_formats( $array_in ){
+function gc_wbvb_eventmanager_custom_formats( $array_in ) {
 
   $my_formats = array();
 
@@ -1662,13 +1662,13 @@ add_filter('em_formats_filter', 'gc_wbvb_eventmanager_custom_formats', 1, 1);
 
 add_filter('em_event_output_placeholder','gc_wbvb_eventmanager_styles_placeholders',1,3);
 
-function gc_wbvb_eventmanager_styles_placeholders($replace, $EM_Event, $result){
+function gc_wbvb_eventmanager_styles_placeholders($replace, $EM_Event, $result) {
 	global $wp_query;
 	global $wp_rewrite;
 	global $EM_Event;
 
 
-	switch( $result ){
+	switch( $result ) {
 		case '#_EVENTEXCERPT':
 
       if ( $EM_Event->post_excerpt !== '') {
@@ -1733,7 +1733,7 @@ function gc_wbvb_clean_url( $url_to_clean ) {
 
     $url_to_clean_linktext = $url_to_clean;
 
-	if(substr($url_to_clean_linktext, -1) == '/') {
+	if (substr($url_to_clean_linktext, -1) == '/') {
 		$url_to_clean_linktext = substr($url_to_clean_linktext, 0, -1);
 	}
 
@@ -1747,12 +1747,12 @@ function gc_wbvb_clean_url( $url_to_clean ) {
 		$url_to_clean_linktext	=	$link_array[0];
 	}
 
-	if(substr(strtolower($url_to_clean_linktext), -4) == '.pdf') {
+	if (substr(strtolower($url_to_clean_linktext), -4) == '.pdf') {
 		$url_to_clean_linktext = substr($url_to_clean_linktext, 0, -4);
 		$url_to_clean_toevoeging = ' (PDF)';
 	}
 
-	if(substr(strtolower($url_to_clean_linktext), -5) == '.html') {
+	if (substr(strtolower($url_to_clean_linktext), -5) == '.html') {
 		$url_to_clean_linktext = substr($url_to_clean_linktext, 0, -5);
 	}
 
@@ -1776,7 +1776,7 @@ function gc_wbvb_event_get_programma() {
 
   if ( function_exists( 'have_rows' ) ) {
 
-    if( have_rows( 'programmaonderdelen' ) ) {
+    if ( have_rows( 'programmaonderdelen' ) ) {
 
       $return = '<div id="programma"><h2>' . _x('Programma', 'Kopje op evenementpagina', 'gebruikercentraal') . '</h2>';
       $return .= '<ul class="event-program">';
@@ -1838,7 +1838,7 @@ function gc_wbvb_post_get_downloads() {
 
   if ( function_exists( 'have_rows' ) ) {
 
-    if( have_rows( 'post_downloads_collection' ) ) {
+    if ( have_rows( 'post_downloads_collection' ) ) {
 
       $return = '<h2>' . _x('Downloads', 'Kopje op berichtpagina', 'gebruikercentraal') . '</h2>';
       $return .= '<ul class="link-list">';
@@ -1900,7 +1900,7 @@ function gc_wbvb_beelden_brieven_show_connected_files() {
 
     $posts = get_field('beelden_brieven_connectie');
 
-    if( $posts ) {
+    if ( $posts ) {
 
       $return = '<div class="connected-files for-' . get_post_type() . '"><h2>' . $titel . '</h2>';
       if ( $beschrijving ) {
@@ -1971,7 +1971,7 @@ function gc_wbvb_post_get_links() {
 
   if ( function_exists( 'have_rows' ) ) {
 
-    if( have_rows( 'event_post_links_collection' ) ) {
+    if ( have_rows( 'event_post_links_collection' ) ) {
 
       $return = '<h2>' . _x('Links', 'Kopje op bericht- of evenementpagina', 'gebruikercentraal') . '</h2>';
       $return .= '<ul class="link-list">';

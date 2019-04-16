@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.8.3
-// @desc.   Code-opschoning.
+// @version 3.14.4
+// @desc.   Styling voor fieldset en labels in booking form.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
     
@@ -63,8 +63,12 @@ $lebookings       = $EM_Event->bookings;
 $kostduurquageld  =  __( 'Free of charge', 'gebruikercentraal' );
 $price_min        = 0;
 $price_max        = 0;
+$countlebookings  = 0;
 
-if ( count($lebookings) > 0 ) {
+if ( is_array( $lebookings ) || is_object( $lebookings ) ) {
+  $countlebookings = count($lebookings);
+}
+if ( $countlebookings > 0 ) {
   // has bookings
   $header_meta_info .= $EM_gc_wbvb_single_event_availability;
   $header_meta_info .= $event_times;

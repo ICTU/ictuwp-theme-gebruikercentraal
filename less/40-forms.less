@@ -8,7 +8,7 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.14.3
+// @version 3.14.4
 // @desc.   Styling voor fieldset en labels in booking form.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
@@ -193,7 +193,6 @@
     .wpcf7-not-valid-tip {
       padding: .1em .5em .5em .5em;
       .mess_error();
-      //        border-width: 2px;
       transform: translateY(-2px);
       width: 100%;
       display: inline-block;
@@ -354,12 +353,37 @@
     h3 {
       padding: .75em 1em .25em 0;
     }
+
+
+    .em-booking-message-error,
+    .em-booking-message {
+      padding: .5em;
+      margin-bottom: 1em;
+      .mess_error();
+      
+      p {
+        margin-top: .25em;
+        margin-bottom: .25em;
+
+        &:before {
+          content: '!';
+          color: @wit;
+          background: @mess_error_color;
+          padding: 0 .5em;
+          margin-right: .5em;
+          .fontsize(18);
+          font-weight: normal;
+        }
+        
+      }
+      
+    }
+    
   }
   
   .em-booking-login-form,
   .em-booking-form {
     overflow: hidden;
-  
 
     fieldset,
     p {
@@ -405,14 +429,20 @@
     height: 2.5em;
   }
 
+  .longdescription,
   .datelabel {
     display: inline-block;
-    width: 180px;
     float: left;
+  }
+  .datelabel {
+    width: 20%;
     background: @txt;
     color: @wit;
     padding: .25em .5em;
     margin-right: 1em;
+  }
+  .longdescription {
+    width: 79%;
   }
   .input-group {
     float: none;
