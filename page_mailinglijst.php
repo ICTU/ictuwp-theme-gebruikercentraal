@@ -131,7 +131,7 @@ function gc_wbvb_show_page_overzichtspagina() {
                     <table id="subscribes_table" class="form-table">
                         <tr valign="top">
                             <th scope="row">
-                                <?php _e( 'Newsletters:', 'email-newsletter' ) ?>
+                                <?php _e( 'Newsletters:', 'gebruikercentraal' ) ?>
                             </th>
                             <td>
                                 <?php
@@ -153,9 +153,9 @@ function gc_wbvb_show_page_overzichtspagina() {
                 ?>
           <p class="submit">
             <?php if ( $groups ) { ?>
-                <input class="button button-primary" type="submit" id="save_subscribes" value="<?php _e( 'Save Subscribes', 'email-newsletter' ) ?>" />
+                <input class="button button-primary" type="submit" id="save_subscribes" value="<?php _e( 'Save Subscribes', 'gebruikercentraal' ) ?>" />
             <?php } ?>
-            <input class="button button-secondary" type="submit" id="unsubscribe" value="<?php _e( 'Unsubscribe from all newsletters', 'email-newsletter' ) ?>" />
+            <input class="button button-secondary" type="submit" id="unsubscribe" value="<?php _e( 'Unsubscribe from all newsletters', 'gebruikercentraal' ) ?>" />
           </p>
                 </fieldset>
             </form>
@@ -167,7 +167,7 @@ function gc_wbvb_show_page_overzichtspagina() {
                 <fieldset id="aanmelden_mailinglijst">
                 <legend><?php _e( 'Meld je aan voor onze nieuwsbrief', 'gebruikercentraal' ) ?></legend>
                 <p class="e_newsletter_email">
-                    <label for="e_newsletter_email"><?php _e( 'Your Email:', 'email-newsletter' ) ?></label>
+                    <label for="e_newsletter_email"><?php _e( 'Your Email:', 'gebruikercentraal' ) ?></label>
                     <input type="text" name="e_newsletter_email" id="e_newsletter_email" value="<?php echo $_REQUEST['e_newsletter_email'] ?>" <?php echo $e_newsletter_email_css ?> /><?php echo $e_newsletter_email_tip; ?>
                 </p>
 
@@ -183,7 +183,7 @@ function gc_wbvb_show_page_overzichtspagina() {
                 <p class="submit">
                     <input type="hidden" name="xxx_newsletter_action" id="subscribe" value="new_subscribe" />
                     <input type="hidden" name="redirect_to" id="redirect_to" value="<?php echo esc_url( $_SERVER['REQUEST_URI'] ) ?>" />
-                    <input class="button button-primary" type="submit" value="<?php _e( 'Subscribe on Newsletters', 'email-newsletter' ) ?>" />
+                    <input class="button button-primary" type="submit" value="<?php _e( 'Subscribe on Newsletters', 'gebruikercentraal' ) ?>" />
                 </p>
                 </fieldset>
             </form>

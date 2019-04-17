@@ -1,0 +1,521 @@
+
+//========================================================================================================
+
+// Gebruiker Centraal - 50-header-logo-menu.less
+// ----------------------------------------------------------------------------------
+// bevat CSS voor de header en het logo
+// ----------------------------------------------------------------------------------
+// @package gebruiker-centraal
+// @author  Paul van Buuren
+// @license GPL-2.0+
+// @version 3.15.1
+// @desc.   Restyling main nav menu.
+// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+
+//========================================================================================================
+
+@submenuwidth: 	260px;		    
+@transformx: 	( ( @submenuwidth / 4 ) * -1 );
+
+.header-logo() {
+	
+	.site-header {
+	    background-color: @header_bg_color;
+
+		.title-area {
+			margin-bottom: 1rem;
+			margin-top: 1rem;
+			float: left;
+			background: transparent url('images/logos/logo-mobile.png') no-repeat left top;
+			background-image: url('images/logos/logo-mobile.svg');
+			background-repeat: no-repeat;
+	
+			&.inclusie {
+				background-image: url('images/logos/logo-inclusie.svg');
+			}
+			&.rotterdammercentraal {
+				background-image: url('images/logos/logo-rotterdammercentraal-mobile.svg');
+			}
+
+			//----------------------------------------------------------------------------
+		  
+			@media only screen and ( max-width: @break_show_menu_button ) {
+				min-height: @logo_mobile_height;
+				background-size: 10px 100px;
+				background-size: @logo_mobile_width @logo_mobile_height;
+			}		
+			  
+			//----------------------------------------------------------------------------
+		  
+			@media only screen and ( min-width: @break_show_menu_button ) {
+				min-height: @logo_desktop_height;
+				background-size: @logo_desktop_width @logo_desktop_height;
+			}		
+			  
+			//----------------------------------------------------------------------------
+
+		}
+	}
+
+	.site-title,
+	.site-description {
+		margin: 0;
+		padding: 0;
+		display: block;
+
+		&, a {
+			color: @wit;
+		}
+		a {
+			text-decoration: none;
+			&:hover,
+			&:focus,
+			&:active {
+				text-decoration: none;
+				color: @txt;
+			}
+		}
+	}
+    
+	.site-title {
+		  
+		//--------------------------------------------------------------------------------
+		
+		@media only screen and ( max-width: @break_show_menu_button ) {
+			// hide on mobile
+			text-indent: -9999em;
+			a {
+				display: block;			
+				height: @logo_mobile_height;				
+				width: @logo_mobile_width;	
+			}
+		}		
+		  
+		//--------------------------------------------------------------------------------
+		
+		@media only screen and ( min-width: @break_show_menu_button ) {
+			// hugely on non-mobile
+			.fontsize( 42 );
+			text-transform: uppercase;
+			font-family: @headerfont;
+			word-break: break-word;
+			white-space: nowrap;
+			hyphens: none;
+			line-height: 1;
+			margin-top: 6px;
+			margin-bottom: -8px;
+			padding-right: 12px;
+			a {
+				color: @wit;
+				text-decoration: none;
+				padding-left: @logo_desktop_padding;
+				&:hover,
+				&:focus,
+				&:active {
+					color: @wit;
+					text-decoration: underline;
+				}
+			}
+		}		
+		  
+		//--------------------------------------------------------------------------------
+		
+	}
+	
+	.site-description {
+		  
+		//--------------------------------------------------------------------------------
+		
+		@media only screen and ( max-width: @break_show_menu_button ) {
+			// hide on mobile
+			.visuallyhidden();
+		}		
+		  
+		//--------------------------------------------------------------------------------
+		
+		@media only screen and ( min-width: @break_show_menu_button ) {
+			// visible on mobile
+			.fontsize( 12 );
+			padding-right: 12px;
+			padding-left: @logo_desktop_padding;
+		}		
+		  
+		//--------------------------------------------------------------------------------
+		
+	}
+
+	#zoeken {
+		border: 2px solid #4E6E76;
+		  
+		//--------------------------------------------------------------------------------
+		
+		@media only screen and ( max-width: @break_show_menu_button ) {
+			margin-top: 1rem;
+			float: left;
+			height: ( @widget_area_button + 2px );
+			position: relative;
+		}		
+		  
+		//--------------------------------------------------------------------------------
+		
+		@media only screen and ( min-width: @break_show_menu_button ) {
+			padding-right: 2px;
+			margin-top: 2rem;
+			float: right;
+		}		
+		  
+		//--------------------------------------------------------------------------------
+		
+		&:focus-within {
+			background-color: @wit;
+			box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+			border: 1px solid rgba(81, 203, 238, 1);
+
+			input[type="submit"] {
+			    border-color: lighten( @header_bg_color, 20% );
+			}
+			input[type="search"] {
+				outline: none;
+				background-color: @wit;
+				color: @txt;
+				&::placeholder,
+				&::-moz-placeholder { 
+					color: @txt_grijs;
+				}
+				&:focus {
+					&::placeholder,
+					&::-moz-placeholder { 
+						color: @wit;
+					}
+				}
+			}
+		}
+
+		input[type="search"] {
+		    background-color: @header_bg_color;
+			color: @wit;
+			box-shadow: none;
+			border-style: none;
+			margin-left: 0;
+			margin-right: 0;
+
+			//----------------------------------------------------------------------------
+			
+			@media only screen and ( max-width: @break_show_menu_button ) {
+				width: ~"calc(99% - @{widget_area_button})";
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: @widget_area_button;
+			}			
+		  
+			//----------------------------------------------------------------------------
+			
+			
+			&::placeholder,
+			&::-moz-placeholder { 
+				color: @wit;
+			}
+			&:focus {
+				background-color: @wit;
+			}
+		}
+		
+
+		input[type="submit"] {
+		    border-color: @header_bg_color;
+		    background-color: @header_bg_color;
+		    .pijltje_wit('../images/vergrootglas.svg', @wit);
+			background-position: center center;
+			background-repeat: no-repeat;
+			text-indent: -999em;
+			height: ( @widget_area_button - 2px );
+			width: @widget_area_button !important;
+
+			@media only screen and ( max-width: @break_show_menu_button ) {
+				position: absolute;
+				top: 0;
+				right: 0;
+				margin-right: 0;
+			}			
+			
+			&:focus {
+				background-color: @wit;
+				border-color: @txt;
+				outline: none;
+			    .pijltje_wit('../images/vergrootglas.svg', @txt);
+			}
+		}
+	}
+}
+
+//========================================================================================================
+
+.menustyling() {
+	
+	@menuwidth: 290px;
+
+	//------------------------------------------------------------------------------------
+	
+	@media only screen and ( max-width: @break_show_menu_button ) {
+	
+		#maincontent.menuopen {
+			transform: translateX( @menuwidth );
+			transition: opacity 400ms, width 0.1s 400ms, height 0.1s 400ms;
+		}
+	}
+
+	//------------------------------------------------------------------------------------
+	
+	.nav-primary {
+
+	    a {
+			color: @nav_a_color;
+			font-family: @montserrat_semibold;		    
+			text-decoration: none;
+	    }
+	    ul {
+		    overflow: hidden;
+		    padding-left: 0;
+		    &, li {
+			    list-style: none;
+			    margin-left: 0;
+		    }
+		    ul {
+			    margin-bottom: 0;
+		    }
+	    }
+
+	    #mainnav {
+		    margin-left: auto;
+		    margin-right: auto;
+		    max-width: @break_fullwidth;
+	    }
+
+		//--------------------------------------------------------------------------------
+		@media only screen and ( max-width: @break_show_menu_button ) {
+
+		    background-color: @header_bg_color;
+			
+			&.active {
+				position: absolute;
+				width: @menuwidth;
+				top: 70px;
+				left: 0;
+				z-index: 500;
+			}
+
+			li {
+				padding-left: 1rem;
+			}			
+			
+			a {
+				display: inline-block;
+				padding-left: 2rem;
+				padding-top: .5em;
+				padding-bottom: .5em;
+				background-image: url('images/pijltje-wit.svg');
+				background-repeat: no-repeat;
+				background-position: 1px center;
+				background-size: 20px 20px;
+			}
+			
+			li + li {
+				border-top: 2px solid @nav_wrap_bg;
+			}
+			li:last-of-type {
+				border-bottom: 2px solid @nav_wrap_bg;
+			}
+			
+			ul {
+				padding-left: 1rem;
+				border-top: 2px solid @nav_wrap_bg;
+
+				li:last-of-type {
+					border-bottom-style: none;
+				}
+				
+			}
+			
+		}	  
+		  
+		//--------------------------------------------------------------------------------
+		
+		@media only screen and ( min-width: @break_show_menu_button ) {
+
+		    background-color: @nav_wrap_bg;
+
+		    a {
+				border-bottom: 4px solid @nav_wrap_bg;
+				padding: 2px 1px;
+	
+				&:hover,
+				&:active,
+				&:focus {
+					border-color: @groen_1;
+				}
+				
+		    }
+
+			ul {
+			    margin-top: 2rem;
+			    margin-bottom: 2rem;
+			}		    
+			
+		    li {
+			    display: inline-block;
+			    float: left;
+			    margin-right: 2rem;
+				padding: 2px 1px;
+	
+				.sub-menu {
+					left: -9999px;
+					opacity: 0;
+					position: absolute;
+					width: @submenuwidth;
+					z-index: 999;
+				    margin-bottom: 0;
+				    margin-top: 0;
+				    padding-top: 2rem;
+				    background-color: transparent;
+				    border-bottom: 1rem solid @header_bg_color;
+				    
+				    &:before {
+					    content: ' ';
+					    display: block;
+					    background: @header_bg_color;
+					    width: 24px;
+					    height: 24px;
+					    transform: rotateZ(45deg);
+					    z-index: -1;
+					    position: absolute;
+					    margin-left: -12px;
+					    left: 3rem;
+					    top: 10px;
+				    }
+					
+					li {
+					    border-top: 1rem solid @header_bg_color;
+						border-bottom-style: none;
+						display: block;
+						float: none;
+						margin-right: 0;
+						padding-left: 0;
+						padding-right: 0;
+						padding-top: 0;
+						padding-bottom: 0;
+						
+						& + li {
+							border-top-style: none;
+						}
+						
+						a {
+							display: block;
+							float: none;
+						}
+					}
+				}
+	
+		  		&.sfHover,
+				&.menu-item:focus-within,
+				&.menu-item:hover {
+					position: static;
+					
+					a {
+						border-color: @groen_1;
+					}
+	
+					& > .sub-menu {
+						left: auto;
+						opacity: 1;
+					}
+				}
+	
+				&.menu-item-has-children {
+					
+					span[itemprop="name"] {
+						padding-right: 1.25em;
+						position: relative;
+	
+						&:after {
+							content: ' ';
+							background: url('images/pijltje-wit-down.svg');
+							background-repeat: no-repeat;
+							background-position: center center;
+							color: white;
+							display: block;
+							width: 16px;
+							height: 16px;
+							position: absolute;
+							right: 0;
+							top: 4px;
+						}
+					}
+					.sub-menu {
+						a {
+							padding-left: 1.5em;
+							background: @header_bg_color;
+							background-image: url('images/pijltje-wit.svg');
+							background-repeat: no-repeat;
+							background-position: 1px center;
+							background-size: 20px 20px;
+							border-bottom-style: none;
+							font-family: @bodyfont;
+							padding-top: .5em;
+							padding-bottom: .5em;
+							
+							&:hover,
+							&:active,
+							&:focus {
+								background-color: @nav_wrap_bg;
+								text-decoration: underline;
+							}
+						}
+						span[itemprop="name"] {
+							padding-right: 0;
+							&:after {
+								content: '';
+								display: none;
+							}
+						}
+					}
+				}
+	
+		    }			
+		}	    
+		  
+		//--------------------------------------------------------------------------------
+		
+	}
+	
+	#menu-button {
+		border: 3px solid @header_bg_color;
+		background: @header_bg_color;
+		margin-right: 1rem;
+		margin-top: 1rem;
+		height: ( @widget_area_button + 2px );
+		padding: 0;
+		text-align: right;
+		
+		&:hover,
+		&:active,
+		&:focus {
+			border-color: @wit;
+			&, * {
+				color: @wit;
+			}
+		}
+		
+		i {
+			font-style: normal;
+		}	
+		b {
+			display: inline-block;
+			padding: 0 2px 0 0;
+		}
+	}
+}
+
+//========================================================================================================
+
+  

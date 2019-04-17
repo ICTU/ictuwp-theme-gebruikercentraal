@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.13.8
-// @desc.   Set correct name and email address for system mail.
+// @version 3.15.1
+// @desc.   Restyling main nav menu.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 ///
 
@@ -20,8 +20,23 @@ remove_action( 'genesis_footer', 'genesis_do_footer' );
 
 //========================================================================================================
 
-add_filter( 'get_search_form', 'gc_wbvb_add_id_to_search_form', 21 );
+// Add the site search form
+add_action( 'genesis_header_right', 'gc_wbvb_get_search_form' );
 
+function gc_wbvb_get_search_form( ) {
+
+	$acfshowsearchform		= get_field('site_option_show_search_in_header', 'option');
+	if ( 'nee' == $acfshowsearchform ) {
+		// no search form in header
+	}
+	else {
+		echo get_search_form();
+	}
+}
+
+//========================================================================================================
+
+add_filter( 'get_search_form', 'gc_wbvb_add_id_to_search_form', 21 );
 
 function gc_wbvb_add_id_to_search_form( $form ) {
 	
@@ -31,9 +46,31 @@ function gc_wbvb_add_id_to_search_form( $form ) {
 
 //========================================================================================================
 
-add_filter( 'genesis_do_nav', 'override_do_nav', 10, 3 );
+//* Customize search form input box text
+add_filter( 'genesis_search_text', 'gc_wbvb_searchform_text' );
 
-function override_do_nav($nav_output, $nav, $args) {
+function gc_wbvb_searchform_text( $text ) {
+
+	return esc_attr( _x( "Search...", 'search', 'gebruikercentraal' ) );
+
+}
+
+//========================================================================================================
+
+//* Customize search form label
+add_filter( 'genesis_search_form_label', 'gc_wbvb_searchform_label' );
+
+function gc_wbvb_searchform_label ( $text ) {
+
+	return esc_attr( _x( "Search within this site", 'search', 'gebruikercentraal' ) );
+
+}
+
+//========================================================================================================
+
+add_filter( 'genesis_do_nav', 'gc_wbvb_append_attributes_main_nav', 10, 3 );
+
+function gc_wbvb_append_attributes_main_nav($nav_output, $nav, $args) {
 
     if( 'primary' == $args['theme_location'] ) {
 
@@ -57,13 +94,13 @@ function override_do_nav($nav_output, $nav, $args) {
  * @param  array $attributes Array of element attributes
  * @return array             Same array of element attributes with the id added
  */
-function theme_add_content_id( $attributes ) {
+function gc_wbvb_append_attributes_site_inner( $attributes ) {
     $attributes['id'] = ID_MAINCONTENT;
     $attributes['tabindex'] = "-1";
     return $attributes;
 }
 
-add_filter( 'genesis_attr_site-inner', 'theme_add_content_id', 15 );
+add_filter( 'genesis_attr_site-inner', 'gc_wbvb_append_attributes_site_inner', 15 );
 
 
 //========================================================================================================
@@ -336,13 +373,13 @@ function write_analytics_code() {
  * @param object $term
  * @return string $headline
  */
-function be_default_category_title( $headline, $term ) {
+function gc_wbvb_default_category_title( $headline, $term ) {
   if( ( is_category() || is_tag() || is_tax() ) && empty( $headline ) )
     $headline = $term->name;
     
   return $headline;
 }
-add_filter( 'genesis_term_meta_headline', 'be_default_category_title', 10, 2 );
+add_filter( 'genesis_term_meta_headline', 'gc_wbvb_default_category_title', 10, 2 );
 
 
 //========================================================================================================
@@ -359,7 +396,7 @@ add_filter( 'genesis_term_meta_headline', 'be_default_category_title', 10, 2 );
  * @return string $the_excerpt
  */
 
-function fr_excerpt_by_id($post_id, $excerpt_length = 35, $line_breaks = TRUE){
+function gc_wbvb_excerpt_by_id($post_id, $excerpt_length = 35, $line_breaks = TRUE){
 
     //Gets post ID
     $the_post = get_post($post_id); 
@@ -397,15 +434,15 @@ function gc_wbvb_related_content( $thepost ) {
     $type = get_post_type( $thepost->ID );
 
     if ( 'post' == $type ) {
-        $samenvatting = fr_excerpt_by_id( $thepost->ID );
+        $samenvatting = gc_wbvb_excerpt_by_id( $thepost->ID );
     }
     else if ( 'event' == $type ) {
-        $samenvatting = fr_excerpt_by_id( $thepost->ID );
+        $samenvatting = gc_wbvb_excerpt_by_id( $thepost->ID );
     }
     else if ( 'page' == $type ) {
         $samenvatting = get_field( 'samenvatting', $thepost->ID );
         if ( empty( $samenvatting ) ) { 
-            $samenvatting = fr_excerpt_by_id( $thepost->ID );
+            $samenvatting = gc_wbvb_excerpt_by_id( $thepost->ID );
         }
     }
     ?>
@@ -676,27 +713,51 @@ function gc_shared_add_debug_css() {
 
 //========================================================================================================
 
-// Add additional custom style to site header
-function gc_shared_add_site_title_and_logo( $title ) {
+//* Add class to .site-header
+add_filter('genesis_attr_title-area', 'gc_add_siteclass');
 
-  $class = "gebruikercentraal";
+function gc_add_siteclass($attributes) {
 
-  if ( 'rotterdammer.gebruikercentraal.co.uk' == $_SERVER["HTTP_HOST"] || 'accept.rotterdammer.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] || 'rotterdammer.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] ) { 
-    $class = "rotterdammercentraal";
-  }
+	$class 		= "gebruikercentraal";
 
-	$title = '<div id="sitelogo" class="' . $class . '"><img alt="Logo Gebruiker Centraal" src="' . WBVB_THEMEFOLDER . '/images/logo-mobile.png" /></div>' . $title;
+	if ( 'conference.gebruikercentraal.co.uk' == $_SERVER["HTTP_HOST"] || 'accept.conference.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] || 'conference.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] ) { 
+		$class 		= "gebruikercentraal";
+	} elseif ( 'rotterdammer.gebruikercentraal.co.uk' == $_SERVER["HTTP_HOST"] || 'accept.rotterdammer.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] || 'rotterdammer.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] ) { 
+		$class = "rotterdammercentraal";
+	} elseif ( 'inclusie.gebruikercentraal.co.uk' == $_SERVER["HTTP_HOST"] || 'accept.inclusie.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] || 'inclusie.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] ) { 
+		$class = "inclusie";
+	}
 
-	return $title;
-	
+	if ( isset( $attributes['class'] ) ) {
+		$attributes['class'] .= ' ' . $class;
+	}
+	else {
+		$attributes['class'] = $class;
+	}
+
+	return $attributes;
+
 }
 
 //========================================================================================================
 
+//* Add class to .site-heade
+//add_filter('genesis_attr_site-footer', 'gc_add_attribute_role_contentinfo');
+
+function gc_add_attribute_role_contentinfo($attributes) {
+	$attributes['role'] .= 'contentinfo';
+	return $attributes;
+}
+
+//========================================================================================================
+
+add_action( 'wp_enqueue_scripts', 'gc_shared_add_menu_script' );
+
 function gc_shared_add_menu_script() {
 
   if ( ! is_admin() ) {
-    wp_enqueue_script( 'gc-shared-menu', WBVB_THEMEFOLDER . '/js/menu.js', '', '', true );
+//    wp_enqueue_script( 'gc-shared-menu', WBVB_THEMEFOLDER . '/js/menu.js', '', '', true );
+    wp_enqueue_script( 'gc-shared-menu', WBVB_THEMEFOLDER . '/js/min/menu-min.js', '', '', true );
   }
   
 }
@@ -712,6 +773,8 @@ function gc_shared_add_class_to_header( $attributes ) {
 
 //========================================================================================================
 
+//add_filter( 'genesis_attr_nav-primary', 'gc_shared_add_class_to_menu' );
+
 function gc_shared_add_class_to_menu( $attributes ) {
 
 	$attributes['class'] .= ' js-menu';
@@ -722,8 +785,10 @@ function gc_shared_add_class_to_menu( $attributes ) {
 //========================================================================================================
 
 function gc_shared_add_wrap_class($attributes) {
+
 	$attributes['class'] .= ' wrap';
 	return $attributes;
+
 }
 
 //========================================================================================================

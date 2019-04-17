@@ -2334,6 +2334,17 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"/js/menu-backup.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/min/menu-backup-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"/js/menu.js": {
 		"bF": 0,
 		"ft": 64,
@@ -2706,7 +2717,7 @@
 		"oA": 0,
 		"oAP": "/css/login-form.css",
 		"oF": 0,
-		"oS": 0,
+		"oS": 1,
 		"rwU": 0,
 		"sI": 0,
 		"sU": 0
