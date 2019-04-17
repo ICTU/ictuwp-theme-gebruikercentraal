@@ -8,13 +8,18 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.14.4f
-// @desc.   Styling voor fieldset en labels in booking form.
+// @version 3.15.2
+// @desc.   Translations, bugfixes CSS menu.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
+
 // ================================================================================
+
 .backgroundsettings(@content_bg_color, @text: '') {
 }
+
+// ================================================================================
+
 .backgroundsettings_test(@content_bg_color, @text: '') {
   &:before {
     content: '@{text}: @content_bg_color: @{content_bg_color}';
@@ -24,7 +29,9 @@
     padding: .5em;
   }
 }
+
 // ================================================================================
+
 .superpadding() {
   padding-left: 4em;
   padding-right: 4em;
@@ -211,12 +218,12 @@
 
 body {
   background: @wit;
-  .backgroundsettings(@wit, 'body ');
+//  .backgroundsettings(@wit, 'body ');
 }
 
 .site-inner {
   background: @content_bg_color;
-  .backgroundsettings(@content_bg_color, '.site-inner');
+//  .backgroundsettings(@content_bg_color, '.site-inner');
 }
 
 .page-template-page_home,
@@ -229,11 +236,11 @@ body {
 
 
   background: @light_gray;
-  .backgroundsettings(@sitecontainer_bg, '.site-inner');
+//  .backgroundsettings(@sitecontainer_bg, '.site-inner');
     
   .site-inner {
     background: @sitecontainer_bg;
-    .backgroundsettings(@sitecontainer_bg, '.archive, .category, .page-template-page_evenementen, .single-event: -> .site-inner');
+  //  .backgroundsettings(@sitecontainer_bg, '.archive, .category, .page-template-page_evenementen, .single-event: -> .site-inner');
   }
 }
 
@@ -253,11 +260,11 @@ body {
 .single {
 
   background: @light_gray;
-  .backgroundsettings(@sitecontainer_bg, '.single');
+//  .backgroundsettings(@sitecontainer_bg, '.single');
     
   .site-inner {
     background: @sitecontainer_bg;
-    .backgroundsettings(@sitecontainer_bg, '.single: -> .site-inner');
+  //  .backgroundsettings(@sitecontainer_bg, '.single: -> .site-inner');
   }
 }
 
@@ -323,7 +330,8 @@ body {
       }
     }
     .site-inner {
-      margin-top: ( -3 * @padding );
+//      margin-top: ( -3 * @padding );
+      margin-top: 2rem;
     }
   }
 }

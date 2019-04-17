@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.1
-// @desc.   Restyling main nav menu.
+// @version 3.15.2
+// @desc.   Translations, bugfixes CSS menu.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.15.1' );
-define( 'CHILD_THEME_DESCRIPTION', "3.15.1 - Restyling main nav menu." );
+define( 'CHILD_THEME_VERSION', '3.15.2' );
+define( 'CHILD_THEME_DESCRIPTION', "3.15.2 - Translations, bugfixes CSS menu." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 
