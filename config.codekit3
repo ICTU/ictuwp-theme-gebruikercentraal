@@ -138,40 +138,6 @@
 		"oAP": "/distribute.sh",
 		"oF": 0
 		},
-	"/fonts/icons.eot": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/icons.eot",
-		"oF": 0
-		},
-	"/fonts/icons.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/fonts/icons.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/fonts/icons.ttf": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/icons.ttf",
-		"oF": 0
-		},
-	"/fonts/icons.woff": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 2,
-		"oAP": "/fonts/icons.woff",
-		"oF": 0
-		},
 	"/fonts/leaguegothic.eot": {
 		"cB": 0,
 		"ft": 8192,
@@ -204,6 +170,150 @@
 		"hM": 0,
 		"oA": 2,
 		"oAP": "/fonts/leaguegothic.woff",
+		"oF": 0
+		},
+	"/fonts/montserrat-black-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-black-webfont.woff",
+		"oF": 0
+		},
+	"/fonts/montserrat-black-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-black-webfont.woff2",
+		"oF": 0
+		},
+	"/fonts/montserrat-blackitalic-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-blackitalic-webfont.woff",
+		"oF": 0
+		},
+	"/fonts/montserrat-blackitalic-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-blackitalic-webfont.woff2",
+		"oF": 0
+		},
+	"/fonts/montserrat-bold-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-bold-webfont.woff",
+		"oF": 0
+		},
+	"/fonts/montserrat-bold-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-bold-webfont.woff2",
+		"oF": 0
+		},
+	"/fonts/montserrat-bolditalic-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-bolditalic-webfont.woff",
+		"oF": 0
+		},
+	"/fonts/montserrat-bolditalic-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-bolditalic-webfont.woff2",
+		"oF": 0
+		},
+	"/fonts/montserrat-extrabold-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-extrabold-webfont.woff",
+		"oF": 0
+		},
+	"/fonts/montserrat-extrabold-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-extrabold-webfont.woff2",
+		"oF": 0
+		},
+	"/fonts/montserrat-extrabolditalic-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-extrabolditalic-webfont.woff",
+		"oF": 0
+		},
+	"/fonts/montserrat-extrabolditalic-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-extrabolditalic-webfont.woff2",
+		"oF": 0
+		},
+	"/fonts/montserrat-extralight-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-extralight-webfont.woff",
+		"oF": 0
+		},
+	"/fonts/montserrat-extralight-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-extralight-webfont.woff2",
+		"oF": 0
+		},
+	"/fonts/montserrat-extralightitalic-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-extralightitalic-webfont.woff",
+		"oF": 0
+		},
+	"/fonts/montserrat-extralightitalic-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-extralightitalic-webfont.woff2",
+		"oF": 0
+		},
+	"/fonts/montserrat-italic-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-italic-webfont.woff",
+		"oF": 0
+		},
+	"/fonts/montserrat-italic-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-italic-webfont.woff2",
 		"oF": 0
 		},
 	"/fonts/montserrat-light-webfont.eot": {
@@ -248,30 +358,52 @@
 		"oAP": "/fonts/montserrat-light-webfont.woff2",
 		"oF": 0
 		},
-	"/fonts/montserrat-regular-webfont.eot": {
+	"/fonts/montserrat-lightitalic-webfont.woff": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 2,
-		"oAP": "/fonts/montserrat-regular-webfont.eot",
+		"oAP": "/fonts/montserrat-lightitalic-webfont.woff",
 		"oF": 0
 		},
-	"/fonts/montserrat-regular-webfont.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/fonts/montserrat-regular-webfont.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/fonts/montserrat-regular-webfont.ttf": {
+	"/fonts/montserrat-lightitalic-webfont.woff2": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 2,
-		"oAP": "/fonts/montserrat-regular-webfont.ttf",
+		"oAP": "/fonts/montserrat-lightitalic-webfont.woff2",
+		"oF": 0
+		},
+	"/fonts/montserrat-medium-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-medium-webfont.woff",
+		"oF": 0
+		},
+	"/fonts/montserrat-medium-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-medium-webfont.woff2",
+		"oF": 0
+		},
+	"/fonts/montserrat-mediumitalic-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-mediumitalic-webfont.woff",
+		"oF": 0
+		},
+	"/fonts/montserrat-mediumitalic-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-mediumitalic-webfont.woff2",
 		"oF": 0
 		},
 	"/fonts/montserrat-regular-webfont.woff": {
@@ -290,12 +422,244 @@
 		"oAP": "/fonts/montserrat-regular-webfont.woff2",
 		"oF": 0
 		},
-	"/fonts/montserrat-unused-fonts.zip": {
+	"/fonts/montserrat-semibold-webfont.woff": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 2,
-		"oAP": "/fonts/montserrat-unused-fonts.zip",
+		"oAP": "/fonts/montserrat-semibold-webfont.woff",
+		"oF": 0
+		},
+	"/fonts/montserrat-semibold-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-semibold-webfont.woff2",
+		"oF": 0
+		},
+	"/fonts/montserrat-semibolditalic-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-semibolditalic-webfont.woff",
+		"oF": 0
+		},
+	"/fonts/montserrat-semibolditalic-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-semibolditalic-webfont.woff2",
+		"oF": 0
+		},
+	"/fonts/montserrat-thin-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-thin-webfont.woff",
+		"oF": 0
+		},
+	"/fonts/montserrat-thin-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-thin-webfont.woff2",
+		"oF": 0
+		},
+	"/fonts/montserrat-thinitalic-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-thinitalic-webfont.woff",
+		"oF": 0
+		},
+	"/fonts/montserrat-thinitalic-webfont.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-thinitalic-webfont.woff2",
+		"oF": 0
+		},
+	"/fonts/Montserrat.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat.zip",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-Black.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-Black.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-BlackItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-BlackItalic.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-Bold.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-Bold.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-BoldItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-BoldItalic.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-ExtraBold.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-ExtraBold.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-ExtraLight.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-ExtraLight.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-ExtraLightItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-ExtraLightItalic.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-Italic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-Italic.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-Light.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-Light.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-LightItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-LightItalic.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-Medium.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-Medium.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-MediumItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-MediumItalic.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-Regular.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-Regular.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-SemiBold.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-SemiBold.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-SemiBoldItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-SemiBoldItalic.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-Thin.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-Thin.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-ThinItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-ThinItalic.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/OFL.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/OFL.txt",
+		"oF": 0
+		},
+	"/fonts/webfonts-1.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/webfonts-1.zip",
+		"oF": 0
+		},
+	"/fonts/webfonts-2.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/webfonts-2.zip",
 		"oF": 0
 		},
 	"/functions.php": {
@@ -1411,6 +1775,27 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/images/logos/logo-inclusie.png": {
+		"ft": 32768,
+		"iS": 17155,
+		"oA": 0,
+		"oAP": "/images/logos/logo-inclusie.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/logos/logo-inclusie.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/images/logos/logo-inclusie.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/images/logos/logo-mobile.png": {
 		"ft": 32768,
 		"iS": 1283,
@@ -2156,23 +2541,6 @@
 		"sI": 0,
 		"sU": 0
 		},
-	"/less/50-menu.less": {
-		"aP": 0,
-		"bl": 0,
-		"eJ": 0,
-		"ft": 1,
-		"ie": 1,
-		"iI": 0,
-		"ma": 0,
-		"mS": 0,
-		"oA": 1,
-		"oAP": "/css/50-menu.css",
-		"oF": 1,
-		"oS": 0,
-		"rwU": 0,
-		"sI": 0,
-		"sU": 0
-		},
 	"/less/60-sidebar-widgets.less": {
 		"aP": 0,
 		"bl": 0,
@@ -2359,6 +2727,23 @@
 		"rwU": 0,
 		"sI": 1,
 		"sU": 1
+		},
+	"/less/xxx-verwijder-mij-50-menu.less": {
+		"aP": 0,
+		"bl": 0,
+		"eJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"mS": 0,
+		"oA": 1,
+		"oAP": "/css/xxx-verwijder-mij-50-menu.css",
+		"oF": 1,
+		"oS": 0,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 0
 		},
 	"/mailing-templates/double_optin.html": {
 		"cB": 0,

@@ -10,3 +10,11 @@ readme.txt
 *.codekit
 *.codekit3
 config.codekit3
+*.zip
+fonts/montserrat-unused-fonts.zip
+
+fonts/Montserrat/
+fonts/webfontkit-20190416-124939/
+
+less/xxx-verwijder-mij-50-menu.less
+fonts/montserrat-unused-fonts.zip
