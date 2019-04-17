@@ -259,18 +259,18 @@ add_action( 'wp_print_scripts', 'wpdocs_dequeue_script', 100 );
             $return .=
                 '<div id="add_member" class="e-newsletter-widget-screen">';
         $return .= '
-                        <label for="e_newsletter_email">'.__( 'Your Email:', 'email-newsletter' ).'</label>
+                        <label for="e_newsletter_email">'.__( 'Your Email:', 'gebruikercentraal' ).'</label>
                         <input type="text" name="e_newsletter_email" id="e_newsletter_email" value="" />';
         if( isset($show_name) && $show_name )
             $return .= '
                         <br/>
 
-                        <label for="e_newsletter_name">'.__( 'Your Name:', 'email-newsletter' ).'</label>
+                        <label for="e_newsletter_name">'.__( 'Your Name:', 'gebruikercentraal' ).'</label>
                         <input type="text" name="e_newsletter_name" id="e_newsletter_name" />';
 
         if( $show_groups && count($groups) > 0 ) {
             $return .='
-                        <h3>'.__( 'Subscribe to:', 'email-newsletter' ).'</h3>
+                        <h3>'.__( 'Subscribe to:', 'gebruikercentraal' ).'</h3>
                         <p>
                             <ul class="subscribe_groups">';
             foreach( ( array ) $groups as $group ) {
@@ -289,7 +289,7 @@ add_action( 'wp_print_scripts', 'wpdocs_dequeue_script', 100 );
 
         }
         $return .='
-                        <input type="button" id="new_subscribe" class="enewletter_widget_submit" value="'.__( 'Subscribe', 'email-newsletter' ).'" />
+                        <input type="button" id="new_subscribe" class="enewletter_widget_submit" value="'.__( 'Subscribe', 'gebruikercentraal' ).'" />
 
                 </div>';
 
@@ -308,7 +308,7 @@ add_action( 'wp_print_scripts', 'wpdocs_dequeue_script', 100 );
         
                 $return .= '
                             <p>
-                                <input type="button" id="subscribe_to_groups_button" class="enewletter_widget_submit" value="'.__( 'Subscribe', 'email-newsletter' ).'" />
+                                <input type="button" id="subscribe_to_groups_button" class="enewletter_widget_submit" value="'.__( 'Subscribe', 'gebruikercentraal' ).'" />
                             </p>';
                 $return .= '
                         </div>';
@@ -327,7 +327,7 @@ add_action( 'wp_print_scripts', 'wpdocs_dequeue_script', 100 );
 
         $return .= '
                     <p>
-                        <input type="button" id="unsubscribe_from_groups_button" class="enewletter_widget_submit" value="'.__( 'Unsubscribe', 'email-newsletter' ).'" />
+                        <input type="button" id="unsubscribe_from_groups_button" class="enewletter_widget_submit" value="'.__( 'Unsubscribe', 'gebruikercentraal' ).'" />
                     </p>';
         $return .= '
                 </div>';
@@ -349,7 +349,7 @@ add_action( 'wp_print_scripts', 'wpdocs_dequeue_script', 100 );
                 foreach( (array) $groups as $group )
                     if (!$group['public'] && in_array($group['group_id'], $member_groups) )
                         $return .= '<input type="hidden" name="e_newsletter_groups_id[]" value="'.$group['group_id'].'"/>';
-                        $return .= '<h3>'.__( 'Subscribe to:', 'email-newsletter' ).'</h3>
+                        $return .= '<h3>'.__( 'Subscribe to:', 'gebruikercentraal' ).'</h3>
                                     <p><ul class="subscribe_groups">';
             foreach( (array) $groups as $group ){
                 if ( isset($member_groups) && in_array($group['group_id'], $member_groups) ) {
@@ -364,10 +364,10 @@ add_action( 'wp_print_scripts', 'wpdocs_dequeue_script', 100 );
             }
             
             $return .= '</ul></p>
-                    <p><input type="button" id="save_subscribes" class="enewletter_widget_button" value="'.__( 'Save Subscriptions', 'email-newsletter' ).'" /></p>';
+                    <p><input type="button" id="save_subscribes" class="enewletter_widget_button" value="'.__( 'Save Subscriptions', 'gebruikercentraal' ).'" /></p>';
         }
         
-        $return .= '<p><a href="#" id="unsubscribe" class="enewletter_widget_submit" >'.__( 'Unsubscribe', 'email-newsletter' ).'</a></p>';
+        $return .= '<p><a href="#" id="unsubscribe" class="enewletter_widget_submit" >'.__( 'Unsubscribe', 'gebruikercentraal' ).'</a></p>';
         $return .= '</div>';
 
         if($view != 'subscribe') {
@@ -378,7 +378,7 @@ add_action( 'wp_print_scripts', 'wpdocs_dequeue_script', 100 );
         }
             
         $return .= '
-                    <input type="submit" id="subscribe_submit" class="enewletter_widget_submit" value="'.__( 'Subscribe to Newsletters', 'email-newsletter' ).'" />
+                    <input type="submit" id="subscribe_submit" class="enewletter_widget_submit" value="'.__( 'Subscribe to Newsletters', 'gebruikercentraal' ).'" />
                 </div>
             </fieldset>
             </form>

@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.12.1
-// @desc.   Renamed functions for better sharing.
+// @version 3.15.1
+// @desc.   Restyling main nav menu.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -32,7 +32,6 @@ if ( is_home() || is_front_page() ) {
 
   add_action( 'genesis_loop', 'gc_wbvb_home_manifest', 1 );
   add_action( 'wp_enqueue_scripts', 'gc_wbvb_add_berichten_widget_css' );
-  add_action( 'genesis_after_header', 'gc_wbvb_home_append_to_header', 11 );
 
 }
 elseif ( is_archive() ) {

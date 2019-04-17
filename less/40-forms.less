@@ -66,8 +66,9 @@
     opacity: 1;
   }
   
-  ::-webkit-input-placeholder, ::-moz-placeholder {
-    color: lighten(@txt, 40%);
+  ::-webkit-input-placeholder,
+  ::-moz-placeholder {
+    color: @txt;
   }
   
   fieldset {
@@ -138,40 +139,43 @@
   }
   
 
-  
-  .search-form, #search-members-form, #search-groups-form {
-      input[type="submit"] {
-        clip: auto;
-        height: auto;
-        position: relative;
-        width: auto;
-  
-        border: 2px solid lighten(@sidebarwidget, 10%);
-        background-color: @txt;
-  
-          background-image: url('images/vergrootglas.png');
-          background-image: url('images/vergrootglas.svg'), none;
-  
-          background-position: center center;
-          background-repeat: no-repeat;
-          width: @widget_area_button; 
-          text-indent: -999em;
-      
-          padding: 0;
-          height: @widget_area_button;
-          width: @widget_area_button !important;
-      
-        &:hover,
-        &:active,
-        &:focus {
-              background-position: center center;
-              background-color: @a_hover;
-              background-image: url('images/vergrootglas.png');
-              background-image: url('images/vergrootglas.svg'), none;
-              border-color: @wit !important;
-          }
-      }
-  }
+x {
+	.search-form,
+	#search-members-form,
+	#search-groups-form {
+		input[type="submit"] {
+			clip: auto;
+			height: auto;
+			position: relative;
+			width: auto;
+			
+			border: 2px solid lighten(@sidebarwidget, 10%);
+			background-color: @txt;
+			
+			background-image: url('images/vergrootglas.png');
+			background-image: url('images/vergrootglas.svg'), none;
+			
+			background-position: center center;
+			background-repeat: no-repeat;
+			width: @widget_area_button; 
+			text-indent: -999em;
+			
+			padding: 0;
+			height: @widget_area_button;
+			width: @widget_area_button !important;
+			
+			&:hover,
+			&:active,
+			&:focus {
+				background-position: center center;
+				background-color: @a_hover;
+				background-image: url('images/vergrootglas.png');
+				background-image: url('images/vergrootglas.svg'), none;
+				border-color: @wit !important;
+			}
+		}
+	}
+}
   
   
   /* Contact Form 7
