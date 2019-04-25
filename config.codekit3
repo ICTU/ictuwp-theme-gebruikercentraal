@@ -236,6 +236,302 @@
 		"oAP": "/fonts/leaguegothic.woff",
 		"oF": 0
 		},
+	"/fonts/Montserrat 2/Montserrat-Black.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-Black.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-BlackItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-BlackItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-Bold.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-Bold.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-BoldItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-BoldItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-ExtraBold.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-ExtraBold.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-ExtraBoldItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-ExtraBoldItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-ExtraLight.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-ExtraLight.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-ExtraLightItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-ExtraLightItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-Italic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-Italic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-Light.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-Light.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-LightItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-LightItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-Medium.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-Medium.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-MediumItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-MediumItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-Regular.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-Regular.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-SemiBold.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-SemiBold.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-SemiBoldItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-SemiBoldItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-Thin.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-Thin.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-ThinItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-ThinItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-Black.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-Black.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-BlackItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-BlackItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-Bold.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-Bold.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-BoldItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-BoldItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-ExtraBold.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-ExtraBold.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-ExtraBoldItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-ExtraBoldItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-ExtraLight.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-ExtraLight.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-ExtraLightItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-ExtraLightItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-Italic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-Italic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-Light.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-Light.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-LightItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-LightItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-Medium.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-Medium.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-MediumItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-MediumItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-Regular.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-Regular.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-SemiBold.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-SemiBold.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-SemiBoldItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-SemiBoldItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-Thin.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-Thin.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-ThinItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-ThinItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/SIL Open Font License.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/SIL Open Font License.txt",
+		"oF": 0
+		},
 	"/fonts/montserrat-light-webfont.eot": {
 		"cB": 0,
 		"ft": 8192,
@@ -326,6 +622,236 @@
 		"hM": 0,
 		"oA": 2,
 		"oAP": "/fonts/montserrat-unused-fonts.zip",
+		"oF": 0
+		},
+	"/fonts/Montserrat.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat.zip",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-Black.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-Black.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-BlackItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-BlackItalic.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-Bold.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-Bold.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-BoldItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-BoldItalic.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-ExtraBold.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-ExtraBold.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-ExtraLight.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-ExtraLight.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-ExtraLightItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-ExtraLightItalic.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-Italic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-Italic.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-Light.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-Light.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-LightItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-LightItalic.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-Medium.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-Medium.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-MediumItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-MediumItalic.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-Regular.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-Regular.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-SemiBold.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-SemiBold.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-SemiBoldItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-SemiBoldItalic.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-Thin.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-Thin.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/Montserrat-ThinItalic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/Montserrat-ThinItalic.ttf",
+		"oF": 0
+		},
+	"/fonts/Montserrat/OFL.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat/OFL.txt",
+		"oF": 0
+		},
+	"/fonts/webfontkit-20190417-103909.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/webfontkit-20190417-103909.zip",
+		"oF": 0
+		},
+	"/fonts/webfontkit-20190417-103909/generator_config.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/webfontkit-20190417-103909/generator_config.txt",
+		"oF": 0
+		},
+	"/fonts/webfontkit-20190417-103909/montserrat-semibold-demo.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/webfontkit-20190417-103909/montserrat-semibold-demo.html",
+		"oF": 0
+		},
+	"/fonts/webfontkit-20190417-103909/specimen_files/grid_12-825-55-15.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "/fonts/webfontkit-20190417-103909/specimen_files/grid_12-825-55-15-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/fonts/webfontkit-20190417-103909/specimen_files/specimen_stylesheet.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "/fonts/webfontkit-20190417-103909/specimen_files/specimen_stylesheet-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/fonts/webfontkit-20190417-103909/stylesheet.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "/fonts/webfontkit-20190417-103909/stylesheet-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/fonts/webfonts-1.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/webfonts-1.zip",
+		"oF": 0
+		},
+	"/fonts/webfonts-2.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/webfonts-2.zip",
 		"oF": 0
 		},
 	"/functions.php": {
@@ -1464,12 +1990,12 @@
 		},
 	"/images/logos/logo-rotterdammercentraal-desktop.png": {
 		"ft": 32768,
-		"iS": 318512,
+		"iS": 90767,
 		"oA": 0,
 		"oAP": "/images/logos/logo-rotterdammercentraal-desktop.png",
 		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
+		"oIPL": 0,
+		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
@@ -1489,8 +2015,8 @@
 		"oA": 0,
 		"oAP": "/images/logos/logo-rotterdammercentraal-mobile.png",
 		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
+		"oIPL": 0,
+		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
@@ -1860,8 +2386,8 @@
 		"oA": 0,
 		"oAP": "/images/vergrootglas.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1975,6 +2501,17 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/js/min/criticalcss-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/js/menu-backup.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/min/menu-backup-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -2368,7 +2905,7 @@
 		"oA": 0,
 		"oAP": "/css/login-form.css",
 		"oF": 0,
-		"oS": 0,
+		"oS": 1,
 		"rwU": 0,
 		"sI": 0,
 		"sU": 0
@@ -2440,6 +2977,23 @@
 		"rwU": 0,
 		"sI": 1,
 		"sU": 1
+		},
+	"/less/xxx-verwijder-mij-50-menu.less": {
+		"aP": 0,
+		"bl": 0,
+		"eJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"mS": 0,
+		"oA": 1,
+		"oAP": "/css/xxx-verwijder-mij-50-menu.css",
+		"oF": 1,
+		"oS": 0,
+		"rwU": 0,
+		"sI": 0,
+		"sU": 0
 		},
 	"/mailing-templates/double_optin.html": {
 		"cB": 0,
@@ -3599,7 +4153,7 @@
 	},
 "hooks": [
 	{
-		"enabled": 1,
+		"enabled": 0,
 		"name": "Hook #1",
 		"predicateDataBase64Encoded": "YnBsaXN0MDDUAQIDBAUGYmNYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK8QFgcIDxQcJicqMTU6Oz5CRktMT1VZXV9VJG51bGzTCQoLDA0OXxAXTlNDb21wb3VuZFByZWRpY2F0ZVR5cGVfEA9OU1N1YnByZWRpY2F0ZXNWJGNsYXNzEAKAAoAV0hALERNaTlMub2JqZWN0c6ESgAOAFNQLFRYXGBkaG18QEU5TUmlnaHRFeHByZXNzaW9uXxAQTlNMZWZ0RXhwcmVzc2lvbl8QE05TUHJlZGljYXRlT3BlcmF0b3KAE4AOgASAEdUdHh8gCyEiIyQlWU5TT3BlcmFuZF5OU1NlbGVjdG9yTmFtZV8QEE5TRXhwcmVzc2lvblR5cGVbTlNBcmd1bWVudHOABoAFEAOACIANXHZhbHVlRm9yS2V5OtIfCygpEAGAB9IrLC0uWiRjbGFzc25hbWVYJGNsYXNzZXNfEBBOU1NlbGZFeHByZXNzaW9uoy0vMFxOU0V4cHJlc3Npb25YTlNPYmplY3TSEAsyNKEzgAmADNMLHzY3ODlZTlNLZXlQYXRogAsQCoAKXWlucHV0RnVsbFBhdGjSKyw8PV8QHE5TS2V5UGF0aFNwZWNpZmllckV4cHJlc3Npb26jPC8w0issP0BeTlNNdXRhYmxlQXJyYXmjP0EwV05TQXJyYXnSKyxDRF8QE05TS2V5UGF0aEV4cHJlc3Npb26kQ0UvMF8QFE5TRnVuY3Rpb25FeHByZXNzaW9u00cfC0hJSl8QD05TQ29uc3RhbnRWYWx1ZYAPEACAEF8QEmdlYnJ1aWtlci1jZW50cmFhbNIrLE1OXxAZTlNDb25zdGFudFZhbHVlRXhwcmVzc2lvbqNNLzDUC1BRUlNJKFRaTlNNb2RpZmllcldOU0ZsYWdzXk5TT3BlcmF0b3JUeXBlgBIQY9IrLFZXXxAVTlNJblByZWRpY2F0ZU9wZXJhdG9yo1ZYMF8QE05TUHJlZGljYXRlT3BlcmF0b3LSKyxaW18QFU5TQ29tcGFyaXNvblByZWRpY2F0ZaNaXDBbTlNQcmVkaWNhdGXSKyxBXqJBMNIrLGBhXxATTlNDb21wb3VuZFByZWRpY2F0ZaNgXDBfEA9OU0tleWVkQXJjaGl2ZXLRZGVUcm9vdIABAAgAEQAaACMALQAyADcAUABWAF0AdwCJAJAAkgCUAJYAmwCmAKgAqgCsALUAyQDcAPIA9AD2APgA+gEFAQ8BHgExAT0BPwFBAUMBRQFHAVQBWQFbAV0BYgFtAXYBiQGNAZoBowGoAaoBrAGuAbUBvwHBAcMBxQHTAdgB9wH7AgACDwITAhsCIAI2AjsCUgJZAmsCbQJvAnEChgKLAqcCqwK0Ar8CxwLWAtgC2gLfAvcC+wMRAxYDLgMyAz4DQwNGA0sDYQNlA3cDegN/AAAAAAAAAgEAAAAAAAAAZgAAAAAAAAAAAAAAAAAAA4E=",
 		"runOrder": 0,
@@ -3620,7 +4174,7 @@
 "projectSettings": {
 	"abortBuildOnError": 1,
 	"alwaysUseExternalServer": 1,
-	"animateCSSInjections": 1,
+	"animateCSSInjections": 0,
 	"autoBuildNewItems": 1,
 	"autoprefixerEnableIEGrid": 0,
 	"babel7PresetType": 1,

@@ -10,3 +10,10 @@ readme.txt
 *.codekit
 *.codekit3
 config.codekit3
+*.zip
+
+fonts/Montserrat/
+fonts/Montserrat 2/
+fonts/webfontkit-20190417-103909/
+js/menu-backup.js
+less/xxx-verwijder-mij-50-menu.less
