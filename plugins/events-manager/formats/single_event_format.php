@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.8.3
-// @desc.   Code-opschoning.
+// @version 3.14.4
+// @desc.   Styling voor fieldset en labels in booking form.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
     
@@ -33,7 +33,7 @@ if ( is_object( $EM_Event ) ) {
   $event_start_datetime     = strtotime( $EM_Event->event_start_date . ' ' . $EM_Event->event_start_time );
   $event_end_datetime       = strtotime( $EM_Event->event_end_date . ' ' . $EM_Event->event_end_time);
 
-  if ( $EM_Event->location->name ) {
+  if ( isset( $EM_Event->location->name ) ) {
     $event_location  = '<div class="event-location">' . $EM_Event->location->name . '</div>'; 
   }
 
@@ -60,31 +60,39 @@ if ( $event_start_datetime ) {
 $header_meta_info = '';
 $lebookings       = $EM_Event->bookings;
 
-$kostduurquageld  =  __( 'Gratis', 'gebruikercentraal' );
+$kostduurquageld  =  __( 'Free of charge', 'gebruikercentraal' );
 $price_min        = 0;
 $price_max        = 0;
+$countlebookings  = 0;
 
-if ( count($lebookings) > 0 ) {
+if ( is_array( $lebookings ) || is_object( $lebookings ) ) {
+  $countlebookings = count($lebookings);
+}
+if ( $countlebookings > 0 ) {
   // has bookings
   $header_meta_info .= $EM_gc_wbvb_single_event_availability;
   $header_meta_info .= $event_times;
   $header_meta_info .= $event_location;
 
-  foreach ( $lebookings->tickets->tickets as $leticket ) {
-    // get min & max price
-    if ( $price_min > 0 ) {
-      if ( floatval( $leticket->ticket_price ) < $price_min ) {
+  if ( is_object( $lebookings ) ) {
+    
+    foreach ( $lebookings->tickets->tickets as $leticket ) {
+      // get min & max price
+      if ( $price_min > 0 ) {
+        if ( floatval( $leticket->ticket_price ) < $price_min ) {
+          $price_min = $leticket->ticket_price;
+        }
+      }
+      elseif ( floatval( $leticket->ticket_price ) > $price_min ) {
         $price_min = $leticket->ticket_price;
       }
-    }
-    elseif ( floatval( $leticket->ticket_price ) > $price_min ) {
-      $price_min = $leticket->ticket_price;
-    }
-
-    if ( floatval( $leticket->ticket_price ) > $price_max ) {
-      $price_max = $leticket->ticket_price;
+  
+      if ( floatval( $leticket->ticket_price ) > $price_max ) {
+        $price_max = $leticket->ticket_price;
+      }
     }
   }
+
 
   if ( floatval( $price_min ) > 0 ) {
     $kostduurquageld = '<span itemprop="lowPrice">' . round($price_min,2) . '</span>';
@@ -104,8 +112,7 @@ else {
 
   // no booking availability
   $header_meta_info .= $event_times;
-  if ( $EM_Event->location->name ) {
-//    dovardump($EM_Event->location, 'LOCATIE');
+  if ( isset( $EM_Event->location->name ) ) {
     $header_meta_info .= $EM_Event->location->name;
   }
 }
@@ -121,28 +128,28 @@ else {
     </header>
     <?php
     //=======================
-    if ( has_excerpt() ) { 
-    ?>
-      <div class="wrap excerpt">
-        <?php echo gc_wbvb_socialbuttons($post, '' ) ?>
-        #_EVENTEXCERPT
-      </div>
-      <?php echo $EM_gc_wbvb_single_event_organizor; ?>
-      <div class="wrap description" itemprop="description">
-      #_EVENTNOTES
-      </div>
-    <?php
-    }
-    else { 
-    //=======================
-    ?>
-      <div class="wrap description" itemprop="description">
-        <?php echo gc_wbvb_socialbuttons($post, '' ) ?>
-        #_EVENTNOTES
-      </div>
-      <?php echo $EM_gc_wbvb_single_event_organizor;
-    
-    } 
+		if ( has_excerpt() ) { 
+		?>
+		<div class="wrap excerpt">
+			<?php echo gc_wbvb_socialbuttons($post, '' ) ?>
+			#_EVENTEXCERPT
+		</div>
+		<div class="wrap description" itemprop="description">
+			#_EVENTNOTES
+		</div>
+		<?php  // echo $EM_gc_wbvb_single_event_organizor;
+	}
+	else { 
+		
+		//=======================
+		?>
+		<div class="wrap description" itemprop="description">
+			<?php echo gc_wbvb_socialbuttons($post, '' ) ?>
+			#_EVENTNOTES
+		</div>
+		<?php  // echo $EM_gc_wbvb_single_event_organizor; 
+		
+	} 
     //=======================
      
      if ( $EM_gc_wbvb_single_event_links ) {
@@ -159,7 +166,7 @@ else {
         <div id="event_map_en_programma" class="wrap">
             {has_location}
             <div itemprop="location" itemscope itemtype="http://schema.org/Place" id="event_map">
-              <h2>Locatie</h2>
+              <h2><?php echo __( 'Location', 'gebruikercentraal' ) ?></h2>
               #_LOCATIONMAP
               <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
               <h2><a itemprop="url" href="#_LOCATIONURL" itemprop=""><span itemprop="name">#_LOCATIONNAME</span></a></h2>
@@ -180,7 +187,7 @@ else {
         ?>
         {has_location}
         <div itemprop="location" itemscope itemtype="http://schema.org/Place" id="event_map" class="wrap geen-programma">
-          <h2>Locatie</h2>
+          <h2><?php echo __( 'Location', 'gebruikercentraal' ) ?></h2>
           #_LOCATIONMAP
           <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
             <h2><a itemprop="url" href="#_LOCATIONURL" itemprop=""><span itemprop="name">#_LOCATIONNAME</span></a></h2>
@@ -201,8 +208,7 @@ else {
       <div class="event-bookings">
         <div class="wrap">
           #_BOOKINGFORM
-        
-        #_ATTENDEESLIST
+          #_ATTENDEESLIST
         </div>
       </div>    
     {/has_bookings} 

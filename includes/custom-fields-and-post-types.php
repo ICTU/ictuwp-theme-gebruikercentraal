@@ -8,8 +8,9 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.13.2
-// @desc.   Manifest op homepage optioneel gemaakt.
+// @version 3.15.1
+// @desc.   Restyling main nav menu.
+// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
 $samenvattingverplicht = false;
@@ -598,8 +599,8 @@ if ( $samenvattingverplicht ) {
 	
 				array(
 					'key' => 'field_5acce486d19d5',
-					'label' => 'Toon zoekformulier in het menu',
-					'name' => 'toon_zoekformulier_in_het_menu',
+					'label' => 'Toon zoekformulier in de header',
+					'name' => 'site_option_show_search_in_header',
 					'type' => 'radio',
 					'instructions' => '',
 					'required' => 1,

@@ -8,6 +8,11 @@
   padding: 0;
   border: 0;
 }
+@media only screen and (max-width: 830px) {
+  .admin-bar .nav-primary.active {
+    top: 120px;
+  }
+}
 .beeldbank .archive-list .entry a,
 .archive .archive-list .entry a {
   overflow: hidden;
