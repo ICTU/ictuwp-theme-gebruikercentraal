@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.10.4
-// @desc.   Vertalingen bijgewerkt.
+// @version 3.15.3
+// @desc.   Translation improved (most string now originally in English)
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -20,7 +20,7 @@ if ( post_password_required() ) {
 <div id="comments" class="comments-area">
 
 	<?php if ( have_comments() ) : ?>
-		<h2 class="comments-title"><?php printf( __( 'Reacties <span>(%s)</span>', 'gebruikercentraal' ),  get_comments_number() )	?></h2>
+		<h2 class="comments-title"><?php printf( __( 'Comments <span>(%s)</span>', 'gebruikercentraal' ),  get_comments_number() )	?></h2>
 
 		<?php gc_wbvb_comment_nav(); ?>
 

@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.11.5
-// @desc.   Bug removed that caused empty author page.
+// @version 3.15.3
+// @desc.   Translation improved (most string now originally in English)
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
   
   
@@ -121,12 +121,12 @@ function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = 
     $publiek_mailadres      = '';
     $publiek_telefoonnummer = '';
     $header_tag             = 'h2';
-    $prefix                 = __( 'Over', 'gebruikercentraal');
+    $prefix                 = _x( 'About', 'author box', 'gebruikercentraal');
     $user_info              = '';
     
     if ( is_archive() ) {
       $header_tag             = 'h1';
-      $prefix                 = __( 'Blogberichten van', 'gebruikercentraal');
+      $prefix                 = _x( 'Posts by', 'author box', 'gebruikercentraal');
     }
 
     $sectiondiv = '<section class="author-box wrap" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">';
@@ -178,7 +178,6 @@ function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = 
         
         $linkedin               = get_field('linkedin', $acf_userid);
         $facebook               = get_field('facebook', $acf_userid);
-        $googleplus             = get_field('googleplus', $acf_userid);
         $personalurl            = get_field('personalurl', $acf_userid);
         
 
@@ -230,23 +229,19 @@ function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = 
 
 
     if ($personalurl) {
-        $dl .= '<li><a href="' . $personalurl . '" class="personallink" title="' . __('Persoonlijke website', 'gebruikercentraal' ) . ' van ' . $gebruikersnaam . '"><span class="visuallyhidden">' . __('Persoonlijke website', 'gebruikercentraal' ) . '</span></a></li>';
-    }
-
-    if ($googleplus) {
-        $dl .= '<li><a href="' . $googleplus . '" class="googleplus" title="' . __('Google+-profiel', 'gebruikercentraal' ) . ' van ' . $gebruikersnaam . '"><span class="visuallyhidden">' . __('Google+', 'gebruikercentraal' ) . '</span></a></li>';
+        $dl .= '<li><a href="' . $personalurl . '" class="personallink" title="' . _x('Personal website', 'author box', 'gebruikercentraal' ) . ' van ' . $gebruikersnaam . '"><span class="visuallyhidden">' . _x('Personal website', 'author box', 'gebruikercentraal' ) . '</span></a></li>';
     }
 
     if ($linkedin) {
-        $dl .= '<li><a href="' . $linkedin . '" class="linkedin" title="' . __('LinkedIn-profiel', 'gebruikercentraal' ) . ' van ' . $gebruikersnaam . '"><span class="visuallyhidden">' . __('LinkedIn-profiel', 'gebruikercentraal' ) . '</span></a></li>';
+        $dl .= '<li><a href="' . $linkedin . '" class="linkedin" title="' . _x('LinkedIn page', 'author box', 'gebruikercentraal' ) . ' van ' . $gebruikersnaam . '"><span class="visuallyhidden">' . _x('LinkedIn page', 'author box', 'gebruikercentraal' ) . '</span></a></li>';
     }
 
     if ($facebook) {
-        $dl .= '<li><a href="' . $facebook . '" class="facebook" title="' . __('Facebook-account', 'gebruikercentraal' ) . ' van ' . $gebruikersnaam . '"><span class="visuallyhidden">' . __('Facebook-account', 'gebruikercentraal' ) . '</span></a></li>';
+        $dl .= '<li><a href="' . $facebook . '" class="facebook" title="' . _x('Facebook account', 'author box', 'gebruikercentraal' ) . ' van ' . $gebruikersnaam . '"><span class="visuallyhidden">' . _x('Facebook account', 'author box', 'gebruikercentraal' ) . '</span></a></li>';
     }
 
     if ($twitter) {
-        $dl .= '<li><a href="https://twitter.com/' . $twitter . '" class="twitter" title="' . __('Twitter-account', 'gebruikercentraal' ) . ' van ' . $gebruikersnaam . '"><span class="visuallyhidden">' . __('Twitter-account', 'gebruikercentraal' ) . '</span></a></li>';
+        $dl .= '<li><a href="https://twitter.com/' . $twitter . '" class="twitter" title="' . _x('Twitter account', 'author box', 'gebruikercentraal' ) . ' van ' . $gebruikersnaam . '"><span class="visuallyhidden">' . _x('Twitter account', 'author box', 'gebruikercentraal' ) . '</span></a></li>';
     }
 
     

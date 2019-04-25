@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gebruiker Centraal\n"
-"POT-Creation-Date: 2019-04-23 15:40+0200\n"
-"PO-Revision-Date: 2019-04-23 15:40+0200\n"
+"POT-Creation-Date: 2019-04-25 19:06+0200\n"
+"PO-Revision-Date: 2019-04-25 19:06+0200\n"
 "Last-Translator: Paul van Buuren <paul@wbvb.nl>\n"
 "Language-Team: Paul van Buuren <paul@wbvb.nl>\n"
 "Language: en_US\n"
@@ -23,59 +23,59 @@ msgstr ""
 
 #: comments.php:23
 #, php-format
-msgid "Reacties <span>(%s)</span>"
+msgid "Comments <span>(%s)</span>"
 msgstr ""
 
 #: comments.php:46
 msgid "Comments are closed."
 msgstr ""
 
-#: functions.php:287
-msgid "Hoofdmenu"
+#: functions.php:290
+msgid "Main menu"
 msgstr ""
 
-#: functions.php:346
+#: functions.php:349
 msgid "Authors"
 msgstr ""
 
-#: functions.php:361
+#: functions.php:364
 msgid "Home"
 msgstr ""
 
-#: functions.php:378
+#: functions.php:381
 msgid "Label"
 msgstr ""
 
-#: functions.php:379
+#: functions.php:382
 msgid "Date archive"
 msgstr ""
 
-#: functions.php:380
+#: functions.php:383
 msgid "Search result"
 msgstr ""
 
-#: functions.php:383
+#: functions.php:386
 msgid "Whoops"
 msgstr ""
 
-#: functions.php:407
+#: functions.php:410
 msgid "Read: '"
 msgstr ""
 
-#: functions.php:469
-msgid "Geschreven door"
+#: functions.php:472
+msgid "Author"
 msgstr ""
 
-#: functions.php:560
-msgid "Deel op Twitter"
+#: functions.php:563
+msgid "Share on Twitter"
 msgstr ""
 
-#: functions.php:561
-msgid "Deel op Facebook"
+#: functions.php:564
+msgid "Share on Facebook"
 msgstr ""
 
-#: functions.php:562
-msgid "Deel op LinkedIn"
+#: functions.php:565
+msgid "Share on LinkedIn"
 msgstr ""
 
 #: functions.php:645
@@ -163,12 +163,12 @@ msgid "Hier kun je de widgets plaatsen voor o.m. het actieteam"
 msgstr ""
 
 #: functions.php:1683
-msgid "zit vol"
+msgid "fully booked"
 msgstr ""
 
 #: functions.php:1772
 msgctxt "Kopje op evenementpagina"
-msgid "Programma"
+msgid "Programme"
 msgstr ""
 
 #: functions.php:1834
@@ -220,6 +220,16 @@ msgstr ""
 msgid "Nieuwer"
 msgstr ""
 
+#: functions.php:2325 includes/author-box.php:236
+msgctxt "author box"
+msgid "LinkedIn page"
+msgstr ""
+
+#: functions.php:2326 includes/author-box.php:232
+msgctxt "author box"
+msgid "Personal website"
+msgstr ""
+
 #: functions.php:2436
 msgid "Vorige"
 msgstr ""
@@ -229,43 +239,31 @@ msgid "Volgende"
 msgstr ""
 
 #: includes/author-box.php:124
-msgid "Over"
+msgctxt "author box"
+msgid "About"
 msgstr ""
 
 #: includes/author-box.php:129
-msgid "Blogberichten van"
+msgctxt "author box"
+msgid "Posts by"
 msgstr ""
 
-#: includes/author-box.php:220
+#: includes/author-box.php:219
 msgctxt "Event: CTA om mail te versturen aan organisator"
 msgid "Mail"
 msgstr ""
 
-#: includes/author-box.php:233
-msgid "Persoonlijke website"
+#: includes/author-box.php:240
+msgctxt "author box"
+msgid "Facebook account"
 msgstr ""
 
-#: includes/author-box.php:237
-msgid "Google+-profiel"
+#: includes/author-box.php:244
+msgctxt "author box"
+msgid "Twitter account"
 msgstr ""
 
-#: includes/author-box.php:237
-msgid "Google+"
-msgstr ""
-
-#: includes/author-box.php:241
-msgid "LinkedIn-profiel"
-msgstr ""
-
-#: includes/author-box.php:245
-msgid "Facebook-account"
-msgstr ""
-
-#: includes/author-box.php:249
-msgid "Twitter-account"
-msgstr ""
-
-#: includes/author-box.php:271
+#: includes/author-box.php:266
 msgid "Alle artikelen"
 msgstr ""
 
@@ -441,8 +439,8 @@ msgstr ""
 msgid "Free of charge"
 msgstr ""
 
-#: plugins/events-manager/formats/event_single_format.php:160
-#: plugins/events-manager/formats/event_single_format.php:182
+#: plugins/events-manager/formats/event_single_format.php:165
+#: plugins/events-manager/formats/event_single_format.php:187
 #: plugins/events-manager/formats/single_event_format.php:169
 #: plugins/events-manager/formats/single_event_format.php:190
 #: plugins/events-manager/forms/location-editor.php:32
@@ -1213,21 +1211,31 @@ msgstr ""
 msgid "Location not found"
 msgstr ""
 
-#: plugins/events-manager/placeholders/attendeeslist.php:67
+#: plugins/events-manager/placeholders/attendeeslist.php:59
+#: plugins/events-manager/placeholders/attendeeslist.php:88
+msgid "LinkedIn-profiel"
+msgstr ""
+
+#: plugins/events-manager/placeholders/attendeeslist.php:63
+#: plugins/events-manager/placeholders/attendeeslist.php:92
+msgid "Twitter-account"
+msgstr ""
+
+#: plugins/events-manager/placeholders/attendeeslist.php:116
 #, php-format
 msgid "%s attendee"
 msgid_plural "%s attendees"
 msgstr[0] ""
 msgstr[1] ""
 
-#: plugins/events-manager/placeholders/attendeeslist.php:71
+#: plugins/events-manager/placeholders/attendeeslist.php:120
 #, php-format
 msgid "%s attendee not shown"
 msgid_plural "%s attendees not shown"
 msgstr[0] ""
 msgstr[1] ""
 
-#: plugins/events-manager/placeholders/attendeeslist.php:75
+#: plugins/events-manager/placeholders/attendeeslist.php:124
 msgid "Other attendees"
 msgstr ""
 

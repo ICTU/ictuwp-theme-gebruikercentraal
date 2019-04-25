@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.2
-// @desc.   Event manager for conference, translations, bugfixes CSS menu.
+// @version 3.15.3
+// @desc.   Translation improved (most string now originally in English)
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.15.2' );
-define( 'CHILD_THEME_DESCRIPTION', "3.15.2 - Event manager for conference, translations, bugfixes CSS menu." );
+define( 'CHILD_THEME_VERSION', '3.15.3' );
+define( 'CHILD_THEME_DESCRIPTION', "3.15.3 - Translation improved (most string now originally in English)" );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -287,7 +287,7 @@ add_theme_support( 'genesis-footer-widgets', 2 );
 //add_action( 'genesis_footer', 'genesis_do_subnav' );
 
 //* Only register primary menu ( = unregister secondary navigation menu)
-add_theme_support( 'genesis-menus', array( 'primary' => __( 'Hoofdmenu', 'gebruikercentraal' ) ) );
+add_theme_support( 'genesis-menus', array( 'primary' => __( 'Main menu', 'gebruikercentraal' ) ) );
 
 //========================================================================================================
 // deactivate some site layout options
@@ -469,7 +469,7 @@ function gc_wbvb_post_append_postinfo($post_info) {
     }
     elseif ( 'post' == get_post_type() ) {
       if ( is_single() ) {
-        return  __('Geschreven door', 'gebruikercentraal' ) . ': ' . '[post_author_posts_link]';
+        return  __('Author', 'gebruikercentraal' ) . ': ' . '[post_author_posts_link]';
       }
       else {
         return '[post_author_posts_link] [post_date] [post_comments] ' . $socialmedia_icoontjes ;
@@ -560,9 +560,9 @@ function gc_wbvb_socialbuttons($post_info, $hidden = '') {
 
     if ( $thelink ) {
         return $comment . '<ul class="social-media share-buttons">
-            <li><' . $thetag . ' ' . $hrefattr . '="https://twitter.com/share?url=' . $thelink . '&via=' . GC_TWITTERACCOUNT . '&text=' . $thetitle . '" class="twitter" data-url="' . $thelink . '" data-text="' . $thetitle . '" data-via="' . GC_TWITTERACCOUNT . '"' . $popup . '><span class="visuallyhidden">' . __('Deel op Twitter', 'gebruikercentraal') . '</span></' . $thetag . '></li>
-            <li><' . $thetag . ' class="facebook" ' . $hrefattr . '="https://www.facebook.com/sharer/sharer.php?u=' . $thelink . '&t=' . $thetitle . '"' . $popup . '><span class="visuallyhidden">' . __('Deel op Facebook', 'gebruikercentraal') . '</span></' . $thetag . '></li>
-            <li><' . $thetag . ' class="linkedin" ' . $hrefattr . '="http://www.linkedin.com/shareArticle?mini=true&url=' . $thelink . '&title=' . $thetitle . '&summary=' . $summary . '&source=' . $sitetitle . '"' . $popup . '><span class="visuallyhidden">' . __('Deel op LinkedIn', 'gebruikercentraal') . '</span></' . $thetag . '></li>
+            <li><' . $thetag . ' ' . $hrefattr . '="https://twitter.com/share?url=' . $thelink . '&via=' . GC_TWITTERACCOUNT . '&text=' . $thetitle . '" class="twitter" data-url="' . $thelink . '" data-text="' . $thetitle . '" data-via="' . GC_TWITTERACCOUNT . '"' . $popup . '><span class="visuallyhidden">' . __('Share on Twitter', 'gebruikercentraal') . '</span></' . $thetag . '></li>
+            <li><' . $thetag . ' class="facebook" ' . $hrefattr . '="https://www.facebook.com/sharer/sharer.php?u=' . $thelink . '&t=' . $thetitle . '"' . $popup . '><span class="visuallyhidden">' . __('Share on Facebook', 'gebruikercentraal') . '</span></' . $thetag . '></li>
+            <li><' . $thetag . ' class="linkedin" ' . $hrefattr . '="http://www.linkedin.com/shareArticle?mini=true&url=' . $thelink . '&title=' . $thetitle . '&summary=' . $summary . '&source=' . $sitetitle . '"' . $popup . '><span class="visuallyhidden">' . __('Share on LinkedIn', 'gebruikercentraal') . '</span></' . $thetag . '></li>
             </ul>';
 
     }
@@ -1680,7 +1680,7 @@ function gc_wbvb_eventmanager_styles_placeholders($replace, $EM_Event, $result) 
 
 
       if ( ( $EM_Event->get_bookings()->get_available_spaces() <= 0 ) && ( $EM_Event->get_bookings()->tickets->tickets ) ) {
-        return '<div class="tickets unavailable">' . __( 'zit vol', 'gebruikercentraal' ) . '</div>';
+        return '<div class="tickets unavailable">' . __( 'fully booked', 'gebruikercentraal' ) . '</div>';
       }
       else {
         return '';
@@ -1769,7 +1769,7 @@ function gc_wbvb_event_get_programma() {
 
     if ( have_rows( 'programmaonderdelen' ) ) {
 
-      $return = '<div id="programma"><h2>' . _x('Programma', 'Kopje op evenementpagina', 'gebruikercentraal') . '</h2>';
+      $return = '<div id="programma"><h2>' . _x('Programme', 'Kopje op evenementpagina', 'gebruikercentraal') . '</h2>';
       $return .= '<ul class="event-program">';
 
       // loop through the rows of data
@@ -2322,8 +2322,8 @@ function gc_wbvb_new_default_avatar ( $avatar_defaults ) {
 function gc_wbvb_modify_contact_methods($profile_fields) {
 
 	// Add new fields
-	$profile_fields['linkedin']     = 'LinkedIn profiel';
-	$profile_fields['personalurl']  = 'Persoonlijke website';
+	$profile_fields['linkedin']     = _x('LinkedIn page', 'author box', 'gebruikercentraal' );
+	$profile_fields['personalurl']  = _x('Personal website', 'author box', 'gebruikercentraal' );
 //	$profile_fields['twitter']  = 'Twitter Username';
 //	$profile_fields['facebook'] = 'Facebook URL';
 //	$profile_fields['gplus']    = 'Google+ URL';
