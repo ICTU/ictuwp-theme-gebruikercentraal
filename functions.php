@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.2
-// @desc.   Event manager for conference, translations, bugfixes CSS menu.
+// @version 3.15.4
+// @desc.   Bugfixes, CSS.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.15.2' );
-define( 'CHILD_THEME_DESCRIPTION', "3.15.2 - Event manager for conference, translations, bugfixes CSS menu." );
+define( 'CHILD_THEME_VERSION', '3.15.4' );
+define( 'CHILD_THEME_DESCRIPTION', "3.15.4 - Bugfixes, CSS." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );

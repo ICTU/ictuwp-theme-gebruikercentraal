@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.2
-// @desc.   Event manager for conference, translations, bugfixes CSS menu.
+// @version 3.15.4
+// @desc.   Bugfixes, CSS.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -542,7 +542,6 @@
 				.input-name,
 				.input-dbem_country,
 				.input-field-organisation,
-				.input-field-type_of_organisation,
 				.input-dbem_phone,
 				.input-user_email,
 				.input-dbem_phone,
@@ -558,7 +557,10 @@
 					select {
 						height: 40px;
 					}
-					
+				}
+				.input-group +  .input-field-type_of_organisation {
+					float: none;
+					clear: both					
 				}
 				/*
 				.input-field-organisation,
