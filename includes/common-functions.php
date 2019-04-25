@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.1
-// @desc.   Restyling main nav menu.
+// @version 3.15.2
+// @desc.   Event manager for conference, translations, bugfixes CSS menu.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 ///
 
@@ -727,6 +727,10 @@ function gc_add_siteclass($attributes) {
 	} elseif ( 'inclusie.gebruikercentraal.co.uk' == $_SERVER["HTTP_HOST"] || 'accept.inclusie.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] || 'inclusie.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] ) {
 		$class = "inclusie";
 	}
+//		$class = "rotterdammercentraal";
+//		$class = "inclusie";
+//		$class = "gebruikercentraal";
+
 
 	if ( isset( $attributes['class'] ) ) {
 		$attributes['class'] .= ' ' . $class;
@@ -756,8 +760,8 @@ add_action( 'wp_enqueue_scripts', 'gc_shared_add_menu_script' );
 function gc_shared_add_menu_script() {
 
   if ( ! is_admin() ) {
-//    wp_enqueue_script( 'gc-shared-menu', WBVB_THEMEFOLDER . '/js/menu.js', '', '', true );
-    wp_enqueue_script( 'gc-shared-menu', WBVB_THEMEFOLDER . '/js/min/menu-min.js', '', '', true );
+    wp_enqueue_script( 'gc-shared-menu', WBVB_THEMEFOLDER . '/js/menu.js', '', CHILD_THEME_VERSION, true );
+//    wp_enqueue_script( 'gc-shared-menu', WBVB_THEMEFOLDER . '/js/min/menu-min.js', '', '', true );
   }
 
 }

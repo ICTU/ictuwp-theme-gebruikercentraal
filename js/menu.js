@@ -7,19 +7,19 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.1
-// @desc.   Restyling main nav menu.
+// @version 3.15.2
+// @desc.   Event manager for conference, translations, bugfixes CSS menu.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
 // Vars
-var header		= document.querySelector('.site-header'),
-	headerwrap	= document.querySelector('.site-header .wrap'),
-    menu			= document.querySelector('.nav-primary'),
-    searchform	= document.querySelector('.nav-primary'),
-    thecontent	= document.querySelector('#maincontent'),
-    menuButton	= document.querySelector('button.menu-button'),
-    menuButton;
+var header			= document.querySelector('.site-header'),
+	headerwrap		= document.querySelector('.site-header .wrap'),
+	sitecontainer	= document.querySelector('.site-container'),
+	menu			= document.querySelector('.nav-primary'),
+	thecontent		= document.querySelector('#maincontent'),
+	menuButton		= document.querySelector('button.menu-button'),
+	menuButton;
 
 // =========================================================================================================
 
@@ -27,14 +27,19 @@ function hideMenuButton(document, window, undefined) {
 	
 	header.classList.remove('menu-met-js');
 	thecontent.classList.remove('menuopen');
+	sitecontainer.classList.remove('menuopen');
 	header.classList.add('geen-menu-button');
+	menu.setAttribute('aria-hidden', 'false');
+
+
+
 	
 	var ele = document.getElementById("menu-button");
 	
 	if (ele) {
 		// Remove button from page
 		headerwrap.removeChild(ele);
-		console.log('burp'); // no, I never grew up
+//		console.log('burp'); // no, I never grew up
 	}
 }
 
@@ -51,14 +56,14 @@ function showMenuButton(document, window, undefined) {
 	menu.setAttribute('aria-labelledby', 'menu-button');
 	
 	header.classList.remove('geen-menu-button');
-	console.log('create the button'); 
+//	console.log('create the button'); 
 
 	menuButton = document.createElement('button');
 	
 	// Button properties
 	menuButton.classList.add('menu-button');
 	menuButton.setAttribute('id', 'menu-button');
-	menuButton.setAttribute('aria-label', 'Menu');
+	menuButton.setAttribute('aria-label', 'Toon menu');
 	menuButton.setAttribute('aria-expanded', 'false');
 	menuButton.setAttribute('aria-controls', 'menu');
 	menuButton.innerHTML = '<i>&#x2261;</i><b>&nbsp;menu</b>';
@@ -77,7 +82,7 @@ function showMenuButton(document, window, undefined) {
 	            resetMenu();
 	        }
         }
-    }
+    };
 
     var resetMenu = function (ev) {
 		
@@ -88,10 +93,12 @@ function showMenuButton(document, window, undefined) {
 			header.classList.remove('active');
 			
 			thecontent.classList.remove('menuopen');
+			sitecontainer.classList.remove('menuopen');
 			
 			menu.classList.remove('active');
 			menu.setAttribute('aria-hidden', 'true');
 			menuButton.setAttribute('aria-expanded', 'false');
+			menuButton.setAttribute('aria-label', 'Open menu');
 			menuButton.innerHTML = '<i>&#x2261;</i><b>&nbsp;menu</b>';
 	
 		} else {
@@ -100,14 +107,16 @@ function showMenuButton(document, window, undefined) {
 			header.classList.add('active');
 			
 			thecontent.classList.add('menuopen');
+			sitecontainer.classList.add('menuopen');
 			
 			menu.classList.add('active');
 			menu.setAttribute('aria-hidden', 'false');
 			menuButton.setAttribute('aria-expanded', 'true');
-			menuButton.innerHTML = '<i>&times;</i><b>&nbsp;menu</b>';
+			menuButton.setAttribute('aria-label', 'Sluit menu');
+			menuButton.innerHTML = '<i class="close">&times;</i><b>&nbsp;menu</b>';
 			
 		}
-	}
+	};
 	
 	// Handle button click event
 	menuButton.addEventListener('click', function () {
@@ -149,4 +158,3 @@ if (matchMedia) {
 }
 
 // =========================================================================================================
-

@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.14.4
-// @desc.   Styling voor fieldset en labels in booking form.
+// @version 3.15.2
+// @desc.   Event manager for conference, translations, bugfixes CSS menu.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -85,10 +85,8 @@
   }
   
   .sidebar,
-  .footer-widgets,
-	.site-header {
-		
-		
+  .footer-widgets {
+
 		input[type="text"],
 		input[type="password"],
 		input[type="color"],
@@ -137,47 +135,7 @@
   input[type="search"]::-webkit-search-results-button {
     display: none;
   }
-  
 
-x {
-	.search-form,
-	#search-members-form,
-	#search-groups-form {
-		input[type="submit"] {
-			clip: auto;
-			height: auto;
-			position: relative;
-			width: auto;
-			
-			border: 2px solid lighten(@sidebarwidget, 10%);
-			background-color: @txt;
-			
-			background-image: url('images/vergrootglas.png');
-			background-image: url('images/vergrootglas.svg'), none;
-			
-			background-position: center center;
-			background-repeat: no-repeat;
-			width: @widget_area_button; 
-			text-indent: -999em;
-			
-			padding: 0;
-			height: @widget_area_button;
-			width: @widget_area_button !important;
-			
-			&:hover,
-			&:active,
-			&:focus {
-				background-position: center center;
-				background-color: @a_hover;
-				background-image: url('images/vergrootglas.png');
-				background-image: url('images/vergrootglas.svg'), none;
-				border-color: @wit !important;
-			}
-		}
-	}
-}
-  
-  
   /* Contact Form 7
   --------------------------------------------- */
   .wpcf7 {
@@ -358,12 +316,10 @@ x {
       padding: .75em 1em .25em 0;
     }
 
-
-    .em-booking-message-error,
     .em-booking-message {
       padding: .5em;
       margin-bottom: 1em;
-      .mess_error();
+      .mess_ok();
       
       p {
         margin-top: .25em;
@@ -382,52 +338,151 @@ x {
       }
       
     }
+
+    .em-booking-message-error {
+      .mess_error();
+    }
+    .em-booking-message-success {
+      .mess_ok();
+    }
+    
     
   }
   
-  .em-booking-login-form,
-  .em-booking-form {
-    overflow: hidden;
-
-    fieldset,
-    p {
-      margin-bottom: 1em;
-    }
-    
-    fieldset {
-      background: @sitecontainer_bg;
-      border: 0;
-      padding: 0.01em 0 0 0;
-      margin: 0 0 1em 0;
-      display: table-cell;
-    }
-    legend {
-      display: table;      
-      background: @wit;
-      padding: 0;
-      padding-inline-start: 0;
-      width: 100%;
-      
-      & + * {
-        clear: both;
-      }
-    }
-
-    label {
-      display: inline-block;
-    }
-
-    legend,
-    label {
-      font-weight: 700;
-  
-      & + .input-group {
-        display: block;
-        clear: both;
-        float: none;
-      }
-    }
-  }
+	.em-booking-login-form,
+	.em-booking-form {
+		overflow: hidden;
+		
+		fieldset,
+		p {
+		  margin-bottom: 1em;
+		}
+		fieldset {
+		  border: 0;
+		  padding: 0.01em 0 0 0;
+		  margin: 0 0 1em 0;
+		  display: table-cell;
+		}
+		legend {
+		  display: table;      
+		  padding: 0;
+		  padding-inline-start: 0;
+		  width: 100%;
+		  
+		  & + * {
+		    clear: both;
+		  }
+		}
+		
+		@pijl_breedte:	48px;
+		@pijl_hoogte:	63px;
+		
+		label {
+			display: inline-block;
+			position: relative;
+			z-index: 600;
+			
+			div {
+				background: @groen_1;
+				float: left;
+				@media only screen and ( min-width: @break_show_menu_button ) {
+					width: @pijl_breedte;
+					height: @pijl_hoogte;
+				}
+				margin-right: 2rem;
+				position: relative;
+				padding: 0;
+		
+				&:after {
+					content: ' ';
+					display: inline-block;
+					width: 24px;
+					height: 24px;
+					background: @groen_1;
+					position: absolute;
+					top: ( @pijlgrootte * 1 );
+					right: 0;
+					margin-right: -2px;
+					z-index: -1;
+					transform: rotateZ(-45deg);
+				}
+		
+				span {
+					color: @wit;
+					font-size: 1.8rem;
+					text-align: center;
+					line-height: 1;
+					display: block;
+					float: none;
+					clear: both;
+					@media only screen and ( max-width: @break_show_menu_button ) {
+						.fontsize(24);
+					}
+					@media only screen and ( min-width: @break_show_menu_button ) {
+						.fontsize(36);
+					}
+					width: 100%;
+					text-transform: uppercase;	
+					padding-top: 6px;
+					padding-bottom: 0;
+					padding-left: 8px;
+					padding-right: 6px;
+					margin: 0;
+					font-weight: 400;
+					
+					& + span {
+						font-size: 1rem;
+						font-family: @bodyfont;
+						padding-top: 0;
+						padding-bottom: 6px;
+					}
+				}
+			}
+		}
+		    
+		.label-extras {
+		    float: left;
+			width: 96%;
+			width: calc( 100% - 32px );
+			
+		    label {
+				display: block;
+		    }
+		}
+		.input-extras {
+		    float: left;
+		    min-width: 24px;
+		    width: 3%;
+		}
+		
+		
+		
+		legend,
+		label {
+		  font-weight: 700;
+		
+		  & + .input-group {
+		    display: block;
+		    clear: both;
+		    float: none;
+		  }
+		}
+		
+		.input-field-days {
+			label {
+				font-family: @headerfont;
+				text-transform: uppercase;
+				font-weight: 400;
+				line-height: 1;
+				@media only screen and ( max-width: @break_show_menu_button ) {
+					.fontsize(24);
+				}
+				@media only screen and ( min-width: @break_show_menu_button ) {
+					.fontsize(32);
+				}
+			}
+		}
+	}
   
   select {
     height: 2.5em;
@@ -453,7 +508,7 @@ x {
     clear: both;
     overflow: hidden;
     
-    div {
+    div.separator {
       overflow: hidden;
       margin-bottom: .25em;
     }
@@ -464,18 +519,61 @@ x {
       clear: both;
       margin: .25em .5em .5em .25em;
       border-color: @txt;
+
+      &:focus {
+		outline: 2px solid @txt;
+		background: white;	      
+      }
+      
     }
+    input[type="radio"] {
+    }
+    
     label {
       float: none;
       clear: both;
     }
   }
 
-  .input-field-what_days_will_you_join_us_f {
-    
-  }
-
+	body:not(.logged-in) {
+		.em-booking-login-form,
+		.em-booking-form {
+			@media only screen and ( min-width: @break_show_menu_button ) {
+				.input-name,
+				.input-dbem_country,
+				.input-field-organisation,
+				.input-field-type_of_organisation,
+				.input-dbem_phone,
+				.input-user_email,
+				.input-dbem_phone,
+				.input-field-linkedin_profile,
+				.input-field-twitter_handle {
+					padding-right: 1em;
+					width: 50%;
+					float: left;
+					clear: none;
+					min-height: 70px;
+					
+					input[type="text"],
+					select {
+						height: 40px;
+					}
+					
+				}
+				/*
+				.input-field-organisation,
+				.input-dbem_phone,
+				.input-field-twitter_handle {
+					padding-right: 0;
+					padding-left: 1em;
+				}
+				*/
+			}
+		}
+	}
 }
+
+
 
 
 .comment_form_styling() {
@@ -692,10 +790,8 @@ x {
 @rbinputmaxwidth: ( 2 * @rbinputmaxwidth2 );
 
 	.gf_page_steps {
-//		border-bottom: 3px solid red;
 		display: flex;
 		.gf_step {
-//			border: 1px solid red;
 			border-bottom: 3px solid white;
 			padding: .5em 1em;
 			flex: 1;

@@ -9,7 +9,7 @@
 // @author  Paul van Buuren
 // @license GPL-2.0+
 // @version 3.15.2
-// @desc.   Translations, bugfixes CSS menu.
+// @desc.   Event manager for conference, translations, bugfixes CSS menu.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -24,9 +24,12 @@ require_once( get_template_directory() . '/lib/init.php' );
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
 define( 'CHILD_THEME_VERSION', '3.15.2' );
-define( 'CHILD_THEME_DESCRIPTION', "3.15.2 - Translations, bugfixes CSS menu." );
+define( 'CHILD_THEME_DESCRIPTION', "3.15.2 - Event manager for conference, translations, bugfixes CSS menu." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
+define( 'GC_TWITTER_URL', 'https://twitter.com/' );
+
+
 
 define( 'WP_THEME_DEBUG', false );
 //define( 'WP_THEME_DEBUG', true );
@@ -561,9 +564,6 @@ function gc_wbvb_socialbuttons($post_info, $hidden = '') {
             <li><' . $thetag . ' class="facebook" ' . $hrefattr . '="https://www.facebook.com/sharer/sharer.php?u=' . $thelink . '&t=' . $thetitle . '"' . $popup . '><span class="visuallyhidden">' . __('Deel op Facebook', 'gebruikercentraal') . '</span></' . $thetag . '></li>
             <li><' . $thetag . ' class="linkedin" ' . $hrefattr . '="http://www.linkedin.com/shareArticle?mini=true&url=' . $thelink . '&title=' . $thetitle . '&summary=' . $summary . '&source=' . $sitetitle . '"' . $popup . '><span class="visuallyhidden">' . __('Deel op LinkedIn', 'gebruikercentraal') . '</span></' . $thetag . '></li>
             </ul>';
-
-//            <li><' . $thetag . ' class="googleplus" ' . $hrefattr . '="https://plus.google.com/share?url=' . $thelink . '&t=' . $thetitle . '"' . $popup . '><span>' . __('Deel op Google+', 'gebruikercentraal') . '</span></' . $thetag . '></li>
-
 
     }
 }
@@ -2613,3 +2613,63 @@ add_filter( 'wp_mail_from', 'gc_wbvb_filter_wp_mail_from_email');
 add_filter( 'wp_mail_from_name', 'gc_wbvb_filter_wp_mail_from_name' );
 
 //========================================================================================================
+
+/**
+ * Wrap site title in span
+ * @author Bill Erickson
+ * @link http://www.billerickson.net/code/genesis-customize-site-title
+ *
+ * @param string $title full title
+ * @param string $inside text
+ * @param string $wrap html wrapper
+ * @return string full title
+ */
+
+//function gc_wbvb_customize_site_title($title, $inside, $wrap) {
+//	$custom = '<span>' . $title . '</span>'; // site-title
+//	return $custom;
+//}
+
+//add_filter('genesis_seo_title','gc_wbvb_customize_site_title', 10, 3);
+
+//genesis_site_title
+
+//========================================================================================================
+
+//genesis_site_title
+
+//genesis_site_description
+
+/**
+ * Add Site Description to Title 
+ *
+ */
+function gc_wbvb_customize_site_title( $title, $inside, $wrap ) {
+
+	$blogdescription	= get_bloginfo( 'description' );
+	$blogname			= get_bloginfo( 'name' );
+	if ( ! $blogname ) {
+		// een erreur van heb ik jou daar, Jetje
+		$blogname = 'Gebruiker Centraal';	
+	}
+	
+	
+	if ( $blogdescription ) {
+		$inside = '<a href="' . home_url() . '"><span class="site-title-description"><span class="blog-name">' . $blogname . '</span><br><span class="blog-description">' . $blogdescription . '</span></span></a>';
+	} else {
+		$inside = '<a href="' . home_url() . '" class="no-description"><span class="blog-name">' . $blogname . '</span></a>';
+	}
+	
+	//* Build the title
+	$title  = genesis_html5() ? sprintf( "<{$wrap} %s>", genesis_attr( 'site-title' ) ) : sprintf( '<%s id="title">%s</%s>', $wrap, $inside, $wrap );
+	$title .= genesis_html5() ? "{$inside}</{$wrap}>" : '';
+	return $title;	
+}
+
+add_filter( 'genesis_seo_title', 'gc_wbvb_customize_site_title', 10, 3 );
+
+//* Remove the site description
+remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
+
+//========================================================================================================
+

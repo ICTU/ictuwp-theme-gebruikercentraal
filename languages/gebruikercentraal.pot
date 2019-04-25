@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Gebruiker Centraal (3.15.1)\n"
-"POT-Creation-Date: 2019-04-17 13:35+0200\n"
+"POT-Creation-Date: 2019-04-23 15:37+0200\n"
 "PO-Revision-Date: 2018-03-26 23:12+0200\n"
 "Last-Translator: \n"
 "Language-Team: paul@wbvb.nl\n"
@@ -347,7 +347,7 @@ msgctxt "afsluiting inlogmail"
 msgid "het Gebruiker Centraal-team"
 msgstr ""
 
-#: includes/common-functions.php:802
+#: includes/common-functions.php:806
 msgctxt "label zoekknop"
 msgid "Zoeken"
 msgstr ""
@@ -1213,14 +1213,21 @@ msgstr ""
 msgid "Location not found"
 msgstr ""
 
-#: plugins/events-manager/placeholders/attendeeslist.php:24
+#: plugins/events-manager/placeholders/attendeeslist.php:67
 #, php-format
-msgid "%s aanmelding"
-msgid_plural "%s aanmeldingen"
+msgid "%s attendee"
+msgid_plural "%s attendees"
 msgstr[0] ""
 msgstr[1] ""
 
-#: plugins/events-manager/placeholders/attendeeslist.php:27
+#: plugins/events-manager/placeholders/attendeeslist.php:71
+#, php-format
+msgid " (%s attendee not shown)"
+msgid_plural "%s attendees not shown)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugins/events-manager/placeholders/attendeeslist.php:75
 msgid "Other attendees"
 msgstr ""
 

@@ -8,8 +8,8 @@
 // @@package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.14.1
-// @desc.   Styling & functionaliteit voor formulieren op conference-website.
+// @version 3.15.2
+// @desc.   Event manager for conference, translations, bugfixes CSS menu.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 // */
 
@@ -255,7 +255,7 @@ debugmessage('(H) ' . $type . ': spaces_options N/A ' );
 
  ?>    
 
-<p>
+<p class="fullwidth">
   <label for='booking_comment'><?php _e('Opmerkingen', 'gebruikercentraal') ?></label>
   <textarea name='booking_comment' rows="2" cols="20"><?php echo !empty($_REQUEST['booking_comment']) ? esc_attr($_REQUEST['booking_comment']):'' ?></textarea>
 </p>

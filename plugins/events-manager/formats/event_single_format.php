@@ -115,32 +115,37 @@ else {
         <div class="date-badge">#_DATEBADGE</div>
         <h1 itemprop="name">#_EVENTNAME</h1>
         <div class="meta"><?php echo $header_meta_info ?></div>
-hier?
+        
     </header>
     <?php
+
     //=======================
-    if ( has_excerpt() ) { 
-    ?>
-      <div class="wrap excerpt">
-        <?php echo gc_wbvb_socialbuttons($post, '' ) ?>
-        #_EVENTEXCERPT
-      </div>
-      <?php echo $EM_gc_wbvb_single_event_organizor; ?>
-      <div class="wrap description" itemprop="description">
-      #_EVENTNOTES
-      </div>
-    <?php
-    }
-    else { 
-    //=======================
-    ?>
-      <div class="wrap description" itemprop="description">
-        <?php echo gc_wbvb_socialbuttons($post, '' ) ?>
-        #_EVENTNOTES
-      </div>
-      <?php echo $EM_gc_wbvb_single_event_organizor;
-    
-    } 
+
+	if ( has_excerpt() ) { 
+		?>
+		<div class="wrap excerpt">
+			<?php echo gc_wbvb_socialbuttons($post, '' ) ?>
+			#_EVENTEXCERPT
+		</div>
+		<div class="wrap description" itemprop="description">
+			#_EVENTNOTES
+		</div>
+		
+		<?php echo $EM_gc_wbvb_single_event_organizor; ?>
+		
+		<?php
+			
+	}
+	else { 
+		//=======================
+		?>
+		<div class="wrap description" itemprop="description">
+			<?php echo gc_wbvb_socialbuttons($post, '' ) ?>
+			#_EVENTNOTES
+		</div>
+		<?php echo $EM_gc_wbvb_single_event_organizor;
+		
+	} 
     //=======================
      
      if ( $EM_gc_wbvb_single_event_links ) {

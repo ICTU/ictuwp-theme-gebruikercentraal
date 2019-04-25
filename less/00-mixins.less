@@ -6,8 +6,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.1
-// @desc.   Restyling main nav menu.
+// @version 3.15.2
+// @desc.   Event manager for conference, translations, bugfixes CSS menu.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 @import "01-socmed-color-codes.less";              // colors, sizes 
@@ -81,7 +81,7 @@
 @breadcrumb_bg_color:   @wit;
 
 
-@bsitefooter_a_color:   #6D9DAA;
+@bsitefooter_a_color:   @wit; // #6D9DAA;
 
 @menu_active:           @groen_2;
 
@@ -99,16 +99,23 @@
 @content_bg_color:      @wit;
 @warning:               #FFFEC1;
 
+//========================================================================================================
+
 .mess_ok() {
   background-color: @mess_ok_bg;
   border: 1px solid @mess_ok_border;
   color: @txt;
 }
+
+//========================================================================================================
+
 .mess_error() {
   background-color: @mess_error_bg;
   border: 1px solid @mess_error_border;
   color: @txt;
 }
+
+//========================================================================================================
 
 // tekst-koeleuren, best belangrijk ================================================
 @txt:                   @blauw3;
@@ -141,24 +148,24 @@
 
 @bigmargin:             0;
 
-@widget_area_button:    38px;
+@widget_area_button:    	40px;
 
-@sidebar_marginright:   ( 4 * @padding );
-@sidebar_margin_top:    -143px;
-@sidebar_width:         ( 17 * @padding );
+@sidebar_marginright:   	( 4 * @padding );
+@sidebar_margin_top:    	-143px;
+@sidebar_width:         	( 17 * @padding );
 
-@logo_mobile_width:		55px;
+@logo_mobile_width:			55px;
 @logo_mobile_padding:		( @logo_mobile_width + 16px );
 @logo_mobile_height:		55px;
 
 @logo_desktop_width:		64px;
-@logo_desktop_padding:	( @logo_desktop_width + 16px );
+@logo_desktop_padding:		( @logo_desktop_width + 16px );
 @logo_desktop_height:		64px;
 
 
-@gutter:                16px;
-@padding:               16px;
-@contentpadding:        @padding;
+@gutter:                	16px;
+@padding:               	16px;
+@contentpadding:        	@padding;
 
 
 @position_navbar:       180px;
@@ -176,12 +183,16 @@
 @programa_desc_width: ( 99% - @programa_tijd_width );
 
 
+@submenu_desktop_width:	260px;	// breedte van de submenu-UL op een desktop scherm		    
+@mainmenu_mobile_width:	290px;	// breedte van het menu op een mobiel scherm en de ruimte die de content naar rechts wordt opgeschoven
+
+
 // font-stijlen en -groottes =======================================================
-@headerfont:				'League Gothic', Impact, Helvetica, Arial, sans-serif;
+@headerfont:			'League Gothic', Impact, Helvetica, Arial, sans-serif;
 @headerfont2:			'montserratregular', Helvetica, Arial, sans-serif;
 @bodyfont:				'Montserrat light', Helvetica, Arial, sans-serif; // 'Montserrat light',Helvetica,Arial,sans-serif
 @bodyfont_bold:			'montserrat_semiboldregular', Helvetica, Arial, sans-serif; 
-@montserrat_semibold:		'montserrat_semiboldregular', Helvetica, Arial, sans-serif;
+@montserrat_semibold:   'montserrat_semiboldregular', Helvetica, Arial, sans-serif;
 
 @header_color:          #210800;
 @header_color_2:        @blauw;
@@ -495,10 +506,13 @@
 	@font-face {
 	    font-family: 'montserrat_semiboldregular';
 	    src: url('fonts/montserrat-semibold-webfont.woff2') format('woff2'),
-	         url('fonts/montserrat-semibold-webfont.woff') format('woff');
+	         url('fonts/montserrat-semibold-webfont.woff') format('woff'),
+	         url('fonts/montserrat-semibold-webfont.ttf') format('truetype'),
+	         url('fonts/montserrat-semibold-webfont.svg#montserratsemibold') format('svg');
 	    font-weight: normal;
 	    font-style: normal;
 	}
+
 	@font-face {
 	    font-family: 'montserrat_semibolditalic';
 	    src: url('fonts/montserrat-semibolditalic-webfont.woff2') format('woff2'),
@@ -538,127 +552,127 @@
     
 	@font-face {
 	    font-family: 'montserrat_blackregular';
-	    src: url('../fonts/serrat-black-webfont.woff2') format('woff2'),
-	         url('../fonts/serrat-black-webfont.woff') format('woff');
+	    src: url('../fonts/montserrat-black-webfont.woff2') format('woff2'),
+	         url('../fonts/montserrat-black-webfont.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 	@font-face {
 	    font-family: 'montserrat_blackitalic';
-	    src: url('../fonts/serrat-blackitalic-webfont.woff2') format('woff2'),
-	         url('../fonts/serrat-blackitalic-webfont.woff') format('woff');
+	    src: url('../fonts/montserrat-blackitalic-webfont.woff2') format('woff2'),
+	         url('../fonts/montserrat-blackitalic-webfont.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 	@font-face {
 	    font-family: 'montserratbold';
-	    src: url('../fonts/serrat-bold-webfont.woff2') format('woff2'),
-	         url('../fonts/serrat-bold-webfont.woff') format('woff');
+	    src: url('../fonts/montserrat-bold-webfont.woff2') format('woff2'),
+	         url('../fonts/montserrat-bold-webfont.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 	@font-face {
 	    font-family: 'montserratbold_italic';
-	    src: url('../fonts/serrat-bolditalic-webfont.woff2') format('woff2'),
-	         url('../fonts/serrat-bolditalic-webfont.woff') format('woff');
+	    src: url('../fonts/montserrat-bolditalic-webfont.woff2') format('woff2'),
+	         url('../fonts/montserrat-bolditalic-webfont.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 	@font-face {
 	    font-family: 'montserrat_extraboldregular';
-	    src: url('../fonts/serrat-extrabold-webfont.woff2') format('woff2'),
-	         url('../fonts/serrat-extrabold-webfont.woff') format('woff');
+	    src: url('../fonts/montserrat-extrabold-webfont.woff2') format('woff2'),
+	         url('../fonts/montserrat-extrabold-webfont.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 	@font-face {
 	    font-family: 'montserrat_extrabolditalic';
-	    src: url('../fonts/serrat-extrabolditalic-webfont.woff2') format('woff2'),
-	         url('../fonts/serrat-extrabolditalic-webfont.woff') format('woff');
+	    src: url('../fonts/montserrat-extrabolditalic-webfont.woff2') format('woff2'),
+	         url('../fonts/montserrat-extrabolditalic-webfont.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 	@font-face {
 	    font-family: 'montserrat_extralightregular';
-	    src: url('../fonts/serrat-extralight-webfont.woff2') format('woff2'),
-	         url('../fonts/serrat-extralight-webfont.woff') format('woff');
+	    src: url('../fonts/montserrat-extralight-webfont.woff2') format('woff2'),
+	         url('../fonts/montserrat-extralight-webfont.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 	@font-face {
 	    font-family: 'montserrat_extralightitalic';
-	    src: url('../fonts/serrat-extralightitalic-webfont.woff2') format('woff2'),
-	         url('../fonts/serrat-extralightitalic-webfont.woff') format('woff');
+	    src: url('../fonts/montserrat-extralightitalic-webfont.woff2') format('woff2'),
+	         url('../fonts/montserrat-extralightitalic-webfont.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 	@font-face {
 	    font-family: 'montserratitalic';
-	    src: url('../fonts/serrat-italic-webfont.woff2') format('woff2'),
-	         url('../fonts/serrat-italic-webfont.woff') format('woff');
+	    src: url('../fonts/montserrat-italic-webfont.woff2') format('woff2'),
+	         url('../fonts/montserrat-italic-webfont.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 	@font-face {
 	    font-family: 'Montserrat light';
-	    src: url('../fonts/serrat-light-webfont.woff2') format('woff2'),
-	         url('../fonts/serrat-light-webfont.woff') format('woff');
+	    src: url('../fonts/montserrat-light-webfont.woff2') format('woff2'),
+	         url('../fonts/montserrat-light-webfont.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 	@font-face {
 	    font-family: 'montserrat_lightitalic';
-	    src: url('../fonts/serrat-lightitalic-webfont.woff2') format('woff2'),
-	         url('../fonts/serrat-lightitalic-webfont.woff') format('woff');
+	    src: url('../fonts/montserrat-lightitalic-webfont.woff2') format('woff2'),
+	         url('../fonts/montserrat-lightitalic-webfont.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 	@font-face {
 	    font-family: 'montserrat_mediumregular';
-	    src: url('../fonts/serrat-medium-webfont.woff2') format('woff2'),
-	         url('../fonts/serrat-medium-webfont.woff') format('woff');
+	    src: url('../fonts/montserrat-medium-webfont.woff2') format('woff2'),
+	         url('../fonts/montserrat-medium-webfont.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 	@font-face {
 	    font-family: 'montserrat_mediumitalic';
-	    src: url('../fonts/serrat-mediumitalic-webfont.woff2') format('woff2'),
-	         url('../fonts/serrat-mediumitalic-webfont.woff') format('woff');
+	    src: url('../fonts/montserrat-mediumitalic-webfont.woff2') format('woff2'),
+	         url('../fonts/montserrat-mediumitalic-webfont.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 	@font-face {
 	    font-family: 'montserratregular';
-	    src: url('../fonts/serrat-regular-webfont.woff2') format('woff2'),
-	         url('../fonts/serrat-regular-webfont.woff') format('woff');
+	    src: url('../fonts/montserrat-regular-webfont.woff2') format('woff2'),
+	         url('../fonts/montserrat-regular-webfont.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 	@font-face {
 	    font-family: 'montserrat_semiboldregular';
-	    src: url('../fonts/serrat-semibold-webfont.woff2') format('woff2'),
-	         url('../fonts/serrat-semibold-webfont.woff') format('woff');
+	    src: url('../fonts/montserrat-semibold-webfont.woff2') format('woff2'),
+	         url('../fonts/montserrat-semibold-webfont.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 	@font-face {
 	    font-family: 'montserrat_semibolditalic';
-	    src: url('../fonts/serrat-semibolditalic-webfont.woff2') format('woff2'),
-	         url('../fonts/serrat-semibolditalic-webfont.woff') format('woff');
+	    src: url('../fonts/montserrat-semibolditalic-webfont.woff2') format('woff2'),
+	         url('../fonts/montserrat-semibolditalic-webfont.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 	@font-face {
 	    font-family: 'montserrat_thinregular';
-	    src: url('../fonts/serrat-thin-webfont.woff2') format('woff2'),
-	         url('../fonts/serrat-thin-webfont.woff') format('woff');
+	    src: url('../fonts/montserrat-thin-webfont.woff2') format('woff2'),
+	         url('../fonts/montserrat-thin-webfont.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	}
 	@font-face {
 	    font-family: 'montserrat_thinitalic';
-	    src: url('../fonts/serrat-thinitalic-webfont.woff2') format('woff2'),
-	         url('../fonts/serrat-thinitalic-webfont.woff') format('woff');
+	    src: url('../fonts/montserrat-thinitalic-webfont.woff2') format('woff2'),
+	         url('../fonts/montserrat-thinitalic-webfont.woff') format('woff');
 	    font-weight: normal;
 	    font-style: normal;
 	}	
@@ -721,7 +735,7 @@
 
 .icon_socmed_icon(@src, @fill-new) {
     @data-uri:          data-uri('image/svg+xml;charset=UTF-8', "@{src}");
-    @replace-default:   escape('fill="#00586F"');
+    @replace-default:   escape('fill="#00586f"');
     @replace-new:       escape('fill="@{fill-new}"');
     @replacesrc1:       replace("@{data-uri}", @replace-default, @replace-new, "g");
 
@@ -922,7 +936,6 @@
       
       a {
         &.personallink,
-        &.googleplus,
         &.linkedin,
         &.facebook,
         &.twitter {
@@ -958,17 +971,6 @@
         &:active,
         &:focus {
           .icon_socmed_icon('../images/icon-facebook.svg', @groen_1);
-        }
-      }
-      .googleplus {
-        background: url('images/icon-googleplus.png') no-repeat center center;
-        .icon_socmed_icon('../images/icon-googleplus.svg', @blauw3);
-        background-size: 18px 16px;
-
-        &:hover,
-        &:active,
-        &:focus {
-          .icon_socmed_icon('../images/icon-googleplus.svg', @groen_1);
         }
       }
       .personallink {
@@ -1228,7 +1230,6 @@
         margin: 0 .8em .5em 0;
         a {
           &.personallink,
-          &.googleplus,
           &.linkedin,
           &.facebook,
           &.twitter {

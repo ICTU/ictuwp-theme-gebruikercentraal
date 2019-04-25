@@ -1,11 +1,12 @@
 @versie: '3.15.2';
 /*!
-Theme Name: Gebruiker Centraal
-Description: Wordpress-theme voor gebruikercentraal.nl
-Author: Paul van Buuren - Tamara de Haas
-Author URI: https://wbvb.nl/
-Version: 3.15.2
-Version description: 3.15.2 - Translations, bugfixes CSS menu.
+Theme Name:			Gebruiker Centraal
+Description:			Wordpress-theme voor gebruikercentraal.nl
+Author:				Paul van Buuren - Tamara de Haas
+Author URI:			https://wbvb.nl/
+Version:				3.15.2
+Version description:	3.15.2 - Event manager for conference, translations, bugfixes CSS menu.
+Link: 	    			https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 Template: genesis
 Template Version: 2.0.2
@@ -60,7 +61,7 @@ License URI: http://www.opensource.org/licenses/gpl-license.php
 // @author  Paul van Buuren
 // @license GPL-2.0+
 // @version 3.15.2
-// @desc.   Translations, bugfixes CSS menu.
+// @desc.   Event manager for conference, translations, bugfixes CSS menu.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -568,6 +569,20 @@ body .sidebar .widget_oa_social_login .oneall_social_login {
       }
 
     }
+
+	//----------------------------------------------------------------------------
+  
+	@media only screen and ( max-width: @break_show_menu_button ) {
+		img.alignleft.size-medium,
+		img.alignright.size-medium {
+			max-width: 40%;
+			height: auto;
+	    }
+		
+    }
+
+	//----------------------------------------------------------------------------
+  
 
 }
 
@@ -1140,12 +1155,14 @@ Media Queries
 ==============================================================================================================
 */
 
-@titlearea_width: 60px;
+@titlearea_width: 66px;
 @menubutton_width: 100px;
 
 @logo_plus_button: ( @titlearea_width + @menubutton_width );
 
 .menu-met-js {
+
+	padding-left: 1rem;
 
 	.title-area,
 	#zoeken,
@@ -1155,6 +1172,9 @@ Media Queries
 	}
 	.title-area {
 		width: @titlearea_width;
+		padding-right: .5em;
+		overflow: hidden;
+		float: left;
 	}
 	.menu-button {
 		width: @menubutton_width;
@@ -1169,3 +1189,4 @@ Media Queries
 /*
 ==============================================================================================================
 */
+

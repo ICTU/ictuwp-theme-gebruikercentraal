@@ -172,6 +172,302 @@
 		"oAP": "/fonts/leaguegothic.woff",
 		"oF": 0
 		},
+	"/fonts/Montserrat 2/Montserrat-Black.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-Black.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-BlackItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-BlackItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-Bold.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-Bold.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-BoldItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-BoldItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-ExtraBold.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-ExtraBold.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-ExtraBoldItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-ExtraBoldItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-ExtraLight.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-ExtraLight.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-ExtraLightItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-ExtraLightItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-Italic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-Italic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-Light.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-Light.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-LightItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-LightItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-Medium.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-Medium.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-MediumItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-MediumItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-Regular.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-Regular.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-SemiBold.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-SemiBold.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-SemiBoldItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-SemiBoldItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-Thin.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-Thin.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/Montserrat-ThinItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/Montserrat-ThinItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-Black.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-Black.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-BlackItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-BlackItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-Bold.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-Bold.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-BoldItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-BoldItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-ExtraBold.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-ExtraBold.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-ExtraBoldItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-ExtraBoldItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-ExtraLight.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-ExtraLight.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-ExtraLightItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-ExtraLightItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-Italic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-Italic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-Light.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-Light.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-LightItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-LightItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-Medium.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-Medium.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-MediumItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-MediumItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-Regular.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-Regular.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-SemiBold.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-SemiBold.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-SemiBoldItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-SemiBoldItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-Thin.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-Thin.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/MontserratAlternates-ThinItalic.otf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/MontserratAlternates-ThinItalic.otf",
+		"oF": 0
+		},
+	"/fonts/Montserrat 2/SIL Open Font License.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/Montserrat 2/SIL Open Font License.txt",
+		"oF": 0
+		},
 	"/fonts/montserrat-black-webfont.woff": {
 		"cB": 0,
 		"ft": 8192,
@@ -422,6 +718,24 @@
 		"oAP": "/fonts/montserrat-regular-webfont.woff2",
 		"oF": 0
 		},
+	"/fonts/montserrat-semibold-webfont.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-semibold-webfont.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/fonts/montserrat-semibold-webfont.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/montserrat-semibold-webfont.ttf",
+		"oF": 0
+		},
 	"/fonts/montserrat-semibold-webfont.woff": {
 		"cB": 0,
 		"ft": 8192,
@@ -645,6 +959,60 @@
 		"oA": 2,
 		"oAP": "/fonts/Montserrat/OFL.txt",
 		"oF": 0
+		},
+	"/fonts/webfontkit-20190417-103909.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/webfontkit-20190417-103909.zip",
+		"oF": 0
+		},
+	"/fonts/webfontkit-20190417-103909/generator_config.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/webfontkit-20190417-103909/generator_config.txt",
+		"oF": 0
+		},
+	"/fonts/webfontkit-20190417-103909/montserrat-semibold-demo.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/fonts/webfontkit-20190417-103909/montserrat-semibold-demo.html",
+		"oF": 0
+		},
+	"/fonts/webfontkit-20190417-103909/specimen_files/grid_12-825-55-15.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "/fonts/webfontkit-20190417-103909/specimen_files/grid_12-825-55-15-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/fonts/webfontkit-20190417-103909/specimen_files/specimen_stylesheet.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "/fonts/webfontkit-20190417-103909/specimen_files/specimen_stylesheet-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/fonts/webfontkit-20190417-103909/stylesheet.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "/fonts/webfontkit-20190417-103909/stylesheet-min.css",
+		"oF": 0,
+		"oS": 3
 		},
 	"/fonts/webfonts-1.zip": {
 		"cB": 0,
@@ -1754,22 +2122,22 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/images/logos/logo-desktop.png": {
+	"/images/logos/logo-gebruikercentraal.png": {
 		"ft": 32768,
-		"iS": 1361,
+		"iS": 26174,
 		"oA": 0,
-		"oAP": "/images/logos/logo-desktop.png",
+		"oAP": "/images/logos/logo-gebruikercentraal.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"/images/logos/logo-desktop.svg": {
+	"/images/logos/logo-gebruikercentraal.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/images/logos/logo-desktop.svg",
+		"oAP": "/images/logos/logo-gebruikercentraal.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -1777,7 +2145,7 @@
 		},
 	"/images/logos/logo-inclusie.png": {
 		"ft": 32768,
-		"iS": 17155,
+		"iS": 37629,
 		"oA": 0,
 		"oAP": "/images/logos/logo-inclusie.png",
 		"oF": 0,
@@ -1796,64 +2164,22 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/images/logos/logo-mobile.png": {
+	"/images/logos/logo-rotterdammercentraal.png": {
 		"ft": 32768,
-		"iS": 1283,
+		"iS": 37750,
 		"oA": 0,
-		"oAP": "/images/logos/logo-mobile.png",
+		"oAP": "/images/logos/logo-rotterdammercentraal.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"/images/logos/logo-mobile.svg": {
+	"/images/logos/logo-rotterdammercentraal.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/images/logos/logo-mobile.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/images/logos/logo-rotterdammercentraal-desktop.png": {
-		"ft": 32768,
-		"iS": 318512,
-		"oA": 0,
-		"oAP": "/images/logos/logo-rotterdammercentraal-desktop.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"/images/logos/logo-rotterdammercentraal-desktop.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/images/logos/logo-rotterdammercentraal-desktop.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"/images/logos/logo-rotterdammercentraal-mobile.png": {
-		"ft": 32768,
-		"iS": 142003,
-		"oA": 0,
-		"oAP": "/images/logos/logo-rotterdammercentraal-mobile.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
-	"/images/logos/logo-rotterdammercentraal-mobile.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/images/logos/logo-rotterdammercentraal-mobile.svg",
+		"oAP": "/images/logos/logo-rotterdammercentraal.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -2215,8 +2541,8 @@
 		"oA": 0,
 		"oAP": "/images/vergrootglas.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -3914,7 +4240,7 @@
 	},
 "hooks": [
 	{
-		"enabled": 1,
+		"enabled": 0,
 		"name": "Hook #1",
 		"predicateDataBase64Encoded": "YnBsaXN0MDDUAQIDBAUGYmNYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK8QFgcIDxQcJicqMTU6Oz5CRktMT1VZXV9VJG51bGzTCQoLDA0OXxAXTlNDb21wb3VuZFByZWRpY2F0ZVR5cGVfEA9OU1N1YnByZWRpY2F0ZXNWJGNsYXNzEAKAAoAV0hALERNaTlMub2JqZWN0c6ESgAOAFNQLFRYXGBkaG18QEU5TUmlnaHRFeHByZXNzaW9uXxAQTlNMZWZ0RXhwcmVzc2lvbl8QE05TUHJlZGljYXRlT3BlcmF0b3KAE4AOgASAEdUdHh8gCyEiIyQlWU5TT3BlcmFuZF5OU1NlbGVjdG9yTmFtZV8QEE5TRXhwcmVzc2lvblR5cGVbTlNBcmd1bWVudHOABoAFEAOACIANXHZhbHVlRm9yS2V5OtIfCygpEAGAB9IrLC0uWiRjbGFzc25hbWVYJGNsYXNzZXNfEBBOU1NlbGZFeHByZXNzaW9uoy0vMFxOU0V4cHJlc3Npb25YTlNPYmplY3TSEAsyNKEzgAmADNMLHzY3ODlZTlNLZXlQYXRogAsQCoAKXWlucHV0RnVsbFBhdGjSKyw8PV8QHE5TS2V5UGF0aFNwZWNpZmllckV4cHJlc3Npb26jPC8w0issP0BeTlNNdXRhYmxlQXJyYXmjP0EwV05TQXJyYXnSKyxDRF8QE05TS2V5UGF0aEV4cHJlc3Npb26kQ0UvMF8QFE5TRnVuY3Rpb25FeHByZXNzaW9u00cfC0hJSl8QD05TQ29uc3RhbnRWYWx1ZYAPEACAEF8QEmdlYnJ1aWtlci1jZW50cmFhbNIrLE1OXxAZTlNDb25zdGFudFZhbHVlRXhwcmVzc2lvbqNNLzDUC1BRUlNJKFRaTlNNb2RpZmllcldOU0ZsYWdzXk5TT3BlcmF0b3JUeXBlgBIQY9IrLFZXXxAVTlNJblByZWRpY2F0ZU9wZXJhdG9yo1ZYMF8QE05TUHJlZGljYXRlT3BlcmF0b3LSKyxaW18QFU5TQ29tcGFyaXNvblByZWRpY2F0ZaNaXDBbTlNQcmVkaWNhdGXSKyxBXqJBMNIrLGBhXxATTlNDb21wb3VuZFByZWRpY2F0ZaNgXDBfEA9OU0tleWVkQXJjaGl2ZXLRZGVUcm9vdIABAAgAEQAaACMALQAyADcAUABWAF0AdwCJAJAAkgCUAJYAmwCmAKgAqgCsALUAyQDcAPIA9AD2APgA+gEFAQ8BHgExAT0BPwFBAUMBRQFHAVQBWQFbAV0BYgFtAXYBiQGNAZoBowGoAaoBrAGuAbUBvwHBAcMBxQHTAdgB9wH7AgACDwITAhsCIAI2AjsCUgJZAmsCbQJvAnEChgKLAqcCqwK0Ar8CxwLWAtgC2gLfAvcC+wMRAxYDLgMyAz4DQwNGA0sDYQNlA3cDegN/AAAAAAAAAgEAAAAAAAAAZgAAAAAAAAAAAAAAAAAAA4E=",
 		"runOrder": 0,
@@ -3935,7 +4261,7 @@
 "projectSettings": {
 	"abortBuildOnError": 1,
 	"alwaysUseExternalServer": 1,
-	"animateCSSInjections": 1,
+	"animateCSSInjections": 0,
 	"autoBuildNewItems": 1,
 	"autoprefixerEnableIEGrid": 0,
 	"babel7PresetType": 1,
