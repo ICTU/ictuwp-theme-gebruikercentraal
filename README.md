@@ -9,9 +9,12 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-3.14.2 - Logo's voor rotterdammer centraal toegevoegd.
+3.15.2 - Event manager for conference, translations, bugfixes CSS menu.
 
 ## Version history
+* 3.15.2 - Event manager for conference, translations, bugfixes CSS menu.
+* 3.15.1 - Restyling main nav menu.
+* 3.14.4 - Styling voor fieldset en labels in booking form.
 * 3.14.2 - Logo's voor rotterdammer centraal toegevoegd.
 * 3.14.1 - Styling & functionaliteit voor formulieren op conference-website.
 * 3.13.8 - Set correct name and email address for system mail.

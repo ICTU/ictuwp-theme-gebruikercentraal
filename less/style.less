@@ -1,11 +1,12 @@
-@versie: '3.14.2';
+@versie: '3.15.2';
 /*!
-Theme Name: Gebruiker Centraal
-Description: Wordpress-theme voor gebruikercentraal.nl
-Author: Paul van Buuren - Tamara de Haas
-Author URI: https://wbvb.nl/
-Version: 3.14.2
-Version description: 3.14.2 - Logo's voor rotterdammer centraal toegevoegd.
+Theme Name:			Gebruiker Centraal
+Description:			Wordpress-theme voor gebruikercentraal.nl
+Author:				Paul van Buuren - Tamara de Haas
+Author URI:			https://wbvb.nl/
+Version:				3.15.2
+Version description:	3.15.2 - Event manager for conference, translations, bugfixes CSS menu.
+Link: 	    			https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 Template: genesis
 Template Version: 2.0.2
@@ -59,8 +60,8 @@ License URI: http://www.opensource.org/licenses/gpl-license.php
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.14.2
-// @desc.   Logo's voor rotterdammer centraal toegevoegd.
+// @version 3.15.2
+// @desc.   Event manager for conference, translations, bugfixes CSS menu.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -71,13 +72,12 @@ Imports
 @import "02-normalize.less";        // Baseline Normalize */
 @import "30-text-styles.less";      // font-styles, shared with admin editor-styles.less */
 @import "40-forms.less";            // styling for forms */
-@import "50-menu.less";             // styling for menus */
+@import "50-header-logo-menu.less";      // all styling for the header and the logo */
 @import "60-sidebar-widgets.less";  // sidebar widgets */
 @import "70-pagetypes.less";        // various page types etc */
 @import "80-structure.less";        // mediaqueries */
 @import "81-footers.less";          // footer thingies */
 @import "82-pagination.less";       // all pagination related stuff */
-@import "85-header-logo.less";      // all styling for the header and the logo */
 @import "90-printstyles.less";      // non screen / print only */
 @import "99-browserhacks.less";     // non screen / print only */
 
@@ -235,32 +235,10 @@ div, article, section, main {
   line-height: 1;
   min-height: 46px;
 
-  .wrap {
-    padding-left: @logowidth;
+	@media only screen and ( max-width: @break_show_menu_button ) {
+		margin-left: 1rem;
+	}
 
-    #zoeken {
-      float: right;
-      margin: 8px 0;
-      padding: 0;
-
-      input {
-        top: 0;
-        margin-top: 0;
-        padding: 0 4px;
-        height: 25px;
-        margin: 0;
-        
-        &[type="search"] {
-          min-width: 180px;
-        }
-
-        &[type="submit"] {
-          border-color: @breadcrumb_bg_color;
-        }
-      }
-    }
-  }
-  
   .breadlist {
     padding-top: @padding;
     float: left;
@@ -279,8 +257,9 @@ div, article, section, main {
   }
 
   &, a {
-    color: @wit;
+    color: @txt;
   }
+
   a {
     text-decoration: none;
     font-family: @bodyfont_bold;
@@ -441,30 +420,6 @@ Plugins
 
 
 
-/* Gravity Forms
---------------------------------------------- */
-
-div.gform_wrapper input[type="email"],
-div.gform_wrapper input[type="text"],
-div.gform_wrapper textarea,
-div.gform_wrapper .ginput_complex label {
-  .fontsize(16);
-  padding: @padding;
-}
-
-div.gform_wrapper .ginput_complex label {
-  padding: 0;
-}
-
-div.gform_wrapper li,
-div.gform_wrapper form li {
-  margin: @padding 0 0;
-}
-
-div.gform_wrapper .gform_footer input[type="submit"] {
-  .fontsize(14);
-}
-
 /* One All Social login
 --------------------------------------------- */
 body .sidebar .widget_oa_social_login .oneall_social_login {
@@ -488,7 +443,6 @@ body .sidebar .widget_oa_social_login .oneall_social_login {
 
 
 
-.site-title,
 .entry-title {
   a {
     color: @txt;
@@ -616,6 +570,20 @@ body .sidebar .widget_oa_social_login .oneall_social_login {
 
     }
 
+	//----------------------------------------------------------------------------
+  
+	@media only screen and ( max-width: @break_show_menu_button ) {
+		img.alignleft.size-medium,
+		img.alignright.size-medium {
+			max-width: 40%;
+			height: auto;
+	    }
+		
+    }
+
+	//----------------------------------------------------------------------------
+  
+
 }
 
 
@@ -658,12 +626,6 @@ body .sidebar .widget_oa_social_login .oneall_social_login {
 
 
 .comment_form_styling(); // from 40-forms.less
-
-/*
-Social login Widget
----------------------------------------------------------------------------------------------------- */
-.socialoginblock();
-
 
 /*
 Social media buttons
@@ -1008,7 +970,6 @@ Media Queries
   .sidebar-sidebar-content .content-sidebar-wrap,
   .site-header .widget-area,
   .site-inner,
-//  .title-area,
   .wrap {
     width: 100%;
   }
@@ -1051,7 +1012,6 @@ Media Queries
   .two-sixths,
   .two-thirds,
   .site-header .wrap,
-//  .site-header .wrap .title-area {
   {
     margin: 0;
     width: 100%;
@@ -1090,16 +1050,12 @@ Media Queries
           box-sizing: border-box;
         }
 
-
         section {
-
             max-width: ( ( @break_tablet / 2 ) -  @padding );
-//            max-width: 45%;
             border-radius: 3px;
             flex-grow: 1;
             margin-right: @padding;
             margin-bottom: @padding;
-
         }
         section:nth-child(2n+2) {
             margin-right: 0;
@@ -1155,8 +1111,6 @@ Media Queries
             border-bottom: 4px solid @light_gray;
             padding-bottom: @padding;
             margin-bottom: ( @padding );
-            ul.children {
-            }
         }
     }
 }
@@ -1193,8 +1147,46 @@ Media Queries
 
 .pagination();
 
-.mediaqueries();
-
 .printstyles();
 
 .browserhacks();
+
+/*
+==============================================================================================================
+*/
+
+@titlearea_width: 66px;
+@menubutton_width: 100px;
+
+@logo_plus_button: ( @titlearea_width + @menubutton_width );
+
+.menu-met-js {
+
+	padding-left: 1rem;
+
+	.title-area,
+	#zoeken,
+	.menu-button {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.title-area {
+		width: @titlearea_width;
+		padding-right: .5em;
+		overflow: hidden;
+		float: left;
+	}
+	.menu-button {
+		width: @menubutton_width;
+		float: right;
+	}
+	#zoeken {
+		width: ~"calc(99% - ( @{logo_plus_button} + 1rem ) )";
+	}
+}
+
+
+/*
+==============================================================================================================
+*/
+

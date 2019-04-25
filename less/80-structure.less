@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.13.7
-// @desc.   CSS bugs in manifest en site-header.
+// @version 3.15.1
+// @desc.   Restyling main nav menu.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -122,7 +122,6 @@
       .entry-content,
       .content {
         @media only screen and (min-width: @break_fullwidth ) {
-//          border: 1px solid red;
           min-height: 400px;
           &.manifest {
             min-height: intrinsic;
@@ -137,9 +136,6 @@
         padding-left: .5em;
         padding-right: .5em;
       }
-      article.entry {
-//        min-height: 400px;
-      }
       .widget {
         .entry {
           padding-left: 0;
@@ -147,14 +143,9 @@
         }
       }
     }
-//    }
   }
 
-  .full-width-content.search {
-    .content {
-//      min-height: inherit;
-    }
-  }
+
 
   .search {
     section a {
@@ -256,14 +247,6 @@
   
 }
 
-
-.mediaqueries() {
-
-  @media only screen and (min-width: @break_fullwidth ) {
-  
-  }
-
-}  
 
 
 

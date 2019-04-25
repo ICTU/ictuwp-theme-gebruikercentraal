@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.13.8
-// @desc.   Set correct name and email address for system mail.
+// @version 3.15.2
+// @desc.   Event manager for conference, translations, bugfixes CSS menu.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,10 +23,13 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.13.8' );
-define( 'CHILD_THEME_DESCRIPTION', "3.13.8 - Set correct name and email address for system mail." );
+define( 'CHILD_THEME_VERSION', '3.15.2' );
+define( 'CHILD_THEME_DESCRIPTION', "3.15.2 - Event manager for conference, translations, bugfixes CSS menu." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
+define( 'GC_TWITTER_URL', 'https://twitter.com/' );
+
+
 
 define( 'WP_THEME_DEBUG', false );
 //define( 'WP_THEME_DEBUG', true );
@@ -211,6 +214,7 @@ $genesis_js_no_js = new Genesis_Js_No_Js;
 $genesis_js_no_js->run();
 
 //========================================================================================================
+
 // custom post types, custom taxonomies, custom fields (ACF)
 require_once( GC_FOLDER . '/includes/custom-fields-and-post-types.php' );
 
@@ -275,12 +279,15 @@ add_theme_support( 'genesis-footer-widgets', 2 );
 //========================================================================================================
 
 //* Reposition the primary navigation menu
-remove_action( 'genesis_after_header', 'genesis_do_nav' );
-add_action( 'genesis_header', 'genesis_do_nav', 11 );
+//remove_action( 'genesis_after_header', 'genesis_do_nav' );
+//add_action( 'genesis_header', 'genesis_do_nav', 11 );
 
 //* Reposition the secondary navigation menu
-remove_action( 'genesis_after_header', 'genesis_do_subnav' );
-add_action( 'genesis_footer', 'genesis_do_subnav' );
+//remove_action( 'genesis_after_header', 'genesis_do_subnav' );
+//add_action( 'genesis_footer', 'genesis_do_subnav' );
+
+//* Only register primary menu ( = unregister secondary navigation menu)
+add_theme_support( 'genesis-menus', array( 'primary' => __( 'Hoofdmenu', 'gebruikercentraal' ) ) );
 
 //========================================================================================================
 // deactivate some site layout options
@@ -319,78 +326,53 @@ function allow_only_full_width_layout($opt) {
 
 //========================================================================================================
 
-//* Add class to .site-header
-//add_filter('genesis_attr_site-header', 'gc_add_attribute_role_banner');
-
-function gc_add_attribute_role_banner($attributes) {
-	$attributes['role'] .= 'banner';
-	return $attributes;
-}
-
-
-//* Add class to .site-heade
-//add_filter('genesis_attr_site-footer', 'gc_add_attribute_role_contentinfo');
-
-function gc_add_attribute_role_contentinfo($attributes) {
-	$attributes['role'] .= 'contentinfo';
-	return $attributes;
-}
-
-
-
-
-//========================================================================================================
-
 //* Reposition the breadcrumbs
-remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
-add_action( 'genesis_after_header', 'genesis_do_breadcrumbs' );
+//remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
+//add_action( 'genesis_after_header', 'genesis_do_breadcrumbs' );
 
 //* Modify breadcrumb arguments.
 add_filter( 'genesis_breadcrumb_args', 'gc_wbvb_breadcrumb_args' );
 
 function gc_wbvb_breadcrumb_args( $args ) {
 
-  $separator = '<span class="separator">&nbsp;</span>';
+	$separator = '<span class="separator">&nbsp;</span>';
 
-  $auteursoverzichtpagina_start = '';
+	$auteursoverzichtpagina_start = '';
 	$auteursoverzichtpagina_end   = $separator;
-	$showsearchform 							= true;
 
-  if ( function_exists( 'get_field' ) ) {
+	if ( function_exists( 'get_field' ) ) {
 
-    $showsearchform   						= get_field('toon_zoekformulier_in_het_menu', 'option');
+		if( get_field('auteursoverzichtpagina_link', 'option') ):
+			$auteursoverzichtpagina_url   = get_field('auteursoverzichtpagina_link', 'option');
+			$auteursoverzichtpagina_start = '<a href="' . $auteursoverzichtpagina_url . '">' ;
+			$auteursoverzichtpagina_end   = '</a>' . $separator;
+			$args['labels']['author']     = $auteursoverzichtpagina_start . __( "Authors", 'gebruikercentraal' ) . $auteursoverzichtpagina_end;
+		else:
+			$args['labels']['author']     = '';
+		endif;
 
-    if ( 'nee' == $showsearchform ) {
-      $showsearchform   					= false;
-    }
-    else {
-      $showsearchform   					= true;
-    }
-
-    if( get_field('auteursoverzichtpagina_link', 'option') ):
-      $auteursoverzichtpagina_url   = get_field('auteursoverzichtpagina_link', 'option');
-      $auteursoverzichtpagina_start = '<a href="' . $auteursoverzichtpagina_url . '">' ;
-      $auteursoverzichtpagina_end   = '</a>' . $separator;
-    	$args['labels']['author']     = $auteursoverzichtpagina_start . __( "Authors", 'gebruikercentraal' ) . $auteursoverzichtpagina_end;
-    else:
-    	$args['labels']['author']     = '';
-    endif;
-
-  }
-  else {
-    echo ACF_PLUGIN_NOT_ACTIVE_WARNING;
-  }
-
-	$args['home']                     = __( "Home", 'gebruikercentraal' );
-	$args['sep']                      = $separator;
-	$args['list_sep']                 = ', '; // Genesis 1.5 and later
-	$args['prefix']                   = '<div class="breadcrumb"><div class="wrap"><nav class="breadlist">';
-	if ( $showsearchform ) {
-		$args['suffix']                 = '</nav>' . get_search_form(false) . '</div></div>';
 	}
 	else {
-		$args['suffix']                 = '</nav></div></div>';
+		echo ACF_PLUGIN_NOT_ACTIVE_WARNING;
 	}
+
+	if ( is_home() || is_front_page() ) {
+		$args['home']            		= '';
+		$args['sep']                  = '';
+	}
+	else {
+		$args['home']                 = __( "Home", 'gebruikercentraal' );
+		$args['sep']                  = $separator;
+	}
+
+	$args['list_sep']                 = ', '; // Genesis 1.5 and later
+
+	$args['prefix']                   = '<div class="breadcrumb"><div class="wrap"><nav class="breadlist">';
+	$args['suffix']                	= '</nav></div></div>';
+
+//	$args['prefix']                   = '<nav class="breadlist">';
+//	$args['suffix']                	= '</nav>';
+
 	$args['heirarchial_attachments']  = true; // Genesis 1.5 and later
 	$args['heirarchial_categories']   = true; // Genesis 1.5 and later
 	$args['display']                  = true;
@@ -400,30 +382,20 @@ function gc_wbvb_breadcrumb_args( $args ) {
 	$args['labels']['date']           = __( "Date archive", 'gebruikercentraal' ) . $separator;
 	$args['labels']['search']         = __( "Search result", 'gebruikercentraal' ) . $separator;
 	$args['labels']['tax']            = '';
-  $args['labels']['post_type']      = '';
-
-  if ( isset( $wp_query->query_vars['taxonomy'] ) ) {
-
-    $tax = $wp_query->query_vars['taxonomy'];
-    $labels = get_taxonomy_labels( $tax );
-  	$args['labels']['tax']            = $labels->singular_name . $separator;
-
-  }
-  return $args;
-
-
-	$args['labels']['post_type']      = ''; //__( "Berichten", 'gebruikercentraal' );
+	$args['labels']['post_type']      = '';
 	$args['labels']['404']            = __( "Whoops", 'gebruikercentraal' );
 
+	if ( isset( $wp_query->query_vars['taxonomy'] ) ) {
 
-  return $args;
+		$tax = $wp_query->query_vars['taxonomy'];
+		$labels = get_taxonomy_labels( $tax );
+		$args['labels']['tax']            = $labels->singular_name . $separator;
+
+	}
+
+	return $args;
 
 }
-
-//========================================================================================================
-
-// logo structure shared with OD theme
-add_filter('genesis_seo_title', 'gc_shared_add_site_title_and_logo' );
 
 //========================================================================================================
 
@@ -434,9 +406,10 @@ function gc_wbvb_after_entry_content() {
 
     global $post;
 
-    if ( ! is_singular() ) {
-    	printf( '<div class="read-more"><a href="' . get_permalink() . '">%s%s%s', __( "Read: '", 'gebruikercentraal' ) , get_the_title(), "'</a></div>" );
-    }
+	if ( ! is_singular() ) {
+		printf( '<div class="read-more"><a href="' . get_permalink() . '">%s%s%s', __( "Read: '", 'gebruikercentraal' ) , get_the_title(), "'</a></div>" );
+	}
+
 }
 
 //========================================================================================================
@@ -592,9 +565,6 @@ function gc_wbvb_socialbuttons($post_info, $hidden = '') {
             <li><' . $thetag . ' class="linkedin" ' . $hrefattr . '="http://www.linkedin.com/shareArticle?mini=true&url=' . $thelink . '&title=' . $thetitle . '&summary=' . $summary . '&source=' . $sitetitle . '"' . $popup . '><span class="visuallyhidden">' . __('Deel op LinkedIn', 'gebruikercentraal') . '</span></' . $thetag . '></li>
             </ul>';
 
-//            <li><' . $thetag . ' class="googleplus" ' . $hrefattr . '="https://plus.google.com/share?url=' . $thelink . '&t=' . $thetitle . '"' . $popup . '><span>' . __('Deel op Google+', 'gebruikercentraal') . '</span></' . $thetag . '></li>
-
-
     }
 }
 
@@ -663,14 +633,17 @@ add_action( 'wp_enqueue_scripts', 'gc_wbvb_comment_form_script' );
 
 function gc_wbvb_comment_form_script() {
 
-  if ( ( is_page() || is_single() ) ) {
+//	if ( ( is_page() || is_single() ) ) {
+
+	if ( is_singular() && comments_open() ) {
+
     wp_enqueue_script( 'commentform', WBVB_THEMEFOLDER . '/js/commentform.js?v3', array( 'jquery' ), '', true );
 
     $protocol = isset( $_SERVER["HTTPS"] ) ? 'https://' : 'http://'; //This is used to set correct adress if secure protocol is used so ajax calls are working
     $params = array(
-      'ajax_url' => admin_url( 'admin-ajax.php', $protocol ),
-      'empty_email' => __( 'Voer een mailadres in alsjeblieft.', 'email-newsletter' ),
-      'saving' => __( 'Saving...', 'email-newsletter' )
+      'ajax_url'		=> admin_url( 'admin-ajax.php', $protocol ),
+      'empty_email'	=> __( 'Voer een mailadres in alsjeblieft.', 'gebruikercentraal' ),
+      'saving' 		=> __( 'Saving...', 'gebruikercentraal' )
     );
 
     wp_localize_script( 'commentform', 'email_newsletter_widget_scripts', $params );
@@ -705,7 +678,6 @@ if ( WP_DEBUG ) {
 
 //========================================================================================================
 
-
 /**
 * Add a link first thing after the body element that will skip to the inner element.
 */
@@ -714,16 +686,42 @@ add_action( 'genesis_before_header', 'gc_wbvb_add_skip_link' );
 
 function gc_wbvb_add_skip_link( ) {
 
-    echo sprintf(
-        '<ul id="%7$s"><li><a href="#%4$s">%1$s</a></li><li><a href="#%5$s">%2$s</a></li><li><a href="#%6$s">%3$s</a></li></ul>',
-        _x('Direct naar belangrijkste content', 'Skiplinks', 'gebruikercentraal'),
-        _x('Direct naar hoofdnavigatie', 'Skiplinks', 'gebruikercentraal'),
-        _x('Direct naar zoeken', 'Skiplinks', 'gebruikercentraal'),
-        ID_MAINCONTENT,
-        ID_MAINNAV,
-        ID_ZOEKEN,
-        ID_SKIPLINKS
-    );
+	$showsearchform			= true;
+	$acfshowsearchform		= get_field('site_option_show_search_in_header', 'option');
+	if ( 'nee' == $acfshowsearchform ) {
+		$showsearchform 		= false;
+	}
+
+	if ( ! $showsearchform ) {
+		echo sprintf(
+			'<ul id="%5$s">
+				<li><a href="#%3$s">%1$s</a></li>
+				<li><a href="#%4$s">%2$s</a></li>
+			</ul>',
+			_x('Direct naar belangrijkste content', 'Skiplinks', 'gebruikercentraal'),
+			_x('Direct naar hoofdnavigatie', 'Skiplinks', 'gebruikercentraal'),
+			ID_MAINCONTENT,
+			ID_MAINNAV,
+			ID_SKIPLINKS
+		);
+	}
+	else {
+		echo sprintf(
+			'<ul id="%7$s">
+				<li><a href="#%4$s">%1$s</a></li>
+				<li><a href="#%5$s">%2$s</a></li>
+				<li><a href="#%6$s">%3$s</a></li>
+			</ul>',
+			_x('Direct naar belangrijkste content', 'Skiplinks', 'gebruikercentraal'),
+			_x('Direct naar hoofdnavigatie', 'Skiplinks', 'gebruikercentraal'),
+			_x('Direct naar zoeken', 'Skiplinks', 'gebruikercentraal'),
+			ID_MAINCONTENT,
+			ID_MAINNAV,
+			ID_ZOEKEN,
+			ID_SKIPLINKS
+		);
+	}
+
 }
 
 //========================================================================================================
@@ -741,7 +739,7 @@ function gc_wbvb_check_actieteamlid() {
     if ( $author_id = get_query_var( 'author' ) ) { $author = get_user_by( 'id', $author_id ); }
 
 
-    if( have_rows('actieteamleden', 'option') ):
+    if ( have_rows('actieteamleden', 'option') ):
 
       while( have_rows('actieteamleden', 'option') ): the_row();
 
@@ -751,7 +749,7 @@ function gc_wbvb_check_actieteamlid() {
 
         if ( $author_id == $acf_userid ) {
 
-          if( function_exists( 'get_field' ) && get_field('actieteampagina_link', 'option') ) {
+          if ( function_exists( 'get_field' ) && get_field('actieteampagina_link', 'option') ) {
             $auteursoverzichtpagina_url   = get_field('actieteampagina_link', 'option');
             $auteursoverzichtpagina_start = '<a href="' . $auteursoverzichtpagina_url . '" class="cta">' ;
             $auteursoverzichtpagina_end   = '</a>';
@@ -893,31 +891,31 @@ function gc_wbvb_404() {
 //========================================================================================================
 
 if (! function_exists( 'dovardump' ) ) {
-  
+
   function dovardump( $data, $context = '', $echo = true ) {
-    
+
     if ( WP_DEBUG ) {
       $contextstring  = '';
       $startstring    = '<div class="debug-context-info">';
       $endtring       = '</div>';
-      
+
       if ( $context ) {
         error_log( 'context "' . $context . '"' );
-        $contextstring = '<p>Vardump ' . $context . '</p>';        
+        $contextstring = '<p>Vardump ' . $context . '</p>';
       }
-      
+
       if ( is_array( $data ) || is_object( $data ) ) {
         $theline = "array: " . print_r( $data, false );
       }
       else {
         $theline = $data;
       }
-      
+
       error_log( $theline );
-      
-      if ( $echo ) {      
+
+      if ( $echo ) {
         echo $startstring . '<hr>';
-        echo $contextstring;        
+        echo $contextstring;
         echo '<pre>';
         print_r($data);
         echo '</pre><hr>' . $endtring;
@@ -925,8 +923,8 @@ if (! function_exists( 'dovardump' ) ) {
       else {
         return '<hr>' . $contextstring . '<pre>' . print_r($data, true) . '</pre><hr>';
       }
-    }        
-  }        
+    }
+  }
 }
 
 //========================================================================================================
@@ -1275,7 +1273,7 @@ function gc_wbvb_add_blog_archive_css() {
 
 }
 
-
+//========================================================================================================
 
 function gc_wbvb_add_css() {
 
@@ -1284,62 +1282,58 @@ function gc_wbvb_add_css() {
 		WBVB_THEMEFOLDER . '/css/blanco.css'
 	);
 
-    $custom_css = '
+	$custom_css = '
+	ul#' . ID_SKIPLINKS . ', ul#' . ID_SKIPLINKS . ' li {
+		list-style-type: none;
+		list-style-image: none;
+		padding: 0;
+		margin: 0;
+	}
+	ul#' . ID_SKIPLINKS . ' li {
+		background: none;
+	}
+	#' . ID_SKIPLINKS . ' li a {
+		position: absolute;
+		top: -1000px;
+		left: 50px;
+	}
+	#' . ID_SKIPLINKS . ' li a:focus {
+		left: 6px;
+		top: 7px;
+		height: auto;
+		width: auto;
+		display: block;
+		font-size: 14px;
+		font-weight: 700;
+		padding: 15px 23px 14px;
+		background: #f1f1f1;
+		color: #21759b;
+		z-index: 100000;
+		line-height: normal;
+		text-decoration: none;
+		-webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+		box-shadow: 0 0 2px 2px rgba(0,0,0,.6)
+	}
+
+	#' . ID_MAINNAV . ':focus {
+		position: relative;
+		z-index: 100000;
+	}
+
+	#' . ID_MAINNAV . ' a:focus {
+		position: relative;
+		z-index: 100000;
+		color: #fff;
+	}
 
 
-ul#' . ID_SKIPLINKS . ', ul#' . ID_SKIPLINKS . ' li {
-    list-style-type: none;
-    list-style-image: none;
-    padding: 0;
-    margin: 0;
-}
-ul#' . ID_SKIPLINKS . ' li {
-    background: none;
-}
-#' . ID_SKIPLINKS . ' li a {
-    position: absolute;
-    top: -1000px;
-    left: 50px;
-}
-#' . ID_SKIPLINKS . ' li a:focus {
+	#' . ID_ZOEKEN . ':focus label {
+		position: relative;
+		left: 0;
+		top: 0;
+	}';
 
-
-    left: 6px;
-    top: 7px;
-    height: auto;
-    width: auto;
-    display: block;
-    font-size: 14px;
-    font-weight: 700;
-    padding: 15px 23px 14px;
-    background: #f1f1f1;
-    color: #21759b;
-    z-index: 100000;
-    line-height: normal;
-    text-decoration: none;
-    -webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
-    box-shadow: 0 0 2px 2px rgba(0,0,0,.6)
-}
-
-#' . ID_MAINNAV . ':focus {
-    position: relative;
-    z-index: 100000;
-}
-
-#' . ID_MAINNAV . ' a:focus {
-    position: relative;
-    z-index: 100000;
-/*    background: #006985; */
-    color: #fff;
-}
-
-
-#' . ID_ZOEKEN . ':focus label {
-    position: relative;
-    left: 0;
-    top: 0;
-}';
-    wp_add_inline_style( ID_SKIPLINKS, $custom_css );
+	wp_add_inline_style( ID_SKIPLINKS, $custom_css );
 
 }
 
@@ -1428,21 +1422,16 @@ genesis_register_sidebar(
     )
 );
 
+//========================================================================================================
 
 //* Customize the site footer
 add_action( 'genesis_footer', 'gc_wbvb_bg_custom_footer' );
+
 function gc_wbvb_bg_custom_footer() {
     gc_wbvb_write_widget_site_footer();
 }
 
 //========================================================================================================
-function gc_wbvb_home_append_to_header() {
-	echo '<div class="breadcrumb"><div class="wrap">' . get_search_form(false) . '</div></div>';
-}
-
-//========================================================================================================
-
-
 
 // LOGIN PAGE WIDGET for users not currently logged in
 function gc_wbvb_write_widget_home_widget_left() {
@@ -1450,6 +1439,8 @@ function gc_wbvb_write_widget_home_widget_left() {
         // do nothing
     }
 }
+
+//========================================================================================================
 
 genesis_register_sidebar(
     array(
@@ -1513,11 +1504,11 @@ function jive_attributes_st_container($attributes) {
 	setup_postdata($post);
 
     if ( function_exists( 'get_field' ) ) {
-      
+
       if ( is_page_template('page_home.php')  ) {
 
         $jaofnee = get_field('link_naar_manifest_toevoegen');
-    
+
         if ( 'ja' == $jaofnee ) {
           	$attributes['class'] .= ' home-with-manifest';
         	}
@@ -1536,7 +1527,7 @@ function gc_wbvb_home_manifest() {
 
 	global $post;
 	setup_postdata($post);
-	
+
   $leesmeer = '';
   $class    = 'entry';
 
@@ -1545,7 +1536,7 @@ function gc_wbvb_home_manifest() {
 
     if ( 'ja' == $jaofnee ) {
       $class = 'manifest entry';
-  
+
     		if ( get_field('lees-meer-link') && get_field('lees-meer-tekst') ) {
     			$leesmeer = '<a class="cta" href="' . get_field('lees-meer-link') . '">' . get_field('lees-meer-tekst') . '</a>';
     		}
@@ -1614,7 +1605,7 @@ endif;
 
 //========================================================================================================
 // options page
-if( function_exists('acf_add_options_page') ):
+if ( function_exists('acf_add_options_page') ):
 
 	$args = array(
 		'slug' => 'instellingen',
@@ -1628,7 +1619,7 @@ endif;
 
 //========================================================================================================
 
-function gc_wbvb_eventmanager_custom_formats( $array_in ){
+function gc_wbvb_eventmanager_custom_formats( $array_in ) {
 
   $my_formats = array();
 
@@ -1662,13 +1653,13 @@ add_filter('em_formats_filter', 'gc_wbvb_eventmanager_custom_formats', 1, 1);
 
 add_filter('em_event_output_placeholder','gc_wbvb_eventmanager_styles_placeholders',1,3);
 
-function gc_wbvb_eventmanager_styles_placeholders($replace, $EM_Event, $result){
+function gc_wbvb_eventmanager_styles_placeholders($replace, $EM_Event, $result) {
 	global $wp_query;
 	global $wp_rewrite;
 	global $EM_Event;
 
 
-	switch( $result ){
+	switch( $result ) {
 		case '#_EVENTEXCERPT':
 
       if ( $EM_Event->post_excerpt !== '') {
@@ -1733,7 +1724,7 @@ function gc_wbvb_clean_url( $url_to_clean ) {
 
     $url_to_clean_linktext = $url_to_clean;
 
-	if(substr($url_to_clean_linktext, -1) == '/') {
+	if (substr($url_to_clean_linktext, -1) == '/') {
 		$url_to_clean_linktext = substr($url_to_clean_linktext, 0, -1);
 	}
 
@@ -1747,12 +1738,12 @@ function gc_wbvb_clean_url( $url_to_clean ) {
 		$url_to_clean_linktext	=	$link_array[0];
 	}
 
-	if(substr(strtolower($url_to_clean_linktext), -4) == '.pdf') {
+	if (substr(strtolower($url_to_clean_linktext), -4) == '.pdf') {
 		$url_to_clean_linktext = substr($url_to_clean_linktext, 0, -4);
 		$url_to_clean_toevoeging = ' (PDF)';
 	}
 
-	if(substr(strtolower($url_to_clean_linktext), -5) == '.html') {
+	if (substr(strtolower($url_to_clean_linktext), -5) == '.html') {
 		$url_to_clean_linktext = substr($url_to_clean_linktext, 0, -5);
 	}
 
@@ -1776,7 +1767,7 @@ function gc_wbvb_event_get_programma() {
 
   if ( function_exists( 'have_rows' ) ) {
 
-    if( have_rows( 'programmaonderdelen' ) ) {
+    if ( have_rows( 'programmaonderdelen' ) ) {
 
       $return = '<div id="programma"><h2>' . _x('Programma', 'Kopje op evenementpagina', 'gebruikercentraal') . '</h2>';
       $return .= '<ul class="event-program">';
@@ -1838,7 +1829,7 @@ function gc_wbvb_post_get_downloads() {
 
   if ( function_exists( 'have_rows' ) ) {
 
-    if( have_rows( 'post_downloads_collection' ) ) {
+    if ( have_rows( 'post_downloads_collection' ) ) {
 
       $return = '<h2>' . _x('Downloads', 'Kopje op berichtpagina', 'gebruikercentraal') . '</h2>';
       $return .= '<ul class="link-list">';
@@ -1900,7 +1891,7 @@ function gc_wbvb_beelden_brieven_show_connected_files() {
 
     $posts = get_field('beelden_brieven_connectie');
 
-    if( $posts ) {
+    if ( $posts ) {
 
       $return = '<div class="connected-files for-' . get_post_type() . '"><h2>' . $titel . '</h2>';
       if ( $beschrijving ) {
@@ -1971,7 +1962,7 @@ function gc_wbvb_post_get_links() {
 
   if ( function_exists( 'have_rows' ) ) {
 
-    if( have_rows( 'event_post_links_collection' ) ) {
+    if ( have_rows( 'event_post_links_collection' ) ) {
 
       $return = '<h2>' . _x('Links', 'Kopje op bericht- of evenementpagina', 'gebruikercentraal') . '</h2>';
       $return .= '<ul class="link-list">';
@@ -2313,15 +2304,6 @@ function eo_prev_next_post_nav() {
 
 //========================================================================================================
 
-add_action( 'wp_enqueue_scripts', 'gc_shared_add_menu_script' );
-
-//========================================================================================================
-
-add_filter( 'genesis_attr_nav-primary', 'gc_shared_add_class_to_menu' );
-add_filter( 'genesis_attr_nav-secondary', 'gc_shared_add_class_to_menu' );
-
-//========================================================================================================
-
 add_filter( 'avatar_defaults', 'gc_wbvb_new_default_avatar' );
 
 function gc_wbvb_new_default_avatar ( $avatar_defaults ) {
@@ -2596,7 +2578,7 @@ function gc_wbvb_remove_empty_paragraphs($content) {
 
   $content = str_replace("<p></p>","",$content);
   return $content;
-  
+
 }
 
 add_filter('the_content', 'gc_wbvb_remove_empty_paragraphs', 99999 );
@@ -2629,6 +2611,65 @@ function gc_wbvb_filter_wp_mail_from_name( $original_email_from ) {
 add_filter( 'wp_mail_from', 'gc_wbvb_filter_wp_mail_from_email');
 
 add_filter( 'wp_mail_from_name', 'gc_wbvb_filter_wp_mail_from_name' );
+
+//========================================================================================================
+
+/**
+ * Wrap site title in span
+ * @author Bill Erickson
+ * @link http://www.billerickson.net/code/genesis-customize-site-title
+ *
+ * @param string $title full title
+ * @param string $inside text
+ * @param string $wrap html wrapper
+ * @return string full title
+ */
+
+//function gc_wbvb_customize_site_title($title, $inside, $wrap) {
+//	$custom = '<span>' . $title . '</span>'; // site-title
+//	return $custom;
+//}
+
+//add_filter('genesis_seo_title','gc_wbvb_customize_site_title', 10, 3);
+
+//genesis_site_title
+
+//========================================================================================================
+
+//genesis_site_title
+
+//genesis_site_description
+
+/**
+ * Add Site Description to Title 
+ *
+ */
+function gc_wbvb_customize_site_title( $title, $inside, $wrap ) {
+
+	$blogdescription	= get_bloginfo( 'description' );
+	$blogname			= get_bloginfo( 'name' );
+	if ( ! $blogname ) {
+		// een erreur van heb ik jou daar, Jetje
+		$blogname = 'Gebruiker Centraal';	
+	}
+	
+	
+	if ( $blogdescription ) {
+		$inside = '<a href="' . home_url() . '"><span class="site-title-description"><span class="blog-name">' . $blogname . '</span><br><span class="blog-description">' . $blogdescription . '</span></span></a>';
+	} else {
+		$inside = '<a href="' . home_url() . '" class="no-description"><span class="blog-name">' . $blogname . '</span></a>';
+	}
+	
+	//* Build the title
+	$title  = genesis_html5() ? sprintf( "<{$wrap} %s>", genesis_attr( 'site-title' ) ) : sprintf( '<%s id="title">%s</%s>', $wrap, $inside, $wrap );
+	$title .= genesis_html5() ? "{$inside}</{$wrap}>" : '';
+	return $title;	
+}
+
+add_filter( 'genesis_seo_title', 'gc_wbvb_customize_site_title', 10, 3 );
+
+//* Remove the site description
+remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
 
 //========================================================================================================
 
