@@ -24,7 +24,7 @@ add_action('customize_register','mytheme_customizer_options');
  *
  */
 function mytheme_customizer_options( $wp_customize ) {
-
+/*
   $wp_customize->add_setting(
       'mytheme_accent_color', //give it an ID
       array(
@@ -45,6 +45,7 @@ function mytheme_customizer_options( $wp_customize ) {
         'settings'  => 'mytheme_accent_color', //pick the setting it applies to
       )
     );
+*/
 
 /*
 

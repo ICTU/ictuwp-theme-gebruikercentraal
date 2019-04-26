@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gebruiker Centraal\n"
-"POT-Creation-Date: 2019-04-25 19:06+0200\n"
-"PO-Revision-Date: 2019-04-25 19:06+0200\n"
+"POT-Creation-Date: 2019-04-26 12:26+0200\n"
+"PO-Revision-Date: 2019-04-26 12:26+0200\n"
 "Last-Translator: Paul van Buuren <paul@wbvb.nl>\n"
 "Language-Team: Paul van Buuren <paul@wbvb.nl>\n"
 "Language: en_US\n"
@@ -30,90 +30,90 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: functions.php:290
+#: functions.php:295
 msgid "Main menu"
 msgstr ""
 
-#: functions.php:349
+#: functions.php:354
 msgid "Authors"
 msgstr ""
 
-#: functions.php:364
+#: functions.php:369
 msgid "Home"
 msgstr ""
 
-#: functions.php:381
+#: functions.php:386
 msgid "Label"
 msgstr ""
 
-#: functions.php:382
+#: functions.php:387
 msgid "Date archive"
 msgstr ""
 
-#: functions.php:383
+#: functions.php:388
 msgid "Search result"
 msgstr ""
 
-#: functions.php:386
+#: functions.php:391
 msgid "Whoops"
 msgstr ""
 
-#: functions.php:410
+#: functions.php:415
 msgid "Read: '"
 msgstr ""
 
-#: functions.php:472
+#: functions.php:477
 msgid "Author"
 msgstr ""
 
-#: functions.php:563
+#: functions.php:568
 msgid "Share on Twitter"
 msgstr ""
 
-#: functions.php:564
+#: functions.php:569
 msgid "Share on Facebook"
 msgstr ""
 
-#: functions.php:565
+#: functions.php:570
 msgid "Share on LinkedIn"
 msgstr ""
 
-#: functions.php:645
+#: functions.php:650
 msgid "Voer een mailadres in alsjeblieft."
 msgstr ""
 
-#: functions.php:646
+#: functions.php:651
 msgid "Saving..."
 msgstr ""
 
-#: functions.php:701 functions.php:715
+#: functions.php:706 functions.php:720
 msgctxt "Skiplinks"
-msgid "Direct naar belangrijkste content"
+msgid "Jump to main content"
 msgstr ""
 
-#: functions.php:702 functions.php:716
+#: functions.php:707 functions.php:721
 msgctxt "Skiplinks"
-msgid "Direct naar hoofdnavigatie"
+msgid "Jump to main navigation"
 msgstr ""
 
-#: functions.php:717
+#: functions.php:722
 msgctxt "Skiplinks"
-msgid "Direct naar zoeken"
+msgid "Jump to site search form"
 msgstr ""
 
-#: functions.php:764
+#: functions.php:769
 msgid "is lid van het actieteam"
 msgstr ""
 
-#: functions.php:768 widgets/gc-actieteam-widget.php:193
+#: functions.php:773 widgets/gc-actieteam-widget.php:193
 msgid "Alle actieteamleden"
 msgstr ""
 
-#: functions.php:796
+#: functions.php:801
 msgid "Not found, error 404"
 msgstr ""
 
-#: functions.php:807
+#: functions.php:812
 #, php-format
 msgid ""
 "The page you are looking for no longer exists. Perhaps you can return back "
@@ -121,121 +121,121 @@ msgid ""
 "are looking for. Or, you can try finding it by using the search form below."
 msgstr ""
 
-#: functions.php:853
+#: functions.php:858
 msgid "Pages:"
 msgstr ""
 
-#: functions.php:866
+#: functions.php:871
 #, php-format
-msgid "De laatste %s blog-artikelen"
-msgstr ""
-
-#: functions.php:873
-msgid "Onderwerpen:"
+msgid "The %s most recent posts"
 msgstr ""
 
 #: functions.php:878
-msgid "Auteurs:"
+msgid "Topics:"
 msgstr ""
 
-#: functions.php:1407
+#: functions.php:883
+msgid "Authors:"
+msgstr ""
+
+#: functions.php:1412
 msgid "Widget in de site footer"
 msgstr ""
 
-#: functions.php:1409
+#: functions.php:1414
 msgid "Ruimte voor widgets in de site footer. Hier bijvoorbeeld footerlinks."
 msgstr ""
 
-#: functions.php:1447
+#: functions.php:1452
 msgid "Home-widget links"
 msgstr ""
 
-#: functions.php:1449
+#: functions.php:1454
 msgid "Hier kun je de widgets plaatsen voor events en blogberichten"
 msgstr ""
 
-#: functions.php:1478
+#: functions.php:1483
 msgid "Home-widget rechts"
 msgstr ""
 
-#: functions.php:1480
+#: functions.php:1485
 msgid "Hier kun je de widgets plaatsen voor o.m. het actieteam"
 msgstr ""
 
-#: functions.php:1683
+#: functions.php:1688
 msgid "fully booked"
 msgstr ""
 
-#: functions.php:1772
+#: functions.php:1777
 msgctxt "Kopje op evenementpagina"
 msgid "Programme"
 msgstr ""
 
-#: functions.php:1834
+#: functions.php:1839
 msgctxt "Kopje op berichtpagina"
 msgid "Downloads"
 msgstr ""
 
-#: functions.php:1967
+#: functions.php:1972
 msgctxt "Kopje op bericht- of evenementpagina"
 msgid "Links"
 msgstr ""
 
-#: functions.php:2012
+#: functions.php:2017
 msgid "Comment navigation"
 msgstr ""
 
-#: functions.php:2015
+#: functions.php:2020
 msgid "Older Comments"
 msgstr ""
 
-#: functions.php:2019
+#: functions.php:2024
 msgid "Newer Comments"
 msgstr ""
 
-#: functions.php:2057
-msgid "Je reactie moet nog beoordeeld worden"
+#: functions.php:2062
+msgid "Your comment is held for moderation"
 msgstr ""
 
-#: functions.php:2064
+#: functions.php:2069
 #, php-format
-msgid "<cite class=\"fn\">%s</cite> <span class=\"says\">schreef:</span>"
+msgid "<cite class=\"fn\">%s</cite> <span class=\"says\">wrote:</span>"
 msgstr ""
 
 #. translators: 1: date, 2: time
-#: functions.php:2074
+#: functions.php:2079
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: functions.php:2074
+#: functions.php:2079
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:2272
-msgid "Ouder"
+#: functions.php:2277
+msgid "Older"
 msgstr ""
 
-#: functions.php:2283
-msgid "Nieuwer"
+#: functions.php:2288
+msgid "Newer"
 msgstr ""
 
-#: functions.php:2325 includes/author-box.php:236
+#: functions.php:2330 includes/author-box.php:236
 msgctxt "author box"
 msgid "LinkedIn page"
 msgstr ""
 
-#: functions.php:2326 includes/author-box.php:232
+#: functions.php:2331 includes/author-box.php:232
 msgctxt "author box"
 msgid "Personal website"
 msgstr ""
 
-#: functions.php:2436
-msgid "Vorige"
+#: functions.php:2439
+msgid "Previous"
 msgstr ""
 
-#: functions.php:2437
-msgid "Volgende"
+#: functions.php:2440
+msgid "Next"
 msgstr ""
 
 #: includes/author-box.php:124
@@ -264,7 +264,8 @@ msgid "Twitter account"
 msgstr ""
 
 #: includes/author-box.php:266
-msgid "Alle artikelen"
+msgctxt "author box"
+msgid "All posts"
 msgstr ""
 
 #: includes/common-functions.php:54
@@ -278,11 +279,12 @@ msgid "Search within this site"
 msgstr ""
 
 #: includes/common-functions.php:457
-msgid "Meer lezen"
+msgid "Read more"
 msgstr ""
 
 #: includes/common-functions.php:478
-msgid "Reacties"
+msgctxt "comment title"
+msgid "Comments"
 msgstr ""
 
 #: includes/common-functions.php:500
@@ -350,19 +352,15 @@ msgctxt "label zoekknop"
 msgid "Zoeken"
 msgstr ""
 
-#: includes/customizer.php:44
-msgid "gc_wbvb_logoimage Label"
-msgstr ""
-
-#: includes/customizer.php:93
+#: includes/customizer.php:94
 msgid "Visible Section Name"
 msgstr ""
 
-#: includes/customizer.php:101
+#: includes/customizer.php:102
 msgid "Le footer"
 msgstr ""
 
-#: includes/customizer.php:127
+#: includes/customizer.php:128
 msgid "gc_wbvb_customlogo Label"
 msgstr ""
 
@@ -1212,30 +1210,30 @@ msgid "Location not found"
 msgstr ""
 
 #: plugins/events-manager/placeholders/attendeeslist.php:59
-#: plugins/events-manager/placeholders/attendeeslist.php:88
+#: plugins/events-manager/placeholders/attendeeslist.php:86
 msgid "LinkedIn-profiel"
 msgstr ""
 
 #: plugins/events-manager/placeholders/attendeeslist.php:63
-#: plugins/events-manager/placeholders/attendeeslist.php:92
+#: plugins/events-manager/placeholders/attendeeslist.php:90
 msgid "Twitter-account"
 msgstr ""
 
-#: plugins/events-manager/placeholders/attendeeslist.php:116
+#: plugins/events-manager/placeholders/attendeeslist.php:114
 #, php-format
 msgid "%s attendee"
 msgid_plural "%s attendees"
 msgstr[0] ""
 msgstr[1] ""
 
-#: plugins/events-manager/placeholders/attendeeslist.php:120
+#: plugins/events-manager/placeholders/attendeeslist.php:118
 #, php-format
 msgid "%s attendee not shown"
 msgid_plural "%s attendees not shown"
 msgstr[0] ""
 msgstr[1] ""
 
-#: plugins/events-manager/placeholders/attendeeslist.php:124
+#: plugins/events-manager/placeholders/attendeeslist.php:122
 msgid "Other attendees"
 msgstr ""
 

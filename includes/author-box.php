@@ -263,7 +263,7 @@ function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = 
         <p>' . $dl;
         if ( !is_author() ) {
           if ( $user_post_count > 0 ) {
-            $output .= '<a href="' . get_author_posts_url( $userid ) . '" class="author-archive more" title="' . __('Alle artikelen', 'gebruikercentraal' ) . ' van ' . $gebruikersnaam . '"><span class="visuallyhidden">' . __('Alle artikelen', 'gebruikercentraal' ) . ' van ' . $gebruikersnaam . '</span></a>';
+            $output .= '<a href="' . get_author_posts_url( $userid ) . '" class="author-archive more" title="' . _x('All posts', 'author box', 'gebruikercentraal' ) . ' van ' . $gebruikersnaam . '"><span class="visuallyhidden">' . _x('All posts', 'author box', 'gebruikercentraal' ) . ' van ' . $gebruikersnaam . '</span></a>';
           }
         }
 

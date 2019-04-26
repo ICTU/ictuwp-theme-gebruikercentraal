@@ -703,8 +703,8 @@ function gc_wbvb_add_skip_link( ) {
 				<li><a href="#%3$s">%1$s</a></li>
 				<li><a href="#%4$s">%2$s</a></li>
 			</ul>',
-			_x('Direct naar belangrijkste content', 'Skiplinks', 'gebruikercentraal'),
-			_x('Direct naar hoofdnavigatie', 'Skiplinks', 'gebruikercentraal'),
+			_x('Jump to main content', 'Skiplinks', 'gebruikercentraal'),
+			_x('Jump to main navigation', 'Skiplinks', 'gebruikercentraal'),
 			ID_MAINCONTENT,
 			ID_MAINNAV,
 			ID_SKIPLINKS
@@ -717,9 +717,9 @@ function gc_wbvb_add_skip_link( ) {
 				<li><a href="#%5$s">%2$s</a></li>
 				<li><a href="#%6$s">%3$s</a></li>
 			</ul>',
-			_x('Direct naar belangrijkste content', 'Skiplinks', 'gebruikercentraal'),
-			_x('Direct naar hoofdnavigatie', 'Skiplinks', 'gebruikercentraal'),
-			_x('Direct naar zoeken', 'Skiplinks', 'gebruikercentraal'),
+			_x('Jump to main content', 'Skiplinks', 'gebruikercentraal'),
+			_x('Jump to main navigation', 'Skiplinks', 'gebruikercentraal'),
+			_x('Jump to site search form', 'Skiplinks', 'gebruikercentraal'),
 			ID_MAINCONTENT,
 			ID_MAINNAV,
 			ID_ZOEKEN,
@@ -868,19 +868,19 @@ function gc_wbvb_404() {
 
           if ( $count_posts->publish > 1 ) {
 
-            echo '<h2>' . sprintf( __( 'De laatste %s blog-artikelen', 'gebruikercentraal' ), $maxnr ) . '</h2>';
+            echo '<h2>' . sprintf( __( 'The %s most recent posts', 'gebruikercentraal' ), $maxnr ) . '</h2>';
 
             ?>
           	<ul>
           		<?php wp_get_archives(  array( 'type' => 'postbypost', 'limit' => $maxnr  ) ); ?>
           	</ul>
 
-          	<h2><?php _e( 'Onderwerpen:', 'gebruikercentraal' ); ?></h2>
+          	<h2><?php _e( 'Topics:', 'gebruikercentraal' ); ?></h2>
           	<ul>
           		<?php wp_list_categories( 'sort_column=name&title_li=' ); ?>
           	</ul>
 
-          	<h2><?php _e( 'Auteurs:', 'gebruikercentraal' ); ?></h2>
+          	<h2><?php _e( 'Authors:', 'gebruikercentraal' ); ?></h2>
           	<ul>
           		<?php wp_list_authors( 'exclude_admin=0&optioncount=0' ); ?>
           	</ul>
@@ -2059,14 +2059,14 @@ function gc_wbvb_comment_item($comment, $args, $depth) {
     <?php endif; ?>
 
     <?php if ( $comment->comment_approved == '0' ) : ?>
-         <em class="comment-awaiting-moderation"><?php _e( 'Je reactie moet nog beoordeeld worden', 'gebruikercentraal' ); ?></em>
+         <em class="comment-awaiting-moderation"><?php _e( 'Your comment is held for moderation', 'gebruikercentraal' ); ?></em>
           <br />
     <?php endif; ?>
 
 
     <div class="comment-author vcard">
         <?php if ( $args['avatar_size'] != 0 ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
-        <?php printf( __( '<cite class="fn">%s</cite> <span class="says">schreef:</span>' ), get_comment_author_link() ); ?>
+        <?php printf( __( '<cite class="fn">%s</cite> <span class="says">wrote:</span>' ), get_comment_author_link() ); ?>
     </div>
 
     <div class="comment-content">
@@ -2274,7 +2274,7 @@ add_filter ( 'genesis_next_link_text' , 'gc_wbvb_paging_next' );
 
 function gc_wbvb_paging_next ( $text ) {
 	if ( is_category() ) {
-	    return '<span>' . __( "Ouder", 'gebruikercentraal' ) . '</span>';
+	    return '<span>' . __( "Older", 'gebruikercentraal' ) . '</span>';
     }
     else {
 	    return $text;
@@ -2285,7 +2285,7 @@ add_filter ( 'genesis_prev_link_text' , 'gc_wbvb_paging_previous' );
 
 function gc_wbvb_paging_previous ( $text ) {
 	if ( is_category() ) {
-	    return '<span>' . __( "Nieuwer", 'gebruikercentraal' ) . '</span>';
+	    return '<span>' . __( "Newer", 'gebruikercentraal' ) . '</span>';
     }
     else {
 	    return $text;
@@ -2436,10 +2436,8 @@ add_action( 'genesis_after_endwhile', 'wbvb_modernista_prev_next_post_nav' );
 function wbvb_modernista_prev_next_post_nav() {
 
 	$label 			= get_post_type();
-//	$labelprev	= __( 'Vorige', 'genesis' ) . ' ' . $label;
-//	$labelnext	= __( 'Nieuwere', 'genesis' ) . ' ' . $label;
-	$labelprev	= __( 'Vorige', 'genesis' );
-	$labelnext	= __( 'Volgende', 'genesis' );
+	$labelprev	= __( 'Previous', 'genesis' );
+	$labelnext	= __( 'Next', 'genesis' );
 
 	$prev_link = get_previous_posts_link( apply_filters( 'genesis_prev_link_text', $labelprev ) );
 	$next_link = get_next_posts_link( apply_filters( 'genesis_next_link_text', $labelnext ) );

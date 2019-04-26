@@ -13,6 +13,7 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 
 ## Version history
 * 3.15.4 - Bugfixes, CSS.
+* 3.15.3 - Translation improved (most string now originally in English)
 * 3.15.2 - Event manager for conference, translations, bugfixes CSS menu.
 * 3.15.1 - Restyling main nav menu.
 * 3.14.4 - Styling voor fieldset en labels in booking form.

@@ -454,7 +454,7 @@ function gc_wbvb_related_content( $thepost ) {
                 echo  wpautop( $samenvatting );
             }
             ?>
-            <div class="read-more"><span><?php echo __( "Meer lezen", 'gebruikercentraal' ) ?></span></div>
+            <div class="read-more"><span><?php echo __( "Read more", 'gebruikercentraal' ) ?></span></div>
         </a>
     </section>
 
@@ -475,7 +475,7 @@ add_filter('comment_form_default_fields','remove_comment_fields');
 
 add_filter( 'genesis_title_comments', 'sp_genesis_title_comments' );
 function sp_genesis_title_comments() {
-  $title = '<h2>' . __('Reacties','gebruikercentraal') . '</h2>';
+  $title = '<h2>' . _x('Comments','comment title', 'gebruikercentraal') . '</h2>';
   return $title;
 }
 //========================================================================================================
