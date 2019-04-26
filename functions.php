@@ -154,6 +154,11 @@ if ( ! defined( 'ICTU_GC_CT_ONDERWERP_TIP' ) ) {
   define( 'ICTU_GC_CT_ONDERWERP_TIP', 'onderwerpen' );  // tax for custom cpt do's & dont's
 }
 
+if ( ! defined( 'EMP_FORMS_TEXTAREA_SIZE' ) ) {
+  define( 'EMP_FORMS_TEXTAREA_SIZE', '4,20' ); // four rows, 20 columns
+}
+
+
 
 
 define( 'ACF_PLUGIN_NOT_ACTIVE_WARNING', '<p style="position: absolute; top: 3em; left: 3em; display: block; padding: .5em; background: yellow; color: black;">de ACF custom fields plugin is niet actief.</p>' );

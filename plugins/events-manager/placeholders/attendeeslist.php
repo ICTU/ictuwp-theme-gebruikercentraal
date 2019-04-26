@@ -58,7 +58,7 @@
 						if (!filter_var( $boookinginfo['linkedin_profile'] , FILTER_VALIDATE_URL) === false) {
 							$socialmedia .= '<li><a href="' . $boookinginfo['linkedin_profile'] . '" class="linkedin" title="' . __('LinkedIn-profiel', 'gebruikercentraal' ) . ' van ' . esc_html( $EM_Booking->get_person()->get_name() ) . '"><span class="visuallyhidden">' . __('LinkedIn-profiel', 'gebruikercentraal' ) . '</span></a></li>';
 						}						
-					}title
+					}
 					if ( $boookinginfo['twitter_handle'] ) {
 						$socialmedia .= '<li><a href="' . GC_TWITTER_URL . sanitize_title( $boookinginfo['twitter_handle'] ) . '" class="twitter" title="' . __( 'Twitter-account', 'gebruikercentraal' ) . ' van ' . esc_html( $EM_Booking->get_person()->get_name() ) . '"><span class="visuallyhidden">' . __( 'Twitter-account', 'gebruikercentraal' ) . '</span></a></li>';
 					}
@@ -85,7 +85,7 @@
 						if (!filter_var( $boookinginfo['linkedin_profile'] , FILTER_VALIDATE_URL) === false) {
 							$socialmedia .= '<li><a href="' . $boookinginfo['linkedin_profile'] . '" class="linkedin" title="' . __('LinkedIn-profiel', 'gebruikercentraal' ) . ' van ' . esc_html( $EM_Booking->get_person()->get_name() ) . '"><span class="visuallyhidden">' . __('LinkedIn-profiel', 'gebruikercentraal' ) . '</span></a></li>';
 						}						
-					}title
+					}
 					if ( $boookinginfo['twitter_handle'] ) {
 						$socialmedia .= '<li><a href="' . GC_TWITTER_URL . sanitize_title( $boookinginfo['twitter_handle'] ) . '" class="twitter" title="' . __( 'Twitter-account', 'gebruikercentraal' ) . ' van ' . esc_html( $EM_Booking->get_person()->get_name() ) . '"><span class="visuallyhidden">' . __( 'Twitter-account', 'gebruikercentraal' ) . '</span></a></li>';
 					}
@@ -118,11 +118,13 @@
 	    $attendeecounter .= ' (' . sprintf( _n( '%s attendee not shown', '%s attendees not shown', $nr_anon_bookings, 'gebruikercentraal' ), $nr_anon_bookings ) . ')';
     }
 
-    echo '<div class="attendees-list">';
+    echo '<div class="attendees-list" id="attendeeslist">';
     echo '<h2>' . __( 'Other attendees', 'gebruikercentraal' ) . '<span class="event-aanmeldingen">' . $attendeecounter .'</span></h2>';
     echo '<ul class="event-attendees">';
 	foreach( $nonanon_userlist as $name) {
-		echo '<li><span>'. $name .'</span></li>';
+		if ( $name ) {
+			echo '<li><span>'. $name .'</span></li>';
+		}
 	}
     echo '</ul>';
     echo '</div>';
