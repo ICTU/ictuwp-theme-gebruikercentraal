@@ -51,16 +51,16 @@
 					$name = $EM_Booking->get_person()->get_name();
 					
 					if ( $boookinginfo['organisation'] ) {
-						$name .= ' (' . $boookinginfo['organisation'] . ')';	
+						$name .= ' (' . esc_html( $boookinginfo['organisation'] ) . ')';	
 					}
 
 					if ( $boookinginfo['linkedin_profile'] ) {
 						if (!filter_var( $boookinginfo['linkedin_profile'] , FILTER_VALIDATE_URL) === false) {
-							$socialmedia .= '<li><a href="' . $boookinginfo['linkedin_profile'] . '" class="linkedin" title="' . __('LinkedIn-profiel', 'gebruikercentraal' ) . ' van ' . $EM_Booking->get_person()->get_name() . '"><span class="visuallyhidden">' . __('LinkedIn-profiel', 'gebruikercentraal' ) . '</span></a></li>';
+							$socialmedia .= '<li><a href="' . $boookinginfo['linkedin_profile'] . '" class="linkedin" title="' . __('LinkedIn-profiel', 'gebruikercentraal' ) . ' van ' . esc_html( $EM_Booking->get_person()->get_name() ) . '"><span class="visuallyhidden">' . __('LinkedIn-profiel', 'gebruikercentraal' ) . '</span></a></li>';
 						}						
-					}
+					}title
 					if ( $boookinginfo['twitter_handle'] ) {
-						$socialmedia .= '<li><a href="' . GC_TWITTER_URL . '/' . $boookinginfo['twitter_handle'] . '" class="twitter" title="' . __( 'Twitter-account', 'gebruikercentraal' ) . ' van ' . $EM_Booking->get_person()->get_name() . '"><span class="visuallyhidden">' . __( 'Twitter-account', 'gebruikercentraal' ) . '</span></a></li>';
+						$socialmedia .= '<li><a href="' . GC_TWITTER_URL . sanitize_title( $boookinginfo['twitter_handle'] ) . '" class="twitter" title="' . __( 'Twitter-account', 'gebruikercentraal' ) . ' van ' . esc_html( $EM_Booking->get_person()->get_name() ) . '"><span class="visuallyhidden">' . __( 'Twitter-account', 'gebruikercentraal' ) . '</span></a></li>';
 					}
 
 				    if ( $socialmedia ) {
@@ -76,20 +76,18 @@
 			}
 			else {
 				if ( ! in_array( $EM_Booking->get_person()->ID, $people ) ) {
-//					$nonanon_userlist[] = $EM_Booking->get_person()->get_name();
-
 
 					if ( $boookinginfo['organisation'] ) {
-						$name .= ' (' . $boookinginfo['organisation'] . ')';	
+						$name .= ' (' . esc_html( $boookinginfo['organisation'] ) . ')';	
 					}
 
 					if ( $boookinginfo['linkedin_profile'] ) {
 						if (!filter_var( $boookinginfo['linkedin_profile'] , FILTER_VALIDATE_URL) === false) {
-							$socialmedia .= '<li><a href="' . $boookinginfo['linkedin_profile'] . '" class="linkedin" title="' . __('LinkedIn-profiel', 'gebruikercentraal' ) . ' van ' . $EM_Booking->get_person()->get_name() . '"><span class="visuallyhidden">' . __('LinkedIn-profiel', 'gebruikercentraal' ) . '</span></a></li>';
+							$socialmedia .= '<li><a href="' . $boookinginfo['linkedin_profile'] . '" class="linkedin" title="' . __('LinkedIn-profiel', 'gebruikercentraal' ) . ' van ' . esc_html( $EM_Booking->get_person()->get_name() ) . '"><span class="visuallyhidden">' . __('LinkedIn-profiel', 'gebruikercentraal' ) . '</span></a></li>';
 						}						
-					}
+					}title
 					if ( $boookinginfo['twitter_handle'] ) {
-						$socialmedia .= '<li><a href="' . GC_TWITTER_URL . '/' . $boookinginfo['twitter_handle'] . '" class="twitter" title="' . __( 'Twitter-account', 'gebruikercentraal' ) . ' van ' . $EM_Booking->get_person()->get_name() . '"><span class="visuallyhidden">' . __( 'Twitter-account', 'gebruikercentraal' ) . '</span></a></li>';
+						$socialmedia .= '<li><a href="' . GC_TWITTER_URL . sanitize_title( $boookinginfo['twitter_handle'] ) . '" class="twitter" title="' . __( 'Twitter-account', 'gebruikercentraal' ) . ' van ' . esc_html( $EM_Booking->get_person()->get_name() ) . '"><span class="visuallyhidden">' . __( 'Twitter-account', 'gebruikercentraal' ) . '</span></a></li>';
 					}
 
 				    if ( $socialmedia ) {
