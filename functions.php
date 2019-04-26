@@ -2641,7 +2641,7 @@ add_filter( 'wp_mail_from_name', 'gc_wbvb_filter_wp_mail_from_name' );
 //genesis_site_description
 
 /**
- * Add Site Description to Title 
+ * Add Site Description to Title
  *
  */
 function gc_wbvb_customize_site_title( $title, $inside, $wrap ) {
@@ -2650,20 +2650,20 @@ function gc_wbvb_customize_site_title( $title, $inside, $wrap ) {
 	$blogname			= get_bloginfo( 'name' );
 	if ( ! $blogname ) {
 		// een erreur van heb ik jou daar, Jetje
-		$blogname = 'Gebruiker Centraal';	
+		$blogname = 'Gebruiker Centraal';
 	}
-	
-	
+
+
 	if ( $blogdescription ) {
 		$inside = '<a href="' . home_url() . '"><span class="site-title-description"><span class="blog-name">' . $blogname . '</span><br><span class="blog-description">' . $blogdescription . '</span></span></a>';
 	} else {
 		$inside = '<a href="' . home_url() . '" class="no-description"><span class="blog-name">' . $blogname . '</span></a>';
 	}
-	
+
 	//* Build the title
 	$title  = genesis_html5() ? sprintf( "<{$wrap} %s>", genesis_attr( 'site-title' ) ) : sprintf( '<%s id="title">%s</%s>', $wrap, $inside, $wrap );
 	$title .= genesis_html5() ? "{$inside}</{$wrap}>" : '';
-	return $title;	
+	return $title;
 }
 
 add_filter( 'genesis_seo_title', 'gc_wbvb_customize_site_title', 10, 3 );
@@ -2672,4 +2672,3 @@ add_filter( 'genesis_seo_title', 'gc_wbvb_customize_site_title', 10, 3 );
 remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
 
 //========================================================================================================
-

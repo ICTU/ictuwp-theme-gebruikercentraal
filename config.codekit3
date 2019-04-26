@@ -2124,12 +2124,12 @@
 		},
 	"/images/logos/logo-gebruikercentraal.png": {
 		"ft": 32768,
-		"iS": 26174,
+		"iS": 6573,
 		"oA": 0,
 		"oAP": "/images/logos/logo-gebruikercentraal.png",
 		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
+		"oIPL": 0,
+		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
@@ -2145,7 +2145,7 @@
 		},
 	"/images/logos/logo-inclusie.png": {
 		"ft": 32768,
-		"iS": 37629,
+		"iS": 8425,
 		"oA": 0,
 		"oAP": "/images/logos/logo-inclusie.png",
 		"oF": 0,
@@ -2166,7 +2166,7 @@
 		},
 	"/images/logos/logo-rotterdammercentraal.png": {
 		"ft": 32768,
-		"iS": 37750,
+		"iS": 9360,
 		"oA": 0,
 		"oAP": "/images/logos/logo-rotterdammercentraal.png",
 		"oF": 0,
