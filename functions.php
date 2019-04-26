@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.3
-// @desc.   Translation improved (most string now originally in English)
+// @version 3.15.5
+// @desc.   Bugfixes: attendeelist, mobile header, CSS.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.15.3' );
-define( 'CHILD_THEME_DESCRIPTION', "3.15.3 - Translation improved (most string now originally in English)" );
+define( 'CHILD_THEME_VERSION', '3.15.5' );
+define( 'CHILD_THEME_DESCRIPTION', "3.15.5 - Bugfixes: attendeelist, mobile header, CSS." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -550,6 +550,13 @@ function gc_wbvb_socialbuttons($post_info, $hidden = '') {
     $sitetitle  = urlencode(get_bloginfo('name'));
     $summary    = urlencode($post_info->post_excerpt);
     $comment    = '';
+    
+    $twitteraccount = GC_TWITTERACCOUNT;
+
+	if ( 'conference.gebruikercentraal.co.uk' == $_SERVER["HTTP_HOST"] || 'accept.conference.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] || 'conference.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] ) {
+	    $twitteraccount = 'govdesignconf';
+	} else {
+	}
 
     if ( $hidden ) {
         $comment    = '<!-- ey, we hoeven maar 1 werkende set sokmetknoppen te gebruiken ja? dit hiero is versiering -->';
@@ -565,7 +572,7 @@ function gc_wbvb_socialbuttons($post_info, $hidden = '') {
 
     if ( $thelink ) {
         return $comment . '<ul class="social-media share-buttons">
-            <li><' . $thetag . ' ' . $hrefattr . '="https://twitter.com/share?url=' . $thelink . '&via=' . GC_TWITTERACCOUNT . '&text=' . $thetitle . '" class="twitter" data-url="' . $thelink . '" data-text="' . $thetitle . '" data-via="' . GC_TWITTERACCOUNT . '"' . $popup . '><span class="visuallyhidden">' . __('Share on Twitter', 'gebruikercentraal') . '</span></' . $thetag . '></li>
+            <li><' . $thetag . ' ' . $hrefattr . '="https://twitter.com/share?url=' . $thelink . '&via=' . $twitteraccount . '&text=' . $thetitle . '" class="twitter" data-url="' . $thelink . '" data-text="' . $thetitle . '" data-via="' . $twitteraccount . '"' . $popup . '><span class="visuallyhidden">' . __('Share on Twitter', 'gebruikercentraal') . '</span></' . $thetag . '></li>
             <li><' . $thetag . ' class="facebook" ' . $hrefattr . '="https://www.facebook.com/sharer/sharer.php?u=' . $thelink . '&t=' . $thetitle . '"' . $popup . '><span class="visuallyhidden">' . __('Share on Facebook', 'gebruikercentraal') . '</span></' . $thetag . '></li>
             <li><' . $thetag . ' class="linkedin" ' . $hrefattr . '="http://www.linkedin.com/shareArticle?mini=true&url=' . $thelink . '&title=' . $thetitle . '&summary=' . $summary . '&source=' . $sitetitle . '"' . $popup . '><span class="visuallyhidden">' . __('Share on LinkedIn', 'gebruikercentraal') . '</span></' . $thetag . '></li>
             </ul>';
@@ -2657,11 +2664,12 @@ function gc_wbvb_customize_site_title( $title, $inside, $wrap ) {
 	}
 
 
+	$inside = '<a href="' . home_url() . '"><span class="site-title-description"><span class="blog-name">' . $blogname . '</span>';
 	if ( $blogdescription ) {
-		$inside = '<a href="' . home_url() . '"><span class="site-title-description"><span class="blog-name">' . $blogname . '</span><br><span class="blog-description">' . $blogdescription . '</span></span></a>';
-	} else {
-		$inside = '<a href="' . home_url() . '" class="no-description"><span class="blog-name">' . $blogname . '</span></a>';
+		$inside .= '<br><span class="blog-description">' . $blogdescription . '</span>';
 	}
+	$inside .= '</span></a>';
+		
 
 	//* Build the title
 	$title  = genesis_html5() ? sprintf( "<{$wrap} %s>", genesis_attr( 'site-title' ) ) : sprintf( '<%s id="title">%s</%s>', $wrap, $inside, $wrap );

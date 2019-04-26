@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.2
-// @desc.   Event manager for conference, translations, bugfixes CSS menu.
+// @version 3.15.5
+// @desc.   Bugfixes: attendeelist, mobile header, CSS.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 //========================================================================================================
@@ -160,6 +160,7 @@ margin-top: .5rem;
     }
 
 	@media only screen and ( max-width: @break_show_menu_button ) {
+		.blog-name,
 		.site-title-description {
 			.visuallyhidden();
 		}
@@ -553,7 +554,22 @@ margin-top: .5rem;
 						
 					}
 				}
-	
+
+				&.current-page-ancestor,
+				&.current-menu-ancestor,
+				&.current-menu-parent,
+				&.current-page-parent,
+				&.current_page_parent,
+				&.current_page_ancestor {
+					& > a {
+						border-color: @groen_1;
+					}	
+				}
+				
+				a[aria-current="page"] {
+					border-color: @groen_1;
+				}
+
 				&.menu-item-has-children {
 					
 					span[itemprop="name"] {

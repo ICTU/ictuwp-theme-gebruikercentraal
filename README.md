@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-3.15.4 - Bugfixes, CSS.
+3.15.5 - Bugfixes: attendeelist, mobile header, CSS.
 
 ## Version history
+* 3.15.5 - Bugfixes: attendeelist, mobile header, CSS.
 * 3.15.4 - Bugfixes, CSS.
 * 3.15.3 - Translation improved (most string now originally in English)
 * 3.15.2 - Event manager for conference, translations, bugfixes CSS menu.

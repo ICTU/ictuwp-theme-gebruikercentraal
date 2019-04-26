@@ -8,8 +8,8 @@
 // @@package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.2
-// @desc.   Event manager for conference, translations, bugfixes CSS menu.
+// @version 3.15.5
+// @desc.   Bugfixes: attendeelist, mobile header, CSS.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 // */
 
@@ -48,8 +48,21 @@
 				if ( $EM_Booking->get_person()->get_name() && $boookinginfo['show_name_attendeelist'] ) {
 
 					$socialmedia = '';
-					$name = $EM_Booking->get_person()->get_name();
-					
+
+					if ( $EM_Booking->get_person()->get_name() ) {
+						$name = $EM_Booking->get_person()->get_name();
+					} else {
+						$user_id	= $EM_Booking->get_person()->ID;
+						$user_info	= get_userdata( $user_id );
+						if ( $user_info->display_name ) {
+							$name = $user_info->display_name;
+						} elseif ( $user_info->user_nicename ) {
+							$name = $user_info->user_nicename;
+						} elseif ( $user_info->first_name || $user_info->last_name ) {
+							$name = $user_info->first_name . ' ' . $user_info->last_name;
+						}
+					}
+
 					if ( $boookinginfo['organisation'] ) {
 						$name .= ' (' . esc_html( $boookinginfo['organisation'] ) . ')';	
 					}
@@ -76,6 +89,20 @@
 			}
 			else {
 				if ( ! in_array( $EM_Booking->get_person()->ID, $people ) ) {
+				
+					if ( $EM_Booking->get_person()->get_name() ) {
+						$name = $EM_Booking->get_person()->get_name();
+					} else {
+						$user_id	= $EM_Booking->get_person()->ID;
+						$user_info	= get_userdata( $user_id );
+						if ( $user_info->display_name ) {
+							$name = $user_info->display_name;
+						} elseif ( $user_info->user_nicename ) {
+							$name = $user_info->user_nicename;
+						} elseif ( $user_info->first_name || $user_info->last_name ) {
+							$name = $user_info->first_name . ' ' . $user_info->last_name;
+						}
+					}
 
 					if ( $boookinginfo['organisation'] ) {
 						$name .= ' (' . esc_html( $boookinginfo['organisation'] ) . ')';	
