@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.2
-// @desc.   Event manager for conference, translations, bugfixes CSS menu.
+// @version 3.15.6
+// @desc.   Attendeelist revised.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -653,7 +653,6 @@ body {
 .attendees-list {
 	background: @blauw6;
 	color: @wit;
-	padding: @padding;
 	
 	.event-aanmeldingen {
 		display: inline-block;
@@ -676,15 +675,22 @@ body {
 			margin-left: 0;
 		}
 		
-		li {
+		li.person {
 			margin: 0;
 			padding: 0;    
 			
-			span {
+	        span[itemtype="http://schema.org/Person"] {
 				border-top: 1px solid #0F90B2;
 				display: block;
 				padding: .5em 0;
-				margin: 0 2em 0 0;
+//				margin: 0 2em 0 0;
+				margin: 0;
+			}
+	        span[itemprop="name"] {
+				.bold-font();
+			}
+	        span[itemprop="memberOf"] {
+		        font-size: 85%;
 			}
 		}
 	}
@@ -741,6 +747,93 @@ body {
 			}
 		}
 	}
+
+@media only screen and (max-width: @break_tablet ) {
+	
+	padding: .5rem;
+//	background: green;
+	
+	.event-attendees li.person {
+		span[itemprop="name"],
+		span[itemprop="memberOf"] {
+			display: inline-block;
+		}
+		span[itemprop="name"] {
+		}
+		span[itemprop="memberOf"] {
+			float: none;
+			clear: both;
+		}
+		ul[data-listitemcount="1"] {
+			& + span[itemprop="name"] {
+				max-width: 250px;
+			}
+		}
+		ul[data-listitemcount="2"] {
+			& + span[itemprop="name"] {
+				max-width: 212px;
+			}
+		}
+	}
+	
+}
+@media only screen and (min-width: @break_tablet ) {
+	
+//background: black;
+	
+padding: 1rem;
+
+
+li.person {
+	width: 50%;
+	float: left;
+	
+	&:nth-child(odd) {
+		clear: left;
+//		background: red;
+		padding-right: .5em;
+	}
+
+	&:nth-child(even) {
+//		background: green;
+		padding-left: .5em;
+		span[itemtype="http://schema.org/Person"] {
+			margin: 0;              
+		}
+	}
+
+}
+
+
+li {
+&:first-child, 
+&:nth-child(2) {
+span[itemtype="http://schema.org/Person"] {
+border-style: none;
+}
+}
+}
+
+
+/* http://lea.verou.me/2011/01/styling-children-based-on-their-number-with-css3/ */
+/* one item */
+li:first-child:nth-last-child(1) {
+width: 100% !important;
+}          
+
+/* if 1, 2, or 3 items */
+li:first-child:nth-last-child(1),
+li:first-child:nth-last-child(2),
+li:first-child:nth-last-child(2) ~ li,
+li:first-child:nth-last-child(3),
+li:first-child:nth-last-child(3) ~ li {
+span[itemtype="http://schema.org/Person"] {
+border-top: 1px solid #0F90B2;
+}
+}
+}		
+
+	
 }
       
 
@@ -861,55 +954,6 @@ body {
         float: right;
       }
     }
-
-
-    .event-attendees {
-
-
-      li {
-        width: 50%;
-        float: left;
-      }
-
-      li:nth-child(odd) {
-        clear: left;
-      }
-
-      li:nth-child(even) {
-        span {
-          margin: 0;              
-        }
-      }
-      
-      li {
-        &:first-child, 
-        &:nth-child(2) {
-          span {
-          	border-style: none;
-          }
-        }
-      }
-
-
-      /* http://lea.verou.me/2011/01/styling-children-based-on-their-number-with-css3/ */
-      /* one item */
-      li:first-child:nth-last-child(1) {
-      	width: 100% !important;
-      }          
-
-      /* if 1, 2, or 3 items */
-      li:first-child:nth-last-child(1),
-      li:first-child:nth-last-child(2),
-      li:first-child:nth-last-child(2) ~ li,
-      li:first-child:nth-last-child(3),
-      li:first-child:nth-last-child(3) ~ li {
-        span {
-          border-top: 1px solid #0F90B2;
-        }
-      }
-    }
-
-       
   }
 
   @media only screen and (min-width: @break_fullwidth ) {

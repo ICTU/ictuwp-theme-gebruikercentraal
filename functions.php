@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.5
-// @desc.   Bugfixes: attendeelist, mobile header, CSS.
+// @version 3.15.6
+// @desc.   Attendeelist revised.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.15.5' );
-define( 'CHILD_THEME_DESCRIPTION', "3.15.5 - Bugfixes: attendeelist, mobile header, CSS." );
+define( 'CHILD_THEME_VERSION', '3.15.6' );
+define( 'CHILD_THEME_DESCRIPTION', "3.15.6 - Attendeelist revised." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -654,7 +654,7 @@ function gc_wbvb_comment_form_script() {
     $protocol = isset( $_SERVER["HTTPS"] ) ? 'https://' : 'http://'; //This is used to set correct adress if secure protocol is used so ajax calls are working
     $params = array(
       'ajax_url'		=> admin_url( 'admin-ajax.php', $protocol ),
-      'empty_email'	=> __( 'Voer een mailadres in alsjeblieft.', 'gebruikercentraal' ),
+      'empty_email'	=> __( 'Please enter a valid email address', 'gebruikercentraal' ),
       'saving' 		=> __( 'Saving...', 'gebruikercentraal' )
     );
 
@@ -1666,70 +1666,79 @@ add_filter('em_formats_filter', 'gc_wbvb_eventmanager_custom_formats', 1, 1);
 add_filter('em_event_output_placeholder','gc_wbvb_eventmanager_styles_placeholders',1,3);
 
 function gc_wbvb_eventmanager_styles_placeholders($replace, $EM_Event, $result) {
+	
 	global $wp_query;
 	global $wp_rewrite;
 	global $EM_Event;
-
-
+	
+	
 	switch( $result ) {
 		case '#_EVENTEXCERPT':
+		
+			if ( $EM_Event->post_excerpt !== '') {
+				$return  = $EM_Event->post_excerpt;
+			}
+			else {
+				$return  = $EM_Event->post_content;
+			}
 
-      if ( $EM_Event->post_excerpt !== '') {
-        $return  = $EM_Event->post_excerpt;
-
-      }
-      else {
-        $return  = $EM_Event->post_content;
-      }
-
-
-      return strip_tags ( $return, '<br>' );
-
-
+			return strip_tags ( $return, '<br>' );
 			break;
-
+		
 		case '#_AVAILABILITYCHECK':
 
-
-      if ( ( $EM_Event->get_bookings()->get_available_spaces() <= 0 ) && ( $EM_Event->get_bookings()->tickets->tickets ) ) {
-        return '<div class="tickets unavailable">' . __( 'fully booked', 'gebruikercentraal' ) . '</div>';
-      }
-      else {
-        return '';
-      }
-
+			if ( ( $EM_Event->get_bookings()->get_available_spaces() <= 0 ) && ( $EM_Event->get_bookings()->tickets->tickets ) ) {
+				return '<div class="tickets unavailable">' . __( 'fully booked', 'gebruikercentraal' ) . '</div>';
+			}
+			else {
+				return '';
+			}
 			break;
-
+		
 		case '#_DATEBADGE':
-
-      $event_start_datetime     = strtotime( $EM_Event->event_start_date . ' ' . $EM_Event->event_start_time );
-
-      if ( date("Y") == date_i18n('Y', $event_start_datetime) ) {
-        $jaar =  '';
-      }
-      else {
-        $jaar =  '<span class="jaar">' . date_i18n('Y', $event_start_datetime) . '</span>';
-      }
-
-      return '<span class="dag">' . date_i18n('d', $event_start_datetime) . '</span><span class="maand">' . date_i18n('M', $event_start_datetime) . '</span>' . $jaar;
+		
+			$event_start_datetime	= strtotime( $EM_Event->event_start_date . ' ' . $EM_Event->event_start_time );
+			$event_end_datetime		= strtotime( $EM_Event->event_end_date . ' ' . $EM_Event->event_end_time );
+			
+			if ( date("Y") == date_i18n('Y', $event_start_datetime) ) {
+				$jaar =  '';
+			}
+			else {
+				$jaar =  '<span class="jaar">' . date_i18n('Y', $event_start_datetime) . '</span>';
+			}
+			
+			$dedag = date_i18n('d', $event_start_datetime);
+			$class = 'dag';
+			
+			if ( $EM_Event->event_start_date == $EM_Event->event_end_date ) {
+				// not a multiple day event
+			}
+			else {
+				$class = 'dag multiple';
+				$dedag = sprintf( '%s-%s', date_i18n('d', $event_start_datetime), date_i18n('d', $event_end_datetime) );
+			}
+			
+			return '<span class="' . $class . '">' . $dedag . '</span><span class="maand">' . date_i18n('M', $event_start_datetime) . '</span>' . $jaar;
 			break;
-
+		
 		case '#_EVENTLOCATIONMETA':
-
-      $event_start_datetime     = strtotime( $EM_Event->event_start_date . ' ' . $EM_Event->event_start_time );
-
-      if ( $EM_Event->location_id ) {
-        return '<div class="event-location">#_LOCATIONNAME</div>';
-      }
-      else {
-        return '';
-      }
-
+		
+			$event_start_datetime     = strtotime( $EM_Event->event_start_date . ' ' . $EM_Event->event_start_time );
+			
+			if ( $EM_Event->location_id ) {
+				return '<div class="event-location">#_LOCATIONNAME</div>';
+			}
+			else {
+				return '';
+			}
 			break;
-
+		
 	}
+		
 	return $replace;
+
 }
+
 //========================================================================================================
 
 function gc_wbvb_clean_url( $url_to_clean ) {

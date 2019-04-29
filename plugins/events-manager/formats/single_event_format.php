@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.14.4
-// @desc.   Styling voor fieldset en labels in booking form.
+// @version 3.15.6
+// @desc.   Attendeelist revised.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
     
@@ -30,29 +30,50 @@ $event_times              = '';
 $event_location           = ''; 
 
 if ( is_object( $EM_Event ) ) {
-  $event_start_datetime     = strtotime( $EM_Event->event_start_date . ' ' . $EM_Event->event_start_time );
-  $event_end_datetime       = strtotime( $EM_Event->event_end_date . ' ' . $EM_Event->event_end_time);
-
-  if ( isset( $EM_Event->location->name ) ) {
-    $event_location  = '<div class="event-location">' . $EM_Event->location->name . '</div>'; 
-  }
-
+	$event_start_datetime     = strtotime( $EM_Event->event_start_date . ' ' . $EM_Event->event_start_time );
+	$event_end_datetime       = strtotime( $EM_Event->event_end_date . ' ' . $EM_Event->event_end_time);
+	
+	if ( isset( $EM_Event->location->name ) ) {
+		$event_location  = '<div class="event-location">' . $EM_Event->location->name . '</div>'; 
+	}
+	
 }
 
 
-if ( $event_start_datetime ) {
-  // only accept events with a start time
-  $event_times .= '<div class="event-times">
-  <span class="starttime" itemprop="startDate" content="' . date_i18n( 'c', $event_start_datetime ) . '">' . date_i18n( 'G:i', $event_start_datetime ) . '</span>';
+if ( $event_start_datetime && ( $EM_Event->event_start_date === $EM_Event->event_end_date ) ) {
+	// only accept events with a start time
+	$event_times .= '<div class="event-times">
+	<span class="starttime" itemprop="startDate" content="' . date_i18n( 'c', $event_start_datetime ) . '">' . date_i18n( 'G:i', $event_start_datetime ) . '</span>';
+	
+	if ( $event_end_datetime ) {
+		if ( $event_end_datetime > $event_start_datetime) {
+			$event_times .= ' - <span class="endtime" itemprop="endDate" content="' . date_i18n( 'c', $event_end_datetime ) . '">' . date_i18n( 'G:i', $event_end_datetime ) . '</span>';
+		}
+	}
+	$event_times .= '</div>';
 
-  if ( $event_end_datetime ) {
-    if ( $event_end_datetime > $event_start_datetime) {
-      $event_times .= ' - <span class="endtime" itemprop="endDate" content="' . date_i18n( 'c', $event_end_datetime ) . '">' . date_i18n( 'G:i', $event_end_datetime ) . '</span>';
-    }
-  }
+} elseif( $EM_Event->event_start_date != $EM_Event->event_end_date ) {
 
-  $event_times .= '</div>';
-
+	$period =  sprintf( '%s - %s', date_i18n('d', $event_start_datetime), date_i18n('d M', $event_end_datetime) );
+	
+	$startDate	= '<span itemprop="startDate" content="' . date_i18n( 'c', $event_start_datetime ) . '">';
+	$endDate	= '-<span itemprop="endDate" content="' . date_i18n( 'c', $event_end_datetime ) . '">';
+	
+	if ( date_i18n('M', $event_start_datetime) == date_i18n('M', $event_end_datetime) ) {
+		$startDate	.= date_i18n('d', $event_start_datetime);
+		$endDate	.= date_i18n('d M', $event_end_datetime);
+	}
+	else {
+		$period =  sprintf( '%s - %s', date_i18n('d M', $event_start_datetime), date_i18n('d M', $event_end_datetime) );
+	}
+	
+	$event_times .= '<div class="event-times">' . $startDate . '</span>' . $endDate . '</span></div>';
+/*	
+	<span class="starttime" itemprop="startDate" content="' . date_i18n( 'c', $event_start_datetime ) . '">' . date_i18n( 'G:i', $event_start_datetime ) . '</span>
+	
+	<span class="starttime" itemprop="endDate" content="' . date_i18n( 'c', $event_end_datetime ) . '">' . $period . '</span>';
+	$event_times .= ;
+*/	
 }
 
 
@@ -66,47 +87,57 @@ $price_max        = 0;
 $countlebookings  = 0;
 
 if ( is_array( $lebookings ) || is_object( $lebookings ) ) {
-  $countlebookings = count($lebookings);
+	$countlebookings = count($lebookings);
 }
 if ( $countlebookings > 0 ) {
-  // has bookings
-  $header_meta_info .= $EM_gc_wbvb_single_event_availability;
-  $header_meta_info .= $event_times;
-  $header_meta_info .= $event_location;
+	// has bookings
+	$header_meta_info .= $EM_gc_wbvb_single_event_availability;
+	$header_meta_info .= $event_times;
+	$header_meta_info .= $event_location;
+	
+	if ( is_object( $lebookings ) ) {
+		
+		foreach ( $lebookings->tickets->tickets as $leticket ) {
+			// get min & max price
+			if ( $price_min > 0 ) {
+				if ( floatval( $leticket->ticket_price ) < $price_min ) {
+					$price_min = $leticket->ticket_price;
+				}
+			}
+			elseif ( floatval( $leticket->ticket_price ) > $price_min ) {
+				$price_min = $leticket->ticket_price;
+			}
+			
+			if ( floatval( $leticket->ticket_price ) > $price_max ) {
+				$price_max = $leticket->ticket_price;
+			}
+		}
+	}
 
-  if ( is_object( $lebookings ) ) {
-    
-    foreach ( $lebookings->tickets->tickets as $leticket ) {
-      // get min & max price
-      if ( $price_min > 0 ) {
-        if ( floatval( $leticket->ticket_price ) < $price_min ) {
-          $price_min = $leticket->ticket_price;
-        }
-      }
-      elseif ( floatval( $leticket->ticket_price ) > $price_min ) {
-        $price_min = $leticket->ticket_price;
-      }
-  
-      if ( floatval( $leticket->ticket_price ) > $price_max ) {
-        $price_max = $leticket->ticket_price;
-      }
-    }
-  }
+$availabletickets = '';
+
+	if ( $EM_Event->get_bookings()->get_available_spaces() ) {
+		$availabletickets = ' <div class="visuallyhidden" itemprop="availability">' . $EM_Event->get_bookings()->get_available_spaces() . '</div>';
+	}
+
+	if ( floatval( $price_min ) > 0 ) {
+		$kostduurquageld = '<span itemprop="lowPrice">' . round($price_min,2) . '</span>';
+		if ( ( floatval( $price_max ) > 0 )  && ( $price_max > $price_min ) ) {
+			$kostduurquageld .= ' - ' . '<span itemprop="highPrice">' . round($price_max,2) . '</span>';
+		}  
+		$header_meta_info .= '<div class="event-pricing" itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">' . $kostduurquageld . $availabletickets . '</div>';
+	}  
+	else {
+//		$kostduurquageld .= 'warningprice'
+		$kostduurquageld .= '<div class="visuallyhidden" itemprop="price">0</div>';
+
+		$header_meta_info .= '<div class="event-pricing" itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">' . $kostduurquageld . $availabletickets . '</div>';
+	}
 
 
-  if ( floatval( $price_min ) > 0 ) {
-    $kostduurquageld = '<span itemprop="lowPrice">' . round($price_min,2) . '</span>';
-    if ( ( floatval( $price_max ) > 0 )  && ( $price_max > $price_min ) ) {
-      $kostduurquageld .= ' - ' . '<span itemprop="highPrice">' . round($price_max,2) . '</span>';
-    }  
-    $header_meta_info .= '<div class="event-pricing" itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">' . $kostduurquageld . '</div>';
-  }  
-  else {
-    $header_meta_info .= '<div class="event-pricing" itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">' . $kostduurquageld . '</div>';
-  }
-
-  $header_meta_info .= $EM_gc_wbvb_single_event_aanmeldingen;
-
+	
+	$header_meta_info .= $EM_gc_wbvb_single_event_aanmeldingen;
+	
 }
 else {
 
@@ -198,6 +229,18 @@ else {
           </div>
         </div>
         {/has_location}
+        {no_location}
+        <div itemprop="location" itemscope itemtype="http://schema.org/Place" class="visuallyhidden">
+	        <h2 itemprop="name"><?php echo __( 'No location', 'gebruikercentraal' ) ?></h2>
+	          <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+	            <span itemprop="streetAddress">#_LOCATIONADDRESS</span><br>
+	            <span itemprop="postalCode">#_LOCATIONPOSTCODE</span><br>
+	            <span itemprop="addressLocality">#_LOCATIONTOWN</span>
+		     </div>
+	        
+	     </div>
+        
+        {/no_location}
 
     <?php 
     }

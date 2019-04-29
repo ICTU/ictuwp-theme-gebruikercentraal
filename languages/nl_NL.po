@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gebruiker Centraal (3.15.3)\n"
-"POT-Creation-Date: 2019-04-26 12:26+0200\n"
-"PO-Revision-Date: 2019-04-26 12:26+0200\n"
+"POT-Creation-Date: 2019-04-29 08:37+0200\n"
+"PO-Revision-Date: 2019-04-29 08:37+0200\n"
 "Last-Translator: Paul van Buuren <paul@wbvb.nl>\n"
 "Language-Team: paul@wbvb.nl\n"
 "Language: nl_NL\n"
@@ -66,54 +66,54 @@ msgstr "Lees '"
 msgid "Author"
 msgstr "Auteur"
 
-#: functions.php:568
+#: functions.php:575
 msgid "Share on Twitter"
 msgstr "Deel op Twitter"
 
-#: functions.php:569
+#: functions.php:576
 msgid "Share on Facebook"
 msgstr "Deel op Facebook"
 
-#: functions.php:570
+#: functions.php:577
 msgid "Share on LinkedIn"
 msgstr "Deel op LinkedIn"
 
-#: functions.php:650
-msgid "Voer een mailadres in alsjeblieft."
-msgstr "Voer een mailadres in alsjeblieft."
+#: functions.php:657
+msgid "Please enter a valid email address"
+msgstr "Voer een mailadres in alsjeblieft"
 
-#: functions.php:651
+#: functions.php:658
 msgid "Saving..."
 msgstr "Opslaan..."
 
-#: functions.php:706 functions.php:720
+#: functions.php:713 functions.php:727
 msgctxt "Skiplinks"
 msgid "Jump to main content"
 msgstr "Direct naar belangrijkste content"
 
-#: functions.php:707 functions.php:721
+#: functions.php:714 functions.php:728
 msgctxt "Skiplinks"
 msgid "Jump to main navigation"
 msgstr "Direct naar hoofdnavigatie"
 
-#: functions.php:722
+#: functions.php:729
 msgctxt "Skiplinks"
 msgid "Jump to site search form"
 msgstr "Direct naar zoeken"
 
-#: functions.php:769
+#: functions.php:776
 msgid "is lid van het actieteam"
 msgstr "is lid van het actieteam"
 
-#: functions.php:773 widgets/gc-actieteam-widget.php:193
+#: functions.php:780 widgets/gc-actieteam-widget.php:193
 msgid "Alle actieteamleden"
 msgstr "Alle actieteamleden"
 
-#: functions.php:801
+#: functions.php:808
 msgid "Not found, error 404"
 msgstr "Niet gevonden (fout 404)"
 
-#: functions.php:812
+#: functions.php:819
 #, php-format
 msgid ""
 "The page you are looking for no longer exists. Perhaps you can return back "
@@ -123,120 +123,120 @@ msgstr ""
 "De pagina die je opvroeg bestaat niet (meer). Wellicht vind je wat je zoekt "
 "via de <a href=\"%s\">homepage</a>.  Of je kunt zoeken op de website."
 
-#: functions.php:858
+#: functions.php:865
 msgid "Pages:"
 msgstr "Pagina's:"
 
-#: functions.php:871
+#: functions.php:878
 #, php-format
 msgid "The %s most recent posts"
 msgstr "De laatste %s blog-artikelen"
 
-#: functions.php:878
+#: functions.php:885
 msgid "Topics:"
 msgstr "Onderwerpen:"
 
-#: functions.php:883
+#: functions.php:890
 msgid "Authors:"
 msgstr "Auteurs:"
 
-#: functions.php:1412
+#: functions.php:1419
 msgid "Widget in de site footer"
 msgstr "Widget in de site footer"
 
-#: functions.php:1414
+#: functions.php:1421
 msgid "Ruimte voor widgets in de site footer. Hier bijvoorbeeld footerlinks."
 msgstr "Ruimte voor widgets in de site footer. Hier bijvoorbeeld footerlinks."
 
-#: functions.php:1452
+#: functions.php:1459
 msgid "Home-widget links"
 msgstr "Home-widget links"
 
-#: functions.php:1454
+#: functions.php:1461
 msgid "Hier kun je de widgets plaatsen voor events en blogberichten"
 msgstr "Hier kun je de widgets plaatsen voor events en blogberichten"
 
-#: functions.php:1483
+#: functions.php:1490
 msgid "Home-widget rechts"
 msgstr "Home-widget rechts"
 
-#: functions.php:1485
+#: functions.php:1492
 msgid "Hier kun je de widgets plaatsen voor o.m. het actieteam"
 msgstr "Home-widget rechts"
 
-#: functions.php:1688
+#: functions.php:1695
 msgid "fully booked"
 msgstr "zit vol"
 
-#: functions.php:1777
+#: functions.php:1784
 msgctxt "Kopje op evenementpagina"
 msgid "Programme"
 msgstr "Programma"
 
-#: functions.php:1839
+#: functions.php:1846
 msgctxt "Kopje op berichtpagina"
 msgid "Downloads"
 msgstr "Downloads"
 
-#: functions.php:1972
+#: functions.php:1979
 msgctxt "Kopje op bericht- of evenementpagina"
 msgid "Links"
 msgstr "Links"
 
-#: functions.php:2017
+#: functions.php:2024
 msgid "Comment navigation"
 msgstr "Comment navigation"
 
-#: functions.php:2020
+#: functions.php:2027
 msgid "Older Comments"
 msgstr "Eerdere reacties"
 
-#: functions.php:2024
+#: functions.php:2031
 msgid "Newer Comments"
 msgstr "Recentere reacties"
 
-#: functions.php:2062
+#: functions.php:2069
 msgid "Your comment is held for moderation"
 msgstr "Je reactie moet nog beoordeeld worden"
 
-#: functions.php:2069
+#: functions.php:2076
 #, php-format
 msgid "<cite class=\"fn\">%s</cite> <span class=\"says\">wrote:</span>"
 msgstr "<cite class=\"fn\">%s</cite> <span class=\"says\">schreef:</span>"
 
 #. translators: 1: date, 2: time
-#: functions.php:2079
+#: functions.php:2086
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s op %2$s"
 
-#: functions.php:2079
+#: functions.php:2086
 msgid "(Edit)"
 msgstr "(bewerken)"
 
-#: functions.php:2277
+#: functions.php:2284
 msgid "Older"
 msgstr "Ouder"
 
-#: functions.php:2288
+#: functions.php:2295
 msgid "Newer"
 msgstr "Nieuwer"
 
-#: functions.php:2330 includes/author-box.php:236
+#: functions.php:2337 includes/author-box.php:236
 msgctxt "author box"
 msgid "LinkedIn page"
 msgstr "LinkedIn-profiel"
 
-#: functions.php:2331 includes/author-box.php:232
+#: functions.php:2338 includes/author-box.php:232
 msgctxt "author box"
 msgid "Personal website"
 msgstr "Persoonlijke website"
 
-#: functions.php:2439
+#: functions.php:2446
 msgid "Previous"
 msgstr "Vorige"
 
-#: functions.php:2440
+#: functions.php:2447
 msgid "Next"
 msgstr "Volgende"
 
@@ -435,20 +435,24 @@ msgid "Subscribe on Newsletters"
 msgstr ""
 
 #: plugins/events-manager/formats/event_single_format.php:62
-#: plugins/events-manager/formats/single_event_format.php:63
+#: plugins/events-manager/formats/single_event_format.php:61
 msgid "Free of charge"
 msgstr "Gratis"
 
 #: plugins/events-manager/formats/event_single_format.php:165
 #: plugins/events-manager/formats/event_single_format.php:187
-#: plugins/events-manager/formats/single_event_format.php:169
-#: plugins/events-manager/formats/single_event_format.php:190
+#: plugins/events-manager/formats/single_event_format.php:174
+#: plugins/events-manager/formats/single_event_format.php:195
 #: plugins/events-manager/forms/location-editor.php:32
 #: plugins/events-manager/forms/location-editor.php:65
 #: plugins/events-manager/forms/location-editor.php:67
 #: plugins/events-manager/tables/events.php:80
 msgid "Location"
 msgstr "Locatie"
+
+#: plugins/events-manager/formats/single_event_format.php:208
+msgid "No location"
+msgstr "Geen locatie bekend"
 
 #: plugins/events-manager/forms/bookingform/booking-fields.php:38
 msgid "Naam"
@@ -1211,33 +1215,31 @@ msgstr ""
 msgid "Location not found"
 msgstr ""
 
-#: plugins/events-manager/placeholders/attendeeslist.php:59
-#: plugins/events-manager/placeholders/attendeeslist.php:86
-msgid "LinkedIn-profiel"
-msgstr ""
-
-#: plugins/events-manager/placeholders/attendeeslist.php:63
-#: plugins/events-manager/placeholders/attendeeslist.php:90
-msgid "Twitter-account"
-msgstr ""
-
-#: plugins/events-manager/placeholders/attendeeslist.php:114
+#: plugins/events-manager/placeholders/attendeeslist.php:84
 #, php-format
 msgid "%s attendee"
 msgid_plural "%s attendees"
 msgstr[0] "%s aanmelding"
 msgstr[1] "%s aanmeldingen"
 
-#: plugins/events-manager/placeholders/attendeeslist.php:118
+#: plugins/events-manager/placeholders/attendeeslist.php:88
 #, php-format
 msgid "%s attendee not shown"
 msgid_plural "%s attendees not shown"
 msgstr[0] "%s aanmelding verborgen"
 msgstr[1] "%s aanmeldingen verborgen"
 
-#: plugins/events-manager/placeholders/attendeeslist.php:122
+#: plugins/events-manager/placeholders/attendeeslist.php:92
 msgid "Other attendees"
 msgstr "Andere aanwezigen"
+
+#: plugins/events-manager/placeholders/attendeeslist.php:150
+msgid "LinkedIn-profiel"
+msgstr ""
+
+#: plugins/events-manager/placeholders/attendeeslist.php:155
+msgid "Twitter-account"
+msgstr ""
 
 #: plugins/events-manager/placeholders/bookingform.php:64
 msgid "Join this event"
@@ -1719,6 +1721,9 @@ msgstr ""
 #. Template Name of the plugin/theme
 msgid "Author Page"
 msgstr ""
+
+#~ msgid "Voer een mailadres in alsjeblieft."
+#~ msgstr "Voer een mailadres in alsjeblieft."
 
 #~ msgid "Alle artikelen"
 #~ msgstr "Alle artikelen"
