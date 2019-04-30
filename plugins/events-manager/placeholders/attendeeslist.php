@@ -8,8 +8,8 @@
 // @@package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.6
-// @desc.   Attendeelist revised.
+// @version 3.15.7
+// @desc.   Possibly country info on attendeelist, CSS bugs fixed for site-title, site-description.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 // */
 
@@ -50,9 +50,7 @@ if( count($EM_Bookings->bookings) > 0 ) {
 			$confirmedusercounter++;
 			
 			if( $guest_bookings && $EM_Booking->get_person()->ID == $guest_booking_user ) {
-				
-//				if ( $EM_Booking->get_person()->get_name() && $boookinginfo['show_name_attendeelist'] ) {
-				
+
 				$thename = getname( $EM_Booking );
 				
 				if ( $thename ) {
@@ -61,7 +59,6 @@ if( count($EM_Bookings->bookings) > 0 ) {
 				else {
 					$nr_anon_bookings++;
 				}
-//				}
 			}
 			else {
 				if ( ! in_array( $EM_Booking->get_person()->ID, $people ) ) {
@@ -115,9 +112,10 @@ function getname( $theobject ) {
 
 	if ( $theobject ) {
 
-		$boookinginfo 		= $theobject->meta['booking'];
+		$boookinginfo 	= $theobject->meta['booking'];
+		$countryinfo		= $theobject->get_person()->custom_user_fields['dbem_country'];
 
-//dovardump( $boookinginfo );
+//dovardump( $countryinfo );
 
 		if ( $boookinginfo['show_name_attendeelist'] ) {
 
@@ -141,9 +139,12 @@ function getname( $theobject ) {
 				$return = '<span itemprop="name">' . $name . '</span>';
 				
 				if ( $boookinginfo['organisation'] ) {
-				// to do: proper attributes for organisation 
-					$return .= ' <span itemprop="memberOf">' . esc_html( $boookinginfo['organisation'] ) . '</span>';	
+					$return .= ' <span itemprop="memberOf" class="additionalinfo">' . esc_html( trim( $boookinginfo['organisation'] ) ) . '</span>';	
 				}
+				
+//				if ( $countryinfo['value'] != 'none selected' ) {
+//					$return .= '<span class="additionalinfo" itemprop="nationality">' . esc_html( $countryinfo['value'] ) . '</span>';	
+//				}
 				
 				if ( $boookinginfo['linkedin_profile'] ) {
 					if (!filter_var( $boookinginfo['linkedin_profile'] , FILTER_VALIDATE_URL) === false) {

@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.6
-// @desc.   Attendeelist revised.
+// @version 3.15.7
+// @desc.   Possibly country info on attendeelist, CSS bugs fixed for site-title, site-description.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.15.6' );
-define( 'CHILD_THEME_DESCRIPTION', "3.15.6 - Attendeelist revised." );
+define( 'CHILD_THEME_VERSION', '3.15.7' );
+define( 'CHILD_THEME_DESCRIPTION', "3.15.7 - Possibly country info on attendeelist, CSS bugs fixed for site-title, site-description." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -2673,9 +2673,12 @@ function gc_wbvb_customize_site_title( $title, $inside, $wrap ) {
 	}
 
 
-	$inside = '<a href="' . home_url() . '"><span class="site-title-description"><span class="blog-name">' . $blogname . '</span>';
 	if ( $blogdescription ) {
+		$inside = '<a href="' . home_url() . '"><span class="site-title-description met"><span class="blog-name">' . $blogname . '</span>';
 		$inside .= '<br><span class="blog-description">' . $blogdescription . '</span>';
+	}
+	else {
+		$inside = '<a href="' . home_url() . '"><span class="site-title-description zonder"><span class="blog-name">' . $blogname . '</span>';
 	}
 	$inside .= '</span></a>';
 		

@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.6
-// @desc.   Attendeelist revised.
+// @version 3.15.7
+// @desc.   Possibly country info on attendeelist, CSS bugs fixed for site-title, site-description.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -648,6 +648,19 @@ body {
   background: @blauw5;
   color: @wit;
   padding-bottom: 2em;
+/*  
+  .wrap {
+	  max-width: inherit;
+	  margin-left: .25em;
+	  margin-right: .25em;
+  }
+  #em-booking {
+	  h2:first-of-type {
+		  padding-left:  @padding;
+	  }
+  }
+*/  
+
 }
 
 .attendees-list {
@@ -689,9 +702,18 @@ body {
 	        span[itemprop="name"] {
 				.bold-font();
 			}
-	        span[itemprop="memberOf"] {
+	        span.additionalinfo {
 		        font-size: 85%;
 			}
+	        span[itemprop="nationality"] {
+		        &:before {
+			        content: ', ';
+			        display: inline-block;
+			        speak: none;
+			        margin-right: .25em;
+				}
+			}
+			
 		}
 	}
 	.social-media {
