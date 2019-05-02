@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.2
-// @desc.   Event manager for conference, translations, bugfixes CSS menu.
+// @version 3.15.8
+// @desc.   Bugfix JS: what if there's no menu?
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 ///
 
@@ -759,10 +759,13 @@ add_action( 'wp_enqueue_scripts', 'gc_shared_add_menu_script' );
 
 function gc_shared_add_menu_script() {
 
-  if ( ! is_admin() ) {
-    wp_enqueue_script( 'gc-shared-menu', WBVB_THEMEFOLDER . '/js/menu.js', '', CHILD_THEME_VERSION, true );
-//    wp_enqueue_script( 'gc-shared-menu', WBVB_THEMEFOLDER . '/js/min/menu-min.js', '', '', true );
-  }
+	if ( ! is_admin() ) {
+		if ( WP_DEBUG ) {
+			wp_enqueue_script( 'gc-shared-menu', WBVB_THEMEFOLDER . '/js/menu.js', '', CHILD_THEME_VERSION, true );
+		} else {
+			wp_enqueue_script( 'gc-shared-menu', WBVB_THEMEFOLDER . '/js/min/menu-min.js', '', '', true );
+		}
+	}
 
 }
 

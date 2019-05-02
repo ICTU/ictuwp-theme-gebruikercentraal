@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.7
-// @desc.   Possibly country info on attendeelist, CSS bugs fixed for site-title, site-description.
+// @version 3.15.8
+// @desc.   Bugfix JS: what if there's no menu?
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.15.7' );
-define( 'CHILD_THEME_DESCRIPTION', "3.15.7 - Possibly country info on attendeelist, CSS bugs fixed for site-title, site-description." );
+define( 'CHILD_THEME_VERSION', '3.15.8' );
+define( 'CHILD_THEME_DESCRIPTION', "3.15.8 - Bugfix JS: what if there's no menu?" );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );

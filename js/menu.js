@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.2
-// @desc.   Event manager for conference, translations, bugfixes CSS menu.
+// @version 3.15.8
+// @desc.   Bugfix JS: what if there's no menu?
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -25,22 +25,27 @@ var header			= document.querySelector('.site-header'),
 
 function hideMenuButton(document, window, undefined) {
 	
-	header.classList.remove('menu-met-js');
-	thecontent.classList.remove('menuopen');
-	sitecontainer.classList.remove('menuopen');
-	header.classList.add('geen-menu-button');
-	menu.setAttribute('aria-hidden', 'false');
-
-
-
-	
 	var ele = document.getElementById("menu-button");
-	
 	if (ele) {
 		// Remove button from page
 		headerwrap.removeChild(ele);
-//		console.log('burp'); // no, I never grew up
 	}
+	if ( header ) {
+		header.classList.remove('menu-met-js');
+	}
+	if ( thecontent ) {
+		thecontent.classList.remove('menuopen');
+	}
+	if ( sitecontainer ) {
+		sitecontainer.classList.remove('menuopen');
+	}
+	if ( header ) {
+		header.classList.add('geen-menu-button');
+	}
+	if ( menu ) {
+		menu.setAttribute('aria-hidden', 'false');
+	}
+	
 }
 
 // =========================================================================================================
@@ -151,7 +156,7 @@ function WidthChange(mq) {
 // =========================================================================================================
 
 // media query event handler
-if (matchMedia) {
+if (matchMedia && menu) {
 	var mq = window.matchMedia('(min-width: 830px)');
 	mq.addListener(WidthChange);
 	WidthChange(mq);

@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-3.15.7 - Possibly country info on attendeelist, CSS bugs fixed for site-title, site-description.
+3.15.8 - Bugfix JS: what if there's no menu?
 
 ## Version history
+* 3.15.8 - Bugfix JS: what if there's no menu?
 * 3.15.7 - Possibly country info on attendeelist, CSS bugs fixed for site-title, site-description.
 * 3.15.6 - Attendeelist revised.
 * 3.15.5 - Bugfixes: attendeelist, mobile header, CSS.

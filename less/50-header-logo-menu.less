@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.7
-// @desc.   Possibly country info on attendeelist, CSS bugs fixed for site-title, site-description.
+// @version 3.15.8
+// @desc.   Bugfix JS: what if there's no menu?
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 //========================================================================================================
@@ -157,6 +157,9 @@ margin-top: .5rem;
     .blog-description {
 	    display: inline-block;
 	    border-bottom: 1px solid transparent;
+	    padding-top: 2px;
+	    padding-bottom: 2px;
+//	    background: green;
     }
 
 	@media only screen and ( max-width: @break_show_menu_button ) {
@@ -169,17 +172,18 @@ margin-top: .5rem;
 	@media only screen and ( min-width: @break_show_menu_button ) {
 
 	    .site-title {
-		    min-height: 80px;
+//		    min-height: 80px;
 	    }
 
 		.site-title-description {
 			float: left;
 			display: block;
 			overflow: hidden;
-			line-height: 36px;
 
 			&.met {
-				padding-top: 12px;
+			    .blog-name {
+					margin-top: 12px;
+				}    
 			}    
 			&.zonder {
 			    .blog-name {
@@ -200,12 +204,15 @@ margin-top: .5rem;
 			word-break: break-word;
 			white-space: nowrap;
 			hyphens: none;
+			padding-top: 2px;
+			line-height: 36px;
 		}	    
 	    .blog-description {
 			font-family: @bodyfont;
 			.fontsize( 12 );
 			display: inline-block;
-			transform: translateY(-6px);
+			transform: translateY(-4px);
+			line-height: 15px;
 	    }
 		
     }
