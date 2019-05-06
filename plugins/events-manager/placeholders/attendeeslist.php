@@ -8,8 +8,8 @@
 // @@package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.7
-// @desc.   Possibly country info on attendeelist, CSS bugs fixed for site-title, site-description.
+// @version 3.15.9
+// @desc.   Extra checkbox for mailinglist, a11y improvements.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 // */
 
@@ -138,13 +138,26 @@ function getname( $theobject ) {
 				$listitemcount = 0;
 				$return = '<span itemprop="name">' . $name . '</span>';
 				
+				$xtra = '';
+				
 				if ( $boookinginfo['organisation'] ) {
-					$return .= ' <span itemprop="memberOf" class="additionalinfo">' . esc_html( trim( $boookinginfo['organisation'] ) ) . '</span>';	
+					$xtra = '<span itemprop="memberOf" class="additionalinfo">' . esc_html( trim( $boookinginfo['organisation'] ) ) . '</span>';	
 				}
 				
-//				if ( $countryinfo['value'] != 'none selected' ) {
-//					$return .= '<span class="additionalinfo" itemprop="nationality">' . esc_html( $countryinfo['value'] ) . '</span>';	
-//				}
+				if ( $countryinfo['value'] != 'none selected' ) {
+					if ( $xtra ) {
+						$xtra .= ', <span class="additionalinfo" itemprop="nationality">' . esc_html( $countryinfo['value'] ) . '</span>';	
+					} else {
+						$xtra = '<span class="additionalinfo" itemprop="nationality">' . esc_html( $countryinfo['value'] ) . '</span>';	
+					}
+					
+				}
+
+				if ( $xtra ) {
+					$return .= '<br>' . $xtra;	
+				}
+
+
 				
 				if ( $boookinginfo['linkedin_profile'] ) {
 					if (!filter_var( $boookinginfo['linkedin_profile'] , FILTER_VALIDATE_URL) === false) {

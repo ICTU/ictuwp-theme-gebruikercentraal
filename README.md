@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-3.15.8 - Bugfix JS: what if there's no menu?
+3.15.9 - Extra checkbox for mailinglist, a11y improvements.
 
 ## Version history
+* 3.15.9 - Extra checkbox for mailinglist, a11y improvements.
 * 3.15.8 - Bugfix JS: what if there's no menu?
 * 3.15.7 - Possibly country info on attendeelist, CSS bugs fixed for site-title, site-description.
 * 3.15.6 - Attendeelist revised.

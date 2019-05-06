@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.4
-// @desc.   Bugfixes, CSS.
+// @version 3.15.9
+// @desc.   Extra checkbox for mailinglist, a11y improvements.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -383,7 +383,7 @@
 			z-index: 600;
 			
 			div {
-				background: @groen_1;
+			    background: @wcagaa_groen_1; // WCAG AA @groen_1;
 				float: left;
 				@media only screen and ( min-width: @break_show_menu_button ) {
 					width: @pijl_breedte;
@@ -398,7 +398,7 @@
 					display: inline-block;
 					width: 24px;
 					height: 24px;
-					background: @groen_1;
+					background: @wcagaa_groen_1; // WCAG AA @groen_1;
 					position: absolute;
 					top: ( @pijlgrootte * 1 );
 					right: 0;
@@ -503,37 +503,36 @@
   .longdescription {
     width: 79%;
   }
-  .input-group {
-    float: none;
-    clear: both;
-    overflow: hidden;
-    
-    div.separator {
-      overflow: hidden;
-      margin-bottom: .25em;
-    }
-    
-    input[type="checkbox"],
-    input[type="radio"] {
-      float: left;
-      clear: both;
-      margin: .25em .5em .5em .25em;
-      border-color: @txt;
-
-      &:focus {
-		outline: 2px solid @txt;
-		background: white;	      
-      }
-      
-    }
-    input[type="radio"] {
-    }
-    
-    label {
-      float: none;
-      clear: both;
-    }
-  }
+  
+	.mc4wp-checkbox-events-manager, 
+	.input-group {
+		float: none;
+		clear: both;
+		overflow: hidden;
+		
+		div.separator {
+			overflow: hidden;
+			margin-bottom: .25em;
+		}
+		
+		input[type="checkbox"],
+		input[type="radio"] {
+			float: left;
+			clear: both;
+			margin: .25em .5em .5em .25em;
+			border-color: @txt;
+			
+			&:focus {
+				outline: 2px solid @txt;
+				background: white;	      
+			}
+		}
+		
+		label {
+			float: none;
+			clear: both;
+		}
+	}
 
 	body:not(.logged-in) {
 		.em-booking-login-form,

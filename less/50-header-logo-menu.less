@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.8
-// @desc.   Bugfix JS: what if there's no menu?
+// @version 3.15.9
+// @desc.   Extra checkbox for mailinglist, a11y improvements.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 //========================================================================================================
@@ -243,7 +243,8 @@ margin-top: .5rem;
 	}
 
 	#zoeken {
-		border: 1px solid #4E6E76;
+//		border: 1px solid #4E6E76;
+		border: 1px solid #6F99A3; // @wit;
 		position: relative;
 		height: @widget_area_button;
 		  
@@ -388,6 +389,10 @@ margin-top: .5rem;
 			left: 0;
 			right: 0;
 			z-index: 9999;
+		}
+
+		.admin-bar .site-header.menu-met-js.active {
+			top: 96px;
 		}
 		
 	}

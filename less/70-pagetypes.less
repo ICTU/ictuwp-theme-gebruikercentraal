@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.7
-// @desc.   Possibly country info on attendeelist, CSS bugs fixed for site-title, site-description.
+// @version 3.15.9
+// @desc.   Extra checkbox for mailinglist, a11y improvements.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -86,7 +86,9 @@
       }
   
       .date-badge {
-        .datebadge_groot(@groen_1, 3em);
+//		.datebadge_groot(@groen_1, 3em);
+		.datebadge_groot(@wcagaa_groen_1, 3em);
+//		background: ; // WCAG AA @groen_1;
       }  
   
       .meta,
@@ -337,7 +339,7 @@ body {
 }
 
 .manifest {
-  background: @groen_2;
+  background: @groen_AAA;
   color: @wit;
   margin-bottom: 2em;
   padding-left: 0 !important;
@@ -348,7 +350,7 @@ body {
   
   header {
     padding:  @padding;
-    background: @groen_1;
+    background: @wcagaa_groen_1; // WCAG AA @groen_1;
     h1 {
       margin: 0;
       padding: 0;
@@ -403,7 +405,8 @@ body {
 // ========================================================================
 #event_map {
   width: 100%;
-  background: @groen_2;
+//	background: @groen_2;
+	background: @wcagaa_groen_1; // WCAG AA @groen_1;
   
   h2 {
     a, & {
@@ -432,7 +435,8 @@ body {
 }
 // ========================================================================
 #event_map_en_programma {
-  background: @groen_2;
+//	background: @groen_2;
+	background: @wcagaa_groen_1; // WCAG AA @groen_1;
   padding: 0 @padding @padding @padding;
   overflow: hidden;
   color: @wit;
@@ -526,8 +530,8 @@ body {
 // ========================================================================
 
 .andere-bijeenkomsten {
-  background: @groen_1;
-  margin: 1em 0 2em 0;
+	background: #058640; // WCAG AA @groen_1;
+	margin: 1em 0 2em 0;
   
   .wrap {
     padding: 1em;
@@ -705,15 +709,6 @@ body {
 	        span.additionalinfo {
 		        font-size: 85%;
 			}
-	        span[itemprop="nationality"] {
-		        &:before {
-			        content: ', ';
-			        display: inline-block;
-			        speak: none;
-			        margin-right: .25em;
-				}
-			}
-			
 		}
 	}
 	.social-media {

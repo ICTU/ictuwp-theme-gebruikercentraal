@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.8
-// @desc.   Bugfix JS: what if there's no menu?
+// @version 3.15.9
+// @desc.   Extra checkbox for mailinglist, a11y improvements.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 ///
 
@@ -760,11 +760,21 @@ add_action( 'wp_enqueue_scripts', 'gc_shared_add_menu_script' );
 function gc_shared_add_menu_script() {
 
 	if ( ! is_admin() ) {
+
 		if ( WP_DEBUG ) {
 			wp_enqueue_script( 'gc-shared-menu', WBVB_THEMEFOLDER . '/js/menu.js', '', CHILD_THEME_VERSION, true );
 		} else {
 			wp_enqueue_script( 'gc-shared-menu', WBVB_THEMEFOLDER . '/js/min/menu-min.js', '', '', true );
 		}
+
+		$params = array(
+			'showmenu'	=> _x( 'Show menu', 'Screen reader text for menu', 'gebruikercentraal' ),
+			'closemenu'	=> _x( 'Close menu', 'Screen reader text for menu', 'gebruikercentraal' ),
+			'menuname'	=> _x( 'Menu', 'Screen reader text for menu', 'gebruikercentraal' ),
+		);
+
+		wp_localize_script( 'gc-shared-menu', 'menustrings', $params );
+
 	}
 
 }

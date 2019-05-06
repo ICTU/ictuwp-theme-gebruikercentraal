@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.8
-// @desc.   Bugfix JS: what if there's no menu?
+// @version 3.15.9
+// @desc.   Extra checkbox for mailinglist, a11y improvements.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -61,17 +61,15 @@ function showMenuButton(document, window, undefined) {
 	menu.setAttribute('aria-labelledby', 'menu-button');
 	
 	header.classList.remove('geen-menu-button');
-//	console.log('create the button'); 
 
+	// Create a button, set properties
 	menuButton = document.createElement('button');
-	
-	// Button properties
 	menuButton.classList.add('menu-button');
 	menuButton.setAttribute('id', 'menu-button');
-	menuButton.setAttribute('aria-label', 'Toon menu');
+	menuButton.setAttribute('aria-label', menustrings.showmenu); // 
 	menuButton.setAttribute('aria-expanded', 'false');
 	menuButton.setAttribute('aria-controls', 'menu');
-	menuButton.innerHTML = '<i>&#x2261;</i><b>&nbsp;menu</b>';
+	menuButton.innerHTML = '<i>&#x2261;</i><b>&nbsp;' + menustrings.menuname +'</b>';
 	
 	headerwrap.appendChild(menuButton);
 
@@ -103,8 +101,8 @@ function showMenuButton(document, window, undefined) {
 			menu.classList.remove('active');
 			menu.setAttribute('aria-hidden', 'true');
 			menuButton.setAttribute('aria-expanded', 'false');
-			menuButton.setAttribute('aria-label', 'Open menu');
-			menuButton.innerHTML = '<i>&#x2261;</i><b>&nbsp;menu</b>';
+			menuButton.setAttribute('aria-label', menustrings.showmenu); // 
+			menuButton.innerHTML = '<i>&#x2261;</i><b>&nbsp;' + menustrings.menuname +'</b>';
 	
 		} else {
 	
@@ -117,8 +115,8 @@ function showMenuButton(document, window, undefined) {
 			menu.classList.add('active');
 			menu.setAttribute('aria-hidden', 'false');
 			menuButton.setAttribute('aria-expanded', 'true');
-			menuButton.setAttribute('aria-label', 'Sluit menu');
-			menuButton.innerHTML = '<i class="close">&times;</i><b>&nbsp;menu</b>';
+			menuButton.setAttribute('aria-label', menustrings.closemenu); // 
+			menuButton.innerHTML = '<i class="close">&times;</i><b>&nbsp;' + menustrings.menuname +'</b>';
 			
 		}
 	};

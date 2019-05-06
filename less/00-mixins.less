@@ -6,8 +6,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.7
-// @desc.   Possibly country info on attendeelist, CSS bugs fixed for site-title, site-description.
+// @version 3.15.9
+// @desc.   Extra checkbox for mailinglist, a11y improvements.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 @import "01-socmed-color-codes.less";              // colors, sizes 
@@ -33,12 +33,13 @@
 @paars:                 #4C2974;
 
 @groen_1:               #1BB24B;
-@groen_4:               #00932F;
 @groen_2:               #009F33;
 @groen_3:               #A1E4B6; // erg licht groen
+@groen_4:               #00932F;
 @groen_4:               #E0F6E7; // super licht groen
-@groen_AAA:             #148839;
 
+@groen_AAA:             #148839;
+@wcagaa_groen_1:		#04803D;
 
 @oranje:                #FF8005;
 @blauw:                 #0095DA;
@@ -746,7 +747,7 @@
 
 .icon_pin_fill(@src, @fill-new) {
     @data-uri:       data-uri('image/svg+xml;charset=UTF-8', "@{src}");
-    @replace-default:   escape('fill="#1BB24B"');
+    @replace-default:   escape('fill="#1bb24b"');
     @replace-new:     escape('fill="@{fill-new}"');
     @replacesrc1:     replace("@{data-uri}", @replace-default, @replace-new, "g");
 
@@ -823,23 +824,23 @@
   }
   .event-aanmeldingen {
     background-image: url('images/icon-calendar.png');
-    .icon_pin_fill('../images/icon-calendar.svg', @groen_1);
+    .icon_pin_fill('../images/icon-calendar.svg', @wcagaa_groen_1 ); // WCAG AA @groen_1
     padding-left: 20px;
   }
   .event-pricing {
     background-image: url('images/icon-price.png');
-    .icon_pin_fill('../images/icon-price.svg', @groen_1);
+    .icon_pin_fill('../images/icon-price.svg', @wcagaa_groen_1 ); // WCAG AA @groen_1
     padding-left: 16px;
   }
   .event-times {
     background-image: url('images/icon-time.png');
-    .icon_pin_fill('../images/icon-time.svg', @groen_1);
+    .icon_pin_fill('../images/icon-time.svg', @wcagaa_groen_1 ); // WCAG AA @groen_1
     padding-left: 20px;
   }
   .event-location,
   [itemprop="location"] {
     background-image: url('images/icon-pin.png');
-    .icon_pin_fill('../images/icon-pin.svg', @groen_1);
+    .icon_pin_fill('../images/icon-pin.svg', @wcagaa_groen_1 ); // WCAG AA @groen_1
     padding-left: 15px;
   }          
   
@@ -849,29 +850,33 @@
 
 .datebadge_klein(@achtergrondkleur: @groen_1, @width: 3em) {
 
-    float: left;
-    display: inline-block;
-    border: 1px solid @border_color;
-    padding: 3px 3px 6px 3px;
-    text-align: center;
-    text-transform: uppercase;
-    line-height: 1;
-    margin-right: 1em;
-    
-    span {
-      display: block;
-      float: none;
-      clear: both;
-      color: @txt;
-      .fontsize(10);
-      padding-left: .15em;
-      padding-right: .15em;
-    }
-    .dag {
-      font-family: @headerfont;
-      .fontsize(28);
-    }
-  
+	float: left;
+	display: inline-block;
+	border: 1px solid @border_color;
+	padding: 3px 3px 6px 3px;
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 1;
+	margin-right: 1em;
+	
+	span {
+		display: block;
+		float: none;
+		clear: both;
+		color: @txt;
+		.fontsize(10);
+		padding-left: .15em;
+		padding-right: .15em;
+	}
+	.dag {
+		font-family: @headerfont;
+		.fontsize(28);
+		
+		&.multiple {
+			.fontsize(22);
+			white-space: nowrap;
+		}
+	}
 }  
 
 //=========================================================================================================
@@ -965,7 +970,7 @@
         &:hover,
         &:active,
         &:focus {
-          .icon_socmed_icon('../images/icon-twitter.svg', @groen_1);
+          .icon_socmed_icon('../images/icon-twitter.svg', @wcagaa_groen_1 ); // WCAG AA @groen_1
         }
       }
       .facebook {
@@ -976,7 +981,7 @@
         &:hover,
         &:active,
         &:focus {
-          .icon_socmed_icon('../images/icon-facebook.svg', @groen_1);
+          .icon_socmed_icon('../images/icon-facebook.svg', @wcagaa_groen_1 ); // WCAG AA @groen_1
         }
       }
       .personallink {
@@ -987,7 +992,7 @@
         &:hover,
         &:active,
         &:focus {
-          .icon_socmed_icon('../images/icon-personallink.svg', @groen_1);
+          .icon_socmed_icon('../images/icon-personallink.svg', @wcagaa_groen_1 ); // WCAG AA @groen_1
         }
       }
       .linkedin {
@@ -998,7 +1003,7 @@
         &:hover,
         &:active,
         &:focus {
-          .icon_socmed_icon('../images/icon-linkedin.svg', @groen_1);
+          .icon_socmed_icon('../images/icon-linkedin.svg', @wcagaa_groen_1 ); // WCAG AA @groen_1
         }
       }
     }
