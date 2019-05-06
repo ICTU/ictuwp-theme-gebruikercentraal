@@ -40,7 +40,3 @@ add_filter('genesis_attr_entry-footer', 'gc_shared_add_wrap_class');
 
 
 genesis();
-
-
-
-//add_action( 'genesis_entry_content', 'gc_wbvb_add_single_socialmedia_buttons', 1 );

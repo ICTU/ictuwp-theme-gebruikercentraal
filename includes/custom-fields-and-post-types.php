@@ -592,135 +592,161 @@ if ( $samenvattingverplicht ) {
     //====================================================================================================
     // Mogelijkheid om het actieteam samen te stellen 
     // via admin > weergave > Theme-instelling
-	  acf_add_local_field_group(array (
-	    'key' => 'group_56f9ba1b8e7d5',
-	    'title' => 'Theme-instellingen',
-	    'fields' => array (
-	
-				array(
-					'key' => 'field_5acce486d19d5',
-					'label' => 'Toon zoekformulier in de header',
-					'name' => 'site_option_show_search_in_header',
-					'type' => 'radio',
-					'instructions' => '',
-					'required' => 1,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'choices' => array(
-						'ja' => 'Ja, toon zoekformulier',
-						'nee' => 'Nee, verberg zoekformulier',
-					),
-					'allow_null' => 0,
-					'other_choice' => 0,
-					'save_other_choice' => 0,
-					'default_value' => 'ja',
-					'layout' => 'vertical',
-					'return_format' => 'value',
+	acf_add_local_field_group(array(
+		'key' => 'group_56f9ba1b8e7d5',
+		'title' => 'Theme-instellingen',
+		'fields' => array(
+			array(
+				'key' => 'field_5acce486d19d5',
+				'label' => 'Toon zoekformulier in het menu',
+				'name' => 'toon_zoekformulier_in_het_menu',
+				'type' => 'radio',
+				'instructions' => '',
+				'required' => 1,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
 				),
-		
-				array (
-					'key' => 'field_TtPaXjcfYKXuU',
-					'label' => 'Auteursoverzicht',
-					'name' => 'auteursoverzichtpagina_link',
-					'type' => 'page_link',
-					'instructions' => 'Selecteer de pagina met het overzicht van alle auteurs. Deze pagina wordt gebruikt in de breadcrumb.',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array (
-						'width' => '',
-						'class' => '',
-						'id' => '',
+				'choices' => array(
+					'ja' => 'Ja, toon zoekformulier',
+					'nee' => 'Nee, verberg zoekformulier',
+				),
+				'allow_null' => 0,
+				'other_choice' => 0,
+				'save_other_choice' => 0,
+				'default_value' => 'ja',
+				'layout' => 'vertical',
+				'return_format' => 'value',
+			),
+			array(
+				'key' => 'field_5ccfdad568178',
+				'label' => 'Sta social media-deelknoppen toe op de site',
+				'name' => 'toon_socialmedia_buttons_global',
+				'type' => 'radio',
+				'instructions' => 'Als je hier \'ja\' kiest, worden knoppen getoond om pagina\'s en berichten te delen. Per pagina of bericht kun je die dan weer uitzetten.
+	Als je hier \'nee\' kiest, worden ze nergens op de site getoond.',
+				'required' => 1,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'choices' => array(
+					'ja' => 'Ja, toon socialmedia-knoppen',
+					'nee' => 'Nee, verberg alle socialmedia-knoppen',
+				),
+				'allow_custom' => 0,
+				'default_value' => 'ja',
+				'layout' => 'vertical',
+				'toggle' => 0,
+				'return_format' => 'value',
+				'save_custom' => 0,
+			),
+			array(
+				'key' => 'field_ttpaxjcfykxuu',
+				'label' => 'Auteursoverzicht',
+				'name' => 'auteursoverzichtpagina_link',
+				'type' => 'page_link',
+				'instructions' => 'Selecteer de pagina met het overzicht van alle auteurs. Deze pagina wordt gebruikt in de breadcrumb.',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'post_type' => array(
+					0 => 'page',
+				),
+				'taxonomy' => '',
+				'allow_null' => 0,
+				'allow_archives' => 1,
+				'multiple' => 0,
+			),
+			array(
+				'key' => 'field_5756a88c109a8',
+				'label' => 'Link naar actieteampagina',
+				'name' => 'actieteampagina_link',
+				'type' => 'page_link',
+				'instructions' => 'Selecteer de pagina met het actieteamoverzicht.',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'post_type' => array(
+					0 => 'page',
+				),
+				'taxonomy' => '',
+				'allow_null' => 0,
+				'allow_archives' => 1,
+				'multiple' => 0,
+			),
+			array(
+				'key' => 'field_56f9ba32641f5',
+				'label' => 'Actieteamleden',
+				'name' => 'actieteamleden',
+				'type' => 'repeater',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'collapsed' => 'field_56f9ba50641f6',
+				'min' => 0,
+				'max' => 0,
+				'layout' => 'table',
+				'button_label' => 'Nieuwe regel',
+				'sub_fields' => array(
+					array(
+						'key' => 'field_56f9ba50641f6',
+						'label' => 'actielid',
+						'name' => 'actielid',
+						'type' => 'user',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'role' => '',
+						'allow_null' => 0,
+						'multiple' => 0,
+						'return_format' => 'array',
 					),
-					'post_type' => array (
-						0 => 'page',
-					),
-					'taxonomy' => array (
-					),
-					'allow_null' => 1,
-					'multiple' => 0,
-				),      
-				array (
-					'key' => 'field_5756a88c109a8',
-					'label' => 'Link naar actieteampagina',
-					'name' => 'actieteampagina_link',
-					'type' => 'page_link',
-					'instructions' => 'Selecteer de pagina met het actieteamoverzicht.',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array (
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'post_type' => array (
-						0 => 'page',
-					),
-					'taxonomy' => array (
-					),
-					'allow_null' => 1,
-					'multiple' => 0,
-				),      
-	      array (
-	        'key' => 'field_56f9ba32641f5',
-	        'label' => 'Actieteamleden',
-	        'name' => 'actieteamleden',
-	        'type' => 'repeater',
-	        'instructions' => '',
-	        'required' => 0,
-	        'conditional_logic' => 0,
-	        'wrapper' => array (
-	          'width' => '',
-	          'class' => '',
-	          'id' => '',
-	        ),
-	        'collapsed' => 'field_56f9ba50641f6',
-	        'min' => '',
-	        'max' => '',
-	        'layout' => 'table',
-	        'button_label' => 'Nieuwe regel',
-	        'sub_fields' => array (
-	          array (
-	            'key' => 'field_56f9ba50641f6',
-	            'label' => 'Actielid',
-	            'name' => 'actielid',
-	            'type' => 'user',
-	            'instructions' => '',
-	            'required' => 0,
-	            'conditional_logic' => 0,
-	            'wrapper' => array (
-	              'width' => '',
-	              'class' => '',
-	              'id' => '',
-	            ),
-	            'role' => '',
-	            'allow_null' => 0,
-	            'multiple' => 0,
-	          ),
-	        ),
-	      ),
-	    ),
-	    'location' => array (
-	      array (
-	        array (
-	          'param' => 'options_page',
-	          'operator' => '==',
-	          'value' => 'instellingen',
-	        ),
-	      ),
-	    ),
-	    'menu_order' => 0,
-	    'position' => 'normal',
-	    'style' => 'default',
-	    'label_placement' => 'top',
-	    'instruction_placement' => 'label',
-	    'hide_on_screen' => '',
-	    'active' => 1,
-	    'description' => '',
-	  ));
+				),
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'options_page',
+					'operator' => '==',
+					'value' => 'instellingen',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => true,
+		'description' => '',
+	));
+
+
   
     //========================================================================================================
 

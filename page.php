@@ -17,9 +17,6 @@ add_filter('genesis_attr_entry-header', 'gc_shared_add_wrap_class');
 add_filter('genesis_attr_entry-content', 'gc_shared_add_wrap_class');
 add_filter('genesis_attr_entry-footer', 'gc_shared_add_wrap_class');
 
-//add_action( 'genesis_entry_content', 'gc_wbvb_add_single_socialmedia_buttons', 1 );
-
-
 showdebug(__FILE__, '/');
 
 

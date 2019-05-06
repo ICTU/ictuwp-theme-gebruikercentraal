@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.8
-// @desc.   Bugfix JS: what if there's no menu?
+// @version 3.15.9
+// @desc.   Extra checkbox for mailinglist, a11y improvements.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.15.8' );
-define( 'CHILD_THEME_DESCRIPTION', "3.15.8 - Bugfix JS: what if there's no menu?" );
+define( 'CHILD_THEME_VERSION', '3.15.9' );
+define( 'CHILD_THEME_DESCRIPTION', "3.15.9 - Extra checkbox for mailinglist, a11y improvements." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -423,68 +423,71 @@ function gc_wbvb_after_entry_content() {
 add_filter( 'genesis_post_info', 'gc_wbvb_post_append_postinfo' );
 
 function gc_wbvb_post_append_postinfo($post_info) {
-  global $wp_query;
-  global $post;
 
-  $socialmedia_icoontjes    = SOC_MED_YES;
+	global $wp_query;
+	global $post;
+	
+	$toon_socialmedia_buttons_global	= get_field('toon_socialmedia_buttons_global', 'option');
+	$toon_socialmedia_buttons_single	= SOC_MED_YES;
 
-  if (
-    ( 'page'    == get_post_type() ) ||
-    ( 'post'    == get_post_type() ) ||
-    ( 'event'   == get_post_type() )
-    ) {
-
-    if ( function_exists( 'get_field' ) ) {
-      $socialmedia_icoontjes    = get_field('socialmedia_icoontjes', $post->ID );
-    }
-    else {
-      $socialmedia_icoontjes    = '';
-    }
-  }
-
-  if  ( ( $socialmedia_icoontjes !== SOC_MED_NO ) && ( is_single() ) )  {
-    $socialmedia_icoontjes = gc_wbvb_socialbuttons( $post, '' );
-  }
-  else {
-    $socialmedia_icoontjes = '';
-  }
-
-  if ( is_home() ) {
-    // niks, eigenlijk
-    return '[post_date]';
-  }
-  elseif ( is_page() ) {
-    // niks, eigenlijk
-    return '[post_date]';
-  }
-  else {
-
-    if ( 'event' == get_post_type() ) {
-      return '';
-    }
-    elseif ( GC_KLANTCONTACT_BEELDEN_CPT == get_post_type() ) {
-      if ( is_single() ) {
-        return do_shortcode('[post_terms taxonomy="' . GC_TAX_LICENTIE . '" before=""] - [post_terms taxonomy="' . GC_TAX_ORGANISATIE . '" before=""]');
-      }
-    }
-    elseif ( GC_KLANTCONTACT_BRIEF_CPT == get_post_type() ) {
-      if ( is_single() ) {
-        return do_shortcode('[post_terms taxonomy="' . GC_TAX_ORGANISATIE . '" before=""]');
-      }
-    }
-    elseif ( 'post' == get_post_type() ) {
-      if ( is_single() ) {
-        return  __('Author', 'gebruikercentraal' ) . ': ' . '[post_author_posts_link]';
-      }
-      else {
-        return '[post_author_posts_link] [post_date] [post_comments] ' . $socialmedia_icoontjes ;
-      }
-    }
-    else {
-      return '';
-    }
-  }
+	if (
+		( 'page'    == get_post_type() ) ||
+		( 'post'    == get_post_type() ) ||
+		( 'event'   == get_post_type() )
+		) {
+	
+		if ( function_exists( 'get_field' ) ) {
+			$toon_socialmedia_buttons_single    = get_field('socialmedia_icoontjes', $post->ID );
+		}
+		else {
+			$toon_socialmedia_buttons_single    = '';
+		}
+	}
+	
+	if  ( ( $toon_socialmedia_buttons_global !== SOC_MED_NO ) && ( $toon_socialmedia_buttons_single !== SOC_MED_NO ) && ( is_single() ) )  {
+		$toon_socialmedia_buttons_single = gc_wbvb_socialbuttons( $post, '' );
+	}
+	else {
+		$toon_socialmedia_buttons_single = '';
+	}
+	
+	if ( is_home() ) {
+		// niks, eigenlijk
+		return '[post_date]';
+	}
+	elseif ( is_page() ) {
+		// niks, eigenlijk
+		return '[post_date]';
+	}
+	else {
+		
+		if ( 'event' == get_post_type() ) {
+			return '';
+		}
+		elseif ( GC_KLANTCONTACT_BEELDEN_CPT == get_post_type() ) {
+			if ( is_single() ) {
+				return do_shortcode('[post_terms taxonomy="' . GC_TAX_LICENTIE . '" before=""] - [post_terms taxonomy="' . GC_TAX_ORGANISATIE . '" before=""]');
+			}
+		}
+		elseif ( GC_KLANTCONTACT_BRIEF_CPT == get_post_type() ) {
+			if ( is_single() ) {
+				return do_shortcode('[post_terms taxonomy="' . GC_TAX_ORGANISATIE . '" before=""]');
+			}
+		}
+		elseif ( 'post' == get_post_type() ) {
+			if ( is_single() ) {
+				return  __('Author', 'gebruikercentraal' ) . ': ' . '[post_author_posts_link]';
+			}
+			else {
+				return '[post_author_posts_link] [post_date] [post_comments] ' . $toon_socialmedia_buttons_single ;
+			}
+		}
+		else {
+			return '';
+		}
+	}
 }
+	
 //========================================================================================================
 
 function gc_wbvb_get_date_badge() {
@@ -516,25 +519,28 @@ function gc_wbvb_get_date_badge() {
 //========================================================================================================
 
 function gc_wbvb_add_single_socialmedia_buttons() {
+	
+	global $post;
 
-  global $post;
 
-  $socialmedia_icoontjes    = SOC_MED_YES;
+	$toon_socialmedia_buttons_single	= '';
+	
+	if ( function_exists( 'get_field' ) ) {
+		
+		$toon_socialmedia_buttons_global	= get_field('toon_socialmedia_buttons_global', 'option');
 
-  if ( function_exists( 'get_field' ) ) {
-    $socialmedia_icoontjes    = get_field('socialmedia_icoontjes', $post->ID );
-
-    if  ( ( $socialmedia_icoontjes !== SOC_MED_NO ) && ( is_single() ) )  {
-      $socialmedia_icoontjes = gc_wbvb_socialbuttons($post, '' );
-    }
-    else {
-      $socialmedia_icoontjes = '';
-    }
-
-  }
-
-  echo $socialmedia_icoontjes;
-
+		if ( $toon_socialmedia_buttons_global !== SOC_MED_NO ) {
+			
+			$toon_socialmedia_buttons_single    = get_field('socialmedia_icoontjes', $post->ID );
+			
+			if  ( ( $toon_socialmedia_buttons_single !== SOC_MED_NO ) && ( is_single() ) )  {
+				$toon_socialmedia_buttons_single = gc_wbvb_socialbuttons($post, '' );
+			}
+		}
+	}
+	
+	echo $toon_socialmedia_buttons_single;
+	
 }
 
 //========================================================================================================
@@ -542,8 +548,6 @@ function gc_wbvb_add_single_socialmedia_buttons() {
 //Social Buttons
 
 function gc_wbvb_socialbuttons($post_info, $hidden = '') {
-
-//	return '';
 
     $thelink    = urlencode(get_permalink($post_info->ID));
     $thetitle   = urlencode($post_info->post_title);
@@ -617,20 +621,20 @@ function gc_wbvb_sharebuttons_for_page_top( $title ) {
 
     global $post;
 
-    $socialmedia_icoontjes    = SOC_MED_YES;
+    $toon_socialmedia_buttons_single    = SOC_MED_YES;
 
     if ( is_page() ) {
         if ( function_exists( 'get_field' ) ) {
-            $socialmedia_icoontjes    = get_field('socialmedia_icoontjes', $post->ID );
+            $toon_socialmedia_buttons_single    = get_field('socialmedia_icoontjes', $post->ID );
         }
-        if  ( $socialmedia_icoontjes !== SOC_MED_NO )  {
+        if  ( $toon_socialmedia_buttons_single !== SOC_MED_NO )  {
             // boven moeten deelknoppen komen
-            $socialmedia_icoontjes = gc_wbvb_socialbuttons($post, '' );
+            $toon_socialmedia_buttons_single = gc_wbvb_socialbuttons($post, '' );
         }
         else {
-            $socialmedia_icoontjes = '';
+            $toon_socialmedia_buttons_single = '';
         }
-        $title .= $socialmedia_icoontjes;
+        $title .= $toon_socialmedia_buttons_single;
     }
 
     return $title;
@@ -698,41 +702,17 @@ add_action( 'genesis_before_header', 'gc_wbvb_add_skip_link' );
 
 function gc_wbvb_add_skip_link( ) {
 
-	$showsearchform			= true;
-	$acfshowsearchform		= get_field('site_option_show_search_in_header', 'option');
-	if ( 'nee' == $acfshowsearchform ) {
-		$showsearchform 		= false;
-	}
-
-	if ( ! $showsearchform ) {
-		echo sprintf(
-			'<ul id="%5$s">
-				<li><a href="#%3$s">%1$s</a></li>
-				<li><a href="#%4$s">%2$s</a></li>
-			</ul>',
-			_x('Jump to main content', 'Skiplinks', 'gebruikercentraal'),
-			_x('Jump to main navigation', 'Skiplinks', 'gebruikercentraal'),
-			ID_MAINCONTENT,
-			ID_MAINNAV,
-			ID_SKIPLINKS
-		);
-	}
-	else {
-		echo sprintf(
-			'<ul id="%7$s">
-				<li><a href="#%4$s">%1$s</a></li>
-				<li><a href="#%5$s">%2$s</a></li>
-				<li><a href="#%6$s">%3$s</a></li>
-			</ul>',
-			_x('Jump to main content', 'Skiplinks', 'gebruikercentraal'),
-			_x('Jump to main navigation', 'Skiplinks', 'gebruikercentraal'),
-			_x('Jump to site search form', 'Skiplinks', 'gebruikercentraal'),
-			ID_MAINCONTENT,
-			ID_MAINNAV,
-			ID_ZOEKEN,
-			ID_SKIPLINKS
-		);
-	}
+	echo sprintf(
+		'<ul id="%5$s">
+			<li><a href="#%3$s">%1$s</a></li>
+			<li><a href="#%4$s">%2$s</a></li>
+		</ul>',
+		_x('Jump to main content', 'Skiplinks', 'gebruikercentraal'),
+		_x('Jump to main navigation', 'Skiplinks', 'gebruikercentraal'),
+		ID_MAINCONTENT,
+		ID_MAINNAV,
+		ID_SKIPLINKS
+	);
 
 }
 
@@ -1036,8 +1016,6 @@ function gc_wbvb_add_blog_single_css() {
   else : /** if no posts exist **/
 
   endif; /** end loop **/
-
-
 
   wp_add_inline_style( ID_SINGLE_CSS, $BLOGBERICHTEN_CSS );
 
