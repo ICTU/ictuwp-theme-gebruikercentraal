@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.16.1
-// @desc.   CTA-kleuren, a11y groen, sharing buttons optional, beeldbank CPT code separation.
+// @version 3.17.1
+// @desc.   Widget voor logo's toegevoegd; kleine stijlverbeteringen.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -138,6 +138,7 @@
 			padding: 1em;
 		}
 	}
+
   
 
 
@@ -155,7 +156,9 @@
 		}
 	
 		a {
-			.knoppify(@blauw5, @blauw5, #0086C4, transparent, @wit, 17, 1px);
+//			.knoppify(@blauw5, @blauw5, #0086C4, transparent, @wit, 17, 1px);
+			.knoppify(transparent, @gc_a11y_green_light_1, @gc_a11y_green_dark_2, @gc_a11y_green, @wit, 24, 0);
+			text-transform: uppercase;
 		}
 	}
 
@@ -168,80 +171,76 @@
       border-top: 2px solid @lichtgrijs;
     }
   }
-  .gc-actieteam-widget {
-      
-    
-    section a {
-      overflow: hidden;
-      padding: @padding;
-      display: block;
-      overflow: hidden;
-      text-decoration: none;
-      background: @heelerglichtgrijs;
-      position: relative;
-      
-      &:hover,
-      &:active,
-      &:focus {
-        background: @wit;
-        color: @txt;
   
-        .author-box-title {
-          color: @groen_2;
-          &:after {
-              .icon_separator_fill('../images/cta-pijl.svg', @txt);
-          }
-        }
+	.gc-actieteam-widget {
 
-        .ezelsoortje();
-        
-      }
-    }
-    p {
-      color: @txt_grijs;  
-    }
-    .author-box-title {
-      display: inline-block;
-      clear: both;
-      margin-bottom: 0;
-      padding-bottom: 0;
-      
-      &:after {
-        height: 20px;
-        width: 20px;
-        content: ' ';
-        display: inline-block;
-        background-image: url('images/cta-pijl.png');
-        background-position: center center;
-        background-repeat: no-repeat;
-          .icon_separator_fill('../images/cta-pijl.svg', @groen_2);
-      }
-    }
-    
-    .author-box {
-      margin: 0;
-      padding: 0;
-    }
-    .author-box + .author-box {
-      border-top: 2px solid @border_authorbox;
-    }
-    .avatar,
-    .author-photo {
-      max-width: 69px;
-      height: auto;
-      border-radius: 50%;
-      background: @border_authorbox;
-    }
-    .actieteam section:nth-child(2n+2) {
-      .avatar,
-      .author-photo {
-        float: right;
-        margin: 0;
-      }
-    }
-
-    
-  }
+		section a {
+			overflow: hidden;
+			padding: @padding;
+			display: block;
+			overflow: hidden;
+			text-decoration: none;
+			background: @heelerglichtgrijs;
+			position: relative;
+			
+			&:hover,
+			&:active,
+			&:focus {
+				background: @wit;
+				color: @txt;
+				
+				.author-box-title {
+					color: @groen_2;
+					&:after {
+						.icon_separator_fill('../images/cta-pijl.svg', @txt);
+					}
+				}
+				.ezelsoortje();
+			}
+		}
+		p {
+			color: @txt_grijs;  
+		}
+		.author-box-title {
+			display: inline-block;
+			clear: both;
+			margin-bottom: 0;
+			padding-bottom: 0;
+			
+			&:after {
+				height: 20px;
+				width: 20px;
+				content: ' ';
+				display: inline-block;
+				background-image: url('images/cta-pijl.png');
+				background-position: center center;
+				background-repeat: no-repeat;
+				.icon_separator_fill('../images/cta-pijl.svg', @groen_2);
+			}
+		}
+		
+		.author-box {
+			margin: 0;
+			padding: 0;
+		}
+		.author-box + .author-box {
+			border-top: 2px solid @border_authorbox;
+		}
+		.avatar,
+		.author-photo {
+			max-width: 69px;
+			height: auto;
+			border-radius: 50%;
+			background: @border_authorbox;
+		}
+		.actieteam section:nth-child(2n+2) {
+		.avatar,
+		.author-photo {
+			float: right;
+			margin: 0;
+		}
+		}
+	}
 
   .gc-actieteam-widget,
   .gc-event-widget,
@@ -410,6 +409,55 @@
       }
     }
   }
+
+@spaceme: 1rem;
+
+	// styling for logo widget
+	.logo-flexbox {
+		display: flex;
+		flex-wrap: wrap;		
+		
+		margin-left: ( -1 * @spaceme );
+		margin-right: ( -1 * @spaceme );
+		.logo-flexblock {
+			flex: 1;
+			background-color: @wit;
+			margin: @spaceme;
+			min-width: 90px;
+			/*
+			a {
+				border: 2px solid transparent;
+				display: block;
+				overflow: hidden;
+				font-size: 0;
+				&:hover {
+					border-color: @txt;					
+				}
+			}
+			*/
+			a {
+				font-size: 0;
+				border: 2px solid transparent;
+				display: block;
+				overflow: hidden;
+				&:hover,
+				&:active,
+				&:focus {
+					border-color: @txt;					
+					outline: 2px solid @txt;
+				}
+			}
+			
+			img {
+				font-size: 0;
+				max-width: 100%;
+				height: auto;
+				margin: 0;
+				display: table-cell;
+			}
+		}      
+	}
+
   
   .footer-widgets {
     .gc-site-footer-widget,

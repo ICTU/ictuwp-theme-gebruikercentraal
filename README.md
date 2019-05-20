@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-3.16.1 - CTA-kleuren, a11y groen, sharing buttons optional, beeldbank CPT code separation.
+3.17.1 - Widget voor logo's toegevoegd; kleine stijlverbeteringen.
 
 ## Version history
+* 3.17.1 - Widget voor logo's toegevoegd; kleine stijlverbeteringen.
 * 3.16.1 - CTA-kleuren, a11y groen, sharing buttons optional, beeldbank CPT code separation.
 * 3.15.9 - Extra checkbox for mailinglist, a11y improvements.
 * 3.15.8 - Bugfix JS: what if there's no menu?

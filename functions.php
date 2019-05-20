@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.16.1
-// @desc.   CTA-kleuren, a11y groen, sharing buttons optional, beeldbank CPT code separation.
+// @version 3.17.1
+// @desc.   Widget voor logo's toegevoegd; kleine stijlverbeteringen.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.16.1' );
-define( 'CHILD_THEME_DESCRIPTION', "3.16.1 - CTA-kleuren, a11y groen, sharing buttons optional, beeldbank CPT code separation." );
+define( 'CHILD_THEME_VERSION', '3.17.1' );
+define( 'CHILD_THEME_DESCRIPTION', "3.17.1 - Widget voor logo's toegevoegd; kleine stijlverbeteringen." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -146,6 +146,9 @@ if ( ! defined( 'EMP_FORMS_TEXTAREA_SIZE' ) ) {
   define( 'EMP_FORMS_TEXTAREA_SIZE', '4,20' ); // four rows, 20 columns
 }
 
+if ( ! defined( 'WBVB_GC_LOGOWIDGET' ) ) {
+  define( 'WBVB_GC_LOGOWIDGET',              'GC logo-widget');
+}
 
 
 
@@ -195,6 +198,9 @@ require_once( GC_FOLDER . '/widgets/gc-user-welcome-widget.php' );
 require_once( GC_FOLDER . '/widgets/gc-event-widget.php' );
 require_once( GC_FOLDER . '/widgets/gc-berichten-widget.php' );
 require_once( GC_FOLDER . '/widgets/gc-footer-widget.php' );
+require_once( GC_FOLDER . '/widgets/gc-footer-logo-widget.php' );
+
+
 require_once( GC_FOLDER . '/includes/common-functions.php' );
 
 
