@@ -1,1 +1,14 @@
-<svg height="40" viewBox="0 0 25 40" width="25" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="m-2.69132 0h30.757939v40h-30.757939z" fill="#fff"/><path d="m11.4360352 14.438966-1.4360352 1.78093 3.4972392 3.8905962-3.4972392 3.8907807 1.4360352 2.1073895 5.6238995-5.9981702z" fill="#0f6229"/></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="33px" height="80px" viewBox="0 0 33 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>icon-knop-groen-hover</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-knop-groen-hover">
+            <g>
+                <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="33" height="80"></rect>
+                <polygon id="Fill-1" fill="#0B732C" points="14.3884162 35 13 36.3608876 17.2231675 40.5003207 13 44.6391124 14.3884162 46 20 40.5003207"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.16.1
-// @desc.   CTA-kleuren, a11y groen, sharing buttons optional, beeldbank CPT code separation.
+// @version 3.17.2
+// @desc.   Bugfixes: kleur voor knoppen en cta-links.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -130,20 +130,14 @@
 		input[type="button"],
 		input[type="reset"],
 		input[type="submit"] {
-			background-color: @button-sidebar-normal;
-			color: @button-sidebar-normal-color;
-			border-color: @button-sidebar-normal;
-			
-			.button_font_shared();
-			
-			
+			.button_font_shared( 24 );
+
 			&:hover,
 			&:active,
 			&:focus {
 				color: @txt;
 				border-color: @button-sidebar-normal;
-				background-color: @wit;
-				background-image: url('images/icon-knop-groen.svg'),none;				
+			    background: @wit url('images/icon-knop-groen-hover.svg?asd') no-repeat right center;
 				text-decoration: none;
 			}
 		}

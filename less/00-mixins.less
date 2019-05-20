@@ -6,8 +6,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.16.1
-// @desc.   CTA-kleuren, a11y groen, sharing buttons optional, beeldbank CPT code separation.
+// @version 3.17.2
+// @desc.   Bugfixes: kleur voor knoppen en cta-links.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 @import "01-socmed-color-codes.less";              // colors, sizes 
@@ -42,7 +42,7 @@
 
 @gc_a11y_green:        		#148839; // ook wel 'GC Green - Accessible'
 @gc_a11y_green_dark_1:		#0b732c; // ook wel 'GC Green - Darker'
-@gc_a11y_green_dark_2:		darken( @gc_a11y_green_dark_1, 10% );
+@gc_a11y_green_dark_2:		#0B732C;
 @gc_a11y_green_light_1:		pink; // lighten( @gc_a11y_green, 10% );
 @gc_a11y_green_light_2:		#E0F6E7; // voor hover 
 
@@ -260,16 +260,14 @@
 // mixins
 // ==================================================================================
 
-.button-shared-pijltje-1() {
-    background: @button-normal url('images/icon-knop-groen.png') no-repeat right center;
-    background-image: url('images/icon-knop-groen.svg'), none;
+.button_shared_pijltje_1() {
+    background: @button-normal url('images/icon-knop-groen.svg?asd') no-repeat right center;
 }
 
 //========================================================================================================
 
-.button-shared-pijltje-1-hover() {
-    background: @wit url('images/icon-knop-groen-hover.png') no-repeat right center;
-    background-image: url('images/icon-knop-groen-hover.svg'), none;
+.button_shared_pijltje_1_hover() {
+    background: @wit url('images/icon-knop-groen-hover.svg?asd') no-repeat right center;
 }
 
 //========================================================================================================
@@ -291,10 +289,10 @@
 	text-transform: uppercase;
 	width: auto;
 	.inputpadding();
-	border: 2px solid @button-normal;
-	padding: ( @padding / 2 ) ( @padding * 2 ) ( @padding / 2 ) @padding;
+	border: 2px solid transparent;
+	padding: ( @padding / 2 ) 46px ( @padding / 2 ) @padding;
 	border-radius: 0;
-	.button-shared-pijltje-1();
+	.button_shared_pijltje_1();
 	
 	.button_font_shared();
 	
@@ -303,7 +301,7 @@
 	&:focus {
 		color: @button-normal;
 		text-decoration: underline;
-		.button-shared-pijltje-1-hover();
+		.button_shared_pijltje_1_hover();
 	}
 }
 
@@ -710,11 +708,9 @@
 
 	background-color: @bg_color;
 	display: table-cell;
-//	display: inline-block;
-overflow: hidden;
+	overflow: hidden;
 	vertical-align: middle;
 	position: relative;
-	//  height: 42px;
 	border: @borderwidth solid @bordercolor;
 	box-shadow: 3px 3px 0px rgba(#000, 0.2);
 	
@@ -1466,10 +1462,17 @@ overflow: hidden;
 //=========================================================================================================
 
 .calltoactionstyling() {
+/*
+.knoppify( 
+	@bordercolor: @blauw5, 
+	@box_shadow: @blauw5, 
+	@ctacolor: @blauw5, 
+	
+*/	
 
 	a.cta {
-		.knoppify(transparent, @gc_a11y_green_light_1, @gc_a11y_green_dark_2, @gc_a11y_green, @wit, 24, 0);
-//		display: block;
+		.knoppify( transparent, @gc_a11y_green_light_1, @gc_a11y_green_dark_2, @gc_a11y_green, @wit, 24, 0);
+//		.knoppify( transparent, @gc_a11y_green_light_1, @gc_a11y_green_dark_2, @gc_a11y_green, @wit, 24, 0);
 		float: right;
 		text-transform: uppercase;
 	}

@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.17.1
-// @desc.   Widget voor logo's toegevoegd; kleine stijlverbeteringen.
+// @version 3.17.2
+// @desc.   Bugfixes: kleur voor knoppen en cta-links.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.17.1' );
-define( 'CHILD_THEME_DESCRIPTION', "3.17.1 - Widget voor logo's toegevoegd; kleine stijlverbeteringen." );
+define( 'CHILD_THEME_VERSION', '3.17.2' );
+define( 'CHILD_THEME_DESCRIPTION', "3.17.2 - Bugfixes: kleur voor knoppen en cta-links." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
