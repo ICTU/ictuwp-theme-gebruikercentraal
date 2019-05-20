@@ -6,99 +6,115 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.9
-// @desc.   Extra checkbox for mailinglist, a11y improvements.
+// @version 3.16.1
+// @desc.   CTA-kleuren, a11y groen, sharing buttons optional, beeldbank CPT code separation.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 @import "01-socmed-color-codes.less";              // colors, sizes 
 
 
-// break points ====================================================================
-@break_fullwidth:       960px; // ( 63 * @padding );
-@break_show_menu_button:830px;
-@break_tablet:          650px;
-@break_phone:           500px;
+//========================================================================================================
+// break points
+@break_fullwidth:       	960px; // ( 63 * @padding );
+@break_show_menu_button:	830px;
+@break_tablet:          	650px;
+@break_phone:           	500px;
 
-// koeleuren =======================================================================
-@test1:                 red;
-@test2:                 blue;
-@test3:                 yellow;
-@test4:                 green;
-@test5:                 silver;
-@test6:                 brown;
-@test7:                 red;
+//========================================================================================================
+// koeleuren
+@test1:                 	red;
+@test2:                 	blue;
+@test3:                 	yellow;
+@test4:                 	green;
+@test5:                 	silver;
+@test6:                 	brown;
+@test7:                 	red;
 
-@paars:                 #4B2974;
-@violet:                #C42C76;
-@paars:                 #4C2974;
+@paars:                 	#4B2974;
+@violet:                	#C42C76;
+@paars:                 	#4C2974;
 
-@groen_1:               #1BB24B;
-@groen_2:               #009F33;
-@groen_3:               #A1E4B6; // erg licht groen
-@groen_4:               #00932F;
-@groen_4:               #E0F6E7; // super licht groen
+// alle groenen
+//@groen_1:               	#1BB24B;
+@groen_2:               	#009F33;
+@groen_3:               	#A1E4B6; // erg licht groen
+@groen_4:               	#00932F;
 
-@groen_AAA:             #148839;
-@wcagaa_groen_1:		#04803D;
+@gc_a11y_green:        		#148839; // ook wel 'GC Green - Accessible'
+@gc_a11y_green_dark_1:		#0b732c; // ook wel 'GC Green - Darker'
+@gc_a11y_green_dark_2:		darken( @gc_a11y_green_dark_1, 10% );
+@gc_a11y_green_light_1:		pink; // lighten( @gc_a11y_green, 10% );
+@gc_a11y_green_light_2:		#E0F6E7; // voor hover 
 
-@oranje:                #FF8005;
-@blauw:                 #0095DA;
-@blauw2:                #004152;
-@blauw3:                #002F3E;
-@blauw4:                #608A95;
-@blauw5:                #005870;
-@blauw6:                #27779C;
+@gc_a11y_orange: 			#c73d19; // ook wel 'Inclusie Accessible Orange'
+@gc_a11y_orange_less: 		#d94721; // ook wel 'Inclusie Less Accessible Orange'
 
-@heelerglichtgrijs:     #F7F7F7;
-@sitecontainer_bg:      #DEDEDE;
-@border_color:          #DEDEDE;
-@code-bg:               @border_color;
-@light_gray:            #DEDEDE;
-@border_authorbox:      #E8E8E8;
+@gc_darkblue: 				#004152; // ook wel 'GC Dark Blue'
+@gc_darkerblue: 			#00303d; // ook wel 'GC Darker Blue'
 
-@comment-list-even:     @wit;
-@comment-list-odd:      #F7F7F7;
-
-@sidebar_bg:            @wit;
-@sidebarwidget:         @blauw3;
-@entry_bg:              @wit;
-
-@code:                  #1C5BB7;
-
-@txt_grijs:             #6E6E6E;
-
-@border_grijs:          #E0DFDF;
-
-@hover_widget_txt_color: @txt;
-
-@oranje:                #F7941E; // ondermeer gebruikt voor 'vol'
-
-// koeleuren voor de navigatiedinges ===============================================
-@nav_bg:                @wit;
-@nav_wrap_bg:           #004152;
-@nav_a_color:           @wit;
-@header_bg_color:       #00303D;
-
-@breadcrumb_bg_color:   @wit;
+@gc_pantybrown_light: 		#f2ebe4; // ook wel 'GC PantyBrown Light'
+@gc_pantybrown: 			#e8d8c7; // ook wel 'GC PantyBrown'
 
 
-@bsitefooter_a_color:   @wit; // #6D9DAA;
 
-@menu_active:           @groen_2;
+@oranje:                	#FF8005;
+@blauw:                 	#0095DA;
+@blauw3:                	#002F3E;
+@blauw4:                	#608A95;
+@blauw5:                	#005870;
+@blauw6:                	#27779C;
 
-@mess_ok_color:         @groen_1;
-@mess_ok_bg:            lighten( @mess_ok_color, 50% );
-@mess_ok_border:        @mess_ok_color;
+@heelerglichtgrijs:     	#F7F7F7;
+@sitecontainer_bg:      	#DEDEDE;
+@border_color:          	#DEDEDE;
+@code-bg:               	@border_color;
+@light_gray:            	#DEDEDE;
+@border_authorbox:      	#E8E8E8;
 
-@mess_error_color:      @violet;
-@mess_error_bg:         lighten( @mess_error_color, 50% );
-@mess_error_border:     @mess_error_color;
-@bodybgcolor:           #fff;
-//@bodybgcolor:           red;
-@lichtgrijs:            #F0F0F0;
-//@content_bg_color:      yellow;
-@content_bg_color:      @wit;
-@warning:               #FFFEC1;
+@comment-list-even:     	@wit;
+@comment-list-odd:      	#F7F7F7;
+
+@sidebar_bg:            	@wit;
+@sidebarwidget:         	@blauw3;
+@entry_bg:              	@wit;
+
+@code:                  	#1C5BB7;
+
+@txt_grijs:             	#6E6E6E;
+
+@border_grijs:          	#E0DFDF;
+
+@hover_widget_txt_color: 	@txt;
+
+@oranje:                	#F7941E; // ondermeer gebruikt voor 'vol'
+
+
+//========================================================================================================
+// koeleuren voor de navigatiedinges 
+@nav_bg:                	@wit;
+@nav_wrap_bg:           	@gc_darkblue;
+@nav_a_color:           	@wit;
+@header_bg_color:       	@gc_darkerblue;
+
+@breadcrumb_bg_color:   	@wit;
+
+@a_menu_hover_border:		#1BB24B; // onderstreping in main nav bij hover en current
+
+@bsitefooter_a_color:   	@wit; // #6D9DAA;
+
+@menu_active:           	@groen_2;
+
+@mess_ok_color:         	#1BB24B;
+@mess_ok_bg:            	lighten( @mess_ok_color, 50% );
+@mess_ok_border:        	@mess_ok_color;
+
+@mess_error_color:      	@violet;
+@mess_error_bg:         	lighten( @mess_error_color, 50% );
+@mess_error_border:     	@mess_error_color;
+@bodybgcolor:           	#fff;
+@lichtgrijs:            	#F0F0F0;
+@content_bg_color:      	@wit;
+@warning:               	#FFFEC1;
 
 //========================================================================================================
 
@@ -117,37 +133,34 @@
 }
 
 //========================================================================================================
+// tekst-koeleuren, best belangrijk 
+@txt:                   	@blauw3;
+@wit:                   	#fff;
 
-// tekst-koeleuren, best belangrijk ================================================
-@txt:                   @blauw3;
-@wit:                   #fff;
+@meta_color:            	lighten(@txt, 10%);
 
-@meta_color:            lighten(@txt, 10%);
+@a_hover:               	@violet;
+@a-content-color:       	@txt;
+@a-content-hover-color: 	@violet;
 
-@a_hover:               @violet;
-@a-content-color:       @txt;
-@a-content-hover-color: @violet;
+//========================================================================================================
+// en button-koeleuren, ook belangrijk
 
-// en button-koeleuren, ook belangrijk =============================================
+@button-normal:         	@gc_a11y_green;
+@button-hover:          	@wit;
 
-@goedgekeurdgroen:  darken(@groen_1, 18%);
-
-@button-normal:         @goedgekeurdgroen;
-@button-hover:          @wit;
-
-@button-sidebar-normal: @goedgekeurdgroen;
-@button-sidebar-hover:  @blauw3;
+@button-sidebar-normal: 	@gc_a11y_green;
+@button-sidebar-hover:  	@blauw3;
 @button-sidebar-normal-color: @wit;
 
-@bbpress_badge_default: lighten(@txt,30%);
 
 // basisdingen om mee te kunnen rekenen ============================================
-@pixel:                 1px;
-@viewport:              1vw;
-@basefontsize:          10;
-@basefont:              ( @basefontsize * @pixel );
+@pixel:                 	1px;
+@viewport:              	1vw;
+@basefontsize:          	10;
+@basefont:              	( @basefontsize * @pixel );
 
-@bigmargin:             0;
+@bigmargin:             	0;
 
 @widget_area_button:    	40px;
 
@@ -169,23 +182,23 @@
 @contentpadding:        	@padding;
 
 
-@position_navbar:       180px;
-@height_navbar:         43px;
-@adminbar:              32;
-@headerheight:          0;
+@position_navbar:       	180px;
+@height_navbar:         	43px;
+@adminbar:              	32;
+@headerheight:          	0;
 
-@headerimage_height:    150px;
-@headerimage_height_1:  400px;
+@headerimage_height:    	150px;
+@headerimage_height_1:  	400px;
 
-@widget_first_margin:   0;
+@widget_first_margin:   	0;
 
 // breedtes en hoogtes van elementen ===============================================
-@programa_tijd_width: 35%;
-@programa_desc_width: ( 99% - @programa_tijd_width );
+@programa_tijd_width: 		35%;
+@programa_desc_width: 		( 99% - @programa_tijd_width );
 
 
-@submenu_desktop_width:	21.66666667rem; // 260px;	// breedte van de submenu-UL op een desktop scherm		    
-@mainmenu_mobile_width:	24.16666667rem; // 290px;	// breedte van het menu op een mobiel scherm en de ruimte die de content naar rechts wordt opgeschoven
+@submenu_desktop_width:		21.66666667rem; // 260px;	// breedte van de submenu-UL op een desktop scherm		    
+@mainmenu_mobile_width:		24.16666667rem; // 290px;	// breedte van het menu op een mobiel scherm en de ruimte die de content naar rechts wordt opgeschoven
 
 
 // font-stijlen en -groottes =======================================================
@@ -198,8 +211,8 @@
 @header_color:          #210800;
 @header_color_2:        @blauw;
 
-@fontsize_title_h1:     ( 2.9 * @basefontsize );
-@fontsize_title_h2:     ( 2.8 * @basefontsize );
+@fontsize_title_h1:     ( 3.6 * @basefontsize );
+@fontsize_title_h2:     ( 2.6 * @basefontsize );
 @fontsize_title_h3:     ( 1.8 * @basefontsize );
 @fontsize_title_h4:     ( 1.7 * @basefontsize );
 @fontsize_title_h5:     ( 1.6 * @basefontsize );
@@ -262,10 +275,10 @@
 //========================================================================================================
 
 .button_font_shared(@fontsize: 18) {
-  font-family: @headerfont;
-  .fontsize(@fontsize);
-  letter-spacing: 1px;
-  font-weight: normal;
+	font-family: @headerfont;
+	.fontsize(@fontsize);
+//  letter-spacing: 1px;
+	font-weight: normal;
 }
 
 //========================================================================================================
@@ -682,43 +695,65 @@
 
 //=========================================================================================================
 
-.knoppify(@bordercolor: @blauw5, @box_shadow: @blauw5, @ctacolor: @blauw5, @bg_color: transparent, @fontcolor: @wit, @fontsize: 32, @borderwidth: 1px, @color_arrow: @wit) {
-  
-  background-color: @bg_color;
-  display: table-cell;
-  vertical-align: middle;
-  padding-left: @padding;
-  position: relative;
-  height: 42px;
-  border: @borderwidth solid @bordercolor;
-  padding-right: ( @buttonwidth + @padding );
-  box-shadow: 3px 3px 0px @box_shadow;
-  .button_font_shared(@fontsize);
-  color: @fontcolor;
-  text-decoration: none;
-  
-  &:hover,
-  &:focus,
-  &:active {
-    text-decoration: underline;
-    color: @fontcolor;
-  }
-  
-  &:after {
-    position: absolute;
-    right: 0;
-    top: 0;
-    content: ' ';
-    width: @buttonwidth;
-    height: 100%;
-    display: block;
-    float: right;
-    background: @ctacolor url('images/arrow-wit.png') no-repeat left center;
-    .pijltje_wit('../images/arrow-wit.svg', @color_arrow);
-  }
+.knoppify( 
+	@bordercolor: @blauw5, 
+	@box_shadow: @blauw5, 
+	@ctacolor: @blauw5, 
+	@bg_color: transparent, 
+	@fontcolor: @wit, 
+	@fontsize: 32, 
+	@borderwidth: 1px, 
+	@color_arrow: @wit,
+	@bg_color_txt_hover: @gc_darkblue,
+	@bg_color_after_hover: @gc_darkerblue,
+	@txt_color_hover: @wit ) {
+
+	background-color: @bg_color;
+	display: table-cell;
+//	display: inline-block;
+overflow: hidden;
+	vertical-align: middle;
+	position: relative;
+	//  height: 42px;
+	border: @borderwidth solid @bordercolor;
+	box-shadow: 3px 3px 0px rgba(#000, 0.2);
+	
+	.button_font_shared(@fontsize);
+	color: @fontcolor;
+	text-decoration: none;
+	line-height: 2;
+	
+	padding-left: .75em;
+	padding-right: 2em;
+	
+	&:after {
+		position: absolute;
+		right: 0;
+		top: 0;
+		content: ' ';
+		width: 1.25em;
+		height: 100%;
+		display: block;
+		float: right;
+		background: @ctacolor url('images/arrow-wit.svg') no-repeat center center;
+		.pijltje_wit('../images/arrow-wit.svg', @color_arrow);
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: underline;
+		border-color: @txt;
+		color: @txt_color_hover;
+		background-color: @bg_color_txt_hover;
+
+		&:after {
+			background-color: @bg_color_after_hover;
+			.pijltje_wit('../images/arrow-wit.svg', @color_arrow);
+		}
+	}
+	
 }
-
-
 
 //=========================================================================================================
 
@@ -761,18 +796,16 @@
     @replace-default:   escape('fill="@{fill-old}"');
     @replace-new:       escape('fill="@{fill-new}"');
     @replacesrc1:       replace("@{data-uri}", @replace-default, @replace-new, "g");
-
     background-image: e(@replacesrc1);
 }
 
 //=========================================================================================================
 
 .icon_separator_fill(@src, @fill-new) {
-    @data-uri:       data-uri('image/svg+xml;charset=UTF-8', "@{src}");
-    @replace-default:   escape('fill="#009F33"');
-    @replace-new:     escape('fill="@{fill-new}"');
-    @replacesrc1:     replace("@{data-uri}", @replace-default, @replace-new, "g");
-
+    @data-uri:       	data-uri('image/svg+xml;charset=UTF-8', "@{src}");
+    @replace-default:	escape('fill="#009f33"');
+    @replace-new:     	escape('fill="@{fill-new}"');
+    @replacesrc1:     	replace("@{data-uri}", @replace-default, @replace-new, "g");
     background-image: e(@replacesrc1);
 }
 
@@ -796,7 +829,7 @@
 	
 	@data-uri:          data-uri('image/svg+xml;charset=UTF-8', "@{src}");
 	
-	@replace-default:   escape('fill="#FFFFFF"');
+	@replace-default:   escape('fill="#fff"');
 	@replace-new:       escape('fill="@{fill-new}"');
 	@replace-src:       replace("@{data-uri}", @replace-default, @replace-new, "g");
 	
@@ -824,23 +857,23 @@
   }
   .event-aanmeldingen {
     background-image: url('images/icon-calendar.png');
-    .icon_pin_fill('../images/icon-calendar.svg', @wcagaa_groen_1 ); // WCAG AA @groen_1
+    .icon_pin_fill('../images/icon-calendar.svg', @gc_a11y_green );
     padding-left: 20px;
   }
   .event-pricing {
     background-image: url('images/icon-price.png');
-    .icon_pin_fill('../images/icon-price.svg', @wcagaa_groen_1 ); // WCAG AA @groen_1
+    .icon_pin_fill('../images/icon-price.svg', @gc_a11y_green );
     padding-left: 16px;
   }
   .event-times {
     background-image: url('images/icon-time.png');
-    .icon_pin_fill('../images/icon-time.svg', @wcagaa_groen_1 ); // WCAG AA @groen_1
+    .icon_pin_fill('../images/icon-time.svg', @gc_a11y_green );
     padding-left: 20px;
   }
   .event-location,
   [itemprop="location"] {
     background-image: url('images/icon-pin.png');
-    .icon_pin_fill('../images/icon-pin.svg', @wcagaa_groen_1 ); // WCAG AA @groen_1
+    .icon_pin_fill('../images/icon-pin.svg', @gc_a11y_green );
     padding-left: 15px;
   }          
   
@@ -848,7 +881,7 @@
 
 //=========================================================================================================
 
-.datebadge_klein(@achtergrondkleur: @groen_1, @width: 3em) {
+.datebadge_klein( @achtergrondkleur: @gc_a11y_green, @width: 3em) {
 
 	float: left;
 	display: inline-block;
@@ -881,7 +914,7 @@
 
 //=========================================================================================================
 
-.datebadge_groot(@achtergrondkleur: @groen_1, @width: 3em, @top: 0, @left: 0) {
+.datebadge_groot(@achtergrondkleur: @gc_a11y_green, @width: 3em, @top: 0, @left: 0) {
             
     background: @achtergrondkleur;
     position: absolute;
@@ -970,7 +1003,7 @@
         &:hover,
         &:active,
         &:focus {
-          .icon_socmed_icon('../images/icon-twitter.svg', @wcagaa_groen_1 ); // WCAG AA @groen_1
+          .icon_socmed_icon('../images/icon-twitter.svg', @gc_a11y_green );
         }
       }
       .facebook {
@@ -981,7 +1014,7 @@
         &:hover,
         &:active,
         &:focus {
-          .icon_socmed_icon('../images/icon-facebook.svg', @wcagaa_groen_1 ); // WCAG AA @groen_1
+          .icon_socmed_icon('../images/icon-facebook.svg', @gc_a11y_green );
         }
       }
       .personallink {
@@ -992,7 +1025,7 @@
         &:hover,
         &:active,
         &:focus {
-          .icon_socmed_icon('../images/icon-personallink.svg', @wcagaa_groen_1 ); // WCAG AA @groen_1
+          .icon_socmed_icon('../images/icon-personallink.svg', @gc_a11y_green );
         }
       }
       .linkedin {
@@ -1003,7 +1036,7 @@
         &:hover,
         &:active,
         &:focus {
-          .icon_socmed_icon('../images/icon-linkedin.svg', @wcagaa_groen_1 ); // WCAG AA @groen_1
+          .icon_socmed_icon('../images/icon-linkedin.svg', @gc_a11y_green );
         }
       }
     }
@@ -1014,19 +1047,19 @@
 //=========================================================================================================
 
 .cta_pijl(@width, @height, @right: 0, @bottom: 1em) {
-  content: ' ';
-  border: 2px solid @groen_1;
-  width: ( @width );
-  height: @height;
-  display: block;
-  position: absolute;
-  right: @right;
-  bottom: @bottom;
-  box-shadow: 3px 3px 0px @groen_3;
-  background-image: url('images/cta-pijl.png');
-  background-image: url('images/cta-pijl.svg'), none;
-  background-position: center center;
-  background-repeat: no-repeat;
+	content: ' ';
+	border: 2px solid @gc_a11y_green;
+	width: ( @width );
+	height: @height;
+	display: block;
+	position: absolute;
+	right: @right;
+	bottom: @bottom;
+	box-shadow: 3px 3px 0px rgba(#000, 0.2);
+	background-image: url('images/cta-pijl.png');
+	background-image: url('images/cta-pijl.svg'), none;
+	background-position: center center;
+	background-repeat: no-repeat;
 }
 
 //=========================================================================================================
@@ -1080,18 +1113,17 @@
 
 .random_bg_images(@image_png, @image_svg) {
 
-  .feature-image.noimage {
-    background-color: @groen_4;
-    background-image: url( @image_png );
-    background-image: url( @image_svg ), repeating-linear-gradient(
-      20deg,
-      @groen_1,
-      @groen_1 50px,
-      @groen_4 25px,
-      @groen_4 120px
-    );
-  }
-
+	.feature-image.noimage {
+		background-color: @groen_4;
+		background-image: url( @image_png );
+		background-image: url( @image_svg ), repeating-linear-gradient(
+			20deg,
+			@gc_a11y_green,
+			@gc_a11y_green 50px,
+			@gc_a11y_green_dark_1 25px,
+			@gc_a11y_green_dark_1 120px
+		);
+	}
   
   section:nth-child(3n+3) {
 
@@ -1100,10 +1132,10 @@
       background-image: url( @image_png );
       background-image: url( @image_svg ), repeating-linear-gradient(
         60deg,
-        @blauw2,
-        @blauw2 50px,
-        lighten(@blauw2, 10%) 25px,
-        lighten(@blauw2, 10%) 120px
+        @gc_darkblue,
+        @gc_darkblue 50px,
+        lighten(@gc_darkblue, 10%) 25px,
+        lighten(@gc_darkblue, 10%) 120px
       );
     }
   }
@@ -1304,7 +1336,7 @@
       }
     }
     a[href*="mailto:"] {
-      background-color: @blauw2;
+      background-color: @gc_darkblue;
       padding-left: 1em;
       padding-right: 1em;
       color: @wit;
@@ -1338,7 +1370,7 @@
     a[href*="tel:"] {
       &:before {
         background: url('images/icon-phone.png') no-repeat center center;
-        .icon_replace_filler('../images/icon-phone.svg', '#004152', @txt);
+        .icon_replace_filler('../images/icon-phone.svg', @gc_darkblue, @txt);
       }
     }
     
@@ -1434,96 +1466,91 @@
 //=========================================================================================================
 
 .calltoactionstyling() {
-  
-  
-  a.cta {
-    .knoppify(transparent, #00832A, #0CA13B, #1BB24B, @wit, 24, 0);
-    display: block;
-    float: right;
-    text-transform: uppercase;
-  }
-  
-  
-  @call_to_action_2nd_link_achtergrond:           darken( @wit, 10% );
-  @call_to_action_2nd_link_schaduw:               darken( @call_to_action_2nd_link_achtergrond, 20% );
-  @call_to_action_2nd_link_pijltje_achtergrond:   @light_gray;
-  @call_to_action_2nd_link_color:                 @txt;
-  @call_to_action_2nd_bg:                         @blauw6;
-  @call_to_action_2nd_border:                     @call_to_action_2nd_link_pijltje_achtergrond;
-  
-  
-  
-  @call_to_action_link_achtergrond:           #1BB24B;
-  @call_to_action_link_schaduw:               #00832A;
-  @call_to_action_link_pijltje_achtergrond:   #0CA13B;
-  @call_to_action_link_color:                 @wit;
-  
-  @call_to_action_bg:                         @wit;
-  @call_to_action_color:                      @txt;
-  @call_to_action_border:                     @blauw6;
-  
-  
-  .call-to-action {
-    background: @call_to_action_bg;
-    border: 1px solid @call_to_action_border;
-  
-    background: @heelerglichtgrijs;
-    border-color: @heelerglichtgrijs;
-  
-    padding: 1em;
-    margin: 0 0 1em 0;
-    color: @call_to_action_color;
-    overflow: hidden;
-  
-    p {
-      margin-bottom: 0;
-      & + p {
-        margin-top: 1em;
-      }
-    }
-    
-    a, p, h2, h3, h4, h5, h6 {
-      color: @call_to_action_color;
-    }
-    
-  
-    h2, h3, h4, h5, h6 {
-      padding: 0;    
-      margin: 0;    
-    }
-  
-    a.cta {
-      .knoppify(transparent, @call_to_action_link_schaduw, @call_to_action_link_pijltje_achtergrond, @call_to_action_link_achtergrond, @call_to_action_link_color, 24, 0, @call_to_action_link_color);
-    }
-  }
-  .call-to-action.secondary {
-    background: @heelerglichtgrijs;
-    border-color: @heelerglichtgrijs;
-    
-    a.cta {
-      .knoppify(transparent, @call_to_action_2nd_link_schaduw, @call_to_action_2nd_link_pijltje_achtergrond, @call_to_action_2nd_link_achtergrond, @call_to_action_2nd_link_color, 24, 0, @call_to_action_2nd_link_color);
-    }
-  }
-  
-  
-  @media only screen and (min-width: @break_tablet ) {
-    .call-to-action.floatright {
-      max-width: 50%;
-      float: right;
-      margin-left: 1em;
-  
-      a.cta {
-        display: inline-block;
-        float: right;
-        clear: both;
-      }
-    }
-  }
 
+	a.cta {
+		.knoppify(transparent, @gc_a11y_green_light_1, @gc_a11y_green_dark_2, @gc_a11y_green, @wit, 24, 0);
+//		display: block;
+		float: right;
+		text-transform: uppercase;
+	}
+
+	@call_to_action_2nd_link_achtergrond:           darken( @wit, 10% );
+	@call_to_action_2nd_link_schaduw:               darken( @call_to_action_2nd_link_achtergrond, 20% );
+	@call_to_action_2nd_link_pijltje_achtergrond:   @light_gray;
+	@call_to_action_2nd_link_color:                 @txt;
+	@call_to_action_2nd_bg:                         @blauw6;
+	@call_to_action_2nd_border:                     @call_to_action_2nd_link_pijltje_achtergrond;
+	
+	@call_to_action_link_achtergrond:           	#1BB24B;
+	@call_to_action_link_schaduw:               	#00832A;
+	@call_to_action_link_pijltje_achtergrond:   	#0CA13B;
+	@call_to_action_link_color:                 	@wit;
+	
+	@call_to_action_bg:                         	@wit;
+	@call_to_action_color:                      	@txt;
+	@call_to_action_border:                     	@blauw6;
+  
+  
+	.call-to-action {
+		background: @call_to_action_bg;
+		border: 1px solid @call_to_action_border;
+		
+		background: @heelerglichtgrijs;
+		border-color: @heelerglichtgrijs;
+		
+		padding: 1em;
+		margin: 0 0 1em 0;
+		color: @call_to_action_color;
+		overflow: hidden;
+		
+		p {
+			margin-bottom: 0;
+			& + p {
+				margin-top: 1em;
+			}
+		}
+		
+		a, p, h2, h3, h4, h5, h6 {
+			color: @call_to_action_color;
+		}
+		
+		
+		h2, h3, h4, h5, h6 {
+			padding: 0;    
+			margin: 0;    
+		}
+		
+		a.cta {
+			.knoppify(transparent, @call_to_action_link_schaduw, @call_to_action_link_pijltje_achtergrond, @call_to_action_link_achtergrond, @call_to_action_link_color, 24, 0, @call_to_action_link_color);
+		}
+	}
+
+	.call-to-action.secondary {
+		background: @heelerglichtgrijs;
+		border-color: @heelerglichtgrijs;
+		
+		a.cta {
+			.knoppify(transparent, @call_to_action_2nd_link_schaduw, @call_to_action_2nd_link_pijltje_achtergrond, @call_to_action_2nd_link_achtergrond, @call_to_action_2nd_link_color, 24, 0, @call_to_action_2nd_link_color);
+		}
+	}
+		
+		
+	@media only screen and (min-width: @break_tablet ) {
+		.call-to-action.floatright {
+			max-width: 50%;
+			float: right;
+			margin-left: 1em;
+			
+			a.cta {
+				display: inline-block;
+				float: right;
+				clear: both;
+			}
+		}
+	}
+	
 }
 
 //=========================================================================================================
-
-
 
 

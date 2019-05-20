@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.9
-// @desc.   Extra checkbox for mailinglist, a11y improvements.
+// @version 3.16.1
+// @desc.   CTA-kleuren, a11y groen, sharing buttons optional, beeldbank CPT code separation.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -83,6 +83,27 @@
   input[type="submit"] {
       .button-shared();
   }
+
+	a.download {
+		background-color: @gc_a11y_green;
+		.icon_replace_filler('../images/icon-download.svg', '#fff', @wit );
+		background-position: .75em center;
+		padding: .5em 1em .5em 2.5em;
+		.font-size( 22 );
+		line-height: 1.4;
+		box-shadow: 3px 3px 0px rgba(#000, 0.2);
+		border: 2px solid @gc_a11y_green;
+		text-decoration: none;
+
+		&:hover,
+		&:focus,
+		&:active {
+			.icon_replace_filler('../images/icon-download.svg', '#fff', @gc_a11y_green );
+			background-position: .75em center;
+			background-color: @wit;
+			text-decoration: underline;
+		}
+	}
   
   .sidebar,
   .footer-widgets {
@@ -122,6 +143,7 @@
 				color: @txt;
 				border-color: @button-sidebar-normal;
 				background-color: @wit;
+				background-image: url('images/icon-knop-groen.svg'),none;				
 				text-decoration: none;
 			}
 		}
@@ -383,7 +405,7 @@
 			z-index: 600;
 			
 			div {
-			    background: @wcagaa_groen_1; // WCAG AA @groen_1;
+			    background: @gc_a11y_green;
 				float: left;
 				@media only screen and ( min-width: @break_show_menu_button ) {
 					width: @pijl_breedte;
@@ -398,7 +420,7 @@
 					display: inline-block;
 					width: 24px;
 					height: 24px;
-					background: @wcagaa_groen_1; // WCAG AA @groen_1;
+					background: @gc_a11y_green;
 					position: absolute;
 					top: ( @pijlgrootte * 1 );
 					right: 0;
