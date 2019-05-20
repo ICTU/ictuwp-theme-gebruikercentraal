@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.9
-// @desc.   Extra checkbox for mailinglist, a11y improvements.
+// @version 3.16.1
+// @desc.   CTA-kleuren, a11y groen, sharing buttons optional, beeldbank CPT code separation.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 //========================================================================================================
@@ -171,10 +171,6 @@ margin-top: .5rem;
 
 	@media only screen and ( min-width: @break_show_menu_button ) {
 
-	    .site-title {
-//		    min-height: 80px;
-	    }
-
 		.site-title-description {
 			float: left;
 			display: block;
@@ -192,8 +188,7 @@ margin-top: .5rem;
 			}    
 		}    
 
-	    .blog-name,
-	    .blog-description {
+	    .blog-name {
 			text-transform: uppercase;
 	    }
 
@@ -500,7 +495,7 @@ margin-top: .5rem;
 				&:hover,
 				&:active,
 				&:focus {
-					border-color: @groen_1;
+					border-color: @a_menu_hover_border;
 				}
 		    }
 
@@ -564,7 +559,7 @@ margin-top: .5rem;
 					position: relative;
 					
 					a {
-						border-color: @groen_1;
+						border-color: @a_menu_hover_border;
 					}
 	
 					& > .sub-menu {
@@ -582,12 +577,12 @@ margin-top: .5rem;
 				&.current_page_parent,
 				&.current_page_ancestor {
 					& > a {
-						border-color: @groen_1;
+						border-color: @a_menu_hover_border;
 					}	
 				}
 				
 				a[aria-current="page"] {
-					border-color: @groen_1;
+					border-color: @a_menu_hover_border;
 				}
 
 				&.menu-item-has-children {

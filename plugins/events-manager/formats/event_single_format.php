@@ -124,7 +124,7 @@ else {
 	if ( has_excerpt() ) { 
 		?>
 		<div class="wrap excerpt">
-			<?php echo gc_wbvb_socialbuttons($post, '' ) ?>
+			<?php echo gc_wbvb_check_socialbuttons($post, '' ) ?>
 			#_EVENTEXCERPT
 		</div>
 		<div class="wrap description" itemprop="description">
@@ -140,7 +140,7 @@ else {
 		//=======================
 		?>
 		<div class="wrap description" itemprop="description">
-			<?php echo gc_wbvb_socialbuttons($post, '' ) ?>
+			<?php echo gc_wbvb_check_socialbuttons($post, '' ) ?>
 			#_EVENTNOTES
 		</div>
 		<?php echo $EM_gc_wbvb_single_event_organizor;

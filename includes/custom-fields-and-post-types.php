@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.1
-// @desc.   Restyling main nav menu.
+// @version 3.16.1
+// @desc.   CTA-kleuren, a11y groen, sharing buttons optional, beeldbank CPT code separation.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -592,135 +592,161 @@ if ( $samenvattingverplicht ) {
     //====================================================================================================
     // Mogelijkheid om het actieteam samen te stellen 
     // via admin > weergave > Theme-instelling
-	  acf_add_local_field_group(array (
-	    'key' => 'group_56f9ba1b8e7d5',
-	    'title' => 'Theme-instellingen',
-	    'fields' => array (
-	
-				array(
-					'key' => 'field_5acce486d19d5',
-					'label' => 'Toon zoekformulier in de header',
-					'name' => 'site_option_show_search_in_header',
-					'type' => 'radio',
-					'instructions' => '',
-					'required' => 1,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'choices' => array(
-						'ja' => 'Ja, toon zoekformulier',
-						'nee' => 'Nee, verberg zoekformulier',
-					),
-					'allow_null' => 0,
-					'other_choice' => 0,
-					'save_other_choice' => 0,
-					'default_value' => 'ja',
-					'layout' => 'vertical',
-					'return_format' => 'value',
+	acf_add_local_field_group(array(
+		'key' => 'group_56f9ba1b8e7d5',
+		'title' => 'Theme-instellingen',
+		'fields' => array(
+			array(
+				'key' => 'field_5acce486d19d5',
+				'label' => 'Toon zoekformulier in het menu',
+				'name' => 'toon_zoekformulier_in_het_menu',
+				'type' => 'radio',
+				'instructions' => '',
+				'required' => 1,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
 				),
-		
-				array (
-					'key' => 'field_TtPaXjcfYKXuU',
-					'label' => 'Auteursoverzicht',
-					'name' => 'auteursoverzichtpagina_link',
-					'type' => 'page_link',
-					'instructions' => 'Selecteer de pagina met het overzicht van alle auteurs. Deze pagina wordt gebruikt in de breadcrumb.',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array (
-						'width' => '',
-						'class' => '',
-						'id' => '',
+				'choices' => array(
+					'ja' => 'Ja, toon zoekformulier',
+					'nee' => 'Nee, verberg zoekformulier',
+				),
+				'allow_null' => 0,
+				'other_choice' => 0,
+				'save_other_choice' => 0,
+				'default_value' => 'ja',
+				'layout' => 'vertical',
+				'return_format' => 'value',
+			),
+			array(
+				'key' => 'field_5ccfdad568178',
+				'label' => 'Sta social media-deelknoppen toe op de site',
+				'name' => 'show_socialmedia_buttons_global',
+				'type' => 'radio',
+				'instructions' => 'Als je hier \'ja\' kiest, worden knoppen getoond om pagina\'s en berichten te delen. Per pagina of bericht kun je die dan weer uitzetten.
+	Als je hier \'nee\' kiest, worden ze nergens op de site getoond.',
+				'required' => 1,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'choices' => array(
+					SOC_MED_YES => 'Ja, toon socialmedia-knoppen',
+					SOC_MED_NO => 'Nee, verberg alle socialmedia-knoppen',
+				),
+				'allow_custom' => 0,
+				'default_value' => SOC_MED_YES,
+				'layout' => 'vertical',
+				'toggle' => 0,
+				'return_format' => 'value',
+				'save_custom' => 0,
+			),
+			array(
+				'key' => 'field_ttpaxjcfykxuu',
+				'label' => 'Auteursoverzicht',
+				'name' => 'auteursoverzichtpagina_link',
+				'type' => 'page_link',
+				'instructions' => 'Selecteer de pagina met het overzicht van alle auteurs. Deze pagina wordt gebruikt in de breadcrumb.',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'post_type' => array(
+					0 => 'page',
+				),
+				'taxonomy' => '',
+				'allow_null' => 0,
+				'allow_archives' => 1,
+				'multiple' => 0,
+			),
+			array(
+				'key' => 'field_5756a88c109a8',
+				'label' => 'Link naar actieteampagina',
+				'name' => 'actieteampagina_link',
+				'type' => 'page_link',
+				'instructions' => 'Selecteer de pagina met het actieteamoverzicht.',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'post_type' => array(
+					0 => 'page',
+				),
+				'taxonomy' => '',
+				'allow_null' => 0,
+				'allow_archives' => 1,
+				'multiple' => 0,
+			),
+			array(
+				'key' => 'field_56f9ba32641f5',
+				'label' => 'Actieteamleden',
+				'name' => 'actieteamleden',
+				'type' => 'repeater',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'collapsed' => 'field_56f9ba50641f6',
+				'min' => 0,
+				'max' => 0,
+				'layout' => 'table',
+				'button_label' => 'Nieuwe regel',
+				'sub_fields' => array(
+					array(
+						'key' => 'field_56f9ba50641f6',
+						'label' => 'actielid',
+						'name' => 'actielid',
+						'type' => 'user',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'role' => '',
+						'allow_null' => 0,
+						'multiple' => 0,
+						'return_format' => 'array',
 					),
-					'post_type' => array (
-						0 => 'page',
-					),
-					'taxonomy' => array (
-					),
-					'allow_null' => 1,
-					'multiple' => 0,
-				),      
-				array (
-					'key' => 'field_5756a88c109a8',
-					'label' => 'Link naar actieteampagina',
-					'name' => 'actieteampagina_link',
-					'type' => 'page_link',
-					'instructions' => 'Selecteer de pagina met het actieteamoverzicht.',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array (
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'post_type' => array (
-						0 => 'page',
-					),
-					'taxonomy' => array (
-					),
-					'allow_null' => 1,
-					'multiple' => 0,
-				),      
-	      array (
-	        'key' => 'field_56f9ba32641f5',
-	        'label' => 'Actieteamleden',
-	        'name' => 'actieteamleden',
-	        'type' => 'repeater',
-	        'instructions' => '',
-	        'required' => 0,
-	        'conditional_logic' => 0,
-	        'wrapper' => array (
-	          'width' => '',
-	          'class' => '',
-	          'id' => '',
-	        ),
-	        'collapsed' => 'field_56f9ba50641f6',
-	        'min' => '',
-	        'max' => '',
-	        'layout' => 'table',
-	        'button_label' => 'Nieuwe regel',
-	        'sub_fields' => array (
-	          array (
-	            'key' => 'field_56f9ba50641f6',
-	            'label' => 'Actielid',
-	            'name' => 'actielid',
-	            'type' => 'user',
-	            'instructions' => '',
-	            'required' => 0,
-	            'conditional_logic' => 0,
-	            'wrapper' => array (
-	              'width' => '',
-	              'class' => '',
-	              'id' => '',
-	            ),
-	            'role' => '',
-	            'allow_null' => 0,
-	            'multiple' => 0,
-	          ),
-	        ),
-	      ),
-	    ),
-	    'location' => array (
-	      array (
-	        array (
-	          'param' => 'options_page',
-	          'operator' => '==',
-	          'value' => 'instellingen',
-	        ),
-	      ),
-	    ),
-	    'menu_order' => 0,
-	    'position' => 'normal',
-	    'style' => 'default',
-	    'label_placement' => 'top',
-	    'instruction_placement' => 'label',
-	    'hide_on_screen' => '',
-	    'active' => 1,
-	    'description' => '',
-	  ));
+				),
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'options_page',
+					'operator' => '==',
+					'value' => 'instellingen',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => true,
+		'description' => '',
+	));
+
+
   
     //========================================================================================================
 
@@ -1013,389 +1039,4 @@ endif;
 
 
 //========================================================================================================
-/*
-code from:
-https://www.advancedcustomfields.com/resources/bidirectional-relationships/
-*/  
-  
 
-if ( ! function_exists( 'bidirectional_acf_update_value' ) ) {
-
-  function bidirectional_acf_update_value( $value, $post_id, $field  ) {
-  
-    if ( function_exists( 'get_field' ) ) {
-  
-    	// vars
-    	$field_name   = $field['name'];
-    	$field_key    = $field['key'];
-    	$global_name  = 'is_updating_' . $field_name;
-    	
-    	
-    	// bail early if this filter was triggered from the update_field() function called within the loop below
-    	// - this prevents an inifinte loop
-    	if( !empty($GLOBALS[ $global_name ]) ) return $value;
-    	
-    	
-    	// set global variable to avoid inifite loop
-    	// - could also remove_filter() then add_filter() again, but this is simpler
-    	$GLOBALS[ $global_name ] = 1;
-    	
-    	
-    	// loop over selected posts and add this $post_id
-    	if( is_array($value) ) {
-    	
-    		foreach( $value as $post_id2 ) {
-    			
-    			// load existing related posts
-    			$value2 = get_field($field_name, $post_id2, false);
-    			
-    			
-    			// allow for selected posts to not contain a value
-    			if( empty($value2) ) {
-    				
-    				$value2 = array();
-    				
-    			}
-    			
-    			
-    			// bail early if the current $post_id is already found in selected post's $value2
-    			if( in_array($post_id, $value2) ) continue;
-    			
-    			
-    			// append the current $post_id to the selected post's 'related_posts' value
-    			$value2[] = $post_id;
-    			
-    			
-    			// update the selected post's value (use field's key for performance)
-    			update_field($field_key, $value2, $post_id2);
-    			
-    		}
-    	
-    	}
-    	
-    	
-    	// find posts which have been removed
-    	$old_value = get_field($field_name, $post_id, false);
-    	
-    	if( is_array($old_value) ) {
-    		
-    		foreach( $old_value as $post_id2 ) {
-    			
-    			// bail early if this value has not been removed
-    			if( is_array($value) && in_array($post_id2, $value) ) continue;
-    			
-    			
-    			// load existing related posts
-    			$value2 = get_field($field_name, $post_id2, false);
-    			
-    			
-    			// bail early if no value
-    			if( empty($value2) ) continue;
-    			
-    			
-    			// find the position of $post_id within $value2 so we can remove it
-    			$pos = array_search($post_id, $value2);
-    			
-    			
-    			// remove
-    			unset( $value2[ $pos] );
-    			
-    			
-    			// update the un-selected post's value (use field's key for performance)
-    			update_field($field_key, $value2, $post_id2);
-    			
-    		}
-    		
-    	}
-    	
-    	
-    	// reset global varibale to allow this filter to function as per normal
-    	$GLOBALS[ $global_name ] = 0;
-  	
-    }
-  	
-  	// return
-    return $value;
-    
-  }
-
-}
-
-add_filter('acf/update_value/name=beelden_brieven_connectie', 'bidirectional_acf_update_value', 10, 3);
-
-
-//========================================================================================================
-// ADD ALL ACF FIELDS FOR klantcontact in beeld
-
-if( function_exists('acf_add_local_field_group') ):
-  
-  acf_add_local_field_group(array (
-  	'key' => 'group_59f1b55fe3bae',
-  	'title' => 'Beelden',
-  	'fields' => array (
-  		array (
-  			'key' => 'field_59f1b56570001',
-  			'label' => 'Foto',
-  			'name' => 'beeld_foto',
-  			'type' => 'image',
-  			'value' => NULL,
-  			'instructions' => '',
-  			'required' => 1,
-  			'conditional_logic' => 0,
-  			'wrapper' => array (
-  				'width' => '',
-  				'class' => '',
-  				'id' => '',
-  			),
-  			'return_format' => 'array',
-  			'preview_size' => 'blog-single-desktop',
-  			'library' => 'all',
-  			'min_width' => '',
-  			'min_height' => '',
-  			'min_size' => '',
-  			'max_width' => '',
-  			'max_height' => '',
-  			'max_size' => '',
-  			'mime_types' => '',
-  		),
-  		array (
-  			'key' => 'field_59f1b688fff48',
-  			'label' => 'Bijbehorende brieven',
-  			'name' => 'beelden_brieven_connectie',
-  			'type' => 'relationship',
-  			'value' => NULL,
-  			'instructions' => 'selecteer de brieven waarin dit beeld gebruikt wordt',
-  			'required' => 0,
-  			'conditional_logic' => 0,
-  			'wrapper' => array (
-  				'width' => '',
-  				'class' => '',
-  				'id' => '',
-  			),
-  			'post_type' => array (
-  				0 => 'brief',
-  			),
-  			'taxonomy' => array (
-  			),
-  			'filters' => array (
-  				0 => 'search',
-  				1 => 'taxonomy',
-  			),
-  			'elements' => '',
-  			'min' => '',
-  			'max' => '',
-  			'return_format' => 'object',
-  		),
-  		array (
-  			'key' => 'field_59f1e39cbfdf1',
-  			'label' => 'Manier van gebruiken',
-  			'name' => 'beeld_manier_van_gebruiken',
-  			'type' => 'wysiwyg',
-  			'value' => NULL,
-  			'instructions' => '',
-  			'required' => 0,
-  			'conditional_logic' => 0,
-  			'wrapper' => array (
-  				'width' => '',
-  				'class' => '',
-  				'id' => '',
-  			),
-  			'default_value' => '',
-  			'tabs' => 'all',
-  			'toolbar' => 'basic',
-  			'media_upload' => 0,
-  			'delay' => 0,
-  		),
-  	),
-  	'location' => array (
-  		array (
-  			array (
-  				'param' => 'post_type',
-  				'operator' => '==',
-  				'value' => 'beeld',
-  			),
-  		),
-  	),
-  	'menu_order' => 0,
-  	'position' => 'acf_after_title',
-  	'style' => 'default',
-  	'label_placement' => 'top',
-  	'instruction_placement' => 'label',
-  	'hide_on_screen' => '',
-  	'active' => 1,
-  	'description' => '',
-  ));
-  
-  acf_add_local_field_group(array (
-  	'key' => 'group_59f1c262e109c',
-  	'title' => 'Brieven',
-  	'fields' => array (
-  		array (
-  			'key' => 'field_59f1d9494a128',
-  			'label' => 'Bijlage',
-  			'name' => 'brief_attachment',
-  			'type' => 'file',
-  			'value' => NULL,
-  			'instructions' => '',
-  			'required' => 1,
-  			'conditional_logic' => 0,
-  			'wrapper' => array (
-  				'width' => '',
-  				'class' => '',
-  				'id' => '',
-  			),
-  			'return_format' => 'array',
-  			'library' => 'all',
-  			'min_size' => '',
-  			'max_size' => '',
-  			'mime_types' => '',
-  		),
-  		array (
-  			'key' => 'field_59f1c26b183a9',
-  			'label' => 'Bijbehorende beelden',
-  			'name' => 'beelden_brieven_connectie',
-  			'type' => 'relationship',
-  			'value' => NULL,
-  			'instructions' => 'Selecteer de beelden die in deze brief gebruikt worden',
-  			'required' => 0,
-  			'conditional_logic' => 0,
-  			'wrapper' => array (
-  				'width' => '',
-  				'class' => '',
-  				'id' => '',
-  			),
-  			'post_type' => array (
-  				0 => 'beeld',
-  			),
-  			'taxonomy' => array (
-  			),
-  			'filters' => array (
-  				0 => 'search',
-  				1 => 'taxonomy',
-  			),
-  			'elements' => '',
-  			'min' => '',
-  			'max' => '',
-  			'return_format' => 'object',
-  		),
-  		array (
-  			'key' => 'field_59f6ee2ff8847',
-  			'label' => 'Extra informatie',
-  			'name' => 'brief_extra_info',
-  			'type' => 'textarea',
-  			'value' => NULL,
-  			'instructions' => 'Vul hier extra informatie in, bijvoorbeeld over de context van deze brief.',
-  			'required' => 0,
-  			'conditional_logic' => 0,
-  			'wrapper' => array (
-  				'width' => '',
-  				'class' => '',
-  				'id' => '',
-  			),
-  			'default_value' => '',
-  			'placeholder' => '',
-  			'maxlength' => '',
-  			'rows' => '',
-  			'new_lines' => '',
-  		),
-  	),
-  	'location' => array (
-  		array (
-  			array (
-  				'param' => 'post_type',
-  				'operator' => '==',
-  				'value' => 'brief',
-  			),
-  		),
-  	),
-  	'menu_order' => 0,
-  	'position' => 'acf_after_title',
-  	'style' => 'default',
-  	'label_placement' => 'top',
-  	'instruction_placement' => 'label',
-  	'hide_on_screen' => '',
-  	'active' => 1,
-  	'description' => '',
-  ));
-
-endif;
-
-//========================================================================================================
-
-// options page 
-if( function_exists('acf_add_options_page') ):
-
-  acf_add_local_field_group(array (
-  	'key' => 'group_59a47df0c409a',
-  	'title' => 'Instellingen voor brieven en beelden',
-  	'fields' => array (
-  		array (
-  			'key' => 'field_59a47e007b104',
-  			'label' => 'Overzichtspagina voor beelden',
-  			'name' => 'beelden_page_overview',
-  			'type' => 'post_object',
-  			'instructions' => '',
-  			'required' => 0,
-  			'conditional_logic' => 0,
-  			'wrapper' => array (
-  				'width' => '',
-  				'class' => '',
-  				'id' => '',
-  			),
-  			'post_type' => array (
-  				0 => 'page',
-  			),
-  			'taxonomy' => array (
-  			),
-  			'allow_null' => 0,
-  			'multiple' => 0,
-  			'return_format' => 'id',
-  			'ui' => 1,
-  		),
-  		array (
-  			'key' => 'field_90a47e007b333',
-  			'label' => 'Overzichtspagina voor brieven',
-  			'name' => 'brief_page_overview',
-  			'type' => 'post_object',
-  			'instructions' => '',
-  			'required' => 0,
-  			'conditional_logic' => 0,
-  			'wrapper' => array (
-  				'width' => '',
-  				'class' => '',
-  				'id' => '',
-  			),
-  			'post_type' => array (
-  				0 => 'page',
-  			),
-  			'taxonomy' => array (
-  			),
-  			'allow_null' => 0,
-  			'multiple' => 0,
-  			'return_format' => 'id',
-  			'ui' => 1,
-  		),
-  	),
-  	'location' => array (
-  		array (
-  			array (
-  				'param' => 'options_page',
-  				'operator' => '==',
-  				'value' => 'instellingen',
-  			),
-  		),
-  	),
-  	'menu_order' => 0,
-  	'position' => 'normal',
-  	'style' => 'default',
-  	'label_placement' => 'top',
-  	'instruction_placement' => 'label',
-  	'hide_on_screen' => '',
-  	'active' => 1,
-  	'description' => '',
-  ));
-
-
-endif;
-
-//========================================================================================================

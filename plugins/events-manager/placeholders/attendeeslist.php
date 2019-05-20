@@ -8,8 +8,8 @@
 // @@package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.9
-// @desc.   Extra checkbox for mailinglist, a11y improvements.
+// @version 3.16.1
+// @desc.   CTA-kleuren, a11y groen, sharing buttons optional, beeldbank CPT code separation.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 // */
 
@@ -51,7 +51,7 @@ if( count($EM_Bookings->bookings) > 0 ) {
 			
 			if( $guest_bookings && $EM_Booking->get_person()->ID == $guest_booking_user ) {
 
-				$thename = getname( $EM_Booking );
+				$thename = attendeelist_get_the_bookingpersonname( $EM_Booking );
 				
 				if ( $thename ) {
 					$nonanon_userlist[] = $thename;
@@ -63,7 +63,7 @@ if( count($EM_Bookings->bookings) > 0 ) {
 			else {
 				if ( ! in_array( $EM_Booking->get_person()->ID, $people ) ) {
 					
-					$thename = getname( $EM_Booking );
+					$thename = attendeelist_get_the_bookingpersonname( $EM_Booking );
 					
 					$people[ $EM_Booking->get_person()->ID ] = $EM_Booking->get_person()->ID;
 					
@@ -100,87 +100,5 @@ if( count($EM_Bookings->bookings) > 0 ) {
 }
 else {
 	// no bookings
-}
-
-
-function getname( $theobject ) {
-	
-	$socialmedia	= '';
-	$return			= '';
-	$name 			= '';
-	$boookinginfo	= '';
-
-	if ( $theobject ) {
-
-		$boookinginfo 	= $theobject->meta['booking'];
-		$countryinfo		= $theobject->get_person()->custom_user_fields['dbem_country'];
-
-//dovardump( $countryinfo );
-
-		if ( $boookinginfo['show_name_attendeelist'] ) {
-
-			if ( $theobject->get_person()->get_name() ) {
-				$name = $theobject->get_person()->get_name();
-			} else {
-				$user_id	= $theobject->get_person()->ID;
-				$user_info	= get_userdata( $user_id );
-				if ( $user_info->display_name ) {
-					$name = $user_info->display_name;
-				} elseif ( $user_info->user_nicename ) {
-					$name = $user_info->user_nicename;
-				} elseif ( $user_info->first_name || $user_info->last_name ) {
-					$name = $user_info->first_name . ' ' . $user_info->last_name;
-				}
-			}
-		
-			if ( $name ) {
-				
-				$listitemcount = 0;
-				$return = '<span itemprop="name">' . $name . '</span>';
-				
-				$xtra = '';
-				
-				if ( $boookinginfo['organisation'] ) {
-					$xtra = '<span itemprop="memberOf" class="additionalinfo">' . esc_html( trim( $boookinginfo['organisation'] ) ) . '</span>';	
-				}
-				
-				if ( $countryinfo['value'] != 'none selected' ) {
-					if ( $xtra ) {
-						$xtra .= ', <span class="additionalinfo" itemprop="nationality">' . esc_html( $countryinfo['value'] ) . '</span>';	
-					} else {
-						$xtra = '<span class="additionalinfo" itemprop="nationality">' . esc_html( $countryinfo['value'] ) . '</span>';	
-					}
-					
-				}
-
-				if ( $xtra ) {
-					$return .= '<br>' . $xtra;	
-				}
-
-
-				
-				if ( $boookinginfo['linkedin_profile'] ) {
-					if (!filter_var( $boookinginfo['linkedin_profile'] , FILTER_VALIDATE_URL) === false) {
-						$socialmedia .= '<li><a href="' . $boookinginfo['linkedin_profile'] . '" class="linkedin" title="' . __('LinkedIn-profiel', 'gebruikercentraal' ) . ' van ' . esc_html( $theobject->get_person()->get_name() ) . '" itemprop="url"><span class="visuallyhidden">' . __('LinkedIn-profiel', 'gebruikercentraal' ) . '</span></a></li>';
-						$listitemcount++;
-					}						
-				}
-				if ( $boookinginfo['twitter_handle'] ) {
-					$socialmedia .= '<li><a href="' . GC_TWITTER_URL . sanitize_title( $boookinginfo['twitter_handle'] ) . '" class="twitter" title="' . __( 'Twitter-account', 'gebruikercentraal' ) . ' van ' . esc_html( $theobject->get_person()->get_name() ) . '" itemprop="url"><span class="visuallyhidden">' . __( 'Twitter-account', 'gebruikercentraal' ) . '</span></a></li>';
-					$listitemcount++;
-				}
-				
-				if ( $socialmedia ) {
-					$return = '<ul class="social-media" data-listitemcount="' . $listitemcount . '">' . $socialmedia . '</ul>' . $return;
-				}
-			}
-		}
-		else {
-//			$return = 'naam verborgen (' . $theobject->get_person()->ID . ')';
-		}	
-	}
-
-	return $return;
-	
 }
 

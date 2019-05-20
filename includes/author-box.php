@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.3
-// @desc.   Translation improved (most string now originally in English)
+// @version 3.16.1
+// @desc.   CTA-kleuren, a11y groen, sharing buttons optional, beeldbank CPT code separation.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
   
   
@@ -112,10 +112,10 @@ function gc_wbvb_authorbox_actieteamlid( $userid ) {
 
 function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = '' ) {
 
-  if ( ( GC_KLANTCONTACT_BEELDEN_CPT == get_post_type() ) || ( GC_KLANTCONTACT_BRIEF_CPT == get_post_type() ) )  {
-    return;
-  }  
-
+	if ( ( GC_BEELDBANK_BEELD_CPT == get_post_type() ) || ( GC_BEELDBANK_BRIEF_CPT == get_post_type() ) )  {
+		return;
+	}  
+	
     global $default_persoon_plaatje;
     
     $publiek_mailadres      = '';

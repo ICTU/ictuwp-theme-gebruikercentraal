@@ -8,7 +8,7 @@
 // @author  Paul van Buuren
 // @license GPL-2.0+
 // @version 3.15.9
-// @desc.   Extra checkbox for mailinglist, a11y improvements.
+// @desc.   CTA-kleuren, a11y groen, sharing buttons optional, beeldbank CPT code separation.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 

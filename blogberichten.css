@@ -13,25 +13,30 @@
     top: 120px;
   }
 }
+.page .archive-list .entry a,
 .beeldbank .archive-list .entry a,
 .archive .archive-list .entry a {
   overflow: hidden;
   min-height: 72px;
 }
+.page .archive-list .entry .bloginfo,
 .beeldbank .archive-list .entry .bloginfo,
 .archive .archive-list .entry .bloginfo {
   margin-left: 40px;
   width: calc(100% - 40px);
 }
+.page .archive-list .entry .feature-image,
 .beeldbank .archive-list .entry .feature-image,
 .archive .archive-list .entry .feature-image {
   width: 40px;
   height: 40px;
 }
+.page .entry + .entry,
 .beeldbank .entry + .entry,
 .archive .entry + .entry {
   border-top: 2px solid #F0F0F0;
 }
+.page .archive-list,
 .beeldbank .archive-list,
 .archive .archive-list {
   overflow: hidden;
@@ -40,20 +45,24 @@
   padding: 0;
   margin-bottom: 4em;
 }
+.page .archive-list section:hover,
 .beeldbank .archive-list section:hover,
 .archive .archive-list section:hover {
   box-shadow: 2px 2px 5px #bbbbbb;
 }
+.page .archive-list header,
 .beeldbank .archive-list header,
 .archive .archive-list header {
   overflow: hidden;
 }
+.page .archive-list .entry,
 .beeldbank .archive-list .entry,
 .archive .archive-list .entry {
   overflow: hidden;
   width: 100%;
   position: relative;
 }
+.page .archive-list .entry a,
 .beeldbank .archive-list .entry a,
 .archive .archive-list .entry a {
   text-decoration: none;
@@ -61,10 +70,13 @@
   display: block;
   border: 1px solid transparent;
 }
+.page .archive-list .entry a:hover,
 .beeldbank .archive-list .entry a:hover,
 .archive .archive-list .entry a:hover,
+.page .archive-list .entry a:active,
 .beeldbank .archive-list .entry a:active,
 .archive .archive-list .entry a:active,
+.page .archive-list .entry a:focus,
 .beeldbank .archive-list .entry a:focus,
 .archive .archive-list .entry a:focus {
   background: #fff !important;
@@ -72,53 +84,74 @@
   z-index: 9999;
   border-color: #002F3E;
 }
+.page .archive-list .entry a:hover .entry-title,
 .beeldbank .archive-list .entry a:hover .entry-title,
 .archive .archive-list .entry a:hover .entry-title,
+.page .archive-list .entry a:active .entry-title,
 .beeldbank .archive-list .entry a:active .entry-title,
 .archive .archive-list .entry a:active .entry-title,
+.page .archive-list .entry a:focus .entry-title,
 .beeldbank .archive-list .entry a:focus .entry-title,
 .archive .archive-list .entry a:focus .entry-title,
+.page .archive-list .entry a:hover .excerpt,
 .beeldbank .archive-list .entry a:hover .excerpt,
 .archive .archive-list .entry a:hover .excerpt,
+.page .archive-list .entry a:active .excerpt,
 .beeldbank .archive-list .entry a:active .excerpt,
 .archive .archive-list .entry a:active .excerpt,
+.page .archive-list .entry a:focus .excerpt,
 .beeldbank .archive-list .entry a:focus .excerpt,
 .archive .archive-list .entry a:focus .excerpt,
+.page .archive-list .entry a:hover .tijdenplaats,
 .beeldbank .archive-list .entry a:hover .tijdenplaats,
 .archive .archive-list .entry a:hover .tijdenplaats,
+.page .archive-list .entry a:active .tijdenplaats,
 .beeldbank .archive-list .entry a:active .tijdenplaats,
 .archive .archive-list .entry a:active .tijdenplaats,
+.page .archive-list .entry a:focus .tijdenplaats,
 .beeldbank .archive-list .entry a:focus .tijdenplaats,
 .archive .archive-list .entry a:focus .tijdenplaats {
   color: #002F3E !important;
 }
+.page .archive-list .entry a:hover .date-badge,
 .beeldbank .archive-list .entry a:hover .date-badge,
 .archive .archive-list .entry a:hover .date-badge,
+.page .archive-list .entry a:active .date-badge,
 .beeldbank .archive-list .entry a:active .date-badge,
 .archive .archive-list .entry a:active .date-badge,
+.page .archive-list .entry a:focus .date-badge,
 .beeldbank .archive-list .entry a:focus .date-badge,
 .archive .archive-list .entry a:focus .date-badge,
+.page .archive-list .entry a:hover .excerpt:after,
 .beeldbank .archive-list .entry a:hover .excerpt:after,
 .archive .archive-list .entry a:hover .excerpt:after,
+.page .archive-list .entry a:active .excerpt:after,
 .beeldbank .archive-list .entry a:active .excerpt:after,
 .archive .archive-list .entry a:active .excerpt:after,
+.page .archive-list .entry a:focus .excerpt:after,
 .beeldbank .archive-list .entry a:focus .excerpt:after,
 .archive .archive-list .entry a:focus .excerpt:after {
   border-color: #002F3E;
 }
+.page .archive-list .entry a:hover .excerpt:after,
 .beeldbank .archive-list .entry a:hover .excerpt:after,
 .archive .archive-list .entry a:hover .excerpt:after,
+.page .archive-list .entry a:active .excerpt:after,
 .beeldbank .archive-list .entry a:active .excerpt:after,
 .archive .archive-list .entry a:active .excerpt:after,
+.page .archive-list .entry a:focus .excerpt:after,
 .beeldbank .archive-list .entry a:focus .excerpt:after,
 .archive .archive-list .entry a:focus .excerpt:after {
   box-shadow: 3px 3px 0px #a1a1a1;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20height%3D%2213%22%20viewBox%3D%220%200%207%2013%22%20width%3D%227%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m1.43603516%200-1.43603516%201.87664462%203.49723918%204.09969324-3.49723918%204.09988764%201.43603516%202.2206495%205.62389954-6.32053714z%22%20fill%3D%22%23009f33%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20height%3D%2213%22%20viewBox%3D%220%200%207%2013%22%20width%3D%227%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m1.43603516%200-1.43603516%201.87664462%203.49723918%204.09969324-3.49723918%204.09988764%201.43603516%202.2206495%205.62389954-6.32053714z%22%20fill%3D%22%23148839%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E%0A");
 }
+.page .archive-list .entry a:hover:after,
 .beeldbank .archive-list .entry a:hover:after,
 .archive .archive-list .entry a:hover:after,
+.page .archive-list .entry a:active:after,
 .beeldbank .archive-list .entry a:active:after,
 .archive .archive-list .entry a:active:after,
+.page .archive-list .entry a:focus:after,
 .beeldbank .archive-list .entry a:focus:after,
 .archive .archive-list .entry a:focus:after {
   position: absolute;
@@ -128,35 +161,40 @@
   background: #002F3E;
   width: 100px;
   height: 40px;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
+.page .archive-list .excerpt,
 .beeldbank .archive-list .excerpt,
 .archive .archive-list .excerpt {
   position: relative;
   padding-right: 40px;
   min-height: 8px;
 }
+.page .archive-list .excerpt:after,
 .beeldbank .archive-list .excerpt:after,
 .archive .archive-list .excerpt:after {
   content: ' ';
-  border: 2px solid #1BB24B;
+  border: 2px solid #148839;
   width: 24px;
   height: 32px;
   display: block;
   position: absolute;
   right: 0;
   bottom: 1em;
-  box-shadow: 3px 3px 0px #A1E4B6;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
   background-image: url('images/cta-pijl.png');
   background-image: url('images/cta-pijl.svg'), none;
   background-position: center center;
   background-repeat: no-repeat;
 }
+.page .archive-list .bloginfo,
 .beeldbank .archive-list .bloginfo,
 .archive .archive-list .bloginfo {
   display: inline-block;
   padding: 0 1em;
 }
+.page .archive-list .feature-image,
 .beeldbank .archive-list .feature-image,
 .archive .archive-list .feature-image {
   background-image: url('images/featured-image-default.png');
@@ -164,83 +202,106 @@
   background-position: center center;
   position: absolute;
 }
+.page .archive-list section,
 .beeldbank .archive-list section,
 .archive .archive-list section {
   background: #fff;
 }
+.page .archive-list p,
 .beeldbank .archive-list p,
 .archive .archive-list p,
+.page .archive-list h2,
 .beeldbank .archive-list h2,
 .archive .archive-list h2,
+.page .archive-list .entry,
 .beeldbank .archive-list .entry,
 .archive .archive-list .entry,
+.page .archive-list header,
 .beeldbank .archive-list header,
 .archive .archive-list header,
+.page .archive-list .widget-wrap,
 .beeldbank .archive-list .widget-wrap,
 .archive .archive-list .widget-wrap {
   padding: 0;
   margin: 0;
 }
+.page .archive-list h2,
 .beeldbank .archive-list h2,
 .archive .archive-list h2 {
   color: #002F3E;
 }
+.page .archive-list .entry a,
 .beeldbank .archive-list .entry a,
 .archive .archive-list .entry a {
   padding: 1em;
   margin: 0;
 }
+.page .archive-list .feature-image.noimage,
 .beeldbank .archive-list .feature-image.noimage,
 .archive .archive-list .feature-image.noimage {
-  background-color: #E0F6E7;
+  background-color: #00932F;
   background-image: url('images/blog-feature-image-default.png');
-  background-image: url('images/blog-feature-image-default.svg'), repeating-linear-gradient(20deg, #1BB24B, #1BB24B 50px, #E0F6E7 25px, #E0F6E7 120px);
+  background-image: url('images/blog-feature-image-default.svg'), -webkit-repeating-linear-gradient(70deg, #148839, #148839 50px, #0b732c 25px, #0b732c 120px);
+  background-image: url('images/blog-feature-image-default.svg'), repeating-linear-gradient(20deg, #148839, #148839 50px, #0b732c 25px, #0b732c 120px);
 }
+.page .archive-list section:nth-child(3n+3) .feature-image.noimage,
 .beeldbank .archive-list section:nth-child(3n+3) .feature-image.noimage,
 .archive .archive-list section:nth-child(3n+3) .feature-image.noimage {
-  background-color: #E0F6E7;
+  background-color: #00932F;
   background-image: url('images/blog-feature-image-default.png');
+  background-image: url('images/blog-feature-image-default.svg'), -webkit-repeating-linear-gradient(30deg, #004152, #004152 50px, #006985 25px, #006985 120px);
   background-image: url('images/blog-feature-image-default.svg'), repeating-linear-gradient(60deg, #004152, #004152 50px, #006985 25px, #006985 120px);
 }
+.page .archive-list section:nth-child(4n+4) .feature-image.noimage,
 .beeldbank .archive-list section:nth-child(4n+4) .feature-image.noimage,
 .archive .archive-list section:nth-child(4n+4) .feature-image.noimage {
-  background-color: #E0F6E7;
+  background-color: #00932F;
   background-image: url('images/blog-feature-image-default.png');
+  background-image: url('images/blog-feature-image-default.svg'), -webkit-repeating-linear-gradient(300deg, #4C2974, #4C2974 50px, #65369a 25px, #65369a 120px);
   background-image: url('images/blog-feature-image-default.svg'), repeating-linear-gradient(150deg, #4C2974, #4C2974 50px, #65369a 25px, #65369a 120px);
 }
 @media only screen and (min-width: 650px) {
+  .page .archive-list .entry a,
   .beeldbank .archive-list .entry a,
   .archive .archive-list .entry a {
     overflow: hidden;
     min-height: 132px;
   }
+  .page .archive-list .entry .bloginfo,
   .beeldbank .archive-list .entry .bloginfo,
   .archive .archive-list .entry .bloginfo {
     margin-left: 150px;
     width: calc(100% - 150px);
   }
+  .page .archive-list .entry .feature-image,
   .beeldbank .archive-list .entry .feature-image,
   .archive .archive-list .entry .feature-image {
     width: 150px;
     height: 100px;
   }
+  .page .entry.enorm-huge,
   .beeldbank .entry.enorm-huge,
   .archive .entry.enorm-huge {
     min-height: 400px;
   }
+  .page .entry.enorm-huge.entry a,
   .beeldbank .entry.enorm-huge.entry a,
   .archive .entry.enorm-huge.entry a {
     padding: 0;
     min-height: 400px;
   }
+  .page .entry.enorm-huge.entry a:hover .bloginfo,
   .beeldbank .entry.enorm-huge.entry a:hover .bloginfo,
   .archive .entry.enorm-huge.entry a:hover .bloginfo,
+  .page .entry.enorm-huge.entry a:focus .bloginfo,
   .beeldbank .entry.enorm-huge.entry a:focus .bloginfo,
   .archive .entry.enorm-huge.entry a:focus .bloginfo,
+  .page .entry.enorm-huge.entry a:active .bloginfo,
   .beeldbank .entry.enorm-huge.entry a:active .bloginfo,
   .archive .entry.enorm-huge.entry a:active .bloginfo {
     border: 1px solid #002F3E;
   }
+  .page .entry.enorm-huge .feature-image,
   .beeldbank .entry.enorm-huge .feature-image,
   .archive .entry.enorm-huge .feature-image {
     display: block;
@@ -249,6 +310,7 @@
     min-height: 400px;
     width: 100%;
   }
+  .page .entry.enorm-huge .bloginfo,
   .beeldbank .entry.enorm-huge .bloginfo,
   .archive .entry.enorm-huge .bloginfo {
     background: #fff;
@@ -263,38 +325,82 @@
   }
 }
 @media only screen and (min-width: 960px) {
+  .page .archive-list .entry a,
   .beeldbank .archive-list .entry a,
   .archive .archive-list .entry a {
     overflow: hidden;
     min-height: 208px;
   }
+  .page .archive-list .entry .bloginfo,
   .beeldbank .archive-list .entry .bloginfo,
   .archive .archive-list .entry .bloginfo {
     margin-left: 264px;
     width: calc(100% - 264px);
   }
+  .page .archive-list .entry .feature-image,
   .beeldbank .archive-list .entry .feature-image,
   .archive .archive-list .entry .feature-image {
     width: 264px;
     height: 176px;
   }
+  .page .entry.enorm-huge,
   .beeldbank .entry.enorm-huge,
   .archive .entry.enorm-huge {
     min-height: 550px;
   }
+  .page .entry.enorm-huge.entry a,
   .beeldbank .entry.enorm-huge.entry a,
   .archive .entry.enorm-huge.entry a {
     padding: 0;
     min-height: 550px;
   }
+  .page .entry.enorm-huge .feature-image,
   .beeldbank .entry.enorm-huge .feature-image,
   .archive .entry.enorm-huge .feature-image {
     min-height: 550px;
   }
+  .page .entry.enorm-huge .feature-image,
   .beeldbank .entry.enorm-huge .feature-image,
   .archive .entry.enorm-huge .feature-image {
     min-height: 550px;
     border-color: red;
     width: 100%;
   }
+  .page.for-brief .archive-list .entry a,
+  .beeldbank.for-brief .archive-list .entry a,
+  .archive.for-brief .archive-list .entry a {
+    min-height: 120px;
+    min-height: calc(2em + 120px);
+  }
+  .page.for-brief .archive-list .entry .feature-image,
+  .beeldbank.for-brief .archive-list .entry .feature-image,
+  .archive.for-brief .archive-list .entry .feature-image {
+    height: 120px;
+    width: 120px;
+  }
+  .page.for-brief .archive-list .entry .bloginfo,
+  .beeldbank.for-brief .archive-list .entry .bloginfo,
+  .archive.for-brief .archive-list .entry .bloginfo {
+    margin-left: 120px;
+    width: calc(100% - 120px);
+  }
+  .page.for-beeld .archive-list .entry a,
+  .beeldbank.for-beeld .archive-list .entry a,
+  .archive.for-beeld .archive-list .entry a {
+    min-height: 90px;
+    min-height: calc(2em + 90px);
+  }
+  .page.for-beeld .archive-list .entry .feature-image,
+  .beeldbank.for-beeld .archive-list .entry .feature-image,
+  .archive.for-beeld .archive-list .entry .feature-image {
+    height: 90px;
+    width: 90px;
+  }
+  .page.for-beeld .archive-list .entry .bloginfo,
+  .beeldbank.for-beeld .archive-list .entry .bloginfo,
+  .archive.for-beeld .archive-list .entry .bloginfo {
+    margin-left: 90px;
+    width: calc(100% - 90px);
+  }
 }
+/*# sourceMappingURL=blogberichten.css.map */

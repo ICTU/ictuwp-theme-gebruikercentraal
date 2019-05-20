@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.13.5
-// @desc.   Kleine CSS-wijzigingen voor zoekbox, site-description en event-paginering.
+// @version 3.16.1
+// @desc.   CTA-kleuren, a11y groen, sharing buttons optional, beeldbank CPT code separation.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -127,26 +127,37 @@
   }
   
   
+	#home-widgets-left {
+		.widget_custom_html {
+			margin-left: .5em;
+			margin-right: .5em;
+		}
+		.custom-html-widget {
+			background: @wit;
+			overflow: hidden;
+			padding: 1em;
+		}
+	}
+  
 
 
-  .gc-site-footer-widget {
-    padding-left: ( @footerwidget_small + @padding);
-    overflow: hidden;
-    min-height: @footerwidget_small;
-    background: url('images/footer-logo.png') no-repeat left top;
-    background-image: url('images/footer-logo.svg'), none;
-    background-size: @footerwidget_small @footerwidget_small;
-
-    .widget-wrap {
-      max-width: 100%;
-      margin-right: 1em;
-    }
-
-    
-    a {
-      .knoppify(@blauw5, @blauw5, #0086C4, transparent, @wit, 17, 1px);
-    }
-  }
+	.gc-site-footer-widget {
+		padding-left: ( @footerwidget_small + @padding);
+		overflow: hidden;
+		min-height: @footerwidget_small;
+		background: url('images/footer-logo.png') no-repeat left top;
+		background-image: url('images/footer-logo.svg'), none;
+		background-size: @footerwidget_small @footerwidget_small;
+		
+		.widget-wrap {
+			max-width: 100%;
+			margin-right: 1em;
+		}
+	
+		a {
+			.knoppify(@blauw5, @blauw5, #0086C4, transparent, @wit, 17, 1px);
+		}
+	}
 
   .gc-event-widget,
   .gc-berichten-widget {
