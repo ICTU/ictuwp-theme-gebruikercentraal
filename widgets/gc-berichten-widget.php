@@ -73,15 +73,15 @@ class GC_berichten_widget extends WP_Widget {
   
       extract($args, EXTR_SKIP);
 
-      $gc_berichtenwidget_titel     = empty( $instance['gc_berichtenwidget_titel'] ) ? 'Blog' : $instance['gc_berichtenwidget_titel'];
-      $aantalberichten            = empty($instance['gc_berichtenwidget_aantal']) ? '5' : $instance['gc_berichtenwidget_aantal'] ;
+      $gc_berichtenwidget_titel		= empty( $instance['gc_berichtenwidget_titel'] ) ? 'Blog' : $instance['gc_berichtenwidget_titel'];
+      $aantalberichten           	= empty($instance['gc_berichtenwidget_aantal']) ? '5' : $instance['gc_berichtenwidget_aantal'] ;
 
       $args = array(
-          'post_type'             =>  'post',
-          'posts_per_page'        =>  $aantalberichten, 
-          'ignore_sticky_posts'   =>  1, 
-          'order'                 =>  'DESC',
-          'orderby'               =>  'date'
+          'post_type'             	=>  'post',
+          'posts_per_page'        	=>  $aantalberichten, 
+          'ignore_sticky_posts'   	=>  1, 
+          'order'                 	=>  'DESC',
+          'orderby'               	=>  'date'
         );
       
 
