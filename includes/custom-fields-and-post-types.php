@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.17.2
-// @desc.   Bugfixes: kleur voor knoppen en cta-links.
+// @version 3.19.1
+// @desc.   Added new widget: for general content types.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -18,59 +18,59 @@ $samenvattingverplicht = false;
 //========================================================================================================
 
 
-if( function_exists('register_field_group') ):
+if( function_exists('register_field_group') ) {
 
 
-if ( $samenvattingverplicht ) {
-  
-
-    //====================================================================================================
-    // samenvatting voor pagina's
-    // weet niet of dit anno 2016 nog nuttig is...
-    register_field_group(array (
-      'key' => 'group_54e589a345840',
-      'title' => 'Samenvatting',
-      'fields' => array (
-        array (
-          'key' => 'field_54e589bb4f514',
-          'label' => 'Samenvatting',
-          'name' => 'samenvatting',
-          'prefix' => '',
-          'type' => 'textarea',
-          'instructions' => '',
-          'required' => 1,
-          'conditional_logic' => 0,
-          'wrapper' => array (
-            'width' => '',
-            'class' => '',
-            'id' => '',
-          ),
-          'default_value' => '',
-          'placeholder' => '',
-          'maxlength' => '',
-          'rows' => '',
-          'new_lines' => 'wpautop',
-          'readonly' => 0,
-          'disabled' => 0,
-        ),
-      ),
-      'location' => array (
-        array (
-          array (
-            'param' => 'post_type',
-            'operator' => '==',
-            'value' => 'page',
-          ),
-        ),
-      ),
-      'menu_order' => 0,
-      'position' => 'normal',
-      'style' => 'artmustgrow',
-      'label_placement' => 'top',
-      'instruction_placement' => 'label',
-      'hide_on_screen' => '',
-    ));
-}
+	if ( $samenvattingverplicht ) {
+	  
+	
+	    //====================================================================================================
+	    // samenvatting voor pagina's
+	    // weet niet of dit anno 2016 nog nuttig is...
+	    register_field_group(array (
+	      'key' => 'group_54e589a345840',
+	      'title' => 'Samenvatting',
+	      'fields' => array (
+	        array (
+	          'key' => 'field_54e589bb4f514',
+	          'label' => 'Samenvatting',
+	          'name' => 'samenvatting',
+	          'prefix' => '',
+	          'type' => 'textarea',
+	          'instructions' => '',
+	          'required' => 1,
+	          'conditional_logic' => 0,
+	          'wrapper' => array (
+	            'width' => '',
+	            'class' => '',
+	            'id' => '',
+	          ),
+	          'default_value' => '',
+	          'placeholder' => '',
+	          'maxlength' => '',
+	          'rows' => '',
+	          'new_lines' => 'wpautop',
+	          'readonly' => 0,
+	          'disabled' => 0,
+	        ),
+	      ),
+	      'location' => array (
+	        array (
+	          array (
+	            'param' => 'post_type',
+	            'operator' => '==',
+	            'value' => 'page',
+	          ),
+	        ),
+	      ),
+	      'menu_order' => 0,
+	      'position' => 'normal',
+	      'style' => 'artmustgrow',
+	      'label_placement' => 'top',
+	      'instruction_placement' => 'label',
+	      'hide_on_screen' => '',
+	    ));
+	}
 
 
     //====================================================================================================
@@ -746,386 +746,444 @@ if ( $samenvattingverplicht ) {
 		'description' => '',
 	));
 
-
-  
     //========================================================================================================
 
-	  acf_add_local_field_group(array (
-	    'key' => 'group_56f9c31e473af',
-	    'title' => 'Auteursinfo (foto en functiebeschrijving)',
-	    'fields' => array (
-	      array (
-	        'key' => 'field_56f9c332b8b28',
-	        'label' => 'Auteursfoto',
-	        'name' => 'auteursfoto',
-	        'type' => 'image',
-	        'instructions' => '',
-	        'required' => 0,
-	        'conditional_logic' => 0,
-	        'wrapper' => array (
-	          'width' => '',
-	          'class' => '',
-	          'id' => '',
-	        ),
-	        'return_format' => 'array',
-	        'preview_size' => 'thumbnail',
-	        'library' => 'all',
-	        'min_width' => '',
-	        'min_height' => '',
-	        'min_size' => '',
-	        'max_width' => '',
-	        'max_height' => '',
-	        'max_size' => '',
-	        'mime_types' => '',
-	      ),
-	      array (
-	        'key' => 'field_56fbcffa55f14',
-	        'label' => 'Functiebeschrijving',
-	        'name' => 'functiebeschrijving',
-	        'type' => 'textarea',
-	        'instructions' => 'Deze wordt getoond naast de naam van een actieteamlid. Beperk deze tot twee regels, of tien woorden.',
-	        'required' => 0,
-	        'conditional_logic' => 0,
-	        'wrapper' => array (
-	          'width' => '',
-	          'class' => '',
-	          'id' => '',
-	        ),
-	        'default_value' => '',
-	        'placeholder' => '',
-	        'maxlength' => '',
-	        'rows' => 2,
-	        'new_lines' => 'br',
-	        'readonly' => 0,
-	        'disabled' => 0,
-	      ),
-	      array (
-	
-	          'key' => 'field_5718dd1d6340d',
-	          'label' => 'Publiek mailadres',
-	          'name' => 'publiek_mailadres',
-	          'type' => 'email',
-	          'instructions' => '(optioneel) op dit adres mag deze gebruiker gemaild worden',
-	          'required' => 0,
-	          'conditional_logic' => 0,
-	          'wrapper' => array (
-	            'width' => '',
-	            'class' => '',
-	            'id' => '',
-	          ),
-	          'default_value' => '',
-	          'placeholder' => '',
-	          'prepend' => '',
-	          'append' => '',
-	
-	
-	      ),
-	      array (
-	
-	          'key' => 'field_rdQRmbVD6WhuF',
-	          'label' => 'Publiek telefoonnumer',
-	          'name' => 'publiek_telefoonnummer',
-	          'type' => 'text',
-	          'instructions' => '(optioneel) op dit adres mag deze gebruiker gebeld worden',
-	          'required' => 0,
-	          'conditional_logic' => 0,
-	          'wrapper' => array (
-	            'width' => '',
-	            'class' => '',
-	            'id' => '',
-	          ),
-	          'default_value' => '',
-	          'placeholder' => '',
-	          'prepend' => '',
-	          'append' => '',
-	
-	
-	      ),
+	acf_add_local_field_group(array (
+	'key' => 'group_56f9c31e473af',
+	'title' => 'Auteursinfo (foto en functiebeschrijving)',
+	'fields' => array (
+	  array (
+	    'key' => 'field_56f9c332b8b28',
+	    'label' => 'Auteursfoto',
+	    'name' => 'auteursfoto',
+	    'type' => 'image',
+	    'instructions' => '',
+	    'required' => 0,
+	    'conditional_logic' => 0,
+	    'wrapper' => array (
+	      'width' => '',
+	      'class' => '',
+	      'id' => '',
 	    ),
-	    'location' => array (
-	      array (
-	        array (
-	          'param' => 'user_form',
-	          'operator' => '==',
-	          'value' => 'all',
-	        ),
-	      ),
+	    'return_format' => 'array',
+	    'preview_size' => 'thumbnail',
+	    'library' => 'all',
+	    'min_width' => '',
+	    'min_height' => '',
+	    'min_size' => '',
+	    'max_width' => '',
+	    'max_height' => '',
+	    'max_size' => '',
+	    'mime_types' => '',
+	  ),
+	  array (
+	    'key' => 'field_56fbcffa55f14',
+	    'label' => 'Functiebeschrijving',
+	    'name' => 'functiebeschrijving',
+	    'type' => 'textarea',
+	    'instructions' => 'Deze wordt getoond naast de naam van een actieteamlid. Beperk deze tot twee regels, of tien woorden.',
+	    'required' => 0,
+	    'conditional_logic' => 0,
+	    'wrapper' => array (
+	      'width' => '',
+	      'class' => '',
+	      'id' => '',
 	    ),
-	    'menu_order' => 0,
-	    'position' => 'acf_after_title',
-	    'style' => 'default',
-	    'label_placement' => 'top',
-	    'instruction_placement' => 'label',
-	    'hide_on_screen' => '',
-	    'active' => 1,
-	    'description' => '',
-	  ));
-
-  acf_add_local_field_group(array (
-  	'key' => 'group_5746c72e50d7b',
-  	'title' => 'Andere bijeenkomsten',
-  	'fields' => array (
-  		array (
-  			'key' => 'field_5746c7b82ff80',
-  			'label' => 'Toon andere bijeenkomsten?',
-  			'name' => 'toon_andere_bijeenkomsten',
-  			'type' => 'radio',
-  			'instructions' => 'Je kunt ervoor kiezen om onder de bijeenkomsten nog een extra blok te zetten met suggestie voor andere bijeenkomsten.',
-  			'required' => 1,
-  			'conditional_logic' => 0,
-  			'wrapper' => array (
-  				'width' => '',
-  				'class' => '',
-  				'id' => '',
-  			),
-  			'choices' => array (
-  				'ja' => 'Ja, toon suggesties voor andere bijeenkomsten',
-  				SOC_MED_NO => 'Nee, toon geen suggesties',
-  			),
-  			'allow_null' => 0,
-  			'other_choice' => 0,
-  			'save_other_choice' => 0,
-  			'default_value' => SOC_MED_NO,
-  			'layout' => 'vertical',
-  		),
-  		array (
-  			'key' => 'field_5746c77817ad1',
-  			'label' => 'Titel',
-  			'name' => 'titel',
-  			'type' => 'text',
-  			'instructions' => '',
-  			'required' => 1,
-  			'conditional_logic' => array (
-  				array (
-  					array (
-  						'field' => 'field_5746c7b82ff80',
-  						'operator' => '==',
-  						'value' => 'ja',
-  					),
-  				),
-  			),
-  			'wrapper' => array (
-  				'width' => '',
-  				'class' => '',
-  				'id' => '',
-  			),
-  			'default_value' => '',
-  			'placeholder' => '',
-  			'prepend' => '',
-  			'append' => '',
-  			'maxlength' => '',
-  			'readonly' => 0,
-  			'disabled' => 0,
-  		),
-  		array (
-  			'key' => 'field_5746c73a1a305',
-  			'label' => 'Inleiding',
-  			'name' => 'inleiding',
-  			'type' => 'text',
-  			'instructions' => '',
-  			'required' => 1,
-  			'conditional_logic' => array (
-  				array (
-  					array (
-  						'field' => 'field_5746c7b82ff80',
-  						'operator' => '==',
-  						'value' => 'ja',
-  					),
-  				),
-  			),
-  			'wrapper' => array (
-  				'width' => '',
-  				'class' => '',
-  				'id' => '',
-  			),
-  			'default_value' => '',
-  			'placeholder' => '',
-  			'prepend' => '',
-  			'append' => '',
-  			'maxlength' => '',
-  			'readonly' => 0,
-  			'disabled' => 0,
-  		),
-  		array (
-  			'key' => 'field_5746ca2e7a87e',
-  			'label' => 'Bijeenkomsten',
-  			'name' => 'bijeenkomsten',
-  			'type' => 'repeater',
-  			'instructions' => '',
-  			'required' => 1,
-  			'conditional_logic' => array (
-  				array (
-  					array (
-  						'field' => 'field_5746c7b82ff80',
-  						'operator' => '==',
-  						'value' => 'ja',
-  					),
-  				),
-  			),
-  			'wrapper' => array (
-  				'width' => '',
-  				'class' => '',
-  				'id' => '',
-  			),
-  			'collapsed' => '',
-  			'min' => '',
-  			'max' => '',
-  			'layout' => 'table',
-  			'button_label' => 'Nieuwe regel',
-  			'sub_fields' => array (
-  				array (
-  					'key' => 'field_5746ca407a87f',
-  					'label' => 'Naam bijeenkomst',
-  					'name' => 'naam_bijeenkomst',
-  					'type' => 'text',
-  					'instructions' => 'Dit wordt de link-tekst voor deze bijeenkomst.',
-  					'required' => 1,
-  					'conditional_logic' => 0,
-  					'wrapper' => array (
-  						'width' => '',
-  						'class' => '',
-  						'id' => '',
-  					),
-  					'default_value' => '',
-  					'placeholder' => '',
-  					'prepend' => '',
-  					'append' => '',
-  					'maxlength' => '',
-  					'readonly' => 0,
-  					'disabled' => 0,
-  				),
-  				array (
-  					'key' => 'field_5746ca667a880',
-  					'label' => 'URL',
-  					'name' => 'bijeenkomst_URL',
-  					'type' => 'url',
-  					'instructions' => '',
-  					'required' => 1,
-  					'conditional_logic' => 0,
-  					'wrapper' => array (
-  						'width' => '',
-  						'class' => '',
-  						'id' => '',
-  					),
-  					'default_value' => '',
-  					'placeholder' => '',
-  				),
-  			),
-  		),
-  	),
-  	'location' => array (
-  		array (
-  			array (
-  				'param' => 'page_template',
-  				'operator' => '==',
-  				'value' => 'page_evenementen.php',
-  			),
-  		),
-  	),
-  	'menu_order' => 0,
-  	'position' => 'acf_after_title',
-  	'style' => 'default',
-  	'label_placement' => 'top',
-  	'instruction_placement' => 'label',
-  	'hide_on_screen' => '',
-  	'active' => 1,
-  	'description' => '',
-  ));
-
-
-
-endif;
-
-//========================================================================================================
-// voor logo widget
-if( function_exists('acf_add_local_field_group') ):
-
-acf_add_local_field_group(array(
-	'key' => 'group_5ce2c8f66b5f8',
-	'title' => 'Logo\'s in footer-widget',
-	'fields' => array(
-		array(
-			'key' => 'field_5ce2c91007596',
-			'label' => 'Logo\'s',
-			'name' => 'logowidget_logos',
-			'type' => 'repeater',
-			'instructions' => 'Zorg je voor een alt-beschrijving? Nota bene: de logo\'s worden getoond op een witte ondergrond, hou daar alsjeblieft rekening mee.',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'collapsed' => 'field_5ce2c96d7d626',
-			'min' => 0,
-			'max' => 0,
-			'layout' => 'row',
-			'button_label' => 'Logo toevoegen',
-			'sub_fields' => array(
-				array(
-					'key' => 'field_5ce2c96d7d626',
-					'label' => 'Logo',
-					'name' => 'logo_plaatje',
-					'type' => 'image',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'return_format' => 'array',
-					'preview_size' => 'thumbnail',
-					'library' => 'all',
-					'min_width' => '',
-					'min_height' => '',
-					'min_size' => '',
-					'max_width' => '',
-					'max_height' => '',
-					'max_size' => '',
-					'mime_types' => '',
-				),
-				array(
-					'key' => 'field_5ce2c9e457ea3',
-					'label' => 'Link',
-					'name' => 'logo_link',
-					'type' => 'url',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'default_value' => '',
-					'placeholder' => '',
-				),
-			),
-		),
+	    'default_value' => '',
+	    'placeholder' => '',
+	    'maxlength' => '',
+	    'rows' => 2,
+	    'new_lines' => 'br',
+	    'readonly' => 0,
+	    'disabled' => 0,
+	  ),
+	  array (
+	
+	      'key' => 'field_5718dd1d6340d',
+	      'label' => 'Publiek mailadres',
+	      'name' => 'publiek_mailadres',
+	      'type' => 'email',
+	      'instructions' => '(optioneel) op dit adres mag deze gebruiker gemaild worden',
+	      'required' => 0,
+	      'conditional_logic' => 0,
+	      'wrapper' => array (
+	        'width' => '',
+	        'class' => '',
+	        'id' => '',
+	      ),
+	      'default_value' => '',
+	      'placeholder' => '',
+	      'prepend' => '',
+	      'append' => '',
+	
+	
+	  ),
+	  array (
+	
+	      'key' => 'field_rdQRmbVD6WhuF',
+	      'label' => 'Publiek telefoonnumer',
+	      'name' => 'publiek_telefoonnummer',
+	      'type' => 'text',
+	      'instructions' => '(optioneel) op dit adres mag deze gebruiker gebeld worden',
+	      'required' => 0,
+	      'conditional_logic' => 0,
+	      'wrapper' => array (
+	        'width' => '',
+	        'class' => '',
+	        'id' => '',
+	      ),
+	      'default_value' => '',
+	      'placeholder' => '',
+	      'prepend' => '',
+	      'append' => '',
+	
+	
+	  ),
 	),
-	'location' => array(
-		array(
-			array(
-				'param' => 'widget',
-				'operator' => '==',
-				'value' => 'gc_show_footer_logo_widget',
-			),
-		),
+	'location' => array (
+	  array (
+	    array (
+	      'param' => 'user_form',
+	      'operator' => '==',
+	      'value' => 'all',
+	    ),
+	  ),
 	),
 	'menu_order' => 0,
-	'position' => 'normal',
+	'position' => 'acf_after_title',
 	'style' => 'default',
 	'label_placement' => 'top',
 	'instruction_placement' => 'label',
 	'hide_on_screen' => '',
-	'active' => true,
+	'active' => 1,
 	'description' => '',
 ));
 
-endif;
+    //========================================================================================================
+
+	acf_add_local_field_group(array (
+		'key' => 'group_5746c72e50d7b',
+		'title' => 'Andere bijeenkomsten',
+		'fields' => array (
+			array (
+				'key' => 'field_5746c7b82ff80',
+				'label' => 'Toon andere bijeenkomsten?',
+				'name' => 'toon_andere_bijeenkomsten',
+				'type' => 'radio',
+				'instructions' => 'Je kunt ervoor kiezen om onder de bijeenkomsten nog een extra blok te zetten met suggestie voor andere bijeenkomsten.',
+				'required' => 1,
+				'conditional_logic' => 0,
+				'wrapper' => array (
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'choices' => array (
+					'ja' => 'Ja, toon suggesties voor andere bijeenkomsten',
+					SOC_MED_NO => 'Nee, toon geen suggesties',
+				),
+				'allow_null' => 0,
+				'other_choice' => 0,
+				'save_other_choice' => 0,
+				'default_value' => SOC_MED_NO,
+				'layout' => 'vertical',
+			),
+			array (
+				'key' => 'field_5746c77817ad1',
+				'label' => 'Titel',
+				'name' => 'titel',
+				'type' => 'text',
+				'instructions' => '',
+				'required' => 1,
+				'conditional_logic' => array (
+					array (
+						array (
+							'field' => 'field_5746c7b82ff80',
+							'operator' => '==',
+							'value' => 'ja',
+						),
+					),
+				),
+				'wrapper' => array (
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'maxlength' => '',
+				'readonly' => 0,
+				'disabled' => 0,
+			),
+			array (
+				'key' => 'field_5746c73a1a305',
+				'label' => 'Inleiding',
+				'name' => 'inleiding',
+				'type' => 'text',
+				'instructions' => '',
+				'required' => 1,
+				'conditional_logic' => array (
+					array (
+						array (
+							'field' => 'field_5746c7b82ff80',
+							'operator' => '==',
+							'value' => 'ja',
+						),
+					),
+				),
+				'wrapper' => array (
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'maxlength' => '',
+				'readonly' => 0,
+				'disabled' => 0,
+			),
+			array (
+				'key' => 'field_5746ca2e7a87e',
+				'label' => 'Bijeenkomsten',
+				'name' => 'bijeenkomsten',
+				'type' => 'repeater',
+				'instructions' => '',
+				'required' => 1,
+				'conditional_logic' => array (
+					array (
+						array (
+							'field' => 'field_5746c7b82ff80',
+							'operator' => '==',
+							'value' => 'ja',
+						),
+					),
+				),
+				'wrapper' => array (
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'collapsed' => '',
+				'min' => '',
+				'max' => '',
+				'layout' => 'table',
+				'button_label' => 'Nieuwe regel',
+				'sub_fields' => array (
+					array (
+						'key' => 'field_5746ca407a87f',
+						'label' => 'Naam bijeenkomst',
+						'name' => 'naam_bijeenkomst',
+						'type' => 'text',
+						'instructions' => 'Dit wordt de link-tekst voor deze bijeenkomst.',
+						'required' => 1,
+						'conditional_logic' => 0,
+						'wrapper' => array (
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'maxlength' => '',
+						'readonly' => 0,
+						'disabled' => 0,
+					),
+					array (
+						'key' => 'field_5746ca667a880',
+						'label' => 'URL',
+						'name' => 'bijeenkomst_URL',
+						'type' => 'url',
+						'instructions' => '',
+						'required' => 1,
+						'conditional_logic' => 0,
+						'wrapper' => array (
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '',
+						'placeholder' => '',
+					),
+				),
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'page_evenementen.php',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'acf_after_title',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => 1,
+		'description' => '',
+	));
+
+    //========================================================================================================
+
+	acf_add_local_field_group(array(
+		'key' => 'group_5cf93291aedd2',
+		'title' => 'Widget beelden en brieven',
+		'fields' => array(
+			array(
+				'key' => 'field_5cf932ab9aea8',
+				'label' => 'Selecteer content',
+				'name' => 'selecteer_content',
+				'type' => 'relationship',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'post_type' => array(
+					0 => 'page',
+					1 => 'brief',
+					2 => 'beeld',
+					3 => 'post',
+				),
+				'taxonomy' => '',
+				'filters' => array(
+					0 => 'search',
+					1 => 'post_type',
+					2 => 'taxonomy',
+				),
+				'elements' => array(
+					0 => 'featured_image',
+				),
+				'min' => '',
+				'max' => '',
+				'return_format' => 'object',
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'widget',
+					'operator' => '==',
+					'value' => 'gc_widget_home_featuredcontent',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => true,
+		'description' => '',
+	));
+
+
+}
+
+//========================================================================================================
+// voor logo widget
+
+if( function_exists('acf_add_local_field_group') ) {
+	
+	acf_add_local_field_group(array(
+		'key' => 'group_5ce2c8f66b5f8',
+		'title' => 'Logo\'s in footer-widget',
+		'fields' => array(
+			array(
+				'key' => 'field_5ce2c91007596',
+				'label' => 'Logo\'s',
+				'name' => 'logowidget_logos',
+				'type' => 'repeater',
+				'instructions' => 'Zorg je voor een alt-beschrijving? Nota bene: de logo\'s worden getoond op een witte ondergrond, hou daar alsjeblieft rekening mee.',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'collapsed' => 'field_5ce2c96d7d626',
+				'min' => 0,
+				'max' => 0,
+				'layout' => 'row',
+				'button_label' => 'Logo toevoegen',
+				'sub_fields' => array(
+					array(
+						'key' => 'field_5ce2c96d7d626',
+						'label' => 'Logo',
+						'name' => 'logo_plaatje',
+						'type' => 'image',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'return_format' => 'array',
+						'preview_size' => 'thumbnail',
+						'library' => 'all',
+						'min_width' => '',
+						'min_height' => '',
+						'min_size' => '',
+						'max_width' => '',
+						'max_height' => '',
+						'max_size' => '',
+						'mime_types' => '',
+					),
+					array(
+						'key' => 'field_5ce2c9e457ea3',
+						'label' => 'Link',
+						'name' => 'logo_link',
+						'type' => 'url',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '',
+						'placeholder' => '',
+					),
+				),
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'widget',
+					'operator' => '==',
+					'value' => 'gc_show_footer_logo_widget',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => true,
+		'description' => '',
+	));
+	
+}
 
 //========================================================================================================
 
