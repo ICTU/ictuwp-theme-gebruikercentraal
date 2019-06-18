@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.17.2
-// @desc.   Bugfixes: kleur voor knoppen en cta-links.
+// @version 3.19.1
+// @desc.   Added new widget: for general content types.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -139,9 +139,6 @@
 		}
 	}
 
-  
-
-
 	.gc-site-footer-widget {
 		padding-left: ( @footerwidget_small + @padding);
 		overflow: hidden;
@@ -162,15 +159,16 @@
 		}
 	}
 
-  .gc-event-widget,
-  .gc-berichten-widget {
-    .bg-color {
-      background: @wit;
-    }
-    .entry + .entry {
-      border-top: 2px solid @lichtgrijs;
-    }
-  }
+	.gc-event-widget,
+	.gc-site-home-contentwidget,
+	.gc-berichten-widget {
+		.bg-color {
+			background: @wit;
+		}
+		.entry + .entry {
+			border-top: 2px solid @lichtgrijs;
+		}
+	}
   
 	.gc-actieteam-widget {
 
@@ -242,33 +240,33 @@
 		}
 	}
 
-  .gc-actieteam-widget,
-  .gc-event-widget,
-  .gc-berichten-widget {
+	.gc-actieteam-widget,
+	.gc-event-widget,
+	.gc-site-home-contentwidget,
+	.gc-berichten-widget {
 
-    .blogberichtshared( 50px, @readmore_width, @readmore_height, 50 );
-
-    .widget-wrap {
-      padding: 0 .5em .5em .5em;
-    }
-    header {
-      padding-top: @padding;
-    }    
-    h3 {
-      .fontsize(15);
-      color: @txt;
-      padding-top: .4em;
-    }
-    .entry {
-      padding: 0;
-  
-      a {
-        padding: 0;
-        margin: 0;
-      }    
-    }    
-    
-  }
+		.blogberichtshared( 50px, @readmore_width, @readmore_height, 50 );
+		
+		.widget-wrap {
+			padding: 0 .5em .5em .5em;
+		}
+		header {
+			padding-top: @padding;
+		}    
+		h3 {
+			.fontsize(15);
+			color: @txt;
+			padding-top: .4em;
+		}
+		.entry {
+			padding: 0;
+			
+			a {
+				padding: 0;
+				margin: 0;
+			}    
+		}    
+	}
 
   .gc-event-widget {
 
@@ -328,11 +326,13 @@
       }
     }
   }
-  .gc-berichten-widget {
-    .entry {
-      padding: 0;
-    }
-  }
+
+	.gc-site-home-contentwidget,
+	.gc-berichten-widget {
+		.entry {
+			padding: 0;
+		}
+	}
   
 @perc_knopbreedte: 24%;  
 @knopbreedte: 126px;
@@ -418,28 +418,38 @@
 		flex-wrap: wrap;		
 		
 		margin-left: ( -1 * @spaceme );
-		margin-right: ( -1 * @spaceme );
+
+		@media only screen and (max-width: @break_tablet ) {
+			margin-right: ( 2 * @spaceme );
+		}
+		@media only screen and (min-width: @break_tablet ) {
+			margin-right: ( -1 * @spaceme );
+		}
+
+		
 		.logo-flexblock {
 			flex: 1;
-			background-color: @wit;
 			margin: @spaceme;
-			min-width: 90px;
-			/*
-			a {
-				border: 2px solid transparent;
-				display: block;
-				overflow: hidden;
-				font-size: 0;
-				&:hover {
-					border-color: @txt;					
-				}
+
+			@media only screen and (max-width: @break_tablet ) {
+				max-width: 48%;
 			}
-			*/
+			@media only screen and (min-width: @break_tablet ) {
+				min-width: 90px;
+			}
+
+
+			.logo-alignimage {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border: 2px solid transparent;
+				height: 100%;
+			}			
+			
 			a {
 				font-size: 0;
-				border: 2px solid transparent;
-				display: block;
-				overflow: hidden;
+
 				&:hover,
 				&:active,
 				&:focus {
@@ -453,7 +463,6 @@
 				max-width: 100%;
 				height: auto;
 				margin: 0;
-				display: table-cell;
 			}
 		}      
 	}
@@ -538,233 +547,46 @@
 //========================================================================================================
 
 .featuredimage(@width: @imageblock_mw) {
-  #home-widgets-left {
 
-    .gc-berichten-widget {
-      .entry {
-        &, a {
-          min-height: ( @width + 1 );
-        }
-      }
-      .bloginfo {
-        margin-left: @width;
-      }
-      .feature-image {
-        width: @width;
-        height: @width;
-      }
-    }
-  }
-
-  #home-widgets-right {
-
-    .gc-berichten-widget {
-      .entry {
-        min-height: ( @width / 2 );
-      }
-      .bloginfo {
-        margin-left: ( @width / 2 );
-      }
-      .feature-image {
-        width: ( @width / 2 );
-        height: ( @width / 2 );
-      }
-    }
-  }
+	#home-widgets-left {
+		
+		.gc-site-home-contentwidget,
+		.gc-berichten-widget {
+			.entry {
+				&, a {
+					min-height: ( @width + 1 );
+				}
+			}
+			.bloginfo {
+				margin-left: @width;
+			}
+			.feature-image {
+				width: ( @width - 1 );
+				height: ( @width - 1 );
+			}
+		}
+	}
+	
+	#home-widgets-right {
+		
+		.gc-site-home-contentwidget,
+		.gc-berichten-widget {
+			.entry {
+				&, a {
+					min-height: ( @width / 2 );
+				}
+			}
+			.bloginfo {
+				margin-left: ( @width / 2 );
+			}
+			.feature-image {
+				width: ( ( @width / 2 ) - 2 );
+				height: ( ( @width / 2 ) - 2 );
+			}
+		}
+	}
 }
 
 //========================================================================================================
 
-.sidebarunusedcode() {
 
-  /* No greater than 900px, no less than 400px */
-  @media only screen and (max-width: ( @break_fullwidth  - 1 ) ) and (min-width: ( @break_tablet ) ) {
-
-      .sidebar {
-  
-          display:flex;
-          justify-content: space-between;
-          flex-direction: row;
-          align-content: stretch;
-          flex-wrap: wrap;
-      
-          &, * {
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            
-            box-sizing: border-box;     
-          }
-      
-          h2, h3 {
-              margin-top: 0;
-              padding-top: 0;
-          }
-  
-          
-          .widget {
-  
-              border-radius: 3px;
-              flex-grow: 1;
-              margin-right: 2%;
-              margin-bottom: 2%;
-  
-  
-          }
-      }
-  }
-  
-  
-  @media only screen and (min-width: ( @break_tablet ) ) {
-
-      .sidebar {
-          padding: 0;
-          background: @wit;
-          
-          .widget {
-              background: @blauw3;
-              padding: @padding;
-  
-             h2, h3, h4 {
-                 padding: 0;
-             }  
-  
-               
-              article {
-                  float: left;
-                  width: 28%;
-                  
-                  img.entry-image {
-                      margin-bottom: ( @padding / 2 );
-                  }
-              }
-  
-              .entry + .entry {
-                padding-top: 0;
-              }
-  
-              input[type="text"],
-              input[type="password"],
-              input[type="color"],
-              input[type="date"],
-              input[type="datetime"],
-              input[type="datetime-local"],
-              input[type="email"],
-              input[type="month"],
-              input[type="number"],
-              input[type="range"],
-              input[type="tel"],
-              input[type="time"],
-              input[type="url"],
-              input[type="week"],
-              input[type="search"] {
-                  max-width: 280px;
-              }             
-          }
-          .widget:nth-child(2n+2) {
-  //            margin: 0 0 @padding 0;
-          }
-      }
-  }
-  @media only screen and (min-width: @break_fullwidth ) {
-
-      .sidebar {
-  //        margin-top: @sidebar_margin_top;
-        width: ( @sidebar_width - @padding );
-  
-          background: transparent;
-          padding: 0;
-  
-          .widget {
-              clear: both;
-              float: none;
-              background-color: @wit;
-              border: 1px solid darken(@wit,15%);
-              margin: 0 0 1em 0;
-              padding: @padding;
-            width: ( @sidebar_width - ( 2 * @padding ) );
-  
-  
-              &, a, .widget-title {
-                  color: @txt;
-              }
-              a {
-                  &:active,
-                  &:focus,
-                  &:hover {
-                      color: @a_hover;
-                  }
-              }
-  
-              .search-form input[type=search] {
-                  width: ( @sidebar_width - ( ( 2 * @padding ) + @widget_area_button ) );
-                  max-width: ( @sidebar_width - ( ( 2 * @padding ) + @widget_area_button ) );
-                  -webkit-appearance: none;
-              }             
-              
-              article {
-                  float: none;
-                  width: auto;
-  
-                  img.entry-image {
-                      margin: @padding 0 ( @padding / 2 ) 0;
-                  }
-                  
-                  .alignleft {
-                      img.entry-image {
-                          margin:  0 ( @padding / 2 ) 0 0;
-                      }
-                  }
-  
-              }
-  
-              .entry + .entry {
-                padding-top: 0;
-              }
-          }
-  
-      }
-  }
-  
-  @media only screen and (min-width: ( @break_fullwidth + ( 2 * @sidebar_marginright ) ) ) {
-  
-      .sidebar {
-  //        margin-right: ( ( -1 * @sidebar_marginright ) - @padding ) ;
-  //      width: @sidebar_width - ( -1 * @sidebar_marginright );
-        
-        .widget {
-              width: 100%; 
-  
-              input[type="text"],
-              input[type="password"],
-              input[type="color"],
-              input[type="date"],
-              input[type="datetime"],
-              input[type="datetime-local"],
-              input[type="email"],
-              input[type="month"],
-              input[type="number"],
-              input[type="range"],
-              input[type="tel"],
-              input[type="time"],
-              input[type="url"],
-              input[type="week"],
-              input[type="search"] {
-                  width: ( ( @sidebar_width - ( -1 * @sidebar_marginright ) ) - ( ( 0 * @padding ) + @widget_area_button ) );
-                  max-width: ( ( @sidebar_width - ( -1 * @sidebar_marginright ) ) - ( ( 0 * @padding ) + @widget_area_button ) );
-                  -webkit-appearance: none;
-              }             
-  
-        }
-  //        .widget:first-child {
-  //          width: @sidebar_width - ( -1 * @sidebar_marginright );
-  //            background-size: 258px 218px;
-  //        }
-      }
-  }
-
-  @media only screen and (max-width: ( @break_fullwidth  - 1 ) ) {
-    .sidebar .widget.enews-widget {
-      padding: @padding;
-    }
-  }
-}

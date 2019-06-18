@@ -9,9 +9,11 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-3.17.2 - Bugfixes: kleur voor knoppen en cta-links.
+3.19.1 - Added new widget: for general content types.
 
 ## Version history
+* 3.19.1 - Added new widget: for general content types.
+* 3.18.1 - Text styling. Bugfixes.
 * 3.17.2 - Bugfixes: kleur voor knoppen en cta-links.
 * 3.17.1 - Widget voor logo's toegevoegd; kleine stijlverbeteringen.
 * 3.16.1 - CTA-kleuren, a11y groen, sharing buttons optional, beeldbank CPT code separation.

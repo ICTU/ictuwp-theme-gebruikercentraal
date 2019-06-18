@@ -6,8 +6,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.17.2
-// @desc.   Bugfixes: kleur voor knoppen en cta-links.
+// @version 3.18.1
+// @desc.   Text styling. Bugfixes.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 @import "01-socmed-color-codes.less";              // colors, sizes 
@@ -19,6 +19,13 @@
 @break_show_menu_button:	830px;
 @break_tablet:          	650px;
 @break_phone:           	500px;
+
+
+@contentmaxwidth:			1180px; 
+@contentwidth_960:			960px; 
+@contentwidth_761:			761px; 
+@containermaxwidth: 		1900px;
+
 
 //========================================================================================================
 // koeleuren
@@ -55,6 +62,8 @@
 @gc_pantybrown_light: 		#f2ebe4; // ook wel 'GC PantyBrown Light'
 @gc_pantybrown: 			#e8d8c7; // ook wel 'GC PantyBrown'
 
+
+@gc_cardbordergrey: 		#D1DFE3; 
 
 
 @oranje:                	#FF8005;
@@ -205,18 +214,23 @@
 @headerfont:			'League Gothic', Impact, Helvetica, Arial, sans-serif;
 @headerfont2:			'montserratregular', Helvetica, Arial, sans-serif;
 @bodyfont:				'Montserrat light', Helvetica, Arial, sans-serif; // 'Montserrat light',Helvetica,Arial,sans-serif
-@bodyfont_bold:			'montserrat_semiboldregular', Helvetica, Arial, sans-serif; 
+@bodyfont_bold:			'montserratbold', Helvetica, Arial, sans-serif; 
 @montserrat_semibold:   'montserrat_semiboldregular', Helvetica, Arial, sans-serif;
 
 @header_color:          #210800;
 @header_color_2:        @blauw;
 
-@fontsize_title_h1:     ( 3.6 * @basefontsize );
-@fontsize_title_h2:     ( 2.6 * @basefontsize );
-@fontsize_title_h3:     ( 1.8 * @basefontsize );
+@fontsize_title_h1:     ( 6.8 * @basefontsize );
+@fontsize_title_h2:     ( 4.6 * @basefontsize );
+@fontsize_title_h3:     ( 2.4 * @basefontsize );
 @fontsize_title_h4:     ( 1.7 * @basefontsize );
 @fontsize_title_h5:     ( 1.6 * @basefontsize );
 @fontsize_title_h6:     ( 1.5 * @basefontsize );
+
+
+@fontsize_title_h1:     ( 3.6 * @basefontsize );
+@fontsize_title_h2:     ( 2.6 * @basefontsize );
+@fontsize_title_h3:     ( 1.8 * @basefontsize );
 
 @fontsize_title_entrytitle: @fontsize_title_h1;
 
@@ -275,7 +289,6 @@
 .button_font_shared(@fontsize: 18) {
 	font-family: @headerfont;
 	.fontsize(@fontsize);
-//  letter-spacing: 1px;
 	font-weight: normal;
 }
 
@@ -1295,7 +1308,6 @@
       margin: 0;
       padding: 0;
 
-      letter-spacing: 1px;
       .fontsize( @fontsize_title_h2 );
       text-transform: uppercase;
       font-family: @headerfont;

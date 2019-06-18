@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.17.2
-// @desc.   Bugfixes: kleur voor knoppen en cta-links.
+// @version 3.19.1
+// @desc.   Added new widget: for general content types.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.17.2' );
-define( 'CHILD_THEME_DESCRIPTION', "3.17.2 - Bugfixes: kleur voor knoppen en cta-links." );
+define( 'CHILD_THEME_VERSION', '3.19.1' );
+define( 'CHILD_THEME_DESCRIPTION', "3.19.1 - Added new widget: for general content types." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -147,9 +147,12 @@ if ( ! defined( 'EMP_FORMS_TEXTAREA_SIZE' ) ) {
 }
 
 if ( ! defined( 'WBVB_GC_LOGOWIDGET' ) ) {
-  define( 'WBVB_GC_LOGOWIDGET',              'GC logo-widget');
+  define( 'WBVB_GC_LOGOWIDGET', 'GC logo-widget');
 }
 
+if ( ! defined( 'WBVB_GC_BEELDEN_HOMEWIDGET' ) ) {
+	define( 'WBVB_GC_BEELDEN_HOMEWIDGET', 'GC - Featured Content' );
+}
 
 
 define( 'ACF_PLUGIN_NOT_ACTIVE_WARNING', '<p style="position: absolute; top: 3em; left: 3em; display: block; padding: .5em; background: yellow; color: black;">de ACF custom fields plugin is niet actief.</p>' );
@@ -199,10 +202,9 @@ require_once( GC_FOLDER . '/widgets/gc-event-widget.php' );
 require_once( GC_FOLDER . '/widgets/gc-berichten-widget.php' );
 require_once( GC_FOLDER . '/widgets/gc-footer-widget.php' );
 require_once( GC_FOLDER . '/widgets/gc-footer-logo-widget.php' );
-
+require_once( GC_FOLDER . '/widgets/gc-contenttypes-widget.php' );
 
 require_once( GC_FOLDER . '/includes/common-functions.php' );
-
 
 //========================================================================================================
 
@@ -357,32 +359,29 @@ function gc_wbvb_breadcrumb_args( $args ) {
 
 	if ( is_home() || is_front_page() ) {
 		$args['home']            		= '';
-		$args['sep']                  = '';
+		$args['sep']                  	= '';
 	}
 	else {
-		$args['home']                 = __( "Home", 'gebruikercentraal' );
-		$args['sep']                  = $separator;
+		$args['home']                 	= __( "Home", 'gebruikercentraal' );
+		$args['sep']                  	= $separator;
 	}
 
-	$args['list_sep']                 = ', '; // Genesis 1.5 and later
+	$args['list_sep']                 	= ', '; // Genesis 1.5 and later
 
-	$args['prefix']                   = '<div class="breadcrumb"><div class="wrap"><nav class="breadlist">';
-	$args['suffix']                	= '</nav></div></div>';
+	$args['prefix']						= '<div class="breadcrumb"><div class="wrap"><nav class="breadlist">';
+	$args['suffix']						= '</nav></div></div>';
 
-//	$args['prefix']                   = '<nav class="breadlist">';
-//	$args['suffix']                	= '</nav>';
-
-	$args['heirarchial_attachments']  = true; // Genesis 1.5 and later
-	$args['heirarchial_categories']   = true; // Genesis 1.5 and later
-	$args['display']                  = true;
-	$args['labels']['prefix']         = '';
-	$args['labels']['category']       = '';
-	$args['labels']['tag']            = __( "Label", 'gebruikercentraal' ) . $separator;
-	$args['labels']['date']           = __( "Date archive", 'gebruikercentraal' ) . $separator;
-	$args['labels']['search']         = __( "Search result", 'gebruikercentraal' ) . $separator;
-	$args['labels']['tax']            = '';
-	$args['labels']['post_type']      = '';
-	$args['labels']['404']            = __( "Whoops", 'gebruikercentraal' );
+	$args['heirarchial_attachments']	= true; // Genesis 1.5 and later
+	$args['heirarchial_categories']		= true; // Genesis 1.5 and later
+	$args['display']             		= true;
+	$args['labels']['prefix']         	= '';
+	$args['labels']['category']       	= '';
+	$args['labels']['tag']            	= __( "Label", 'gebruikercentraal' ) . $separator;
+	$args['labels']['date']           	= __( "Date archive", 'gebruikercentraal' ) . $separator;
+	$args['labels']['search']         	= __( "Search result", 'gebruikercentraal' ) . $separator;
+	$args['labels']['tax']            	= '';
+	$args['labels']['post_type']      	= '';
+	$args['labels']['404']            	= __( "Whoops", 'gebruikercentraal' );
 
 	if ( isset( $wp_query->query_vars['taxonomy'] ) ) {
 
@@ -972,24 +971,26 @@ function gc_wbvb_add_blog_single_css() {
 
         if ( $image[1] >= IMG_SIZE_HUGE_MIN_WIDTH ) {
 
-			    foreach ( $imgbreakpoints as $breakpoint ) {
-            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $postid ), $breakpoint['img_size_archive_list'] );
-            $BLOGBERICHTEN_CSS .= '@media only screen and ('  . $breakpoint['direction'] .  '-width: ' . $breakpoint['width'] . " ) {\n";
-            $BLOGBERICHTEN_CSS .= " .content:before { \n";
-            $BLOGBERICHTEN_CSS .= "   content: ' ';\n";
-            $BLOGBERICHTEN_CSS .= "   display: block;\n";
-            $BLOGBERICHTEN_CSS .= "   padding-top: " . $breakpoint['header-padding'] . ";\n";
-            $BLOGBERICHTEN_CSS .= "   background-image: url('" . $image[0] . "');\n";
-            $BLOGBERICHTEN_CSS .= "   background-size: cover;\n";
-            $BLOGBERICHTEN_CSS .= "   background-position: center center;\n";
-            $BLOGBERICHTEN_CSS .= " } \n";
-            $BLOGBERICHTEN_CSS .= "} \n";
-			    }
+			foreach ( $imgbreakpoints as $breakpoint ) {
 
-          $class      = 'feature-image';
-          $extra_class  = ' enorm-huge';
+				$image = wp_get_attachment_image_src( get_post_thumbnail_id( $postid ), $breakpoint['img_size_archive_list'] );
+				
+				$BLOGBERICHTEN_CSS .= '@media only screen and ('  . $breakpoint['direction'] .  '-width: ' . $breakpoint['width'] . " ) {\n";
+				$BLOGBERICHTEN_CSS .= " .content:before { \n";
+				$BLOGBERICHTEN_CSS .= "   content: ' ';\n";
+				$BLOGBERICHTEN_CSS .= "   display: block;\n";
+				$BLOGBERICHTEN_CSS .= "   padding-top: " . $breakpoint['header-padding'] . ";\n";
+				$BLOGBERICHTEN_CSS .= "   background-image: url('" . $image[0] . "');\n";
+				$BLOGBERICHTEN_CSS .= "   background-size: cover;\n";
+				$BLOGBERICHTEN_CSS .= "   background-position: center center;\n";
+				$BLOGBERICHTEN_CSS .= " } \n";
+				$BLOGBERICHTEN_CSS .= "} \n";
+			}
 
-        }
+			$class      = 'feature-image';
+			$extra_class  = ' enorm-huge';
+		
+		}
         else {
 
           $image = wp_get_attachment_image_src( get_post_thumbnail_id( $postid ), 'medium' );
@@ -2060,7 +2061,7 @@ function gc_wbvb_archive_loop() {
 			$publishdate  	= get_the_date();
 			$theID        	= 'featured_image_post_' . $getid;
 			$the_image_ID 	= 'image_' . $theID; // HIERO, the loop
-			$extra_class    = '';
+			$extra_cssclass = ' ' . $posttype;
 			$class 			= 'feature-image noimage';
 			$bluh			= '';
 			
@@ -2073,7 +2074,7 @@ function gc_wbvb_archive_loop() {
 					if ( $image[1] >= IMG_SIZE_HUGE_MIN_WIDTH ) {
 						$class      = 'feature-image';
 						if ( 'post' == $posttype ) {
-							$extra_class  = ' enorm-huge';
+							$extra_cssclass  .= ' enorm-huge';
 						}
 					}
 					else {
@@ -2109,7 +2110,7 @@ function gc_wbvb_archive_loop() {
 
 			}
 			
-			echo '<section class="entry' . $extra_class . '" itemscope itemtype="http://schema.org/SocialMediaPosting" id="' . $theID . '">';
+			echo '<section class="entry' . $extra_cssclass . '" itemscope itemtype="http://schema.org/SocialMediaPosting" id="' . $theID . '">';
 			echo '<a href="' . $permalink . '" itemprop="url">';
 			if ( $bluh ) {
 				echo '<div id="' . $the_image_ID . '" class="' . $class . '" data-bluh="' . $bluh . '">&nbsp;</div>';
@@ -2151,11 +2152,10 @@ function gc_wbvb_archive_loop() {
 		
 		endwhile; /** end of one post **/
 
+		echo '</div>';
+
 		do_action( 'genesis_after_endwhile' );
 
-		echo '</div>';
-		
-	
 	else : /** if no posts exist **/
 		do_action( 'genesis_loop_else' );
 	endif; /** end loop **/
@@ -2381,20 +2381,21 @@ function gc_wbvb_breadcrumbstring( $currentpageID, $args ) {
 
 remove_action( 'genesis_after_endwhile', 'genesis_posts_nav' );
 
-add_action( 'genesis_after_endwhile', 'wbvb_modernista_prev_next_post_nav' );
+add_action( 'genesis_after_endwhile', 'gc_wbvb_prev_next_post_nav' );
 
 //========================================================================================================
 
-function wbvb_modernista_prev_next_post_nav() {
+function gc_wbvb_prev_next_post_nav() {
 	
 	$label 			= get_post_type();
-	$labelprev	= __( 'Previous', 'genesis' );
-	$labelnext	= __( 'Next', 'genesis' );
+	$labelprev	= __( "Previous", 'gebruikercentraal' );
+	$labelnext	= __( "Next", 'gebruikercentraal' );
 	
 	$prev_link = get_previous_posts_link( apply_filters( 'genesis_prev_link_text', $labelprev ) );
 	$next_link = get_next_posts_link( apply_filters( 'genesis_next_link_text', $labelnext ) );
 
 	if ( get_previous_posts_link() || get_next_posts_link() ) {
+
 		echo '<nav class="pagination">';
 		
 		if ( is_single() && ( in_array(get_post_type(), array('post', GC_BEELDBANK_BEELD_CPT, GC_BEELDBANK_BRIEF_CPT ) ) ) ) {
@@ -2414,7 +2415,7 @@ function wbvb_modernista_prev_next_post_nav() {
 			) );
 			
 		}
-		echo '</nav><!-- .wbvb_modernista_prev_next_post_nav -->';
+		echo '</nav><!-- .gc_wbvb_prev_next_post_nav -->';
 	}
 }
 
