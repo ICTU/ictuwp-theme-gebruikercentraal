@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.19.1
-// @desc.   Added new widget: for general content types.
+// @version 3.19.2
+// @desc.   CSS / code bug: no feat. image for first post on archive. Bigger images for archive lists.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -228,8 +228,17 @@ function filter_for_gc_beeldbank_homewidget( $params ) {
 			
 			if ( 'post' === get_post_type( $getid ) ) {
 				$datebadge = '<span class="date-badge" itemprop="datePublished" content="' . $publishdate . '"><span class="dag">' . get_the_date( 'd' ) . '</span> <span class="maand">' . get_the_date( 'M' ) . '</span>' . $jaar . '</span>';
-				$theexcerpt = '<div class="excerpt">' . get_the_excerpt( $getid ) . '</div>';
 			}
+
+			if ( 
+				( 'page' === get_post_type( $getid ) ) ||
+				( GC_BEELDBANK_BRIEF_CPT === get_post_type( $getid ) ) ||
+				( GC_BEELDBANK_BEELD_CPT === get_post_type( $getid ) ) ||
+				( 'post' === get_post_type( $getid ) )
+			) {
+				$theexcerpt 	= '<div class="excerpt">' . get_the_excerpt( $getid ) . '</div>';
+			}
+
 
 			$params[0]['after_title'] .= '<div id="' . $the_image_ID . '" class="' . $class . '">&nbsp;</div>';
 			$params[0]['after_title'] .= '<div class="bloginfo">';

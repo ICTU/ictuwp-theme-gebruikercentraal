@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.19.1
-// @desc.   Added new widget: for general content types.
+// @version 3.19.2
+// @desc.   CSS / code bug: no feat. image for first post on archive. Bigger images for archive lists.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.19.1' );
-define( 'CHILD_THEME_DESCRIPTION', "3.19.1 - Added new widget: for general content types." );
+define( 'CHILD_THEME_VERSION', '3.19.2' );
+define( 'CHILD_THEME_DESCRIPTION', "3.19.2 - CSS / code bug: no feat. image for first post on archive. Bigger images for archive lists." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -167,6 +167,9 @@ $siteURL =  preg_replace('|https://|i', '//', $siteURL );
 $siteURL =  preg_replace('|http://|i', '//', $siteURL );
 
 define( 'WBVB_THEMEFOLDER', $siteURL );
+
+// Adding excerpt for page
+add_post_type_support( 'page', 'excerpt' );
 
 //========================================================================================================
 
@@ -993,7 +996,7 @@ function gc_wbvb_add_blog_single_css() {
 		}
         else {
 
-          $image = wp_get_attachment_image_src( get_post_thumbnail_id( $postid ), 'medium' );
+          $image = wp_get_attachment_image_src( get_post_thumbnail_id( $postid ), 'large' );
 
           if ( $image[0] ) {
 
@@ -1071,7 +1074,7 @@ function gc_wbvb_add_berichten_widget_css() {
         $theID        = 'featured_image_post_' . $getid;
 
         if (has_post_thumbnail( $sidebarposts->ID ) ) {
-          $image = wp_get_attachment_image_src( get_post_thumbnail_id( $sidebarposts->ID ), 'medium' );
+          $image = wp_get_attachment_image_src( get_post_thumbnail_id( $sidebarposts->ID ), 'large' );
 
           if ( $image[0] ) {
             $custom_css .= '#' . $theID . " { \n";
@@ -1110,7 +1113,7 @@ function gc_wbvb_add_blog_archive_css() {
 	$countertje   		= 0;
 	
 	if ( have_posts() ) :
-		
+
 		while ( have_posts() ) : the_post();
 			
 			// do loop stuff
@@ -1138,9 +1141,10 @@ function gc_wbvb_add_blog_archive_css() {
 					if ( $image[1] >= IMG_SIZE_HUGE_MIN_WIDTH ) {
 						
 						foreach ( $imgbreakpoints as $breakpoint ) {
+
 							$image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), $breakpoint['img_size_archive_list'] );
 							$BLOGBERICHTEN_CSS .= '@media only screen and ('  . $breakpoint['direction'] .  '-width: ' . $breakpoint['width'] . " ) {\n";
-							$BLOGBERICHTEN_CSS .= ' #' . $the_image_ID . " { \n";
+							$BLOGBERICHTEN_CSS .= ' #' . $theID . " { \n";
 							$BLOGBERICHTEN_CSS .= "   background-image: url('" . $image[0] . "');\n";
 							$BLOGBERICHTEN_CSS .= " } \n";
 							$BLOGBERICHTEN_CSS .= "} \n";
@@ -1152,10 +1156,10 @@ function gc_wbvb_add_blog_archive_css() {
 					}
 					else {
 						
-						$image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), 'medium' );
+						$image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), 'large' );
 						
 						if ( $image[0] ) {
-							$BLOGBERICHTEN_CSS .= '#' . $the_image_ID . " { \n";
+							$BLOGBERICHTEN_CSS .= '#' . $theID . " { \n";
 							$BLOGBERICHTEN_CSS .= " background-image: url('" . $image[0] . "');\n";
 							$BLOGBERICHTEN_CSS .= "} \n";
 							$class = 'feature-image';
@@ -1167,13 +1171,13 @@ function gc_wbvb_add_blog_archive_css() {
 			else {
 				
 				if ( has_post_thumbnail( $getid ) ) {
-					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), 'medium' );
+					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), 'large' );
 				} 
 				elseif ( function_exists( 'get_field' ) && GC_BEELDBANK_BEELD_CPT == get_post_type( $getid )  ) {
 					
 					$attachment     = get_field('beeld_foto', $getid );
 					if ( isset( $attachment['ID'] ) ) {
-						$image = wp_get_attachment_image_src( $attachment['ID'], 'medium' );
+						$image = wp_get_attachment_image_src( $attachment['ID'], 'large' );
 					}
 				}
 				
@@ -1192,7 +1196,7 @@ function gc_wbvb_add_blog_archive_css() {
 	else : /** if no posts exist **/
 	
 	endif; /** end loop **/
-	
+
 	wp_add_inline_style( ID_BLOGBERICHTEN_CSS, $BLOGBERICHTEN_CSS );
 	
 }
@@ -2079,7 +2083,7 @@ function gc_wbvb_archive_loop() {
 					}
 					else {
 						
-						$image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), 'medium' );
+						$image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), 'large' );
 						
 						if ( $image[0] ) {
 							$class = 'feature-image';
@@ -2093,12 +2097,12 @@ function gc_wbvb_archive_loop() {
 				if ( GC_BEELDBANK_BEELD_CPT == get_post_type() ) {
 					$attachment     = get_field('beeld_foto', $getid );
 					if ( isset( $attachment['ID'] ) ) {
-						$image = wp_get_attachment_image_src( $attachment['ID'], 'medium' );
+						$image = wp_get_attachment_image_src( $attachment['ID'], 'large' );
 					}
 				} 
 				elseif ( has_post_thumbnail( $getid ) ) {
 					
-					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), 'medium' );
+					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), 'large' );
 					
 				}
 

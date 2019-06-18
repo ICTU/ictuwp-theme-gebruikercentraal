@@ -6,8 +6,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.18.1
-// @desc.   Text styling. Bugfixes.
+// @version 3.19.2
+// @desc.   CSS / code bug: no feat. image for first post on archive. Bigger images for archive lists.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 @import "01-socmed-color-codes.less";              // colors, sizes 
@@ -1184,51 +1184,60 @@
 
 .blogberichtshared( @bbs_min_height: 200px, @bbs_readmore_width: @readmore_width, @bbs_readmore_height: @readmore_height, @bbs_excerpt_height: 50 ) {
 
-  .fontsize(14);
-
-  section:hover {
-      .standardboxshadow();;
-  }
-
-  header {
-    overflow: hidden;
-  }    
+	.fontsize(14);
+	
+	section:hover {
+		.standardboxshadow();
+	}
+	
+	header {
+		overflow: hidden;
+	}    
   
-  .entry {
-    overflow: hidden;
-    width: 100%;
-    position: relative;
+	.entry {
+		overflow: hidden;
+		width: 100%;
+		position: relative;
+		
+		a {
+			text-decoration: none;
+			color: @txt_grijs;  
+			display: block;
+			border: 1px solid transparent;
+			
+			&:hover,
+			&:active,
+			&:focus {
+				.standardboxshadow();
+				z-index: 9999;
+				border-color: @txt;
+				
+				.entry-title, .excerpt, .tijdenplaats {
+					color: @hover_widget_txt_color !important;
+				}
+				
+				.date-badge,
+				.excerpt:after {
+					border-color: @hover_widget_txt_color;
+				}          
+				.excerpt:after {
+					box-shadow: 3px 3px 0px lighten(@txt_grijs, 20%);
+					.icon_separator_fill('../images/cta-pijl.svg', @txt);
+				}
+				.ezelsoortje();
+			}
+		}
+	}
 
-    a {
-      text-decoration: none;
-      color: @txt_grijs;  
-      display: block;
-      border: 1px solid transparent;
-
-      &:hover,
-      &:active,
-      &:focus {
-        background: @wit !important;
-        .standardboxshadow();
-        z-index: 9999;
-        border-color: @txt;
-        
-        .entry-title, .excerpt, .tijdenplaats {
-          color: @hover_widget_txt_color !important;
-        }
-
-        .date-badge,
-        .excerpt:after {
-          border-color: @hover_widget_txt_color;
-        }          
-        .excerpt:after {
-          box-shadow: 3px 3px 0px lighten(@txt_grijs, 20%);
-          .icon_separator_fill('../images/cta-pijl.svg', @txt);
-        }
-        .ezelsoortje();
-      }
-    }
-  }
+	section:not(.enorm-huge) {
+		a {
+			&:hover,
+			&:active,
+			&:focus {
+				background: @wit !important;
+			}
+		}
+	}  
   
   .excerpt {
     position: relative;

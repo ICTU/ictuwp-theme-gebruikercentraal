@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-3.19.1 - Added new widget: for general content types.
+3.19.2 - CSS / code bug: no feat. image for first post on archive. Bigger images for archive lists.
 
 ## Version history
+* 3.19.2 - CSS / code bug: no feat. image for first post on archive. Bigger images for archive lists.
 * 3.19.1 - Added new widget: for general content types.
 * 3.18.1 - Text styling. Bugfixes.
 * 3.17.2 - Bugfixes: kleur voor knoppen en cta-links.
