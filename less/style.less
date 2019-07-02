@@ -1,11 +1,11 @@
-@versie: '3.19.2';
+@versie: '3.19.3';
 /*!
 Theme Name:             Gebruiker Centraal
 Description:            Wordpress-theme voor gebruikercentraal.nl
 Author:                 Paul van Buuren - Tamara de Haas
 Author URI:             https://wbvb.nl/
-Version:                3.19.2
-Version description:    3.19.2 - CSS / code bug: no feat. image for first post on archive. Bigger images for archive lists.
+Version:                3.19.3
+Version description:    3.19.3 - CSS bugfixes voor paginering en breadcrumb; bugje uit widget gehaald.
 Link:                   https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 Template: genesis
@@ -60,8 +60,8 @@ License URI: http://www.opensource.org/licenses/gpl-license.php
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.19.2
-// @desc.   CSS / code bug: no feat. image for first post on archive. Bigger images for archive lists.
+// @version 3.19.3
+// @desc.   CSS bugfixes voor paginering en breadcrumb; bugje uit widget gehaald.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -230,7 +230,7 @@ Common Classes
 
 
 .breadcrumb {
-  background-color: @breadcrumb_bg_color;
+//  background-color: @breadcrumb_bg_color;
   .fontsize(10);
   line-height: 1;
   min-height: 46px;

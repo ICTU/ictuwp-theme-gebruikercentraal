@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.19.2
-// @desc.   CSS / code bug: no feat. image for first post on archive. Bigger images for archive lists.
+// @version 3.19.3
+// @desc.   CSS bugfixes voor paginering en breadcrumb; bugje uit widget gehaald.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -124,28 +124,31 @@ function append_header_css_for_gc_beeldbank_homewidget() {
 				$widget_id = $breakpoint['id'];	
 
 				$posts = get_field( 'selecteer_content', 'widget_' . $widget_id );
+				
+				if ( $posts ) {
+					
+				 	// loop through the rows of data
+				    foreach( $posts as $p ):
+			
+						$getid        	= $p->ID;
+						$the_image_ID	= $widget_id . '_widget_posts_' . $getid;
+			          
+						if (has_post_thumbnail( $getid ) ) {
 	
-			 	// loop through the rows of data
-			    foreach( $posts as $p ):
-		
-					$getid        	= $p->ID;
-					$the_image_ID	= $widget_id . '_widget_posts_' . $getid;
-		          
-					if (has_post_thumbnail( $getid ) ) {
-
-						$image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), 'medium' );
-						
-						if ( $image[0] ) {
-							$header_css .= '#' . $the_image_ID . " { \n";
-							$header_css .= " background-image: url('" . $image[0] . "');\n";
-							$header_css .= "} \n";
-							$class = 'feature-image';
-							$header_css .= '/* ' . sanitize_title( $image[0] ) . " */\n";
+							$image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), 'medium' );
+							
+							if ( $image[0] ) {
+								$header_css .= '#' . $the_image_ID . " { \n";
+								$header_css .= " background-image: url('" . $image[0] . "');\n";
+								$header_css .= "} \n";
+								$class = 'feature-image';
+								$header_css .= '/* ' . sanitize_title( $image[0] ) . " */\n";
+							}
 						}
-					}
-					    
-			    endforeach;
-	
+						    
+				    endforeach;
+		
+				}
 			}
 		}
 	}

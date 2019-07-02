@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.19.2
-// @desc.   CSS / code bug: no feat. image for first post on archive. Bigger images for archive lists.
+// @version 3.19.3
+// @desc.   CSS bugfixes voor paginering en breadcrumb; bugje uit widget gehaald.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.19.2' );
-define( 'CHILD_THEME_DESCRIPTION', "3.19.2 - CSS / code bug: no feat. image for first post on archive. Bigger images for archive lists." );
+define( 'CHILD_THEME_VERSION', '3.19.3' );
+define( 'CHILD_THEME_DESCRIPTION', "3.19.3 - CSS bugfixes voor paginering en breadcrumb; bugje uit widget gehaald." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
