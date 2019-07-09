@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.20.1
-// @desc.   Extra optie voor uitgelichte afbeelding: mogelijkheid om automatisch invoegen als banner uit te zetten.
+// @version 3.21.1
+// @desc.   Form styling voor Gravity Forms
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.20.1' );
-define( 'CHILD_THEME_DESCRIPTION', "3.20.1 - Extra optie voor uitgelichte afbeelding: mogelijkheid om automatisch invoegen als banner uit te zetten." );
+define( 'CHILD_THEME_VERSION', '3.21.1' );
+define( 'CHILD_THEME_DESCRIPTION', "3.21.1 - Form styling voor Gravity Forms" );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
