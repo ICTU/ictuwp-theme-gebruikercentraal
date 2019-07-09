@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.19.1
-// @desc.   Added new widget: for general content types.
+// @version 3.20.1
+// @desc.   Extra optie voor uitgelichte afbeelding: mogelijkheid om automatisch invoegen als banner uit te zetten.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -1094,10 +1094,13 @@ if( function_exists('register_field_group') ) {
 }
 
 //========================================================================================================
-// voor logo widget
 
 if( function_exists('acf_add_local_field_group') ) {
 	
+
+	//------------------------------------------------------------------------------------------------------
+	// voor logo widget
+	//
 	acf_add_local_field_group(array(
 		'key' => 'group_5ce2c8f66b5f8',
 		'title' => 'Logo\'s in footer-widget',
@@ -1182,6 +1185,67 @@ if( function_exists('acf_add_local_field_group') ) {
 		'active' => true,
 		'description' => '',
 	));
+
+
+  //------------------------------------------------------------------------------------------------------
+  // Extra layout-optie voor automatische afbeelding
+  //
+  acf_add_local_field_group(array(
+    	'key' => 'group_5c9c94d6734bc',
+    	'title' => 'Uitgelichte afbeelding als banner',
+    	'fields' => array(
+    		array(
+    			'key' => 'field_5c9c9544cf719',
+    			'label' => 'Uitgelichte afbeelding automatisch boven bericht tonen als banner?',
+    			'name' => 'featimg_automatic_insert',
+    			'type' => 'radio',
+    			'instructions' => 'Als je hier \'<em>Nee</em>\' kiest, dan kun je zelf in je tekst een foto toevoegen met de uitsnedes of uitlijning die je wilt. Als je dit op \'<em>Ja</em>\' laat staan, dan wordt de uitgelichte afbeelding paginabreed boven het bericht getoond (op desktop-schermen).',
+    			'required' => 0,
+    			'conditional_logic' => 0,
+    			'wrapper' => array(
+    				'width' => '',
+    				'class' => '',
+    				'id' => '',
+    			),
+    			'choices' => array(
+    				'ja' => 'Ja, toon als paginabrede banner',
+    				'nee' => 'Nee, niet als paginabrede banner tonen',
+    			),
+    			'allow_null' => 0,
+    			'other_choice' => 0,
+    			'default_value' => 'ja',
+    			'layout' => 'vertical',
+    			'return_format' => 'value',
+    			'save_other_choice' => 0,
+    		),
+    	),
+    	'location' => array(
+    		array(
+    			array(
+    				'param' => 'post_type',
+    				'operator' => '==',
+    				'value' => 'post',
+    			),
+    		),
+    		array(
+    			array(
+    				'param' => 'post_type',
+    				'operator' => '==',
+    				'value' => 'page',
+    			),
+    		),
+    	),
+    	'menu_order' => 0,
+    	'position' => 'side',
+    	'style' => 'default',
+    	'label_placement' => 'top',
+    	'instruction_placement' => 'field',
+    	'hide_on_screen' => '',
+    	'active' => true,
+    	'description' => '',
+  ));
+
+
 	
 }
 

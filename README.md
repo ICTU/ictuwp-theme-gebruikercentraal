@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-3.19.3 - CSS bugfixes voor paginering en breadcrumb; bugje uit widget gehaald.
+3.20.1 - Extra optie voor uitgelichte afbeelding: mogelijkheid om automatisch invoegen als banner uit te zetten.
 
 ## Version history
+* 3.20.1 - Extra optie voor uitgelichte afbeelding: mogelijkheid om automatisch invoegen als banner uit te zetten.
 * 3.19.3 - CSS bugfixes voor paginering en breadcrumb; bugje uit widget gehaald.
 * 3.19.2 - CSS / code bug: no feat. image for first post on archive. Bigger images for archive lists.
 * 3.19.1 - Added new widget: for general content types.

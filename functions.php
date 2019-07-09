@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.19.3
-// @desc.   CSS bugfixes voor paginering en breadcrumb; bugje uit widget gehaald.
+// @version 3.20.1
+// @desc.   Extra optie voor uitgelichte afbeelding: mogelijkheid om automatisch invoegen als banner uit te zetten.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.19.3' );
-define( 'CHILD_THEME_DESCRIPTION', "3.19.3 - CSS bugfixes voor paginering en breadcrumb; bugje uit widget gehaald." );
+define( 'CHILD_THEME_VERSION', '3.20.1' );
+define( 'CHILD_THEME_DESCRIPTION', "3.20.1 - Extra optie voor uitgelichte afbeelding: mogelijkheid om automatisch invoegen als banner uit te zetten." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -44,6 +44,11 @@ define( 'GC_FOLDER', $sharedfolder );
 define( 'GC_WBVB_WIDGET_SITE_FOOTER', 'site-footer-widget');
 define( 'GC_WBVB_WIDGET_HOME_WIDGET_1', 'widgetarea-home-links');
 define( 'GC_WBVB_WIDGET_HOME_WIDGET_2', 'widgetarea-home-rechts');
+
+//========================================================================================================
+
+//* Remove the edit link
+add_filter ( 'genesis_edit_post_link' , '__return_false' );
 
 //========================================================================================================
 
@@ -939,105 +944,144 @@ if (! function_exists( 'dovardump' ) ) {
 //========================================================================================================
 
 function gc_wbvb_add_blog_single_css() {
-
-  global $imgbreakpoints;
-
-  wp_enqueue_style(
-    ID_SINGLE_CSS,
-    WBVB_THEMEFOLDER . '/blogberichten.css'
-  );
-
-  $BLOGBERICHTEN_CSS   = '';
-
-
-  if ( have_posts() ) :
-
-    $countertje = 0;
-
-    while ( have_posts() ) : the_post();
-
-      // do loop stuff
-      $countertje++;
-      $postid       = get_the_ID();
-      $permalink    = get_permalink( $postid );
-      $publishdate  = get_the_date();
-      $theID        = 'featured_image_post_' . $postid;
-      $the_image_ID = 'image_' . $theID;
-      $extra_class  = '';
-      $class        = 'feature-image noimage';
-
-      // check of het eerste bericht een enorme afbeelding heeft
-
-      if (has_post_thumbnail( $postid ) ) {
-
-        $image = wp_get_attachment_image_src( get_post_thumbnail_id( $postid ), IMG_SIZE_HUGE );
-
-        if ( $image[1] >= IMG_SIZE_HUGE_MIN_WIDTH ) {
-
-			foreach ( $imgbreakpoints as $breakpoint ) {
-
-				$image = wp_get_attachment_image_src( get_post_thumbnail_id( $postid ), $breakpoint['img_size_archive_list'] );
-				
-				$BLOGBERICHTEN_CSS .= '@media only screen and ('  . $breakpoint['direction'] .  '-width: ' . $breakpoint['width'] . " ) {\n";
-				$BLOGBERICHTEN_CSS .= " .content:before { \n";
-				$BLOGBERICHTEN_CSS .= "   content: ' ';\n";
-				$BLOGBERICHTEN_CSS .= "   display: block;\n";
-				$BLOGBERICHTEN_CSS .= "   padding-top: " . $breakpoint['header-padding'] . ";\n";
-				$BLOGBERICHTEN_CSS .= "   background-image: url('" . $image[0] . "');\n";
-				$BLOGBERICHTEN_CSS .= "   background-size: cover;\n";
-				$BLOGBERICHTEN_CSS .= "   background-position: center center;\n";
-				$BLOGBERICHTEN_CSS .= " } \n";
-				$BLOGBERICHTEN_CSS .= "} \n";
-			}
-
-			$class      = 'feature-image';
-			$extra_class  = ' enorm-huge';
+	
+	global $imgbreakpoints;
+	
+	wp_enqueue_style(
+	ID_SINGLE_CSS,
+	WBVB_THEMEFOLDER . '/blogberichten.css'
+	);
+	
+	$BLOGBERICHTEN_CSS   = '';
+	
+	
+	if ( have_posts() ) :
 		
-		}
-        else {
+		$countertje = 0;
+		
+		while ( have_posts() ) : the_post();
+			
+			// do loop stuff
+			$countertje++;
+			$postid       				= get_the_ID();
+			$permalink    				= get_permalink( $postid );
+			$publishdate  				= get_the_date();
+			$theID        				= 'featured_image_post_' . $postid;
+			$the_image_ID 				= 'image_' . $theID;
+			$extra_class  				= '';
+			$class        				= 'feature-image noimage';
+			$featimg_automatic_insert	= get_field( 'featimg_automatic_insert', $postid );
+			
+			if ( 'nee' !== $featimg_automatic_insert ) {
+				$featimg_automatic_insert = 'ja';
+			}
+			
+			//echo '<h1>' . $featimg_automatic_insert . '</h1>';
+			
+			// check of het eerste bericht een enorme afbeelding heeft
+			
+			if ( has_post_thumbnail( $postid ) && 'ja' === $featimg_automatic_insert ) {
 
-          $image = wp_get_attachment_image_src( get_post_thumbnail_id( $postid ), 'large' );
+				$image = wp_get_attachment_image_src( get_post_thumbnail_id( $postid ), IMG_SIZE_HUGE );
+				
+				if ( $image[1] >= IMG_SIZE_HUGE_MIN_WIDTH ) {
+					
+					foreach ( $imgbreakpoints as $breakpoint ) {
+						
+						$image = wp_get_attachment_image_src( get_post_thumbnail_id( $postid ), $breakpoint['img_size_archive_list'] );
+						
+	
+/*							
 
-          if ( $image[0] ) {
+						$image_width	= $image[1];
+						$image_height	= $image[2];
+						
+						if ( $image_width < $image_height ) {
 
-            foreach ( $imgbreakpoints as $breakpoint ) {
-              if ( $breakpoint['content-before'] ) {
+							// landscape photo
+							$BLOGBERICHTEN_CSS .= '@media only screen and ('  . $breakpoint['direction'] .  '-width: ' . $breakpoint['width'] . " ) {\n";
+							$BLOGBERICHTEN_CSS .= " .content:before { \n";
+							$BLOGBERICHTEN_CSS .= "   content: ' ';\n";
+							$BLOGBERICHTEN_CSS .= "   display: block;\n";
+							$BLOGBERICHTEN_CSS .= "   height: " . $image_height . "px;\n";
+							$BLOGBERICHTEN_CSS .= "   width: " . $image_width . "px;\n";
+							$BLOGBERICHTEN_CSS .= "   padding-top: " . $image_height . "px;\n";
+							$BLOGBERICHTEN_CSS .= "   background-image: url('" . $image[0] . "');\n";
+							$BLOGBERICHTEN_CSS .= "   background-size: cover;\n";
+							$BLOGBERICHTEN_CSS .= "   background-position: center center;\n";
+							$BLOGBERICHTEN_CSS .= " } \n";
+							$BLOGBERICHTEN_CSS .= "} \n";
 
-                $image = wp_get_attachment_image_src( get_post_thumbnail_id( $postid ), $breakpoint['img_size_single'] );
+						}
+						else {
 
-                $BLOGBERICHTEN_CSS .= '@media only screen and ('  . $breakpoint['direction'] .  '-width: ' . $breakpoint['width'] . " ) {\n";
-                $BLOGBERICHTEN_CSS .= " .content .entry-content:before { \n";
-                $BLOGBERICHTEN_CSS .= "   content: ' ';\n";
-                $BLOGBERICHTEN_CSS .= "   width: " . $image[1] . "px;\n";
-                $BLOGBERICHTEN_CSS .= "   height: " . $image[2] . "px;\n";
-                $BLOGBERICHTEN_CSS .= "   margin: 0 0 16px 16px;\n";
-                $BLOGBERICHTEN_CSS .= "   display: block;\n";
-                $BLOGBERICHTEN_CSS .= "   float: right;\n";
-                $BLOGBERICHTEN_CSS .= "   background-image: url('" . $image[0] . "');\n";
-                $BLOGBERICHTEN_CSS .= "   background-size: cover;\n";
-                $BLOGBERICHTEN_CSS .= " } \n";
-                $BLOGBERICHTEN_CSS .= "} \n";
-              }
-            }
-          }
-          else {
-           // heeft geen image
-          }
-        }
-      }
-      else {
-
-      }
-
-
-    endwhile; /** end of one post **/
-
-  else : /** if no posts exist **/
-
-  endif; /** end loop **/
-
-  wp_add_inline_style( ID_SINGLE_CSS, $BLOGBERICHTEN_CSS );
-
+*/
+							
+							
+							$BLOGBERICHTEN_CSS .= '@media only screen and ('  . $breakpoint['direction'] .  '-width: ' . $breakpoint['width'] . " ) {\n";
+							$BLOGBERICHTEN_CSS .= " .content:before { \n";
+							$BLOGBERICHTEN_CSS .= "   content: ' ';\n";
+							$BLOGBERICHTEN_CSS .= "   display: block;\n";
+							$BLOGBERICHTEN_CSS .= "   padding-top: " . $breakpoint['header-padding'] . ";\n";
+							$BLOGBERICHTEN_CSS .= "   background-image: url('" . $image[0] . "');\n";
+							$BLOGBERICHTEN_CSS .= "   background-size: cover;\n";
+							$BLOGBERICHTEN_CSS .= "   background-position: center center;\n";
+							$BLOGBERICHTEN_CSS .= " } \n";
+							$BLOGBERICHTEN_CSS .= "} \n";
+	
+//						}
+						
+					}
+					
+					$class      = 'feature-image';
+					$extra_class  = ' enorm-huge';
+					
+				}
+				else {
+					
+					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $postid ), 'large' );
+					
+					if ( $image[0] ) {
+						
+						foreach ( $imgbreakpoints as $breakpoint ) {
+								
+							if ( $breakpoint['content-before'] ) {
+							
+								$image = wp_get_attachment_image_src( get_post_thumbnail_id( $postid ), $breakpoint['img_size_single'] );
+								
+								$BLOGBERICHTEN_CSS .= '@media only screen and ('  . $breakpoint['direction'] .  '-width: ' . $breakpoint['width'] . " ) {\n";
+								$BLOGBERICHTEN_CSS .= " .content .entry-content:before { \n";
+								$BLOGBERICHTEN_CSS .= "   content: ' ';\n";
+								$BLOGBERICHTEN_CSS .= "   width: " . $image[1] . "px;\n";
+								$BLOGBERICHTEN_CSS .= "   height: " . $image[2] . "px;\n";
+								$BLOGBERICHTEN_CSS .= "   margin: 0 0 16px 16px;\n";
+								$BLOGBERICHTEN_CSS .= "   display: block;\n";
+								$BLOGBERICHTEN_CSS .= "   float: right;\n";
+								$BLOGBERICHTEN_CSS .= "   background-image: url('" . $image[0] . "');\n";
+								$BLOGBERICHTEN_CSS .= "   background-size: cover;\n";
+								$BLOGBERICHTEN_CSS .= " } \n";
+								$BLOGBERICHTEN_CSS .= "} \n";
+							}
+						}
+					}
+					else {
+						// heeft geen image
+					}
+				}
+				}
+			else {
+			
+			}
+		
+		
+		endwhile; /** end of one post **/
+	
+	else : /** if no posts exist **/
+	
+	endif; /** end loop **/
+	
+	wp_add_inline_style( ID_SINGLE_CSS, $BLOGBERICHTEN_CSS );
+	
 }
 
 //========================================================================================================
