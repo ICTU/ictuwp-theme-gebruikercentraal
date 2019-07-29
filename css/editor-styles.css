@@ -13,16 +13,6 @@
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 */
-.visuallyhidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-}
 * {
   color: #002F3E;
   font-family: 'Montserrat light', Helvetica, Arial, sans-serif;
