@@ -1257,13 +1257,45 @@ acf_add_local_field_group(array(
 	'title' => 'Stappen',
 	'fields' => array(
 		array(
-			'key' => 'field_5d3175eeceffc',
-			'label' => 'Stappenplan toevoegen',
-			'name' => '',
-			'type' => 'accordion',
-			'instructions' => '<img src="/wp-content/themes/gebruiker-centraal/images/stappenplan.jpg" alt="Screenshot van stappenplan" widt"400" height="198" />',
+			'key' => 'field_5d414d551f00a',
+			'label' => 'Stappenplan toevoegen?',
+			'name' => 'stappenplan_add',
+			'type' => 'radio',
+			'instructions' => '',
 			'required' => 0,
 			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'ja' => 'Ja',
+				'nee' => 'Nee',
+			),
+			'allow_null' => 1,
+			'other_choice' => 0,
+			'default_value' => 'nee',
+			'layout' => 'horizontal',
+			'return_format' => 'value',
+			'save_other_choice' => 0,
+		),
+		array(
+			'key' => 'field_5d3175eeceffc',
+			'label' => 'Voeg stappen toe aan stappenplan',
+			'name' => '',
+			'type' => 'accordion',
+			'instructions' => '<img src="/wp-content/themes/gebruiker-centraal/images/stappenplan.jpg" alt="Screenshot van stappenplan" widt"400" height="198" /> Voer hieronder de stappen van je stappenplan in, minimaal 2 stappen, maximaal 5',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5d414d551f00a',
+						'operator' => '==',
+						'value' => 'ja',
+					),
+				),
+			),
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
@@ -1280,7 +1312,15 @@ acf_add_local_field_group(array(
 			'type' => 'repeater',
 			'instructions' => '',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5d414d551f00a',
+						'operator' => '==',
+						'value' => 'ja',
+					),
+				),
+			),
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',

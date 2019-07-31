@@ -2681,7 +2681,7 @@ function check_stappenplan() {
 				
 
 				echo '<li class="stap" id="' . $section_id . '" aria-labelledby="' . $title_id . '">';
-				echo '<div class="content">';
+				echo '<div class="step-content">';
 
 				echo '<h3 class="titelspan" id="' . $title_id . '">' . $steptable_step_titlecounter . '<span class="step-title">' . $steptable_step_title . '</span>' . $steptable_step_arrow_right . '</h3>';
 //				echo '<p aria-hidden="ftrue">' . $steptable_step_title . '</p>';
