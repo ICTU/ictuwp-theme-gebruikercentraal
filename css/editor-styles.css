@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.10.3c
-// @desc.   Styling voor 'niet zo, maar zo' images op richtlijnen-pagina.
+// @version 3.22.2
+// @desc.   Option for Twitter-account per site. CSS bugfixes for IE11 (step table and menu hover).
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 */
@@ -84,7 +84,7 @@ ol li {
 }
 ul li {
   list-style-image: url('images/bullet.png');
-  list-style-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20height%3D%226%22%20viewBox%3D%220%200%206%206%22%20width%3D%226%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m0%200h6v6h-6z%22%20fill%3D%22%23002f3e%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E");
+  list-style-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20height%3D%226%22%20viewBox%3D%220%200%206%206%22%20width%3D%226%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m0%200h6v6h-6z%22%20fill%3D%22%23002F3E%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E%0A");
 }
 ol ol,
 ul ul {
@@ -438,8 +438,6 @@ strong,
 b {
   font-weight: bold;
 }
-strong:before,
-b:before,
 span[style*="font"]:before,
 span[style*="underline"]:before,
 u:before {
@@ -462,10 +460,11 @@ span[style*="underline"]:before,
 u:before {
   content: 'Onderstreepte tekst impliceert een link. Niet gebruiken, alsjeblieft.';
 }
-strong:before,
-b:before {
-  content: 'Deze tekst is vet. Als je een tussenkopje wil maken, gebruik dan h2, h3, h4. Vette tekst leidt erg af; van harte afgeraden.';
+/*
+strong:before, b:before {
+  content: @waarschuwingbold;
 }
+*/
 /*
 .knoppify( 
 	@bordercolor: @blauw5, 

@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-3.22.1 - New component: step table with 3-5 steps.
+3.22.2 - Option for Twitter-account per site. CSS bugfixes for IE11 (step table and menu hover).
 
 ## Version history
+* 3.22.2 - Option for Twitter-account per site. CSS bugfixes for IE11 (step table and menu hover).
 * 3.22.1 - New component: step table with 3-5 steps.
 * 3.21.1 - Form styling voor Gravity Forms
 * 3.20.1 - Extra optie voor uitgelichte afbeelding: mogelijkheid om automatisch invoegen als banner uit te zetten.

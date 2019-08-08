@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.22.1
-// @desc.   New component: step table with 3-5 steps.
+// @version 3.22.2
+// @desc.   Option for Twitter-account per site. CSS bugfixes for IE11 (step table and menu hover).
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.22.1' );
-define( 'CHILD_THEME_DESCRIPTION', "3.22.1 - New component: step table with 3-5 steps." );
+define( 'CHILD_THEME_VERSION', '3.22.2' );
+define( 'CHILD_THEME_DESCRIPTION', "3.22.2 - Option for Twitter-account per site. CSS bugfixes for IE11 (step table and menu hover)." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -421,6 +421,37 @@ function gc_wbvb_after_entry_content() {
 //========================================================================================================
 //* Customize the entry meta in the entry header (requires HTML5 theme support)
 
+add_filter( 'genesis_entry_header', 'gc_wbvb_page_append_sokmet' );
+
+function gc_wbvb_page_append_sokmet( ) {
+
+	if ( ! is_page() ) {
+		return;	
+	}
+
+	global $wp_query;
+	global $post;
+	
+	$show_socialmedia_buttons_global		= get_field('show_socialmedia_buttons_global', 'option');
+	$show_socialmedia_buttons_on_this_page	= SOC_MED_YES;
+
+	if ( function_exists( 'get_field' ) ) {
+		$show_socialmedia_buttons_on_this_page    = get_field('socialmedia_icoontjes', $post->ID );
+	}
+	else {
+		$show_socialmedia_buttons_on_this_page    = '';
+	}
+
+	if  ( ( $show_socialmedia_buttons_global !== SOC_MED_NO ) && ( $show_socialmedia_buttons_on_this_page !== SOC_MED_NO ) )  {
+		$show_socialmedia_buttons_on_this_page = gc_wbvb_socialbuttons( $post, '' );
+	}
+
+	echo $show_socialmedia_buttons_on_this_page;
+
+}
+
+//========================================================================================================
+//* Customize the entry meta in the entry header (requires HTML5 theme support)
 add_filter( 'genesis_post_info', 'gc_wbvb_post_append_postinfo' );
 
 function gc_wbvb_post_append_postinfo($post_info) {
@@ -430,7 +461,6 @@ function gc_wbvb_post_append_postinfo($post_info) {
 	
 	$show_socialmedia_buttons_global		= get_field('show_socialmedia_buttons_global', 'option');
 	$show_socialmedia_buttons_on_this_page	= SOC_MED_YES;
-
 
 	if (
 		( 'page'    == get_post_type() ) ||
@@ -446,15 +476,14 @@ function gc_wbvb_post_append_postinfo($post_info) {
 		}
 	}
 
-	if  ( ( $show_socialmedia_buttons_global !== SOC_MED_NO ) && ( $show_socialmedia_buttons_on_this_page !== SOC_MED_NO ) && ( is_single() ) )  {
+
+	if  ( ( $show_socialmedia_buttons_global !== SOC_MED_NO ) && ( $show_socialmedia_buttons_on_this_page !== SOC_MED_NO ) && ( is_single() || is_page() ) )  {
 		$show_socialmedia_buttons_on_this_page = gc_wbvb_socialbuttons( $post, '' );
-//		$show_socialmedia_buttons_on_this_page = '(GLOB: ' . $show_socialmedia_buttons_global . ' / show_socialmedia_buttons_on_this_page: ' . $show_socialmedia_buttons_on_this_page . ') ' . gc_wbvb_socialbuttons( $post, '' );
 	}
 	else {
 		$show_socialmedia_buttons_on_this_page = '';
 	}
 
-	
 	if ( is_home() ) {
 		// niks, eigenlijk
 		return '[post_date]';
@@ -572,13 +601,8 @@ function gc_wbvb_socialbuttons($post_info, $hidden = '') {
     $sitetitle  = urlencode(get_bloginfo('name'));
     $summary    = urlencode($post_info->post_excerpt);
     $comment    = '';
-    
-    $twitteraccount = GC_TWITTERACCOUNT;
 
-	if ( 'conference.gebruikercentraal.co.uk' == $_SERVER["HTTP_HOST"] || 'accept.conference.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] || 'conference.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] ) {
-	    $twitteraccount = 'govdesignconf';
-	} else {
-	}
+	$twitteraccount   = ( get_field('siteoptions_twitter_account', 'option') ) ? get_field('siteoptions_twitter_account', 'option') : GC_TWITTERACCOUNT;
 
     if ( $hidden ) {
         $comment    = '<!-- ey, we hoeven maar 1 werkende set sokmetknoppen te gebruiken ja? dit hiero is versiering -->';
@@ -2405,24 +2429,28 @@ function gc_wbvb_breadcrumb_add_newspage( $crumb, $args ) {
 
 //========================================================================================================
 
-function gc_wbvb_breadcrumbstring( $currentpageID, $args ) {
+if (! function_exists( 'gc_wbvb_breadcrumbstring' ) ) {
 
-	global $post;
-	$crumb = '';
-	$countertje = 0;
+	function gc_wbvb_breadcrumbstring( $currentpageID, $args ) {
 	
-	if ( $currentpageID ) {
-		$crumb = '<a href="' . get_permalink( $currentpageID ) . '">' . get_the_title( $currentpageID ) .'</a>' . $args['sep'] . ' ' . get_the_title( $post->ID );
-		$postparents = get_post_ancestors( $currentpageID );
-
-		foreach( $postparents as $postparent ) {
-			$countertje ++;
-			$crumb = '<a href="' . get_permalink( $postparent ) . '">' . get_the_title( $postparent ) .'</a>' . $args['sep'] . $crumb;
+		global $post;
+		$crumb = '';
+		$countertje = 0;
+		
+		if ( $currentpageID ) {
+			$crumb = '<a href="' . get_permalink( $currentpageID ) . '">' . get_the_title( $currentpageID ) .'</a>' . $args['sep'] . ' ' . get_the_title( $post->ID );
+			$postparents = get_post_ancestors( $currentpageID );
+	
+			foreach( $postparents as $postparent ) {
+				$countertje ++;
+				$crumb = '<a href="' . get_permalink( $postparent ) . '">' . get_the_title( $postparent ) .'</a>' . $args['sep'] . $crumb;
+			}
 		}
+		
+		return $crumb;
+		
 	}
-	
-	return $crumb;
-	
+
 }
 
 //========================================================================================================
@@ -2660,13 +2688,13 @@ function check_stappenplan() {
 				$title_id						= 'title-' . $section_id;
 				
 				if ( $stappenteller === 1 ) {
-					$steptable_step_titlecounter 	= '<span class="stepcounter first-step">' . $stappenteller . '</span>';
+					$steptable_step_titlecounter 	= '<span class="step-counter first-step">' . $stappenteller . '</span>';
 				}
 				else if ( $stappenteller === count( $stappen ) ) {
-					$steptable_step_titlecounter 	= '<span class="stepcounter last-step">' . $stappenteller . '</span>';
+					$steptable_step_titlecounter 	= '<span class="step-counter last-step">' . $stappenteller . '</span>';
 				}
 				else {
-					$steptable_step_titlecounter 	= '<span class="stepcounter">' . $stappenteller . '</span>';
+					$steptable_step_titlecounter 	= '<span class="step-counter">' . $stappenteller . '</span>';
 				}
 
 
@@ -2684,7 +2712,6 @@ function check_stappenplan() {
 				echo '<div class="step-content">';
 
 				echo '<h3 class="titelspan" id="' . $title_id . '">' . $steptable_step_titlecounter . '<span class="step-title">' . $steptable_step_title . '</span>' . $steptable_step_arrow_right . '</h3>';
-//				echo '<p aria-hidden="ftrue">' . $steptable_step_title . '</p>';
 				
 				if ( $steptable_step_introduction ) {
 					echo '<div class="stap-intro"><p>' . $steptable_step_introduction . '</p></div>';
@@ -2710,6 +2737,4 @@ function check_stappenplan() {
 }
 
 //========================================================================================================
-
-
 

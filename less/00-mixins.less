@@ -6,8 +6,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.22.1
-// @desc.   New component: step table with 3-5 steps.
+// @version 3.22.2
+// @desc.   Option for Twitter-account per site. CSS bugfixes for IE11 (step table and menu hover).
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 @import "01-socmed-color-codes.less";              // colors, sizes 
@@ -312,9 +312,21 @@
 	&:hover,
 	&:active,
 	&:focus {
-		color: @button-normal;
+//		color: @button-normal;
 		text-decoration: underline;
-		.button_shared_pijltje_1_hover();
+//		.button_shared_pijltje_1_hover();
+//		color: @wit;
+//		background-color: @txt;
+		color: @txt;
+		background-color: @wit;
+		border-color: @gc_a11y_green;
+
+		&:after {
+			background-color: @txt;
+			.pijltje_wit('../images/arrow-wit.svg', @wit );
+		}
+
+
 	}
 }
 
@@ -967,87 +979,89 @@
 //=========================================================================================================
 
 .socialmedia_styling() {
-
-  .social-media {
-
-    overflow: hidden;
-    margin-bottom: 0;
-    
-    &, li {
-      list-style: none;
-      margin-left: 0;
-      padding-left: 0;
-    }
-    li {
-      display: inline;
-      float: left;
-      margin: 0;
-      
-      a {
-        &.personallink,
-        &.linkedin,
-        &.facebook,
-        &.twitter {
-          border: 1px solid @light_gray;
-          display: block;
-          width: 2em;
-          height: 2em;
-          
-          &:hover,
-          &:active,
-          &:focus {
-            border-color: @txt;
-          }
-        }
-      }
-      .twitter {
-        background: url('images/icon-twitter.png') no-repeat center center;
-        .icon_socmed_icon('../images/icon-twitter.svg', @blauw3);
-        background-size: 18px 15px;
-
-        &:hover,
-        &:active,
-        &:focus {
-          .icon_socmed_icon('../images/icon-twitter.svg', @gc_a11y_green );
-        }
-      }
-      .facebook {
-        background: url('images/icon-facebook.png') no-repeat center center;
-        .icon_socmed_icon('../images/icon-facebook.svg', @blauw3);
-        background-size: 10px 18px;
-
-        &:hover,
-        &:active,
-        &:focus {
-          .icon_socmed_icon('../images/icon-facebook.svg', @gc_a11y_green );
-        }
-      }
-      .personallink {
-        background: url('images/icon-personallink.png') no-repeat center center;
-        .icon_socmed_icon('../images/icon-personallink.svg', @blauw3);
-        background-size: 18px 16px;
-
-        &:hover,
-        &:active,
-        &:focus {
-          .icon_socmed_icon('../images/icon-personallink.svg', @gc_a11y_green );
-        }
-      }
-      .linkedin {
-        background: url('images/icon-linkedin.png') no-repeat center center;
-        .icon_socmed_icon('../images/icon-linkedin.svg', @blauw3);
-        background-size: 18px 17px;
-
-        &:hover,
-        &:active,
-        &:focus {
-          .icon_socmed_icon('../images/icon-linkedin.svg', @gc_a11y_green );
-        }
-      }
-    }
-  }
+		
+	.social-media {
+		
+		overflow: hidden;
+		margin-bottom: 0;
+		
+		&, li {
+			list-style: none;
+			margin-left: 0;
+			padding-left: 0;
+		}
+		li {
+			display: inline;
+			float: left;
+			margin: 0;
+			
+			a {
+				&.personallink,
+				&.linkedin,
+				&.facebook,
+				&.twitter {
+					background-color: @wit;
+					background-repeat: no-repeat;
+					background-position: center center;
+					border: 1px solid @light_gray;
+					display: block;
+					width: 2em;
+					height: 2em;
+					
+					&:hover,
+					&:active,
+					&:focus {
+						border-color: @txt;
+					}
+				}
+			}
+			.twitter {
+				background-image: url('images/icon-twitter.png');
+				.icon_socmed_icon('../images/icon-twitter.svg', @blauw3);
+				background-size: 18px 15px;
+				
+				&:hover,
+				&:active,
+				&:focus {
+					.icon_socmed_icon('../images/icon-twitter.svg', @gc_a11y_green );
+				}
+			}
+			.facebook {
+				background-image: url('images/icon-facebook.png');
+				.icon_socmed_icon('../images/icon-facebook.svg', @blauw3);
+				background-size: 10px 18px;
+				
+				&:hover,
+				&:active,
+				&:focus {
+					.icon_socmed_icon('../images/icon-facebook.svg', @gc_a11y_green );
+				}
+			}
+			.personallink {
+				background-image: url('images/icon-personallink.png');
+				.icon_socmed_icon('../images/icon-personallink.svg', @blauw3);
+				background-size: 18px 16px;
+				
+				&:hover,
+				&:active,
+				&:focus {
+					.icon_socmed_icon('../images/icon-personallink.svg', @gc_a11y_green );
+				}
+			}
+			.linkedin {
+				background-image: url('images/icon-linkedin.png');
+				.icon_socmed_icon('../images/icon-linkedin.svg', @blauw3);
+				background-size: 18px 17px;
+			
+				&:hover,
+				&:active,
+				&:focus {
+					.icon_socmed_icon('../images/icon-linkedin.svg', @gc_a11y_green );
+				}
+			}
+		}
+	}
 }
-
 
 //=========================================================================================================
 
@@ -1573,4 +1587,20 @@
 
 //=========================================================================================================
 
+.show_submenu() {
+	position: relative;
+	
+	a {
+		border-color: @a_menu_hover_border;
+	}
+	
+	& > .sub-menu {
+		opacity: 1;
+		left: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+//=========================================================================================================
 

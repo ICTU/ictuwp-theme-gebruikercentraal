@@ -9,7 +9,7 @@
 // @author  Paul van Buuren
 // @license GPL-2.0+
 // @version 3.22.1
-// @desc.   New component: step table with 3-5 steps.
+// @desc.   Option for Twitter-account per site. CSS bugfixes for IE11 (step table and menu hover).
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -724,6 +724,25 @@ if( function_exists('register_field_group') ) {
 						'return_format' => 'array',
 					),
 				),
+			),
+			array(
+				'key' => 'field_5d4bef8b4c525',
+				'label' => 'Twitter-account',
+				'name' => 'siteoptions_twitter_account',
+				'type' => 'text',
+				'instructions' => 'Het standaard-Twitteraccount dat vermeld wordt in de deelknoppen. Voer in zonder @, dus: gebrcentraal',
+				'required' => 1,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => 'gebrcentraal',
+				'placeholder' => '',
+				'prepend' => '@',
+				'append' => '',
+				'maxlength' => '',
 			),
 		),
 		'location' => array(

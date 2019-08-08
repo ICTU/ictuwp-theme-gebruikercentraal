@@ -175,7 +175,7 @@ ol li {
 }
 ul li {
   list-style-image: url('images/bullet.png');
-  list-style-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20height%3D%226%22%20viewBox%3D%220%200%206%206%22%20width%3D%226%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m0%200h6v6h-6z%22%20fill%3D%22%23002f3e%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E");
+  list-style-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20height%3D%226%22%20viewBox%3D%220%200%206%206%22%20width%3D%226%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m0%200h6v6h-6z%22%20fill%3D%22%23002F3E%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E%0A");
 }
 ol ol,
 ul ul {
@@ -571,10 +571,31 @@ body.login div#login form#lostpasswordform p.submit input#wp-submit:focus,
 #error-page div#login form#lostpasswordform p.submit input#wp-submit:focus,
 body.login div#login form#registerform p.submit input#wp-submit:focus,
 #error-page div#login form#registerform p.submit input#wp-submit:focus {
-  color: #148839;
   text-decoration: underline;
-  background: #fff url('images/icon-knop-groen-hover.svg?asd') no-repeat right center;
-  background: #fff url('../images/icon-knop-groen-hover.svg?asd') no-repeat right center;
+  color: #002F3E;
+  background-color: #fff;
+  border-color: #148839;
+}
+body.login div#login form#loginform p.submit input#wp-submit:hover:after,
+#error-page div#login form#loginform p.submit input#wp-submit:hover:after,
+body.login div#login form#lostpasswordform p.submit input#wp-submit:hover:after,
+#error-page div#login form#lostpasswordform p.submit input#wp-submit:hover:after,
+body.login div#login form#registerform p.submit input#wp-submit:hover:after,
+#error-page div#login form#registerform p.submit input#wp-submit:hover:after,
+body.login div#login form#loginform p.submit input#wp-submit:active:after,
+#error-page div#login form#loginform p.submit input#wp-submit:active:after,
+body.login div#login form#lostpasswordform p.submit input#wp-submit:active:after,
+#error-page div#login form#lostpasswordform p.submit input#wp-submit:active:after,
+body.login div#login form#registerform p.submit input#wp-submit:active:after,
+#error-page div#login form#registerform p.submit input#wp-submit:active:after,
+body.login div#login form#loginform p.submit input#wp-submit:focus:after,
+#error-page div#login form#loginform p.submit input#wp-submit:focus:after,
+body.login div#login form#lostpasswordform p.submit input#wp-submit:focus:after,
+#error-page div#login form#lostpasswordform p.submit input#wp-submit:focus:after,
+body.login div#login form#registerform p.submit input#wp-submit:focus:after,
+#error-page div#login form#registerform p.submit input#wp-submit:focus:after {
+  background-color: #002F3E;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20height%3D%2242%22%20viewBox%3D%220%200%2028%2042%22%20width%3D%2228%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m12.014785%2016-.014785.0132201v2.5053476l2.4767983%202.9034654-2.4767983%202.9036032v2.5052099l.014785.0132201%204.9851688-5.4220332z%22%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E");
 }
 body.login div#login form#loginform input#user_login,
 #error-page div#login form#loginform input#user_login,
