@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.21.1
-// @desc.   Form styling voor Gravity Forms
+// @version 3.22.2
+// @desc.   Option for Twitter-account per site. CSS bugfixes for IE11 (step table and menu hover).
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -80,6 +80,14 @@
 	label {
 		font-weight: 700;			
 	}
+
+	[type="radio"],
+	[type="checkbox"] {
+		& + label {
+			font-weight: normal;
+		}
+	}
+	
 	
 	button,
 	a.download,

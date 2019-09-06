@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.16.1
-// @desc.   CTA-kleuren, a11y groen, sharing buttons optional, beeldbank CPT code separation.
+// @version 3.22.2
+// @desc.   Option for Twitter-account per site. CSS bugfixes for IE11 (step table and menu hover).
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 //========================================================================================================
@@ -19,16 +19,15 @@
 @extra:				15px;
 
 .header-logo() {
-
-@keyframes colorchange {
-	0%		{
-		background-size: @logo_desktop_width @logo_desktop_height;		
+	
+	@keyframes colorchange {
+		0%		{
+			background-size: @logo_desktop_width @logo_desktop_height;		
+		}
+		100%	{ 
+			background-size: ( @logo_desktop_width + @extra ) ( @logo_desktop_height + @extra );
+		}
 	}
-	100%	{ 
-		background-size: ( @logo_desktop_width + @extra ) ( @logo_desktop_height + @extra );
-	}
-}
-
 
 	.site-header .wrap, 
 	.nav-primary #mainnav {
@@ -238,7 +237,6 @@ margin-top: .5rem;
 	}
 
 	#zoeken {
-//		border: 1px solid #4E6E76;
 		border: 1px solid #6F99A3; // @wit;
 		position: relative;
 		height: @widget_area_button;
@@ -504,6 +502,7 @@ margin-top: .5rem;
 			    float: left;
 			    margin-right: 3.666rem; // etwa 46px
 				padding: 2px 1px;
+
 	
 				.sub-menu {
 					left: -9999px;
@@ -516,6 +515,7 @@ margin-top: .5rem;
 				    padding-top: 2.5rem;
 				    background-color: transparent;
 				    border-bottom: 1rem solid @header_bg_color;
+//border: 10px solid yellow;
 				    
 				    &:before {
 					    content: ' ';
@@ -553,20 +553,13 @@ margin-top: .5rem;
 					}
 				}
 	
-		  		&.sfHover,
-				&.menu-item:focus-within,
-				&.menu-item:hover {
-					position: relative;
-					
-					a {
-						border-color: @a_menu_hover_border;
+				&.menu-item {
+					&:hover,
+					&.sfHover {
+						.show_submenu();
 					}
-	
-					& > .sub-menu {
-						opacity: 1;
-						left: 0;
-						left: 50%;
-						transform: translateX(-50%);
+					&:focus-within {
+						.show_submenu();
 					}
 				}
 
@@ -587,6 +580,7 @@ margin-top: .5rem;
 
 				&.menu-item-has-children {
 					
+					span,
 					span[itemprop="name"] {
 						padding-right: 1.833rem; // etwa 22px
 						position: relative;
@@ -644,8 +638,14 @@ margin-top: .5rem;
 			ul.menu-primary li:first-of-type {
 
 		  		&.sfHover,
-				&.menu-item:focus-within,
 				&.menu-item:hover {
+					& > .sub-menu {
+						left: 0;
+						transform: none;
+					}
+				}
+
+				&.menu-item:focus-within {
 					& > .sub-menu {
 						left: 0;
 						transform: none;

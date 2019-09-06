@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.20.1
-// @desc.   Extra optie voor uitgelichte afbeelding: mogelijkheid om automatisch invoegen als banner uit te zetten.
+// @version 3.22.1
+// @desc.   Option for Twitter-account per site. CSS bugfixes for IE11 (step table and menu hover).
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -22,8 +22,7 @@ if( function_exists('register_field_group') ) {
 
 
 	if ( $samenvattingverplicht ) {
-	  
-	
+
 	    //====================================================================================================
 	    // samenvatting voor pagina's
 	    // weet niet of dit anno 2016 nog nuttig is...
@@ -726,6 +725,25 @@ if( function_exists('register_field_group') ) {
 					),
 				),
 			),
+			array(
+				'key' => 'field_5d4bef8b4c525',
+				'label' => 'Twitter-account',
+				'name' => 'siteoptions_twitter_account',
+				'type' => 'text',
+				'instructions' => 'Het standaard-Twitteraccount dat vermeld wordt in de deelknoppen. Voer in zonder @, dus: gebrcentraal',
+				'required' => 1,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => 'gebrcentraal',
+				'placeholder' => '',
+				'prepend' => '@',
+				'append' => '',
+				'maxlength' => '',
+			),
 		),
 		'location' => array(
 			array(
@@ -1248,6 +1266,190 @@ if( function_exists('acf_add_local_field_group') ) {
 
 	
 }
+
+//========================================================================================================
+
+if( function_exists('acf_add_local_field_group') ):
+
+acf_add_local_field_group(array(
+	'key' => 'group_5d304c1694890',
+	'title' => 'Stappen',
+	'fields' => array(
+		array(
+			'key' => 'field_5d414d551f00a',
+			'label' => 'Stappenplan toevoegen?',
+			'name' => 'stappenplan_add',
+			'type' => 'radio',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'ja' => 'Ja',
+				'nee' => 'Nee',
+			),
+			'allow_null' => 1,
+			'other_choice' => 0,
+			'default_value' => 'nee',
+			'layout' => 'horizontal',
+			'return_format' => 'value',
+			'save_other_choice' => 0,
+		),
+		array(
+			'key' => 'field_5d3175eeceffc',
+			'label' => 'Voeg stappen toe aan stappenplan',
+			'name' => '',
+			'type' => 'accordion',
+			'instructions' => '<img src="/wp-content/themes/gebruiker-centraal/images/stappenplan.jpg" alt="Screenshot van stappenplan" widt"400" height="198" /> Voer hieronder de stappen van je stappenplan in, minimaal 2 stappen, maximaal 5',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5d414d551f00a',
+						'operator' => '==',
+						'value' => 'ja',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'open' => 0,
+			'multi_expand' => 0,
+			'endpoint' => 0,
+		),
+		array(
+			'key' => 'field_5d304c6e3a765',
+			'label' => 'Stappen',
+			'name' => 'steptable_steps',
+			'type' => 'repeater',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5d414d551f00a',
+						'operator' => '==',
+						'value' => 'ja',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'collapsed' => 'field_5d304c7e3a766',
+			'min' => 2,
+			'max' => 5,
+			'layout' => 'block',
+			'button_label' => 'Nieuwe stap toevoegen',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5d304c7e3a766',
+					'label' => 'Titel',
+					'name' => 'steptable_step_title',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5d30715c3a767',
+					'label' => 'Inleiding',
+					'name' => 'steptable_step_introduction',
+					'type' => 'textarea',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'maxlength' => '',
+					'rows' => '',
+					'new_lines' => '',
+				),
+				array(
+					'key' => 'field_5d30716a3a768',
+					'label' => 'Tekst',
+					'name' => 'steptable_step_text',
+					'type' => 'textarea',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'maxlength' => '',
+					'rows' => '',
+					'new_lines' => '',
+				),
+				array(
+					'key' => 'field_5d3071773a769',
+					'label' => 'Voorbeeld',
+					'name' => 'steptable_step_example',
+					'type' => 'textarea',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'new_lines' => '',
+					'maxlength' => '',
+					'placeholder' => '',
+					'rows' => '',
+				),
+			),
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'page',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'acf_after_title',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
+endif;
 
 //========================================================================================================
 

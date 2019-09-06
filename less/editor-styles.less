@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.10.3c
-// @desc.   Styling voor 'niet zo, maar zo' images op richtlijnen-pagina.
+// @version 3.22.2
+// @desc.   Option for Twitter-account per site. CSS bugfixes for IE11 (step table and menu hover).
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 */
@@ -50,18 +50,22 @@ h2, h3, h4, h5, h6 {
 
 
 @waarschuwing:            'Deze tekst bevat nog verkeerde opmaakcode. Selecteer de tekst en klik op de gum-knop om dit weg te halen';
-@waarschuwingbold:        'Deze tekst is vet. Als je een tussenkopje wil maken, gebruik dan h2, h3, h4. Vette tekst leidt erg af; van harte afgeraden.';
+// @waarschuwingbold:        'Deze tekst is vet. Als je een tussenkopje wil maken, gebruik dan h2, h3, h4. Vette tekst leidt erg af; van harte afgeraden.';
 @waarschuwingunderlined:  'Onderstreepte tekst impliceert een link. Niet gebruiken, alsjeblieft.';
 
-strong, b, span[style*="font"], span[style*="underline"], u {
+//strong, b, 
+span[style*="font"], span[style*="underline"], u {
   background: red !important;
   color: white !important;
   padding: .4em 0;
 }
+/*
 strong, b {
   font-weight: bold;
   }
-strong, b, span[style*="font"], span[style*="underline"], u  {
+*/
+//strong, b, 
+span[style*="font"], span[style*="underline"], u  {
   &:before { 
     background: yellow url('opmaak-verwijderen.png') no-repeat .4em .4em !important;
     content: @waarschuwing;
@@ -82,8 +86,10 @@ span[style*="font"]:before {
 span[style*="underline"]:before, u:before {
   content: @waarschuwingunderlined;
 }
+/*
 strong:before, b:before {
   content: @waarschuwingbold;
 }
+*/
 
 .calltoactionstyling();

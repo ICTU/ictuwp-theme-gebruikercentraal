@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.21.1
-// @desc.   Form styling voor Gravity Forms
+// @version 3.22.2
+// @desc.   Option for Twitter-account per site. CSS bugfixes for IE11 (step table and menu hover).
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.21.1' );
-define( 'CHILD_THEME_DESCRIPTION', "3.21.1 - Form styling voor Gravity Forms" );
+define( 'CHILD_THEME_VERSION', '3.22.2' );
+define( 'CHILD_THEME_DESCRIPTION', "3.22.2 - Option for Twitter-account per site. CSS bugfixes for IE11 (step table and menu hover)." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -421,6 +421,32 @@ function gc_wbvb_after_entry_content() {
 //========================================================================================================
 //* Customize the entry meta in the entry header (requires HTML5 theme support)
 
+add_filter( 'genesis_entry_header', 'gc_wbvb_page_append_sokmet' );
+
+function gc_wbvb_page_append_sokmet( ) {
+
+	if ( ! is_page() ) {
+		return;	
+	}
+
+	global $wp_query;
+	global $post;
+	
+	$show_socialmedia_buttons_global		= get_field('show_socialmedia_buttons_global', 'option');
+	$show_socialmedia_buttons_on_this_page	= SOC_MED_YES;
+
+	if ( function_exists( 'get_field' ) ) {
+		$show_socialmedia_buttons_on_this_page    = get_field('socialmedia_icoontjes', $post->ID );
+	}
+
+	if  ( ( $show_socialmedia_buttons_global !== SOC_MED_NO ) && ( $show_socialmedia_buttons_on_this_page !== SOC_MED_NO ) )  {
+		echo gc_wbvb_socialbuttons( $post, '' );
+	}
+
+}
+
+//========================================================================================================
+//* Customize the entry meta in the entry header (requires HTML5 theme support)
 add_filter( 'genesis_post_info', 'gc_wbvb_post_append_postinfo' );
 
 function gc_wbvb_post_append_postinfo($post_info) {
@@ -430,7 +456,6 @@ function gc_wbvb_post_append_postinfo($post_info) {
 	
 	$show_socialmedia_buttons_global		= get_field('show_socialmedia_buttons_global', 'option');
 	$show_socialmedia_buttons_on_this_page	= SOC_MED_YES;
-
 
 	if (
 		( 'page'    == get_post_type() ) ||
@@ -446,15 +471,14 @@ function gc_wbvb_post_append_postinfo($post_info) {
 		}
 	}
 
-	if  ( ( $show_socialmedia_buttons_global !== SOC_MED_NO ) && ( $show_socialmedia_buttons_on_this_page !== SOC_MED_NO ) && ( is_single() ) )  {
+
+	if  ( ( $show_socialmedia_buttons_global !== SOC_MED_NO ) && ( $show_socialmedia_buttons_on_this_page !== SOC_MED_NO ) && ( is_single() || is_page() ) )  {
 		$show_socialmedia_buttons_on_this_page = gc_wbvb_socialbuttons( $post, '' );
-//		$show_socialmedia_buttons_on_this_page = '(GLOB: ' . $show_socialmedia_buttons_global . ' / show_socialmedia_buttons_on_this_page: ' . $show_socialmedia_buttons_on_this_page . ') ' . gc_wbvb_socialbuttons( $post, '' );
 	}
 	else {
 		$show_socialmedia_buttons_on_this_page = '';
 	}
 
-	
 	if ( is_home() ) {
 		// niks, eigenlijk
 		return '[post_date]';
@@ -572,13 +596,8 @@ function gc_wbvb_socialbuttons($post_info, $hidden = '') {
     $sitetitle  = urlencode(get_bloginfo('name'));
     $summary    = urlencode($post_info->post_excerpt);
     $comment    = '';
-    
-    $twitteraccount = GC_TWITTERACCOUNT;
 
-	if ( 'conference.gebruikercentraal.co.uk' == $_SERVER["HTTP_HOST"] || 'accept.conference.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] || 'conference.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] ) {
-	    $twitteraccount = 'govdesignconf';
-	} else {
-	}
+	$twitteraccount   = ( get_field('siteoptions_twitter_account', 'option') ) ? get_field('siteoptions_twitter_account', 'option') : GC_TWITTERACCOUNT;
 
     if ( $hidden ) {
         $comment    = '<!-- ey, we hoeven maar 1 werkende set sokmetknoppen te gebruiken ja? dit hiero is versiering -->';
@@ -646,12 +665,9 @@ function gc_wbvb_sharebuttons_for_page_top( $title ) {
         if ( function_exists( 'get_field' ) ) {
             $show_socialmedia_buttons_on_this_page    = get_field('socialmedia_icoontjes', $post->ID );
         }
-//        if  ( $show_socialmedia_buttons_on_this_page !== SOC_MED_NO )  {
 
 		if  ( ( $show_socialmedia_buttons_global !== SOC_MED_NO ) && ( $show_socialmedia_buttons_on_this_page !== SOC_MED_NO ) && ( is_single() ) )  {
             $show_socialmedia_buttons_on_this_page = gc_wbvb_socialbuttons($post, '' );
-//			$show_socialmedia_buttons_on_this_page = '(GLOB: ' . $show_socialmedia_buttons_global . ' / show_socialmedia_buttons_on_this_page: ' . $show_socialmedia_buttons_on_this_page . ') ' . gc_wbvb_socialbuttons( $post, '' );
-
         }
         else {
             $show_socialmedia_buttons_on_this_page = '';
@@ -896,10 +912,57 @@ function gc_wbvb_404() {
             <?php
           }
 
+
+
+		if ( defined( 'ICTU_GC_CPT_STAP' ) ) {
+			gc_wbvb_sitemap_show_cpt_content( ICTU_GC_CPT_STAP );
+		}
+
+		if ( defined( 'ICTU_GC_CPT_DOELGROEP' ) ) {
+			gc_wbvb_sitemap_show_cpt_content( ICTU_GC_CPT_DOELGROEP );
+		}
+
+		if ( defined( 'ICTU_GC_CPT_VAARDIGHEDEN' ) ) {
+			gc_wbvb_sitemap_show_cpt_content( ICTU_GC_CPT_VAARDIGHEDEN );
+		}
+
+		if ( defined( 'ICTU_GC_CPT_METHODE' ) ) {
+			gc_wbvb_sitemap_show_cpt_content( ICTU_GC_CPT_METHODE );
+		}
+		
+		
+
+
   		echo '</div>';
 
   		echo genesis_html5() ? '</article>' : '</div>';
   }
+}
+
+//========================================================================================================
+
+if (! function_exists( 'gc_wbvb_sitemap_show_cpt_content' ) ) {
+	
+	function gc_wbvb_sitemap_show_cpt_content( $customcpt = '' ) {
+
+		if ( $customcpt && post_type_exists( $customcpt ) ) {
+
+			$obj = get_post_type_object( $customcpt );
+			
+//			dovardump( $obj );
+			
+			echo '<h2>' . $obj->labels->name . '</h2>';
+			
+			$args = array(
+				'type'        => 'postbypost',
+				'post_type'   => $customcpt,
+				'echo'         => 1,
+			);
+		
+			wp_get_archives( $args ); 
+			
+		}
+	}
 }
 
 //========================================================================================================
@@ -2405,24 +2468,28 @@ function gc_wbvb_breadcrumb_add_newspage( $crumb, $args ) {
 
 //========================================================================================================
 
-function gc_wbvb_breadcrumbstring( $currentpageID, $args ) {
+if (! function_exists( 'gc_wbvb_breadcrumbstring' ) ) {
 
-	global $post;
-	$crumb = '';
-	$countertje = 0;
+	function gc_wbvb_breadcrumbstring( $currentpageID, $args ) {
 	
-	if ( $currentpageID ) {
-		$crumb = '<a href="' . get_permalink( $currentpageID ) . '">' . get_the_title( $currentpageID ) .'</a>' . $args['sep'] . ' ' . get_the_title( $post->ID );
-		$postparents = get_post_ancestors( $currentpageID );
-
-		foreach( $postparents as $postparent ) {
-			$countertje ++;
-			$crumb = '<a href="' . get_permalink( $postparent ) . '">' . get_the_title( $postparent ) .'</a>' . $args['sep'] . $crumb;
+		global $post;
+		$crumb = '';
+		$countertje = 0;
+		
+		if ( $currentpageID ) {
+			$crumb = '<a href="' . get_permalink( $currentpageID ) . '">' . get_the_title( $currentpageID ) .'</a>' . $args['sep'] . ' ' . get_the_title( $post->ID );
+			$postparents = get_post_ancestors( $currentpageID );
+	
+			foreach( $postparents as $postparent ) {
+				$countertje ++;
+				$crumb = '<a href="' . get_permalink( $postparent ) . '">' . get_the_title( $postparent ) .'</a>' . $args['sep'] . $crumb;
+			}
 		}
+		
+		return $crumb;
+		
 	}
-	
-	return $crumb;
-	
+
 }
 
 //========================================================================================================
@@ -2553,14 +2620,14 @@ function attendeelist_get_the_bookingpersonname( $theobject ) {
 	$socialmedia	= '';
 	$returnstring	= '';
 	$name			= '';
-	$boookinginfo	= '';
+	$bookinginfo	= '';
 
 	if ( $theobject ) {
 
-		$boookinginfo 	= $theobject->meta['booking'];
+		$bookinginfo 	= $theobject->meta['booking'];
 		$countryinfo	= $theobject->get_person()->custom_user_fields['dbem_country'];
 
-		if ( $boookinginfo['show_name_attendeelist'] ) {
+		if ( isset( $bookinginfo['show_name_attendeelist'] ) ) {
 
 			if ( $theobject->get_person()->get_name() ) {
 				$name = $theobject->get_person()->get_name();
@@ -2582,8 +2649,8 @@ function attendeelist_get_the_bookingpersonname( $theobject ) {
 				$returnstring 	= '<span itemprop="name">' . $name . '</span>';
 				$xtra			= '';
 				
-				if ( $boookinginfo['organisation'] ) {
-					$xtra = '<span itemprop="memberOf" class="additionalinfo">' . esc_html( trim( $boookinginfo['organisation'] ) ) . '</span>';	
+				if ( isset( $bookinginfo['organisation'] ) && trim( $bookinginfo['organisation'] ) ) {
+					$xtra = '<span itemprop="memberOf" class="additionalinfo">' . esc_html( trim( $bookinginfo['organisation'] ) ) . '</span>';	
 				}
 				
 				if ( $countryinfo['value'] && $countryinfo['value'] != 'none selected' ) {
@@ -2597,14 +2664,16 @@ function attendeelist_get_the_bookingpersonname( $theobject ) {
 					$returnstring .= '<br>' . $xtra;	
 				}
 
-				if ( $boookinginfo['linkedin_profile'] ) {
-					if (!filter_var( $boookinginfo['linkedin_profile'] , FILTER_VALIDATE_URL) === false) {
-						$socialmedia .= '<li><a href="' . $boookinginfo['linkedin_profile'] . '" class="linkedin" title="' . __('LinkedIn-profiel', 'gebruikercentraal' ) . ' van ' . esc_html( $theobject->get_person()->get_name() ) . '" itemprop="url"><span class="visuallyhidden">' . __('LinkedIn-profiel', 'gebruikercentraal' ) . '</span></a></li>';
+				if ( isset( $bookinginfo['linkedin_profile'] ) ) {
+					if (!filter_var( $bookinginfo['linkedin_profile'] , FILTER_VALIDATE_URL) === false) {
+						$socialmedia .= '<li><a href="' . $bookinginfo['linkedin_profile'] . '" class="linkedin" title="' . __('LinkedIn-profiel', 'gebruikercentraal' ) . ' van ' . esc_html( $theobject->get_person()->get_name() ) . '" itemprop="url"><span class="visuallyhidden">' . __('LinkedIn-profiel', 'gebruikercentraal' ) . '</span></a></li>';
 						$listitemcount++;
 					}						
 				}
-				if ( $boookinginfo['twitter_handle'] ) {
-					$socialmedia .= '<li><a href="' . GC_TWITTER_URL . sanitize_title( $boookinginfo['twitter_handle'] ) . '" class="twitter" title="' . __( 'Twitter-account', 'gebruikercentraal' ) . ' van ' . esc_html( $theobject->get_person()->get_name() ) . '" itemprop="url"><span class="visuallyhidden">' . __( 'Twitter-account', 'gebruikercentraal' ) . '</span></a></li>';
+
+//				if ( isset( $bookinginfo['twitter_handle'] ) && trim( $bookinginfo['twitter_handle'] ) ) {
+				if ( isset( $bookinginfo['twitter_handle'] ) ) {
+					$socialmedia .= '<li><a href="' . GC_TWITTER_URL . sanitize_title( $bookinginfo['twitter_handle'] ) . '" class="twitter" title="' . __( 'Twitter-account', 'gebruikercentraal' ) . ' van ' . esc_html( $theobject->get_person()->get_name() ) . '" itemprop="url"><span class="visuallyhidden">' . __( 'Twitter-account', 'gebruikercentraal' ) . '</span></a></li>';
 					$listitemcount++;
 				}
 				
@@ -2621,5 +2690,92 @@ function attendeelist_get_the_bookingpersonname( $theobject ) {
 
 //========================================================================================================
 
+add_action( 'genesis_entry_content', 'check_stappenplan', 8 );
+/*
+	stappenplan invoegen voor de rest content
+*/
+function check_stappenplan() {
+	
+	global $post;
 
+	if ( ! is_page() ) {
+		return;
+	}
+
+	if ( function_exists( 'get_field' ) ) {
+
+		$stappen 		= get_field('steptable_steps', $post->ID );
+
+		if( $stappen ):
+
+			$stappenteller	= 0;
+	        $headline		= sprintf( _x( '%s in %s stappen', 'stappen', 'gebruikercentraal' ), get_the_title(), count( $stappen ) );
+
+			echo '<h2 class="visuallyhidden">' . $headline . '</h2>';
+			echo '<ol class="stappenplan flexbox">';
+
+			while ( have_rows('steptable_steps', $post->ID ) ) : the_row();
+
+				$stappenteller++;
+
+		        $steptable_step_title			= get_sub_field('steptable_step_title');
+		        $steptable_step_introduction	= get_sub_field('steptable_step_introduction');
+		        $steptable_step_text			= get_sub_field('steptable_step_text');
+				$steptable_step_example			= get_sub_field('steptable_step_example');
+//				$steptable_step_arrow_right 	= '<span class="step-arrow-right">&nbsp;</span>';
+				$steptable_step_arrow_right 	= '';
+				
+				$section_id						= 'post-' . $post->ID . '-stap-' . $stappenteller;
+				$title_id						= 'title-' . $section_id;
+				
+				if ( $stappenteller === 1 ) {
+					$steptable_step_titlecounter 	= '<span class="step-counter first-step">' . $stappenteller . '</span>';
+				}
+				else if ( $stappenteller === count( $stappen ) ) {
+					$steptable_step_titlecounter 	= '<span class="step-counter last-step">' . $stappenteller . '</span>';
+				}
+				else {
+					$steptable_step_titlecounter 	= '<span class="step-counter">' . $stappenteller . '</span>';
+				}
+
+
+				if ( ! $steptable_step_title ) {
+					$steptable_step_title = __( 'Stap', 'gebruikercentraal' ) . ' ' . $stappenteller;
+				}
+				else {
+
+				}
+
+		        $steptable_step_sectiontitle		= sprintf( _x( '<span class="visuallyhidden">Stap</span> %s <span class="visuallyhidden">van %s:</span> %s', 'stappen', 'gebruikercentraal' ), $stappenteller, count( $stappen ), $steptable_step_title );
+				
+
+				echo '<li class="stap" id="' . $section_id . '" aria-labelledby="' . $title_id . '">';
+				echo '<div class="step-content">';
+
+				echo '<h3 class="titelspan" id="' . $title_id . '">' . $steptable_step_titlecounter . '<span class="step-title">' . $steptable_step_title . '</span>' . $steptable_step_arrow_right . '</h3>';
+				
+				if ( $steptable_step_introduction ) {
+					echo '<div class="stap-intro"><p>' . $steptable_step_introduction . '</p></div>';
+				}
+				if ( $steptable_step_text ) {
+					echo '<div class="stap-text"><p>' . $steptable_step_text . '</p></div>';
+				}
+				if ( $steptable_step_example ) {
+					echo '<div class="stap-example"><h4>' .  _x( 'Bijvoorbeeld:', 'Stap, voorbeeld', 'gebruikercentraal' ) . '</h4><p>' . $steptable_step_example . '</p></div>';
+				}
+				echo '</div>';
+				echo '</li>';
+
+
+            endwhile; 
+
+			echo '</ol>';
+
+		else:
+		endif;
+
+	}
+}
+
+//========================================================================================================
 

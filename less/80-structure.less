@@ -145,20 +145,28 @@
     }
   }
 
+	.page-template-page_sitemap,
+	.search {
+		main.content {
+			padding: 1rem;
+			background: @wit;
+			max-width: @break_fullwidth;
+		}
+		
+		section a {
+			text-decoration: none;
+			
+			&:hover,
+			&:active,
+			&:focus {
+				text-decoration: underline;
+			}
+		}    
+	}
 
-
-  .search {
-    section a {
-      text-decoration: none;
-      
-      &:hover,
-      &:active,
-      &:focus {
-        text-decoration: underline;
-      }
-    }    
-  }
-
+	.page-template-page_sitemap {
+	
+	}
   
   /* Primary Sidebar */
   

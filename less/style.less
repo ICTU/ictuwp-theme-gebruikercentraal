@@ -1,11 +1,11 @@
-@versie: '3.21.1';
+@versie: '3.22.2';
 /*!
 Theme Name:             Gebruiker Centraal
 Description:            Wordpress-theme voor gebruikercentraal.nl
 Author:                 Paul van Buuren - Tamara de Haas
 Author URI:             https://wbvb.nl/
-Version:                3.21.1
-Version description:    3.21.1 - Form styling voor Gravity Forms
+Version:                3.22.2
+Version description:    3.22.2 - Option for Twitter-account per site. CSS bugfixes for IE11 (step table and menu hover).
 Link:                   https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 Template: genesis
@@ -60,8 +60,8 @@ License URI: http://www.opensource.org/licenses/gpl-license.php
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.21.1
-// @desc.   Form styling voor Gravity Forms
+// @version 3.22.2
+// @desc.   Option for Twitter-account per site. CSS bugfixes for IE11 (step table and menu hover).
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -113,16 +113,17 @@ hr {
 
 
 ::-moz-selection {
-  background-color: #333;
-  color: @wit;
+	background-color: #333;
+	color: @wit;
 }
 
+.visuallyhidden,
 .screen-reader-text {
-    .visuallyhidden();
+	.visuallyhidden();
 }
 
 *[aria-hidden="true"], .nojs {
-    display: none;
+	display: none;
 }
 
 
@@ -230,52 +231,53 @@ Common Classes
 
 
 .breadcrumb {
-//  background-color: @breadcrumb_bg_color;
-  .fontsize(10);
-  line-height: 1;
-  min-height: 46px;
-
+	.fontsize(10);
+	line-height: 1;
+	min-height: 46px;
+	padding-left: 1rem;
+	
 	@media only screen and ( max-width: @break_show_menu_button ) {
-		margin-left: 1rem;
+		margin-left: 2rem;
 	}
-
-  .breadlist {
-    padding-top: @padding;
-    float: left;
-    display: inline-block;
-  }
-
-  .separator {
-    display: inline-block;
-    margin-left: ( @padding / 3 );
-    margin-right: ( @padding / 3 );
-    color: @groen_2;
-    height: 12px;
-    width: 20px;
-    background: url('images/breadcrumb-separator.png') no-repeat center center;
-    .icon_separator_fill('../images/breadcrumb-separator.svg', @groen_2);
-  }
-
-  &, a {
-    color: @txt;
-  }
-
-  a {
-    text-decoration: none;
-    font-family: @bodyfont_bold;
-
-    &:hover,
-    &:active,
-    &:focus {
-      text-decoration: underline;
-    }
-  }
+	
+	.breadlist {
+		padding-top: @padding;
+		float: left;
+		display: inline-block;
+	}
+	
+	.separator {
+		display: inline-block;
+		margin-left: ( @padding / 3 );
+		margin-right: ( @padding / 3 );
+		color: @groen_2;
+		height: 12px;
+		width: 20px;
+		background: url('images/breadcrumb-separator.png') no-repeat center center;
+		.icon_separator_fill('../images/breadcrumb-separator.svg', @groen_2);
+	}
+	
+	&, a {
+		color: @txt;
+	}
+	
+	a {
+		text-decoration: none;
+		font-family: @bodyfont_bold;
+		
+		&:hover,
+		&:active,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
 }
 
 @media only screen and (min-width: @break_fullwidth ) {
-  .breadcrumb {
-    .fontsize(11);
-  }
+	.breadcrumb {
+		padding-left: 0;
+		.fontsize(11);
+	}
 }
 
 
@@ -1197,6 +1199,37 @@ Media Queries
 	}
 }
 
+
+/*
+==============================================================================================================
+*/
+
+.flexbox {
+	display:flex;
+	justify-content: flex-start;
+	
+//	@media only screen and (max-width: @break_fullwidth ) {
+	@media only screen and (max-width: ( @break_fullwidth + 20000) ) {
+		flex-flow: column;
+	}
+		
+	@media only screen and (min-width: ( @break_fullwidth + 20000) ) {
+		flex-flow: row;
+	}
+
+	li,
+	section {
+//		max-width: ( ( @break_tablet / 2 ) -  @padding );
+//		border-radius: 3px;
+		flex-grow: 1;
+//		margin-right: @padding;
+//		margin-bottom: @padding;
+		h3 {
+			padding-top: 0;
+			margin-top: 0;
+		}
+	}
+}
 
 /*
 ==============================================================================================================
