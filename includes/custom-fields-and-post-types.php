@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.22.1
-// @desc.   Option for Twitter-account per site. CSS bugfixes for IE11 (step table and menu hover).
+// @version 3.23.1
+// @desc.   Step table, search resultpagina, bugfixes voor soc.media knopjes.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 

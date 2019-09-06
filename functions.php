@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.22.2
-// @desc.   Option for Twitter-account per site. CSS bugfixes for IE11 (step table and menu hover).
+// @version 3.23.1
+// @desc.   Step table, search resultpagina, bugfixes voor soc.media knopjes.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.22.2' );
-define( 'CHILD_THEME_DESCRIPTION', "3.22.2 - Option for Twitter-account per site. CSS bugfixes for IE11 (step table and menu hover)." );
+define( 'CHILD_THEME_VERSION', '3.23.1' );
+define( 'CHILD_THEME_DESCRIPTION', "3.23.1 - Step table, search resultpagina, bugfixes voor soc.media knopjes." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
