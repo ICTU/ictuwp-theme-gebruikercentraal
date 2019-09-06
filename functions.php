@@ -665,7 +665,6 @@ function gc_wbvb_sharebuttons_for_page_top( $title ) {
         if ( function_exists( 'get_field' ) ) {
             $show_socialmedia_buttons_on_this_page    = get_field('socialmedia_icoontjes', $post->ID );
         }
-//        if  ( $show_socialmedia_buttons_on_this_page !== SOC_MED_NO )  {
 
 		if  ( ( $show_socialmedia_buttons_global !== SOC_MED_NO ) && ( $show_socialmedia_buttons_on_this_page !== SOC_MED_NO ) && ( is_single() ) )  {
             $show_socialmedia_buttons_on_this_page = gc_wbvb_socialbuttons($post, '' );
@@ -913,10 +912,57 @@ function gc_wbvb_404() {
             <?php
           }
 
+
+
+		if ( defined( 'ICTU_GC_CPT_STAP' ) ) {
+			gc_wbvb_sitemap_show_cpt_content( ICTU_GC_CPT_STAP );
+		}
+
+		if ( defined( 'ICTU_GC_CPT_DOELGROEP' ) ) {
+			gc_wbvb_sitemap_show_cpt_content( ICTU_GC_CPT_DOELGROEP );
+		}
+
+		if ( defined( 'ICTU_GC_CPT_VAARDIGHEDEN' ) ) {
+			gc_wbvb_sitemap_show_cpt_content( ICTU_GC_CPT_VAARDIGHEDEN );
+		}
+
+		if ( defined( 'ICTU_GC_CPT_METHODE' ) ) {
+			gc_wbvb_sitemap_show_cpt_content( ICTU_GC_CPT_METHODE );
+		}
+		
+		
+
+
   		echo '</div>';
 
   		echo genesis_html5() ? '</article>' : '</div>';
   }
+}
+
+//========================================================================================================
+
+if (! function_exists( 'gc_wbvb_sitemap_show_cpt_content' ) ) {
+	
+	function gc_wbvb_sitemap_show_cpt_content( $customcpt = '' ) {
+
+		if ( $customcpt && post_type_exists( $customcpt ) ) {
+
+			$obj = get_post_type_object( $customcpt );
+			
+//			dovardump( $obj );
+			
+			echo '<h2>' . $obj->labels->name . '</h2>';
+			
+			$args = array(
+				'type'        => 'postbypost',
+				'post_type'   => $customcpt,
+				'echo'         => 1,
+			);
+		
+			wp_get_archives( $args ); 
+			
+		}
+	}
 }
 
 //========================================================================================================
@@ -2604,6 +2650,7 @@ function attendeelist_get_the_bookingpersonname( $theobject ) {
 				$xtra			= '';
 				
 				if ( isset( $bookinginfo['organisation'] ) && trim( $bookinginfo['organisation'] ) ) {
+					$xtra = '<span itemprop="memberOf" class="additionalinfo">' . esc_html( trim( $bookinginfo['organisation'] ) ) . '</span>';	
 				}
 				
 				if ( $countryinfo['value'] && $countryinfo['value'] != 'none selected' ) {
@@ -2619,10 +2666,14 @@ function attendeelist_get_the_bookingpersonname( $theobject ) {
 
 				if ( isset( $bookinginfo['linkedin_profile'] ) ) {
 					if (!filter_var( $bookinginfo['linkedin_profile'] , FILTER_VALIDATE_URL) === false) {
+						$socialmedia .= '<li><a href="' . $bookinginfo['linkedin_profile'] . '" class="linkedin" title="' . __('LinkedIn-profiel', 'gebruikercentraal' ) . ' van ' . esc_html( $theobject->get_person()->get_name() ) . '" itemprop="url"><span class="visuallyhidden">' . __('LinkedIn-profiel', 'gebruikercentraal' ) . '</span></a></li>';
 						$listitemcount++;
 					}						
 				}
 
+//				if ( isset( $bookinginfo['twitter_handle'] ) && trim( $bookinginfo['twitter_handle'] ) ) {
+				if ( isset( $bookinginfo['twitter_handle'] ) ) {
+					$socialmedia .= '<li><a href="' . GC_TWITTER_URL . sanitize_title( $bookinginfo['twitter_handle'] ) . '" class="twitter" title="' . __( 'Twitter-account', 'gebruikercentraal' ) . ' van ' . esc_html( $theobject->get_person()->get_name() ) . '" itemprop="url"><span class="visuallyhidden">' . __( 'Twitter-account', 'gebruikercentraal' ) . '</span></a></li>';
 					$listitemcount++;
 				}
 				
