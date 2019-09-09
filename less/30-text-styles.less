@@ -359,23 +359,28 @@
 //      font-weight: bold;
     }
 
-    
-    
-    h1 {
-      .fontsize( @fontsize_title_h1 );
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      font-family: @headerfont;
-      font-weight: normal;
-    }
-    
-    .content h2 {
-//      letter-spacing: 1px;
-      .fontsize( @fontsize_title_h2 );
-      text-transform: uppercase;
-      font-family: @headerfont;
-      font-weight: normal;
-    }
+	
+	
+	h1 {
+		.fontsize( @fontsize_title_h1 );
+		letter-spacing: 1px;
+		font-family: @headerfont;
+		font-weight: normal;
+	}
+	
+	.content h2 {
+		.fontsize( @fontsize_title_h2 );
+		font-family: @headerfont;
+		font-weight: normal;
+	}
+	
+	h1,
+	.content h2 {
+		@media only screen {
+			text-transform: uppercase;
+		}
+	}
+
     
     h3, .sidebar h2 {
       .fontsize( @fontsize_title_h3 );
@@ -432,7 +437,11 @@
     
     th {
       .bold-font();
-      text-transform: uppercase;
+
+		@media only screen {
+			text-transform: uppercase;
+		}
+      
     }
   }
 }

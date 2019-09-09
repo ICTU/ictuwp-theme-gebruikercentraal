@@ -155,7 +155,9 @@
 		a {
 //			.knoppify(@blauw5, @blauw5, #0086C4, transparent, @wit, 17, 1px);
 			.knoppify(transparent, @gc_a11y_green_light_1, @gc_a11y_green_dark_2, @gc_a11y_green, @wit, 24, 0);
-			text-transform: uppercase;
+			@media only screen {
+				text-transform: uppercase;
+			}
 		}
 	}
 
@@ -500,8 +502,12 @@
     padding: 0 3em;
     transform: rotate(45deg) translate(40px, -25px);
     font-family: @headerfont;
-    text-transform: uppercase;
     .fontsize(18);
+
+		@media only screen {
+			text-transform: uppercase;
+		}
+
   }
 
 

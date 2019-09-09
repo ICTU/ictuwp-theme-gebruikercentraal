@@ -111,7 +111,9 @@
         padding-left: 1em;
         font-family: @headerfont;
         .fontsize(30);
-        text-transform: uppercase;
+		@media only screen {
+			text-transform: uppercase;
+		}
       }
     
   }
@@ -367,8 +369,10 @@ body {
 
 	a.cta {
 		.knoppify(transparent, @gc_a11y_green_light_1, @gc_pantybrown_light, @wit, @txt, 24, 0, @txt, @gc_pantybrown_light, @gc_pantybrown, @txt );
-		text-transform: uppercase;
 		float: none;
+		@media only screen {
+			text-transform: uppercase;
+		}
 	}
 
 	ul {
@@ -557,8 +561,9 @@ body {
 		
 	    a {
 			.knoppify(transparent, @gc_a11y_green_light_1, @gc_pantybrown_light, @wit, @txt, 24, 0, @txt, @gc_pantybrown_light, @gc_pantybrown, @txt );
-			text-transform: uppercase;
-
+			@media only screen {
+				text-transform: uppercase;
+			}
 	    }      
   }      
 }

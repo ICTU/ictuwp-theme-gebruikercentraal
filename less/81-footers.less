@@ -35,15 +35,18 @@
       margin: 0 0 1em 0;
       overflow: hidden;
     }
-    .widgettitle {
-      color: @wit;
-      padding-top: 0;
-      margin-top: 0;
-      font-family: @headerfont;
-      .fontsize(22);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
+	.widgettitle {
+		color: @wit;
+		padding-top: 0;
+		margin-top: 0;
+		font-family: @headerfont;
+		.fontsize(22);
+		letter-spacing: 1px;
+		
+		@media only screen {
+			text-transform: uppercase;
+		}
+	}
     li, ul {
       margin-left: 0;
       padding-left: 0;
