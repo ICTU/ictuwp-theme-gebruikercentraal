@@ -562,8 +562,6 @@ function gc_wbvb_add_single_socialmedia_buttons() {
 			
 			if  ( ( $show_socialmedia_buttons_on_this_page !== SOC_MED_NO ) && ( is_single() ) )  {
 				$show_socialmedia_buttons_on_this_page = gc_wbvb_socialbuttons($post, '' );
-//				$show_socialmedia_buttons_on_this_page = '(GLOB: ' . $show_socialmedia_buttons_global . ' / show_socialmedia_buttons_on_this_page: ' . $show_socialmedia_buttons_on_this_page . ') ' . gc_wbvb_socialbuttons( $post, '' );
-				
 			}
 		}
 	}
@@ -1288,7 +1286,7 @@ function gc_wbvb_add_blog_archive_css() {
 					}
 				}
 				
-				if ( $image[0] ) {
+				if ( $image && $image[0] ) {
 					$BLOGBERICHTEN_CSS .= '#' . $the_image_ID . " { \n";
 					$BLOGBERICHTEN_CSS .= "background-image: url('" . $image[0] . "');\n";
 					$BLOGBERICHTEN_CSS .= "} \n";
@@ -1754,6 +1752,11 @@ function gc_wbvb_eventmanager_styles_placeholders($replace, $EM_Event, $result) 
 			else {
 				return '';
 			}
+			break;
+		
+		case '#_REMOTEIP':
+		
+			return $_SERVER['REMOTE_ADDR'];
 			break;
 		
 	}
