@@ -2667,6 +2667,7 @@ function attendeelist_get_the_bookingpersonname( $theobject ) {
 					$returnstring .= '<br>' . $xtra;	
 				}
 
+//				if ( isset( $bookinginfo['linkedin_profile'] ) && trim( $bookinginfo['linkedin_profile'] ) ) {
 				if ( isset( $bookinginfo['linkedin_profile'] ) ) {
 					if (!filter_var( $bookinginfo['linkedin_profile'] , FILTER_VALIDATE_URL) === false) {
 						$socialmedia .= '<li><a href="' . $bookinginfo['linkedin_profile'] . '" class="linkedin" title="' . __('LinkedIn-profiel', 'gebruikercentraal' ) . ' van ' . esc_html( $theobject->get_person()->get_name() ) . '" itemprop="url"><span class="visuallyhidden">' . __('LinkedIn-profiel', 'gebruikercentraal' ) . '</span></a></li>';
@@ -2674,8 +2675,8 @@ function attendeelist_get_the_bookingpersonname( $theobject ) {
 					}						
 				}
 
-//				if ( isset( $bookinginfo['twitter_handle'] ) && trim( $bookinginfo['twitter_handle'] ) ) {
-				if ( isset( $bookinginfo['twitter_handle'] ) ) {
+				if ( isset( $bookinginfo['twitter_handle'] ) && trim( $bookinginfo['twitter_handle'] ) ) {
+//				if ( isset( $bookinginfo['twitter_handle'] ) ) {
 					$socialmedia .= '<li><a href="' . GC_TWITTER_URL . sanitize_title( $bookinginfo['twitter_handle'] ) . '" class="twitter" title="' . __( 'Twitter-account', 'gebruikercentraal' ) . ' van ' . esc_html( $theobject->get_person()->get_name() ) . '" itemprop="url"><span class="visuallyhidden">' . __( 'Twitter-account', 'gebruikercentraal' ) . '</span></a></li>';
 					$listitemcount++;
 				}
