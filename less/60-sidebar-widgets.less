@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.19.1
-// @desc.   Added new widget: for general content types.
+// @version 3.25.1
+// @desc.   Logo hernoemd. Sitemap aangepast. Pagina layout voorbereid op nieuwe stijl.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -143,9 +143,10 @@
 		padding-left: ( @footerwidget_small + @padding);
 		overflow: hidden;
 		min-height: @footerwidget_small;
-		background: url('images/footer-logo.png') no-repeat left top;
-		background-image: url('images/footer-logo.svg'), none;
-		background-size: @footerwidget_small @footerwidget_small;
+		background-image: url('images/logos/logo-gebruikercentraal-v2.svg');
+		background-repeat: no-repeat;
+		background-position: left top;
+		background-size: 110px 64px;
 		
 		.widget-wrap {
 			max-width: 100%;
@@ -153,7 +154,6 @@
 		}
 	
 		a {
-//			.knoppify(@blauw5, @blauw5, #0086C4, transparent, @wit, 17, 1px);
 			.knoppify(transparent, @gc_a11y_green_light_1, @gc_a11y_green_dark_2, @gc_a11y_green, @wit, 24, 0);
 			@media only screen {
 				text-transform: uppercase;
@@ -470,15 +470,16 @@
 	}
 
   
-  .footer-widgets {
-    .gc-site-footer-widget,
-    .widget_gc_newsletter_subscribe {
-
-      input[type="text"] {
-    		border-color: @wit;
-      }
-    }
-  }
+	.footer-widgets {
+		margin-top: 2rem;
+		
+		.gc-site-footer-widget,
+		.widget_gc_newsletter_subscribe {
+			input[type="text"] {
+				border-color: @wit;
+			}
+		}
+	}
   
 
 
@@ -527,19 +528,17 @@
     }
   }
 
-  @media only screen and (min-width: @break_tablet ) {
-  
-    .featuredimage(@imageblock_mw);
+	@media only screen and (min-width: @break_tablet ) {
+	
+		.featuredimage(@imageblock_mw);
 
-
-    .gc-site-footer-widget {
-      padding-left: ( @footerwidget_large + @padding) ;
-      min-height: @footerwidget_large;
-      background-size: @footerwidget_large @footerwidget_large;
-    }
-    
-
-  }
+		.gc-site-footer-widget {
+			padding-left: ( @footerwidget_large + @padding) ;
+			min-height: @footerwidget_large;
+			background-size: @footerwidget_large @footerwidget_large;
+			background-size: 140px 82px;
+		}
+	}
   
 
   @media only screen and (min-width: @break_fullwidth ) {

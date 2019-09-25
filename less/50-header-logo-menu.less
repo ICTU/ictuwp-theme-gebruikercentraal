@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.23.1
-// @desc.   Step table, search resultpagina, bugfixes voor soc.media knopjes.
+// @version 3.25.1
+// @desc.   Logo hernoemd. Sitemap aangepast. Pagina layout voorbereid op nieuwe stijl.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 //========================================================================================================
@@ -20,12 +20,20 @@
 
 .header-logo() {
 	
-	@keyframes colorchange {
+	@keyframes logosizechange {
 		0%		{
 			background-size: @logo_desktop_width @logo_desktop_height;		
 		}
 		100%	{ 
 			background-size: ( @logo_desktop_width + @extra ) ( @logo_desktop_height + @extra );
+		}
+	}
+	@keyframes logosizechange_variant2 {
+		0%		{
+			background-size: @logogc_desktop_width @logogc_desktop_height;		
+		}
+		100%	{ 
+			background-size: ( @logogc_desktop_width + @extra ) ( @logogc_desktop_height + @extra );
 		}
 	}
 
@@ -55,8 +63,7 @@
 					width: @logo_mobile_width;
 					height: @logo_mobile_height;
 
-					background: transparent url('images/logos/logo-gebruikercentraal.png') repeat left top;
-					background-image: url('images/logos/logo-gebruikercentraal.svg'), '';
+					background-image: url('images/logos/logo-gebruikercentraal-v2.svg');
 					background-repeat: no-repeat;
 					background-position: center center;
 
@@ -70,7 +77,7 @@
 				&:focus,
 				&:active {
 					&:before {
-						animation: colorchange .1s; 
+						animation: logosizechange .1s; 
 						background-size: ( @logo_desktop_width + @extra ) ( @logo_desktop_height + @extra );
 					}
 				}
@@ -91,8 +98,8 @@
 			  
 				@media only screen and ( min-width: @break_show_menu_button ) {
 
-transform: translateX( ( -1 * ( @extra / 2 ) ) );
-margin-top: .5rem;
+					transform: translateX( ( -1 * ( @extra / 2 ) ) );
+					margin-top: .5rem;
 
 					&:before {
 						background-size: @logo_desktop_width @logo_desktop_height;
@@ -131,17 +138,51 @@ margin-top: .5rem;
 				}
 		    }
 
+
 			&.inclusie {
 			    a:before {
 					background-image: url('images/logos/logo-inclusie.svg');
 				}
 			}
-
 			&.rotterdammercentraal {
 			    a:before {
 					background-image: url('images/logos/logo-rotterdammercentraal.svg');
 				}
 			}
+			&.beeldbank {
+			    a:before {
+					background-image: url('images/logos/beeldmerk-beeldbank.svg');
+				}
+			}
+			&.gebruikercentraal {
+				@media only screen and ( max-width: @break_show_menu_button ) {
+				    a {
+					    &:before {
+							background-size: @logogc_mobile_width @logogc_mobile_height;
+							width: ( @logogc_mobile_width + 30 );
+							background-position: 11px 10px; // left center
+						}
+					}
+				}
+				
+				@media only screen and ( min-width: @break_show_menu_button ) {
+				    a {
+					    &:before {
+							background-size: @logogc_desktop_width @logogc_desktop_height;
+							width: 136px;
+						}
+
+						&:hover,
+						&:focus,
+						&:active {
+							&:before {
+								animation: logosizechange_variant2 .1s; 
+								background-size: ( @logogc_desktop_width + @extra ) ( @logogc_desktop_height + @extra );
+							}
+						}
+					}
+				}
+			}			
 	    }
 	}
 
@@ -160,6 +201,15 @@ margin-top: .5rem;
 	    padding-bottom: 2px;
 //	    background: green;
     }
+
+    .blog-name {
+		font-family: @headerfont;
+		text-transform: uppercase;
+    }
+    .blog-description {
+		font-family: @montserrat_semibold;
+    }
+
 
 	@media only screen and ( max-width: @break_show_menu_button ) {
 		.blog-name,
@@ -195,7 +245,6 @@ margin-top: .5rem;
 
 	    .blog-name {
 			// hugely on non-mobile
-			font-family: @headerfont;
 			.fontsize( 42 );
 			word-break: break-word;
 			white-space: nowrap;
@@ -204,7 +253,6 @@ margin-top: .5rem;
 			line-height: 36px;
 		}	    
 	    .blog-description {
-			font-family: @bodyfont;
 			.fontsize( 12 );
 			display: inline-block;
 			transform: translateY(-4px);

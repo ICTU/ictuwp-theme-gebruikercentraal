@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.23.1
-// @desc.   Step table, search resultpagina, bugfixes voor soc.media knopjes.
+// @version 3.25.1
+// @desc.   Logo hernoemd. Sitemap aangepast. Pagina layout voorbereid op nieuwe stijl.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.23.1' );
-define( 'CHILD_THEME_DESCRIPTION', "3.23.1 - Step table, search resultpagina, bugfixes voor soc.media knopjes." );
+define( 'CHILD_THEME_VERSION', '3.25.1' );
+define( 'CHILD_THEME_DESCRIPTION', "3.25.1 - Logo hernoemd. Sitemap aangepast. Pagina layout voorbereid op nieuwe stijl." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -336,8 +336,8 @@ function allow_only_full_width_layout($opt) {
 //========================================================================================================
 
 //* Reposition the breadcrumbs
-//remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
-//add_action( 'genesis_after_header', 'genesis_do_breadcrumbs' );
+remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
+add_action( 'genesis_after_header', 'genesis_do_breadcrumbs' );
 
 //* Modify breadcrumb arguments.
 add_filter( 'genesis_breadcrumb_args', 'gc_wbvb_breadcrumb_args' );
@@ -856,85 +856,84 @@ add_action( 'genesis_loop_else', 'gc_wbvb_404', 15 );
 //========================================================================================================
 
 function gc_wbvb_404() {
+	
+	if ( is_author() ) {
+	}
+	else {
 
-  if ( is_author() ) {
-  }
-  else {
+//		echo genesis_html5() ? '<article class="entry">' : '<div class="post hentry">';
+		
+		if ( is_404() ) {
+			gc_wbvb_404_no_posts_content_header();
+		}
+		
+		echo '<div class="entry-content">';
+		
+		if ( is_404() ) {
+			gc_wbvb_404_no_posts_content();
+		}
+		
+		$count_pages = wp_count_posts('page');
 
+		if ( $count_pages ) {
+			?>
+			<h2><?php _e( 'Pages:', 'gebruikercentraal' ); ?></h2>
+			<ul>
+				<?php wp_list_pages( 'exclude=78,80&title_li=' ); ?>
+			</ul>
+			<?php
+		}
+		
+		$maxnr        = 20;
+		$count_posts  = wp_count_posts();
 
-
-  	echo genesis_html5() ? '<article class="entry">' : '<div class="post hentry">';
-
-          if ( is_404() ) {
-              gc_wbvb_404_no_posts_content_header();
-          }
-
-  		echo '<div class="entry-content">';
-
-         if ( is_404() ) {
-              gc_wbvb_404_no_posts_content();
-          }
-
-          $count_pages = wp_count_posts('page');
-          if ( $count_pages ) {
-          ?>
-            <h2><?php _e( 'Pages:', 'gebruikercentraal' ); ?></h2>
-            <ul>
-              <?php wp_list_pages( 'exclude=78,80&title_li=' ); ?>
-            </ul>
-          <?php
-          }
-
-          $maxnr        = 20;
-          $count_posts  = wp_count_posts();
-
-
-          if ( $count_posts->publish > 1 ) {
-
-            echo '<h2>' . sprintf( __( 'The %s most recent posts', 'gebruikercentraal' ), $maxnr ) . '</h2>';
-
-            ?>
-          	<ul>
-          		<?php wp_get_archives(  array( 'type' => 'postbypost', 'limit' => $maxnr  ) ); ?>
-          	</ul>
-
-          	<h2><?php _e( 'Topics:', 'gebruikercentraal' ); ?></h2>
-          	<ul>
-          		<?php wp_list_categories( 'sort_column=name&title_li=' ); ?>
-          	</ul>
-
-          	<h2><?php _e( 'Authors:', 'gebruikercentraal' ); ?></h2>
-          	<ul>
-          		<?php wp_list_authors( 'exclude_admin=0&optioncount=0' ); ?>
-          	</ul>
-            <?php
-          }
-
-
+		if ( $count_posts->publish > 1 ) {
+			
+			echo '<h2>' . sprintf( __( 'The %s most recent posts', 'gebruikercentraal' ), $maxnr ) . '</h2>';
+			?>
+			
+			<ul>
+				<?php wp_get_archives(  array( 'type' => 'postbypost', 'limit' => $maxnr  ) ); ?>
+			</ul>
+			
+			<h2><?php _e( 'Topics:', 'gebruikercentraal' ); ?></h2>
+			<ul>
+				<?php wp_list_categories( 'sort_column=name&title_li=' ); ?>
+			</ul>
+			
+			<h2><?php _e( 'Authors:', 'gebruikercentraal' ); ?></h2>
+			<ul>
+				<?php wp_list_authors( 'exclude_admin=0&optioncount=0' ); ?>
+			</ul>
+			<?php
+		}
 
 		if ( defined( 'ICTU_GC_CPT_STAP' ) ) {
 			gc_wbvb_sitemap_show_cpt_content( ICTU_GC_CPT_STAP );
 		}
-
+		
 		if ( defined( 'ICTU_GC_CPT_DOELGROEP' ) ) {
 			gc_wbvb_sitemap_show_cpt_content( ICTU_GC_CPT_DOELGROEP );
 		}
-
+		
 		if ( defined( 'ICTU_GC_CPT_VAARDIGHEDEN' ) ) {
 			gc_wbvb_sitemap_show_cpt_content( ICTU_GC_CPT_VAARDIGHEDEN );
 		}
-
+		
 		if ( defined( 'ICTU_GC_CPT_METHODE' ) ) {
 			gc_wbvb_sitemap_show_cpt_content( ICTU_GC_CPT_METHODE );
 		}
 		
+		if ( defined( 'ICTU_GC_CPT_PROCESTIP' ) ) {
+			gc_wbvb_sitemap_show_cpt_content( ICTU_GC_CPT_PROCESTIP );
+		}
 		
+		echo '</div>';
+		
+//		echo genesis_html5() ? '</article>' : '</div>';
+	
+	}
 
-
-  		echo '</div>';
-
-  		echo genesis_html5() ? '</article>' : '</div>';
-  }
 }
 
 //========================================================================================================
@@ -1245,12 +1244,15 @@ function gc_wbvb_add_blog_archive_css() {
 					
 					if ( $image[1] >= IMG_SIZE_HUGE_MIN_WIDTH ) {
 						
+						// width > 1200px
+						
 						foreach ( $imgbreakpoints as $breakpoint ) {
 
 							$image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), $breakpoint['img_size_archive_list'] );
 							$BLOGBERICHTEN_CSS .= '@media only screen and ('  . $breakpoint['direction'] .  '-width: ' . $breakpoint['width'] . " ) {\n";
 							$BLOGBERICHTEN_CSS .= ' #' . $theID . " { \n";
-							$BLOGBERICHTEN_CSS .= "   background-image: url('" . $image[0] . "');\n";
+							$BLOGBERICHTEN_CSS .= "	background-image: url('" . $image[0] . "');\n";
+							$BLOGBERICHTEN_CSS .= "	background-repeat: no-repeat;\n";
 							$BLOGBERICHTEN_CSS .= " } \n";
 							$BLOGBERICHTEN_CSS .= "} \n";
 						}
@@ -1264,10 +1266,12 @@ function gc_wbvb_add_blog_archive_css() {
 						$image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), 'large' );
 						
 						if ( $image[0] ) {
-							$BLOGBERICHTEN_CSS .= '#' . $theID . " { \n";
+							$BLOGBERICHTEN_CSS .= '#' . $theID . " .feature-image { \n";
 							$BLOGBERICHTEN_CSS .= " background-image: url('" . $image[0] . "');\n";
+							$BLOGBERICHTEN_CSS .= " background-repeat: no-repeat;\n";
 							$BLOGBERICHTEN_CSS .= "} \n";
-							$class = 'feature-image';
+							$extra_class  = ' ';
+							$class = 'simple feature-image';
 							$BLOGBERICHTEN_CSS .= '/* ' . sanitize_title( $image[0] ) . " */\n";
 						}
 					}
@@ -2627,7 +2631,10 @@ function attendeelist_get_the_bookingpersonname( $theobject ) {
 
 	if ( $theobject ) {
 
-		$bookinginfo 	= $theobject->meta['booking'];
+		$bookinginfo = [];
+		if ( isset( $theobject->meta['booking'] ) ) {
+			$bookinginfo 	= $theobject->meta['booking'];
+		}
 		$countryinfo	= $theobject->get_person()->custom_user_fields['dbem_country'];
 
 		if ( isset( $bookinginfo['show_name_attendeelist'] ) ) {

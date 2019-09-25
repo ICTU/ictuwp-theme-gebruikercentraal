@@ -9,9 +9,11 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-3.23.1 - Step table, search resultpagina, bugfixes voor soc.media knopjes.
+3.25.1 - Logo hernoemd. Sitemap aangepast. Pagina layout voorbereid op nieuwe stijl.
 
 ## Version history
+* 3.25.1 - Logo hernoemd. Sitemap aangepast. Pagina layout voorbereid op nieuwe stijl.
+* 3.24.1 - Nieuw GC-logo, voorkomen warnings PHP voor gebruikersdata + verplaatsen broodkruimelpad naar direct achter hoofdmenu.
 * 3.23.1 - Step table, search resultpagina, bugfixes voor soc.media knopjes.
 * 3.22.2 - Option for Twitter-account per site. CSS bugfixes for IE11 (step table and menu hover).
 * 3.22.1 - New component: step table with 3-5 steps.
