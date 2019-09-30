@@ -927,6 +927,19 @@ function gc_wbvb_404() {
 		if ( defined( 'ICTU_GC_CPT_PROCESTIP' ) ) {
 			gc_wbvb_sitemap_show_cpt_content( ICTU_GC_CPT_PROCESTIP );
 		}
+				
+		if ( defined( 'ICTU_GCCONF_CPT_SESSION' ) ) {
+			gc_wbvb_sitemap_show_cpt_content( ICTU_GCCONF_CPT_SESSION );
+		}
+
+		if ( defined( 'ICTU_GCCONF_CPT_KEYNOTE' ) ) {
+			gc_wbvb_sitemap_show_cpt_content( ICTU_GCCONF_CPT_KEYNOTE );
+		}
+		
+		if ( defined( 'ICTU_GCCONF_CPT_SPEAKER' ) ) {
+			gc_wbvb_sitemap_show_cpt_content( ICTU_GCCONF_CPT_SPEAKER );
+		}
+		
 		
 		echo '</div>';
 		
