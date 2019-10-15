@@ -32,7 +32,10 @@ if( count($EM_Bookings->bookings) > 0 ) {
 	
 	foreach( $EM_Bookings as $EM_Booking) {
 		
-		$boookinginfo 		= $EM_Booking->meta['booking'];
+		$boookinginfo 		= [];
+		if ( isset( $EM_Booking->meta['booking'] ) ) {
+			$boookinginfo 	= $EM_Booking->meta['booking'];
+		}
 		$name 				= '';
 		$usercounter++;
 		

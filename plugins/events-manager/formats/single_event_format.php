@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.6
-// @desc.   Attendeelist revised.
+// @version 3.26.1
+// @desc.   Icons (microfoon, level, flag) toegevoegd. Code cleanup voor event manager bestanden.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
     
@@ -52,7 +52,8 @@ if ( $event_start_datetime && ( $EM_Event->event_start_date === $EM_Event->event
 	}
 	$event_times .= '</div>';
 
-} elseif( $EM_Event->event_start_date != $EM_Event->event_end_date ) {
+}
+elseif( $EM_Event->event_start_date != $EM_Event->event_end_date ) {
 
 	$period =  sprintf( '%s - %s', date_i18n('d', $event_start_datetime), date_i18n('d M', $event_end_datetime) );
 	
@@ -86,8 +87,11 @@ $price_min        = 0;
 $price_max        = 0;
 $countlebookings  = 0;
 
-if ( is_array( $lebookings ) || is_object( $lebookings ) ) {
-	$countlebookings = count($lebookings);
+//echo 'Lebookings is : ' . get_class( $lebookings ) . '<br>';
+
+if ( is_countable( $lebookings ) ) {
+//if ( is_array( $lebookings ) || is_object( $lebookings ) ) {
+	$countlebookings = count( $lebookings );
 }
 if ( $countlebookings > 0 ) {
 	// has bookings
@@ -113,9 +117,9 @@ if ( $countlebookings > 0 ) {
 			}
 		}
 	}
-
-$availabletickets = '';
-
+	
+	$availabletickets = '';
+	
 	if ( $EM_Event->get_bookings()->get_available_spaces() ) {
 		$availabletickets = ' <div class="visuallyhidden" itemprop="availability">' . $EM_Event->get_bookings()->get_available_spaces() . '</div>';
 	}
@@ -128,24 +132,19 @@ $availabletickets = '';
 		$header_meta_info .= '<div class="event-pricing" itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">' . $kostduurquageld . $availabletickets . '</div>';
 	}  
 	else {
-//		$kostduurquageld .= 'warningprice'
 		$kostduurquageld .= '<div class="visuallyhidden" itemprop="price">0</div>';
-
 		$header_meta_info .= '<div class="event-pricing" itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">' . $kostduurquageld . $availabletickets . '</div>';
 	}
 
-
-	
 	$header_meta_info .= $EM_gc_wbvb_single_event_aanmeldingen;
 	
 }
 else {
-
-  // no booking availability
-  $header_meta_info .= $event_times;
-  if ( isset( $EM_Event->location->name ) ) {
-    $header_meta_info .= $EM_Event->location->name;
-  }
+	// no booking availability
+	$header_meta_info .= $event_times;
+	if ( isset( $EM_Event->location->name ) ) {
+		$header_meta_info .= $EM_Event->location->name;
+	}
 }
 
 

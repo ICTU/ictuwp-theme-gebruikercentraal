@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.25.1
-// @desc.   Logo hernoemd. Sitemap aangepast. Pagina layout voorbereid op nieuwe stijl.
+// @version 3.26.1
+// @desc.   Icons (microfoon, level, flag) toegevoegd. Code cleanup voor event manager bestanden.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.25.1' );
-define( 'CHILD_THEME_DESCRIPTION', "3.25.1 - Logo hernoemd. Sitemap aangepast. Pagina layout voorbereid op nieuwe stijl." );
+define( 'CHILD_THEME_VERSION', '3.26.1' );
+define( 'CHILD_THEME_DESCRIPTION', "3.26.1 - Icons (microfoon, level, flag) toegevoegd. Code cleanup voor event manager bestanden." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -157,6 +157,18 @@ if ( ! defined( 'WBVB_GC_LOGOWIDGET' ) ) {
 
 if ( ! defined( 'WBVB_GC_BEELDEN_HOMEWIDGET' ) ) {
 	define( 'WBVB_GC_BEELDEN_HOMEWIDGET', 'GC - Featured Content' );
+}
+
+if ( ! defined( 'ICTU_GCCONF_CPT_SPEAKER' ) ) {
+  define( 'ICTU_GCCONF_CPT_SPEAKER', 'speaker' );   // slug for custom taxonomy 'document'
+}
+
+if ( ! defined( 'ICTU_GCCONF_CPT_KEYNOTE' ) ) {
+  define( 'ICTU_GCCONF_CPT_KEYNOTE', 'keynote' );  // slug for custom post type 'keynote'
+}
+
+if ( ! defined( 'ICTU_GCCONF_CPT_SESSION' ) ) {
+  define( 'ICTU_GCCONF_CPT_SESSION', 'session' );   // slug for custom taxonomy 'citaat'
 }
 
 
@@ -527,6 +539,9 @@ function gc_wbvb_get_date_badge() {
         || ( ICTU_GC_CPT_DOELGROEP == get_post_type() )
         || ( ICTU_GC_CPT_VAARDIGHEDEN == get_post_type() )
         || ( ICTU_GC_CPT_METHODE == get_post_type() )
+		|| ( ICTU_GCCONF_CPT_SPEAKER == get_post_type() )
+		|| ( ICTU_GCCONF_CPT_KEYNOTE == get_post_type() )
+		|| ( ICTU_GCCONF_CPT_SESSION == get_post_type() )
         )  {
 		return;
 	}
@@ -939,6 +954,17 @@ function gc_wbvb_404() {
 		if ( defined( 'ICTU_GCCONF_CPT_SPEAKER' ) ) {
 			gc_wbvb_sitemap_show_cpt_content( ICTU_GCCONF_CPT_SPEAKER );
 		}
+
+		// beelden en brieven
+		if ( defined( 'GC_KLANTCONTACT_BRIEF_CPT' ) ) {
+			gc_wbvb_sitemap_show_cpt_content( ICTU_GCCONF_CPT_SPEAKER );
+		}
+
+		if ( defined( 'GC_KLANTCONTACT_BEELDEN_CPT' ) ) {
+			gc_wbvb_sitemap_show_cpt_content( GC_KLANTCONTACT_BEELDEN_CPT );
+		}
+
+
 		
 		
 		echo '</div>';
@@ -983,7 +1009,7 @@ if (! function_exists( 'dovardump' ) ) {
 
     if ( WP_DEBUG ) {
       $contextstring  = '';
-      $startstring    = '<div class="debug-context-info">';
+      $startstring    = '<hr><div class="debug-context-info">';
       $endtring       = '</div>';
 
       if ( $context ) {
@@ -1019,10 +1045,14 @@ if (! function_exists( 'dovardump' ) ) {
 function gc_wbvb_add_blog_single_css() {
 	
 	global $imgbreakpoints;
+
+	if ( is_singular( ICTU_GCCONF_CPT_SPEAKER ) ) {
+		return;
+	}
 	
 	wp_enqueue_style(
-	ID_SINGLE_CSS,
-	WBVB_THEMEFOLDER . '/blogberichten.css'
+		ID_SINGLE_CSS,
+		WBVB_THEMEFOLDER . '/blogberichten.css'
 	);
 	
 	$BLOGBERICHTEN_CSS   = '';
@@ -1639,8 +1669,8 @@ if (!function_exists('gc_wbvb_remove_wp_open_sans')) :
 		remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
 
 		if ( !is_admin() ) {
-		// filter to remove TinyMCE emojis
-		add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
+			// filter to remove TinyMCE emojis
+			add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
 		}
 
 
@@ -1713,11 +1743,17 @@ function gc_wbvb_eventmanager_styles_placeholders($replace, $EM_Event, $result) 
 	switch( $result ) {
 		case '#_EVENTEXCERPT':
 		
-			if ( $EM_Event->post_excerpt !== '') {
-				$return  = $EM_Event->post_excerpt;
+			if ( is_object( $EM_Event ) ) {
+				
+				if ( $EM_Event->post_excerpt !== '') {
+					$return  = $EM_Event->post_excerpt;
+				}
+				else {
+					$return  = $EM_Event->post_content;
+				}
 			}
 			else {
-				$return  = $EM_Event->post_content;
+				$return = 'No event found';
 			}
 
 			return strip_tags ( $return, '<br>' );
@@ -2195,6 +2231,7 @@ function gc_wbvb_archive_loop() {
 			$extra_cssclass = ' ' . $posttype;
 			$class 			= 'feature-image noimage';
 			$bluh			= '';
+			$image			= [];
 			
 			// check of het eerste bericht een enorme afbeelding heeft
 			if ( $countertje == 1 && 'post' === get_post_type( ) ) {
@@ -2212,7 +2249,7 @@ function gc_wbvb_archive_loop() {
 						
 						$image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), 'large' );
 						
-						if ( $image[0] ) {
+						if ( isset( $image[0] ) ) {
 							$class = 'feature-image';
 							$bluh = sanitize_title( $image[0] );
 						}
@@ -2233,7 +2270,7 @@ function gc_wbvb_archive_loop() {
 					
 				}
 
-				if ( $image[0] ) {
+				if ( isset( $image[0] ) ) {
 					$class = 'feature-image';
 					$bluh = sanitize_title( $image[0] );
 				}
@@ -2264,7 +2301,10 @@ function gc_wbvb_archive_loop() {
 			    || ( ICTU_GC_CPT_CITAAT == get_post_type() )
 			    || ( ICTU_GC_CPT_DOELGROEP == get_post_type() )
 			    || ( ICTU_GC_CPT_VAARDIGHEDEN == get_post_type() )
-			    || ( ICTU_GC_CPT_METHODE == get_post_type() )
+				|| ( ICTU_GC_CPT_METHODE == get_post_type() )
+				|| ( ICTU_GCCONF_CPT_SPEAKER == get_post_type() )
+				|| ( ICTU_GCCONF_CPT_KEYNOTE == get_post_type() )
+				|| ( ICTU_GCCONF_CPT_SESSION == get_post_type() )
 			    )  {
 			        // nothing
 			} else {
@@ -2650,7 +2690,7 @@ function attendeelist_get_the_bookingpersonname( $theobject ) {
 		}
 		$countryinfo	= $theobject->get_person()->custom_user_fields['dbem_country'];
 
-		if ( isset( $bookinginfo['show_name_attendeelist'] ) ) {
+		if ( isset( $bookinginfo['show_name_attendeelist'] ) && ( $bookinginfo['show_name_attendeelist'] !== '0' ) ) {
 
 			if ( $theobject->get_person()->get_name() ) {
 				$name = $theobject->get_person()->get_name();
@@ -2687,8 +2727,7 @@ function attendeelist_get_the_bookingpersonname( $theobject ) {
 					$returnstring .= '<br>' . $xtra;	
 				}
 
-//				if ( isset( $bookinginfo['linkedin_profile'] ) && trim( $bookinginfo['linkedin_profile'] ) ) {
-				if ( isset( $bookinginfo['linkedin_profile'] ) ) {
+				if ( isset( $bookinginfo['linkedin_profile'] ) && trim( $bookinginfo['linkedin_profile'] ) ) {
 					if (!filter_var( $bookinginfo['linkedin_profile'] , FILTER_VALIDATE_URL) === false) {
 						$socialmedia .= '<li><a href="' . $bookinginfo['linkedin_profile'] . '" class="linkedin" title="' . __('LinkedIn-profiel', 'gebruikercentraal' ) . ' van ' . esc_html( $theobject->get_person()->get_name() ) . '" itemprop="url"><span class="visuallyhidden">' . __('LinkedIn-profiel', 'gebruikercentraal' ) . '</span></a></li>';
 						$listitemcount++;
@@ -2696,7 +2735,6 @@ function attendeelist_get_the_bookingpersonname( $theobject ) {
 				}
 
 				if ( isset( $bookinginfo['twitter_handle'] ) && trim( $bookinginfo['twitter_handle'] ) ) {
-//				if ( isset( $bookinginfo['twitter_handle'] ) ) {
 					$socialmedia .= '<li><a href="' . GC_TWITTER_URL . sanitize_title( $bookinginfo['twitter_handle'] ) . '" class="twitter" title="' . __( 'Twitter-account', 'gebruikercentraal' ) . ' van ' . esc_html( $theobject->get_person()->get_name() ) . '" itemprop="url"><span class="visuallyhidden">' . __( 'Twitter-account', 'gebruikercentraal' ) . '</span></a></li>';
 					$listitemcount++;
 				}
@@ -2799,6 +2837,29 @@ function check_stappenplan() {
 		endif;
 
 	}
+}
+
+//========================================================================================================
+
+/**
+ * Remove Contact Form 7 scripts + styles unless we're on the contact page
+ *
+ */
+add_action( 'wp_enqueue_scripts', 'rhswp_remove_external_styles' );
+
+function rhswp_remove_external_styles() {
+
+	wp_deregister_style( 'contact-form-7' );
+	wp_deregister_style( 'toc-screen' );
+
+	wp_deregister_style( 'cptch_stylesheet' );
+	wp_deregister_style( 'cptch_desktop_style' );
+
+	if ( ! is_admin() ) {
+//		wp_dequeue_style( 'wp-block-library' );		
+//		wp_deregister_style( 'dashicons' );
+	}
+
 }
 
 //========================================================================================================

@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.23.1
-// @desc.   Step table, search resultpagina, bugfixes voor soc.media knopjes.
+// @version 3.26.1
+// @desc.   Icons (microfoon, level, flag) toegevoegd. Code cleanup voor event manager bestanden.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -403,35 +403,34 @@ body {
 }
 
 // ========================================================================
-#event_map {
-  width: 100%;
-//	background: @groen_2;
+#maincontent #event_map {
+	width: 100%;
 	background: @gc_a11y_green;
-  
-  h2 {
-    a, & {
-      color: @wit;
-    }
-    a {
-      text-decoration: none;
-      
-      &:hover,
-      &:focus,
-      &:active {
-        text-decoration: underline;
-      }
-    }
-  }
-  &.geen-programma {
-    padding: @padding;
-    overflow: hidden;
-    color: @wit;
-  }
-
-  .em-map-balloon {
-    color: @txt !important;
-    font-family: @bodyfont;
-  }
+	
+	h2 {
+		a, & {
+			color: @wit;
+		}
+		a {
+			text-decoration: none;
+			
+			&:hover,
+			&:focus,
+			&:active {
+				text-decoration: underline;
+			}
+		}
+	}
+	&.geen-programma {
+		padding: @padding;
+		overflow: hidden;
+		color: @wit;
+	}
+	
+	.em-map-balloon {
+		color: @txt !important;
+		font-family: @bodyfont;
+	}
 }
 // ========================================================================
 #event_map_en_programma {
@@ -523,7 +522,7 @@ body {
 .single-event {
 
   .entry-content {
-    .luiewijvenshizzle();
+    .event-header-info();
   }
 }
     

@@ -6,8 +6,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.24.1
-// @desc.   Nieuw GC-logo, voorkomen warnings PHP voor gebruikersdata + verplaatsen broodkruimelpad naar direct achter hoofdmenu.
+// @version 3.26.1
+// @desc.   Icons (microfoon, level, flag) toegevoegd. Code cleanup voor event manager bestanden.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 @import "01-socmed-color-codes.less";              // colors, sizes 
@@ -42,7 +42,7 @@
 @paars:                 	#4C2974;
 
 // alle groenen
-//@groen_1:               	#1BB24B;
+//@groen_1:               	#1bb24b;
 @groen_2:               	#009F33;
 @groen_3:               	#A1E4B6; // erg licht groen
 @groen_4:               	#00932F;
@@ -107,13 +107,13 @@
 
 @breadcrumb_bg_color:   	@wit;
 
-@a_menu_hover_border:		#1BB24B; // onderstreping in main nav bij hover en current
+@a_menu_hover_border:		#1bb24b; // onderstreping in main nav bij hover en current
 
 @bsitefooter_a_color:   	@wit; // #6D9DAA;
 
 @menu_active:           	@groen_2;
 
-@mess_ok_color:         	#1BB24B;
+@mess_ok_color:         	#1bb24b;
 @mess_ok_bg:            	lighten( @mess_ok_color, 50% );
 @mess_ok_border:        	@mess_ok_color;
 
@@ -782,7 +782,7 @@
 
 .icon_time_fill(@src, @fill-new) {
     @data-uri:       data-uri('image/svg+xml;charset=UTF-8', "@{src}");
-    @replace-default:   escape('id="icon-pin" fill="#1BB24B"');
+    @replace-default:   escape('id="icon-pin" fill="#1bb24b"');
     @replace-new:     escape('id="icon-pin" fill="@{fill-new}"');
     @replacesrc1:     replace("@{data-uri}", @replace-default, @replace-new, "g");
 
@@ -873,6 +873,8 @@
   .event-aanmeldingen,
   .event-pricing,
   .event-times,
+  .event-type,
+  .event-level,
   .event-location {
     display: inline-block;
     background: transparent url('images/icon-pin.png') no-repeat left center;
@@ -891,6 +893,16 @@
   .event-times {
     background-image: url('images/icon-time.png');
     .icon_pin_fill('../images/icon-time.svg', @gc_a11y_green );
+    padding-left: 20px;
+  }
+  .event-level {
+    background-image: url('images/icon-level.png');
+    .icon_pin_fill('../images/icon-level.svg', @gc_a11y_green );
+    padding-left: 20px;
+  }
+  .event-type {
+    background-image: url('images/icon-type.png');
+    .icon_pin_fill('../images/icon-type.svg', @gc_a11y_green );
     padding-left: 20px;
   }
   .event-location,
@@ -1002,6 +1014,7 @@
 			margin: 0;
 			
 			a {
+				&.website,
 				&.personallink,
 				&.linkedin,
 				&.facebook,
@@ -1043,6 +1056,7 @@
 					.icon_socmed_icon('../images/icon-facebook.svg', @gc_a11y_green );
 				}
 			}
+			.website,
 			.personallink {
 				background-image: url('images/icon-personallink.png');
 				.icon_socmed_icon('../images/icon-personallink.svg', @blauw3);
@@ -1089,7 +1103,7 @@
 
 //=========================================================================================================
 
-.luiewijvenshizzle() {
+.event-header-info() {
   
 
   header {
@@ -1521,7 +1535,7 @@
 	@call_to_action_2nd_bg:                         @blauw6;
 	@call_to_action_2nd_border:                     @call_to_action_2nd_link_pijltje_achtergrond;
 	
-	@call_to_action_link_achtergrond:           	#1BB24B;
+	@call_to_action_link_achtergrond:           	#1bb24b;
 	@call_to_action_link_schaduw:               	#00832A;
 	@call_to_action_link_pijltje_achtergrond:   	#0CA13B;
 	@call_to_action_link_color:                 	@wit;
@@ -1606,6 +1620,34 @@
 		left: 50%;
 		transform: translateX(-50%);
 	}
+}
+
+
+//=========================================================================================================
+
+dl.dl-level,
+dl.dl-speaker-names,
+dl.dl-time-location {
+	.cards-meta();
+}
+dl.dl-level,
+dl.dl-speaker-names {
+	background-repeat: no-repeat;
+//	background-size: 16px 16px;
+	background-position: left center;
+    background-image: url('images/icon-microphone.png');
+    .icon_pin_fill('../images/icon-microphone.svg', @gc_a11y_green );
+    padding-left: 20px;
+}
+
+dl.dl-level {
+    background-image: url('images/icon-level.png');
+    .icon_pin_fill('../images/icon-level.svg', @gc_a11y_green );
+}
+
+.cards-meta() {
+	.fontsize(12);
+	.eventicons();
 }
 
 //=========================================================================================================

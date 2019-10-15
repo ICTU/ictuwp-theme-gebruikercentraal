@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.16.1
-// @desc.   CTA-kleuren, a11y groen, sharing buttons optional, beeldbank CPT code separation.
+// @version 3.26.1
+// @desc.   Icons (microfoon, level, flag) toegevoegd. Code cleanup voor event manager bestanden.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -166,6 +166,15 @@
 
   .wp-caption.alignnone {
     margin: ( @padding / 3 ) 0 0 0;
+  }
+  
+  .thumbnail {
+	  &.alignleft {
+		  margin: .5rem 1rem 1rem 0;
+	  }
+	  &.alignright {
+		  margin: .5rem 0 1rem 1rem;
+	  }
   }
 
   .wp-caption {
