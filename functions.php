@@ -2209,7 +2209,17 @@ function gc_wbvb_archive_loop() {
 		genesis_legacy_loop();
 		return;
 	}
-		
+
+	if ( 
+		( is_tax( ICTU_GCCONF_CT_LOCATION ) ) ||
+		( is_tax( ICTU_GCCONF_CT_SESSIONTYPE ) ) ||
+		( is_tax( ICTU_GCCONF_CT_LEVEL ) ) ||
+		( is_tax( ICTU_GCCONF_CT_COUNTRY ) ) ||
+		( is_tax( ICTU_GCCONF_CT_TIMESLOT ) ) 
+		)  {
+		// these have their own loop in the 'ictu-gc-plugin-conference' plugin
+		return;
+	}
 		
 	$countertje   = 0;
 		
