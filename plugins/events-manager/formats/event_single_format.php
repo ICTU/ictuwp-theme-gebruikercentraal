@@ -30,83 +30,81 @@ $event_end_datetime       = strtotime( $EM_Event->event_end_date . ' ' . $EM_Eve
 $event_times     = ''; 
 $event_location  = ''; 
 
-
-
 if ( isset($EM_Event->location) ) {
-  if (  isset($EM_Event->location->name) ) {
-    $event_location  = '<div class="event-location">' . $EM_Event->location->name . '</div>'; 
-  }
+	if (  isset($EM_Event->location->name) ) {
+		$event_location  = '<div class="event-location">' . $EM_Event->location->name . '</div>'; 
+	}
 }
-
-
-
+	
+	
+	
 if ( $event_start_datetime ) {
-  // only accept events with a start time
-  $event_times .= '<div class="event-times">
-  <span class="starttime" itemprop="startDate" content="' . date_i18n( 'c', $event_start_datetime ) . '">' . date_i18n( 'G:i', $event_start_datetime ) . '</span>';
-
-  if ( $event_end_datetime ) {
-    if ( $event_end_datetime > $event_start_datetime) {
-      $event_times .= ' - <span class="endtime" itemprop="endDate" content="' . date_i18n( 'c', $event_end_datetime ) . '">' . date_i18n( 'G:i', $event_end_datetime ) . '</span>';
-    }
-  }
-
-  $event_times .= '</div>';
-
+	// only accept events with a start time
+	$event_times .= '<div class="event-times">
+	<span class="starttime" itemprop="startDate" content="' . date_i18n( 'c', $event_start_datetime ) . '">' . date_i18n( 'G:i', $event_start_datetime ) . '</span>';
+	
+	if ( $event_end_datetime ) {
+		if ( $event_end_datetime > $event_start_datetime) {
+			$event_times .= ' - <span class="endtime" itemprop="endDate" content="' . date_i18n( 'c', $event_end_datetime ) . '">' . date_i18n( 'G:i', $event_end_datetime ) . '</span>';
+		}
+	}
+	
+	$event_times .= '</div>';
+	
 }
-
-
+	
+	
 $header_meta_info = '';
 $lebookings       = $EM_Event->bookings;
 
 $kostduurquageld  =  __( 'Free of charge', 'gebruikercentraal' );
 $price_min        = 0;
 $price_max        = 0;
-
+	
 if ( count($lebookings) > 0 ) {
-  // has bookings
-  $header_meta_info .= $event_times;
-  $header_meta_info .= $event_location;
-
-  foreach ( $lebookings->tickets->tickets as $leticket ) {
-    // get min & max price
-    if ( $price_min > 0 ) {
-      if ( floatval( $leticket->ticket_price ) < $price_min ) {
-        $price_min = $leticket->ticket_price;
-      }
-    }
-    elseif ( floatval( $leticket->ticket_price ) > $price_min ) {
-      $price_min = $leticket->ticket_price;
-    }
-
-    if ( floatval( $leticket->ticket_price ) > $price_max ) {
-      $price_max = $leticket->ticket_price;
-    }
-  }
-
-  if ( floatval( $price_min ) > 0 ) {
-    $kostduurquageld = '<span itemprop="lowPrice">' . round($price_min,2) . '</span>';
-    if ( ( floatval( $price_max ) > 0 )  && ( $price_max > $price_min ) ) {
-      $kostduurquageld .= ' - ' . '<span itemprop="highPrice">' . round($price_max,2) . '</span>';
-    }  
-    $header_meta_info .= '<div class="event-pricing" itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">' . $kostduurquageld . '</div>';
-  }  
-  else {
-    $header_meta_info .= '<div class="event-pricing" itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">' . $kostduurquageld . '</div>';
-  }
-
-  $header_meta_info .= $EM_gc_wbvb_single_event_aanmeldingen;
-
+	// has bookings
+	$header_meta_info .= $event_times;
+	$header_meta_info .= $event_location;
+	
+	foreach ( $lebookings->tickets->tickets as $leticket ) {
+		// get min & max price
+		if ( $price_min > 0 ) {
+			if ( floatval( $leticket->ticket_price ) < $price_min ) {
+				$price_min = $leticket->ticket_price;
+			}
+		}
+		elseif ( floatval( $leticket->ticket_price ) > $price_min ) {
+			$price_min = $leticket->ticket_price;
+		}
+		
+		if ( floatval( $leticket->ticket_price ) > $price_max ) {
+			$price_max = $leticket->ticket_price;
+		}
+	}
+	
+	if ( floatval( $price_min ) > 0 ) {
+		$kostduurquageld = '<span itemprop="lowPrice">' . round($price_min,2) . '</span>';
+		if ( ( floatval( $price_max ) > 0 )  && ( $price_max > $price_min ) ) {
+			$kostduurquageld .= ' - ' . '<span itemprop="highPrice">' . round($price_max,2) . '</span>';
+		}  
+		$header_meta_info .= '<div class="event-pricing" itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">' . $kostduurquageld . '</div>';
+	}  
+	else {
+		$header_meta_info .= '<div class="event-pricing" itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">' . $kostduurquageld . '</div>';
+	}
+	
+	$header_meta_info .= $EM_gc_wbvb_single_event_aanmeldingen;
+	
 }
 else {
-
-  // no booking availability
-  $header_meta_info .= $event_times;
-  if ( $EM_Event->location->name ) {
-    $header_meta_info .= $EM_Event->location->name;
-  }
+	
+	// no booking availability
+	$header_meta_info .= $event_times;
+	if ( $EM_Event->location->name ) {
+		$header_meta_info .= $EM_Event->location->name;
+	}
 }
-
+	
 
 ?>
 

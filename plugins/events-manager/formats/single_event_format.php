@@ -85,15 +85,8 @@ $lebookings       = $EM_Event->bookings;
 $kostduurquageld  =  __( 'Free of charge', 'gebruikercentraal' );
 $price_min        = 0;
 $price_max        = 0;
-$countlebookings  = 0;
 
-//echo 'Lebookings is : ' . get_class( $lebookings ) . '<br>';
-
-if ( is_countable( $lebookings ) ) {
-//if ( is_array( $lebookings ) || is_object( $lebookings ) ) {
-	$countlebookings = count( $lebookings );
-}
-if ( $countlebookings > 0 ) {
+if ( is_array( $lebookings ) || is_object( $lebookings ) ) {
 	// has bookings
 	$header_meta_info .= $EM_gc_wbvb_single_event_availability;
 	$header_meta_info .= $event_times;
