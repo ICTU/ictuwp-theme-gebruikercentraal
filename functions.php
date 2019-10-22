@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.26.1
-// @desc.   Icons (microfoon, level, flag) toegevoegd. Code cleanup voor event manager bestanden.
+// @version 3.27.1
+// @desc.   Betere zoekresultaatpagina, ook bij geen resultaat.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.26.1' );
-define( 'CHILD_THEME_DESCRIPTION', "3.26.1 - Icons (microfoon, level, flag) toegevoegd. Code cleanup voor event manager bestanden." );
+define( 'CHILD_THEME_VERSION', '3.27.1' );
+define( 'CHILD_THEME_DESCRIPTION', "3.27.1 - Betere zoekresultaatpagina, ook bij geen resultaat." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -924,44 +924,44 @@ function gc_wbvb_404() {
 		}
 
 		if ( defined( 'ICTU_GC_CPT_STAP' ) ) {
-			gc_wbvb_sitemap_show_cpt_content( ICTU_GC_CPT_STAP );
+			gc_wbvb_sitemap_show_cpt_content( array( 'customcpt' => ICTU_GC_CPT_STAP ) );
 		}
 		
 		if ( defined( 'ICTU_GC_CPT_DOELGROEP' ) ) {
-			gc_wbvb_sitemap_show_cpt_content( ICTU_GC_CPT_DOELGROEP );
+			gc_wbvb_sitemap_show_cpt_content( array( 'customcpt' => ICTU_GC_CPT_DOELGROEP ) );
 		}
 		
 		if ( defined( 'ICTU_GC_CPT_VAARDIGHEDEN' ) ) {
-			gc_wbvb_sitemap_show_cpt_content( ICTU_GC_CPT_VAARDIGHEDEN );
+			gc_wbvb_sitemap_show_cpt_content( array( 'customcpt' => ICTU_GC_CPT_VAARDIGHEDEN ) );
 		}
 		
 		if ( defined( 'ICTU_GC_CPT_METHODE' ) ) {
-			gc_wbvb_sitemap_show_cpt_content( ICTU_GC_CPT_METHODE );
+			gc_wbvb_sitemap_show_cpt_content( array( 'customcpt' => ICTU_GC_CPT_METHODE ) );
 		}
 		
 		if ( defined( 'ICTU_GC_CPT_PROCESTIP' ) ) {
-			gc_wbvb_sitemap_show_cpt_content( ICTU_GC_CPT_PROCESTIP );
+			gc_wbvb_sitemap_show_cpt_content( array( 'customcpt' => ICTU_GC_CPT_PROCESTIP ) );
 		}
 				
 		if ( defined( 'ICTU_GCCONF_CPT_SESSION' ) ) {
-			gc_wbvb_sitemap_show_cpt_content( ICTU_GCCONF_CPT_SESSION );
+			gc_wbvb_sitemap_show_cpt_content( array( 'customcpt' => ICTU_GCCONF_CPT_SESSION ) );
 		}
 
 		if ( defined( 'ICTU_GCCONF_CPT_KEYNOTE' ) ) {
-			gc_wbvb_sitemap_show_cpt_content( ICTU_GCCONF_CPT_KEYNOTE );
+			gc_wbvb_sitemap_show_cpt_content( array( 'customcpt' => ICTU_GCCONF_CPT_KEYNOTE ) );
 		}
 		
 		if ( defined( 'ICTU_GCCONF_CPT_SPEAKER' ) ) {
-			gc_wbvb_sitemap_show_cpt_content( ICTU_GCCONF_CPT_SPEAKER );
+			gc_wbvb_sitemap_show_cpt_content( array( 'customcpt' => ICTU_GCCONF_CPT_SPEAKER ) );
 		}
 
 		// beelden en brieven
 		if ( defined( 'GC_KLANTCONTACT_BRIEF_CPT' ) ) {
-			gc_wbvb_sitemap_show_cpt_content( ICTU_GCCONF_CPT_SPEAKER );
+			gc_wbvb_sitemap_show_cpt_content( array( 'customcpt' => ICTU_GCCONF_CPT_SPEAKER ) );
 		}
 
 		if ( defined( 'GC_KLANTCONTACT_BEELDEN_CPT' ) ) {
-			gc_wbvb_sitemap_show_cpt_content( GC_KLANTCONTACT_BEELDEN_CPT );
+			gc_wbvb_sitemap_show_cpt_content( array( 'customcpt' => GC_KLANTCONTACT_BEELDEN_CPT ) );
 		}
 
 
@@ -979,22 +979,37 @@ function gc_wbvb_404() {
 
 if (! function_exists( 'gc_wbvb_sitemap_show_cpt_content' ) ) {
 	
-	function gc_wbvb_sitemap_show_cpt_content( $customcpt = '' ) {
+	function gc_wbvb_sitemap_show_cpt_content( $args = [] ) {
 
-		if ( $customcpt && post_type_exists( $customcpt ) ) {
+	    $defaults = array (
+	        'customcpt'		=> '',
+	        'order'			=> 'ASC',
+	        'orderby'		=> 'name',
+	        'limit'			=> '',
+	        'type'			=> 'alpha',
+	        'echo' 			=> true
+	    );
+	     
+	    // Parse incoming $args into an array and merge it with $defaults
+	    $args = wp_parse_args( $args, $defaults );
 
-			$obj = get_post_type_object( $customcpt );
-			
-//			dovardump( $obj );
-			
+
+		if ( $args['customcpt'] && post_type_exists( $args['customcpt'] ) ) {
+
+			$obj = get_post_type_object( $args['customcpt'] );
+
 			echo '<h2>' . $obj->labels->name . '</h2>';
 			
 			$args = array(
-				'type'        => 'postbypost',
-				'post_type'   => $customcpt,
-				'echo'         => 1,
+				'type'      => 'postbypost',
+				'post_type' => $args['customcpt'],
+				'orderby'   => $args['orderby'],
+				'order'   	=> $args['order'],
+				'limit'   	=> $args['limit'],
+				'type'   	=> $args['type'],
+				'echo'      => 1,
 			);
-		
+
 			wp_get_archives( $args ); 
 			
 		}

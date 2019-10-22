@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.25.1
-// @desc.   Logo hernoemd. Sitemap aangepast. Pagina layout voorbereid op nieuwe stijl.
+// @version 3.27.1
+// @desc.   Betere zoekresultaatpagina, ook bij geen resultaat.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 //========================================================================================================
@@ -286,10 +286,43 @@
 		
 	}
 
+
+	#zoeken_no_result,
 	#zoeken {
-		border: 1px solid #6F99A3; // @wit;
 		position: relative;
 		height: @widget_area_button;
+
+		input[type="submit"] {
+		    border-color: @header_bg_color;
+		    background-color: @header_bg_color;
+		    .pijltje_wit('../images/vergrootglas.svg', @wit);
+			background-position: center center;
+			background-repeat: no-repeat;
+			text-indent: -999em;
+			width: ( @widget_area_button - 0 );
+			padding: 0;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+
+			@media only screen and ( max-width: @break_show_menu_button ) {
+				margin-right: 0;
+				right: 0;
+			}			
+			@media only screen and ( min-width: @break_show_menu_button ) {
+				right: 2px;
+			}			
+			
+			&:focus {
+				background-color: @wit;
+				border-color: @txt;
+				outline: none;
+			    .pijltje_wit('../images/vergrootglas.svg', @txt);
+			}
+		}
+	}
+	#zoeken {
+		border: 1px solid #6F99A3; // @wit;
 		  
 		//--------------------------------------------------------------------------------
 		
@@ -374,36 +407,9 @@
 			
 		}
 		
-
-		input[type="submit"] {
-		    border-color: @header_bg_color;
-		    background-color: @header_bg_color;
-		    .pijltje_wit('../images/vergrootglas.svg', @wit);
-			background-position: center center;
-			background-repeat: no-repeat;
-			text-indent: -999em;
-			width: ( @widget_area_button - 0 );
-			padding: 0;
-			position: absolute;
-			top: 0;
-			bottom: 0;
-
-			@media only screen and ( max-width: @break_show_menu_button ) {
-				margin-right: 0;
-				right: 0;
-			}			
-			@media only screen and ( min-width: @break_show_menu_button ) {
-				right: 2px;
-			}			
-			
-			&:focus {
-				background-color: @wit;
-				border-color: @txt;
-				outline: none;
-			    .pijltje_wit('../images/vergrootglas.svg', @txt);
-			}
-		}
+		
 	}
+	
 }
 
 //========================================================================================================

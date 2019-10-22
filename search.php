@@ -1,16 +1,16 @@
 <?php
 
 /**
- * Gebruiker Centraal - search.php
- * ----------------------------------------------------------------------------------
- * Toont zoekresultaten
- * ----------------------------------------------------------------------------------
- * @package gebruiker-centraal
- * @author  Paul van Buuren
- * @license GPL-2.0+
- * @version 3.10.2
- * @desc.   Styling voor 'niet zo, maar zo' images op richtlijnen-pagina.
- * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// Gebruiker Centraal - search.php
+// ----------------------------------------------------------------------------------
+// Toont zoekresultaten
+// ----------------------------------------------------------------------------------
+// @package gebruiker-centraal
+// @author  Paul van Buuren
+// @license GPL-2.0+
+// @version 3.27.1
+// @desc.   Betere zoekresultaatpagina, ook bij geen resultaat.
+// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
  */
 
 add_action( 'genesis_before_loop', 'genesis_do_search_title' );
@@ -43,31 +43,49 @@ genesis();
 
 /** Code for custom loop */
 function gc_wbvb_searchresults_loop() {
-    // code for a completely custom loop
+	
+	// code for a completely custom loop
 	global $post;
+	
+	if ( have_posts() ) {
 
-    while(have_posts()) : the_post();
+		while(have_posts()) : the_post();
+			
+			$theid = get_the_id();
+			$thelabelid = 'title_' . $theid;
+			
+			echo '<section class="theme-item" aria-labelledby="' . $thelabelid . '">';
+			echo '<a href="';
+			the_permalink();
+			echo '">';
+			
+			echo '<h2 id="' . $thelabelid . '">';
+			the_title();
+			echo "</h2>";
+			
+			echo "<p>";
+			the_excerpt();
+			echo "</p>";
+			
+			echo '</a>';
+			echo '</section>';
+			
+		endwhile;
+		
+	}
+	else {
 
-      $theid = get_the_id();
-      $thelabelid = 'title_' . $theid;
-      
-      echo '<section class="theme-item" aria-labelledby="' . $thelabelid . '">';
-      echo '<a href="';
-      the_permalink();
-      echo '">';
-      
-      echo '<h2 id="' . $thelabelid . '">';
-      the_title();
-      echo "</h2>";
-
-      echo "<p>";
-      the_excerpt();
-      echo "</p>";
+		$searchform = get_search_form( array( 'echo' => false ) );
+		$searchform =  preg_replace('|id="zoeken"|i', 'id="zoeken_no_result"', $searchform );
+		$searchform =  preg_replace('|searchform-2|i', 'searchform-22', $searchform );
+		
+		
+		echo '<p>' . esc_attr( _x( "No results", 'search', 'gebruikercentraal' ) ) . '</p>';
+		echo '<h2>' . esc_attr( _x( "Try searching again", 'search', 'gebruikercentraal' ) ) . '</h2>';
+		echo $searchform;
+		
+	}
     
-      echo '</a>';
-      echo '</section>';
-
-    endwhile;
 
 }
  

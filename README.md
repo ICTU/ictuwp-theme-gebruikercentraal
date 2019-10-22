@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-3.26.1 - Icons (microfoon, level, flag) toegevoegd. Code cleanup voor event manager bestanden.
+3.27.1 - Betere zoekresultaatpagina, ook bij geen resultaat.
 
 ## Version history
+* 3.27.1 - Betere zoekresultaatpagina, ook bij geen resultaat.
 * 3.26.1 - Icons (microfoon, level, flag) toegevoegd. Code cleanup voor event manager bestanden.
 * 3.25.1 - Logo hernoemd. Sitemap aangepast. Pagina layout voorbereid op nieuwe stijl.
 * 3.24.1 - Nieuw GC-logo, voorkomen warnings PHP voor gebruikersdata + verplaatsen broodkruimelpad naar direct achter hoofdmenu.

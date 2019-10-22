@@ -1,0 +1,54 @@
+
+.pagetype_search() {
+
+// Gebruiker Centraal - 71-search-pagetype.less
+// ----------------------------------------------------------------------------------
+// bevat CSS voor search pagina.
+// ----------------------------------------------------------------------------------
+// @package gebruiker-centraal
+// @author  Paul van Buuren
+// @license GPL-2.0+
+// @version 3.27.1
+// @desc.   Betere zoekresultaatpagina, ook bij geen resultaat.
+// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+
+
+	// ================================================================================
+
+@nosearchbuttonwidth: 38px;
+
+	.search,
+	.search.full-width-content {
+		 .content-sidebar-wrap > .content {
+			background: @wit;
+			max-width: @contentwidth_761;
+			padding: 2rem;
+			float: none;
+	
+		    @media only screen and (min-width: @break_tablet ) {
+				padding-left: 4em;			
+				padding-right: 4em;			
+			}
+			
+			#zoeken_no_result {
+				background: @gc_darkerblue;
+				padding: .25rem;
+
+				input[type="search"] {
+
+					@media only screen and ( min-width: @break_show_menu_button ) {
+						width: ~"calc(99% - @{nosearchbuttonwidth})";
+						height: 40px;
+					}			
+				}
+			}
+		}
+	}
+
+	// ================================================================================
+	
+/*
+==============================================================================================================
+*/
+
+}
