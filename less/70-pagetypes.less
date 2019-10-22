@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.27.1
-// @desc.   Betere zoekresultaatpagina, ook bij geen resultaat.
+// @version 3.27.3
+// @desc.   Styling boekingspagina event.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -649,10 +649,34 @@ body {
   }
 }
 
+@dinges1: 		( @contentwidth_960 - @contentwidth_761 );
+@dinges2: 		( @dinges1 / 2 );
+@dinges2_neg:	( @dinges2 * -1 );
+
 .event-bookings {
-  background: @blauw5;
-  color: @wit;
-  padding-bottom: 2em;
+	background: @blauw5;
+
+    @media only screen and (min-width: @break_tablet ) {
+		margin-left: ( -1 * @dinges2 );
+		margin-left: ~"calc( -2rem + @{dinges2_neg})";
+		margin-right: ( -1 * @dinges2 );
+		margin-right: ~"calc( -2rem + @{dinges2_neg})";
+		overflow: hidden;
+		padding: 0 ( @dinges2 * -1 ) 2rem 0;
+
+		padding-top: 4em;
+		padding-bottom: 4em;
+		
+		#em-booking {
+			background: @wit;
+			padding-left: 4em;
+			padding-right: 4em;
+		}
+	}
+
+	.wrap {
+		background: @blauw6 !important;
+	}
 }
 
 .attendees-list {

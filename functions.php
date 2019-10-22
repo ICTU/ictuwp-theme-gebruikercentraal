@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.27.2
-// @desc.   Totale make-over van zoekresultaat-pagina.
+// @version 3.27.3
+// @desc.   Styling boekingspagina event.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.27.2' );
-define( 'CHILD_THEME_DESCRIPTION', "3.27.2 - Totale make-over van zoekresultaat-pagina." );
+define( 'CHILD_THEME_VERSION', '3.27.3' );
+define( 'CHILD_THEME_DESCRIPTION', "3.27.3 - Styling boekingspagina event." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
