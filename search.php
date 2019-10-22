@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.27.1
-// @desc.   Betere zoekresultaatpagina, ook bij geen resultaat.
+// @version 3.27.2
+// @desc.   Totale make-over van zoekresultaat-pagina.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
  */
 
@@ -46,28 +46,55 @@ function gc_wbvb_searchresults_loop() {
 	
 	// code for a completely custom loop
 	global $post;
+	global $wp_query;
+
 	
 	if ( have_posts() ) {
 
+		// only show the post dates for the post types:
+		$postypeswithdate = array( GC_BEELDBANK_BRIEF_CPT, 'post' );
+
+		// how many posts did we find?
+		$title  = sprintf( _n( '%s result', '%s results', $wp_query->found_posts, 'gebruikercentraal' ), number_format_i18n( $wp_query->found_posts ) );      
+		echo '<p>' . $title  . '.</p>';		
+
+
 		while(have_posts()) : the_post();
 			
-			$theid = get_the_id();
-			$thelabelid = 'title_' . $theid;
+			$theid		= get_the_id();
+			$thelabelid	= 'title_' . $theid;
+			$posttype 	= get_post_type( $theid );
+			$obj		= get_post_type_object( $posttype );
+			if ( in_array( $posttype, $postypeswithdate ) ) {
+				$postdate	= get_the_date( );
+			}
+			else {
+				$postdate	= '';
+			}
+			$excerpt	= get_the_excerpt( $theid );
 			
 			echo '<section class="theme-item" aria-labelledby="' . $thelabelid . '">';
-			echo '<a href="';
-			the_permalink();
-			echo '">';
-			
 			echo '<h2 id="' . $thelabelid . '">';
+			echo '<a href="' . get_the_permalink() . '">';
 			the_title();
+			echo '</a>';
 			echo "</h2>";
 			
-			echo "<p>";
-			the_excerpt();
-			echo "</p>";
-			
-			echo '</a>';
+			if ( is_object( $obj ) || $postdate ) {
+				echo '<p class="meta">';
+				if ( is_object( $obj ) ) {
+					echo $obj->labels->singular_name;
+					if ( $postdate ) {
+						echo ' - ' . $postdate;
+					}
+				}
+				else {
+					echo $postdate;
+				}
+				echo '</p>';
+			}
+
+			echo "<p>" . wp_strip_all_tags( $excerpt ) . "</p>";
 			echo '</section>';
 			
 		endwhile;
@@ -75,9 +102,10 @@ function gc_wbvb_searchresults_loop() {
 	}
 	else {
 
+		// show a (UNIQUE) search form
 		$searchform = get_search_form( array( 'echo' => false ) );
-		$searchform =  preg_replace('|id="zoeken"|i', 'id="zoeken_no_result"', $searchform );
-		$searchform =  preg_replace('|searchform-2|i', 'searchform-22', $searchform );
+		$searchform = preg_replace('|id="zoeken"|i', 'id="zoeken_no_result"', $searchform );
+		$searchform = preg_replace('|searchform-2|i', 'searchform-22', $searchform );
 		
 		
 		echo '<p>' . esc_attr( _x( "No results", 'search', 'gebruikercentraal' ) ) . '</p>';

@@ -8,296 +8,290 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.13.5
-// @desc.   Kleine CSS-wijzigingen voor zoekbox, site-description en event-paginering.
+// @version 3.27.2
+// @desc.   Totale make-over van zoekresultaat-pagina.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+	
+	
+	
+	@pijltje_active: 10px;
+	
+	
+	/* Pagination
+	--------------------------------------------- */
+	.pagination,
+	.prev-next-navigation,
+	.archive-pagination,
+	.entry-pagination {
+		display: block;
+		float: none;
+		clear: both;
+		margin: 0 0 @padding 0;
+		padding: 0;
+		overflow: hidden;
+		
+		font-family: @headerfont;
+		text-transform: uppercase;
+		font-weight: normal;
+		
+		li, div {
+			display: inline;
+		}
+		
+		ul {
+			padding: 0;
+			overflow: hidden;
+			padding-right: ( @pagination_button_width + ( 2 * @pagination_button_offset ) );
+			padding-left: ( @pagination_button_width + ( 2 * @pagination_button_offset ) );
+			position: relative;
+			
+			&, li {
+				overflow: hidden;
+			}
+		}
+		
+		li {
+			padding: 0;
+			display: block;
+			margin: 0 .5em 0 0;
+			float: left;
+		}
+		
+		li.pagination-omission,
+		a {
+			color: @txt;
+			background: @wit;
+			text-decoration: none;
+			display: block;
+			border: 2px solid @txt;
+			float: left;
+			padding: 0 .5em;
+			line-height: 1.4;
+			.fontsize(24);
+			margin-top: .5em;
+			overflow: hidden;
+		}
+		
+		a {
+			cursor: pointer;
+			
+			&:hover,
+			&:active,
+			&:focus {
+				text-decoration: underline;
+			}
+		}
+		
+		li a:hover,
+		li.active a {
+			background-color: @txt;
+			color: @wit;
+		}
+		
+		li.active  {
+			position: relative;
+			
+			&:before {
+				content: ' ';
+				display: inline-block;
+				z-index: 888;
+				
+				width: 0;
+				height: 0;
+				
+				background: transparent;
+				position: absolute;
+				left: 7px;
+				top: 0;
+				margin-top: -15px;
+				
+				border-right: @pijltje_active solid transparent;
+				border-left: @pijltje_active solid transparent;
+				border-top: @pijltje_active solid transparent;
+				border-bottom: @pijltje_active solid @txt;
+				position: absolute;
+				top: @pijltje_active;
+				
+			}
+		}
+		
+		.archive {
+			.pagination-next,
+			.alignright,
+			.pagination-previous,
+			.alignleft {
+				position: absolute;
+				top: 0;
+				margin: 0;
+			}
+		}
+		
+		.pagination-next,
+		.alignright,
+		.pagination-previous,
+		.alignleft {
+			
+			@media only screen and (min-width: ( @break_tablet ) ) {
+				max-width: 50%;
+			}
+			
+			a {
+				border: 2px solid @wit;
+				padding: 0;
+				position: relative;
+				font-family: @bodyfont_bold;
+				.fontsize(16);
+				text-transform: none;
+				min-height: @pagination_button_height;
+				
+				&:before,
+				&:after,
+				span {
+					margin: 0;
+				}
+				span {
+					display: none;
+					visibility: hidden;
+				}
+				&:before,
+				&:after {
+					padding: 0;
+					display: block;
+					background-position: center center;
+					background-repeat: no-repeat;
+					width: @pagination_button_width;
+					height: @pagination_button_height;
+					position: absolute;
+					top: 0;
+				}
+				&:hover,
+				&:focus,
+				&:active {
+					background: @wit;
+					color: @txt;
+					text-decoration: underline;
+					border-color: @txt;
+				}
+			}
+		}
+		
+		.pagination-next,
+		.alignright {
+			float: right;
+			text-align: right;
+			right: @pagination_button_offset;
+			
+			a {
+				padding-left: @padding;
+//				padding-right: @pagination_button_width;
+				span {
+					float: left;
+					margin-left: @padding;
+				}
+				/*
+				&:after {
+					content: ' ';
+					float: right;
+					right: 0;
+					background-image: url('images/nav-icon-rechts.png');
+					background-image: url('images/nav-icon-rechts.svg'), none;
+				}
+				*/
+			}
+		}
+		
+		.pagination-previous,
+		.alignleft {
+			float: left;
+			text-align: left;
+			left: @pagination_button_offset;
+			
+			a {
+				padding-right: @padding;
+//				padding-left: @pagination_button_width;
 
+				span {
+					float: left;
+					margin-right: @padding;
+				}
+				/*
+				&:before {
+					content: ' ';
+					float: left;
+					left: 0;
+					background-image: url('images/nav-icon-links.png');
+					background-image: url('images/nav-icon-links.svg'), none;
+				}
+				*/
+			}
+		}
 
-
-  
-  /* Pagination
-  --------------------------------------------- */
-  .pagination,
-  .prev-next-navigation,
-  .archive-pagination,
-  .entry-pagination {
-    display: block;
-    float: none;
-    clear: both;
-    margin: 0 0 @padding 0;
-    padding: 0;
-//    background: @wit;
-    overflow: hidden;
-    
-    font-family: @headerfont;
-    text-transform: uppercase;
-    font-weight: normal;
-    
-    li, div {
-      display: inline;
-    }
-
-    ul {
-      padding: 0;
-      overflow: hidden;
-      padding-right: ( @pagination_button_width + ( 2 * @pagination_button_offset ) );
-      padding-left: ( @pagination_button_width + ( 2 * @pagination_button_offset ) );
-      position: relative;
-      
-      &, li {
-        overflow: hidden;
-      }
-    }
-    li {
-      padding: 0;
-      display: block;
-      margin: 0 .5em 0 0;
-      float: left;
-    }
-    
-    li.pagination-omission,
-    a {
-		color: @txt;
-		background: @wit;
-      text-decoration: none;
-      display: block;
-      border: 2px solid @txt;
-      float: left;
-      padding: 0 .5em;
-      line-height: 1.4;
-      .fontsize(24);
-      margin-top: .5em;
-      overflow: hidden;
-    }
-
-    a {
-      cursor: pointer;
-
-      &:hover,
-      &:active,
-      &:focus {
-        text-decoration: underline;
-      }
-    }
-
-    li a:hover,
-    li.active a {
-      background-color: @txt;
-      color: @wit;
-    }
-
-    li.active  {
-      position: relative;
-
-@pijltje_active: 10px;
-
-      &:before {
-        content: ' ';
-        display: inline-block;
-        z-index: 888;
-
-        width: 0;
-        height: 0;
-        
-        background: transparent;
-        position: absolute;
-        left: 7px;
-        top: 0;
-        margin-top: -15px;
-
-        border-right: @pijltje_active solid transparent;
-        border-left: @pijltje_active solid transparent;
-        border-top: @pijltje_active solid transparent;
-        border-bottom: @pijltje_active solid @txt;
-        position: absolute;
-        top: @pijltje_active;
-
-      }
-    }
-
-    .archive {
-        
-      .pagination-next,
-      .alignright,
-      .pagination-previous,
-      .alignleft {
-        position: absolute;
-        top: 0;
-        margin: 0;
-      }
-  
-    }
-
-    .pagination-next,
-    .alignright,
-    .pagination-previous,
-    .alignleft {
-
-      @media only screen and (min-width: ( @break_tablet ) ) {
-        max-width: 50%;
-      }
-      a {
-        border: 2px solid @wit;
-        padding: 0;
-        position: relative;
-        font-family: @bodyfont_bold;
-        .fontsize(16);
-        text-transform: none;
-        min-height: @pagination_button_height;
-
-        &:before,
-        &:after,
-        span {
-          margin: 0;
-        }
-        span {
-          display: none;
-          visibility: hidden;
-        }
-        &:before,
-        &:after {
-          padding: 0;
-          display: block;
-          background-position: center center;
-          background-repeat: no-repeat;
-          width: @pagination_button_width;
-          height: @pagination_button_height;
-          position: absolute;
-          top: 0;
-        }
-        &:hover,
-        &:focus,
-        &:active {
-          background: @wit;
-          color: @txt;
-          text-decoration: underline;
-          border-color: @txt;
-          &:before,
-          &:after {
-          }
-        }
-      }
-    }
-
-    .pagination-next,
-    .alignright {
-      float: right;
-      text-align: right;
-      right: @pagination_button_offset;
-      
-      a {
-        padding-left: @padding;
-        padding-right: @pagination_button_width;
-        span {
-          float: left;
-          margin-left: @padding;
-        }
-        &:after {
-          content: ' ';
-          float: right;
-          right: 0;
-          background-image: url('images/nav-icon-rechts.png');
-          background-image: url('images/nav-icon-rechts.svg'), none;
-        }
-      }
-    }
-    
-    .pagination-previous,
-    .alignleft {
-      float: left;
-      text-align: left;
-      left: @pagination_button_offset;
-  
-      a {
-        padding-right: @padding;
-        padding-left: @pagination_button_width;
-        span {
-          float: left;
-          margin-right: @padding;
-        }
-        &:before {
-          content: ' ';
-          float: left;
-          left: 0;
-          background-image: url('images/nav-icon-links.png');
-          background-image: url('images/nav-icon-links.svg'), none;
-        }
-      }
-    }
-
-
-    @media only screen and (min-width: @break_tablet ) {
-      ul {
-        padding-left: @padding;
-        padding-right: @padding;
-        position: inherit;
-      }
-
-      .pagination-next,
-      .alignright,
-      .pagination-previous,
-      .alignleft {
-        position: inherit;
-        a {
-          padding-top: .2em;
-          padding-bottom: .2em;
-          line-height: 1;
-          span {
-            margin-top: .3em;
-            margin-bottom: .3em;
-            display: block;
-            visibility: visible;
-          }
-        }
-      }
-    }
-  
-    @media only screen and (min-width: @break_fullwidth ) {
-      
-    }
-  }
-
-  // event-manager pagination
-  .em-pagination {
-    display: block;
-    clear: both;
-    float: none;
-    font-size: 150%;
-    text-align: center;
-    padding-top: 1em;
-    padding-bottom: .25em;
-
-    .page-numbers,
-    strong {
-      text-align: center;
-      display: inline-block;
-    }
-
-    a.page-numbers {
-      text-decoration: none;
-      border: 3px solid transparent;
-      background-color: transparent;
-      padding-left: .5em;
-      padding-right: .5em;
-      
-      &:hover,
-      &:active,
-      &:focus {
-        background-color: @wit;
-        border-color: @txt;
-        text-decoration: underline;
-      }
-      
-    }
-
-    strong {
-      border: 3px solid @txt;
-      background-color: @wit;
-      padding-left: .5em;
-      padding-right: .5em;
-    }
-    
-    
-  }
-  
+		@media only screen and (min-width: @break_tablet ) {
+			ul {
+				padding-left: @padding;
+				padding-right: @padding;
+				position: inherit;
+			}
+			
+			.pagination-next,
+			.alignright,
+			.pagination-previous,
+			.alignleft {
+				position: inherit;
+				
+				a {
+					padding-top: .2em;
+					padding-bottom: .2em;
+					line-height: 1;
+					
+					span {
+						margin-top: .3em;
+						margin-bottom: .3em;
+						display: block;
+						visibility: visible;
+					}
+				}
+			}
+		}
+	}
+	
+	// event-manager pagination
+	.em-pagination {
+		display: block;
+		clear: both;
+		float: none;
+		font-size: 150%;
+		text-align: center;
+		padding-top: 1em;
+		padding-bottom: .25em;
+		
+		.page-numbers,
+		strong {
+			text-align: center;
+			display: inline-block;
+		}
+		
+		a.page-numbers {
+			text-decoration: none;
+			border: 3px solid transparent;
+			background-color: transparent;
+			padding-left: .5em;
+			padding-right: .5em;
+			
+			&:hover,
+			&:active,
+			&:focus {
+				background-color: @wit;
+				border-color: @txt;
+				text-decoration: underline;
+			}
+		}
+		
+		strong {
+			border: 3px solid @txt;
+			background-color: @wit;
+			padding-left: .5em;
+			padding-right: .5em;
+		}
+	}
 }

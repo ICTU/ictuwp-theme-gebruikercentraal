@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gebruiker Centraal\n"
-"POT-Creation-Date: 2019-10-22 10:42+0200\n"
-"PO-Revision-Date: 2019-10-22 10:54+0200\n"
+"POT-Creation-Date: 2019-10-22 11:31+0200\n"
+"PO-Revision-Date: 2019-10-22 11:32+0200\n"
 "Last-Translator: Paul van Buuren <paul@wbvb.nl>\n"
 "Language-Team: paul@wbvb.nl\n"
 "Language: nl_NL\n"
@@ -1459,12 +1459,19 @@ msgstr ""
 msgid "Search Results for:"
 msgstr "Zoekresultaten voor:"
 
-#: search.php:83
+#: search.php:54
+#, php-format
+msgid "%s result"
+msgid_plural "%s results"
+msgstr[0] "%s zoekresultaat"
+msgstr[1] "%s zoekresultaten"
+
+#: search.php:90
 msgctxt "search"
 msgid "No results"
 msgstr "Niets gevonden"
 
-#: search.php:84
+#: search.php:91
 msgctxt "search"
 msgid "Try searching again"
 msgstr "Zoek opnieuw"

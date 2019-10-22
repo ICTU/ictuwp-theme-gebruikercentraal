@@ -6,8 +6,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.26.1
-// @desc.   Icons (microfoon, level, flag) toegevoegd. Code cleanup voor event manager bestanden.
+// @version 3.27.2
+// @desc.   Totale make-over van zoekresultaat-pagina.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 @import "01-socmed-color-codes.less";              // colors, sizes 
@@ -25,6 +25,9 @@
 @contentwidth_960:			960px; 
 @contentwidth_761:			761px; 
 @containermaxwidth: 		1900px;
+
+//========================================================================================================
+@prem:                    	1rem;
 
 
 //========================================================================================================
@@ -64,6 +67,8 @@
 
 
 @gc_cardbordergrey: 		#D1DFE3; 
+
+@gc_greyblue:				#4f7781;
 
 
 @oranje:                	#FF8005;
@@ -351,7 +356,10 @@
 //========================================================================================================
 
 .font-size(@input) {
-	font-size: ( ( ( @input / @basefontsize ) * @basefontsize ) * @pixel );
+//	font-size: ( ( ( @input / @basefontsize ) * @basefontsize ) * @pixel );
+  font-size: ( ( ( @input / @basefontsize ) * @basefontsize ) * @pixel );
+  font-size: ( ( @input / @basefontsize ) * @prem );
+
 }
 
 //========================================================================================================

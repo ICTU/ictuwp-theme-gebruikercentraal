@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.25.1
-// @desc.   Logo hernoemd. Sitemap aangepast. Pagina layout voorbereid op nieuwe stijl.
+// @version 3.27.2
+// @desc.   Totale make-over van zoekresultaat-pagina.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -483,35 +483,33 @@
   
 
 
-  .date-badge {
-    .datebadge_klein();
-  }
+	.date-badge {
+		.datebadge_klein();
+	}
 
-
-  // dingen voor events
-  .tickets.unavailable {
-    background: @oranje;
-    color: @wit;
-    padding-left:  .4em;
-  }
-
-  .tickets.unavailable {
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: block;
-    padding: 0 3em;
-    transform: rotate(45deg) translate(40px, -25px);
-    font-family: @headerfont;
-    .fontsize(18);
-
+	// dingen voor events
+	.tickets.unavailable {
+		background: @oranje;
+		color: @wit;
+		padding-left: .4em;
+	}
+	
+	.tickets.unavailable {
+		position: absolute;
+		right: 0;
+		top: 0;
+		display: block;
+		padding: 0 3em;
+		transform: rotate(45deg) translate(50px, -25px);
+		font-family: @headerfont;
+		.fontsize(18);
+		
 		@media only screen {
 			text-transform: uppercase;
 		}
-
-  }
-
-
+	}
+	
+	
 
   .widgetarea-home-links{
     

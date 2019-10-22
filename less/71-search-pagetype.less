@@ -8,17 +8,53 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.27.1
-// @desc.   Betere zoekresultaatpagina, ook bij geen resultaat.
+// @version 3.27.2
+// @desc.   Totale make-over van zoekresultaat-pagina.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
 	// ================================================================================
 
-@nosearchbuttonwidth: 38px;
-
+	@nosearchbuttonwidth: 38px;
+	
 	.search,
 	.search.full-width-content {
+		
+		main section {
+			padding-left: 2rem;
+			background-image: url('images/icon-list-item.svg');
+			background-repeat: no-repeat;
+			background-position: left 2.25rem;
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+			border-top: 1px solid @gc_cardbordergrey;
+			border-bottom: 1px solid @gc_cardbordergrey;
+			
+			h2, h3 {
+				margin-top: 0;
+				padding-top: 0;
+				font-family: @montserrat_semibold;
+				.font-size( 22 );
+				text-transform: none;
+			}
+			p {
+				margin: 0;
+				& + p {
+					margin-top: 1rem;
+				}
+			}
+			
+			& + section {
+				border-top-style: none;
+			}
+			
+			.meta {
+				color: @gc_greyblue;
+				.font-size( 12 );
+				text-transform: lowercase;				
+			}
+		}
+		
 		 .content-sidebar-wrap > .content {
 			background: @wit;
 			max-width: @contentwidth_761;
@@ -32,13 +68,13 @@
 			
 			#zoeken_no_result {
 				background: @gc_darkerblue;
-				padding: .25rem;
+				display: flex;
+				flex-direction: row;
 
 				input[type="search"] {
 
 					@media only screen and ( min-width: @break_show_menu_button ) {
 						width: ~"calc(99% - @{nosearchbuttonwidth})";
-						height: 40px;
 					}			
 				}
 			}

@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-3.27.1 - Betere zoekresultaatpagina, ook bij geen resultaat.
+3.27.2 - Totale make-over van zoekresultaat-pagina.
 
 ## Version history
+* 3.27.2 - Totale make-over van zoekresultaat-pagina.
 * 3.27.1 - Betere zoekresultaatpagina, ook bij geen resultaat.
 * 3.26.1 - Icons (microfoon, level, flag) toegevoegd. Code cleanup voor event manager bestanden.
 * 3.25.1 - Logo hernoemd. Sitemap aangepast. Pagina layout voorbereid op nieuwe stijl.

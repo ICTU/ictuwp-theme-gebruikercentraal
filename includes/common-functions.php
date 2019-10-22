@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.15.9
-// @desc.   Extra checkbox for mailinglist, a11y improvements.
+// @version 3.27.2
+// @desc.   Totale make-over van zoekresultaat-pagina.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 ///
 
@@ -816,7 +816,7 @@ function gc_shared_add_id_to_search_form( $form ) {
 
   // remove the submit button
   $tag_regex = "/<input[^>]*\btype=\"submit\"[^>]*>/i";
-  $form = preg_replace( $tag_regex, '<button id="search-submit" class="searchSubmit" name="search-submit" type="submit" title="' . _x( 'Zoeken', 'label zoekknop', 'wp-rijkshuisstijl' ) . '">' . _x( 'Zoeken', 'label zoekknop', 'wp-rijkshuisstijl' ) . '</button>', $form );
+  $form = preg_replace( $tag_regex, '<button id="search-submit" class="searchSubmit" name="search-submit" type="submit" title="' . _x( 'Zoeken', 'label zoekknop', 'gebruikercentraal' ) . '">' . _x( 'Zoeken', 'label zoekknop', 'gebruikercentraal' ) . '</button>', $form );
 
   return apply_filters( 'genesis_search_form', $form );
 
