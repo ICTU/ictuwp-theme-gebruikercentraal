@@ -52,7 +52,7 @@ function gc_wbvb_searchresults_loop() {
 	if ( have_posts() ) {
 
 		// only show the post dates for the post types:
-		$postypeswithdate = array( GC_BEELDBANK_BRIEF_CPT, 'post' );
+		$postypes_to_show_contenttype = array( GC_BEELDBANK_BRIEF_CPT, 'post', 'event' );
 
 		// how many posts did we find?
 		$title  = sprintf( _n( '%s result', '%s results', $wp_query->found_posts, 'gebruikercentraal' ), number_format_i18n( $wp_query->found_posts ) );      
@@ -64,13 +64,48 @@ function gc_wbvb_searchresults_loop() {
 			$theid		= get_the_id();
 			$thelabelid	= 'title_' . $theid;
 			$posttype 	= get_post_type( $theid );
-			$obj		= get_post_type_object( $posttype );
-			if ( in_array( $posttype, $postypeswithdate ) ) {
+			$postmeta	= '';
+			
+			if ( in_array( $posttype, $postypes_to_show_contenttype ) ) {
+				$obj		= get_post_type_object( $posttype );
 				$postdate	= get_the_date( );
+
+				if ( is_object( $obj ) || $postdate ) {
+					$postmeta = '<p class="meta">';
+
+					if ( $postdate ) {
+						$postmeta .= $postdate . ' - ';
+					}
+					
+					if ( 'post' === $posttype ) {
+						$terms = wp_get_post_terms( $theid, 'category' );
+
+						if ( $terms && ! is_wp_error( $terms ) ) : 
+						
+							$termcounter = 0;
+						
+						    foreach ( $terms as $term ) {
+							    $termcounter++;
+							    if ( $termcounter > 1 ) {
+									$postmeta .= ', ' . $term->name;
+							    }
+							    else {
+									$postmeta .= $term->name;
+							    }
+						    }
+						    
+						endif;
+					}
+					else {
+						if ( is_object( $obj ) ) {
+							$postmeta .= $obj->labels->singular_name;
+						}
+					}
+					$postmeta .= '</p>';
+				}
+				
 			}
-			else {
-				$postdate	= '';
-			}
+
 			$excerpt	= get_the_excerpt( $theid );
 			
 			echo '<section class="theme-item" aria-labelledby="' . $thelabelid . '">';
@@ -79,20 +114,8 @@ function gc_wbvb_searchresults_loop() {
 			the_title();
 			echo '</a>';
 			echo "</h2>";
-			
-			if ( is_object( $obj ) || $postdate ) {
-				echo '<p class="meta">';
-				if ( is_object( $obj ) ) {
-					echo $obj->labels->singular_name;
-					if ( $postdate ) {
-						echo ' - ' . $postdate;
-					}
-				}
-				else {
-					echo $postdate;
-				}
-				echo '</p>';
-			}
+
+			echo $postmeta;
 
 			echo "<p>" . wp_strip_all_tags( $excerpt ) . "</p>";
 			echo '</section>';
