@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-3.27.3 - Styling boekingspagina event.
+3.27.4a - Soc-med widget toegevoegd. Betere opzet footerwidget; 'font-display: swap' toegevoegd.
 
 ## Version history
+* 3.27.4a - Soc-med widget toegevoegd. Betere opzet footerwidget; 'font-display: swap' toegevoegd.
 * 3.27.3 - Styling boekingspagina event.
 * 3.27.2 - Totale make-over van zoekresultaat-pagina.
 * 3.27.1 - Betere zoekresultaatpagina, ook bij geen resultaat.

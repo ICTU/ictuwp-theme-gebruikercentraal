@@ -40,10 +40,14 @@ class gc_show_footer_widget extends WP_Widget {
                 ) 
             );
 
-        $title                    = apply_filters( 'widget_title', $instance['title'] );
-        $gc_fw_cta_link        = $instance['gc_fw_cta_link'];
-        $gc_fw_korte_beschrijving  = $instance['gc_fw_korte_beschrijving'];
-        $gc_fw_url_meer_info    = $instance['gc_fw_url_meer_info'];
+        $title						= apply_filters( 'widget_title', $instance['title'] );
+        $gc_fw_korte_beschrijving 	= $instance['gc_fw_korte_beschrijving'];
+        $gc_fw_cta_link        		= $instance['gc_fw_cta_link'];
+        $gc_fw_url_meer_info    	= $instance['gc_fw_url_meer_info'];
+
+		if ( intval( $gc_fw_url_meer_info ) > 0 ) {
+			$gc_fw_url_meer_info = get_permalink( intval( $gc_fw_url_meer_info ) );
+		}
 
 
         ?>
@@ -51,36 +55,29 @@ class gc_show_footer_widget extends WP_Widget {
             <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title', 'gebruikercentraal' ) ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
         </p>
+        <p><label for="<?php echo $this->get_field_id('gc_fw_korte_beschrijving') ?>"><?php _e( "Korte beschrijving van de site:", 'gebruikercentraal' ) ?></label><br /><textarea cols="33" rows="4" id="<?php echo $this->get_field_id('gc_fw_korte_beschrijving'); ?>" name="<?php echo $this->get_field_name('gc_fw_korte_beschrijving'); ?>"><?php echo esc_attr($gc_fw_korte_beschrijving); ?></textarea></p>
+
         <p>
-            <label for="<?php echo $this->get_field_id( 'gc_fw_cta_link' ); ?>"><?php _e( 'Title', 'gebruikercentraal' ) ?></label>
+            <label for="<?php echo $this->get_field_id( 'gc_fw_cta_link' ); ?>"><?php _e( 'Linktekst', 'gebruikercentraal' ) ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'gc_fw_cta_link' ); ?>" name="<?php echo $this->get_field_name( 'gc_fw_cta_link' ); ?>" type="text" value="<?php echo $gc_fw_cta_link; ?>" />
         </p>
-        <p><label for="<?php echo $this->get_field_id('gc_fw_korte_beschrijving') . '">' . __( "Korte beschrijving van de site:", 'gebruikercentraal' ) ?><br /><textarea cols="33" rows="4" id="<?php echo $this->get_field_id('gc_fw_korte_beschrijving'); ?>" name="<?php echo $this->get_field_name('gc_fw_korte_beschrijving'); ?>"><?php echo attribute_escape($gc_fw_korte_beschrijving); ?></textarea></label><br />
-
-        <label for="<?php echo $this->get_field_id('gc_fw_url_meer_info') . '">' . __( "Linkt naar pagina:", 'gebruikercentraal' ) ?><br />
+        
+        <p>
+            <label for="<?php echo $this->get_field_id( 'gc_fw_url_meer_info' ); ?>"><?php _e( 'Link (URL)', 'gebruikercentraal' ) ?></label>beh
+            <input class="widefat" id="<?php echo $this->get_field_id( 'gc_fw_url_meer_info' ); ?>" name="<?php echo $this->get_field_name( 'gc_fw_url_meer_info' ); ?>" type="url" value="<?php echo $gc_fw_url_meer_info; ?>" />
+        </p>
+        
         <?php
-            $args = array(
-                'depth'            => 0,
-                'child_of'         => 0,
-                'selected'         => attribute_escape($gc_fw_url_meer_info),
-                'echo'             => 1,
-                'name'             => $this->get_field_name('gc_fw_url_meer_info')
-            );
-            
-            wp_dropdown_pages( $args );
-            
-            echo '</label></p>';
-
 
             
     }
      
     function update($new_instance, $old_instance) {
         $instance = $old_instance;
-        $instance['title']          = strip_tags($new_instance['title']);
-        $instance['gc_fw_cta_link']         = empty( $new_instance['gc_fw_cta_link'] ) ? __( "Meer over Gebruiker Centraal", 'gebruikercentraal' ) : $new_instance['gc_fw_cta_link'];
-        $instance['gc_fw_korte_beschrijving']  = empty( $new_instance['gc_fw_korte_beschrijving'] ) ? '' : $new_instance['gc_fw_korte_beschrijving'];
-        $instance['gc_fw_url_meer_info']       = empty( $new_instance['gc_fw_url_meer_info'] ) ? '' : $new_instance['gc_fw_url_meer_info'];
+        $instance['title']						= strip_tags($new_instance['title']);
+        $instance['gc_fw_korte_beschrijving']	= $new_instance['gc_fw_korte_beschrijving'];
+        $instance['gc_fw_url_meer_info']		= $new_instance['gc_fw_url_meer_info'];
+        $instance['gc_fw_cta_link']				= $new_instance['gc_fw_cta_link'];
         return $instance;
     }
      
@@ -89,19 +86,23 @@ class gc_show_footer_widget extends WP_Widget {
 
         extract($args, EXTR_SKIP);
 
-        $title                  = empty($instance['title']) ? '' : $instance['title'] ;
-        $gc_fw_korte_beschrijving    = empty($instance['gc_fw_korte_beschrijving']) ? '' : $instance['gc_fw_korte_beschrijving'] ;
-        $gc_fw_url_meer_info           = empty($instance['gc_fw_url_meer_info']) ? '' : $instance['gc_fw_url_meer_info'] ;
-        $gc_fw_cta_link             = empty($instance['gc_fw_cta_link']) ? __( "Meer over Gebruiker Centraal", 'gebruikercentraal' ) : $instance['gc_fw_cta_link'] ;
-        $linkafter          = '';
+        $title                  	= empty($instance['title']) ? '' : $instance['title'] ;
+        $gc_fw_korte_beschrijving	= empty($instance['gc_fw_korte_beschrijving']) ? '' : $instance['gc_fw_korte_beschrijving'] ;
+        $gc_fw_url_meer_info		= empty($instance['gc_fw_url_meer_info']) ? '' : $instance['gc_fw_url_meer_info'] ;
+        $gc_fw_cta_link				= $instance['gc_fw_cta_link'] ;
+        $linkafter          		= '';
+        $linkbefore          		= '';
 
         
-        if ( $gc_fw_url_meer_info )
-        {
-            $gc_fw_url_meer_info  = get_permalink($gc_fw_url_meer_info);
-            $linkbefore         = '<a href="' . $gc_fw_url_meer_info. '">';
-//            $linkbefore          .= $gc_fw_cta_link;
-            $linkafter          = '</a>';
+		if ( $gc_fw_url_meer_info && $gc_fw_cta_link ) {
+			
+			if ( intval( $gc_fw_url_meer_info ) > 0 ) {
+				$gc_fw_url_meer_info = get_permalink( intval( $gc_fw_url_meer_info ) );
+			}
+            
+            $linkbefore         = '<p><a href="' . $gc_fw_url_meer_info. '">';
+            $linkafter          = '</a></p>';
+            
         }
          
          
@@ -112,12 +113,13 @@ class gc_show_footer_widget extends WP_Widget {
         
         echo '<div class="banner">';
         echo '<p>' . nl2br($gc_fw_korte_beschrijving) . '</p>';
-        echo '<p>' . $linkbefore . $gc_fw_cta_link . $linkafter . '</p>';
+        echo $linkbefore . $gc_fw_cta_link . $linkafter;
         echo '</div>';
         echo $after_widget;
     }
 }
 
+//========================================================================================================
 
 function gc_show_footer_widget_init() {
   return register_widget("gc_show_footer_widget");

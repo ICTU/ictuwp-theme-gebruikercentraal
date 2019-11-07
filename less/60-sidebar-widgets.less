@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.27.2
-// @desc.   Totale make-over van zoekresultaat-pagina.
+// @version 3.27.4a
+// @desc.   Soc-med widget toegevoegd. Betere opzet footerwidget; 'font-display: swap' toegevoegd.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -41,12 +41,90 @@
     }
   }
   
-  .widget {
-    h2, h3, h4, h5, h6 {
-      margin-top: 0;
-      padding-top: 0;
-    }
-  }
+	.widget {
+		h2, h3, h4, h5, h6 {
+			margin-top: 0;
+			padding-top: 0;
+		}
+		.social-media li {
+			margin-right: .5rem;
+			a {
+				&,
+				&.website,
+				&.other,
+				&.personallink,
+				&.linkedin,
+				&.facebook,
+				&.twitter {
+					width: auto;
+					background-color: transparent;
+					background-position: left center;
+					padding-left: 2.5rem;
+					padding-left: .5rem;
+					background-size: 2rem 2rem;
+					text-decoration: none;
+					border-color: transparent;
+				}
+				&:hover,
+				&:focus,
+				&:active {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+
+	.footer-widget-area {
+		.widget {
+			.social-media li {
+				a {
+					&:hover {
+						color: @txt;
+						background-color: @wit;
+					}
+					&.twitter {
+						.icon_socmed_icon('../images/icon-twitter.svg', @wit);
+						
+						&:hover,
+						&:active,
+						&:focus {
+							.icon_socmed_icon('../images/icon-twitter.svg', @txt );
+						}
+					}
+					&.facebook {
+						.icon_socmed_icon('../images/icon-facebook.svg', @wit);
+						
+						&:hover,
+						&:active,
+						&:focus {
+							.icon_socmed_icon('../images/icon-facebook.svg', @txt );
+						}
+					}
+					&.linkedin {
+						.icon_socmed_icon('../images/icon-linkedin.svg', @wit);
+					
+						&:hover,
+						&:active,
+						&:focus {
+							.icon_socmed_icon('../images/icon-linkedin.svg', @txt );
+						}
+					}
+					&.website,
+					&.other,
+					&.personallink {
+						.icon_socmed_icon('../images/icon-personallink.svg', @wit);
+						
+						&:hover,
+						&:active,
+						&:focus {
+							.icon_socmed_icon('../images/icon-personallink.svg', @txt );
+						}
+					}
+				}
+			}
+		}	
+	}
 
   .gc-event-widget .bg-color + a,  
   .widget-read-all {
