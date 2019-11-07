@@ -155,9 +155,13 @@ if ( ! defined( 'WBVB_GC_LOGOWIDGET' ) ) {
   define( 'WBVB_GC_LOGOWIDGET', 'GC - Logo-widget' );
 }
 
-if ( ! defined( 'RHSWP_WIDGET_BANNER' ) ) {
-  define( 'RHSWP_WIDGET_BANNER', 'GC - social media accounts' );
+if ( ! defined( 'GCWBVB_WIDGET_SOKMET_ID' ) ) {
+  define( 'GCWBVB_WIDGET_SOKMET_ID', 'social-media-widget' );
 }
+if ( ! defined( 'GCWBVB_WIDGET_SOKMET_NAME' ) ) {
+  define( 'GCWBVB_WIDGET_SOKMET_NAME', 'GC - social media accounts' );  // slug for custom taxonomy 'timeslot'
+}
+
 
 if ( ! defined( 'WBVB_GC_BEELDEN_HOMEWIDGET' ) ) {
 	define( 'WBVB_GC_BEELDEN_HOMEWIDGET', 'GC - Featured Content' );

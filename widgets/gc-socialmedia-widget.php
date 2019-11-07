@@ -12,6 +12,11 @@
 // @desc.   Bugfixes voor get_field, create_function en 404-pagina.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
+//========================================================================================================
+
+add_action( 'widgets_init', 'gc_show_socmed_widget_init' );
+
+add_filter('dynamic_sidebar_params', 'gc_wbvb_widget_socmed_add_acf_links');
 
 //========================================================================================================
 
@@ -19,10 +24,7 @@ function gc_show_socmed_widget_init() {
   return register_widget("CZO_Socialmedia_widget");
 }
 
-add_action( 'widgets_init', 'gc_show_socmed_widget_init' );
-
 //========================================================================================================
-
 
 
 /**
@@ -52,26 +54,135 @@ class CZO_Socialmedia_widget extends WP_Widget {
 	 */
 	public function __construct() {
 
-		$this->widgetclassname  = 'social-media-widget';
-  	
+		// set up ACF fields
+		if( function_exists('acf_add_local_field_group') ):
+			
+			acf_add_local_field_group(array(
+				'key' => 'group_5dc3d4a1b1d8a',
+				'title' => 'Social media accounts',
+				'fields' => array(
+					array(
+						'key' => 'field_5dc3d52a82945',
+						'label' => 'Voeg links toe',
+						'name' => 'socmed_widget_links',
+						'type' => 'repeater',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'collapsed' => 'field_5dc3d5ae82948',
+						'min' => 0,
+						'max' => 0,
+						'layout' => 'row',
+						'button_label' => 'Profiel toevoegen',
+						'sub_fields' => array(
+							array(
+								'key' => 'field_5dc3d56882947',
+								'label' => 'Type',
+								'name' => 'socmed_widget_type',
+								'type' => 'radio',
+								'instructions' => '',
+								'required' => 0,
+								'conditional_logic' => 0,
+								'wrapper' => array(
+									'width' => '',
+									'class' => '',
+									'id' => '',
+								),
+								'choices' => array(
+									'twitter' => 'Twitter',
+									'facebook' => 'Facebook',
+									'linkedin' => 'LinkedIn',
+									'youtube' => 'Youtube',
+									'instagram' => 'Instagram',
+								),
+								'allow_null' => 0,
+								'other_choice' => 0,
+								'default_value' => 'twitter',
+								'layout' => 'vertical',
+								'return_format' => 'value',
+								'save_other_choice' => 0,
+							),
+							array(
+								'key' => 'field_5dc3d54d82946',
+								'label' => 'URL',
+								'name' => 'socmed_widget_url',
+								'type' => 'url',
+								'instructions' => '',
+								'required' => 0,
+								'conditional_logic' => 0,
+								'wrapper' => array(
+									'width' => '',
+									'class' => '',
+									'id' => '',
+								),
+								'default_value' => '',
+								'placeholder' => '',
+							),
+							array(
+								'key' => 'field_5dc3d5ae82948',
+								'label' => 'Linktekst',
+								'name' => 'socmed_widget_linktekst',
+								'type' => 'text',
+								'instructions' => '',
+								'required' => 0,
+								'conditional_logic' => 0,
+								'wrapper' => array(
+									'width' => '',
+									'class' => '',
+									'id' => '',
+								),
+								'default_value' => 'Volg ons',
+								'placeholder' => '',
+								'prepend' => '',
+								'append' => '',
+								'maxlength' => '',
+							),
+						),
+					),
+				),
+				'location' => array(
+					array(
+						array(
+							'param' => 'widget',
+							'operator' => '==',
+							'value' => GCWBVB_WIDGET_SOKMET_ID,
+						),
+					),
+				),
+				'menu_order' => 0,
+				'position' => 'normal',
+				'style' => 'default',
+				'label_placement' => 'top',
+				'instruction_placement' => 'label',
+				'hide_on_screen' => '',
+				'active' => true,
+				'description' => '',
+			));
+			
+		endif;
+
 
 		$this->defaults = array(
-			'title'                   => '',
+			'title'			=> '',
 		);
 
 		$widget_ops = array(
-			'classname'   => $this->widgetclassname . ' sharing',
-			'description' => __( 'Social media-kanalen in een widget', 'czoflex' ),
+			'classname'		=> GCWBVB_WIDGET_SOKMET_ID . ' sharing',
+			'description'	=> __( 'Social media-kanalen in een widget (' . GCWBVB_WIDGET_SOKMET_ID . ')', 'czoflex' ),
 		);
 
 		$control_ops = array(
-			'id_base' => $this->widgetclassname,
-			'width'   => 505,
-			'height'  => 350,
+			'id_base'		=> GCWBVB_WIDGET_SOKMET_ID,
+			'width'			=> 505,
+//			'height'		=> 350,
 		);
 
-		parent::__construct( $this->widgetclassname, RHSWP_WIDGET_BANNER, $widget_ops, $control_ops );
-//		parent::__construct( 'rhswp_banner_widget', RHSWP_WIDGET_BANNER, $widget_ops );
+		parent::__construct( GCWBVB_WIDGET_SOKMET_ID, GCWBVB_WIDGET_SOKMET_NAME, $widget_ops, $control_ops );
 
 	}
 
@@ -95,7 +206,7 @@ class CZO_Socialmedia_widget extends WP_Widget {
 
         $title                  	= empty($instance['title']) ? '' : $instance['title'] ;
 
-        if ( $title ) {
+        if ( $after_title ) {
 	        echo $before_widget;
             echo $before_title . $title . $after_title;
 	        echo $after_widget;
@@ -156,62 +267,20 @@ class CZO_Socialmedia_widget extends WP_Widget {
 
 //========================================================================================================
 
-add_filter('dynamic_sidebar_params', 'gc_wbvb_widget_socmed_links');
-
-function gc_wbvb_widget_socmed_links( $params ) {
+function gc_wbvb_widget_socmed_add_acf_links( $params ) {
 	
 	global $post;
 	
 	// get widget vars
-	$widget_name  = $params[0]['widget_name'];
-	$widget_id    = $params[0]['widget_id'];
+	$widget_name  	= $params[0]['widget_name'];
+	$widget_id    	= $params[0]['widget_id'];
+	$widget_links	= '';
 
 	// bail early if this widget is not a Text widget
-	if( $widget_name != RHSWP_WIDGET_BANNER ) {
+	if( $widget_name != GCWBVB_WIDGET_SOKMET_NAME ) {
 		return $params;
 	}
-/*
-echo '<pre>';
-var_dump( $params );
-echo '</pre>';
 
-ray(2) {
-  [0]=>
-  array(10) {
-    ["name"]=>
-    string(17) "Home-widget links"
-    ["id"]=>
-    string(21) "widgetarea-home-links"
-    ["description"]=>
-    string(60) "Hier kun je de widgets plaatsen voor events en blogberichten"
-    ["class"]=>
-    string(0) ""
-    ["before_widget"]=>
-    string(122) "
-"
-    ["before_title"]=>
-    string(37) "
-"
-    ["after_title"]=>
-    string(6) "
-
-"
-    ["widget_id"]=>
-    string(21) "social-media-widget-3"
-    ["widget_name"]=>
-    string(26) "GC - social media accounts"
-  }
-  [1]=>
-  array(1) {
-    ["number"]=>
-    int(3)
-  }
-}
-*/
-	
-	$widget_links = '';
-	
-	
 	if( have_rows( 'socmed_widget_links', 'widget_' . $widget_id ) ): 
 	
 		$widget_links = '<ul class="social-media">';
@@ -234,11 +303,14 @@ ray(2) {
 		endwhile; 
 	
 		$widget_links .= '</ul>';
-	
+
+		$params[0]['after_title'] .= $widget_links;
+
+	else:	
+
+		$params[0]['after_title'] = 'grumpy cat';
 	
 	endif;
-	
-	$params[0]['after_title'] .= $widget_links;
 
 	// return
 	return $params;
