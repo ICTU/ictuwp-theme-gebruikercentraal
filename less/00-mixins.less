@@ -6,8 +6,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.27.4a
-// @desc.   Soc-med widget toegevoegd. Betere opzet footerwidget; 'font-display: swap' toegevoegd.
+// @version 3.27.4j
+// @desc.   Soc-med widget toegevoegd. Betere opzet footerwidget; 'font-display: swap' toegevoegd; meta-info voor events betere styling.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 @import "01-socmed-color-codes.less";              // colors, sizes 
@@ -874,49 +874,67 @@
 //=========================================================================================================
 
 .eventicons() {
-
-  .event-aanmeldingen,
-  .event-pricing,
-  .event-times,
-  .event-type,
-  .event-level,
-  .event-location {
-    display: inline-block;
-    background: transparent url('images/icon-pin.png') no-repeat left center;
-    margin-right: 12px;
-  }
-  .event-aanmeldingen {
-    background-image: url('images/icon-calendar.png');
-    .icon_pin_fill('../images/icon-calendar.svg', @gc_a11y_green );
-    padding-left: 20px;
-  }
-  .event-pricing {
-    background-image: url('images/icon-price.png');
-    .icon_pin_fill('../images/icon-price.svg', @gc_a11y_green );
-    padding-left: 16px;
-  }
-  .event-times {
-    background-image: url('images/icon-time.png');
-    .icon_pin_fill('../images/icon-time.svg', @gc_a11y_green );
-    padding-left: 20px;
-  }
-  .event-level {
-    background-image: url('images/icon-level.png');
-    .icon_pin_fill('../images/icon-level.svg', @gc_a11y_green );
-    padding-left: 20px;
-  }
-  .event-type {
-    background-image: url('images/icon-type.png');
-    .icon_pin_fill('../images/icon-type.svg', @gc_a11y_green );
-    padding-left: 20px;
-  }
-  .event-location,
-  [itemprop="location"] {
-    background-image: url('images/icon-pin.png');
-    .icon_pin_fill('../images/icon-pin.svg', @gc_a11y_green );
-    padding-left: 15px;
-  }          
-  
+	
+	dd + dt + dd {
+		margin-left: 1rem;
+	}
+	
+	.event-aanmeldingen,
+	.event-pricing,
+	.event-times,
+	.event-type,
+	.event-level,
+	.event-location {
+		display: inline-block;
+		background: transparent url('images/icon-pin.png') no-repeat left center;
+	}
+	.event-aanmeldingen {
+		background-image: url('images/icon-calendar.png');
+		.icon_pin_fill('../images/icon-calendar.svg', @gc_a11y_green );
+		padding-left: 20px;
+	}
+	.event-pricing {
+		background-image: url('images/icon-price.png');
+		.icon_pin_fill('../images/icon-price.svg', @gc_a11y_green );
+		padding-left: 16px;
+	}
+	.event-times {
+		background-image: url('images/icon-time.png');
+		.icon_pin_fill('../images/icon-time.svg', @gc_a11y_green );
+		padding-left: 20px;
+		& +  .event-times {
+			padding-left: 0;
+			background: none;
+		}
+	}
+	.event-level {
+		background-image: url('images/icon-level.png');
+		.icon_pin_fill('../images/icon-level.svg', @gc_a11y_green );
+		padding-left: 20px;
+		& +  .event-level {
+			padding-left: 0;
+			background: none;
+		}
+	}
+	.event-type {
+		background-image: url('images/icon-type.png');
+		.icon_pin_fill('../images/icon-type.svg', @gc_a11y_green );
+		padding-left: 20px;
+		& +  .event-type {
+			padding-left: 0;
+			background: none;
+		}
+	}
+	.event-location,
+	[itemprop="location"] {
+		background-image: url('images/icon-pin.png');
+		.icon_pin_fill('../images/icon-pin.svg', @gc_a11y_green );
+		padding-left: 15px;
+		& +  .event-location {
+			padding-left: 0;
+			background: none;
+		}
+	}          
 }
 
 //=========================================================================================================
@@ -1024,7 +1042,9 @@
 				&.personallink,
 				&.linkedin,
 				&.facebook,
-				&.twitter {
+				&.twitter,
+				&.slack,
+				&.email {
 					background-color: @wit;
 					background-repeat: no-repeat;
 					background-position: center center;
@@ -1049,6 +1069,28 @@
 				&:active,
 				&:focus {
 					.icon_socmed_icon('../images/icon-twitter.svg', @gc_a11y_green );
+				}
+			}
+			.slack {
+				background-image: url('images/icon-slack.png');
+				.icon_socmed_icon('../images/icon-slack.svg', @blauw3);
+				background-size: 16px 16px;
+				
+				&:hover,
+				&:active,
+				&:focus {
+					.icon_socmed_icon('../images/icon-slack.svg', @gc_a11y_green );
+				}
+			}
+			.email {
+				background-image: url('images/icon-mail.png');
+				.icon_socmed_icon('../images/icon-mail.svg', @blauw3);
+				background-size: 16px 16px;
+				
+				&:hover,
+				&:active,
+				&:focus {
+					.icon_socmed_icon('../images/icon-mail.svg', @gc_a11y_green );
 				}
 			}
 			.facebook {
@@ -1320,23 +1362,27 @@
     overflow: hidden;
     
 
-    .social-media {
-      display: inline;
-      float: left;
-      clear: none;
-      li {
-        margin: 0 .8em .5em 0;
-        a {
-          &.personallink,
-          &.linkedin,
-          &.facebook,
-          &.twitter {
-            height: 2.5em;
-            width: 2.5em;
-          }
-        }
-      }
-    }
+	.social-media {
+		display: inline;
+		float: left;
+		clear: none;
+		li {
+			margin: 0 .8em .5em 0;
+			a {
+				&.website,
+				&.other,
+				&.personallink,
+				&.linkedin,
+				&.facebook,
+				&.twitter,
+				&.slack,
+				&.email {
+					height: 2.5em;
+					width: 2.5em;
+				}
+			}
+		}
+	}
     
     .bg-color {
       background: @bg_color;
@@ -1629,33 +1675,6 @@
 	}
 }
 
-
-//=========================================================================================================
-
-dl.dl-level,
-dl.dl-speaker-names,
-dl.dl-time-location {
-	.cards-meta();
-}
-dl.dl-level,
-dl.dl-speaker-names {
-	background-repeat: no-repeat;
-//	background-size: 16px 16px;
-	background-position: left center;
-    background-image: url('images/icon-microphone.png');
-    .icon_pin_fill('../images/icon-microphone.svg', @gc_a11y_green );
-    padding-left: 20px;
-}
-
-dl.dl-level {
-    background-image: url('images/icon-level.png');
-    .icon_pin_fill('../images/icon-level.svg', @gc_a11y_green );
-}
-
-.cards-meta() {
-	.fontsize(12);
-	.eventicons();
-}
 
 //=========================================================================================================
 

@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.10.1
-// @desc.   Bugfixes voor get_field, create_function en 404-pagina.
+// @version 3.27.4j
+// @desc.   Soc-med widget toegevoegd. Betere opzet footerwidget; 'font-display: swap' toegevoegd; meta-info voor events betere styling.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -63,7 +63,7 @@ class gc_show_footer_widget extends WP_Widget {
         </p>
         
         <p>
-            <label for="<?php echo $this->get_field_id( 'gc_fw_url_meer_info' ); ?>"><?php _e( 'Link (URL)', 'gebruikercentraal' ) ?></label>beh
+            <label for="<?php echo $this->get_field_id( 'gc_fw_url_meer_info' ); ?>"><?php _e( 'Link (URL)', 'gebruikercentraal' ) ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'gc_fw_url_meer_info' ); ?>" name="<?php echo $this->get_field_name( 'gc_fw_url_meer_info' ); ?>" type="url" value="<?php echo $gc_fw_url_meer_info; ?>" />
         </p>
         
@@ -100,7 +100,7 @@ class gc_show_footer_widget extends WP_Widget {
 				$gc_fw_url_meer_info = get_permalink( intval( $gc_fw_url_meer_info ) );
 			}
             
-            $linkbefore         = '<p><a href="' . $gc_fw_url_meer_info. '">';
+            $linkbefore         = '<p><a href="' . $gc_fw_url_meer_info. '" class="cta">';
             $linkafter          = '</a></p>';
             
         }

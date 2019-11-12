@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.10.1
-// @desc.   Bugfixes voor get_field, create_function en 404-pagina.
+// @version 3.27.4j
+// @desc.   Soc-med widget toegevoegd. Betere opzet footerwidget; 'font-display: swap' toegevoegd; meta-info voor events betere styling.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 //========================================================================================================
@@ -95,10 +95,13 @@ class CZO_Socialmedia_widget extends WP_Widget {
 								),
 								'choices' => array(
 									'twitter' => 'Twitter',
-									'facebook' => 'Facebook',
 									'linkedin' => 'LinkedIn',
-									'youtube' => 'Youtube',
+									'slack' => 'Slack',
 									'instagram' => 'Instagram',
+									'youtube' => 'Youtube',
+									'facebook' => 'Facebook',
+									'email' => 'Email',
+									'website' => 'Other website',
 								),
 								'allow_null' => 0,
 								'other_choice' => 0,
@@ -111,8 +114,8 @@ class CZO_Socialmedia_widget extends WP_Widget {
 								'key' => 'field_5dc3d54d82946',
 								'label' => 'URL',
 								'name' => 'socmed_widget_url',
-								'type' => 'url',
-								'instructions' => '',
+								'type' => 'text',
+								'instructions' => 'use mailto:, http://, https://',
 								'required' => 0,
 								'conditional_logic' => 0,
 								'wrapper' => array(
@@ -157,7 +160,7 @@ class CZO_Socialmedia_widget extends WP_Widget {
 				'menu_order' => 0,
 				'position' => 'normal',
 				'style' => 'default',
-				'label_placement' => 'top',
+				'label_placement' => 'left',
 				'instruction_placement' => 'label',
 				'hide_on_screen' => '',
 				'active' => true,
@@ -165,7 +168,6 @@ class CZO_Socialmedia_widget extends WP_Widget {
 			));
 			
 		endif;
-
 
 		$this->defaults = array(
 			'title'			=> '',
