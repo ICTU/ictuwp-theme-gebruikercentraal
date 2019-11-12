@@ -129,7 +129,7 @@ class gc_newsletter_subscribe extends WP_Widget {
             $args = array(
                 'depth'            => 0,
                 'child_of'         => 0,
-                'selected'         => attribute_escape($inschrpagina),
+                'selected'         => esc_attr($inschrpagina),
                 'echo'             => 1,
                 'name'             => $this->get_field_name('inschrpagina')
             );

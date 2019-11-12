@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.27.3
-// @desc.   Styling boekingspagina event.
+// @version 3.27.4j
+// @desc.   Soc-med widget toegevoegd. Betere opzet footerwidget; 'font-display: swap' toegevoegd; meta-info voor events betere styling.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.27.3' );
-define( 'CHILD_THEME_DESCRIPTION', "3.27.3 - Styling boekingspagina event." );
+define( 'CHILD_THEME_VERSION', '3.27.4j' );
+define( 'CHILD_THEME_DESCRIPTION', "3.27.4j - Soc-med widget toegevoegd. Betere opzet footerwidget; 'font-display: swap' toegevoegd; meta-info voor events betere styling." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -152,8 +152,16 @@ if ( ! defined( 'EMP_FORMS_TEXTAREA_SIZE' ) ) {
 }
 
 if ( ! defined( 'WBVB_GC_LOGOWIDGET' ) ) {
-  define( 'WBVB_GC_LOGOWIDGET', 'GC logo-widget');
+  define( 'WBVB_GC_LOGOWIDGET', 'GC - Logo-widget' );
 }
+
+if ( ! defined( 'GCWBVB_WIDGET_SOKMET_ID' ) ) {
+  define( 'GCWBVB_WIDGET_SOKMET_ID', 'social-media-widget' );
+}
+if ( ! defined( 'GCWBVB_WIDGET_SOKMET_NAME' ) ) {
+  define( 'GCWBVB_WIDGET_SOKMET_NAME', 'GC - social media accounts' );  // slug for custom taxonomy 'timeslot'
+}
+
 
 if ( ! defined( 'WBVB_GC_BEELDEN_HOMEWIDGET' ) ) {
 	define( 'WBVB_GC_BEELDEN_HOMEWIDGET', 'GC - Featured Content' );
@@ -171,6 +179,25 @@ if ( ! defined( 'ICTU_GCCONF_CPT_SESSION' ) ) {
   define( 'ICTU_GCCONF_CPT_SESSION', 'session' );   // slug for custom taxonomy 'citaat'
 }
 
+if ( ! defined( 'ICTU_GCCONF_CT_LOCATION' ) ) {
+  define( 'ICTU_GCCONF_CT_LOCATION', 'location' );  // slug for custom taxonomy 'location'
+}
+
+if ( ! defined( 'ICTU_GCCONF_CT_SESSIONTYPE' ) ) {
+  define( 'ICTU_GCCONF_CT_SESSIONTYPE', 'sessiontype' );  // slug for custom taxonomy 'sessiontype'
+}
+
+if ( ! defined( 'ICTU_GCCONF_CT_LEVEL' ) ) {
+  define( 'ICTU_GCCONF_CT_LEVEL', 'expertise' );  // slug for custom taxonomy 'expertise' (workshop level)
+}
+
+if ( ! defined( 'ICTU_GCCONF_CT_COUNTRY' ) ) {
+  define( 'ICTU_GCCONF_CT_COUNTRY', 'speakercountry' );  // slug for custom taxonomy for a speaker's country
+}
+
+if ( ! defined( 'ICTU_GCCONF_CT_TIMESLOT' ) ) {
+  define( 'ICTU_GCCONF_CT_TIMESLOT', 'timeslot' );  // slug for custom taxonomy 'timeslot'
+}
 
 define( 'ACF_PLUGIN_NOT_ACTIVE_WARNING', '<p style="position: absolute; top: 3em; left: 3em; display: block; padding: .5em; background: yellow; color: black;">de ACF custom fields plugin is niet actief.</p>' );
 
@@ -223,6 +250,8 @@ require_once( GC_FOLDER . '/widgets/gc-berichten-widget.php' );
 require_once( GC_FOLDER . '/widgets/gc-footer-widget.php' );
 require_once( GC_FOLDER . '/widgets/gc-footer-logo-widget.php' );
 require_once( GC_FOLDER . '/widgets/gc-contenttypes-widget.php' );
+require_once( GC_FOLDER . '/widgets/gc-socialmedia-widget.php' );
+
 
 require_once( GC_FOLDER . '/includes/common-functions.php' );
 
