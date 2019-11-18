@@ -8,7 +8,7 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.27.4
+// @version 3.27.5
 // @desc.   Bugfix stappenplan.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.27.4' );
-define( 'CHILD_THEME_DESCRIPTION', "3.27.4 - Bugfix stappenplan." );
+define( 'CHILD_THEME_VERSION', '3.27.5' );
+define( 'CHILD_THEME_DESCRIPTION', "3.27.5 - Bugfix stappenplan." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
