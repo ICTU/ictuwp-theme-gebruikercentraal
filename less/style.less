@@ -1254,3 +1254,29 @@ Media Queries
 /*
 ==============================================================================================================
 */
+
+
+dl.dl-level,
+dl.dl-speaker-names,
+dl.dl-time-location {
+	.cards-meta();
+}
+dl.dl-level,
+dl.dl-speaker-names {
+	background-repeat: no-repeat;
+	background-position: left center;
+    background-image: url('images/icon-microphone.png');
+    .icon_pin_fill('../images/icon-microphone.svg', @gc_a11y_green );
+    padding-left: 20px;
+}
+
+dl.dl-level {
+    background-image: url('images/icon-level.png');
+    .icon_pin_fill('../images/icon-level.svg', @gc_a11y_green );
+}
+
+.cards-meta() {
+	.fontsize(12);
+	.eventicons();
+}
+

@@ -35,7 +35,7 @@ class GC_berichten_widget extends WP_Widget {
     $gc_berichtenwidget_aantal  = $instance['gc_berichtenwidget_aantal'];
     
     ?>
-    <p><label for="<?php echo $this->get_field_id('gc_berichtenwidget_titel') . '">' . __( "Titel:", 'gebruikercentraal' ) ?><br /><input id="<?php echo $this->get_field_id('gc_berichtenwidget_titel'); ?>" name="<?php echo $this->get_field_name('gc_berichtenwidget_titel'); ?>" type="text" style="width: 100%;" value="<?php echo attribute_escape($gc_berichtenwidget_titel); ?>" /></label></p><?php
+    <p><label for="<?php echo $this->get_field_id('gc_berichtenwidget_titel') . '">' . __( "Titel:", 'gebruikercentraal' ) ?><br /><input id="<?php echo $this->get_field_id('gc_berichtenwidget_titel'); ?>" name="<?php echo $this->get_field_name('gc_berichtenwidget_titel'); ?>" type="text" style="width: 100%;" value="<?php echo esc_attr($gc_berichtenwidget_titel); ?>" /></label></p><?php
     
     $counter = 0;
     $max = 10;
