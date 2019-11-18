@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.27.3
-// @desc.   Styling boekingspagina event.
+// @version 3.27.4
+// @desc.   Bugfix stappenplan.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.27.3' );
-define( 'CHILD_THEME_DESCRIPTION', "3.27.3 - Styling boekingspagina event." );
+define( 'CHILD_THEME_VERSION', '3.27.4' );
+define( 'CHILD_THEME_DESCRIPTION', "3.27.4 - Bugfix stappenplan." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -2791,9 +2791,11 @@ function check_stappenplan() {
 
 	if ( function_exists( 'get_field' ) ) {
 
-		$stappen 		= get_field('steptable_steps', $post->ID );
+		$stappen 			= get_field('steptable_steps', $post->ID );
+		$stappenplan_add	= get_field('stappenplan_add', $post->ID );
+		
 
-		if( $stappen ):
+		if( $stappen && ( 'ja' == $stappenplan_add )  ) {
 
 			$stappenteller	= 0;
 	        $headline		= sprintf( _x( '%s in %s stappen', 'stappen', 'gebruikercentraal' ), get_the_title(), count( $stappen ) );
@@ -2858,9 +2860,7 @@ function check_stappenplan() {
 
 			echo '</ol>';
 
-		else:
-		endif;
-
+		}
 	}
 }
 
