@@ -2918,3 +2918,17 @@ function rhswp_remove_external_styles() {
 
 //========================================================================================================
 
+add_filter('embed_defaults', 'rhswp_embed_defaults');
+
+function rhswp_embed_defaults($embed_size){
+
+$breedte = 832; // 832px
+
+	$embed_size['width']	= $breedte;
+	$embed_size['height']	= ( ( $breedte / 16 ) * 9 ); // for 16:9 aspect
+	return $embed_size;
+
+}
+
+//========================================================================================================
+

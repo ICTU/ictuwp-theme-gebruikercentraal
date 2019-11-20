@@ -154,6 +154,17 @@ img {
 	height: auto;
 }
 
+iframe {
+	@media only screen and (max-width: @break_tablet ) {
+		max-width: 95% !important;
+		max-height: 320px;
+	}
+	@media only screen and (min-width: @break_tablet ) {
+		max-width: 100% !important;
+	}
+}
+
+
 twitterwidget {
 	padding: 1em;
 	width: 100% !important;
