@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.27.5
-// @desc.   Bugfix stappenplan.
+// @version 3.27.6
+// @desc.   CSS bugfixes voor breedte footerwidgets, lettergrootte .cta op kleine schermen.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.27.5' );
-define( 'CHILD_THEME_DESCRIPTION', "3.27.5 - Bugfix stappenplan." );
+define( 'CHILD_THEME_VERSION', '3.27.6' );
+define( 'CHILD_THEME_DESCRIPTION', "3.27.6 - CSS bugfixes voor breedte footerwidgets, lettergrootte .cta op kleine schermen." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );

@@ -6,8 +6,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.27.4j
-// @desc.   Soc-med widget toegevoegd. Betere opzet footerwidget; 'font-display: swap' toegevoegd; meta-info voor events betere styling.
+// @version 3.27.6
+// @desc.   CSS bugfixes voor breedte footerwidgets, lettergrootte .cta op kleine schermen.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 @import "01-socmed-color-codes.less";              // colors, sizes 
@@ -301,6 +301,13 @@
 	font-family: @headerfont;
 	.fontsize(@fontsize);
 	font-weight: normal;
+	
+	@media only screen and (max-width: @break_tablet ) {
+		.fontsize( ( @fontsize / 1.25 ) );
+	}
+	@media only screen and (min-width: ( @break_tablet + 1 ) ) {
+		.fontsize(@fontsize);
+	}
 }
 
 //========================================================================================================
