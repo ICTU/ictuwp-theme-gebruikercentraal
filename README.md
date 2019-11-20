@@ -13,6 +13,8 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 
 ## Version history
 * 3.28.a - Eerste stappen voor Gutenberg.
+* 3.27.6 - CSS bugfixes voor breedte footerwidgets, lettergrootte .cta op kleine schermen.
+* 3.27.5 - Bugfix stappenplan.
 * 3.27.4 - Soc-med widget toegevoegd. Betere opzet footerwidget; 'font-display: swap' toegevoegd; meta-info voor events betere styling.
 * 3.27.3 - Styling boekingspagina event.
 * 3.27.2 - Totale make-over van zoekresultaat-pagina.
