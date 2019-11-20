@@ -1138,7 +1138,9 @@
 	    opacity:1 !important
 	}
 	.blockgallery:not(.has-caption-color).has-caption-style-dark .blockgallery--figure figcaption {
-	    color:#fff
+	    color: @wit;
+	    background-color: #666;
+	    background-color: rgba(6,6,6,.7);
 	}
 	.blockgallery:not(.has-caption-color).has-caption-style-light .blockgallery--figure figcaption {
 	    color:#292929
@@ -1662,10 +1664,9 @@
 	    width:100%;
 	    max-height:100% !important;
 	    overflow:auto;
-	    padding:30px 10px 10px !important;
-	    opacity:0.9;
+	    padding: 1rem 1rem 1rem 1rem !important;
 	    text-align:center;
-	    font-size:13px;
+	    font-size: 90%;
 	    background:-webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(41,41,41,0.7)), color-stop(50%, rgba(41,41,41,0.3)), to(transparent));
 	    background:-webkit-linear-gradient(bottom, rgba(41,41,41,0.7) 0, rgba(41,41,41,0.3) 50%, transparent);
 	    background:-o-linear-gradient(bottom, rgba(41,41,41,0.7) 0, rgba(41,41,41,0.3) 50%, transparent);
