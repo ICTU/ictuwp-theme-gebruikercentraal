@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.27.1
-// @desc.   Betere zoekresultaatpagina, ook bij geen resultaat.
+// @version 3.27.7a
+// @desc.   Aside toegevoegd. Uitgelichte foto ook tonen voor pagina's.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -96,6 +96,22 @@
     font-style: normal;
   }
   
+	aside {
+		font-size: 110%;
+		max-width: 40%;
+		float: right;
+		display: inline-block;
+		border-top: 1px solid @border_grijs;
+		border-bottom: 1px solid @border_grijs;
+		padding: .5rem 1rem;
+		text-align: center;
+		margin: .5rem 0 .5rem 1rem;
+				
+		@media only screen and (min-width: ( @break_tablet ) ) {
+			font-size: 125%;
+		}
+
+	}
 
   p {
     -webkit-hyphens: auto;

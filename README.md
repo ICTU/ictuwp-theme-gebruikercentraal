@@ -9,10 +9,11 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-3.28.a - Eerste stappen voor Gutenberg.
+3.28.2a - Aside toegevoegd. Uitgelichte foto ook tonen voor pagina's.
 
 ## Version history
-* 3.28.a - Eerste stappen voor Gutenberg.
+* 3.28.2a - Aside toegevoegd. Uitgelichte foto ook tonen voor pagina's.
+* 3.28.1 - Eerste stappen voor Gutenberg.
 * 3.27.6 - CSS bugfixes voor breedte footerwidgets, lettergrootte .cta op kleine schermen.
 * 3.27.5 - Bugfix stappenplan.
 * 3.27.4 - Soc-med widget toegevoegd. Betere opzet footerwidget; 'font-display: swap' toegevoegd; meta-info voor events betere styling.

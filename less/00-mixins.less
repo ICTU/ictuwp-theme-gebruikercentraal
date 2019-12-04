@@ -6,8 +6,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.27.6
-// @desc.   CSS bugfixes voor breedte footerwidgets, lettergrootte .cta op kleine schermen.
+// @version 3.27.7a
+// @desc.   Aside toegevoegd. Uitgelichte foto ook tonen voor pagina's.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 @import "01-socmed-color-codes.less";              // colors, sizes 
@@ -306,6 +306,7 @@
 		.fontsize( ( @fontsize / 1.25 ) );
 	}
 	@media only screen and (min-width: ( @break_tablet + 1 ) ) {
+		line-height: 2;
 		.fontsize(@fontsize);
 	}
 }
@@ -756,7 +757,6 @@
 	.button_font_shared(@fontsize);
 	color: @fontcolor;
 	text-decoration: none;
-	line-height: 2;
 	
 	padding-left: .75em;
 	padding-right: 2em;
