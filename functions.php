@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.27.6
-// @desc.   CSS bugfixes voor breedte footerwidgets, lettergrootte .cta op kleine schermen.
+// @version 3.27.7a
+// @desc.   Aside toegevoegd. Uitgelichte foto ook tonen voor pagina's.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.27.6' );
-define( 'CHILD_THEME_DESCRIPTION', "3.27.6 - CSS bugfixes voor breedte footerwidgets, lettergrootte .cta op kleine schermen." );
+define( 'CHILD_THEME_VERSION', '3.27.7a' );
+define( 'CHILD_THEME_DESCRIPTION', "3.27.7a - Aside toegevoegd. Uitgelichte foto ook tonen voor pagina's." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -1086,6 +1086,108 @@ if (! function_exists( 'dovardump' ) ) {
 
 //========================================================================================================
 
+function gc_wbvb_add_pageheader_tags() {
+	
+	$postid       				= get_the_ID();
+	$featimg_automatic_insert	= get_field( 'featimg_automatic_insert', $postid );
+	
+	if ( 'nee' !== $featimg_automatic_insert ) {
+		$featimg_automatic_insert = 'ja';
+	}
+
+	// check of het eerste bericht een enorme afbeelding heeft
+	if ( has_post_thumbnail( $postid ) && 'ja' === $featimg_automatic_insert ) {
+
+		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $postid ), IMG_SIZE_HUGE );
+		
+		$theid = 'imgid_' . $postid;
+		
+		if ( $image[1] >= IMG_SIZE_HUGE_MIN_WIDTH ) {
+			
+			echo '<div id="' . $theid . '" class="has-header-image">&nbsp;</div>';
+			
+		}	
+		
+	}	
+	
+}
+
+//========================================================================================================
+
+function gc_wbvb_add_pageheader_css() {
+	
+	global $imgbreakpoints;
+
+	if ( is_singular( ICTU_GCCONF_CPT_SPEAKER ) ) {
+		return;
+	}
+	
+	wp_enqueue_style(
+		ID_SINGLE_CSS,
+		WBVB_THEMEFOLDER . '/blogberichten.css'
+	);
+	
+	$BLOGBERICHTEN_CSS   = '';
+	
+	
+	if ( have_posts() ) :
+		
+		$countertje = 0;
+		
+		while ( have_posts() ) : the_post();
+			
+			// do loop stuff
+			$countertje++;
+			$postid       				= get_the_ID();
+			$permalink    				= get_permalink( $postid );
+			$publishdate  				= get_the_date();
+			$theID        				= 'featured_image_post_' . $postid;
+			$the_image_ID 				= 'image_' . $theID;
+			$extra_class  				= '';
+			$class        				= 'feature-image noimage';
+			$featimg_automatic_insert	= get_field( 'featimg_automatic_insert', $postid );
+			$theid 						= 'imgid_' . $postid;
+			
+			if ( 'nee' !== $featimg_automatic_insert ) {
+				$featimg_automatic_insert = 'ja';
+			}
+
+			// check of het eerste bericht een enorme afbeelding heeft
+			if ( has_post_thumbnail( $postid ) && 'ja' === $featimg_automatic_insert ) {
+
+				$image = wp_get_attachment_image_src( get_post_thumbnail_id( $postid ), IMG_SIZE_HUGE );
+				
+				if ( $image[1] >= IMG_SIZE_HUGE_MIN_WIDTH ) {
+					
+					foreach ( $imgbreakpoints as $breakpoint ) {
+						
+						$image = wp_get_attachment_image_src( get_post_thumbnail_id( $postid ), $breakpoint['img_size_archive_list'] );
+							
+						$BLOGBERICHTEN_CSS .= '@media only screen and ('  . $breakpoint['direction'] .  '-width: ' . $breakpoint['width'] . " ) {\n";
+						$BLOGBERICHTEN_CSS .= " #" . $theid . " { \n";
+						$BLOGBERICHTEN_CSS .= "   height: " . $breakpoint['header-padding'] . ";\n";
+						$BLOGBERICHTEN_CSS .= "   background-image: url('" . $image[0] . "');\n";
+						$BLOGBERICHTEN_CSS .= "   background-size: cover;\n";
+						$BLOGBERICHTEN_CSS .= "   background-position: center center;\n";
+						$BLOGBERICHTEN_CSS .= " } \n";
+						$BLOGBERICHTEN_CSS .= "} \n";
+						
+					}
+				}
+			}
+
+		endwhile; /** end of one post **/
+	
+	else : /** if no posts exist **/
+	
+	endif; /** end loop **/
+	
+	wp_add_inline_style( ID_SINGLE_CSS, $BLOGBERICHTEN_CSS );
+	
+}
+
+//========================================================================================================
+
 function gc_wbvb_add_blog_single_css() {
 	
 	global $imgbreakpoints;
@@ -1122,11 +1224,8 @@ function gc_wbvb_add_blog_single_css() {
 			if ( 'nee' !== $featimg_automatic_insert ) {
 				$featimg_automatic_insert = 'ja';
 			}
-			
-			//echo '<h1>' . $featimg_automatic_insert . '</h1>';
-			
+
 			// check of het eerste bericht een enorme afbeelding heeft
-			
 			if ( has_post_thumbnail( $postid ) && 'ja' === $featimg_automatic_insert ) {
 
 				$image = wp_get_attachment_image_src( get_post_thumbnail_id( $postid ), IMG_SIZE_HUGE );

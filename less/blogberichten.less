@@ -34,3 +34,28 @@
 
 .archive_page();
 
+#maincontent .has-header-image {
+	max-width: ( @contentmaxwidth + 200 );
+	margin: 0 auto;
+	+ .content {
+		& article.entry {
+			margin-top: 0;
+			
+			.entry-title {
+			
+				.font-size(40);
+				text-transform: none;
+			
+				@media only screen and ( min-width: @break_tablet ) {
+					.font-size(44);
+					line-height: 48px;
+				}
+			
+				@media only screen and ( min-width: @break_fullwidth ) {
+					.font-size(68);
+					line-height: 76px;
+				}
+			}
+		}
+	}
+}
