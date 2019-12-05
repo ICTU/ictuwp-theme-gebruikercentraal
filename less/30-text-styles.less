@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.27.7a
-// @desc.   Aside toegevoegd. Uitgelichte foto ook tonen voor pagina's.
+// @version 3.27.8
+// @desc.   Headerfoto styling, styling voor aside en blockquote herzien.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -67,25 +67,29 @@
   ul {
     padding: 0 0 0 @padding;
   }
+	blockquote {
+		color: @txt;
+		margin: 2rem 4rem;
+		position: relative;
+	}
   
-  blockquote,
-  blockquote::before {
-    color: @txt;
-  }
-  
-  blockquote {
-    margin: @padding;
-  }
-  
-  blockquote::before {
-    content: "\201C";
-    display: block;
-    .fontsize(30);
-    height: 0;
-    left: ( -1 * @padding );
-    position: relative;
-    top: ( -1 * @padding );
-  }
+	blockquote::after,
+	blockquote::before {
+		color: @gc_greyblue;
+		position: absolute;
+		content: "“";
+		display: block;
+		.fontsize( 50 );
+//		height: 0;
+		top: ( -1 * @padding );
+	}
+	blockquote::before {
+		left: ( -1 * @padding );
+	}
+	blockquote::after {
+		content: "”";
+		right: 0;
+	}
   
   .entry-content code {
     background-color: @code-bg;
@@ -98,7 +102,6 @@
   
 	aside {
 		font-size: 110%;
-		max-width: 40%;
 		float: right;
 		display: inline-block;
 		border-top: 1px solid @border_grijs;
@@ -109,6 +112,9 @@
 				
 		@media only screen and (min-width: ( @break_tablet ) ) {
 			font-size: 125%;
+			float: none;
+			display: block;
+			margin: 0 4rem 3rem 4rem;
 		}
 
 	}
