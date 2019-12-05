@@ -8,7 +8,7 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.27.7a
+// @version 3.28.2a
 // @desc.   Aside toegevoegd. Uitgelichte foto ook tonen voor pagina's.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.27.7a' );
-define( 'CHILD_THEME_DESCRIPTION', "3.27.7a - Aside toegevoegd. Uitgelichte foto ook tonen voor pagina's." );
+define( 'CHILD_THEME_VERSION', '3.28.2a' );
+define( 'CHILD_THEME_DESCRIPTION', "3.28.2a - Aside toegevoegd. Uitgelichte foto ook tonen voor pagina's." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -3008,8 +3008,9 @@ function rhswp_remove_external_styles() {
 	wp_deregister_style( 'cptch_stylesheet' );
 	wp_deregister_style( 'cptch_desktop_style' );
 
+	wp_deregister_style( 'block-gallery-frontend' ); // plugins/block-gallery, substitued with plugins/block-gallery.less
+
 	if ( ! is_admin() ) {
-//		wp_dequeue_style( 'wp-block-library' );		
 //		wp_deregister_style( 'dashicons' );
 	}
 
