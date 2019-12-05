@@ -68,19 +68,22 @@ License URI: http://www.opensource.org/licenses/gpl-license.php
 /*
 Imports
 ---------------------------------------------------------------------------------------------------- */
-@import "00-mixins.less";           // colors, sizes */
-@import "02-normalize.less";        // Baseline Normalize */
-@import "30-text-styles.less";      // font-styles, shared with admin editor-styles.less */
-@import "40-forms.less";            // styling for forms */
-@import "50-header-logo-menu.less";      // all styling for the header and the logo */
-@import "60-sidebar-widgets.less";  // sidebar widgets */
-@import "70-pagetypes.less";		// various page types etc */
-@import "71-search-pagetype.less";	// styling for search
-@import "80-structure.less";        // mediaqueries */
-@import "81-footers.less";          // footer thingies */
-@import "82-pagination.less";       // all pagination related stuff */
-@import "90-printstyles.less";      // non screen / print only */
-@import "99-browserhacks.less";     // non screen / print only */
+@import "00-mixins.less";           	// colors, sizes */
+@import "02-normalize.less";        	// Baseline Normalize */
+@import "30-text-styles.less";      	// font-styles, shared with admin editor-styles.less */
+@import "40-forms.less";            	// styling for forms */
+@import "50-header-logo-menu.less";     // all styling for the header and the logo */
+@import "60-sidebar-widgets.less";  	// sidebar widgets */
+@import "70-pagetypes.less";			// various page types etc */
+@import "71-search-pagetype.less";		// styling for search
+@import "80-structure.less";        	// mediaqueries */
+@import "81-footers.less";          	// footer thingies */
+@import "82-pagination.less";       	// all pagination related stuff */
+@import "90-printstyles.less";      	// non screen / print only */
+@import "99-browserhacks.less";     	// non screen / print only */
+
+// overwriting style of plugins
+@import "plugins/block-gallery.less";	// overwrite for styles from plugins/block-gallery
 
 
 .normalize();
@@ -1287,4 +1290,11 @@ dl.dl-level {
 	.fontsize(12);
 	.eventicons();
 }
+
+/*
+==============================================================================================================
+CSS overwrites for plugins
+*/
+
+.overwrite-block-gallery();		// overwrite for styles from plugins/block-gallery
 

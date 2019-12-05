@@ -14,6 +14,7 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 ## Version history
 * 3.27.8 - Headerfoto styling, styling voor aside en blockquote herzien.
 * 3.27.7 - Aside toegevoegd. Uitgelichte foto ook tonen voor pagina's.
+* 3.27.6 - CSS bugfixes voor breedte footerwidgets, lettergrootte .cta op kleine schermen.
 * 3.27.5 - Bugfix stappenplan.
 * 3.27.4 - Soc-med widget toegevoegd. Betere opzet footerwidget; 'font-display: swap' toegevoegd; meta-info voor events betere styling.
 * 3.27.3 - Styling boekingspagina event.

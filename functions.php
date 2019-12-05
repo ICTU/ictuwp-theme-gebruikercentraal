@@ -3008,8 +3008,9 @@ function rhswp_remove_external_styles() {
 	wp_deregister_style( 'cptch_stylesheet' );
 	wp_deregister_style( 'cptch_desktop_style' );
 
+	wp_deregister_style( 'block-gallery-frontend' ); // plugins/block-gallery, substitued with plugins/block-gallery.less
+
 	if ( ! is_admin() ) {
-//		wp_dequeue_style( 'wp-block-library' );		
 //		wp_deregister_style( 'dashicons' );
 	}
 

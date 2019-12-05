@@ -7,16 +7,15 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.12.1
-// @desc.   Renamed functions for better sharing.
+// @version 3.28.2a
+// @desc.   Aside toegevoegd. Uitgelichte foto ook tonen voor pagina's.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
-
-add_action( 'wp_enqueue_scripts', 'gc_wbvb_add_pageheader_css' );
-
+// check if a placeholder for a header image is needed
 add_action( 'genesis_before_content', 'gc_wbvb_add_pageheader_tags' );
 
-
+// css in header for the header image
+add_action( 'wp_enqueue_scripts', 'gc_wbvb_add_pageheader_css' );
 
 
 add_filter('genesis_attr_entry-header', 'gc_shared_add_wrap_class');
