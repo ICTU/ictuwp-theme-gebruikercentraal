@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.27.4j
-// @desc.   Soc-med widget toegevoegd. Betere opzet footerwidget; 'font-display: swap' toegevoegd; meta-info voor events betere styling.
+// @version 3.27.9
+// @desc.   Bugfix social media widget, div styling fixes.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 //========================================================================================================
@@ -297,7 +297,7 @@ function gc_wbvb_widget_socmed_add_acf_links( $params ) {
 			if ( $socmed_widget_url && $socmed_widget_linktekst ) {
 	
 				$widget_links .= '<li>';
-				$widget_links .= '<a class="' . $socmed_widget_type . '" href="' . urlencode( $socmed_widget_url ) . '">' . sanitize_text_field( $socmed_widget_linktekst ) . '</a>';
+				$widget_links .= '<a class="' . $socmed_widget_type . '" href="' . $socmed_widget_url . '">' . sanitize_text_field( $socmed_widget_linktekst ) . '</a>';
 				$widget_links .= '</a></li>';
 				
 			}

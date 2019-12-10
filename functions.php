@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.27.8
-// @desc.   Headerfoto styling, styling voor aside en blockquote herzien.
+// @version 3.27.9
+// @desc.   Bugfix social media widget, div styling fixes.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.27.8' );
-define( 'CHILD_THEME_DESCRIPTION', "3.27.8 - Headerfoto styling, styling voor aside en blockquote herzien." );
+define( 'CHILD_THEME_VERSION', '3.27.9' );
+define( 'CHILD_THEME_DESCRIPTION', "3.27.9 - Bugfix social media widget, div styling fixes." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );

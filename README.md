@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-3.27.8 - Headerfoto styling, styling voor aside en blockquote herzien.
+3.27.9 - Bugfix social media widget, div styling fixes.
 
 ## Version history
+* 3.27.9 - Bugfix social media widget, div styling fixes.
 * 3.27.8 - Headerfoto styling, styling voor aside en blockquote herzien.
 * 3.27.7 - Aside toegevoegd. Uitgelichte foto ook tonen voor pagina's.
 * 3.27.6 - CSS bugfixes voor breedte footerwidgets, lettergrootte .cta op kleine schermen.
