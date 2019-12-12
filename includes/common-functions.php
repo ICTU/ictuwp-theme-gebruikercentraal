@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.27.2
-// @desc.   Totale make-over van zoekresultaat-pagina.
+// @version 3.27.10
+// @desc.   Beeldbank-logo toegevoegd. Logo GC gewijzigd naar eentje met de nieuwe ava van Edo. <3 Edo!
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 ///
 
@@ -726,6 +726,8 @@ function gc_add_siteclass($attributes) {
 		$class = "rotterdammercentraal";
 	} elseif ( 'inclusie.gebruikercentraal.co.uk' == $_SERVER["HTTP_HOST"] || 'accept.inclusie.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] || 'inclusie.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] ) {
 		$class = "inclusie";
+	} elseif ( 'beeldbank.gebruikercentraal.co.uk' == $_SERVER["HTTP_HOST"] || 'accept.beeldbank.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] || 'beeldbank.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] ) {
+		$class = "beeldbank";
 	}
 //		$class = "rotterdammercentraal";
 //		$class = "inclusie";
