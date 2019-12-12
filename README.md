@@ -9,10 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-3.27.10 - Beeldbank-logo toegevoegd. Logo GC gewijzigd naar eentje met de nieuwe ava van Edo. <3 Edo!
+3.27.10.1 - Beeldbank-logo toegevoegd. Logo GC gewijzigd naar eentje met de nieuwe ava van Edo. <3 Edo!
 
 ## Version history
-* 3.27.10 - Beeldbank-logo toegevoegd. Logo GC gewijzigd naar eentje met de nieuwe ava van Edo. <3 Edo!
+* 3.27.10.1 - Beeldbank-logo toegevoegd. Logo GC gewijzigd naar eentje met de nieuwe ava van Edo. <3 Edo!
 * 3.27.9 - Bugfix social media widget, div styling fixes.
 * 3.27.8 - Headerfoto styling, styling voor aside en blockquote herzien.
 * 3.27.7 - Aside toegevoegd. Uitgelichte foto ook tonen voor pagina's.
