@@ -1,16 +1,16 @@
 <?php
 
 /**
- * Gebruiker Centraal - 404.php
- * ----------------------------------------------------------------------------------
- * 404 pagina
- * ----------------------------------------------------------------------------------
- * @package gebruiker-centraal
- * @author  Paul van Buuren
- * @license GPL-2.0+
- * @version 3.7.1
- * @desc.   actieteampagina, actieteam-widget, skiplinks, 404
- * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// Gebruiker Centraal - 404.php
+// ----------------------------------------------------------------------------------
+// 404 pagina
+// ----------------------------------------------------------------------------------
+// @package gebruiker-centraal
+// @author  Paul van Buuren
+// @license GPL-2.0+
+// @version 3.28.1
+// @desc.   Styling voor 404-pagina.
+// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
  */
 
 

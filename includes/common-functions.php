@@ -30,7 +30,12 @@ function gc_wbvb_get_search_form( ) {
 		// no search form in header
 	}
 	else {
-		echo get_search_form();
+		if ( is_search() || is_404() ) {
+			// do nothing
+		}
+		else {
+			echo get_search_form();
+		}
 	}
 }
 

@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.27.10.1
-// @desc.   Beeldbank-logo toegevoegd. Logo GC gewijzigd naar eentje met de nieuwe ava van Edo. <3 Edo!
+// @version 3.28.1
+// @desc.   Styling voor 404-pagina.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.27.10.1' );
-define( 'CHILD_THEME_DESCRIPTION', "3.27.10.1 - Beeldbank-logo toegevoegd. Logo GC gewijzigd naar eentje met de nieuwe ava van Edo. <3 Edo!" );
+define( 'CHILD_THEME_VERSION', '3.28.1' );
+define( 'CHILD_THEME_DESCRIPTION', "3.28.1 - Styling voor 404-pagina." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -860,25 +860,32 @@ function gc_wbvb_check_actieteamlid() {
 //========================================================================================================
 
 function gc_wbvb_404_no_posts_content_header() {
-
-  if ( is_author() ) {
-    gc_wbvb_check_actieteamlid();
-  }
-  else {
-  	printf( '<h2 class="entry-title">%s</h2>', __( 'Not found, error 404', 'gebruikercentraal' ) );
-  }
-
+	
+	if ( is_author() ) {
+		gc_wbvb_check_actieteamlid();
+	}
+	else {
+		printf( '<div class="archive-description"><h1 class="archive-title">%s</h1></div>', __( 'Not found, error 404', 'gebruikercentraal' ) );
+	}
+	
 }
+
 //========================================================================================================
 
 function gc_wbvb_404_no_posts_content() {
 
-  if ( is_author() ) {
-  }
-  else {
-    echo '<p>' . sprintf( __( 'The page you are looking for no longer exists. Perhaps you can return back to the site\'s <a href="%s">homepage</a> and see if you can find what you are looking for. Or, you can try finding it by using the search form below.', 'gebruikercentraal' ), home_url() ) . '</p>';
-    echo '<p>' . get_search_form() . '</p>';
-  }
+	// show a (UNIQUE) search form
+	$searchform = get_search_form( array( 'echo' => false ) );
+	$searchform = preg_replace('|id="zoeken"|i', 'id="zoeken_no_result"', $searchform );
+	$searchform = preg_replace('|searchform-2|i', 'searchform-22', $searchform );
+
+	if ( is_author() ) {
+	}
+	else {
+		echo '<p>' . sprintf( __( 'The page you are looking for no longer exists. Perhaps you can return back to the site\'s <a href="%s">homepage</a> and see if you can find what you are looking for. Or, you can try finding it by using the search form below.', 'gebruikercentraal' ), home_url() ) . '</p>';
+		echo $searchform;
+		
+	}
 
 }
 
