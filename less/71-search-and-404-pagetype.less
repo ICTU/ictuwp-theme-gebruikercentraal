@@ -1,15 +1,15 @@
 
 .pagetype_search() {
 
-// Gebruiker Centraal - 71-search-pagetype.less
+// Gebruiker Centraal - 71-search-and-404-pagetype.less
 // ----------------------------------------------------------------------------------
 // bevat CSS voor search pagina.
 // ----------------------------------------------------------------------------------
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.27.2
-// @desc.   Totale make-over van zoekresultaat-pagina.
+// @version 3.28.1
+// @desc.   Styling voor 404-pagina.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -17,6 +17,8 @@
 
 	@nosearchbuttonwidth: 38px;
 	
+	.error404,
+	.error404.full-width-content,
 	.search,
 	.search.full-width-content {
 		
@@ -58,7 +60,7 @@
 		 .content-sidebar-wrap > .content {
 			background: @wit;
 			max-width: @contentwidth_761;
-			padding: 2rem;
+			padding: 2rem !important;
 			float: none;
 	
 		    @media only screen and (min-width: @break_tablet ) {
@@ -66,6 +68,7 @@
 				padding-right: 4em;			
 			}
 			
+			#zoeken_404,
 			#zoeken_no_result {
 				background: @gc_darkerblue;
 				display: flex;
