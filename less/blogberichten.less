@@ -6,8 +6,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.27.9
-// @desc.   Bugfix social media widget, div styling fixes.
+// @version 3.29.1
+// @desc.   Public Service nominatie-widget op homepage.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 */
 
@@ -58,4 +58,104 @@
 			}
 		}
 	}
+}
+
+
+.banner-widget {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	.gc-box-shadow();
+	margin-bottom: 4rem;
+	color: @wit;
+	
+	&.no-image {
+		background: @gc_a11y_green;
+		padding-bottom: 4rem;
+
+		p {
+			padding-left: 4rem;
+			padding-right: 4rem;
+		}
+
+		.widget-title {
+			background: @gc_a11y_green_dark_1;
+			color: @wit;
+			padding: 2rem 4rem;
+		}
+	}
+
+	&.right {
+		flex-direction: row-reverse;
+	}
+
+	.widget-title {
+		font-family: @headerfont;
+		.font-size(44);
+		line-height: 48px;
+		text-transform: uppercase;
+	}
+
+	p {
+		margin: 0;
+
+		& + p {
+			margin-top: 2rem;
+		}
+	}	
+	
+	&.fullwidth {
+		padding: 4rem 6rem;
+		
+		.banner-widget_text {
+			padding: 2rem;
+			background: #000;
+			background: rgba( 8, 8, 8, .7 );
+			color: @wit;
+		}		
+	}
+
+	&.left,
+	&.right {
+	
+		background: @gc_a11y_green;
+		
+		.banner-widget_image {
+			flex: 1 0 34%;
+			background-position: center center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.banner-widget_text {
+			flex: 2 0 66%;
+			padding-bottom: 4rem;
+			
+			p {
+				padding-left: 4rem;
+				padding-right: 4rem;
+			}
+			
+			.widget-title {
+				background: @gc_a11y_green_dark_1;
+				color: @wit;
+				padding: 2rem 4rem;
+			}
+		}
+	}
+
+	a.cta {
+		.knoppify(transparent, @gc_a11y_green_light_1, @gc_pantybrown_light, @wit, @txt, 24, 0, @txt, @gc_pantybrown_light, @gc_pantybrown, @txt );
+		float: none;
+		@media only screen {
+			text-transform: uppercase;
+		}
+	}
+}
+
+.page-template-page_sitemap,
+.page-template-page_contentpagina,
+.page-template-default {
+	.banner-widget {
+		margin-top: 4rem;		
+	}	
 }

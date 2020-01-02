@@ -8,13 +8,19 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.11.2
-// @desc.   Betere styling voor template homepage. Mogelijkheid andere content op homepage te zetten.
+// @version 3.29.1
+// @desc.   Public Service nominatie-widget op homepage.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
 //* Template Name: GC - Contentpagina
 
+//========================================================================================================
+
+// widget voor grote banners
+add_action( 'genesis_entry_header', 'gc_wbvb_write_widget_home_widget_beforecontent', 8 );
+
+//========================================================================================================
 
 add_action( 'genesis_entry_content', 'gc_wbvb_show_related_content', 11 );
 

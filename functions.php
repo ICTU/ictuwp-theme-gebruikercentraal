@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.28.1
-// @desc.   Styling voor 404-pagina.
+// @version 3.29.1
+// @desc.   Public Service nominatie-widget op homepage.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.28.1' );
-define( 'CHILD_THEME_DESCRIPTION', "3.28.1 - Styling voor 404-pagina." );
+define( 'CHILD_THEME_VERSION', '3.29.1' );
+define( 'CHILD_THEME_DESCRIPTION', "3.29.1 - Public Service nominatie-widget op homepage." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -45,6 +45,9 @@ define( 'GC_WBVB_WIDGET_SITE_FOOTER', 'site-footer-widget');
 define( 'GC_WBVB_WIDGET_HOME_WIDGET_1', 'widgetarea-home-links');
 define( 'GC_WBVB_WIDGET_HOME_WIDGET_2', 'widgetarea-home-rechts');
 
+define( 'GC_WBVB_WIDGET_BANNERWIDGETS', 'widgetarea-banners-before-content');
+
+
 //========================================================================================================
 
 //* Remove the edit link
@@ -62,6 +65,7 @@ define( 'IMG_SIZE_HUGE_MIN_WIDTH', 1200 );
 define( 'ID_BLOGBERICHTEN_CSS', 'blogberichten' );
 define( 'ID_BLOG_WIDGET_CSS', 'blog-widget' );
 define( 'ID_SINGLE_CSS', 'single-post' );
+define( 'ID_GIANTBANNERWIDGET_CSS', 'widget-giant-banner' );
 
 define( 'SOC_MED_NO', 'socmed_nee' );
 define( 'SOC_MED_YES', 'socmed_ja' );
@@ -199,6 +203,11 @@ if ( ! defined( 'ICTU_GCCONF_CT_TIMESLOT' ) ) {
   define( 'ICTU_GCCONF_CT_TIMESLOT', 'timeslot' );  // slug for custom taxonomy 'timeslot'
 }
 
+if ( ! defined( 'WBVB_GC_WIDGET_GIANTBANNER' ) ) {
+	define( 'WBVB_GC_WIDGET_GIANTBANNER', 'GC - Giant banner' );
+}
+
+
 define( 'ACF_PLUGIN_NOT_ACTIVE_WARNING', '<p style="position: absolute; top: 3em; left: 3em; display: block; padding: .5em; background: yellow; color: black;">de ACF custom fields plugin is niet actief.</p>' );
 
 define( 'ID_MAINCONTENT', 'maincontent' );
@@ -251,6 +260,7 @@ require_once( GC_FOLDER . '/widgets/gc-footer-widget.php' );
 require_once( GC_FOLDER . '/widgets/gc-footer-logo-widget.php' );
 require_once( GC_FOLDER . '/widgets/gc-contenttypes-widget.php' );
 require_once( GC_FOLDER . '/widgets/gc-socialmedia-widget.php' );
+require_once( GC_FOLDER . '/widgets/gc-giant-banner-widget.php' );
 
 
 require_once( GC_FOLDER . '/includes/common-functions.php' );
@@ -469,6 +479,15 @@ function gc_wbvb_page_append_sokmet( ) {
 	if ( ! is_page() ) {
 		return;	
 	}
+	if ( 'home-inclusie.php' === get_page_template_slug() ) {
+		return;	
+	}
+	if ( 'home-beeldbank.php' === get_page_template_slug() ) {
+		return;	
+	}
+	if ( ICTU_GC_CPT_STAP === get_post_type() ) {
+		return;	
+	}
 
 	global $wp_query;
 	global $post;
@@ -531,6 +550,9 @@ function gc_wbvb_post_append_postinfo($post_info) {
 	else {
 		
 		if ( 'event' == get_post_type() ) {
+			return '';
+		}
+		elseif ( ICTU_GC_CPT_STAP == get_post_type() ) {
 			return '';
 		}
 		elseif ( GC_BEELDBANK_BEELD_CPT == get_post_type() ) {
@@ -617,6 +639,7 @@ function gc_wbvb_add_single_socialmedia_buttons() {
 //========================================================================================================
 
 function gc_wbvb_check_socialbuttons( $post_info, $hidden = '' ) {
+
 	$show_socialmedia_buttons_global		= get_field('show_socialmedia_buttons_global', 'option');
 	
 	if ( $show_socialmedia_buttons_global !== SOC_MED_NO ) {
@@ -1663,14 +1686,46 @@ function gc_wbvb_bg_custom_footer() {
 
 //========================================================================================================
 
-// LOGIN PAGE WIDGET for users not currently logged in
+
+// Right widget space on home page 
+function gc_wbvb_write_widget_home_widget_beforecontent() {
+    if ( !dynamic_sidebar( GC_WBVB_WIDGET_BANNERWIDGETS ) ) {
+        // do nothing
+    }
+}
+
+//--------------------------------------------------------------------------------------------------------
+
+genesis_register_sidebar(
+    array(
+        'name'              => __( "Banners boven hoofdcontent", 'gebruikercentraal' ),
+        'id'                => GC_WBVB_WIDGET_BANNERWIDGETS,
+        'description'       => __( "Widgets die op home en pagina's getoond worden boven alle verdere content. Op berichtpagina's onder de inhoud.", 'gebruikercentraal' ),
+		'before_widget' => genesis_markup( array(
+			'html5' => '<div id="%1$s" class="widget %2$s '.GC_WBVB_WIDGET_BANNERWIDGETS . '"><div class="widget-wrap">',
+			'xhtml' => '<div id="%1$s" class="widget %2$s"><div class="widget-wrap">',
+			'echo'  => false,
+		) ),
+		'after_widget'  => genesis_markup( array(
+			'html5' => '</div></div>' . "\n",
+			'xhtml' => '</div></div>' . "\n",
+			'echo'  => false
+		) ),
+		'before_title'  => '<p class="widget-title widgettitle">',
+		'after_title'   => "</p>\n",
+    )
+);
+
+//========================================================================================================
+
+// Left widget space on home page 
 function gc_wbvb_write_widget_home_widget_left() {
     if ( !dynamic_sidebar( GC_WBVB_WIDGET_HOME_WIDGET_1 ) ) {
         // do nothing
     }
 }
 
-//========================================================================================================
+//--------------------------------------------------------------------------------------------------------
 
 genesis_register_sidebar(
     array(
@@ -1695,13 +1750,14 @@ genesis_register_sidebar(
 //========================================================================================================
 
 
-
-// LOGIN PAGE WIDGET for users not currently logged in
+// Right widget space on home page 
 function gc_wbvb_write_widget_home_widget_right() {
     if ( !dynamic_sidebar( GC_WBVB_WIDGET_HOME_WIDGET_2 ) ) {
         // do nothing
     }
 }
+
+//--------------------------------------------------------------------------------------------------------
 
 genesis_register_sidebar(
     array(
@@ -1722,6 +1778,7 @@ genesis_register_sidebar(
 		'after_title'   => "</h2>\n",
     )
 );
+
 
 //========================================================================================================
 
@@ -1754,45 +1811,49 @@ function jive_attributes_st_container($attributes) {
 //========================================================================================================
 
 function gc_wbvb_home_manifest() {
-
+	
 	global $post;
 	setup_postdata($post);
+	
+	$leesmeer = '';
+	$class    = 'entry';
+	
+	if ( function_exists( 'get_field' ) ) {
+		$jaofnee = get_field('link_naar_manifest_toevoegen');
+		
+		if ( 'ja' == $jaofnee ) {
+			$class = 'manifest entry';
+			
+			if ( get_field('lees-meer-link') && get_field('lees-meer-tekst') ) {
+				$leesmeer = '<a class="cta" href="' . get_field('lees-meer-link') . '">' . get_field('lees-meer-tekst') . '</a>';
+			}
+		}
+	}
 
-  $leesmeer = '';
-  $class    = 'entry';
-
-  if ( function_exists( 'get_field' ) ) {
-    $jaofnee = get_field('link_naar_manifest_toevoegen');
-
-    if ( 'ja' == $jaofnee ) {
-      $class = 'manifest entry';
-
-    		if ( get_field('lees-meer-link') && get_field('lees-meer-tekst') ) {
-    			$leesmeer = '<a class="cta" href="' . get_field('lees-meer-link') . '">' . get_field('lees-meer-tekst') . '</a>';
-    		}
-    	}
-  }
-
+	echo '<div id="widgetarea-banners-before-content">';
+	// GC_WBVB_WIDGET_BANNERWIDGETS
+	gc_wbvb_write_widget_home_widget_beforecontent();
+	echo '</div>';
+	
 	echo '<article class="' . $class . '" itemscope="" itemtype="http://schema.org/CreativeWork">';
 	echo '<header><h1 class="entry-title" itemprop="headline">';
 	the_title();
 	echo '</h1></header>';
 	echo '<div class="content">';
-
 	the_content();
-
-  echo $leesmeer;
-
-
+	echo $leesmeer;
 	echo '</div>';
 	echo '</article>';
-
+	
 	echo '<div id="home-widgets-left">';
+	// GC_WBVB_WIDGET_HOME_WIDGET_1
 	gc_wbvb_write_widget_home_widget_left();
 	echo '</div>';
 	echo '<div id="home-widgets-right">';
+	// GC_WBVB_WIDGET_HOME_WIDGET_2
 	gc_wbvb_write_widget_home_widget_right();
 	echo '</div>';
+	
 }
 
 //========================================================================================================

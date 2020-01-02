@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.13.1
-// @desc.   Extra settings in customizer: choice of logos.
+// @version 3.29.1
+// @desc.   Public Service nominatie-widget op homepage.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
  */
 
@@ -36,6 +36,15 @@ add_action( 'genesis_entry_content', 'gc_wbvb_post_print_downloads', 11 );
 add_filter('genesis_attr_entry-header', 'gc_shared_add_wrap_class');
 add_filter('genesis_attr_entry-content', 'gc_shared_add_wrap_class');
 add_filter('genesis_attr_entry-footer', 'gc_shared_add_wrap_class');
+
+
+
+//========================================================================================================
+
+// widget voor grote banners
+add_action( 'genesis_entry_content', 'gc_wbvb_write_widget_home_widget_beforecontent', 20 );
+
+//========================================================================================================
 
 
 
