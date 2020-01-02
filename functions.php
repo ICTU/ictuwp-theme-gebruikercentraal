@@ -8,7 +8,7 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.29.1.a
+// @version 3.29.1
 // @desc.   Public Service nominatie-widget op homepage.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.29.1.a' );
-define( 'CHILD_THEME_DESCRIPTION', "3.29.1.a - Public Service nominatie-widget op homepage." );
+define( 'CHILD_THEME_VERSION', '3.29.1' );
+define( 'CHILD_THEME_DESCRIPTION', "3.29.1 - Public Service nominatie-widget op homepage." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -44,7 +44,8 @@ define( 'GC_FOLDER', $sharedfolder );
 define( 'GC_WBVB_WIDGET_SITE_FOOTER', 'site-footer-widget');
 define( 'GC_WBVB_WIDGET_HOME_WIDGET_1', 'widgetarea-home-links');
 define( 'GC_WBVB_WIDGET_HOME_WIDGET_2', 'widgetarea-home-rechts');
-define( 'GC_WBVB_WIDGET_HOME_WIDGET_BEFORECONTENT', 'widgetarea-home-before-content');
+
+define( 'GC_WBVB_WIDGET_BANNERWIDGETS', 'widgetarea-banners-before-content');
 
 
 //========================================================================================================
@@ -1688,7 +1689,7 @@ function gc_wbvb_bg_custom_footer() {
 
 // Right widget space on home page 
 function gc_wbvb_write_widget_home_widget_beforecontent() {
-    if ( !dynamic_sidebar( GC_WBVB_WIDGET_HOME_WIDGET_BEFORECONTENT ) ) {
+    if ( !dynamic_sidebar( GC_WBVB_WIDGET_BANNERWIDGETS ) ) {
         // do nothing
     }
 }
@@ -1697,11 +1698,11 @@ function gc_wbvb_write_widget_home_widget_beforecontent() {
 
 genesis_register_sidebar(
     array(
-        'name'              => __( "Home-widget boven hoofdcontent", 'gebruikercentraal' ),
-        'id'                => GC_WBVB_WIDGET_HOME_WIDGET_BEFORECONTENT,
-        'description'       => __( "Widgets die getoond worden boven alle verdere content", 'gebruikercentraal' ),
+        'name'              => __( "Banners boven hoofdcontent", 'gebruikercentraal' ),
+        'id'                => GC_WBVB_WIDGET_BANNERWIDGETS,
+        'description'       => __( "Widgets die op home en pagina's getoond worden boven alle verdere content. Op berichtpagina's onder de inhoud.", 'gebruikercentraal' ),
 		'before_widget' => genesis_markup( array(
-			'html5' => '<div id="%1$s" class="widget %2$s '.GC_WBVB_WIDGET_HOME_WIDGET_BEFORECONTENT . '"><div class="widget-wrap">',
+			'html5' => '<div id="%1$s" class="widget %2$s '.GC_WBVB_WIDGET_BANNERWIDGETS . '"><div class="widget-wrap">',
 			'xhtml' => '<div id="%1$s" class="widget %2$s"><div class="widget-wrap">',
 			'echo'  => false,
 		) ),
@@ -1829,8 +1830,8 @@ function gc_wbvb_home_manifest() {
 		}
 	}
 
-	echo '<div id="widgetarea-home-before-content">';
-	// GC_WBVB_WIDGET_HOME_WIDGET_BEFORECONTENT
+	echo '<div id="widgetarea-banners-before-content">';
+	// GC_WBVB_WIDGET_BANNERWIDGETS
 	gc_wbvb_write_widget_home_widget_beforecontent();
 	echo '</div>';
 	

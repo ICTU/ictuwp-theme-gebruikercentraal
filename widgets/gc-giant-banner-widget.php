@@ -8,7 +8,7 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.29.1.a
+// @version 3.29.1
 // @desc.   Public Service nominatie-widget op homepage.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
@@ -36,7 +36,7 @@ class GC_Widget_giant_banner extends WP_Widget {
 	public function __construct() {
 
 		$widget_ops = array(
-			'classname'		=> ID_GIANTBANNERWIDGET_CSS . ' textwidget',
+			'classname'		=> ID_GIANTBANNERWIDGET_CSS . ' banner-widget',
 			'description' => __( 'Large banner, with text, link and background image', 'gebruikercentraal' ),
 		);
 
@@ -103,7 +103,6 @@ class GC_Widget_giant_banner extends WP_Widget {
         $instance['giantbanner_url']		= $new_instance['giantbanner_url'];
         $instance['giantbanner_linktext']	= $new_instance['giantbanner_linktext'];
         $instance['giantbanner_text']		= $new_instance['giantbanner_text'];
-        $instance['giantbanner_alignment']	= $new_instance['giantbanner_alignment'];
 
         return $instance;
 
@@ -115,21 +114,26 @@ class GC_Widget_giant_banner extends WP_Widget {
 
         extract($args, EXTR_SKIP);
 
-        $title 					= empty($instance['title']) ? '' : $instance['title'] ;
+        $title 					= empty($instance['title']) ? 'Titel' : $instance['title'] ;
         $giantbanner_url 		= empty($instance['giantbanner_url']) ? '' : $instance['giantbanner_url'] ;
         $giantbanner_linktext	= empty($instance['giantbanner_linktext']) ? 'Klik hiero' : $instance['giantbanner_linktext'] ;
         $giantbanner_text 		= empty($instance['giantbanner_text']) ? '' : $instance['giantbanner_text'] ;
+		$title_id				= 'title-' . $args['widget_id'];
+/*
+echo '<pre>';
+var_dump( $args );
+echo '</pre>';
+*/
 
         echo $before_widget;
-//		echo $before_title . $title . $after_title;
 		echo $after_title;
-		echo '<div class="textwidget_text">';
-		echo '<p id="">' . $title . '</p>';
-		echo $giantbanner_text;
+		echo '<section class="banner-widget_text" aria-labelledby="' . $title_id . '">';
+		echo '<p id="' . $title_id . '" class="widget-title">' . $title . '</p>';
+		echo '<p>' . $giantbanner_text . '</p>';
 		if ( $giantbanner_url && $giantbanner_linktext ) {
-			echo '<a href="' . $giantbanner_url . '">' . $giantbanner_linktext . '</a>';
+			echo '<p><a href="' . $giantbanner_url . '" class="cta">' . $giantbanner_linktext . '</a></p>';
 		}
-		echo '</div>'; // .textwidget_image
+		echo '</section>'; // .banner-widget_image
 		echo $after_widget;
 
     }
@@ -154,10 +158,8 @@ function append_header_css_for_gc_giant_banner_widget() {
 	global $post;    
 	global $wp_registered_widgets;    
 
-//	$thepostid = get_the_ID();
-	
 //	$header_css = "";
-	$header_css = "/* JOEHOE */ \n ------------------------------- \n";
+	$header_css = "/* JOEHOE */ \n\n";
 	
 	if ( is_array( $wp_registered_widgets )  ) {
 
@@ -171,9 +173,17 @@ function append_header_css_for_gc_giant_banner_widget() {
 				
 				if( !empty( $image ) ) {
 
-					$header_css .= "\n #" . $widget_id . " { \n";
-					$header_css .= " background-image: url('" . $image['url'] . "');\n";
-					$header_css .= "} \n";
+					if ( 'left' === $image_alignment ||  'right' === $image_alignment ) {
+						$header_css .= "\n #" . $widget_id . " .banner-widget_image { \n";
+						$header_css .= " background-image: url('" . $image['url'] . "');\n";
+						$header_css .= "} \n";
+					}
+					else {
+						$header_css .= "\n #" . $widget_id . " { \n";
+						$header_css .= " background-image: url('" . $image['url'] . "');\n";
+						$header_css .= "} \n";
+					}
+					
 					
 					$header_css .= '/* URL: ' . sanitize_title( $image['url'] ) . "  \n";
 					$header_css .= ' $widget_id: ' . $widget_id . "  \n";
@@ -210,53 +220,48 @@ function filter_for_gc_giant_banner_widget( $params ) {
 	* for this widget
 	*/
 
-	global $custom_css;
 	global $post;
 
 	// get widget vars
 	$widget_name  	= $params[0]['widget_name'];
 	$widget_id    	= $params[0]['widget_id'];
-	$countertje		= 0;
-	$custom_css 	= '';
 
 	// bail early if this widget is not a Text widget
 	if( $widget_name != WBVB_GC_WIDGET_GIANTBANNER ) {
 		return $params;
 	}
 
-//	$giantbanner_text 		= get_field( 'giantbanner_text', 'widget_' . $widget_id );
-//	$giantbanner_url		= get_field( 'giantbanner_url', 'widget_' . $widget_id );
-//	$giantbanner_linktext	= get_field( 'giantbanner_linktext', 'widget_' . $widget_id );
-
 	$image 				= get_field( 'giantbanner_bg_image', 'widget_' . $widget_id ); 
 	$image_alignment	= get_field( 'giantbanner_bg_image_alignment', 'widget_' . $widget_id );
 
 	if( !empty( $image ) ) {
 
-//			$title_id		= sanitize_title( $widget_name . '-' . get_the_ID() );
-			
-//			$params[0]['after_title'] .= '<div aria-labelledby="' . $title_id . '">';
-//			$params[0]['after_title'] .= '<p id="' . $title_id . '">';
-//			$params[0]['after_title'] .= '<a href="' . $giantbanner_url . '">';
-//			$params[0]['after_title'] .= 'lalala</a>';
-          
-//			$class = 'feature-image noimage';
-			
-//			if ( 'left' === $image_alignment ) {
-				$params[0]['after_title'] .= '<div id="' . $widget_id . '" class="textwidget_image ' . $image_alignment . '">&nbsp;</div>';
-//			}
-			
-//			if ( 'right' === $image_alignment ) {
-//				$params[0]['after_title'] .= '<div id="' . $widget_id . '" class="' . $class . '">&nbsp;</div>';
-//			}
-			
-//			$params[0]['after_title'] .= '</a>';
-//			$params[0]['after_title'] .= '</section>'; 
+/*
+echo '<pre>';
+var_dump( $image );
+echo '</pre>';
+*/
+
+		
+
+		$params[0]['before_widget'] = '<div id="' . $widget_id . '" class="banner-widget ' . $image_alignment . '">';
+		$params[0]['after_widget'] = '</div>'; // .banner-widget
+		
+		$imagetext = '&nbsp;';
+
+		if ( $image['alt'] ) {
+			$imagetext = '<span class="visuallyhidden">' . $image['alt'] . '</span> ';
+		}
+
+		if ( 'left' === $image_alignment ||  'right' === $image_alignment ) {
+			$params[0]['after_title'] = '<div class="banner-widget_image">' . $imagetext . '</div>';
+		}
 	
-//		$params[0]['after_title'] .= '</div>';
 	}
-	
-//	endif;
+	else {
+		$params[0]['before_widget'] = '<div id="' . $widget_id . '" class="banner-widget no-image">';
+		$params[0]['after_widget'] = '</div>'; // .banner-widget
+	}
 
 	// return
 	return $params;
@@ -264,4 +269,84 @@ function filter_for_gc_giant_banner_widget( $params ) {
 }
 
 //========================================================================================================
+
+if( function_exists('acf_add_local_field_group') ):
+
+acf_add_local_field_group(array(
+	'key' => 'group_5e0de262438aa',
+	'title' => 'Banner widget',
+	'fields' => array(
+		array(
+			'key' => 'field_5e0de26b7dc1c',
+			'label' => 'Image',
+			'name' => 'giantbanner_bg_image',
+			'type' => 'image',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'array',
+			'preview_size' => 'medium',
+			'library' => 'all',
+			'min_width' => '',
+			'min_height' => '',
+			'min_size' => '',
+			'max_width' => '',
+			'max_height' => '',
+			'max_size' => '',
+			'mime_types' => '',
+		),
+		array(
+			'key' => 'field_5e0de2967dc1d',
+			'label' => 'Uitlijning',
+			'name' => 'giantbanner_bg_image_alignment',
+			'type' => 'radio',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'left' => 'Links uitgelijnd',
+				'right' => 'Rechts uitgelijnd',
+				'fullwidth' => 'Gehele breedte (achtergrond)',
+			),
+			'allow_null' => 0,
+			'other_choice' => 0,
+			'default_value' => '',
+			'layout' => 'vertical',
+			'return_format' => 'value',
+			'save_other_choice' => 0,
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'widget',
+				'operator' => '==',
+				'value' => 'gc_widget_giant_banner',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
+endif;
+
+//========================================================================================================
+
 
