@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-3.28.1 - Styling voor 404-pagina.
+3.29.1.a - Public Service nominatie-widget op homepage.
 
 ## Version history
+* 3.29.1.a - Public Service nominatie-widget op homepage.
 * 3.28.1 - Styling voor 404-pagina.
 * 3.27.9 - Bugfix social media widget, div styling fixes.
 * 3.27.8 - Headerfoto styling, styling voor aside en blockquote herzien.
