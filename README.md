@@ -80,3 +80,97 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 ## To do
 * Shared code opschonen: shared.php bevat functies voor zowel gebruiker-centraal als voor optimaal-digitaal
 * Event Manager plugin voegt ten onrechte jquery code toe, voordat jQuery include
+
+
+
+
+## Theme structure
+
+```web root
+themes/gebruiker-centraal/                        # → Folder met alle theme-bestanden
+│  
+├── css/                                          # → Extra CSS-bestanden
+│   ├── addenda-tips.css                          # → 
+│   ├── blanco.css                                # → CSS bestand zonder inhoud voor het mogelijk maken van CSS in de <head>
+│   ├── editor-styles.css                         # → CSS voor juist tonen van vormgeving in WYSIWIG-editor in admin
+│   ├── header.css                                # → 
+│   ├── login-form.css                            # → 
+│   └── revenge.css                               # → CSS voor debugging (lege elementen etc)
+│  
+├── fonts/                                        # → Webfonts
+│  
+├── images/                                       # → Theme-gerelateerde beeldbestanden
+│   ├── avatar/                                   # → bevat de (15) verschillende avatars voor gebruiker centraal
+│   └── logos/                                    # → logo's voor de diverse GC-sites
+│  
+├── includes/                                     # → Bevat settings voor o.m. javascript-check
+│   ├── author-box.php                            # → 
+│   ├── common-functions.php                      # → 
+│   ├── custom-fields-and-post-types.php          # → 
+│   ├── customizer.php                            # → 
+│   └── widgets.php                               # → 
+│  
+├── js/                                           # → Bevat javascript
+│   ├── min/                                      # → folder met minified JS
+│   ├── commentform.js                            # → 
+│   ├── criticalcss.js                            # → 
+│   └── menu.js                                   # → 
+│  
+├── languages/                                    # → Bevat vertalingen voor het theme
+│  
+├── less/                                         # → LESS-bronbestanden
+│   ├── plugins/                                  # → LESS bedoeld ter vervanging / correctie van CSS van plugins
+│   │   └── block-gallery.less                    # → LESS ter correctie van block-gallery.css van dito plugin│  
+│   ├── 00-mixins.less                            # → 
+│   ├── 01-socmed-color-codes.less                # → 
+│   ├── 02-normalize.less                         # → 
+│   ├── 30-text-styles.less                       # → 
+│   ├── 40-forms.less                             # → 
+│   ├── 50-header-logo-menu.less            	  # → 
+│   ├── 60-sidebar-widgets.less                   # → 
+│   ├── 70-pagetypes.less                         # → 
+│   ├── 71-search-and-404-pagetype.less           # → 
+│   ├── 80-structure.less                         # → 
+│   ├── 81-footers.less                           # → 
+│   ├── 82-pagination.less                        # → 
+│   ├── 90-printstyles.less                       # → 
+│   ├── 99-browserhacks.less                      # → 
+│   ├── blogberichten.less                        # → 
+│   ├── editor-styles.less                        # → 
+│   ├── login-form.less                           # → 
+│   └── style.less                                # → Hoofdbestand voor aanmaken style css
+│  
+├── plugins/                                      # → ruimte voor o.m. extra styling t.b.v. event plugin
+│  
+├── 404.php                                       # → Afhandeling voor niet-gevonden pagina's
+├── archive.php                                   # → Algemeen berichten-overzicht
+├── author.php                                    # → Template voor weergave van auteursinformatie (naam + berichten)
+├── functions.php                                 # → Algemene functies, theme includes
+├── 404.php                                       # →
+├── archive.php                                   # →
+├── author.php                                    # →
+├── blogberichten.css                             # →
+├── comments.php                                  # →
+├── functions.php                                 # →
+├── header.php                                    # →
+├── nojs.php                                      # →
+├── page_actieteam.php                            # →
+├── page_alle-auteurs.php                         # →
+├── page_archive.php                              # →
+├── page_blog.php                                 # →
+├── page_contentpagina.php                        # →
+├── page_evenement.php                            # →
+├── page_evenementen.php                          # →
+├── page_home.php                                 # →
+├── page_mailinglijst.php                         # →
+├── page_newsletterarchive.php                    # →
+├── page_overzichtspagina.php                     # →
+├── page_sitemap.php                              # →
+├── page.php                                      # →
+├── search.php                                    # →
+├── single.php                                    # →
+├── style.css                                     # → Bevat alle CSS (wordt samengesteld via LESS)
+├── screenshot.png                                # →
+└── distribute.sh                                 # → Shell script voor distributie themes.
+
+
