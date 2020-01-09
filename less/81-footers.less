@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.27.6
-// @desc.   CSS bugfixes voor breedte footerwidgets, lettergrootte .cta op kleine schermen.
+// @version 3.29.2
+// @desc.   Footer-widget voor menu voorzien van pijltjes.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -107,45 +107,52 @@
 
 
   }
-  .site-footer {
-	background-color: @header_bg_color;
-    padding: @padding 0;
 
-    .widget-title {
-      .visuallyhidden();
-    }
-
-    .widget {
-
-      ul.menu {
-        float: right;
-        margin: 0;
-
-        li {
-          display: inline-block;
-          float: left;
-          margin: 0 @padding ( @padding / 2 ) 0;
-
-          a {
-            color: @bsitefooter_a_color;
-            text-transform: lowercase;
-            text-decoration: none;
-
-            &:hover,
-            &:focus,
-            &:active {
-              text-decoration: underline;
-              color: @wit;
-            }
-          }
-        }
-      }
-    }
-
-    p {
-      margin-bottom: 0;
-    }
-  }
+	.site-footer {
+		background-color: @header_bg_color;
+		padding: @padding 0;
+		
+		.widget-title {
+			.visuallyhidden();
+		}
+		
+		.widget {
+			
+			ul.menu {
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-start;
+				
+				li {
+					& + li {
+						margin-left: 2rem;
+					}
+					
+					a {
+						color: @bsitefooter_a_color;
+						text-decoration: none;
+						background-image: url('images/arrow-right-white.svg');
+						padding-left: 1.5rem;
+						background-position: left 5px;
+						background-repeat: no-repeat;
+						
+					
+						&:hover,
+						&:focus,
+						&:active {
+							text-decoration: underline;
+							color: @wit;
+						}
+					}
+				}
+			}
+		}
+		
+		p {
+			margin-bottom: 0;
+		}
+		
+	}
 
   @media only screen and (max-width: ( @break_phone ) ) {
       .footer-widgets-1,
