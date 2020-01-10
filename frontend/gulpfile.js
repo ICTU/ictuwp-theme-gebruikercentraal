@@ -41,6 +41,28 @@ function styles(done) {
   done();
 }
 
+function baseStyles(done) {
+  //console.log(siteConfig.path);
+  console.log(fs.existsSync(siteConfig.path));
+  console.log('less/*.less');
+
+  return gulp.src('less/*.less')
+    .pipe(sourcemaps.init())
+    .pipe(less({
+      plugins: [autoprefix],
+      paths: [path.join(__dirname, 'less', 'includes', 'abstracts', 'plugins')]
+    }).on('error', function(err){
+      gutil.log(err);
+      this.emit('end');
+    }))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('/css'))
+    .pipe(notify({ message: siteConfig.name + ' LESS task complete'}))
+    .pipe(browserSync.stream());
+
+  done();
+}
+
 
 function prodAll(done) {
 
@@ -87,10 +109,11 @@ function prodAll(done) {
 function watch() {
 
   browserSync.init({
-    proxy: 'inclusie.gebruikercentraal.co.uk'
+    proxy: siteConfig.proxy
   });
 
-  gulp.watch('less/**/*.less', gulp.series(styles));
+  gulp.watch('less/**/*.less', gulp.series(baseStyles));
+  gulp.watch(siteConfig.path + 'less/**/*.less', gulp.series(styles));
 }
 
 
