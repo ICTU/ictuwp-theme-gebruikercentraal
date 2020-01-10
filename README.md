@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-3.29.2 - Footer-widget voor menu voorzien van pijltjes.
+3.29.3 - Tussenruimte footer-widgets. Logo-widget: verticale uitlijning logo's verbeterd.
 
 ## Version history
+* 3.29.3 - Tussenruimte footer-widgets. Logo-widget: verticale uitlijning logo's verbeterd.
 * 3.29.2 - Footer-widget voor menu voorzien van pijltjes.
 * 3.29.1 - Public Service nominatie-widget op homepage.
 * 3.28.1 - Styling voor 404-pagina.

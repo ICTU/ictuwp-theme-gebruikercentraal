@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.29.2
-// @desc.   Footer-widget voor menu voorzien van pijltjes.
+// @version 3.29.3
+// @desc.   Tussenruimte footer-widgets. Logo-widget: verticale uitlijning logo's verbeterd.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.29.2' );
-define( 'CHILD_THEME_DESCRIPTION', "3.29.2 - Footer-widget voor menu voorzien van pijltjes." );
+define( 'CHILD_THEME_VERSION', '3.29.3' );
+define( 'CHILD_THEME_DESCRIPTION', "3.29.3 - Tussenruimte footer-widgets. Logo-widget: verticale uitlijning logo's verbeterd." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
