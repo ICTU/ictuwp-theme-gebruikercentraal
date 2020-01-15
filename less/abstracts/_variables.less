@@ -1,0 +1,203 @@
+
+
+//========================================================================================================
+// break points
+@break_fullwidth:       	960px; // ( 63 * @padding );
+@break_show_menu_button:	830px;
+@break_tablet:          	650px;
+@break_phone:           	500px;
+@break_xlarge:              1200px; // was 960px ( 63 * @padding );
+
+
+@contentmaxwidth:			1180px;
+@contentwidth_960:			960px;
+@contentwidth_761:			761px;
+@containermaxwidth: 		1900px;
+
+// Mediaqueries
+@mobile: ~"only screen and (max-width: @{break_phone})";
+@tablet_only: ~"only screen and (min-width: @{break_phone}) and (max-width: @{break_fullwidth})";
+@tablet: ~"only screen and (min-width: @{break_phone})";
+@desktop: ~"only screen and (min-width: @{break_fullwidth})";
+@desktop-xl: ~"only screen and (min-width: @{break_xlarge})";
+@cm: ~"only screen and (min-width: 1000px)";
+
+// Gutters & Margins
+@gutter: 3rem;
+
+@spacer-default: 3rem;
+@spacer-med: 5rem;
+@spacer-large: 8rem;
+
+@max-width-content: 960px;
+@max-width-inner: 770px;
+
+//========================================================================================================
+@prem:                    	1rem;
+
+
+//========================================================================================================
+// koeleuren
+@test1:                 	red;
+@test2:                 	blue;
+@test3:                 	yellow;
+@test4:                 	green;
+@test5:                 	silver;
+@test6:                 	brown;
+@test7:                 	red;
+
+@paars:                 	#4B2974;
+@violet:                	#C42C76;
+@paars:                 	#4C2974;
+
+// alle groenen
+//@groen_1:               	#1bb24b;
+@groen_2:               	#009F33;
+@groen_3:               	#A1E4B6; // erg licht groen
+@groen_4:               	#00932F;
+
+@gc_a11y_green:        		#148839; // ook wel 'GC Green - Accessible'
+@gc_a11y_green_dark_1:		#0b732c; // ook wel 'GC Green - Darker'
+@gc_a11y_green_dark_2:		#0B732C;
+@gc_a11y_green_light_1:		pink; // lighten( @gc_a11y_green, 10% );
+@gc_a11y_green_light_2:		#E0F6E7; // voor hover
+
+@gc_a11y_orange: 			#c73d19; // ook wel 'Inclusie Accessible Orange'
+@gc_a11y_orange_less: 		#d94721; // ook wel 'Inclusie Less Accessible Orange'
+
+@gc_darkblue: 				#004152; // ook wel 'GC Dark Blue'
+@gc_darkerblue: 			#00303d; // ook wel 'GC Darker Blue'
+
+@gc_pantybrown_light: 		#f2ebe4; // ook wel 'GC PantyBrown Light'
+@gc_pantybrown: 			#e8d8c7; // ook wel 'GC PantyBrown'
+
+
+@gc_cardbordergrey: 		#D1DFE3;
+
+@gc_greyblue:				#4f7781;
+
+
+@oranje:                	#FF8005;
+@blauw:                 	#0095DA;
+@blauw3:                	#002F3E;
+@blauw4:                	#608A95;
+@blauw5:                	#005870;
+@blauw6:                	#27779C;
+
+@heelerglichtgrijs:     	#F7F7F7;
+@sitecontainer_bg:      	#DEDEDE;
+@border_color:          	#DEDEDE;
+@code-bg:               	@border_color;
+@light_gray:            	#DEDEDE;
+@border_authorbox:      	#E8E8E8;
+
+@comment-list-even:     	@wit;
+@comment-list-odd:      	#F7F7F7;
+
+@sidebar_bg:            	@wit;
+@sidebarwidget:         	@blauw3;
+@entry_bg:              	@wit;
+
+@code:                  	#1C5BB7;
+
+@txt_grijs:             	#6E6E6E;
+
+@border_grijs:          	#E0DFDF;
+
+@hover_widget_txt_color: 	@txt;
+
+@oranje:                	#F7941E; // ondermeer gebruikt voor 'vol'
+
+
+// Primary's & secondary's
+@color_primary:             #148839;
+
+
+//========================================================================================================
+// koeleuren voor de navigatiedinges
+@nav_bg:                	@wit;
+@nav_wrap_bg:           	@gc_darkblue;
+@nav_a_color:           	@wit;
+@header_bg_color:       	@gc_darkerblue;
+
+@breadcrumb_bg_color:   	@wit;
+
+@a_menu_hover_border:		#1bb24b; // onderstreping in main nav bij hover en current
+
+@bsitefooter_a_color:   	@wit; // #6D9DAA;
+
+@menu_active:           	@groen_2;
+
+@mess_ok_color:         	#1bb24b;
+@mess_ok_bg:            	lighten( @mess_ok_color, 50% );
+@mess_ok_border:        	@mess_ok_color;
+
+@mess_error_color:      	@violet;
+@mess_error_bg:         	lighten( @mess_error_color, 50% );
+@mess_error_border:     	@mess_error_color;
+@bodybgcolor:           	#fff;
+@lichtgrijs:            	#F0F0F0;
+@content_bg_color:      	@wit;
+@warning:               	#FFFEC1;
+
+//========================================================================================================
+// tekst-koeleuren, best belangrijk
+@txt:                   	@blauw3;
+@wit:                   	#fff;
+
+@meta_color:            	lighten(@txt, 10%);
+
+@a_hover:               	@violet;
+@a-content-color:       	@txt;
+@a-content-hover-color: 	@violet;
+
+//========================================================================================================
+// en button-koeleuren, ook belangrijk
+
+@button-normal:         	@gc_a11y_green;
+@button-hover:          	@wit;
+
+@button-sidebar-normal: 	@gc_a11y_green;
+@button-sidebar-hover:  	@blauw3;
+@button-sidebar-normal-color: @wit;
+
+
+/* Typografie */
+
+
+// font-stijlen en -groottes =======================================================
+@font_primary:          'montserratregular', Helvetica, Arial, sans-serif;
+@font_primary_bold:     'montserratbold', Helvetica, Arial, sans-serif;
+@font_primary_light:    'Montserrat light', Helvetica, Arial, sans-serif;
+@font_primary_semi:     'montserrat_semiboldregular', Helvetica, Arial, sans-serif;
+
+@font_secondary:        'League Gothic', Impact, Helvetica, Arial, sans-serif;
+
+
+@headerfont:			@font_secondary;
+@headerfont2:			@font_primary;
+@bodyfont:				@font_primary_light;
+@bodyfont_bold:			@font_primary_bold;
+@montserrat_semibold:   @font_primary_semi;
+
+@header_color:          #210800;
+@header_color_2:        @blauw;
+
+@fontsize_title_h1:     ( 6.8 * @basefontsize );
+@fontsize_title_h2:     ( 4.6 * @basefontsize );
+@fontsize_title_h3:     ( 2.4 * @basefontsize );
+@fontsize_title_h4:     ( 1.7 * @basefontsize );
+@fontsize_title_h5:     ( 1.6 * @basefontsize );
+@fontsize_title_h6:     ( 1.5 * @basefontsize );
+
+
+@fontsize_title_h1:     ( 3.6 * @basefontsize );
+@fontsize_title_h2:     ( 2.6 * @basefontsize );
+@fontsize_title_h3:     ( 1.8 * @basefontsize );
+
+@fontsize_title_entrytitle: @fontsize_title_h1;
+
+
+// Fonts
+
+@import "variables/_socmed.less";

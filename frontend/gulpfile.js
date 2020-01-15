@@ -19,7 +19,7 @@ const siteConfig = config[(argv.site === undefined) ? 'base' : argv.site];
 // General settings
 const autoprefix = new LessAutoprefix({browsers: ['last 2 versions']});
 
-function styles(done) {
+function styles() {
   //console.log(siteConfig.path);
   console.log(fs.existsSync(siteConfig.path));
   console.log(siteConfig.path + 'less/*.less');
@@ -28,14 +28,14 @@ function styles(done) {
     .pipe(sourcemaps.init())
     .pipe(less({
       plugins: [autoprefix],
-      paths: [path.join(__dirname, 'less', 'includes', 'abstracts', 'plugins')]
-    }).on('error', function(err){
+      paths: [path.join(__dirname, 'includes', 'abstracts', 'plugins')]
+    }).on('error', function (err) {
       gutil.log(err);
       this.emit('end');
     }))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(siteConfig.path + '/css'))
-    .pipe(notify({ message: siteConfig.name + ' LESS task complete'}))
+    .pipe(gulp.dest(siteConfig.path))
+    .pipe(notify({message: siteConfig.name + ' LESS task complete'}))
     .pipe(browserSync.stream());
 
   done();
@@ -50,58 +50,56 @@ function baseStyles(done) {
     .pipe(sourcemaps.init())
     .pipe(less({
       plugins: [autoprefix],
-      paths: [path.join(__dirname, 'less', 'includes', 'abstracts', 'plugins')]
-    }).on('error', function(err){
+      paths: ['less/styles.less']
+    }).on('error', function (err) {
       gutil.log(err);
       this.emit('end');
     }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('/css'))
-    .pipe(notify({ message: siteConfig.name + ' LESS task complete'}))
+    .pipe(notify({message: siteConfig.name + ' LESS task complete'}))
     .pipe(browserSync.stream());
 
   done();
 }
 
-
 function prodAll(done) {
 
   for (var obj in config) {
-    const sitePath = config[obj].path;
-    const siteName = config[obj].name;
+    var sitePath = config[obj].path;
+    var siteName = config[obj].name;
 
-    const pathExists = fs.existsSync(sitePath);
+    var pathExists = fs.existsSync(sitePath);
 
-    try {
+    if (pathExists && config.hasOwnProperty(obj)) {
+      try {
 
-      if (pathExists) {
-
-        const siteProd = function (cb) {
+        var siteProd = function (cb) {
           console.log(sitePath + 'less/*.less')
-          gulp.src(sitePath + 'less/*.less')
-            .pipe(less({
-              plugins: [autoprefix],
-              paths: [path.join(__dirname, 'less', 'includes', 'abstracts', 'plugins')]
-            }).on('error', function(err){
-              gutil.log(err);
-              this.emit('end');
-            }))
+          gulp.src(sitePath + 'less/*.less').pipe(less({
+            plugins: [autoprefix],
+            paths: [path.join(__dirname, 'less', 'includes', 'abstracts', 'plugins')]
+          }).on('error', function (err) {
+            gutil.log(err);
+            this.emit('end');
+          }))
             .pipe(gulp.dest(sitePath + 'css'))
-            .pipe(notify({ message: siteName + ' LESS task complete'}))
+            .pipe(notify({message: siteName + ' LESS task complete'}))
 
           cb();
         };
 
         return siteProd();
-      } else {
-        console.log('Site ' + name + ' not found');
       }
+      catch (error) {
+        done();
+      }
+    } else {
+      console.log('Site ' + name + ' not found');
     }
-    catch (error) {
-      done();
-    }
+    done();
+
   }
-  done();
 }
 
 
