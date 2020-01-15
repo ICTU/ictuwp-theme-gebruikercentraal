@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.23.1
-// @desc.   Step table, search resultpagina, bugfixes voor soc.media knopjes.
+// @version 3.29.4
+// @desc.   Stappenplan-functionaliteit verplaatst naar pagina-template 'page_stappenplan'.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -1433,9 +1433,9 @@ acf_add_local_field_group(array(
 	'location' => array(
 		array(
 			array(
-				'param' => 'post_type',
+				'param' => 'page_template',
 				'operator' => '==',
-				'value' => 'page',
+				'value' => 'page_stappenplan.php',
 			),
 		),
 	),

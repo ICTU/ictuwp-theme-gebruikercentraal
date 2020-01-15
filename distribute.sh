@@ -75,19 +75,19 @@ find . -name ‘*.bak’ -type f -delete
 echo 'naar sentia folder: accept'
 rsync -r -a -v --delete '/shared-paul-files/Webs/temp/' '/shared-paul-files/Webs/ICTU/Gebruiker Centraal/sentia/accept/www/wp-content/themes/gebruiker-centraal/'
 
-echo 'naar development folder, versiebackup: 3.29.1'
-rsync -r -a -v --delete '/shared-paul-files/Webs/temp/' '/shared-paul-files/Webs/ICTU/Gebruiker Centraal/development/wp-content/themes/xxx_old_versions/gebruiker-centraal-3.29.1/'
+echo 'naar development folder, versiebackup: 3.29.4'
+rsync -r -a -v --delete '/shared-paul-files/Webs/temp/' '/shared-paul-files/Webs/ICTU/Gebruiker Centraal/development/wp-content/themes/xxx_old_versions/gebruiker-centraal-3.29.4/'
 
-echo 'naar sentia folder: accept, versiebackup 3.29.1'
-rsync -r -a -v --delete '/shared-paul-files/Webs/temp/' '/shared-paul-files/Webs/ICTU/Gebruiker Centraal/sentia/accept/www/wp-content/themes/XXX_oude_versies/gebruiker-centraal-3.29.1/'
+echo 'naar sentia folder: accept, versiebackup 3.29.4'
+rsync -r -a -v --delete '/shared-paul-files/Webs/temp/' '/shared-paul-files/Webs/ICTU/Gebruiker Centraal/sentia/accept/www/wp-content/themes/XXX_oude_versies/gebruiker-centraal-3.29.4/'
 
 
 
 echo 'naar sentia folder: live'
 rsync -r -a -v --delete '/shared-paul-files/Webs/temp/' '/shared-paul-files/Webs/ICTU/Gebruiker Centraal/sentia/live/www/wp-content/themes/gebruiker-centraal/'
 
-echo 'naar sentia folder: live, versiebackup 3.29.1'
-rsync -r -a -v --delete '/shared-paul-files/Webs/temp/' '/shared-paul-files/Webs/ICTU/Gebruiker Centraal/sentia/live/www/wp-content/themes/XXX_oude_versies/gebruiker-centraal-3.29.1/'
+echo 'naar sentia folder: live, versiebackup 3.29.4'
+rsync -r -a -v --delete '/shared-paul-files/Webs/temp/' '/shared-paul-files/Webs/ICTU/Gebruiker Centraal/sentia/live/www/wp-content/themes/XXX_oude_versies/gebruiker-centraal-3.29.4/'
 
 
 # remove temp dir
