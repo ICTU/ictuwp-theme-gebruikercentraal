@@ -1069,7 +1069,9 @@ if (! function_exists( 'gc_wbvb_sitemap_show_cpt_content' ) ) {
 				'echo'      => 1,
 			);
 
+			echo '<ul>';
 			wp_get_archives( $args ); 
+			echo '</ul>';
 			
 		}
 	}
