@@ -68,6 +68,9 @@ License URI: http://www.opensource.org/licenses/gpl-license.php
 /*
 Imports
 ---------------------------------------------------------------------------------------------------- */
+@import "includes/_colors.less";                 // colors
+
+
 @import "00-mixins.less";                        // colors, sizes */
 @import "02-normalize.less";                     // Baseline Normalize */
 @import "30-text-styles.less";                   // font-styles, shared with admin editor-styles.less */
@@ -87,6 +90,8 @@ Imports
 
 // componenten
 @import "components/_page_stappenplan.less";    // layout voor pagina template 'page_stappenplan'
+@import "components/_card_tipkaart.less";       // styling voor optimaal-digitaal cards
+
 
 
 
@@ -1309,3 +1314,6 @@ CSS overwrites for plugins
 
 // stappenplan-css
 ._page_stappenplan();
+
+// styling voor optimaal-digitaal cards
+.tipcardstyling();
