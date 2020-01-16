@@ -2,14 +2,13 @@
 // Gebruiker Centraal - less/components/_card_tipkaart.less
 // ----------------------------------------------------------------------------------
 // CSS specifiek voor tipcards van Optimaal Digitaal.
-// wellicht herbruikbaar
 // ----------------------------------------------------------------------------------
-// @package   ictu-gc-posttypes-inclusie
-// @author    Paul van Buuren
-// @license   GPL-2.0+
-// @version   0.0.10
-// @desc.     CPT procestips toegevoegd. Mogelijkheid OD-tips toe te voegen op stap-pagina.
-// @link      https://github.com/ICTU/Gebruiker-Centraal---Inclusie---custom-post-types-taxonomies
+// @package gebruiker-centraal
+// @author  Paul van Buuren
+// @license GPL-2.0+
+// @version 3.30.1
+// @desc.   Iconen en kleuren voor Optimaal Digitaal-cards toegevoegd.
+// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
 
@@ -109,27 +108,51 @@
 			}
 		}
 
-		&.inclusie {
-			background-color: @inclusierood;
-			
-			a {
-				color: @wit;
-				&:hover,
-				&:active,
-				&:focus {
-					color: @wit;
-				}
-				&:before {
-					background-color: darken( @inclusierood, 10% );
-				}
-			}
+		.odcard_color_icon( commitment, @draagvlak_groen, @draagvlak_groen_donker, @wit, 'images/optimaal-digitaal/icon-draagvlak.svg' );
+		.odcard_color_icon( draagvlak, @draagvlak_groen, @draagvlak_groen_donker, @wit, 'images/optimaal-digitaal/icon-draagvlak.svg' );
+		.odcard_color_icon( gebruiksgemak, @gebruiksgemak_paars, @gebruiksgemak_paars_donker, @wit, 'images/optimaal-digitaal/icon-mobiel.svg' );
+		.odcard_color_icon( informatieveiligheid, @informatieveiligheid_magenta, @informatieveiligheid_magenta_donker, @wit, 'images/optimaal-digitaal/icon-mobiel.svg' );
+		.odcard_color_icon( kanaalsturing, @kanaalsturing_oranje, @kanaalsturing_oranje_donker, @wit, 'images/optimaal-digitaal/icon-kannibaalsturing.svg' );
+		.odcard_color_icon( procesaanpak, @procesaanpak_azuur, @procesaanpak_azuur_donker, @wit, 'images/optimaal-digitaal/icon-procesaanpak.svg' );
+		.odcard_color_icon( samenwerking, @samenwerking_blauw, @samenwerking_blauw_donker, @wit, 'images/optimaal-digitaal/icon-deel.svg' );
+		.odcard_color_icon( inclusie, @inclusierood, darken( @inclusierood, 10% ), @wit, 'images/optimaal-digitaal/icon-inclusie.svg' );
 
-			.contentinfo {
-				background-image: url('../images/svg/thema-inclusie.svg');
-			}
-		}
-		
 		
 	}
 
 }
+
+//=========================================================================================================
+// locale mixin voor het combineren van een class met de juiste optimaal-digitaal-icoontjes
+// W.I.P
+
+.odcard_color_icon(
+	@classname,
+	@backgroundcolor: red,
+	@backgroundcolor_dark: red,
+	@fontcolor: @wit,
+	@odicon: '../images/svg/thema-inclusie.svg' ) {
+
+	&.@{classname} {
+		background-color: @backgroundcolor;
+		
+		a {
+			color: @fontcolor;
+			
+			&:hover,
+			&:active,
+			&:focus {
+				color: @fontcolor;
+			}
+			&:before {
+				background-color: @backgroundcolor_dark;
+			}
+		}
+		
+		.contentinfo {
+			background-image: ~"url('@{odicon}')";
+		}
+	}
+}
+
+//=========================================================================================================
