@@ -1,0 +1,14 @@
+{
+  "base": {
+    "name": "GC - Base Theme",
+    "path": "../",
+    "dest": "../",
+    "proxy": "live-gebruikercentraal.co.uk"
+  },
+  "inclusie": {
+    "name": "Inclusie - Plugin",
+    "path": "../../../plugins/ictu-gc-posttypes-inclusie/",
+    "dest": "../../../plugins/ictu-gc-posttypes-inclusie/css",
+    "proxy": "inclusie.gebruikercentraal.co.uk/"
+  }
+}

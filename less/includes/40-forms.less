@@ -121,38 +121,8 @@
   .sidebar,
   .footer-widgets {
 
-		input[type="text"],
-		input[type="password"],
-		input[type="color"],
-		input[type="date"],
-		input[type="datetime"],
-		input[type="datetime-local"],
-		input[type="email"],
-		input[type="month"],
-		input[type="number"],
-		input[type="range"],
-		input[type="tel"],
-		input[type="time"],
-		input[type="url"],
-		input[type="week"],
-		input[type="search"] {
+		input:not([type="submit"]:not[type="button"]) {
 			border-color: lighten(@sidebarwidget, 10%);
-		}
-		
-		button,
-		input[type="button"],
-		input[type="reset"],
-		input[type="submit"] {
-			.button_font_shared( 24 );
-
-			&:hover,
-			&:active,
-			&:focus {
-				color: @txt;
-				border-color: @button-sidebar-normal;
-			    background: @wit url('images/icon-knop-groen-hover.svg?asd') no-repeat right center;
-				text-decoration: none;
-			}
 		}
 	}
   

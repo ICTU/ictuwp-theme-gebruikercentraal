@@ -90,7 +90,6 @@ function gc_wbvb_append_attributes_main_nav($nav_output, $nav, $args) {
 
 }
 
-
 //========================================================================================================
 
 /**
@@ -722,7 +721,6 @@ function gc_shared_add_debug_css() {
 add_filter('genesis_attr_title-area', 'gc_add_siteclass');
 
 function gc_add_siteclass($attributes) {
-
 	$class 		= "gebruikercentraal";
 
 	if ( 'conference.gebruikercentraal.co.uk' == $_SERVER["HTTP_HOST"] || 'accept.conference.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] || 'conference.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] ) {
@@ -750,6 +748,7 @@ function gc_add_siteclass($attributes) {
 
 }
 
+
 //========================================================================================================
 
 //* Add class to .site-heade
@@ -768,11 +767,8 @@ function gc_shared_add_menu_script() {
 
 	if ( ! is_admin() ) {
 
-		if ( WP_DEBUG ) {
-			wp_enqueue_script( 'gc-shared-menu', WBVB_THEMEFOLDER . '/js/menu.js', '', CHILD_THEME_VERSION, true );
-		} else {
-			wp_enqueue_script( 'gc-shared-menu', WBVB_THEMEFOLDER . '/js/min/menu-min.js', '', '', true );
-		}
+	  wp_enqueue_script( 'gc-shared-menu', WBVB_THEMEFOLDER . '/js/gc-main-min.js', '', '', true );
+
 
 		$params = array(
 			'showmenu'	=> _x( 'Show menu', 'Screen reader text for menu', 'gebruikercentraal' ),
