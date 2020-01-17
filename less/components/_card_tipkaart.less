@@ -18,7 +18,7 @@
 .tipcardstyling() {
 
 // allemaal nog maar voorlopig dit...
-	.tipkaart {
+	.card.tipkaart {
 		text-align: center;
 		position: relative;
 		background: @gc_cardbordergrey;
@@ -30,7 +30,7 @@
 		a {
 			text-decoration: none;
 			color: @txt;
-			border: 5px solid transparent;
+			border: 3px solid transparent;
 			display: block;
 			
 			&:before {
@@ -59,11 +59,14 @@
 				}
 			}
 		}
+		.inner {
+			padding: 2rem;
+		}
 
 		.tipnummer {
 			font-family: @headerfont;
 			text-transform: uppercase;
-			.font-size(20);
+			.font-size(22);
 			padding-top: 1rem;
 			padding-bottom: 1rem;
 			
@@ -88,14 +91,15 @@
 		h3, h2 {
 			min-height: 15rem;
 			font-family: @bodyfont_bold;
-			.font-size(36);
+			.font-size(28);
 			padding-top: 1rem;
 			padding-bottom: 1rem;
+			line-height: 1.2;
 		}
 		
 		.contentinfo {
 			font-family: @headerfont;
-			.font-size(28);
+			.font-size(24);
 			text-transform: uppercase;
 			position: relative;
 			background-position: center top;
@@ -139,20 +143,29 @@
 		a {
 			color: @fontcolor;
 			
+			&:before {
+				background-color: @backgroundcolor_dark;
+			}
+
 			&:hover,
 			&:active,
 			&:focus {
 				color: @fontcolor;
+				border-color: @backgroundcolor_dark;
+				&:before {
+					border-color: @backgroundcolor_dark;
+				}
 			}
-			&:before {
-				background-color: @backgroundcolor_dark;
-			}
+			
 		}
 		
 		.contentinfo {
 			background-image: ~"url('@{odicon}')";
+			background-size: 90px 90px;
+			background-position: center top;
 		}
 	}
 }
 
 //=========================================================================================================
+

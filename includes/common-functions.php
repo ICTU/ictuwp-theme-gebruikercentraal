@@ -830,7 +830,41 @@ function gc_shared_add_id_to_search_form( $form ) {
 }
 
 //========================================================================================================
+// ervoor zorgen dat specifieke Optimaal Digitaal-termen op de juiste manier afgebroken kunnen worden
 
+if (!function_exists('od_wbvb_custom_post_title')) {
+	
+	function od_wbvb_custom_post_title( $title ) {
+	
+		$pattern      = '/erantwoordelijkh/i'; // verantwoordelijkheid
+		$replacement  = 'erant&shy;woorde&shy;lijkh';
+		$title        = preg_replace( $pattern, $replacement, $title );  
+		
+		$pattern      = '/emeenscha/i'; // gemeenschappelijk,  gemeenschap
+		$replacement  = 'emeen&shy;scha';
+		$title        = preg_replace( $pattern, $replacement, $title );  
+		
+		$pattern      = '/ersoonsge/i'; // persoonsgegevens
+		$replacement  = 'ersoons&shy;ge';
+		$title        = preg_replace( $pattern, $replacement, $title );  
+		
+		$pattern      = '/informatiev/i'; // informatieveiligheid
+		$replacement  = 'informatie&shy;v';
+		$title        = preg_replace( $pattern, $replacement, $title );  
+		
+		$pattern      = '/ortermijnd/i'; // kortetermijndenken
+		$replacement  = 'ortermijn&shy;d';
+		$title        = preg_replace( $pattern, $replacement, $title );  
+		
+		$pattern      = '/ebruiksvrien/i';
+		$replacement  = 'ebruiks&shy;vrien';
+		$title        = preg_replace( $pattern, $replacement, $title );  
+		
+		return $title;
+	
+	}
+	
+}
 
 //========================================================================================================
 

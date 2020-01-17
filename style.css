@@ -9379,22 +9379,22 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
     top: 3px;
   }
 }
-.tipkaart {
+.card.tipkaart {
   text-align: center;
   position: relative;
   background: #D1DFE3;
   padding: 0;
 }
-.tipkaart * {
+.card.tipkaart * {
   padding: 0;
 }
-.tipkaart a {
+.card.tipkaart a {
   text-decoration: none;
   color: #002F3E;
-  border: 5px solid transparent;
+  border: 3px solid transparent;
   display: block;
 }
-.tipkaart a:before {
+.card.tipkaart a:before {
   position: absolute;
   content: ' ';
   display: block;
@@ -9408,198 +9408,266 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
   clip-path: polygon(0 14%, 100% 0, 100% 100%, 0% 100%);
   speak: none;
 }
-.tipkaart a:hover,
-.tipkaart a:active,
-.tipkaart a:focus {
+.card.tipkaart a:hover,
+.card.tipkaart a:active,
+.card.tipkaart a:focus {
   text-decoration: underline;
   color: #002F3E;
   border-color: #fff;
 }
-.tipkaart a:hover:before,
-.tipkaart a:active:before,
-.tipkaart a:focus:before {
+.card.tipkaart a:hover:before,
+.card.tipkaart a:active:before,
+.card.tipkaart a:focus:before {
   border-color: #fff;
 }
-.tipkaart .tipnummer {
+.card.tipkaart .inner {
+  padding: 2rem;
+}
+.card.tipkaart .tipnummer {
   font-family: 'League Gothic', Impact, Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  font-size: 20px;
-  font-size: 2rem;
+  font-size: 22px;
+  font-size: 2.2rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.tipkaart .tipnummer:after,
-.tipkaart .tipnummer:before {
+.card.tipkaart .tipnummer:after,
+.card.tipkaart .tipnummer:before {
   display: inline-block;
   transform: translateY(-9px);
   line-height: 1;
   speak: none;
 }
-.tipkaart .tipnummer:before {
+.card.tipkaart .tipnummer:before {
   content: '_ ';
   margin-right: 8px;
 }
-.tipkaart .tipnummer:after {
+.card.tipkaart .tipnummer:after {
   content: ' _';
   margin-left: 8px;
 }
-.tipkaart h3,
-.tipkaart h2 {
+.card.tipkaart h3,
+.card.tipkaart h2 {
   min-height: 15rem;
   font-family: 'montserratbold', Helvetica, Arial, sans-serif;
-  font-size: 36px;
-  font-size: 3.6rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-.tipkaart .contentinfo {
-  font-family: 'League Gothic', Impact, Helvetica, Arial, sans-serif;
   font-size: 28px;
   font-size: 2.8rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  line-height: 1.2;
+}
+.card.tipkaart .contentinfo {
+  font-family: 'League Gothic', Impact, Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-size: 2.4rem;
   text-transform: uppercase;
   position: relative;
   background-position: center top;
   background-repeat: no-repeat;
 }
-.tipkaart .contentinfo span {
+.card.tipkaart .contentinfo span {
   margin-top: 8rem;
   margin-bottom: 1rem;
   display: inline-block;
 }
-.tipkaart.commitment {
+.card.tipkaart.commitment {
   background-color: #25B34B;
 }
-.tipkaart.commitment a {
+.card.tipkaart.commitment a {
   color: #fff;
 }
-.tipkaart.commitment a:hover,
-.tipkaart.commitment a:active,
-.tipkaart.commitment a:focus {
-  color: #fff;
-}
-.tipkaart.commitment a:before {
+.card.tipkaart.commitment a:before {
   background-color: #1D9D42;
 }
-.tipkaart.commitment .contentinfo {
-  background-image: url('images/optimaal-digitaal/icon-draagvlak.svg');
+.card.tipkaart.commitment a:hover,
+.card.tipkaart.commitment a:active,
+.card.tipkaart.commitment a:focus {
+  color: #fff;
+  border-color: #1D9D42;
 }
-.tipkaart.draagvlak {
+.card.tipkaart.commitment a:hover:before,
+.card.tipkaart.commitment a:active:before,
+.card.tipkaart.commitment a:focus:before {
+  border-color: #1D9D42;
+}
+.card.tipkaart.commitment .contentinfo {
+  background-image: url('images/optimaal-digitaal/icon-draagvlak.svg');
+  background-size: 90px 90px;
+  background-position: center top;
+}
+.card.tipkaart.draagvlak {
   background-color: #25B34B;
 }
-.tipkaart.draagvlak a {
+.card.tipkaart.draagvlak a {
   color: #fff;
 }
-.tipkaart.draagvlak a:hover,
-.tipkaart.draagvlak a:active,
-.tipkaart.draagvlak a:focus {
-  color: #fff;
-}
-.tipkaart.draagvlak a:before {
+.card.tipkaart.draagvlak a:before {
   background-color: #1D9D42;
 }
-.tipkaart.draagvlak .contentinfo {
-  background-image: url('images/optimaal-digitaal/icon-draagvlak.svg');
+.card.tipkaart.draagvlak a:hover,
+.card.tipkaart.draagvlak a:active,
+.card.tipkaart.draagvlak a:focus {
+  color: #fff;
+  border-color: #1D9D42;
 }
-.tipkaart.gebruiksgemak {
+.card.tipkaart.draagvlak a:hover:before,
+.card.tipkaart.draagvlak a:active:before,
+.card.tipkaart.draagvlak a:focus:before {
+  border-color: #1D9D42;
+}
+.card.tipkaart.draagvlak .contentinfo {
+  background-image: url('images/optimaal-digitaal/icon-draagvlak.svg');
+  background-size: 90px 90px;
+  background-position: center top;
+}
+.card.tipkaart.gebruiksgemak {
   background-color: #4D2B74;
 }
-.tipkaart.gebruiksgemak a {
+.card.tipkaart.gebruiksgemak a {
   color: #fff;
 }
-.tipkaart.gebruiksgemak a:hover,
-.tipkaart.gebruiksgemak a:active,
-.tipkaart.gebruiksgemak a:focus {
-  color: #fff;
-}
-.tipkaart.gebruiksgemak a:before {
+.card.tipkaart.gebruiksgemak a:before {
   background-color: #361454;
 }
-.tipkaart.gebruiksgemak .contentinfo {
-  background-image: url('images/optimaal-digitaal/icon-mobiel.svg');
+.card.tipkaart.gebruiksgemak a:hover,
+.card.tipkaart.gebruiksgemak a:active,
+.card.tipkaart.gebruiksgemak a:focus {
+  color: #fff;
+  border-color: #361454;
 }
-.tipkaart.informatieveiligheid {
+.card.tipkaart.gebruiksgemak a:hover:before,
+.card.tipkaart.gebruiksgemak a:active:before,
+.card.tipkaart.gebruiksgemak a:focus:before {
+  border-color: #361454;
+}
+.card.tipkaart.gebruiksgemak .contentinfo {
+  background-image: url('images/optimaal-digitaal/icon-mobiel.svg');
+  background-size: 90px 90px;
+  background-position: center top;
+}
+.card.tipkaart.informatieveiligheid {
   background-color: #C42D77;
 }
-.tipkaart.informatieveiligheid a {
+.card.tipkaart.informatieveiligheid a {
   color: #fff;
 }
-.tipkaart.informatieveiligheid a:hover,
-.tipkaart.informatieveiligheid a:active,
-.tipkaart.informatieveiligheid a:focus {
-  color: #fff;
-}
-.tipkaart.informatieveiligheid a:before {
+.card.tipkaart.informatieveiligheid a:before {
   background-color: #B1266B;
 }
-.tipkaart.informatieveiligheid .contentinfo {
-  background-image: url('images/optimaal-digitaal/icon-mobiel.svg');
+.card.tipkaart.informatieveiligheid a:hover,
+.card.tipkaart.informatieveiligheid a:active,
+.card.tipkaart.informatieveiligheid a:focus {
+  color: #fff;
+  border-color: #B1266B;
 }
-.tipkaart.kanaalsturing {
+.card.tipkaart.informatieveiligheid a:hover:before,
+.card.tipkaart.informatieveiligheid a:active:before,
+.card.tipkaart.informatieveiligheid a:focus:before {
+  border-color: #B1266B;
+}
+.card.tipkaart.informatieveiligheid .contentinfo {
+  background-image: url('images/optimaal-digitaal/icon-mobiel.svg');
+  background-size: 90px 90px;
+  background-position: center top;
+}
+.card.tipkaart.kanaalsturing {
   background-color: #E58020;
 }
-.tipkaart.kanaalsturing a {
+.card.tipkaart.kanaalsturing a {
   color: #fff;
 }
-.tipkaart.kanaalsturing a:hover,
-.tipkaart.kanaalsturing a:active,
-.tipkaart.kanaalsturing a:focus {
-  color: #fff;
-}
-.tipkaart.kanaalsturing a:before {
+.card.tipkaart.kanaalsturing a:before {
   background-color: #F89521;
 }
-.tipkaart.kanaalsturing .contentinfo {
-  background-image: url('images/optimaal-digitaal/icon-kannibaalsturing.svg');
+.card.tipkaart.kanaalsturing a:hover,
+.card.tipkaart.kanaalsturing a:active,
+.card.tipkaart.kanaalsturing a:focus {
+  color: #fff;
+  border-color: #F89521;
 }
-.tipkaart.procesaanpak {
+.card.tipkaart.kanaalsturing a:hover:before,
+.card.tipkaart.kanaalsturing a:active:before,
+.card.tipkaart.kanaalsturing a:focus:before {
+  border-color: #F89521;
+}
+.card.tipkaart.kanaalsturing .contentinfo {
+  background-image: url('images/optimaal-digitaal/icon-kannibaalsturing.svg');
+  background-size: 90px 90px;
+  background-position: center top;
+}
+.card.tipkaart.procesaanpak {
   background-color: #00B5AD;
 }
-.tipkaart.procesaanpak a {
+.card.tipkaart.procesaanpak a {
   color: #fff;
 }
-.tipkaart.procesaanpak a:hover,
-.tipkaart.procesaanpak a:active,
-.tipkaart.procesaanpak a:focus {
-  color: #fff;
-}
-.tipkaart.procesaanpak a:before {
+.card.tipkaart.procesaanpak a:before {
   background-color: #009F98;
 }
-.tipkaart.procesaanpak .contentinfo {
-  background-image: url('images/optimaal-digitaal/icon-procesaanpak.svg');
+.card.tipkaart.procesaanpak a:hover,
+.card.tipkaart.procesaanpak a:active,
+.card.tipkaart.procesaanpak a:focus {
+  color: #fff;
+  border-color: #009F98;
 }
-.tipkaart.samenwerking {
+.card.tipkaart.procesaanpak a:hover:before,
+.card.tipkaart.procesaanpak a:active:before,
+.card.tipkaart.procesaanpak a:focus:before {
+  border-color: #009F98;
+}
+.card.tipkaart.procesaanpak .contentinfo {
+  background-image: url('images/optimaal-digitaal/icon-procesaanpak.svg');
+  background-size: 90px 90px;
+  background-position: center top;
+}
+.card.tipkaart.samenwerking {
   background-color: #0093D2;
 }
-.tipkaart.samenwerking a {
+.card.tipkaart.samenwerking a {
   color: #fff;
 }
-.tipkaart.samenwerking a:hover,
-.tipkaart.samenwerking a:active,
-.tipkaart.samenwerking a:focus {
-  color: #fff;
-}
-.tipkaart.samenwerking a:before {
+.card.tipkaart.samenwerking a:before {
   background-color: #0086C0;
 }
-.tipkaart.samenwerking .contentinfo {
-  background-image: url('images/optimaal-digitaal/icon-deel.svg');
+.card.tipkaart.samenwerking a:hover,
+.card.tipkaart.samenwerking a:active,
+.card.tipkaart.samenwerking a:focus {
+  color: #fff;
+  border-color: #0086C0;
 }
-.tipkaart.inclusie {
+.card.tipkaart.samenwerking a:hover:before,
+.card.tipkaart.samenwerking a:active:before,
+.card.tipkaart.samenwerking a:focus:before {
+  border-color: #0086C0;
+}
+.card.tipkaart.samenwerking .contentinfo {
+  background-image: url('images/optimaal-digitaal/icon-deel.svg');
+  background-size: 90px 90px;
+  background-position: center top;
+}
+.card.tipkaart.inclusie {
   background-color: #D94721;
 }
-.tipkaart.inclusie a {
+.card.tipkaart.inclusie a {
   color: #fff;
 }
-.tipkaart.inclusie a:hover,
-.tipkaart.inclusie a:active,
-.tipkaart.inclusie a:focus {
-  color: #fff;
-}
-.tipkaart.inclusie a:before {
+.card.tipkaart.inclusie a:before {
   background-color: #ad391a;
 }
-.tipkaart.inclusie .contentinfo {
+.card.tipkaart.inclusie a:hover,
+.card.tipkaart.inclusie a:active,
+.card.tipkaart.inclusie a:focus {
+  color: #fff;
+  border-color: #ad391a;
+}
+.card.tipkaart.inclusie a:hover:before,
+.card.tipkaart.inclusie a:active:before,
+.card.tipkaart.inclusie a:focus:before {
+  border-color: #ad391a;
+}
+.card.tipkaart.inclusie .contentinfo {
   background-image: url('images/optimaal-digitaal/icon-inclusie.svg');
+  background-size: 90px 90px;
+  background-position: center top;
 }
 /*# sourceMappingURL=style.css.map */
