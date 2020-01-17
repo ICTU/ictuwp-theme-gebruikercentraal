@@ -45,7 +45,6 @@ document.body.className = c;
 })();
 //]]>
 </script>
-<noscript>JavaScript staat uit.</noscript>
 		<?php
 	}
 }

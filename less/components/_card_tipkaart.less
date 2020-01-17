@@ -1,0 +1,171 @@
+
+// Gebruiker Centraal - less/components/_card_tipkaart.less
+// ----------------------------------------------------------------------------------
+// CSS specifiek voor tipcards van Optimaal Digitaal.
+// ----------------------------------------------------------------------------------
+// @package gebruiker-centraal
+// @author  Paul van Buuren
+// @license GPL-2.0+
+// @version 3.30.1
+// @desc.   Iconen en kleuren voor Optimaal Digitaal-cards toegevoegd.
+// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+
+
+
+
+@tipkleurhoogte: 10rem;
+
+.tipcardstyling() {
+
+// allemaal nog maar voorlopig dit...
+	.card.tipkaart {
+		text-align: center;
+		position: relative;
+		background: @gc_cardbordergrey;
+		padding: 0;
+		
+		* {
+			padding: 0;
+		}
+		a {
+			text-decoration: none;
+			color: @txt;
+			border: 3px solid transparent;
+			display: block;
+			
+			&:before {
+				position: absolute;
+				content: ' ';
+				display: block;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				height: @tipkleurhoogte;
+				border: 5px solid transparent;
+				border-top-style: none;
+				background-color: darken( @gc_cardbordergrey, 10% );
+				clip-path: polygon(0 14%, 100% 0, 100% 100%, 0% 100%);
+				speak: none;
+			}
+			
+			&:hover,
+			&:active,
+			&:focus {
+				text-decoration: underline;
+				color: @txt;
+				border-color: @wit;
+				&:before {
+					border-color: @wit;
+				}
+			}
+		}
+		.inner {
+			padding: 2rem;
+		}
+
+		.tipnummer {
+			font-family: @headerfont;
+			text-transform: uppercase;
+			.font-size(22);
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+			
+			&:after,
+			&:before {
+				display: inline-block;
+				transform: translateY(-9px);
+				line-height: 1;
+				speak: none;
+			}
+			
+			&:before {
+				content: '_ ';
+				margin-right: 8px;
+			}
+			&:after {
+				content: ' _';
+				margin-left: 8px;
+			}
+		}
+		
+		h3, h2 {
+			min-height: 15rem;
+			font-family: @bodyfont_bold;
+			.font-size(28);
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+			line-height: 1.2;
+		}
+		
+		.contentinfo {
+			font-family: @headerfont;
+			.font-size(24);
+			text-transform: uppercase;
+			position: relative;
+			background-position: center top;
+			background-repeat: no-repeat;
+
+			span {
+				margin-top: 8rem;
+				margin-bottom: 1rem;
+				display: inline-block;
+			}
+		}
+
+		.odcard_color_icon( commitment, @draagvlak_groen, @draagvlak_groen_donker, @wit, 'images/optimaal-digitaal/icon-draagvlak.svg' );
+		.odcard_color_icon( draagvlak, @draagvlak_groen, @draagvlak_groen_donker, @wit, 'images/optimaal-digitaal/icon-draagvlak.svg' );
+		.odcard_color_icon( gebruiksgemak, @gebruiksgemak_paars, @gebruiksgemak_paars_donker, @wit, 'images/optimaal-digitaal/icon-mobiel.svg' );
+		.odcard_color_icon( informatieveiligheid, @informatieveiligheid_magenta, @informatieveiligheid_magenta_donker, @wit, 'images/optimaal-digitaal/icon-mobiel.svg' );
+		.odcard_color_icon( kanaalsturing, @kanaalsturing_oranje, @kanaalsturing_oranje_donker, @wit, 'images/optimaal-digitaal/icon-kannibaalsturing.svg' );
+		.odcard_color_icon( procesaanpak, @procesaanpak_azuur, @procesaanpak_azuur_donker, @wit, 'images/optimaal-digitaal/icon-procesaanpak.svg' );
+		.odcard_color_icon( samenwerking, @samenwerking_blauw, @samenwerking_blauw_donker, @wit, 'images/optimaal-digitaal/icon-deel.svg' );
+		.odcard_color_icon( inclusie, @inclusierood, darken( @inclusierood, 10% ), @wit, 'images/optimaal-digitaal/icon-inclusie.svg' );
+
+		
+	}
+
+}
+
+//=========================================================================================================
+// locale mixin voor het combineren van een class met de juiste optimaal-digitaal-icoontjes
+// W.I.P
+
+.odcard_color_icon(
+	@classname,
+	@backgroundcolor: red,
+	@backgroundcolor_dark: red,
+	@fontcolor: @wit,
+	@odicon: '../images/svg/thema-inclusie.svg' ) {
+
+	&.@{classname} {
+		background-color: @backgroundcolor;
+		
+		a {
+			color: @fontcolor;
+			
+			&:before {
+				background-color: @backgroundcolor_dark;
+			}
+
+			&:hover,
+			&:active,
+			&:focus {
+				color: @fontcolor;
+				border-color: @backgroundcolor_dark;
+				&:before {
+					border-color: @backgroundcolor_dark;
+				}
+			}
+			
+		}
+		
+		.contentinfo {
+			background-image: ~"url('@{odicon}')";
+			background-size: 90px 90px;
+			background-position: center top;
+		}
+	}
+}
+
+//=========================================================================================================
+

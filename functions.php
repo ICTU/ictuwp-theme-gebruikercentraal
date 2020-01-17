@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.29.4
-// @desc.   Stappenplan-functionaliteit verplaatst naar pagina-template 'page_stappenplan'.
+// @version 3.30.1
+// @desc.   Iconen en kleuren voor Optimaal Digitaal-cards toegevoegd.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '3.29.4' );
-define( 'CHILD_THEME_DESCRIPTION', "3.29.4 - Stappenplan-functionaliteit verplaatst naar pagina-template 'page_stappenplan'." );
+define( 'CHILD_THEME_VERSION', '3.30.1' );
+define( 'CHILD_THEME_DESCRIPTION', "3.30.1 - Iconen en kleuren voor Optimaal Digitaal-cards toegevoegd." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
