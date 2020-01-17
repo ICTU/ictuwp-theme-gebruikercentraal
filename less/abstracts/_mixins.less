@@ -29,105 +29,18 @@
   color: @txt;
 }
 
-// basisdingen om mee te kunnen rekenen ============================================
-@pixel:                 	1px;
-@viewport:              	100vw;
-@basefontsize:          	10;
-@basefont:              	( @basefontsize * @pixel );
-
-@bigmargin:             	0;
-
-@widget_area_button:    	40px;
-
-@sidebar_marginright:   	( 4 * @padding );
-@sidebar_margin_top:    	-143px;
-@sidebar_width:         	( 17 * @padding );
-
-@logo_mobile_width:			55px;
-@logo_mobile_padding:		( @logo_mobile_width + 16px );
-@logo_mobile_height:		55px;
-
-@logo_desktop_width:		64px;
-@logo_desktop_padding:		( @logo_desktop_width + 16px );
-@logo_desktop_height:		64px;
-
-@logogc_desktop_width:		116px;
-@logogc_desktop_padding:	( @logogc_desktop_width + 16px );
-@logogc_desktop_height:		68px;
-
-@logogc_mobile_width:		60px;
-@logogc_mobile_height:		38px;
-
-@gutter:                	16px;
-@padding:               	16px;
-@contentpadding:        	@padding;
-
-
-@position_navbar:       	180px;
-@height_navbar:         	43px;
-@adminbar:              	32;
-@headerheight:          	0;
-
-@headerimage_height:    	150px;
-@headerimage_height_1:  	400px;
-
-@widget_first_margin:   	0;
-
-// breedtes en hoogtes van elementen ===============================================
-@programa_tijd_width: 		35%;
-@programa_desc_width: 		( 99% - @programa_tijd_width );
-
-
-@submenu_desktop_width:		21.66666667rem; // 260px;	// breedte van de submenu-UL op een desktop scherm
-@mainmenu_mobile_width:		24.16666667rem; // 290px;	// breedte van het menu op een mobiel scherm en de ruimte die de content naar rechts wordt opgeschoven
-
-// ==================================================================================
-// uitgelichte afbeeldingen op archive-pagina's
-@featimg_mobile_height:       40px;
-@featimg_mobile_width:        40px;
-
-@featimg_tablet_height:       100px;
-@featimg_tablet_width:        150px;
-@featimg_tablet_enorm_huge:   400px;
-
-@featimg_desktop_height:      176px;
-@featimg_desktop_width:       264px;
-@featimg_desktop_enorm_huge:  550px;
-
-// ==================================================================================
-// pagination
-@pagination_button_width:     30px;
-@pagination_button_height:    33px;
-@pagination_button_offset:    ( @padding / 2 );
-
-// ==================================================================================
-// dingen voor de widget
-// ==================================================================================
-
-@footerwidget_small:          110px;
-@footerwidget_large:          140px;
-@buttonwidth:                 28px;
-@imageblock_lw:               50px;
-@imageblock_mw:               100px;
-@imageblock_fw:               150px;
-@readmore_width:              24px;
-@readmore_height:             32px;
-@pijlgrootte:                 7px;
-
-
-
 // ==================================================================================
 // mixins
 // ==================================================================================
 
 .button_shared_pijltje_1() {
-  background: @button-normal url('../images/icon-knop-groen.svg') no-repeat right center;
+  background: @button-normal url('images/icon-knop-groen.svg') no-repeat right center;
 }
 
 //========================================================================================================
 
 .button_shared_pijltje_1_hover() {
-  background: @wit url('../images/icon-knop-groen-hover.svg') no-repeat right center;
+  background: @wit url('images/icon-knop-groen-hover.svg') no-repeat right center;
 }
 
 //========================================================================================================
@@ -690,8 +603,8 @@
   right: @right;
   bottom: @bottom;
   box-shadow: 3px 3px 0px rgba(#000, 0.2);
-  background-image: url('../images/cta-pijl.png');
-  background-image: url('../images/cta-pijl.svg'), none;
+  background-image: url('images/cta-pijl.png');
+  background-image: url('images/cta-pijl.svg'), none;
   background-position: center center;
   background-repeat: no-repeat;
 }
@@ -1221,15 +1134,69 @@
   }
 }
 
-
 //=========================================================================================================
 
-.gc-box-shadow() {
+.gc-padding() {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 
-  box-shadow: 4px 4px 0 rgba(#000, 0.1);
+  @media @break_fullwidth {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
 
+.gc-reverse-padding {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+
+  @media @break_fullwidth {
+    margin-left: -3rem;
+    margin-right: -3rem;
+  }
 }
 
 //=========================================================================================================
 
+.gc-box-shadow() {
+  box-shadow: 4px 4px 0 rgba(#000, 0.1);
+}
 
+//=========================================================================================================
+
+.gc-section-heading() {
+  .font-size(34);
+  font-family: @font-secondary;
+  text-transform: uppercase;
+  line-height: 40px;
+
+  @media only screen and ( min-width: @break_fullwidth ) {
+    .font-size(46);
+    line-height: 50px;
+  }
+}
+
+.gc-content-container() {
+  max-width: @max-width-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gc-font-small() {
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.gc-heading-1() {
+  .font-size(40);
+
+  @media only screen and ( min-width: @break_tablet ) {
+    .font-size(44);
+    line-height: 48px;
+  }
+
+  @media only screen and ( min-width: @break_fullwidth ) {
+    .font-size(68);
+    line-height: 76px;
+  }
+}

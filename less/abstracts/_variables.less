@@ -3,7 +3,7 @@
 //========================================================================================================
 // break points
 @break_fullwidth:       	960px; // ( 63 * @padding );
-@break_show_menu_button:	830px;
+@break_show_menu_button:	900px;
 @break_tablet:          	650px;
 @break_phone:           	500px;
 @break_xlarge:              1200px; // was 960px ( 63 * @padding );
@@ -17,10 +17,13 @@
 // Mediaqueries
 @mobile: ~"only screen and (max-width: @{break_phone})";
 @tablet_only: ~"only screen and (min-width: @{break_phone}) and (max-width: @{break_fullwidth})";
-@tablet: ~"only screen and (min-width: @{break_phone})";
+@tablet: ~"only screen and (min-width: 500px)";
 @desktop: ~"only screen and (min-width: @{break_fullwidth})";
 @desktop-xl: ~"only screen and (min-width: @{break_xlarge})";
 @cm: ~"only screen and (min-width: 1000px)";
+
+@nav-up: ~"only screen and (min-width: @{break_show_menu_button})";
+@nav-down: ~"only screen and (max-width: calc(@{break_show_menu_button} - 1px))";
 
 // Gutters & Margins
 @gutter: 3rem;
@@ -31,6 +34,9 @@
 
 @max-width-content: 960px;
 @max-width-inner: 770px;
+
+@menu_height:         7rem;
+
 
 //========================================================================================================
 @prem:                    	1rem;
@@ -109,6 +115,8 @@
 @oranje:                	#F7941E; // ondermeer gebruikt voor 'vol'
 
 
+@white:                     #fff;
+
 // Primary's & secondary's
 @color_primary:             #148839;
 
@@ -118,6 +126,7 @@
 @nav_bg:                	@wit;
 @nav_wrap_bg:           	@gc_darkblue;
 @nav_a_color:           	@wit;
+
 @header_bg_color:       	@gc_darkerblue;
 
 @breadcrumb_bg_color:   	@wit;
@@ -201,3 +210,4 @@
 // Fonts
 
 @import "variables/_socmed.less";
+@import "variables/_rekendingen.less";

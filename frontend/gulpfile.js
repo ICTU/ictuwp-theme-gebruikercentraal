@@ -9,6 +9,9 @@ const gulp = require('gulp'),
   LessAutoprefix = require('less-plugin-autoprefix'),
   fs = require('node-fs'),
   argv = require('yargs').argv,
+  concat = require('gulp-concat-util'),
+  minify = require("gulp-minify"),
+  plumber = require("gulp-plumber"),
   browserSync = require("browser-sync").create();
 
 
@@ -28,7 +31,7 @@ function styles() {
     .pipe(sourcemaps.init())
     .pipe(less({
       plugins: [autoprefix],
-      paths: [path.join(__dirname, 'includes', 'abstracts', 'plugins')]
+      paths: [path.join(__dirname, 'includes', 'abstracts', 'plugins', 'components')]
     }).on('error', function (err) {
       gutil.log(err);
       this.emit('end');
@@ -50,18 +53,45 @@ function baseStyles(done) {
     .pipe(sourcemaps.init())
     .pipe(less({
       plugins: [autoprefix],
-      paths: ['less/styles.less']
+      paths: [path.join(__dirname, 'includes', 'abstracts', 'plugins', 'components')]
     }).on('error', function (err) {
       gutil.log(err);
       this.emit('end');
+      done();
     }))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('/css'))
+    .pipe(gulp.dest('../'))
     .pipe(notify({message: siteConfig.name + ' LESS task complete'}))
     .pipe(browserSync.stream());
 
   done();
 }
+
+// Javascript files
+
+function baseJs(done) {
+  //del(['../js/gc-main-min.js'], {force: true});
+
+  gulp.src('../js/components/{,*/}*.js')
+    .pipe(concat('gc-main.js'))
+    .pipe(sourcemaps.init())
+    .pipe(concat.header('(function ($, document, window) { \n'))
+    .pipe(concat.footer('})(jQuery, document, window);'))
+    .pipe(plumber())
+    .pipe(minify({
+      ext:{
+        src:'-debug.js',
+        min:'-min.js'
+      },
+    }))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('../js'))
+    .pipe(notify({message: 'Theme JS Task complete'}))
+    .pipe(browserSync.stream());
+
+  done();
+}
+
 
 function prodAll(done) {
 
@@ -110,11 +140,15 @@ function watch() {
     proxy: siteConfig.proxy
   });
 
-  gulp.watch('less/**/*.less', gulp.series(baseStyles));
+  if (!(argv.site === 'undefined')) {
+    gulp.watch('../less/**/*.less', gulp.series(baseStyles));
+  }
+  gulp.watch('../js/components/*.js', gulp.series(baseJs));
   gulp.watch(siteConfig.path + 'less/**/*.less', gulp.series(styles));
 }
 
 
 exports.styles = styles;
+exports.baseJs = baseJs;
 exports.default = watch;
 exports.all = prodAll;

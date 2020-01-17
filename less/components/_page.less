@@ -159,10 +159,10 @@ Common Classes
 
 
 .breadcrumb {
+  .gc-padding();
   .fontsize(10);
   line-height: 1;
   min-height: 46px;
-  padding-left: 1rem;
   background-color: @header_bg_color;
 
   *, a {
@@ -481,8 +481,8 @@ body .sidebar .widget_oa_social_login .oneall_social_login {
         line-height: 1.4;
         margin: 0 @padding;
         text-decoration: none;
-        background-image: url('../images/cta-pijl.png');
-        background-image: url('../images/cta-pijl.svg'), none;
+        background-image: url('images/cta-pijl.png');
+        background-image: url('images/cta-pijl.svg'), none;
         background-position: right center;
         background-repeat: no-repeat;
 
@@ -880,10 +880,6 @@ Media Queries
     //    width: 740px;
   }
 
-  .content,
-  .site-header .widget-area {
-    //    width: 620px;
-  }
 
   .sidebar-content-sidebar .content,
   .sidebar-sidebar-content .content,
@@ -953,13 +949,10 @@ Media Queries
   .two-fourths,
   .two-sixths,
   .two-thirds,
-  .site-header .wrap,
-  {
+  .site-header .wrap {
     margin: 0;
     width: 100%;
   }
-
-
 }
 
 
@@ -1206,4 +1199,3 @@ CSS overwrites for plugins
 */
 
 .overwrite-block-gallery();		// overwrite for styles from plugins/block-gallery
-
