@@ -8,9 +8,9 @@
 // * @package gebruiker-centraal
 // * @author  Paul van Buuren
 // * @license GPL-2.0+
-// * @version 4.1.3
-// * @since   4.1.3
-// * @desc.   Moved card backend functions and page_template_overzichtspagina from inlusie plugin to theme.
+// * @since   4.1.4
+// * @version 4.1.4
+// * @desc.   Moved section home_template_teasers functions and styling from inlusie plugin to theme.
 // * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 ///
 
@@ -23,36 +23,30 @@ if ( !function_exists( 'ictu_gc_general_item_card' ) ) :
 
 
 	/**
-	 * Display a set of links to related content or a set of links to external sites
+	 * Writes out a single card, without frills or fancy stuff
 	 *
-	 * This function either returns an array with links, or returns an HTML string, or echoes HTML string.
-	 * Can return 2 type of blocks:
-	 * 1. block with items for 'gerelateerde_content_toevoegen'. This is a block with content from the local site.
-	 * 2. block with items for 'handige_links_toevoegen'. This is a block with links to externas sites.
+	 * @since 4.1.4
 	 *
-	 * @since 4.1.3
-	 *
-	 * @param array $args Argument for what to do: echo or return links or return HTML string.
+	 * @param object $post 
 	 * @return array $menuarray Array with links and link text (if $args['getmenu'] => TRUE).
-	 * @return string $return HTML string with related links (if $args['echo'] => FALSE).
 	 */
 
-    function ictu_gc_general_item_card( $vaardigheid = [] ) {
+    function ictu_gc_general_item_card( $post = [] ) {
 
-        if (is_object($vaardigheid)) {
-            $post_ID = $vaardigheid->ID;
+        if ( is_object( $post ) ) {
+            $post_ID = $post->ID;
         }
-        elseif ($doelgroep > 0) {
-            $post_ID = $vaardigheid;
+        elseif ( $post > 0 ) {
+            $post_ID = $post;
         }
         else {
             return;
         }
 
-        $section_title = get_the_title($post_ID);
-        $section_text = get_the_excerpt($post_ID);
-        $section_link = get_sub_field('home_template_teaser_link');
-        $title_id = sanitize_title($section_title);
+        $section_title	= get_the_title( $post_ID );
+        $section_text	= get_the_excerpt( $post_ID );
+        $section_link	= get_sub_field( 'home_template_teaser_link' );
+        $title_id		= sanitize_title( $section_title );
 
         echo '<div class="card no-image">';
         echo '<h3 id="' . $title_id . '"><a href="' . get_permalink( $post_ID ) . '">' . $section_title .
@@ -75,31 +69,25 @@ if ( !function_exists( 'ictu_gc_doelgroep_card' ) ) :
 
 
 	/**
-	 * Display a set of links to related content or a set of links to external sites
+	 * Writes out a single doelgroep card, with a matching avatar and quote
 	 *
-	 * This function either returns an array with links, or returns an HTML string, or echoes HTML string.
-	 * Can return 2 type of blocks:
-	 * 1. block with items for 'gerelateerde_content_toevoegen'. This is a block with content from the local site.
-	 * 2. block with items for 'handige_links_toevoegen'. This is a block with links to externas sites.
+	 * @since 4.1.4
 	 *
-	 * @since 4.1.3
-	 *
-	 * @param array $args Argument for what to do: echo or return links or return HTML string.
+	 * @param object $post 
 	 * @return array $menuarray Array with links and link text (if $args['getmenu'] => TRUE).
-	 * @return string $return HTML string with related links (if $args['echo'] => FALSE).
 	 */
 
-	function ictu_gc_doelgroep_card( $doelgroep, $citaat) {
+	function ictu_gc_doelgroep_card( $post, $quoteobject ) {
 	
-	    if (is_object($citaat) && 'WP_Post' == get_class($citaat)) {
-	        $citaat_post = get_post($citaat->ID);
-	        $citaat_auteur = sanitize_text_field(get_field('citaat_auteur', $citaat->ID));
-	        $content = '&ldquo;' . $citaat_post->post_content . '&rdquo;';
+	    if (is_object($quoteobject) && 'WP_Post' == get_class($quoteobject)) {
+	        $quoteobject_post 			= get_post($quoteobject->ID);
+	        $quoteobject_auteur			= sanitize_text_field(get_field('citaat_auteur', $quoteobject->ID));
+	        $content 					= '&ldquo;' . $quoteobject_post->post_content . '&rdquo;';
 	    }
 	    else {
-	        if ($citaat[0]->post_content) {
-	            $content = '&ldquo;' . $citaat[0]->post_content . '&rdquo;';
-	            $citaat_auteur = sanitize_text_field(get_field('citaat_auteur', $citaat[0]->ID));
+	        if ($quoteobject[0]->post_content) {
+	            $content 				= '&ldquo;' . $quoteobject[0]->post_content . '&rdquo;';
+	            $quoteobject_auteur 	= sanitize_text_field(get_field('citaat_auteur', $quoteobject[0]->ID));
 	        }
 	        else {
 	            return '';
@@ -108,42 +96,40 @@ if ( !function_exists( 'ictu_gc_doelgroep_card' ) ) :
 	
 	    $content = apply_filters('the_content', $content);
 	
-	    if (is_object($doelgroep)) {
-	        $doelgroep_ID = $doelgroep->ID;
+	    if (is_object($post)) {
+	        $post_ID = $post->ID;
 	    }
-	    elseif ($doelgroep > 0) {
-	        $doelgroep_ID = $doelgroep;
+	    elseif ($post > 0) {
+	        $post_ID = $post;
 	    }
 	    else {
 	        return;
 	    }
 	
-	    $posttype = get_post_type($doelgroep_ID);
-	    $title_id = sanitize_title('title-' . $posttype . '-' . $doelgroep_ID);
-	    $section_id = sanitize_title('section-' . $posttype . '-' . $doelgroep_ID);
-	    $doelgroeppoppetje = 'poppetje-1';
-	    $cardtitle = esc_html(get_the_title($doelgroep->ID));
+	    $posttype 		= get_post_type($post_ID);
+	    $title_id 		= sanitize_title('title-' . $posttype . '-' . $post_ID);
+	    $section_id 	= sanitize_title('section-' . $posttype . '-' . $post_ID);
+	    $postpoppetje 	= 'poppetje-1';
+	    $cardtitle 		= esc_html(get_the_title($post->ID));
 	
 	    // wat extra afbreekmogelijkheden toevoegen in de titel
-	    $cardtitle = str_replace("laaggeletterden", "laag&shy;geletterden", $cardtitle);
-	    $cardtitle = str_replace("gebruikssituaties", "gebruiks&shy;situaties", $cardtitle);
+		$cardtitle 		= od_wbvb_custom_post_title( $cardtitle );	
 	
-	
-	    if (get_field('doelgroep_avatar', $doelgroep_ID)) {
-	        $doelgroeppoppetje = get_field('doelgroep_avatar', $doelgroep_ID);
+	    if (get_field('doelgroep_avatar', $post_ID)) {
+	        $postpoppetje = get_field('doelgroep_avatar', $post_ID);
 	    }
 	
-	    $return = '<section aria-labelledby="' . $title_id . '" class="card card--doelgroep ' . $doelgroeppoppetje . '" id="' . $section_id . '">';
+	    $return = '<section aria-labelledby="' . $title_id . '" class="card card--doelgroep ' . $postpoppetje . '" id="' . $section_id . '">';
 	    $return .= '<div class="card__image"></div>';
 	    $return .= '<div class="card__content">';
 	    $return .=
 	      '<h2 class="card__title" id="' . $title_id . '">' .
-	      '<a href="' . get_permalink($doelgroep->ID) . '">' .
+	      '<a href="' . get_permalink($post->ID) . '">' .
 	      '<span>' . _x('Ontwerpen voor', 'Home section doelgroep', 'ictu-gc-posttypes-inclusie') . ' </span>' .
 	      '<span>' . $cardtitle . '</span>' .
 	      '<span class="btn btn--arrow"></span>' .
 	      '</a></h2>';
-	    $return .= '<div class="tegeltje">' . $content . '<p><strong>' . $citaat_auteur . '</strong></p></div>';
+	    $return .= '<div class="tegeltje">' . $content . '<p><strong>' . $quoteobject_auteur . '</strong></p></div>';
 	    $return .= '</div>';
 	    $return .= '</section>';
 	
@@ -156,9 +142,12 @@ endif;
 //========================================================================================================
 
 /**
- * Register frontend styles
+ * Adds extra CSS to header for background images in cards
+ *
+ * @since 4.1.4
+ *
  */
-function ictu_gc_append_header_css_theme() {
+function ictu_gctheme_card_append_header_css() {
 
     global $post;
 
@@ -210,7 +199,7 @@ function ictu_gc_append_header_css_theme() {
  *
  * This function either returns an array with links, or returns an HTML string, or echoes HTML string
  *
- * @since	  4.1.3
+ * @since	  4.1.4
  * @global string ICTU_GC_CPT_DOELGROEP Custom Post Type for doelgroep ('doelgroep', see functions.php). 
  * @global string ICTU_GC_CPT_STAP Custom Post Type for stap ('stap', see functions.php). 
  * @global string GC_BEELDBANK_BEELD_CPT Custom Post Type for beeld ('beeld', see functions.php). 

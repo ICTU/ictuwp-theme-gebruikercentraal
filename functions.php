@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.1.3
-// @desc.   Moved card backend functions and page_template_overzichtspagina from inlusie plugin to theme.
+// @version 4.1.4
+// @desc.   Moved section home_template_teasers functions and styling from inlusie plugin to theme.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '4.1.3' );
-define( 'CHILD_THEME_DESCRIPTION', "4.1.3 - Moved card backend functions and page_template_overzichtspagina from inlusie plugin to theme." );
+define( 'CHILD_THEME_VERSION', '4.1.4' );
+define( 'CHILD_THEME_DESCRIPTION', "4.1.4 - Moved section home_template_teasers functions and styling from inlusie plugin to theme." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -282,8 +282,12 @@ require_once( GC_FOLDER . '/includes/common-functions.php' );
 // * @since	  4.1.1
 require_once( GC_FOLDER . '/includes/related-content-links.php' );
 
-// * @since	  4.1.3
+// * @since	  4.1.4
 require_once( GC_FOLDER . '/includes/components/cards.php' );
+
+// * @since	  4.1.4
+require_once( GC_FOLDER . '/includes/components/home_template_teasers.php' );
+
 
 
 //========================================================================================================

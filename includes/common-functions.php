@@ -5,12 +5,12 @@
 // ----------------------------------------------------------------------------------
 // Gedeelde code tussen gebruiker-centraal en optimaal-digitaal
 // ----------------------------------------------------------------------------------
-// @package gebruiker-centraal
-// @author  Paul van Buuren
-// @license GPL-2.0+
-// @version 3.27.10
-// @desc.   Beeldbank-logo toegevoegd. Logo GC gewijzigd naar eentje met de nieuwe ava van Edo. <3 Edo!
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// * @package gebruiker-centraal
+// * @author  Paul van Buuren
+// * @license GPL-2.0+
+// * @version 4.1.4
+// * @desc.   Moved section home_template_teasers functions and styling from inlusie plugin to theme.
+// * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 ///
 
 
@@ -854,6 +854,14 @@ if (!function_exists('od_wbvb_custom_post_title')) {
 		
 		$pattern      = '/ebruiksvrien/i';
 		$replacement  = 'ebruiks&shy;vrien';
+		$title        = preg_replace( $pattern, $replacement, $title );  
+		
+		$pattern      = '/gebruikssituatie/i';
+		$replacement  = 'gebruiks&shy;situatie';
+		$title        = preg_replace( $pattern, $replacement, $title );  
+		
+		$pattern      = '/laaggeletterde/i';
+		$replacement  = 'laag&shy;geletterde';
 		$title        = preg_replace( $pattern, $replacement, $title );  
 		
 		return $title;
