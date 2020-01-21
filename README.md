@@ -9,9 +9,11 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-3.30.1 - Iconen en kleuren voor Optimaal Digitaal-cards toegevoegd.
+3.31.2 - Copied styling for .cards and various subsets from inclusie to gc-theme.
 
 ## Version history
+* 3.31.2 - Copied styling for .cards and various subsets from inclusie to gc-theme.
+* 3.31.1 - Functies en definities voor 'related_content' verplaatst van inclusie-plugin naar GC-theme.
 * 3.30.1 - Iconen en kleuren voor Optimaal Digitaal-cards toegevoegd.
 * 3.29.4 - Stappenplan-functionaliteit verplaatst naar pagina-template 'page_stappenplan'.
 * 3.29.3 - Tussenruimte footer-widgets. Logo-widget: verticale uitlijning logo's verbeterd.
