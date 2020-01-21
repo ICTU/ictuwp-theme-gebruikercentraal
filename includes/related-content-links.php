@@ -12,8 +12,8 @@
 // * @package gebruiker-centraal
 // * @author  Paul van Buuren
 // * @license GPL-2.0+
-// * @version 3.31.2
-// * @since   3.31.1
+// * @version 4.1.2
+// * @since   4.1.1
 // * @desc.   Copied styling for .cards and various subsets from inclusie to gc-theme.
 // * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 ///
@@ -34,7 +34,7 @@ if ( !function_exists( 'ictu_gc_frontend_general_get_related_content' ) ) :
 	 * 1. block with items for 'gerelateerde_content_toevoegen'. This is a block with content from the local site.
 	 * 2. block with items for 'handige_links_toevoegen'. This is a block with links to externas sites.
 	 *
-	 * @since 3.31.1
+	 * @since 4.1.1
 	 *
 	 * @param array $args Argument for what to do: echo or return links or return HTML string.
 	 * @return array $menuarray Array with links and link text (if $args['getmenu'] => TRUE).
@@ -233,7 +233,7 @@ endif;
  *
  * This function either returns an array with links, or returns an HTML string, or echoes HTML string
  *
- * @since	  3.31.1
+ * @since	  4.1.1
  * @global string ICTU_GC_CPT_DOELGROEP Custom Post Type for doelgroep ('doelgroep', see functions.php). 
  * @global string ICTU_GC_CPT_STAP Custom Post Type for stap ('stap', see functions.php). 
  * @global string GC_BEELDBANK_BEELD_CPT Custom Post Type for beeld ('beeld', see functions.php). 
