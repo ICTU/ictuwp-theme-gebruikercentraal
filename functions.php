@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.1.2
-// @desc.   Copied styling for .cards and various subsets from inclusie to gc-theme.
+// @version 4.1.3
+// @desc.   Moved card backend functions and page_template_overzichtspagina from inlusie plugin to theme.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '4.1.2' );
-define( 'CHILD_THEME_DESCRIPTION', "4.1.2 - Copied styling for .cards and various subsets from inclusie to gc-theme." );
+define( 'CHILD_THEME_VERSION', '4.1.3' );
+define( 'CHILD_THEME_DESCRIPTION', "4.1.3 - Moved card backend functions and page_template_overzichtspagina from inlusie plugin to theme." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -207,6 +207,20 @@ if ( ! defined( 'WBVB_GC_WIDGET_GIANTBANNER' ) ) {
 	define( 'WBVB_GC_WIDGET_GIANTBANNER', 'GC - Giant banner' );
 }
 
+if ( ! defined( 'GC_ALLOWED' ) ) {
+
+	define( 'GC_ALLOWED', array(
+		0 => 'post',
+		1 => 'page',
+		2 => ICTU_GC_CPT_DOELGROEP,
+		3 => ICTU_GC_CPT_STAP,
+		4 => GC_BEELDBANK_BRIEF_CPT,
+		5 => GC_BEELDBANK_BEELD_CPT,
+		6 => ICTU_GC_CPT_VAARDIGHEDEN
+	) );
+}
+
+
 
 define( 'ACF_PLUGIN_NOT_ACTIVE_WARNING', '<p style="position: absolute; top: 3em; left: 3em; display: block; padding: .5em; background: yellow; color: black;">de ACF custom fields plugin is niet actief.</p>' );
 
@@ -267,6 +281,9 @@ require_once( GC_FOLDER . '/includes/common-functions.php' );
 
 // * @since	  4.1.1
 require_once( GC_FOLDER . '/includes/related-content-links.php' );
+
+// * @since	  4.1.3
+require_once( GC_FOLDER . '/includes/components/cards.php' );
 
 
 //========================================================================================================

@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-4.1.2 - Copied styling for .cards and various subsets from inclusie to gc-theme.
+4.1.3 - Moved card backend functions and page_template_overzichtspagina from inlusie plugin to theme.
 
 ## Version history
+* 4.1.3 - Moved card backend functions and page_template_overzichtspagina from inlusie plugin to theme.
 * 4.1.2 - Copied styling for .cards and various subsets from inclusie to gc-theme.
 * 4.1.1 - Functies en definities voor 'related_content' verplaatst van inclusie-plugin naar GC-theme.
 * 4.0.1 - Taak voor JS toegevoegd aan gulp, menu gerefactored mobile / desktop
