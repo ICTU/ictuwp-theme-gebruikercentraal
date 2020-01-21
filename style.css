@@ -3,8 +3,8 @@ Theme Name:             Gebruiker Centraal
 Description:            Wordpress-theme voor gebruikercentraal.nl
 Author:                 Paul van Buuren - Tamara de Haas
 Author URI:             https://wbvb.nl/
-Version:                3.31.1
-Version description:    Functies en definities voor 'related_content' verplaatst van inclusie-plugin naar GC-theme.
+Version:                3.31.2
+Version description:    Copied styling for .cards and various subsets from inclusie to gc-theme.
 Link:                   https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 Template: genesis
@@ -9703,4 +9703,846 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
 /*
 ==============================================================================================================
 */
+.card {
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  position: relative;
+  padding: 2rem;
+}
+@media only screen and (min-width: 960px) {
+  .card {
+    padding: 2rem 3rem;
+  }
+  .card h2,
+  .card h3 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+.card h2,
+.card h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  line-height: 28px;
+  font-family: 'montserratbold', Helvetica, Arial, sans-serif;
+}
+.card h2 a,
+.card h3 a {
+  text-decoration: none;
+  display: flex;
+  padding-top: 0.8rem;
+}
+.card h2 a .btn,
+.card h3 a .btn {
+  height: 5rem;
+  margin-right: -1rem;
+  margin-top: -0.8rem;
+}
+.card h2 a .btn--arrow,
+.card h3 a .btn--arrow {
+  margin-left: auto;
+}
+.card h2 a:hover,
+.card h3 a:hover,
+.card h2 a:focus,
+.card h3 a:focus {
+  text-decoration: underline;
+}
+.card h2 a:hover .btn,
+.card h3 a:hover .btn,
+.card h2 a:focus .btn,
+.card h3 a:focus .btn {
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  border-color: #004152;
+}
+.card h2 + p,
+.card h3 + p {
+  margin-top: 2rem;
+}
+.card > p {
+  margin-right: 1.5rem;
+}
+.card .card__content {
+  padding: 0;
+  background: none;
+}
+.card .card__content:before {
+  display: none;
+}
+.card .card__content:after {
+  position: absolute;
+  content: " ";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  height: 7rem;
+  z-index: -1;
+  speak: none;
+}
+.card .card__content h2 {
+  font-size: 40px;
+  font-size: 4rem;
+  margin-top: -5rem;
+  padding: 3rem 2rem 1.5rem 16px;
+  min-height: 11rem;
+}
+.card .card__content h2,
+.card .card__content h3 {
+  background: none;
+  overflow: hidden;
+  position: relative;
+}
+.card .card__content h2 a,
+.card .card__content h3 a {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card .card__content h2:before,
+.card .card__content h3:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%;
+  height: 17rem;
+  background: #fff;
+  margin: 0.7rem -2rem 0;
+  transform: rotate(2deg);
+  z-index: -1;
+  speak: none;
+}
+.card .card__content h2 span,
+.card .card__content h3 span {
+  display: block;
+}
+.card .card__content h2 span:first-child,
+.card .card__content h3 span:first-child {
+  width: 100%;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-family: 'montserrat_semiboldregular', Helvetica, Arial, sans-serif;
+  text-transform: none;
+  margin-bottom: 0.8rem;
+}
+@media only screen and (min-width: 960px) {
+  .card .card__content h2,
+  .card .card__content h3 {
+    font-size: 44px;
+    font-size: 4.4rem;
+  }
+}
+.tegeltje p {
+  margin: 0;
+}
+.card__content {
+  background: #fff;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  padding: 0 16px 1.5rem;
+}
+.card__content:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%;
+  height: 5rem;
+  background: #fff;
+  z-index: -1;
+  margin: -1rem -2rem 0;
+  transform: rotate(2deg);
+  speak: none;
+}
+.card__content h2 {
+  font-size: 32px;
+  line-height: 34px;
+  padding-right: 5rem;
+  overflow: hidden;
+}
+@media only screen and (min-width: 650px) {
+  .card__content h2 {
+    font-size: 40px;
+    line-height: 46px;
+  }
+}
+.card__content h2 a {
+  text-decoration: none;
+  display: flex;
+}
+.card__content h2 a .btn--arrow {
+  margin-left: auto;
+}
+.card__content h2 a:hover,
+.card__content h2 a:focus {
+  text-decoration: underline;
+}
+.card__content h2 a:hover .btn,
+.card__content h2 a:focus .btn {
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  border-color: #004152;
+}
+.card.tipkaart {
+  text-align: center;
+  position: relative;
+  background: #D1DFE3;
+  padding: 0;
+}
+.card.tipkaart * {
+  padding: 0;
+}
+.card.tipkaart a {
+  text-decoration: none;
+  color: #002F3E;
+  border: 3px solid transparent;
+  display: block;
+}
+.card.tipkaart a:before {
+  position: absolute;
+  content: ' ';
+  display: block;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 10rem;
+  border: 5px solid transparent;
+  border-top-style: none;
+  background-color: #b1c9d0;
+  clip-path: polygon(0 14%, 100% 0, 100% 100%, 0% 100%);
+  speak: none;
+}
+.card.tipkaart a:hover,
+.card.tipkaart a:active,
+.card.tipkaart a:focus {
+  text-decoration: underline;
+  color: #002F3E;
+  border-color: #fff;
+}
+.card.tipkaart a:hover:before,
+.card.tipkaart a:active:before,
+.card.tipkaart a:focus:before {
+  border-color: #fff;
+}
+.card.tipkaart .inner {
+  padding: 2rem;
+}
+.card.tipkaart .tipnummer {
+  font-family: 'League Gothic', Impact, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-size: 2.2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.card.tipkaart .tipnummer:after,
+.card.tipkaart .tipnummer:before {
+  display: inline-block;
+  transform: translateY(-9px);
+  line-height: 1;
+  speak: none;
+}
+.card.tipkaart .tipnummer:before {
+  content: '_ ';
+  margin-right: 8px;
+}
+.card.tipkaart .tipnummer:after {
+  content: ' _';
+  margin-left: 8px;
+}
+.card.tipkaart h3,
+.card.tipkaart h2 {
+  min-height: 15rem;
+  font-family: 'montserratbold', Helvetica, Arial, sans-serif;
+  font-size: 28px;
+  font-size: 2.8rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  line-height: 1.2;
+}
+.card.tipkaart .contentinfo {
+  font-family: 'League Gothic', Impact, Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  position: relative;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+.card.tipkaart .contentinfo span {
+  margin-top: 8rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+.card.tipkaart.commitment {
+  background-color: #25B34B;
+}
+.card.tipkaart.commitment a {
+  color: #fff;
+}
+.card.tipkaart.commitment a:before {
+  background-color: #1D9D42;
+}
+.card.tipkaart.commitment a:hover,
+.card.tipkaart.commitment a:active,
+.card.tipkaart.commitment a:focus {
+  color: #fff;
+  border-color: #1D9D42;
+}
+.card.tipkaart.commitment a:hover:before,
+.card.tipkaart.commitment a:active:before,
+.card.tipkaart.commitment a:focus:before {
+  border-color: #1D9D42;
+}
+.card.tipkaart.commitment .contentinfo {
+  background-image: url('images/optimaal-digitaal/icon-draagvlak.svg');
+  background-size: 90px 90px;
+  background-position: center top;
+}
+.card.tipkaart.draagvlak {
+  background-color: #25B34B;
+}
+.card.tipkaart.draagvlak a {
+  color: #fff;
+}
+.card.tipkaart.draagvlak a:before {
+  background-color: #1D9D42;
+}
+.card.tipkaart.draagvlak a:hover,
+.card.tipkaart.draagvlak a:active,
+.card.tipkaart.draagvlak a:focus {
+  color: #fff;
+  border-color: #1D9D42;
+}
+.card.tipkaart.draagvlak a:hover:before,
+.card.tipkaart.draagvlak a:active:before,
+.card.tipkaart.draagvlak a:focus:before {
+  border-color: #1D9D42;
+}
+.card.tipkaart.draagvlak .contentinfo {
+  background-image: url('images/optimaal-digitaal/icon-draagvlak.svg');
+  background-size: 90px 90px;
+  background-position: center top;
+}
+.card.tipkaart.gebruiksgemak {
+  background-color: #4D2B74;
+}
+.card.tipkaart.gebruiksgemak a {
+  color: #fff;
+}
+.card.tipkaart.gebruiksgemak a:before {
+  background-color: #361454;
+}
+.card.tipkaart.gebruiksgemak a:hover,
+.card.tipkaart.gebruiksgemak a:active,
+.card.tipkaart.gebruiksgemak a:focus {
+  color: #fff;
+  border-color: #361454;
+}
+.card.tipkaart.gebruiksgemak a:hover:before,
+.card.tipkaart.gebruiksgemak a:active:before,
+.card.tipkaart.gebruiksgemak a:focus:before {
+  border-color: #361454;
+}
+.card.tipkaart.gebruiksgemak .contentinfo {
+  background-image: url('images/optimaal-digitaal/icon-mobiel.svg');
+  background-size: 90px 90px;
+  background-position: center top;
+}
+.card.tipkaart.informatieveiligheid {
+  background-color: #C42D77;
+}
+.card.tipkaart.informatieveiligheid a {
+  color: #fff;
+}
+.card.tipkaart.informatieveiligheid a:before {
+  background-color: #B1266B;
+}
+.card.tipkaart.informatieveiligheid a:hover,
+.card.tipkaart.informatieveiligheid a:active,
+.card.tipkaart.informatieveiligheid a:focus {
+  color: #fff;
+  border-color: #B1266B;
+}
+.card.tipkaart.informatieveiligheid a:hover:before,
+.card.tipkaart.informatieveiligheid a:active:before,
+.card.tipkaart.informatieveiligheid a:focus:before {
+  border-color: #B1266B;
+}
+.card.tipkaart.informatieveiligheid .contentinfo {
+  background-image: url('images/optimaal-digitaal/icon-mobiel.svg');
+  background-size: 90px 90px;
+  background-position: center top;
+}
+.card.tipkaart.kanaalsturing {
+  background-color: #E58020;
+}
+.card.tipkaart.kanaalsturing a {
+  color: #fff;
+}
+.card.tipkaart.kanaalsturing a:before {
+  background-color: #F89521;
+}
+.card.tipkaart.kanaalsturing a:hover,
+.card.tipkaart.kanaalsturing a:active,
+.card.tipkaart.kanaalsturing a:focus {
+  color: #fff;
+  border-color: #F89521;
+}
+.card.tipkaart.kanaalsturing a:hover:before,
+.card.tipkaart.kanaalsturing a:active:before,
+.card.tipkaart.kanaalsturing a:focus:before {
+  border-color: #F89521;
+}
+.card.tipkaart.kanaalsturing .contentinfo {
+  background-image: url('images/optimaal-digitaal/icon-kannibaalsturing.svg');
+  background-size: 90px 90px;
+  background-position: center top;
+}
+.card.tipkaart.procesaanpak {
+  background-color: #00B5AD;
+}
+.card.tipkaart.procesaanpak a {
+  color: #fff;
+}
+.card.tipkaart.procesaanpak a:before {
+  background-color: #009F98;
+}
+.card.tipkaart.procesaanpak a:hover,
+.card.tipkaart.procesaanpak a:active,
+.card.tipkaart.procesaanpak a:focus {
+  color: #fff;
+  border-color: #009F98;
+}
+.card.tipkaart.procesaanpak a:hover:before,
+.card.tipkaart.procesaanpak a:active:before,
+.card.tipkaart.procesaanpak a:focus:before {
+  border-color: #009F98;
+}
+.card.tipkaart.procesaanpak .contentinfo {
+  background-image: url('images/optimaal-digitaal/icon-procesaanpak.svg');
+  background-size: 90px 90px;
+  background-position: center top;
+}
+.card.tipkaart.samenwerking {
+  background-color: #0093D2;
+}
+.card.tipkaart.samenwerking a {
+  color: #fff;
+}
+.card.tipkaart.samenwerking a:before {
+  background-color: #0086C0;
+}
+.card.tipkaart.samenwerking a:hover,
+.card.tipkaart.samenwerking a:active,
+.card.tipkaart.samenwerking a:focus {
+  color: #fff;
+  border-color: #0086C0;
+}
+.card.tipkaart.samenwerking a:hover:before,
+.card.tipkaart.samenwerking a:active:before,
+.card.tipkaart.samenwerking a:focus:before {
+  border-color: #0086C0;
+}
+.card.tipkaart.samenwerking .contentinfo {
+  background-image: url('images/optimaal-digitaal/icon-deel.svg');
+  background-size: 90px 90px;
+  background-position: center top;
+}
+.card.tipkaart.inclusie {
+  background-color: #D94721;
+}
+.card.tipkaart.inclusie a {
+  color: #fff;
+}
+.card.tipkaart.inclusie a:before {
+  background-color: #ad391a;
+}
+.card.tipkaart.inclusie a:hover,
+.card.tipkaart.inclusie a:active,
+.card.tipkaart.inclusie a:focus {
+  color: #fff;
+  border-color: #ad391a;
+}
+.card.tipkaart.inclusie a:hover:before,
+.card.tipkaart.inclusie a:active:before,
+.card.tipkaart.inclusie a:focus:before {
+  border-color: #ad391a;
+}
+.card.tipkaart.inclusie .contentinfo {
+  background-image: url('images/optimaal-digitaal/icon-inclusie.svg');
+  background-size: 90px 90px;
+  background-position: center top;
+}
+.card--doelgroep {
+  padding: 0;
+}
+.card--doelgroep .tegeltje {
+  position: absolute;
+  top: 0;
+  left: 1.5rem;
+  right: 1.5rem;
+  margin-top: -44rem;
+}
+.card--doelgroep .card__image {
+  height: 42rem;
+  width: 100%;
+  background: #148839 url('../images/avatar/poppetje-1.svg') center bottom no-repeat;
+  background-size: auto 290px;
+}
+.card--doelgroep .card__content {
+  background: none;
+}
+.card--doelgroep .card__content:before {
+  display: none;
+}
+.card--doelgroep .card__content:after {
+  position: absolute;
+  content: " ";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  height: 7rem;
+  z-index: -1;
+  speak: none;
+}
+.card--doelgroep .card__content h2 {
+  font-size: 40px;
+  font-size: 4rem;
+  background: none;
+  overflow: hidden;
+  position: relative;
+  margin-top: -5rem;
+  min-height: 11rem;
+  z-index: 1;
+  padding: 4rem 0 0 0;
+  text-transform: uppercase;
+  font-family: 'League Gothic', Impact, Helvetica, Arial, sans-serif;
+}
+.card--doelgroep .card__content h2 > a {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 3.5rem 1.5rem 16px;
+}
+.card--doelgroep .card__content h2 > a .btn {
+  margin-right: 0;
+}
+.card--doelgroep .card__content h2:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%;
+  height: 17rem;
+  background: #fff;
+  margin: 3rem -2rem 0;
+  transform: rotate(2deg);
+  z-index: -1;
+  speak: none;
+}
+.card--doelgroep .card__content h2 span {
+  display: block;
+}
+.card--doelgroep .card__content h2 span:first-child {
+  width: 100%;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 20px;
+  margin-bottom: 0.8rem;
+  font-family: 'montserrat_semiboldregular', Helvetica, Arial, sans-serif;
+  text-transform: none;
+}
+.card--doelgroep .btn--arrow {
+  position: absolute;
+  right: 1.5rem;
+  top: 7.8rem;
+  height: 4.5rem;
+}
+.grid--col-3 > .card--doelgroep {
+  margin-top: 5rem;
+}
+.tegeltje {
+  padding: 1em;
+  min-height: 120px;
+  color: #002F3E;
+  background: white;
+  margin-bottom: 25rem;
+  margin-top: -5rem;
+  font-size: 22px;
+  font-size: 2.2rem;
+  line-height: 34px;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 500;
+}
+.tegeltje:before {
+  content: ' ';
+  display: block;
+  height: 28px;
+  width: 28px;
+  position: absolute;
+  right: 1.8rem;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  transform: translateY(28px);
+  z-index: 450;
+  clip-path: polygon(0 0, 0 100%, 70% 0);
+  speak: none;
+}
+.tegeltje:after {
+  content: ' ';
+  display: block;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 2rem;
+  bottom: 0;
+  background: #fff;
+  transform: translateY(25px);
+  z-index: 450;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+  clip-path: polygon(0 0, 0 100%, 70% 0);
+  speak: none;
+}
+.tegeltje p {
+  margin: 0;
+}
+.tegeltje strong {
+  font-family: 'montserratbold', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+.tegeltje strong:before {
+  content: '– ';
+  display: inline-block;
+  float: left;
+  line-height: 2.8;
+  margin-right: 0.5em;
+  speak: none;
+}
+.card--featured-image {
+  padding: 0;
+}
+.card--featured-image .card__content h2,
+.card--featured-image .card__content h3,
+.card--featured-image .card__content .card__title {
+  font-size: 24px;
+  font-size: 2.4rem;
+  overflow: visible;
+}
+.card--featured-image .card__content h2:before,
+.card--featured-image .card__content h3:before,
+.card--featured-image .card__content .card__title:before {
+  content: '';
+}
+.card--featured-image .card__content h2 a,
+.card--featured-image .card__content h3 a,
+.card--featured-image .card__content .card__title a {
+  flex-wrap: nowrap;
+}
+.card--featured-image .card__content h2 span:first-child,
+.card--featured-image .card__content h3 span:first-child,
+.card--featured-image .card__content .card__title span:first-child {
+  width: unset;
+  font-size: inherit;
+}
+.card--featured-image .card__content h2 .btn--arrow,
+.card--featured-image .card__content h3 .btn--arrow,
+.card--featured-image .card__content .card__title .btn--arrow {
+  width: 3.6rem;
+}
+.card--featured-image .card__content {
+  padding: 2rem 3rem;
+}
+.card--featured-image .card__image {
+  height: 25rem;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.card--featured-image .card__image:before {
+  content: ' ';
+  background: white;
+  display: block;
+  position: absolute;
+  bottom: -25px;
+  right: 0;
+  width: 150%;
+  height: 25px;
+  transform: rotate(3deg);
+  transform-origin: top right;
+}
+.section--related-content,
+.section--related-links {
+  background: #fff;
+}
+.section--related-content .section__title,
+.section--related-links .section__title {
+  border-top-style: none;
+}
+@media only screen and (min-width: 960px) {
+  .section--related-content,
+  .section--related-links {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section--related-content .grid,
+  .section--related-links .grid,
+  .section--related-content .wrap,
+  .section--related-links .wrap {
+    max-width: 770px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section--related-content .grid,
+  .section--related-links .grid {
+    overflow: hidden;
+    padding-bottom: 4rem;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .section--related-content.col-2,
+  .section--related-links.col-2,
+  .section--related-content.col-3,
+  .section--related-links.col-3 {
+    background: none;
+    position: relative;
+    overflow: hidden;
+  }
+  .section--related-content.col-2 .wrap-outer,
+  .section--related-links.col-2 .wrap-outer,
+  .section--related-content.col-3 .wrap-outer,
+  .section--related-links.col-3 .wrap-outer {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    height: 100%;
+  }
+  .section--related-content.col-2 .wrap-outer:after,
+  .section--related-links.col-2 .wrap-outer:after,
+  .section--related-content.col-3 .wrap-outer:after,
+  .section--related-links.col-3 .wrap-outer:after,
+  .section--related-content.col-2 .wrap-outer:before,
+  .section--related-links.col-2 .wrap-outer:before,
+  .section--related-content.col-3 .wrap-outer:before,
+  .section--related-links.col-3 .wrap-outer:before {
+    content: ' ';
+    position: absolute;
+    background: #fff;
+    left: 0;
+    right: 0;
+    height: 50%;
+  }
+  .section--related-content.col-2 .wrap-outer:after,
+  .section--related-links.col-2 .wrap-outer:after,
+  .section--related-content.col-3 .wrap-outer:after,
+  .section--related-links.col-3 .wrap-outer:after {
+    background: #f2ebe4;
+    left: 0;
+    right: 0;
+    bottom: -10%;
+    transform: rotate(3deg);
+    transform-origin: left top;
+    height: 70%;
+    width: 150%;
+  }
+  .section--related-content.col-2,
+  .section--related-links.col-2 {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section--related-content.col-3,
+  .section--related-links.col-3 {
+    max-width: 1180px;
+  }
+  .section--related-content.col-3 .wrap-outer:after,
+  .section--related-links.col-3 .wrap-outer:after,
+  .section--related-content.col-3 .wrap-outer:before,
+  .section--related-links.col-3 .wrap-outer:before {
+    left: 110px;
+    right: 110px;
+  }
+  .section--related-content.col-3 .grid,
+  .section--related-links.col-3 .grid {
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: -8px;
+    margin-right: -8px;
+    z-index: 900;
+  }
+}
+.section--related-content .card {
+  border: 1px solid #D1DFE3;
+}
+/*
+voor pagina's waar de related content IN de .entry-content block zit, zoals
+op een doelgroep single op de inclusie-website 
+---------------------------------------------------------------------------------------------------- */
+@media only screen and (min-width: 1180px) {
+  .entry-content.wrap .section--related-content {
+    margin-left: -12rem;
+    margin-right: -12rem;
+  }
+  .entry-content.wrap .section--related-content.col-3 {
+    overflow: visible;
+  }
+  .entry-content.wrap .section--related-content.col-3 .wrap-outer {
+    overflow: hidden;
+    position: relative;
+  }
+  .entry-content.wrap .section--related-content.col-3 .wrap-outer:after,
+  .entry-content.wrap .section--related-content.col-3 .wrap-outer:before {
+    content: '';
+  }
+  .entry-content.wrap .section--related-content.col-3 .grid {
+    max-width: 1180px;
+    margin-left: -12rem;
+    margin-right: -12rem;
+  }
+}
+/*
+Related external links block
+---------------------------------------------------------------------------------------------------- */
+.section--related-links {
+  margin-bottom: 4rem;
+  padding-bottom: 5rem;
+}
+.section--related-links .wrap div {
+  border-top: 1px solid #D1DFE3;
+  padding-left: 3rem;
+  background: url('images/arrow-right-blue.svg') left 40px no-repeat;
+  background-size: 10px auto;
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+.section--related-links .wrap div h3 {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+/*
+Methodes block
+---------------------------------------------------------------------------------------------------- */
+.section--related-methoden .section__title {
+  border-top-style: none;
+}
+/*
+Optimaal digitaal block
+---------------------------------------------------------------------------------------------------- */
+.section--related-optimaaldigitaal-tips {
+  padding-bottom: 6rem;
+}
 /*# sourceMappingURL=style.css.map */
