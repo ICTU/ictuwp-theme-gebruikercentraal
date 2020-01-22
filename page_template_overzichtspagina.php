@@ -96,10 +96,10 @@ function gc_page_template_loop() {
 
                 if ( ICTU_GC_CPT_DOELGROEP == get_post_type( $post ) ) {
                     $citaat = get_field('facts_citaten', $post->ID);
-                    echo ictu_gc_doelgroep_card($post, $citaat);
+                    echo ictu_gctheme_card_doelgroep($post, $citaat);
                 }
                 else {
-                    echo ictu_gc_general_item_card( $post );
+                    echo ictu_gctheme_card_general( $post );
                 }
 
             endforeach;
@@ -168,10 +168,10 @@ function gc_page_template_loop() {
                 $postcounter++;
                 if ( ICTU_GC_CPT_DOELGROEP == get_post_type( $post ) ) {
                     $citaat = get_field('facts_citaten', $post->ID);
-                    echo ictu_gc_doelgroep_card($post, $citaat);
+                    echo ictu_gctheme_card_doelgroep($post, $citaat);
                 }
                 else {
-                    echo ictu_gc_general_item_card( $post );
+                    echo ictu_gctheme_card_general( $post );
                 }
 
             endwhile;

@@ -301,9 +301,12 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 			 ),
 		 );	
 
+    //====================================================================================================
+    // ACF definition for 'handige_links_toevoegen'
+    // 
 	acf_add_local_field_group( array( 
 		'key' => 'group_5c8f9ba967736',
-		'title' => 'Gerelateerde content (GC-theme, inclusie, beeldbank)',
+		'title' => '03 - Gerelateerde content (GC-theme, inclusie, beeldbank)',
 		'fields' => array( 
 			array( 
 				'key' => 'field_5c8fe203a8435',
@@ -407,7 +410,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
     // 
 	acf_add_local_field_group( array(
 		'key' => 'group_5c8fdeebf0c34',
-		'title' => 'Gerelateerde externe links (GC-theme, inclusie, beeldbank)',
+		'title' => '03 - Gerelateerde externe links (GC-theme, inclusie, beeldbank)',
 		'fields' => array(
 			array(
 				'key' => 'field_5c8fe142c5418',

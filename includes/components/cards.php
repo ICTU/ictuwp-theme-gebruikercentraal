@@ -8,9 +8,9 @@
 // * @package gebruiker-centraal
 // * @author  Paul van Buuren
 // * @license GPL-2.0+
-// * @since   4.1.4
-// * @version 4.1.4
-// * @desc.   Moved section home_template_teasers functions and styling from inlusie plugin to theme.
+// * @since   4.1.3
+// * @version 4.1.5
+// * @desc.   Functionality for home -> stappen moved to theme.
 // * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 ///
 
@@ -19,19 +19,19 @@
 
 //========================================================================================================
 
-if ( !function_exists( 'ictu_gc_general_item_card' ) ) :
+if ( !function_exists( 'ictu_gctheme_card_general' ) ) :
 
 
 	/**
 	 * Writes out a single card, without frills or fancy stuff
 	 *
-	 * @since 4.1.4
+	 * @since 4.1.3
 	 *
 	 * @param object $post 
 	 * @return array $menuarray Array with links and link text (if $args['getmenu'] => TRUE).
 	 */
 
-    function ictu_gc_general_item_card( $post = [] ) {
+    function ictu_gctheme_card_general( $post = [] ) {
 
         if ( is_object( $post ) ) {
             $post_ID = $post->ID;
@@ -65,19 +65,19 @@ endif;
 
 //========================================================================================================
 
-if ( !function_exists( 'ictu_gc_doelgroep_card' ) ) :
+if ( !function_exists( 'ictu_gctheme_card_doelgroep' ) ) :
 
 
 	/**
 	 * Writes out a single doelgroep card, with a matching avatar and quote
 	 *
-	 * @since 4.1.4
+	 * @since 4.1.3
 	 *
 	 * @param object $post 
 	 * @return array $menuarray Array with links and link text (if $args['getmenu'] => TRUE).
 	 */
 
-	function ictu_gc_doelgroep_card( $post, $quoteobject ) {
+	function ictu_gctheme_card_doelgroep( $post, $quoteobject ) {
 	
 	    if (is_object($quoteobject) && 'WP_Post' == get_class($quoteobject)) {
 	        $quoteobject_post 			= get_post($quoteobject->ID);
@@ -144,7 +144,7 @@ endif;
 /**
  * Adds extra CSS to header for background images in cards
  *
- * @since 4.1.4
+ * @since 4.1.3
  *
  */
 function ictu_gctheme_card_append_header_css() {
@@ -195,19 +195,7 @@ function ictu_gctheme_card_append_header_css() {
 //========================================================================================================
 
 /**
- * Add ACF field definitions for 
- *
- * This function either returns an array with links, or returns an HTML string, or echoes HTML string
- *
- * @since	  4.1.4
- * @global string ICTU_GC_CPT_DOELGROEP Custom Post Type for doelgroep ('doelgroep', see functions.php). 
- * @global string ICTU_GC_CPT_STAP Custom Post Type for stap ('stap', see functions.php). 
- * @global string GC_BEELDBANK_BEELD_CPT Custom Post Type for beeld ('beeld', see functions.php). 
- * @global string GC_BEELDBANK_BRIEF_CPT Custom Post Type for brief ('brief', see functions.php). 
- *
- * @param array $args Argument for what to do: echo or return links or return HTML string.
- * @return array $menuarray Array with links and link text ( if $args['getmenu'] => TRUE ).
- * @return string $return HTML string with related links ( if $args['echo'] => FALSE ).
+ * Add ACF field definitions for 'overzichtspagina_inleiding'
  */
 
 if ( function_exists( 'acf_add_local_field_group' ) ) :
