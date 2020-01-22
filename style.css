@@ -10637,6 +10637,16 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
   transform: rotate(3deg);
   transform-origin: top right;
 }
+.card--featured-image.beeld .card__title:before,
+.card--featured-image.brief .card__title:before {
+  display: none;
+}
+.card--featured-image.beeld .card__image,
+.card--featured-image.brief .card__image {
+  border: 10px solid red;
+  margin: 2rem;
+  width: auto;
+}
 .section--related-content,
 .section--related-links {
   background: #fff;

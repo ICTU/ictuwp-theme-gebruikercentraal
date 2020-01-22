@@ -66,4 +66,18 @@
 			transform-origin: top right;			
 		}
 	}
+	
+	&.beeld,
+	&.brief {
+		.card__title {
+			&:before {
+				display: none;
+			}
+		}
+		.card__image {
+			border: 10px solid red;
+			margin: 2rem;
+			width: auto;
+		}
+	}
 }

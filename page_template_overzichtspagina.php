@@ -23,6 +23,8 @@ remove_action( 'genesis_loop', 'genesis_do_loop' );
 				
 add_action( 'genesis_loop', 'gc_page_template_loop', 10 );
 
+add_action('wp_enqueue_scripts', 'ictu_gc_append_header_css_local' );
+
 // tips toevoegen
 add_action( 'genesis_loop', 'ictu_gc_frontend_general_get_related_content', 12 );
 
@@ -31,6 +33,109 @@ add_action( 'genesis_loop', 'ictu_gc_frontend_general_get_related_content', 12 )
 genesis();
 
 
+
+
+/**
+ * Adds extra CSS to header for background images in cards
+ *
+ * @since 4.1.3
+ *
+ */
+function ictu_gc_append_header_css_local() {
+
+    global $post;
+
+	wp_enqueue_style(
+		ID_BLOGBERICHTEN_CSS,
+		WBVB_THEMEFOLDER . '/blogberichten.css?v=' . CHILD_THEME_VERSION
+	);
+
+    $header_css				= '';
+    $acfid					= get_the_id();
+    $gerelateerdecontent	= get_field('gerelateerde_content_toevoegen', $acfid);
+
+    $all_or_some = get_field('overzichtspagina_showall_or_select', $acfid );
+
+    if ('showsome' === $all_or_some) {
+
+
+        $items = get_field('overzichtspagina_kies_items', $post->ID);
+
+        if ($items) {
+
+            foreach ($items as $post):
+
+	            setup_postdata($post);
+	
+	            $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large');
+	
+	            if ($image[0]) {
+	                $header_css .= "#related_" . $post->ID . " .card__image { ";
+	                $header_css .= "background-image: url('" . $image[0] . "'); ";
+	                $header_css .= "} ";
+	            }
+
+            endforeach;
+	        
+            wp_reset_query();
+
+        }
+    }
+    else {
+
+		$doelgroeppagina		= get_field('themesettings_inclusie_doelgroeppagina', 'option');    
+		$vaardighedenpagina 	= get_field('themesettings_inclusie_vaardighedenpagina', 'option');    
+		$methodepagina 			= get_field('themesettings_inclusie_methodepagina', 'option');    
+		$tipspagina 			= get_field('themesettings_inclusie_tipspagina', 'option');    
+		
+
+		// by default select vaardigheden
+		$select_contenttype = ICTU_GC_CPT_VAARDIGHEDEN;				
+		
+		if ( is_object( $doelgroeppagina ) && $doelgroeppagina->ID == $currentpageID ) {
+			$select_contenttype = ICTU_GC_CPT_DOELGROEP;				
+		}
+		elseif ( is_object( $tipspagina ) && $tipspagina->ID == $currentpageID ) {
+			$select_contenttype = ICTU_GC_CPT_PROCESTIP;				
+		}
+		elseif ( is_object( $methodepagina ) && $methodepagina->ID == $currentpageID ) {
+			$select_contenttype = ICTU_GC_CPT_METHODE;				
+		}
+		
+
+        $args = array(
+          'post_type' => $select_contenttype,
+          'posts_per_page' => -1,
+          'order' => 'ASC',
+          'orderby' => 'post_title',
+        );
+        
+        $items = new WP_query($args);
+
+		if ($items->have_posts()) {
+
+            while ($items->have_posts()) : $items->the_post();
+
+	            setup_postdata($post);
+	
+	            $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large');
+	
+	            if ($image[0]) {
+	                $header_css .= "#related_" . $post->ID . " .card__image { ";
+	                $header_css .= "background-image: url('" . $image[0] . "'); ";
+	                $header_css .= "} ";
+	            }
+            
+            endwhile;
+		}
+
+    }
+
+    if ($header_css) {
+        wp_add_inline_style(ID_BLOGBERICHTEN_CSS, $header_css);
+    }
+
+}
 
 /**
  * extra content for page with template = page_template_overzichtspagina
@@ -97,6 +202,9 @@ function gc_page_template_loop() {
                 if ( ICTU_GC_CPT_DOELGROEP == get_post_type( $post ) ) {
                     $citaat = get_field('facts_citaten', $post->ID);
                     echo ictu_gctheme_card_doelgroep($post, $citaat);
+                }
+                elseif ( ( GC_BEELDBANK_BRIEF_CPT == get_post_type( $post ) )  || ( GC_BEELDBANK_BEELD_CPT == get_post_type( $post ) ) ) {
+                    echo ictu_gctheme_card_featuredimage( $post );
                 }
                 else {
                     echo ictu_gctheme_card_general( $post );
@@ -169,6 +277,9 @@ function gc_page_template_loop() {
                 if ( ICTU_GC_CPT_DOELGROEP == get_post_type( $post ) ) {
                     $citaat = get_field('facts_citaten', $post->ID);
                     echo ictu_gctheme_card_doelgroep($post, $citaat);
+                }
+                elseif ( ( GC_BEELDBANK_BRIEF_CPT == get_post_type( $post ) )  || ( GC_BEELDBANK_BEELD_CPT == get_post_type( $post ) ) ) {
+                    echo ictu_gctheme_card_featuredimage( $post );
                 }
                 else {
                     echo ictu_gctheme_card_general( $post );

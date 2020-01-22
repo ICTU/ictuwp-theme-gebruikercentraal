@@ -864,6 +864,10 @@ if (!function_exists('od_wbvb_custom_post_title')) {
 		$replacement  = 'laag&shy;geletterde';
 		$title        = preg_replace( $pattern, $replacement, $title );  
 		
+		$pattern      = '/ijvingsform/i';
+		$replacement  = 'ijvings&shy;form';
+		$title        = preg_replace( $pattern, $replacement, $title );  
+		
 		return $title;
 	
 	}
