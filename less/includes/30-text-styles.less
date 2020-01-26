@@ -63,10 +63,18 @@
   }
   
   
-  ol,
-  ul {
-    padding: 0 0 0 @padding;
-  }
+	ol,
+	ul {
+		padding: 0 0 0 @padding;
+		
+		li {
+			.children {
+				// ul or ol
+				padding-top: 0.5em;
+			}
+		}
+	}
+  
 	blockquote {
 		color: @txt;
 		margin: 2rem 4rem;

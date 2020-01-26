@@ -1086,7 +1086,7 @@ if (! function_exists( 'gc_wbvb_sitemap_show_cpt_content' ) ) {
 			$obj = get_post_type_object( $args['customcpt'] );
 
 			echo '<h2>' . $obj->labels->name . '</h2>';
-			
+/*			
 			$args = array(
 				'type'      => 'postbypost',
 				'post_type' => $args['customcpt'],
@@ -1096,9 +1096,20 @@ if (! function_exists( 'gc_wbvb_sitemap_show_cpt_content' ) ) {
 				'type'   	=> $args['type'],
 				'echo'      => 1,
 			);
+*/
+			$args = array(
+				'post_type' => $args['customcpt'],
+				'title_li'	=> '',
+				'orderby'   => $args['orderby'],
+				'order'   	=> $args['order'],
+				'limit'   	=> $args['limit'],
+				'type'   	=> $args['type'],
+				'echo'      => 1,
+			);
 
 			echo '<ul>';
-			wp_get_archives( $args ); 
+			wp_list_pages( $args ); 
+//			wp_get_archives( $args ); 
 			echo '</ul>';
 			
 		}
@@ -1931,6 +1942,7 @@ if ( function_exists('acf_add_options_page') ):
 	$args = array(
 		'slug' => 'instellingen',
 		'title' => 'Theme-instelling',
+    	'capability' => 'manage_options',
 		'parent' => 'themes.php'
 	);
 
@@ -2256,21 +2268,21 @@ function gc_wbvb_beelden_brieven_show_connected_files() {
         }
         else {
 
-      		$attachment     = '';
+			$attachment     = '';
+			
+			if ( function_exists( 'get_field' ) ) {
+				$attachment     = get_field('beeld_foto', $p->ID );
+			}
 
-		    	if ( function_exists( 'get_field' ) ) {
-	      		$attachment     = get_field('beeld_foto', $p->ID );
-					}
-
-      		if ( isset( $attachment['ID'] ) ) {
-
-            // thumbnail
-            $thumb  = $attachment['sizes'][ $size ];
-            $width  = $attachment['sizes'][ $size . '-width' ];
-            $height = $attachment['sizes'][ $size . '-height' ];
-
-            $plaatje = '<img src="' . $thumb . '" alt="' . $attachment['alt'] . '" width="' . $width . '" height="' . $height . '" />';
-          }
+			if ( isset( $attachment['ID'] ) ) {
+				
+				// thumbnail
+				$thumb  = $attachment['sizes'][ $size ];
+				$width  = $attachment['sizes'][ $size . '-width' ];
+				$height = $attachment['sizes'][ $size . '-height' ];
+				
+				$plaatje = '<img src="' . $thumb . '" alt="' . $attachment['alt'] . '" width="' . $width . '" height="' . $height . '" />';
+			}
         }
 
 
