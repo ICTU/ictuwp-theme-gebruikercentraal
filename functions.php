@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.1.5
-// @desc.   Functionality for home -> stappen moved to theme.
+// @version 4.1.6
+// @desc.   Separate CSS files restored. Login form slightly retouched.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '4.1.5' );
-define( 'CHILD_THEME_DESCRIPTION', "4.1.5 - Functionality for home -> stappen moved to theme." );
+define( 'CHILD_THEME_VERSION', '4.1.6' );
+define( 'CHILD_THEME_DESCRIPTION', "4.1.6 - Separate CSS files restored. Login form slightly retouched." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -288,7 +288,7 @@ require_once( GC_FOLDER . '/includes/components/cards.php' );
 // * @since	  4.1.4
 require_once( GC_FOLDER . '/includes/components/home_template_teasers.php' );
 
-// * @since	  4.1.5
+// * @since	  4.1.6
 require_once( GC_FOLDER . '/includes/components/home_template_stappen.php' );
 
 
@@ -1195,7 +1195,7 @@ function gc_wbvb_add_pageheader_css() {
 	
 	wp_enqueue_style(
 		ID_SINGLE_CSS,
-		WBVB_THEMEFOLDER . '/blogberichten.css?v=' . CHILD_THEME_VERSION
+		WBVB_THEMEFOLDER . '/css/blogberichten.css?v=' . CHILD_THEME_VERSION
 	);
 	
 	$BLOGBERICHTEN_CSS   = '';
@@ -1269,7 +1269,7 @@ function gc_wbvb_add_blog_single_css() {
 	
 	wp_enqueue_style(
 		ID_SINGLE_CSS,
-		WBVB_THEMEFOLDER . '/blogberichten.css?v=' . CHILD_THEME_VERSION
+		WBVB_THEMEFOLDER . '/css/blogberichten.css?v=' . CHILD_THEME_VERSION
 	);
 	
 	$BLOGBERICHTEN_CSS   = '';
@@ -1467,7 +1467,7 @@ function gc_wbvb_add_blog_archive_css() {
 	
 	wp_enqueue_style(
 		ID_BLOGBERICHTEN_CSS,
-		WBVB_THEMEFOLDER . '/blogberichten.css?v=' . CHILD_THEME_VERSION
+		WBVB_THEMEFOLDER . '/css/blogberichten.css?v=' . CHILD_THEME_VERSION
 	);
 
 	$BLOGBERICHTEN_CSS	= '';

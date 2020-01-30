@@ -9,8 +9,8 @@
 // * @author  Paul van Buuren
 // * @license GPL-2.0+
 // * @since   4.1.3
-// * @version 4.1.5
-// * @desc.   Functionality for home -> stappen moved to theme.
+// * @version 4.1.6
+// * @desc.   Separate CSS files restored. Login form slightly retouched.
 // * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 ///
 
@@ -234,7 +234,7 @@ function ictu_gctheme_card_append_header_css() {
 
 	wp_enqueue_style(
 		ID_BLOGBERICHTEN_CSS,
-		WBVB_THEMEFOLDER . '/blogberichten.css?v=' . CHILD_THEME_VERSION
+		WBVB_THEMEFOLDER . '/css/blogberichten.css?v=' . CHILD_THEME_VERSION
 	);
 
     $header_css				= '';
