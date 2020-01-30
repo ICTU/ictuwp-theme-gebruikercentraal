@@ -30,19 +30,6 @@
       color: @wit;
     }
 
-    .widgettitle {
-      color: @wit;
-      padding-top: 0;
-      margin-top: 0;
-      font-family: @headerfont;
-      .fontsize(22);
-      letter-spacing: 1px;
-
-      @media only screen {
-        text-transform: uppercase;
-      }
-    }
-
     .search-form input:focus {
       border: 1px solid @wit;
     }
@@ -97,6 +84,18 @@
   padding-bottom: 3rem;
   background-color: @nav_wrap_bg;
 
+  .widget-title {
+    font-family: @font_secondary;
+    text-transform: uppercase;
+    .fontsize(24);
+  }
+
+  input[type="submit"]{
+    .gc-box-shadow;
+    line-height: 2.4rem;
+    .fontsize(24);
+  }
+
   ul.menu {
     padding-left: 0;
 
@@ -144,6 +143,7 @@
   }
 
   @media @desktop {
+    padding-top: 4rem;
     .widget-area {
       &.footer-widgets-1 {
         width: ~"calc(66.666% - @{gutter})";
@@ -152,6 +152,10 @@
       &.footer-widgets-2 {
         width: ~"calc(33.333% - @{gutter})";
       }
+    }
+
+    .widget-title {
+      .fontsize(32);
     }
   }
 }
@@ -172,6 +176,33 @@
     a {
       display: inline-block;
       padding: .5rem 0;
+    }
+  }
+}
+
+.gc-site-footer-widget {
+  overflow: hidden;
+  min-height: @footerwidget_small;
+  //		background-image: url('images/logos/logo-gebruikercentraal-v2.svg');
+  background: url('images/logos/gc-edo-beeldmerk.svg') left top no-repeat;
+  background-size: 110px auto;
+  padding-top: 8rem;
+
+  .widget-wrap {
+    max-width: 100%;
+    margin-right: 1em;
+  }
+
+  a.cta {
+    float: none;
+  }
+
+  @media @desktop {
+    background-size: 150px auto;
+    padding: 0 3rem 0 18rem;
+
+    .banner {
+      max-width: 50rem;
     }
   }
 }
