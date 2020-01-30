@@ -51,15 +51,15 @@ function ictu_gc_append_header_css_local() {
 	);
 
     $header_css				= '';
-    $acfid					= get_the_id();
-    $gerelateerdecontent	= get_field('gerelateerde_content_toevoegen', $acfid);
+    $currentpageID			= get_the_id();
+    $gerelateerdecontent	= get_field('gerelateerde_content_toevoegen', $currentpageID );
 
-    $all_or_some = get_field('overzichtspagina_showall_or_select', $acfid );
+    $all_or_some = get_field('overzichtspagina_showall_or_select', $currentpageID );
 
     if ('showsome' === $all_or_some) {
 
 
-        $items = get_field('overzichtspagina_kies_items', $post->ID);
+        $items = get_field('overzichtspagina_kies_items', $currentpageID );
 
         if ($items) {
 
@@ -70,7 +70,7 @@ function ictu_gc_append_header_css_local() {
 	            $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large');
 	
 	            if ($image[0]) {
-	                $header_css .= "#related_" . $post->ID . " .card__image { ";
+	                $header_css .= "#related_" . $currentpageID . " .card__image { ";
 	                $header_css .= "background-image: url('" . $image[0] . "'); ";
 	                $header_css .= "} ";
 	            }
