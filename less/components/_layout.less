@@ -45,6 +45,7 @@
   font-family: @font_primary_semi;
   text-transform: none;
   font-size: 1.7rem;
+  min-width: 12rem;
 
   &:focus,
   &:hover {
@@ -77,6 +78,10 @@
     &.show {
       transform: translateX(0);
     }
+
+    .logged-in.admin-bar &{
+      top: ~"calc(@{menu_height} + 4.6rem)";
+    }
   }
 
   @media @mobile {
@@ -91,6 +96,10 @@
     top: 0;
     width: 100vw;
     z-index: 64;
+
+    .logged-in.admin-bar &{
+      top: 4.6rem;
+    }
   }
 }
 
@@ -104,7 +113,8 @@
 .site-inner,
 .breadcrumb,
 .footer-widgets,
-.site-footer {
+.site-footer,
+.andere-bijeenkomsten {
   transition: transform .2s;
 }
 
@@ -122,7 +132,8 @@
     .site-inner,
     .breadcrumb,
     .footer-widgets,
-    .site-footer {
+    .site-footer,
+    .andere-bijeenkomsten {
       transform: translateX(50%);
     }
   }
@@ -131,7 +142,8 @@
     .site-inner,
     .breadcrumb,
     .footer-widgets,
-    .site-footer {
+    .site-footer,
+    .andere-bijeenkomsten{
       transform: translateX(85%);
     }
   }
