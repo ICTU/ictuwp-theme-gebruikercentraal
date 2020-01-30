@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.1.6
-// @desc.   Separate CSS files restored. Login form slightly retouched.
+// @version 4.1.7
+// @desc.   Meer contenttypes op paginatemplate 'page_template_overzichtspagina'.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '4.1.6' );
-define( 'CHILD_THEME_DESCRIPTION', "4.1.6 - Separate CSS files restored. Login form slightly retouched." );
+define( 'CHILD_THEME_VERSION', '4.1.7' );
+define( 'CHILD_THEME_DESCRIPTION', "4.1.7 - Meer contenttypes op paginatemplate 'page_template_overzichtspagina'." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -288,7 +288,7 @@ require_once( GC_FOLDER . '/includes/components/cards.php' );
 // * @since	  4.1.4
 require_once( GC_FOLDER . '/includes/components/home_template_teasers.php' );
 
-// * @since	  4.1.6
+// * @since	  4.1.7
 require_once( GC_FOLDER . '/includes/components/home_template_stappen.php' );
 
 

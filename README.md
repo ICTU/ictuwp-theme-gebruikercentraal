@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-4.1.6 - Separate CSS files restored. Login form slightly retouched.
+4.1.7 - Meer contenttypes op paginatemplate 'page_template_overzichtspagina'.
 
 ## Version history
+* 4.1.7 - Meer contenttypes op paginatemplate 'page_template_overzichtspagina'.
 * 4.1.6 - Separate CSS files restored. Login form slightly retouched.
 * 4.1.5 - Functionality for home -> stappen moved to theme.
 * 4.1.4 - Moved section home_template_teasers functions and styling from inlusie plugin to theme.

@@ -1,6 +1,6 @@
 <?php
 
-// * Gebruiker Centraal - page_template_overzichtspagina.php
+	// * Gebruiker Centraal - page_template_overzichtspagina.php
 // * ----------------------------------------------------------------------------------
 // * Page template to display a grid with various types of content
 // * ----------------------------------------------------------------------------------
@@ -9,12 +9,12 @@
 // * @author  Paul van Buuren
 // * @license GPL-2.0+
 // * @version 4.1.3
-// * @since   4.1.3
-// * @desc.   Moved card backend functions and page_template_overzichtspagina from inlusie plugin to theme.
+// * @version 4.1.7
+// * @desc.   Meer contenttypes op paginatemplate 'page_template_overzichtspagina'.
 // * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
-//* Template Name: Overzichtspagina voor tips, vaardigheden, methodes
+//* Template Name: GC - Overzichtspagina (met bv. tips, vaardigheden, methodes)
 
 
 // template voor vaardighedenpagina.
@@ -47,7 +47,7 @@ function ictu_gc_append_header_css_local() {
 
 	wp_enqueue_style(
 		ID_BLOGBERICHTEN_CSS,
-		WBVB_THEMEFOLDER . '/blogberichten.css?v=' . CHILD_THEME_VERSION
+		WBVB_THEMEFOLDER . '/css/blogberichten.css?v=' . CHILD_THEME_VERSION
 	);
 
     $header_css				= '';
@@ -87,19 +87,31 @@ function ictu_gc_append_header_css_local() {
 		$vaardighedenpagina 	= get_field('themesettings_inclusie_vaardighedenpagina', 'option');    
 		$methodepagina 			= get_field('themesettings_inclusie_methodepagina', 'option');    
 		$tipspagina 			= get_field('themesettings_inclusie_tipspagina', 'option');    
-		
+		$brievenpagina 			= get_field('themesettings_inclusie_brievenpagina', 'option');    
+		$beeldenpagina 			= get_field('themesettings_inclusie_beeldenpagina', 'option');    
 
 		// by default select vaardigheden
 		$select_contenttype = ICTU_GC_CPT_VAARDIGHEDEN;				
 		
 		if ( is_object( $doelgroeppagina ) && $doelgroeppagina->ID == $currentpageID ) {
+			// overzichtspagina voor doelgroepen
 			$select_contenttype = ICTU_GC_CPT_DOELGROEP;				
 		}
 		elseif ( is_object( $tipspagina ) && $tipspagina->ID == $currentpageID ) {
+			// overzichtspagina voor (proces)tips
 			$select_contenttype = ICTU_GC_CPT_PROCESTIP;				
 		}
 		elseif ( is_object( $methodepagina ) && $methodepagina->ID == $currentpageID ) {
+			// overzichtspagina voor methodes
 			$select_contenttype = ICTU_GC_CPT_METHODE;				
+		}
+		elseif ( is_object( $brievenpagina ) && $brievenpagina->ID == $currentpageID ) {
+			// overzichtspagina voor brieven
+			$select_contenttype = GC_BEELDBANK_BRIEF_CPT;				
+		}
+		elseif ( is_object( $beeldenpagina ) && $beeldenpagina->ID == $currentpageID ) {
+			// overzichtspagina voor beelden
+			$select_contenttype = GC_BEELDBANK_BEELD_CPT;				
 		}
 		
 
@@ -227,19 +239,31 @@ function gc_page_template_loop() {
 		$vaardighedenpagina 	= get_field('themesettings_inclusie_vaardighedenpagina', 'option');    
 		$methodepagina 			= get_field('themesettings_inclusie_methodepagina', 'option');    
 		$tipspagina 			= get_field('themesettings_inclusie_tipspagina', 'option');    
-		
+		$brievenpagina 			= get_field('themesettings_inclusie_brievenpagina', 'option');    
+		$beeldenpagina 			= get_field('themesettings_inclusie_beeldenpagina', 'option');    
 
 		// by default select vaardigheden
 		$select_contenttype = ICTU_GC_CPT_VAARDIGHEDEN;				
 		
 		if ( is_object( $doelgroeppagina ) && $doelgroeppagina->ID == $currentpageID ) {
+			// overzichtspagina voor doelgroepen
 			$select_contenttype = ICTU_GC_CPT_DOELGROEP;				
 		}
 		elseif ( is_object( $tipspagina ) && $tipspagina->ID == $currentpageID ) {
+			// overzichtspagina voor (proces)tips
 			$select_contenttype = ICTU_GC_CPT_PROCESTIP;				
 		}
 		elseif ( is_object( $methodepagina ) && $methodepagina->ID == $currentpageID ) {
+			// overzichtspagina voor methodes
 			$select_contenttype = ICTU_GC_CPT_METHODE;				
+		}
+		elseif ( is_object( $brievenpagina ) && $brievenpagina->ID == $currentpageID ) {
+			// overzichtspagina voor brieven
+			$select_contenttype = GC_BEELDBANK_BRIEF_CPT;				
+		}
+		elseif ( is_object( $beeldenpagina ) && $beeldenpagina->ID == $currentpageID ) {
+			// overzichtspagina voor beelden
+			$select_contenttype = GC_BEELDBANK_BEELD_CPT;				
 		}
 		
 
