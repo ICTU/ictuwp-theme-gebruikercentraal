@@ -507,13 +507,14 @@
 		
 		.logo-flexblock {
 			flex: 1;
-			margin: @spaceme;
+			padding: @spaceme;
 
 			@media only screen and (max-width: @break_tablet ) {
 				max-width: 48%;
 			}
 			@media only screen and (min-width: @break_tablet ) {
-				min-width: 90px;
+				flex-basis: 25%;
+				max-width: 120px;
 			}
 
 
