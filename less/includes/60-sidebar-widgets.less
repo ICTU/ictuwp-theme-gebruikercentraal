@@ -237,31 +237,6 @@
 		}
 	}
 
-	.gc-site-footer-widget {
-		padding-left: ( @footerwidget_small + @padding);
-		overflow: hidden;
-		min-height: @footerwidget_small;
-//		background-image: url('images/logos/logo-gebruikercentraal-v2.svg');
-		background-image: url('images/logos/gc-edo-beeldmerk.svg');
-		background-repeat: no-repeat;
-		background-position: left top;
-		background-size: 110px 64px;
-		
-		.widget-wrap {
-			max-width: 100%;
-			margin-right: 1em;
-		}
-	
-		a.cta {
-//			.knoppify(transparent, @gc_a11y_green_light_1, @gc_a11y_green_dark_2, @gc_a11y_green, @wit, 24, 0);
-			float: left;
-			clear: both;
-			@media only screen {
-				text-transform: uppercase;
-			}
-		}
-	}
-
 	.gc-event-widget,
 	.gc-site-home-contentwidget,
 	.gc-berichten-widget {
@@ -441,7 +416,6 @@
 @knopbreedte: 126px;
 @height_label: 24px;
 
-  .gc-site-footer-widget,
   .widget_text,
   .widget_gc_newsletter_subscribe {
   
@@ -574,8 +548,7 @@
   
 	.footer-widgets {
 		margin-top: 2rem;
-		
-		.gc-site-footer-widget,
+
 		.widget_gc_newsletter_subscribe {
 			input[type="text"] {
 				border-color: @wit;
@@ -629,24 +602,18 @@
   }
 
 	@media only screen and (min-width: @break_tablet ) {
-	
+
 		.featuredimage(@imageblock_mw);
 
-		.gc-site-footer-widget {
-			padding-left: ( @footerwidget_large + @padding) ;
-			min-height: @footerwidget_large;
-			background-size: @footerwidget_large @footerwidget_large;
-			background-size: 140px 82px;
-		}
 	}
-  
+
 
   @media only screen and (min-width: @break_fullwidth ) {
 
     .featuredimage(@imageblock_fw);
 
   }
-  
+
 }
 
 //========================================================================================================

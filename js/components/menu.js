@@ -104,7 +104,6 @@ function navMobile() {
     '</button>';
 
   if(!(menuBtn.length)) {
-    console.log('nee');
     $('.site-header > .wrap').append(menuBtnHtml);
   }
 

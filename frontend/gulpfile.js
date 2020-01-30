@@ -37,9 +37,29 @@ function styles() {
       this.emit('end');
     }))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(siteConfig.path))
+    .pipe(gulp.dest(siteConfig.dest))
     .pipe(notify({message: siteConfig.name + ' LESS task complete'}))
     .pipe(browserSync.stream());
+
+  done();
+}
+
+
+function prod() {
+  //console.log(siteConfig.path);
+  console.log(fs.existsSync(siteConfig.path));
+  console.log(siteConfig.path + 'less/*.less');
+
+  return gulp.src(siteConfig.path + 'less/*.less')
+    .pipe(less({
+      plugins: [autoprefix],
+      paths: [path.join(__dirname, 'includes', 'abstracts', 'plugins', 'components')]
+    }).on('error', function (err) {
+      gutil.log(err);
+      this.emit('end');
+    }))
+    .pipe(gulp.dest(siteConfig.dest))
+    .pipe(notify({message: siteConfig.name + ' LESS task complete'}));
 
   done();
 }
@@ -140,8 +160,8 @@ function watch() {
     proxy: siteConfig.proxy
   });
 
-  if (!(argv.site === 'undefined')) {
-    gulp.watch('../less/**/*.less', gulp.series(baseStyles));
+  if (argv.site) {
+    gulp.watch('../less/**/*.less', gulp.series(baseStyles, styles));
   }
   gulp.watch('../js/components/*.js', gulp.series(baseJs));
   gulp.watch(siteConfig.path + 'less/**/*.less', gulp.series(styles));
@@ -149,6 +169,7 @@ function watch() {
 
 
 exports.styles = styles;
+exports.prod = prod;
 exports.baseJs = baseJs;
 exports.default = watch;
 exports.all = prodAll;
