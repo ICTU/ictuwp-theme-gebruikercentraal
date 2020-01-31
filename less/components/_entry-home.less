@@ -65,30 +65,28 @@
     }
   }
 
-  .region--intro {
-    padding-bottom: 8rem;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-
-    &:before {
-      content: " ";
-      position: absolute;
-      display: block;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      margin: 0 -5% -5%;
-      height: 40%;
-      transform: rotate(3deg);
-      background: @inclusierood;
-		speak: none;
-
-      @media only screen and ( min-width: ( @break_fullwidth )) {
-        height: 48%;
-      }
-    }
-  }
+	.region--intro {
+		padding-bottom: 8rem;
+		position: relative;
+		overflow: hidden;
+		
+		&:before {
+			content: " ";
+			position: absolute;
+			display: block;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			margin: 0 -5% -5%;
+			height: 40%;
+			transform: rotate(3deg);
+			speak: none;
+			
+			@media only screen and ( min-width: ( @break_fullwidth )) {
+				height: 48%;
+			}
+		}
+	}
 
   .region--content-top > .overview {
     margin-top: -8rem;
