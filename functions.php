@@ -1084,35 +1084,44 @@ if (! function_exists( 'gc_wbvb_sitemap_show_cpt_content' ) ) {
 
 		if ( $args['customcpt'] && post_type_exists( $args['customcpt'] ) ) {
 
-			$obj = get_post_type_object( $args['customcpt'] );
-
-			echo '<h2>' . $obj->labels->name . '</h2>';
-/*			
-			$args = array(
-				'type'      => 'postbypost',
-				'post_type' => $args['customcpt'],
-				'orderby'   => $args['orderby'],
-				'order'   	=> $args['order'],
-				'limit'   	=> $args['limit'],
-				'type'   	=> $args['type'],
-				'echo'      => 1,
-			);
-*/
-			$args = array(
-				'post_type' => $args['customcpt'],
-				'title_li'	=> '',
-				'orderby'   => $args['orderby'],
-				'order'   	=> $args['order'],
-				'limit'   	=> $args['limit'],
-				'type'   	=> $args['type'],
-				'echo'      => 1,
-			);
-
-			echo '<ul>';
-			wp_list_pages( $args ); 
-//			wp_get_archives( $args ); 
-			echo '</ul>';
+			$obj 	= get_post_type_object( $args['customcpt'] );
+			$titel	= $obj->labels->name;
 			
+			$args2 = array(
+				'type'      => 'postbypost',
+				'title_li'	=> '',
+				'post_type' => $args['customcpt'],
+				'orderby'   => $args['orderby'],
+				'order'   	=> $args['order'],
+				'limit'   	=> $args['limit'],
+				'type'   	=> $args['type'],
+				'echo'      => 0,
+			);
+			$listpages = wp_list_pages( $args2 ); 
+
+			if ( ! $listpages ) {
+			
+				$args2 = array(
+					'post_type' => $args['customcpt'],
+					'title_li'	=> '',
+					'orderby'   => $args['orderby'],
+					'order'   	=> $args['order'],
+					'limit'   	=> $args['limit'],
+					'type'   	=> $args['type'],
+					'echo'      => 0,
+				);
+				$listpages = wp_get_archives( $args2 ); 
+				
+			}
+
+			if ( $listpages ) {
+			
+				echo '<h2>' . $titel . '</h2>';
+				echo '<ul>';
+				echo $listpages;
+				echo '</ul>';
+
+			}
 		}
 	}
 }
