@@ -9,9 +9,14 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-4.1.2 - Copied styling for .cards and various subsets from inclusie to gc-theme.
+4.1.7 - Meer contenttypes op paginatemplate 'page_template_overzichtspagina'.
 
 ## Version history
+* 4.1.7 - Meer contenttypes op paginatemplate 'page_template_overzichtspagina'.
+* 4.1.6 - Separate CSS files restored. Login form slightly retouched.
+* 4.1.5 - Functionality for home -> stappen moved to theme.
+* 4.1.4 - Moved section home_template_teasers functions and styling from inlusie plugin to theme.
+* 4.1.3 - Moved card backend functions and page_template_overzichtspagina from inlusie plugin to theme.
 * 4.1.2 - Copied styling for .cards and various subsets from inclusie to gc-theme.
 * 4.1.1 - Functies en definities voor 'related_content' verplaatst van inclusie-plugin naar GC-theme.
 * 4.0.1 - Taak voor JS toegevoegd aan gulp, menu gerefactored mobile / desktop
@@ -100,6 +105,8 @@ themes/gebruiker-centraal/                        # → Folder met alle theme-be
 ├── css/                                          # → Extra CSS-bestanden
 │   ├── addenda-tips.css                          # → 
 │   ├── blanco.css                                # → CSS bestand zonder inhoud voor het mogelijk maken van CSS in de <head>
+│   ├── blogberichten.css                         # → hulpbestand voor het aan de <header> toevoegen van inline CSS
+│   ├── widget-giant-banner.css                   # → hulpbestand voor inline CSS als er een banner getoond moet worden
 │   ├── editor-styles.css                         # → CSS voor juist tonen van vormgeving in WYSIWIG-editor in admin
 │   ├── header.css                                # → 
 │   ├── login-form.css                            # → 
@@ -127,26 +134,58 @@ themes/gebruiker-centraal/                        # → Folder met alle theme-be
 ├── languages/                                    # → Bevat vertalingen voor het theme
 │  
 ├── less/                                         # → LESS-bronbestanden
-│   ├── plugins/                                  # → LESS bedoeld ter vervanging / correctie van CSS van plugins
+│   ├── abstracts/                                # → 
+│   │   ├── variables/                            # → 
+│   │   │   ├── _colors-inclusie.less             # →
+│   │   │   ├── _colors-optimaaldigitaal.less     # →
+│   │   │   ├── _rekendingen.less                 # →
+│   │   │   └── _socmed.less                      # →
+│   │   │ 
+│   │   ├── _fonts.less                           # → 
+│   │   ├── _mixins.less                          # → 
+│   │   ├── _normalize.less                       # → 
+│   │   └── _variables.less                       # →   
+│   │ 
+│   ├── components/                               # → 
+│   │   ├── _btn.less                             # → 
+│   │   ├── _card-doelgroep.less                  # → 
+│   │   ├── _card-featured-image.less             # → 
+│   │   ├── _card-tipkaart.less                   # → 
+│   │   ├── _card.less                            # → 
+│   │   ├── _entry-home.less                      # → 
+│   │   ├── _grid.less                            # → 
+│   │   ├── _layout-footer.less                   # → 
+│   │   ├── _layout.less                          # → 
+│   │   ├── _main-nav.less                        # → 
+│   │   ├── _overview.less                        # → 
+│   │   ├── _page_stappenplan.less                # → 
+│   │   ├── _page-overzichtspagina.less           # → 
+│   │   ├── _page.less                            # → 
+│   │   ├── _section-related-content.less         # → 
+│   │   ├── _section-resultaatblok.less           # → 
+│   │   ├── _section.less                         # → 
+│   │   ├── _stepchart.less                       # → 
+│   │   ├── _stepnav.less                         # → 
 │   │   └── block-gallery.less                    # → LESS ter correctie van block-gallery.css van dito plugin│  
-│   ├── 00-mixins.less                            # → 
-│   ├── 01-socmed-color-codes.less                # → 
-│   ├── 02-normalize.less                         # → 
-│   ├── 30-text-styles.less                       # → 
-│   ├── 40-forms.less                             # → 
-│   ├── 50-header-logo-menu.less            	  # → 
-│   ├── 60-sidebar-widgets.less                   # → 
-│   ├── 70-pagetypes.less                         # → 
-│   ├── 71-search-and-404-pagetype.less           # → 
-│   ├── 80-structure.less                         # → 
-│   ├── 81-footers.less                           # → 
-│   ├── 82-pagination.less                        # → 
-│   ├── 90-printstyles.less                       # → 
-│   ├── 99-browserhacks.less                      # → 
+│   │ 
+│   ├── includes/                                 # → 
+│   │   ├── 30-text-styles.less                   # → 
+│   │   ├── 40-forms.less                         # → 
+│   │   ├── 50-header-logo-menu.less              # → 
+│   │   ├── 60-sidebar-widgets.less               # → 
+│   │   ├── 70-pagetypes.less                     # → 
+│   │   ├── 71-search-and-404-pagetype.less       # → 
+│   │   ├── 80-structure.less                     # → 
+│   │   ├── 82-pagination.less                    # → 
+│   │   ├── 90-printstyles.less                   # → 
+│   │   └── 99-browserhacks.less                  # → 
+│   │ 
+│   ├── plugins/                                  # → LESS bedoeld ter vervanging / correctie van CSS van plugins
 │   ├── blogberichten.less                        # → 
 │   ├── editor-styles.less                        # → 
 │   ├── login-form.less                           # → 
-│   └── style.less                                # → Hoofdbestand voor aanmaken style css
+│   ├── style.less                                # → Hoofdbestand voor aanmaken style css
+│   └── widget-giant-banner.less                  # → Hoofdbestand voor aanmaken style css
 │  
 ├── plugins/                                      # → ruimte voor o.m. extra styling t.b.v. event plugin
 │  
@@ -157,7 +196,6 @@ themes/gebruiker-centraal/                        # → Folder met alle theme-be
 ├── 404.php                                       # →
 ├── archive.php                                   # →
 ├── author.php                                    # →
-├── blogberichten.css                             # →
 ├── comments.php                                  # →
 ├── functions.php                                 # →
 ├── header.php                                    # →

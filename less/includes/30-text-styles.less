@@ -63,10 +63,18 @@
   }
   
   
-  ol,
-  ul {
-    padding: 0 0 0 @padding;
-  }
+	ol,
+	ul {
+		padding: 0 0 0 @padding;
+		
+		li {
+			.children {
+				// ul or ol
+				padding-top: 0.5em;
+			}
+		}
+	}
+  
 	blockquote {
 		color: @txt;
 		margin: 2rem 4rem;
@@ -399,7 +407,7 @@
 	
 	h1 {
 		.fontsize( @fontsize_title_h1 );
-		letter-spacing: 1px;
+//		letter-spacing: 1px;
 		font-family: @headerfont;
 		font-weight: normal;
 	}

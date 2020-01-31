@@ -1,0 +1,178 @@
+
+// Gebruiker Centraal - less/components/_section-resultaatblok.less
+// ----------------------------------------------------------------------------------
+// Resultaatblokken worden gebruikt in de beeldbanksite bij een richtlijn
+// ----------------------------------------------------------------------------------
+// @package gebruiker-centraal
+// @author  Paul van Buuren
+// @license GPL-2.0+
+// @version 4.1.2
+// @desc.   Copied styling for .cards and various subsets from inclusie to gc-theme.
+// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+
+//=========================================================================================================
+
+@section_border_width: 2px;
+
+.section--resultaten {
+	display: flex;
+	flex-flow: wrap;
+
+	@media only screen and ( min-width: ( @break_fullwidth )) {
+		padding-left: 5rem;
+		padding-right: 5rem;
+	}
+
+	.section--resultaten_block {
+		padding: 0;
+		flex: 1 0 50%;
+
+		display: flex;
+		flex-direction: column;
+	
+		background: @wit;
+		border: @section_border_width solid @gc_cardbordergrey;
+		margin-right: ( ( @section_border_width / 2 ) * -1 );
+
+		.resultaten_block_text {
+			padding: 2rem;
+			flex-grow: 1;
+		}
+
+		& + .section--resultaten_block {
+			margin-left: ( ( @section_border_width / 2 ) * -1 );
+		}
+	}	
+
+	&.item-count-even {
+		.section--resultaten_block {
+			margin-left: ( ( @section_border_width / 2 ) * -1 );
+			margin-bottom: ( @section_border_width * -1 );
+		}	
+	}	
+
+	&.item-count-veel {
+
+		// .item-count-veel:
+		// 3 blokken of meer mogen gestapeld worden, met een grote boven en twee kleine onder
+		
+		// .item-count-even:
+		// twee blokken mogen naast elkaar, met elk 50% breedte
+		
+		// .item-count-1:
+		// 1 enkel blok is 100% breed
+		
+		.section--resultaten_block {
+			&:first-of-type {
+				flex-basis: 100%;
+				flex-direction: row;
+				margin-bottom: ( @section_border_width * -1 );
+								
+				.resultaten_block_text,
+				.resultaten_block_image {
+					flex: 1 0 50%;
+				}
+
+				.resultaten_block_image {
+					background: @wit;
+					overflow: hidden;
+					position: relative;
+					
+					&:before {
+						content: ' ';
+						background: @gc_pantybrown_xlight;
+						width: 75%;
+						height: 150%;
+						position: absolute;
+						left: 0;
+						top: -25%;
+						bottom: -25%;
+						transform: rotate(-3deg);
+						transform-origin: left bottom;
+						speak: none;
+					}
+					img {
+						position: relative;
+					}
+				}
+			}
+		}
+	}
+
+	.resultaten_block_image {
+		background: @gc_pantybrown_xlight;
+		position: relative;
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+		flex-basis: 45rem;
+		display: flex;
+		
+		div.imgcontainer, a {
+			margin: auto;
+			height: auto;
+			display: block;
+		}
+		a {
+
+			&:hover,
+			&:focus,
+			&:active {
+				outline: 1px solid red;
+			}
+		}
+		img {
+			margin: auto;
+			width: 100%;
+			height: auto;
+			display: block;
+			.gc-box-shadow();
+		}
+	}
+
+	.label {
+		background: @wit;
+		color: @txt;
+		position: absolute;
+		right: 2rem;
+		top: 2rem;
+		padding: .75rem 1rem;
+		line-height: 1;
+		
+		&.nietzo,
+		&.maarzo {
+			background-image: url('images/icon-dosdonts-do-white.svg');
+			background-repeat: no-repeat;
+			background-position: 1rem .75rem;
+			background-size: 1.25rem 1.25rem;
+			padding-left: 3rem;
+		}
+
+
+		&.nietzo {
+			background-image: url('images/icon-dosdonts-dont-white.svg');
+			background-color: @dos_donts_bg_do;
+			color: @wit;
+		}	
+		&.maarzo {
+			background-image: url('images/icon-dosdonts-do-white.svg');
+			background-color: @dos_donts_bg_dont;
+			color: @wit;
+			&:before {
+				content: ' ';
+			}	
+			
+		}	
+	
+	}
+	
+	h2, h3, h4 {
+		margin-top: 0;
+		padding-top: 0;
+	}
+
+
+}
+
+
+//=========================================================================================================
+

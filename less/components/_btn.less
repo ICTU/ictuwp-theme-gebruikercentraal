@@ -10,7 +10,6 @@
 // @desc.     JS homepage voor openen en sluiten modal windows verbeterd.
 // @link      https://github.com/ICTU/Gebruiker-Centraal---Inclusie---custom-post-types-taxonomies
 
-@import "../abstracts/_variables";
 
 .cta {
   margin-top: 2rem;
@@ -20,7 +19,7 @@
   display: inline-block;
 
   &--arrow {
-    background: url('../images/arrow-right.svg') center center no-repeat;
+    background: url('images/arrow-right-blue.svg') center center no-repeat;
     background-size: 12px auto;
     min-width: 3.6rem;
     display: inline-block;
@@ -34,7 +33,7 @@
   }
 
   &--close {
-    background: url('../images/cross.svg') center center no-repeat;
+    background: url('images/cross.svg') center center no-repeat;
     background-size: 18px auto;
     padding: 0;
     width: 3.6rem;
@@ -46,7 +45,7 @@
     &:hover,
     &:focus {
       .gc-box-shadow();
-      border-color: @border_color;
+      border-color: @gc_cardbordergrey;
       color: transparent;
     }
   }
@@ -56,7 +55,7 @@
     padding: 1rem 2rem 1rem 4.4rem;
     font-family: @font_secondary;
     text-transform: uppercase;
-    background: @color_primary url('../images/icon-download.svg') 16px center no-repeat;
+    background: @color_primary url('images/icon-download.svg') 16px center no-repeat;
     font-size: 2.6rem;
     line-height: 2.6rem;
     text-decoration: none;

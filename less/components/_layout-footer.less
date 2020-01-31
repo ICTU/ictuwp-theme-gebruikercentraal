@@ -79,7 +79,7 @@
 }
 
 .footer-widgets {
-  .gc-padding;
+  .gc-padding();
   padding-top: 3rem;
   padding-bottom: 3rem;
   background-color: @nav_wrap_bg;
@@ -91,7 +91,7 @@
   }
 
   input[type="submit"]{
-    .gc-box-shadow;
+    .gc-box-shadow();
     line-height: 2.4rem;
     .fontsize(24);
   }
@@ -136,8 +136,8 @@
     }
 
     .widget-area {
-      margin-left: @gutter / 2;
-      margin-right: @gutter / 2;
+      margin-left: ( @gutter / 2 );
+      margin-right: ( @gutter / 2 );
       width: ~"calc(50% - @{gutter})";
     }
   }

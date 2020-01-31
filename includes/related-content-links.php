@@ -12,7 +12,7 @@
 // * @package gebruiker-centraal
 // * @author  Paul van Buuren
 // * @license GPL-2.0+
-// * @version 4.1.2
+// * @version 4.1.3
 // * @since   4.1.1
 // * @desc.   Copied styling for .cards and various subsets from inclusie to gc-theme.
 // * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
@@ -23,7 +23,7 @@
 
 //========================================================================================================
 
-if ( !function_exists( 'ictu_gc_frontend_general_get_related_content' ) ) :
+if ( !function_exists( 'ictu_gctheme_frontend_general_get_related_content' ) ) :
 
 
 	/**
@@ -41,7 +41,7 @@ if ( !function_exists( 'ictu_gc_frontend_general_get_related_content' ) ) :
 	 * @return string $return HTML string with related links (if $args['echo'] => FALSE).
 	 */
  	
-    function ictu_gc_frontend_general_get_related_content( $args = [] ) {
+    function ictu_gctheme_frontend_general_get_related_content( $args = [] ) {
 
         global $post;
 
@@ -66,9 +66,9 @@ if ( !function_exists( 'ictu_gc_frontend_general_get_related_content' ) ) :
 
             if ( 'ja' === $gerelateerdecontent ) {
 
-                $section_title = get_field( 'content_block_title', $post->ID );
-                $title_id = sanitize_title( $section_title . '-title' );
-                $related_items = get_field( 'content_block_items' );
+                $section_title	= get_field( 'content_block_title', $post->ID );
+                $title_id 		= sanitize_title( $section_title . '-title' );
+                $related_items	= get_field( 'content_block_items' );
 
                 if ( $args['getmenu'] ) {
 	                // return only links ( ID + name )
@@ -255,16 +255,6 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 	// is not useful. But this function is called before the posttypes are actually registered.
 	//  ¯\_(ツ)_/¯
 	// TODO
-	$allowedposttypes = array(
-		0 => 'post',
-		1 => 'page',
-		2 => ICTU_GC_CPT_DOELGROEP,
-		3 => ICTU_GC_CPT_STAP,
-		4 => GC_BEELDBANK_BRIEF_CPT,
-		5 => GC_BEELDBANK_BEELD_CPT,
-		6 => ICTU_GC_CPT_VAARDIGHEDEN
-	);
-
 
 	$related_locations = array(
 			array( 
@@ -311,9 +301,12 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 			 ),
 		 );	
 
+    //====================================================================================================
+    // ACF definition for 'handige_links_toevoegen'
+    // 
 	acf_add_local_field_group( array( 
 		'key' => 'group_5c8f9ba967736',
-		'title' => 'Gerelateerde content (GC-theme, inclusie, beeldbank)',
+		'title' => '03 - Gerelateerde content (GC-theme, inclusie, beeldbank)',
 		'fields' => array( 
 			array( 
 				'key' => 'field_5c8fe203a8435',
@@ -387,7 +380,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 					'class' => '',
 					'id' => '',
 				 ),
-				'post_type' => $allowedposttypes,
+				'post_type' => GC_ALLOWED,
 				'taxonomy' => '',
 				'filters' => array( 
 					0 => 'search',
@@ -417,7 +410,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
     // 
 	acf_add_local_field_group( array(
 		'key' => 'group_5c8fdeebf0c34',
-		'title' => 'Gerelateerde externe links (GC-theme, inclusie, beeldbank)',
+		'title' => '03 - Gerelateerde externe links (GC-theme, inclusie, beeldbank)',
 		'fields' => array(
 			array(
 				'key' => 'field_5c8fe142c5418',

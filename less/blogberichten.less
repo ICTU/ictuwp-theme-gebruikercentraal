@@ -1,0 +1,53 @@
+/*
+// Gebruiker Centraal - blogberichten.less
+// ----------------------------------------------------------------------------------
+// Extra styling voor archive-pages
+// ----------------------------------------------------------------------------------
+// @package gebruiker-centraal
+// @author  Paul van Buuren
+// @license GPL-2.0+
+// @version 4.1.6
+// @desc.   Separate CSS files restored. Login form slightly retouched.
+// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+*/
+
+/*
+ * Abstracts
+ * Variables, mixins, extendables - things we use everywhere
+ */
+
+@import "abstracts/_fonts.less";
+@import "abstracts/_variables.less";
+@import "abstracts/_mixins.less";
+@import "abstracts/_normalize.less";
+
+//---------------------------------------------------------------------------------------------------- 
+// 
+
+#maincontent .has-header-image {
+	max-width: 1440px; // voor die macbookluitjes onder ons... 
+	margin: 0 auto;
+	+ .content {
+		& article.entry {
+			margin-top: 0;
+			
+			.entry-title {
+			
+				.font-size(40);
+				text-transform: none;
+			
+				@media only screen and ( min-width: @break_tablet ) {
+					.font-size(44);
+					line-height: 48px;
+				}
+			
+				@media only screen and ( min-width: @break_fullwidth ) {
+					.font-size(68);
+					line-height: 76px;
+				}
+			}
+		}
+	}
+}
+
+

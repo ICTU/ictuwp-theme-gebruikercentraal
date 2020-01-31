@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.1.2
-// @desc.   Copied styling for .cards and various subsets from inclusie to gc-theme.
+// @version 4.1.7
+// @desc.   Meer contenttypes op paginatemplate 'page_template_overzichtspagina'.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '4.1.2' );
-define( 'CHILD_THEME_DESCRIPTION', "4.1.2 - Copied styling for .cards and various subsets from inclusie to gc-theme." );
+define( 'CHILD_THEME_VERSION', '4.1.7' );
+define( 'CHILD_THEME_DESCRIPTION', "4.1.7 - Meer contenttypes op paginatemplate 'page_template_overzichtspagina'." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -207,6 +207,20 @@ if ( ! defined( 'WBVB_GC_WIDGET_GIANTBANNER' ) ) {
 	define( 'WBVB_GC_WIDGET_GIANTBANNER', 'GC - Giant banner' );
 }
 
+if ( ! defined( 'GC_ALLOWED' ) ) {
+
+	define( 'GC_ALLOWED', array(
+		0 => 'post',
+		1 => 'page',
+		2 => ICTU_GC_CPT_DOELGROEP,
+		3 => ICTU_GC_CPT_STAP,
+		4 => GC_BEELDBANK_BRIEF_CPT,
+		5 => GC_BEELDBANK_BEELD_CPT,
+		6 => ICTU_GC_CPT_VAARDIGHEDEN
+	) );
+}
+
+
 
 define( 'ACF_PLUGIN_NOT_ACTIVE_WARNING', '<p style="position: absolute; top: 3em; left: 3em; display: block; padding: .5em; background: yellow; color: black;">de ACF custom fields plugin is niet actief.</p>' );
 
@@ -267,6 +281,16 @@ require_once( GC_FOLDER . '/includes/common-functions.php' );
 
 // * @since	  4.1.1
 require_once( GC_FOLDER . '/includes/related-content-links.php' );
+
+// * @since	  4.1.3
+require_once( GC_FOLDER . '/includes/components/cards.php' );
+
+// * @since	  4.1.4
+require_once( GC_FOLDER . '/includes/components/home_template_teasers.php' );
+
+// * @since	  4.1.7
+require_once( GC_FOLDER . '/includes/components/home_template_stappen.php' );
+
 
 
 //========================================================================================================
@@ -1062,7 +1086,7 @@ if (! function_exists( 'gc_wbvb_sitemap_show_cpt_content' ) ) {
 			$obj = get_post_type_object( $args['customcpt'] );
 
 			echo '<h2>' . $obj->labels->name . '</h2>';
-			
+/*			
 			$args = array(
 				'type'      => 'postbypost',
 				'post_type' => $args['customcpt'],
@@ -1072,9 +1096,20 @@ if (! function_exists( 'gc_wbvb_sitemap_show_cpt_content' ) ) {
 				'type'   	=> $args['type'],
 				'echo'      => 1,
 			);
+*/
+			$args = array(
+				'post_type' => $args['customcpt'],
+				'title_li'	=> '',
+				'orderby'   => $args['orderby'],
+				'order'   	=> $args['order'],
+				'limit'   	=> $args['limit'],
+				'type'   	=> $args['type'],
+				'echo'      => 1,
+			);
 
 			echo '<ul>';
-			wp_get_archives( $args ); 
+			wp_list_pages( $args ); 
+//			wp_get_archives( $args ); 
 			echo '</ul>';
 			
 		}
@@ -1160,7 +1195,7 @@ function gc_wbvb_add_pageheader_css() {
 	
 	wp_enqueue_style(
 		ID_SINGLE_CSS,
-		WBVB_THEMEFOLDER . '/blogberichten.css?v=' . CHILD_THEME_VERSION
+		WBVB_THEMEFOLDER . '/css/blogberichten.css?v=' . CHILD_THEME_VERSION
 	);
 	
 	$BLOGBERICHTEN_CSS   = '';
@@ -1234,7 +1269,7 @@ function gc_wbvb_add_blog_single_css() {
 	
 	wp_enqueue_style(
 		ID_SINGLE_CSS,
-		WBVB_THEMEFOLDER . '/blogberichten.css?v=' . CHILD_THEME_VERSION
+		WBVB_THEMEFOLDER . '/css/blogberichten.css?v=' . CHILD_THEME_VERSION
 	);
 	
 	$BLOGBERICHTEN_CSS   = '';
@@ -1432,7 +1467,7 @@ function gc_wbvb_add_blog_archive_css() {
 	
 	wp_enqueue_style(
 		ID_BLOGBERICHTEN_CSS,
-		WBVB_THEMEFOLDER . '/blogberichten.css?v=' . CHILD_THEME_VERSION
+		WBVB_THEMEFOLDER . '/css/blogberichten.css?v=' . CHILD_THEME_VERSION
 	);
 
 	$BLOGBERICHTEN_CSS	= '';
@@ -1907,6 +1942,7 @@ if ( function_exists('acf_add_options_page') ):
 	$args = array(
 		'slug' => 'instellingen',
 		'title' => 'Theme-instelling',
+    	'capability' => 'manage_options',
 		'parent' => 'themes.php'
 	);
 
@@ -2232,21 +2268,21 @@ function gc_wbvb_beelden_brieven_show_connected_files() {
         }
         else {
 
-      		$attachment     = '';
+			$attachment     = '';
+			
+			if ( function_exists( 'get_field' ) ) {
+				$attachment     = get_field('beeld_foto', $p->ID );
+			}
 
-		    	if ( function_exists( 'get_field' ) ) {
-	      		$attachment     = get_field('beeld_foto', $p->ID );
-					}
-
-      		if ( isset( $attachment['ID'] ) ) {
-
-            // thumbnail
-            $thumb  = $attachment['sizes'][ $size ];
-            $width  = $attachment['sizes'][ $size . '-width' ];
-            $height = $attachment['sizes'][ $size . '-height' ];
-
-            $plaatje = '<img src="' . $thumb . '" alt="' . $attachment['alt'] . '" width="' . $width . '" height="' . $height . '" />';
-          }
+			if ( isset( $attachment['ID'] ) ) {
+				
+				// thumbnail
+				$thumb  = $attachment['sizes'][ $size ];
+				$width  = $attachment['sizes'][ $size . '-width' ];
+				$height = $attachment['sizes'][ $size . '-height' ];
+				
+				$plaatje = '<img src="' . $thumb . '" alt="' . $attachment['alt'] . '" width="' . $width . '" height="' . $height . '" />';
+			}
         }
 
 
@@ -2736,7 +2772,7 @@ function gc_wbvb_breadcrumb_add_newspage( $crumb, $args ) {
 			$actueelpagetitle = get_the_title( $actueelpageid );
 			
 			if ( $actueelpageid ) {
-				$crumb = gc_wbvb_breadcrumbstring( $actueelpageid, $args );
+				$crumb = ictu_gctheme_breadcrumbstring( $actueelpageid, $args );
 			}
 		}
 		
@@ -2744,39 +2780,13 @@ function gc_wbvb_breadcrumb_add_newspage( $crumb, $args ) {
 			$currentpageID  = get_field('brief_page_overview', 'option');
 			
 			if ( $currentpageID ) {
-				$crumb = gc_wbvb_breadcrumbstring( $currentpageID, $args );
+				$crumb = ictu_gctheme_breadcrumbstring( $currentpageID, $args );
 			}
 		}
 	}
 	
 	return $crumb;
 	
-}
-
-//========================================================================================================
-
-if (! function_exists( 'gc_wbvb_breadcrumbstring' ) ) {
-
-	function gc_wbvb_breadcrumbstring( $currentpageID, $args ) {
-	
-		global $post;
-		$crumb = '';
-		$countertje = 0;
-		
-		if ( $currentpageID ) {
-			$crumb = '<a href="' . get_permalink( $currentpageID ) . '">' . get_the_title( $currentpageID ) .'</a>' . $args['sep'] . ' ' . get_the_title( $post->ID );
-			$postparents = get_post_ancestors( $currentpageID );
-	
-			foreach( $postparents as $postparent ) {
-				$countertje ++;
-				$crumb = '<a href="' . get_permalink( $postparent ) . '">' . get_the_title( $postparent ) .'</a>' . $args['sep'] . $crumb;
-			}
-		}
-		
-		return $crumb;
-		
-	}
-
 }
 
 //========================================================================================================

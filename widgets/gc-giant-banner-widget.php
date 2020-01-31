@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.29.1
-// @desc.   Public Service nominatie-widget op homepage.
+// @version 4.1.6
+// @desc.   Separate CSS files restored. Login form slightly retouched.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -200,7 +200,7 @@ function append_header_css_for_gc_giant_banner_widget() {
 
 		wp_enqueue_style(
 			ID_GIANTBANNERWIDGET_CSS,
-			WBVB_THEMEFOLDER . '/blogberichten.css'
+			WBVB_THEMEFOLDER . '/css/widget-giant-banner.css'
 		);
 		
 		wp_add_inline_style( ID_GIANTBANNERWIDGET_CSS, $header_css );

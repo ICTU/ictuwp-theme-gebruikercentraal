@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.1.2
-// @desc.   Copied styling for .cards and various subsets from inclusie to gc-theme.
+// @version 4.1.7
+// @desc.   Meer contenttypes op paginatemplate 'page_template_overzichtspagina'.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 //=========================================================================================================
@@ -24,7 +24,7 @@
 			overflow: visible;
 			
 			&:before {
-				content: '';
+				display: none;
 			}
 			a {
 				flex-wrap: nowrap;
@@ -42,6 +42,11 @@
 
 	.card__content {
 		padding: 2rem 3rem;	
+		
+		h2, h3 {
+			margin-top: 0;
+			padding: 0;
+		}
 	}
 	
 	.card__image {
@@ -58,12 +63,27 @@
 			background: white;
 			display: block;
 			position: absolute;
-			bottom: -25px;
+			bottom: -125px;
 			right: 0;
 			width: 150%;
-			height: 25px;
+			height: 125px;
 			transform: rotate( 3deg );
 			transform-origin: top right;			
+		}
+	}
+	
+	&.beeld,
+	&.brief {
+		.card__title {
+			&:before {
+				display: none;
+			}
+		}
+		.card__image {
+			border: 1px solid @gc_greyblue;
+			background-size: contain;
+			margin: 2rem;
+			width: auto;
 		}
 	}
 }

@@ -1137,36 +1137,38 @@
 //=========================================================================================================
 
 .gc-padding() {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-
-  @media @break_fullwidth {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	
+	@media @break_fullwidth {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
 }
 
-.gc-reverse-padding {
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
+//=========================================================================================================
 
-  @media @break_fullwidth {
-    margin-left: -3rem;
-    margin-right: -3rem;
-  }
+.gc-reverse-padding() { // oy, een mix is herkenbaar aan de haakjes...
+	margin-left: -1.5rem;
+	margin-right: -1.5rem;
+	
+	@media @break_fullwidth {
+		margin-left: -3rem;
+		margin-right: -3rem;
+	}
 }
 
 //=========================================================================================================
 
 .gc-box-shadow() {
-  box-shadow: 4px 4px 0 rgba(#000, 0.2);
+	box-shadow: 4px 4px 0 rgba(#000, 0.1);
 }
 
 //=========================================================================================================
 
 .gc-section-heading() {
   .font-size(34);
-  font-family: @font-secondary;
+  font-family: @font_secondary;
   text-transform: uppercase;
   line-height: 40px;
 

@@ -14,8 +14,8 @@
 
 //========================================================================================================
 
-@import "../abstracts/_variables";
-@import "../abstracts/_mixins";
+//@import "../abstracts/_variables"; // wordt niet zelfstandig gecompiled, dus geen includes
+//@import "../abstracts/_mixins";
 
 @maxwidth_wraps:	1180px;
 @inputwidthsearch:	( @widget_area_button - 2px );
@@ -459,7 +459,7 @@
 		text-align: right;
 		font-family: @bodyfont;
 		text-transform: none;
-		letter-spacing: normal;
+//		letter-spacing: normal;
 		font-size: 1.4rem;
 		position: relative;
 		height: ( @widget_area_button - 2px );
