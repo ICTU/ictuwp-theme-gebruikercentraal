@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-4.1.8 - Incremented version number, to prevent cache errors.
+4.1.9 - Card-type 'card--vaardigheid' added.
 
 ## Version history
+* 4.1.9 - Card-type 'card--vaardigheid' added.
 * 4.1.8 - Incremented version number, to prevent cache errors.
 * 4.1.7 - Meer contenttypes op paginatemplate 'page_template_overzichtspagina'.
 * 4.1.6 - Separate CSS files restored. Login form slightly retouched.

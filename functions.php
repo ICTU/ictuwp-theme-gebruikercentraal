@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.1.8
-// @desc.   Incremented version number, to prevent cache errors.
+// @version 4.1.9
+// @desc.   Card-type 'card--vaardigheid' added.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '4.1.8' );
-define( 'CHILD_THEME_DESCRIPTION', "4.1.8 - Incremented version number, to prevent cache errors." );
+define( 'CHILD_THEME_VERSION', '4.1.9' );
+define( 'CHILD_THEME_DESCRIPTION', "4.1.9 - Card-type 'card--vaardigheid' added." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -216,7 +216,7 @@ if ( ! defined( 'GC_ALLOWED' ) ) {
 		3 => ICTU_GC_CPT_STAP,
 		4 => GC_BEELDBANK_BRIEF_CPT,
 		5 => GC_BEELDBANK_BEELD_CPT,
-		6 => ICTU_GC_CPT_VAARDIGHEDEN
+		6 => ICTU_GC_CPT_VAARDIGHEDEN,
 		7 => ICTU_GC_CPT_PROCESTIP
 	) );
 }
