@@ -9,8 +9,8 @@
 // * @author  Paul van Buuren
 // * @license GPL-2.0+
 // * @since   4.1.3
-// * @version 4.1.6
-// * @desc.   Separate CSS files restored. Login form slightly retouched.
+// * @version 4.1.9
+// * @desc.   Card-type 'card--vaardigheid' added.
 // * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 ///
 
@@ -50,6 +50,62 @@ if ( !function_exists( 'ictu_gctheme_card_general' ) ) :
 
         echo '<div class="card no-image">';
         echo '<h3 id="' . $title_id . '"><a href="' . get_permalink( $post_ID ) . '">' . $section_title .
+          '<span class="btn btn--arrow"></span>' .
+          '</a></h3>';
+        echo '<p>';
+        echo $section_text;
+        echo '</p>';
+        echo '</div>';
+
+	    
+    }
+
+
+endif;
+
+//========================================================================================================
+
+if ( !function_exists( 'ictu_gctheme_card_vaardigheid' ) ) :
+
+
+	/**
+	 * Writes out a single card voor een vaardigheid, with an icon
+	 *
+	 * @since 4.1.9
+	 *
+	 * @param object $post 
+	 * @return array $menuarray Array with links and link text (if $args['getmenu'] => TRUE).
+	 */
+
+    function ictu_gctheme_card_vaardigheid( $post = [] ) {
+
+        if ( is_object( $post ) ) {
+            $post_ID = $post->ID;
+        }
+        elseif ( $post > 0 ) {
+            $post_ID = $post;
+        }
+        else {
+            return;
+        }
+
+        $section_title	= get_the_title( $post_ID );
+        $section_text	= get_the_excerpt( $post_ID );
+        $section_link	= get_sub_field( 'home_template_teaser_link' );
+        $title_id		= sanitize_title( $section_title );
+		$posttype 		= get_post_type( $post_ID );
+		$icoon			= get_field( 'vaardigheid_icoon', $post_ID );
+		$titleclass 	= '';		
+		$cardclass 		= "card--" . $posttype;
+		
+		if ( $icoon ) {
+			$titleclass  = "icon--" . $icoon;
+			$cardclass 	.= " icon";
+		}
+		
+
+        echo '<div class="card ' . $cardclass . '">';
+        echo '<h3 id="' . $title_id . '" class="' . $titleclass . '"><a href="' . get_permalink( $post_ID ) . '">' . $section_title . ' - ' . $icoon .
           '<span class="btn btn--arrow"></span>' .
           '</a></h3>';
         echo '<p>';
@@ -165,7 +221,7 @@ if ( !function_exists( 'ictu_gctheme_card_featuredimage' ) ) :
 	        return;
 	    }
 	
-		$posttype 			= get_post_type( $post_ID);
+		$posttype 			= get_post_type( $post_ID );
 		$section_title		= get_the_title( esc_html( $post_ID ) );
 		$title_id 			= sanitize_title('title-' . $posttype . '-' . $post_ID );
 		$section_text		= get_the_excerpt( $post_ID );

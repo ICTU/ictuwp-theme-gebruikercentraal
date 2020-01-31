@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.1.8
-// @desc.   Incremented version number, to prevent cache errors.
+// @version 4.1.9
+// @desc.   Card-type 'card--vaardigheid' added.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '4.1.8' );
-define( 'CHILD_THEME_DESCRIPTION', "4.1.8 - Incremented version number, to prevent cache errors." );
+define( 'CHILD_THEME_VERSION', '4.1.9' );
+define( 'CHILD_THEME_DESCRIPTION', "4.1.9 - Card-type 'card--vaardigheid' added." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -216,7 +216,7 @@ if ( ! defined( 'GC_ALLOWED' ) ) {
 		3 => ICTU_GC_CPT_STAP,
 		4 => GC_BEELDBANK_BRIEF_CPT,
 		5 => GC_BEELDBANK_BEELD_CPT,
-		6 => ICTU_GC_CPT_VAARDIGHEDEN
+		6 => ICTU_GC_CPT_VAARDIGHEDEN,
 		7 => ICTU_GC_CPT_PROCESTIP
 	) );
 }
@@ -1084,35 +1084,44 @@ if (! function_exists( 'gc_wbvb_sitemap_show_cpt_content' ) ) {
 
 		if ( $args['customcpt'] && post_type_exists( $args['customcpt'] ) ) {
 
-			$obj = get_post_type_object( $args['customcpt'] );
-
-			echo '<h2>' . $obj->labels->name . '</h2>';
-/*			
-			$args = array(
-				'type'      => 'postbypost',
-				'post_type' => $args['customcpt'],
-				'orderby'   => $args['orderby'],
-				'order'   	=> $args['order'],
-				'limit'   	=> $args['limit'],
-				'type'   	=> $args['type'],
-				'echo'      => 1,
-			);
-*/
-			$args = array(
-				'post_type' => $args['customcpt'],
-				'title_li'	=> '',
-				'orderby'   => $args['orderby'],
-				'order'   	=> $args['order'],
-				'limit'   	=> $args['limit'],
-				'type'   	=> $args['type'],
-				'echo'      => 1,
-			);
-
-			echo '<ul>';
-			wp_list_pages( $args ); 
-//			wp_get_archives( $args ); 
-			echo '</ul>';
+			$obj 	= get_post_type_object( $args['customcpt'] );
+			$titel	= $obj->labels->name;
 			
+			$args2 = array(
+				'type'      => 'postbypost',
+				'title_li'	=> '',
+				'post_type' => $args['customcpt'],
+				'orderby'   => $args['orderby'],
+				'order'   	=> $args['order'],
+				'limit'   	=> $args['limit'],
+				'type'   	=> $args['type'],
+				'echo'      => 0,
+			);
+			$listpages = wp_list_pages( $args2 ); 
+
+			if ( ! $listpages ) {
+			
+				$args2 = array(
+					'post_type' => $args['customcpt'],
+					'title_li'	=> '',
+					'orderby'   => $args['orderby'],
+					'order'   	=> $args['order'],
+					'limit'   	=> $args['limit'],
+					'type'   	=> $args['type'],
+					'echo'      => 0,
+				);
+				$listpages = wp_get_archives( $args2 ); 
+				
+			}
+
+			if ( $listpages ) {
+			
+				echo '<h2>' . $titel . '</h2>';
+				echo '<ul>';
+				echo $listpages;
+				echo '</ul>';
+
+			}
 		}
 	}
 }

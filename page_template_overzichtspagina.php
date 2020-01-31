@@ -1,6 +1,6 @@
 <?php
 
-	// * Gebruiker Centraal - page_template_overzichtspagina.php
+// * Gebruiker Centraal - page_template_overzichtspagina.php
 // * ----------------------------------------------------------------------------------
 // * Page template to display a grid with various types of content
 // * ----------------------------------------------------------------------------------
@@ -9,8 +9,8 @@
 // * @author  Paul van Buuren
 // * @license GPL-2.0+
 // * @version 4.1.3
-// * @version 4.1.7
-// * @desc.   Meer contenttypes op paginatemplate 'page_template_overzichtspagina'.
+// * @version 4.1.9
+// * @desc.   Card-type 'card--vaardigheid' added.
 // * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -221,6 +221,9 @@ function gc_page_template_loop() {
                 elseif ( ( GC_BEELDBANK_BRIEF_CPT == get_post_type( $post ) )  || ( GC_BEELDBANK_BEELD_CPT == get_post_type( $post ) ) ) {
                     echo ictu_gctheme_card_featuredimage( $post );
                 }
+                elseif ( ( ICTU_GC_CPT_VAARDIGHEDEN == get_post_type( $post ) ) ) {
+                    echo ictu_gctheme_card_vaardigheid( $post );
+                }
                 else {
                     echo ictu_gctheme_card_general( $post );
                 }
@@ -307,6 +310,9 @@ function gc_page_template_loop() {
                 }
                 elseif ( ( GC_BEELDBANK_BRIEF_CPT == get_post_type( $post ) )  || ( GC_BEELDBANK_BEELD_CPT == get_post_type( $post ) ) ) {
                     echo ictu_gctheme_card_featuredimage( $post );
+                }
+                elseif ( ( ICTU_GC_CPT_VAARDIGHEDEN == get_post_type( $post ) ) ) {
+                    echo ictu_gctheme_card_vaardigheid( $post );
                 }
                 else {
                     echo ictu_gctheme_card_general( $post );
