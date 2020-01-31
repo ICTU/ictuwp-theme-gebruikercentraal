@@ -155,7 +155,7 @@ if ( !function_exists( 'ictu_gctheme_card_featuredimage' ) ) :
 
 	function ictu_gctheme_card_featuredimage( $post ) {
 	
-	    if (is_object($post)) {
+	    if ( is_object( $post ) ) {
 	        $post_ID = $post->ID;
 	    }
 	    elseif ($post > 0) {
@@ -165,54 +165,34 @@ if ( !function_exists( 'ictu_gctheme_card_featuredimage' ) ) :
 	        return;
 	    }
 	
-	    $posttype 			= get_post_type($post_ID);
-
-        $section_title	= get_the_title( $post_ID );
-	    
-	    $title_id 			= sanitize_title('title-' . $posttype . '-' . $post_ID);
-	    $section_id 		= sanitize_title('section-' . $posttype . '-' . $post_ID);
-	    $cardtitle 			= esc_html( get_the_title( $post_ID ) );
-	
-	    // wat extra afbreekmogelijkheden toevoegen in de titel
-		$cardtitle 			= od_wbvb_custom_post_title( $cardtitle );	
+		$posttype 			= get_post_type( $post_ID);
+		$section_title		= get_the_title( esc_html( $post_ID ) );
+		$title_id 			= sanitize_title('title-' . $posttype . '-' . $post_ID );
+		$section_text		= get_the_excerpt( $post_ID );
 		$block_id       	= sanitize_title( 'related_' . $post_ID );
-	
-		$imageplaceholder 	= '';
-//		$imageplaceholder 	= get_post_type( $post ) . ' lalalala ';
-		
 		$image 				= wp_get_attachment_image_src( get_post_thumbnail_id( $post_ID ), 'large' );
+		$imageplaceholder 	= '';
+		$section_meta 		= '';
 
-		
+		if ( 'post' === get_post_type() ) {
+			$section_meta = get_the_author( $post_ID ) . ' - ' . do_shortcode( '[post_date]' );
+		}
+
 		if ( $image[0] ) {
 			$imageplaceholder = '<div class="card__image"></div>';
 		}
 		
-		$return .= '<div class="card card--featured-image ' . $posttype . '" id="' . $block_id . '">';
+		$return = '<div class="card card--featured-image ' . $posttype . '" id="' . $block_id . '">';
 		$return .= $imageplaceholder;
 		$return .= '<div class="card__content">';
-		$return .= '<h2 id="' . $title_id . '" class="card__title"><a href="' . get_permalink( $theid ) . '"><span>';
+		$return .= '<h2 id="' . $title_id . '" class="card__title"><a href="' . get_permalink( $post_ID ) . '"><span>';
 		$return .= od_wbvb_custom_post_title( $section_title ) . '</span><span class="btn btn--arrow"></a></h2>';
+		$return .= $section_meta;
 		$return .= '<p>';
 		$return .= $section_text;
 		$return .= '</p>';
 		$return .= '</div>'; // .card__content
 		$return .= '</div>'; // .card
-
-/*	
-	    $return = '<section aria-labelledby="' . $title_id . '" class="card card--doelgroep ' . $postpoppetje . '" id="' . $section_id . '">';
-	    $return .= '<div class="card__image"></div>';
-	    $return .= '<div class="card__content">';
-	    $return .=
-	      '<h2 class="card__title" id="' . $title_id . '">' .
-	      '<a href="' . get_permalink($post->ID) . '">' .
-	      '<span>' . _x('Ontwerpen voor', 'Home section doelgroep', 'ictu-gc-posttypes-inclusie') . ' </span>' .
-	      '<span>' . $cardtitle . '</span>' .
-	      '<span class="btn btn--arrow"></span>' .
-	      '</a></h2>';
-	    $return .= '<div class="tegeltje">' . $content . '<p><strong>' . $quoteobject_auteur . '</strong></p></div>';
-	    $return .= '</div>';
-	    $return .= '</section>';
-*/	    
 	
 	    return $return;
 	

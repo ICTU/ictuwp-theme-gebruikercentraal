@@ -24,7 +24,7 @@
 			overflow: visible;
 			
 			&:before {
-				content: '';
+				display: none;
 			}
 			a {
 				flex-wrap: nowrap;
@@ -42,6 +42,11 @@
 
 	.card__content {
 		padding: 2rem 3rem;	
+		
+		h2, h3 {
+			margin-top: 0;
+			padding: 0;
+		}
 	}
 	
 	.card__image {

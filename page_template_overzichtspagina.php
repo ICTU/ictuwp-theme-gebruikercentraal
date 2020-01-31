@@ -58,7 +58,6 @@ function ictu_gc_append_header_css_local() {
 
     if ('showsome' === $all_or_some) {
 
-
         $items = get_field('overzichtspagina_kies_items', $currentpageID );
 
         if ($items) {
@@ -66,9 +65,10 @@ function ictu_gc_append_header_css_local() {
             foreach ($items as $post):
 
 	            setup_postdata($post);
-	
-	            $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large');
-	
+
+				$currentpageID = $post->ID;
+				$image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large');
+				
 	            if ($image[0]) {
 	                $header_css .= "#related_" . $currentpageID . " .card__image { ";
 	                $header_css .= "background-image: url('" . $image[0] . "'); ";
@@ -214,6 +214,9 @@ function gc_page_template_loop() {
                 if ( ICTU_GC_CPT_DOELGROEP == get_post_type( $post ) ) {
                     $citaat = get_field('facts_citaten', $post->ID);
                     echo ictu_gctheme_card_doelgroep($post, $citaat);
+                }
+                elseif ( ( 'post' == get_post_type( $post ) )  || ( 'page' == get_post_type( $post ) ) ) {
+                    echo ictu_gctheme_card_featuredimage( $post );
                 }
                 elseif ( ( GC_BEELDBANK_BRIEF_CPT == get_post_type( $post ) )  || ( GC_BEELDBANK_BEELD_CPT == get_post_type( $post ) ) ) {
                     echo ictu_gctheme_card_featuredimage( $post );
