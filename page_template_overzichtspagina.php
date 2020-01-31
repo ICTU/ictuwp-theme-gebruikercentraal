@@ -26,7 +26,7 @@ add_action( 'genesis_loop', 'gc_page_template_loop', 10 );
 add_action('wp_enqueue_scripts', 'ictu_gc_append_header_css_local' );
 
 // tips toevoegen
-add_action( 'genesis_loop', 'ictu_gc_frontend_general_get_related_content', 12 );
+add_action( 'genesis_loop', 'ictu_gctheme_frontend_general_get_related_content', 12 );
 
 
 

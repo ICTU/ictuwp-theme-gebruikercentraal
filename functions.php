@@ -2772,7 +2772,7 @@ function gc_wbvb_breadcrumb_add_newspage( $crumb, $args ) {
 			$actueelpagetitle = get_the_title( $actueelpageid );
 			
 			if ( $actueelpageid ) {
-				$crumb = gc_wbvb_breadcrumbstring( $actueelpageid, $args );
+				$crumb = ictu_gctheme_breadcrumbstring( $actueelpageid, $args );
 			}
 		}
 		
@@ -2780,39 +2780,13 @@ function gc_wbvb_breadcrumb_add_newspage( $crumb, $args ) {
 			$currentpageID  = get_field('brief_page_overview', 'option');
 			
 			if ( $currentpageID ) {
-				$crumb = gc_wbvb_breadcrumbstring( $currentpageID, $args );
+				$crumb = ictu_gctheme_breadcrumbstring( $currentpageID, $args );
 			}
 		}
 	}
 	
 	return $crumb;
 	
-}
-
-//========================================================================================================
-
-if (! function_exists( 'gc_wbvb_breadcrumbstring' ) ) {
-
-	function gc_wbvb_breadcrumbstring( $currentpageID, $args ) {
-	
-		global $post;
-		$crumb = '';
-		$countertje = 0;
-		
-		if ( $currentpageID ) {
-			$crumb = '<a href="' . get_permalink( $currentpageID ) . '">' . get_the_title( $currentpageID ) .'</a>' . $args['sep'] . ' ' . get_the_title( $post->ID );
-			$postparents = get_post_ancestors( $currentpageID );
-	
-			foreach( $postparents as $postparent ) {
-				$countertje ++;
-				$crumb = '<a href="' . get_permalink( $postparent ) . '">' . get_the_title( $postparent ) .'</a>' . $args['sep'] . $crumb;
-			}
-		}
-		
-		return $crumb;
-		
-	}
-
 }
 
 //========================================================================================================

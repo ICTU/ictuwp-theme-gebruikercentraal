@@ -23,7 +23,7 @@
 
 //========================================================================================================
 
-if ( !function_exists( 'ictu_gc_frontend_general_get_related_content' ) ) :
+if ( !function_exists( 'ictu_gctheme_frontend_general_get_related_content' ) ) :
 
 
 	/**
@@ -41,7 +41,7 @@ if ( !function_exists( 'ictu_gc_frontend_general_get_related_content' ) ) :
 	 * @return string $return HTML string with related links (if $args['echo'] => FALSE).
 	 */
  	
-    function ictu_gc_frontend_general_get_related_content( $args = [] ) {
+    function ictu_gctheme_frontend_general_get_related_content( $args = [] ) {
 
         global $post;
 

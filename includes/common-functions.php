@@ -876,5 +876,66 @@ if (!function_exists('od_wbvb_custom_post_title')) {
 
 //========================================================================================================
 
+if (!function_exists('ictu_gctheme_disable_author_pages')) {
+
+    /** ----------------------------------------------------------------------------------------------------
+     * disable all author pages
+     */
+    function ictu_gctheme_disable_author_pages() {
+
+        global $wp_query;
+
+        if (is_author()) {
+            // Redirect to homepage, set status to 301 permenant redirect.
+            // Function defaults to 302 temporary redirect.
+            wp_redirect(get_option('home'), 301);
+            exit;
+        }
+
+    }
+
+}
+
+//========================================================================================================
+
+if (!function_exists('wbvb_dump_actions')) {
+
+	function wbvb_dump_actions() {
+	
+	    $hook_name = 'genesis_loop';
+	    global $wp_filter;
+	    echo '<pre>';
+	    var_dump($wp_filter[$hook_name]);
+	    echo '</pre>';
+	
+	}
+
+}
+
+//========================================================================================================
+
+if (! function_exists( 'ictu_gctheme_breadcrumbstring' ) ) {
+
+	function ictu_gctheme_breadcrumbstring( $currentpageID, $args ) {
+	
+		global $post;
+		$crumb = '';
+		$countertje = 0;
+		
+		if ( $currentpageID ) {
+			$crumb = '<a href="' . get_permalink( $currentpageID ) . '">' . get_the_title( $currentpageID ) .'</a>' . $args['sep'] . ' ' . get_the_title( $post->ID );
+			$postparents = get_post_ancestors( $currentpageID );
+	
+			foreach( $postparents as $postparent ) {
+				$countertje ++;
+				$crumb = '<a href="' . get_permalink( $postparent ) . '">' . get_the_title( $postparent ) .'</a>' . $args['sep'] . $crumb;
+			}
+		}
+		
+		return $crumb;
+		
+	}
+
+}
 
 //========================================================================================================
