@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.1.9
-// @desc.   Card-type 'card--vaardigheid' added.
+// @version 4.1.10
+// @desc.   Uitgelichte afbeelding niet meer toevoegen voor beelden en brieven.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '4.1.9' );
-define( 'CHILD_THEME_DESCRIPTION', "4.1.9 - Card-type 'card--vaardigheid' added." );
+define( 'CHILD_THEME_VERSION', '4.1.10' );
+define( 'CHILD_THEME_DESCRIPTION', "4.1.10 - Uitgelichte afbeelding niet meer toevoegen voor beelden en brieven." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -1290,6 +1290,13 @@ function gc_wbvb_add_blog_single_css() {
 		$countertje = 0;
 		
 		while ( have_posts() ) : the_post();
+
+			if ( ( GC_BEELDBANK_BEELD_CPT === get_post_type() ) || ( GC_BEELDBANK_BRIEF_CPT === get_post_type() ) ) {
+				// * @since	  4.1.10
+				// niet meer tonen voor beelden of brieven
+				continue;
+			}
+			
 			
 			// do loop stuff
 			$countertje++;
