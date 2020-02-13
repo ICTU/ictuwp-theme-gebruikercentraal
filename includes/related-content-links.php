@@ -89,9 +89,6 @@ if ( !function_exists( 'ictu_gctheme_frontend_general_get_related_content' ) ) :
 						$columncounter = 'col-3';
 					}
 
-//$columncounter = 'col-2';
-
-                    
 					$return .= '<section aria-labelledby="' . $title_id . '" class="section section--related section--related-content ' . $columncounter . '">';
 
                     $return .= '<div class="wrap">';
