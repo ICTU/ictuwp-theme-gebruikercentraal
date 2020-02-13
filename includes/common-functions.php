@@ -1007,7 +1007,7 @@ if (! function_exists( 'ictu_gctheme_write_lightboximage' ) ) {
 			return;
 		}
 		if ( ! $args['alt'] ) {
-			$args['alt'] = 'COMMONGC ' . sprintf( _x( "Image for '%s'", 'Alternatief voor een ontbrekende alt-tekst: post-titel.', 'gebruikercentraal' ), get_the_title( $post->ID ) );
+			$args['alt'] = sprintf( _x( "Image for '%s'", 'Alternatief voor een ontbrekende alt-tekst: post-titel.', 'gebruikercentraal' ), get_the_title( $post->ID ) );
 		}
 		if ( $args['cssclass'] ) {
 			$cssclass .= ' ' . trim( $args['cssclass'] );
