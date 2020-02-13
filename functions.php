@@ -1511,7 +1511,7 @@ function gc_wbvb_add_blog_archive_css() {
 			$image        	= '';
 			$bluh 			= '';
 
-			$BLOGBERICHTEN_CSS .= '/* ' . sanitize_title( $the_image_ID ) . " */\n";
+			$BLOGBERICHTEN_CSS .= '/* gc_wbvb_add_blog_archive_css: ' . sanitize_title( $the_image_ID ) . " */\n";
 			
 			// check of het eerste bericht een enorme afbeelding heeft
 			if ( $countertje == 1 && 'post' == $posttype ) {
@@ -1550,7 +1550,7 @@ function gc_wbvb_add_blog_archive_css() {
 							$BLOGBERICHTEN_CSS .= "} \n";
 							$extra_class  = ' ';
 							$class = 'simple feature-image';
-							$BLOGBERICHTEN_CSS .= '/* ' . sanitize_title( $image[0] ) . " */\n";
+							$BLOGBERICHTEN_CSS .= '/* gc_wbvb_add_blog_archive_css: ' . sanitize_title( $image[0] ) . " */\n";
 						}
 					}
 				}
@@ -1573,7 +1573,8 @@ function gc_wbvb_add_blog_archive_css() {
 					$BLOGBERICHTEN_CSS .= "background-image: url('" . $image[0] . "');\n";
 					$BLOGBERICHTEN_CSS .= "} \n";
 					$class = 'feature-image';
-					$BLOGBERICHTEN_CSS .= '/* ' . sanitize_title( $image[0] ) . " */\n";
+//					$BLOGBERICHTEN_CSS .= '/* ' . sanitize_title( $image[0] ) . " */\n";
+					$BLOGBERICHTEN_CSS .= '/* gc_wbvb_add_blog_archive_css: ' . sanitize_title( $image[0] ) . " */\n";
 				}
 				
 			}

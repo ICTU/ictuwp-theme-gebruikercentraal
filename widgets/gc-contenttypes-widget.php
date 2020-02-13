@@ -142,7 +142,7 @@ function append_header_css_for_gc_beeldbank_homewidget() {
 								$header_css .= " background-image: url('" . $image[0] . "');\n";
 								$header_css .= "} \n";
 								$class = 'feature-image';
-								$header_css .= '/* ' . sanitize_title( $image[0] ) . " */\n";
+								$header_css .= '/* append_header_css_for_gc_beeldbank_homewidget: ' . sanitize_title( $image[0] ) . " */\n";
 							}
 						}
 						    
