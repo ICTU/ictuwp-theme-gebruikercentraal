@@ -1,10 +1,27 @@
 /* Link */
 .tobi-zoom {
-  border: 0;
+//  border: 10px solid red;
   box-shadow: none;
   display: block;
   position: relative;
   text-decoration: none;
+}
+
+.logged-in .missing-alt-desc-for-image {
+	// warn editors about missing alt
+	border: 10px dashed red;
+	&:after {
+		content: 'Hallo redactie. De alt-tekst niet gevuld voor dit plaatje. Dit is geen decoratieve afbeelding en daarom moet je de afbeelding beschrijven.';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		background: red;
+		color: white;
+		padding: .1rem .5rem;
+		text-align: center;
+	}
 }
 
 .tobi-zoom img {
@@ -12,15 +29,21 @@
 }
 
 .tobi-zoom__icon {
-  align-items: center;
-  background-color: rgba(26, 42, 58, 0.94);
-  bottom: 0;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  line-height: 1;
-  position: absolute;
-  right: 0;
+	align-items: center;
+	font-family: @montserrat_semibold;
+	background: @txt;
+	color: @wit;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding-left: 2.75rem;
+	padding-right: .75rem;
+	font-size: 90%;
+	background-image: url('images/icon-search-plus.svg');
+	background-position: 7px center;
+	background-repeat: no-repeat;
+	background-size: 12px 12px;
 }
 
 .tobi-zoom__icon svg {
@@ -249,6 +272,15 @@
 .tobi > button.tobi__prev svg, .tobi > button.tobi__next svg {
   height: 3.88889em;
   width: 3.88889em;
+}
+
+.tobi > button.tobi__prev,
+.tobi > button.tobi__next,
+.tobi > button.tobi__close {
+	background: @wit;
+	color: @txt;
+	min-width: 1.5rem;
+	min-height: 1.5rem;
 }
 
 .tobi > button.tobi__prev {

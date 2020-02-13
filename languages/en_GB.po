@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gebruiker Centraal\n"
-"POT-Creation-Date: 2019-10-22 10:54+0200\n"
-"PO-Revision-Date: 2019-10-22 10:54+0200\n"
+"POT-Creation-Date: 2020-02-13 14:38+0100\n"
+"PO-Revision-Date: 2020-02-13 14:38+0100\n"
 "Last-Translator: Paul van Buuren <paul@wbvb.nl>\n"
 "Language-Team: Paul van Buuren <paul@wbvb.nl>\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.4\n"
+"X-Generator: Poedit 2.3\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
@@ -30,85 +30,85 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: functions.php:311
+#: functions.php:383
 msgid "Main menu"
 msgstr ""
 
-#: functions.php:370
+#: functions.php:442
 msgid "Authors"
 msgstr ""
 
-#: functions.php:385
+#: functions.php:457
 msgid "Home"
 msgstr ""
 
-#: functions.php:399
+#: functions.php:471
 msgid "Label"
 msgstr ""
 
-#: functions.php:400
+#: functions.php:472
 msgid "Date archive"
 msgstr ""
 
-#: functions.php:401
+#: functions.php:473
 msgid "Search result"
 msgstr ""
 
-#: functions.php:404
+#: functions.php:476
 msgid "Whoops"
 msgstr ""
 
-#: functions.php:428
+#: functions.php:500
 msgid "Read: '"
 msgstr ""
 
-#: functions.php:519
+#: functions.php:603
 msgid "Author"
 msgstr ""
 
-#: functions.php:629
+#: functions.php:714
 msgid "Share on Twitter"
 msgstr ""
 
-#: functions.php:630
+#: functions.php:715
 msgid "Share on Facebook"
 msgstr ""
 
-#: functions.php:631
+#: functions.php:716
 msgid "Share on LinkedIn"
 msgstr ""
 
-#: functions.php:712
+#: functions.php:797
 msgid "Please enter a valid email address"
 msgstr ""
 
-#: functions.php:713
+#: functions.php:798
 msgid "Saving..."
 msgstr ""
 
-#: functions.php:761
+#: functions.php:846
 msgctxt "Skiplinks"
 msgid "Jump to main content"
 msgstr ""
 
-#: functions.php:762
+#: functions.php:847
 msgctxt "Skiplinks"
 msgid "Jump to main navigation"
 msgstr ""
 
-#: functions.php:807
+#: functions.php:892
 msgid "is lid van het actieteam"
 msgstr ""
 
-#: functions.php:811 widgets/gc-actieteam-widget.php:193
+#: functions.php:896 widgets/gc-actieteam-widget.php:193
 msgid "Alle actieteamleden"
 msgstr ""
 
-#: functions.php:839
+#: functions.php:924
 msgid "Not found, error 404"
 msgstr ""
 
-#: functions.php:850
+#: functions.php:941
 #, php-format
 msgid ""
 "The page you are looking for no longer exists. Perhaps you can return back "
@@ -116,152 +116,139 @@ msgid ""
 "are looking for. Or, you can try finding it by using the search form below."
 msgstr ""
 
-#: functions.php:895
+#: functions.php:987
 msgid "Pages:"
 msgstr ""
 
-#: functions.php:907
+#: functions.php:999
 #, php-format
 msgid "The %s most recent posts"
 msgstr ""
 
-#: functions.php:914
+#: functions.php:1006
 msgid "Topics:"
 msgstr ""
 
-#: functions.php:919
+#: functions.php:1011
 msgid "Authors:"
 msgstr ""
 
-#: functions.php:1502
+#: functions.php:1722
 msgid "Widget in de site footer"
 msgstr ""
 
-#: functions.php:1504
+#: functions.php:1724
 msgid "Ruimte voor widgets in de site footer. Hier bijvoorbeeld footerlinks."
 msgstr ""
 
-#: functions.php:1542
+#: functions.php:1763
+msgid "Banners boven hoofdcontent"
+msgstr ""
+
+#: functions.php:1765
+msgid ""
+"Widgets die op home en pagina's getoond worden boven alle verdere content. "
+"Op berichtpagina's onder de inhoud."
+msgstr ""
+
+#: functions.php:1794
 msgid "Home-widget links"
 msgstr ""
 
-#: functions.php:1544
+#: functions.php:1796
 msgid "Hier kun je de widgets plaatsen voor events en blogberichten"
 msgstr ""
 
-#: functions.php:1573
+#: functions.php:1826
 msgid "Home-widget rechts"
 msgstr ""
 
-#: functions.php:1575
+#: functions.php:1828
 msgid "Hier kun je de widgets plaatsen voor o.m. het actieteam"
 msgstr ""
 
-#: functions.php:1780
+#: functions.php:2039
 msgid "fully booked"
 msgstr ""
 
-#: functions.php:1887
+#: functions.php:2146
 msgctxt "Kopje op evenementpagina"
 msgid "Programme"
 msgstr ""
 
-#: functions.php:1949
+#: functions.php:2208
 msgctxt "Kopje op berichtpagina"
 msgid "Downloads"
 msgstr ""
 
-#: functions.php:2082
+#: functions.php:2341
 msgctxt "Kopje op bericht- of evenementpagina"
 msgid "Links"
 msgstr ""
 
-#: functions.php:2127
+#: functions.php:2386
 msgid "Comment navigation"
 msgstr ""
 
-#: functions.php:2130
+#: functions.php:2389
 msgid "Older Comments"
 msgstr ""
 
-#: functions.php:2134
+#: functions.php:2393
 msgid "Newer Comments"
 msgstr ""
 
-#: functions.php:2172
+#: functions.php:2431
 msgid "Your comment is held for moderation"
 msgstr ""
 
-#: functions.php:2179
+#: functions.php:2438
 #, php-format
 msgid "<cite class=\"fn\">%s</cite> <span class=\"says\">wrote:</span>"
 msgstr ""
 
 #. translators: 1: date, 2: time
-#: functions.php:2189
+#: functions.php:2448
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: functions.php:2189
+#: functions.php:2448
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:2422
+#: functions.php:2681
 msgid "Older"
 msgstr ""
 
-#: functions.php:2435
+#: functions.php:2694
 msgid "Newer"
 msgstr ""
 
-#: functions.php:2480 includes/author-box.php:240
+#: functions.php:2739 includes/author-box.php:240
 msgctxt "author box"
 msgid "LinkedIn page"
 msgstr ""
 
-#: functions.php:2481 includes/author-box.php:236
+#: functions.php:2740 includes/author-box.php:236
 msgctxt "author box"
 msgid "Personal website"
 msgstr ""
 
-#: functions.php:2591
+#: functions.php:2824
 msgid "Previous"
 msgstr ""
 
-#: functions.php:2592
+#: functions.php:2825
 msgid "Next"
 msgstr ""
 
-#: functions.php:2757
+#: functions.php:2990
 msgid "LinkedIn-profiel"
 msgstr ""
 
-#: functions.php:2763
+#: functions.php:2996
 msgid "Twitter-account"
-msgstr ""
-
-#: functions.php:2799
-#, php-format
-msgctxt "stappen"
-msgid "%s in %s stappen"
-msgstr ""
-
-#: functions.php:2830
-msgid "Stap"
-msgstr ""
-
-#: functions.php:2836
-#, php-format
-msgctxt "stappen"
-msgid ""
-"<span class=\"visuallyhidden\">Stap</span> %s <span class=\"visuallyhidden"
-"\">van %s:</span> %s"
-msgstr ""
-
-#: functions.php:2851
-msgctxt "Stap, voorbeeld"
-msgid "Bijvoorbeeld:"
 msgstr ""
 
 #: includes/author-box.php:130
@@ -294,103 +281,181 @@ msgctxt "author box"
 msgid "All posts"
 msgstr ""
 
-#: includes/common-functions.php:54
+#: includes/common-functions.php:59
 msgctxt "search"
 msgid "Search..."
 msgstr ""
 
-#: includes/common-functions.php:65
+#: includes/common-functions.php:70
 msgctxt "search"
 msgid "Search within this site"
 msgstr ""
 
-#: includes/common-functions.php:457
+#: includes/common-functions.php:461
 msgid "Read more"
 msgstr ""
 
-#: includes/common-functions.php:478
+#: includes/common-functions.php:482
 msgctxt "comment title"
 msgid "Comments"
 msgstr ""
 
-#: includes/common-functions.php:500
+#: includes/common-functions.php:504
 msgid "Join the discussion"
 msgstr ""
 
-#: includes/common-functions.php:502
+#: includes/common-functions.php:506
 msgctxt "reactieformulier"
 msgid "Your reply"
 msgstr ""
 
-#: includes/common-functions.php:507
+#: includes/common-functions.php:511
 msgctxt "reactieformulier"
 msgid "Your name"
 msgstr ""
 
-#: includes/common-functions.php:512
+#: includes/common-functions.php:516
 msgctxt "reactieformulier"
 msgid "Email address"
 msgstr ""
 
-#: includes/common-functions.php:520
+#: includes/common-functions.php:524
 msgid "Reply"
 msgstr ""
 
-#: includes/common-functions.php:673
+#: includes/common-functions.php:677
 msgctxt "begroeting inlogmail"
 msgid "Hallo,"
 msgstr ""
 
-#: includes/common-functions.php:675
+#: includes/common-functions.php:679
 msgctxt "inlogmail"
 msgid ""
 "We kregen via de website het verzoek om een nieuw wachtwoord te sturen voor "
 "het account met de inlognaam:"
 msgstr ""
 
-#: includes/common-functions.php:678
+#: includes/common-functions.php:682
 msgctxt "inlogmail"
 msgid "Om je wachtwoord opnieuw in te stellen, klik je op deze link:"
 msgstr ""
 
-#: includes/common-functions.php:683
+#: includes/common-functions.php:687
 msgctxt "inlogmail"
 msgid "Deze link is maar 1 keer te gebruiken."
 msgstr ""
 
-#: includes/common-functions.php:685
+#: includes/common-functions.php:689
 msgctxt "inlogmail"
 msgid "Als je geen nieuw wachtwoord wilt, hoef je niets te doen."
 msgstr ""
 
-#: includes/common-functions.php:689
+#: includes/common-functions.php:693
 msgctxt "afsluiting inlogmail"
 msgid "Met vriendelijke groet,"
 msgstr ""
 
-#: includes/common-functions.php:691
+#: includes/common-functions.php:695
 msgctxt "afsluiting inlogmail"
 msgid "het Gebruiker Centraal-team"
 msgstr ""
 
-#: includes/common-functions.php:771
+#: includes/common-functions.php:772
 msgctxt "Screen reader text for menu"
 msgid "Show menu"
 msgstr ""
 
-#: includes/common-functions.php:772
+#: includes/common-functions.php:773
 msgctxt "Screen reader text for menu"
 msgid "Close menu"
 msgstr ""
 
-#: includes/common-functions.php:773
+#: includes/common-functions.php:774
 msgctxt "Screen reader text for menu"
 msgid "Menu"
 msgstr ""
 
-#: includes/common-functions.php:819
+#: includes/common-functions.php:801
+msgctxt "lightbox"
+msgid "Previous image"
+msgstr ""
+
+#: includes/common-functions.php:802
+msgctxt "lightbox"
+msgid "Next image"
+msgstr ""
+
+#: includes/common-functions.php:803
+msgctxt "lightbox"
+msgid " < "
+msgstr ""
+
+#: includes/common-functions.php:804
+msgctxt "lightbox"
+msgid " > "
+msgstr ""
+
+#: includes/common-functions.php:807
+msgctxt "lightbox"
+msgid "Close lightbox"
+msgstr ""
+
+#: includes/common-functions.php:808
+msgctxt "lightbox"
+msgid "×"
+msgstr ""
+
+#: includes/common-functions.php:809
+msgctxt "lightbox"
+msgid "Zoom"
+msgstr ""
+
+#: includes/common-functions.php:810
+msgctxt "lightbox"
+msgid "Download image"
+msgstr ""
+
+#: includes/common-functions.php:811
+msgctxt "lightbox"
+msgid "Image is loading"
+msgstr ""
+
+#: includes/common-functions.php:860
 msgctxt "label zoekknop"
 msgid "Zoeken"
+msgstr ""
+
+#: includes/common-functions.php:1010
+#, php-format
+msgctxt "Alternatief voor een ontbrekende alt-tekst: post-titel."
+msgid "Image for '%s'"
+msgstr ""
+
+#: includes/components/cards.php:184
+msgctxt "Home section doelgroep"
+msgid "Ontwerpen voor"
+msgstr ""
+
+#: includes/components/home_template_stappen.php:71
+msgctxt "titel op home-pagina"
+msgid "Stappen"
+msgstr ""
+
+#: includes/components/home_template_stappen.php:112
+#, php-format
+msgctxt "Label stappen"
+msgid "%s. %s"
+msgstr ""
+
+#: includes/components/home_template_stappen.php:113
+#, php-format
+msgctxt "home lees meer"
+msgid "%s <span class=\"visuallyhidden\">over %s</span>"
+msgstr ""
+
+#: includes/components/home_template_stappen.php:113
+msgctxt "home lees meer"
+msgid "Lees meer"
 msgstr ""
 
 #: includes/customizer.php:94
@@ -415,8 +480,8 @@ msgstr ""
 
 #: includes/widgets.php:147 widgets/gc-contenttypes-widget.php:66
 #: widgets/gc-e-newsletter.php:104 widgets/gc-footer-logo-widget.php:50
-#: widgets/gc-footer-widget.php:51 widgets/gc-footer-widget.php:55
-#: widgets/gc-user-welcome-widget.php:153
+#: widgets/gc-footer-widget.php:55 widgets/gc-giant-banner-widget.php:73
+#: widgets/gc-socialmedia-widget.php:259 widgets/gc-user-welcome-widget.php:153
 msgid "Title"
 msgstr ""
 
@@ -428,7 +493,7 @@ msgstr ""
 msgid " - Select - "
 msgstr ""
 
-#: page_contentpagina.php:29 page_overzichtspagina.php:37
+#: page_contentpagina.php:35 page_overzichtspagina.php:37
 msgid "Zie ook:"
 msgstr ""
 
@@ -472,6 +537,34 @@ msgstr ""
 
 #: page_mailinglijst.php:186
 msgid "Subscribe on Newsletters"
+msgstr ""
+
+#: page_stappenplan.php:43
+#, php-format
+msgctxt "stappen"
+msgid "%s in %s stappen"
+msgstr ""
+
+#: page_stappenplan.php:74
+msgid "Stap"
+msgstr ""
+
+#: page_stappenplan.php:80
+#, php-format
+msgctxt "stappen"
+msgid ""
+"<span class=\"visuallyhidden\">Stap</span> %s <span class=\"visuallyhidden"
+"\">van %s:</span> %s"
+msgstr ""
+
+#: page_stappenplan.php:95
+msgctxt "Stap, voorbeeld"
+msgid "Bijvoorbeeld:"
+msgstr ""
+
+#: page_template_overzichtspagina.php:239
+msgctxt "error"
+msgid "Geen items geselecteerd voor deze pagina."
 msgstr ""
 
 #: plugins/events-manager/formats/event_single_format.php:60
@@ -1457,12 +1550,19 @@ msgstr ""
 msgid "Search Results for:"
 msgstr ""
 
-#: search.php:83
+#: search.php:58
+#, php-format
+msgid "%s result"
+msgid_plural "%s results"
+msgstr[0] ""
+msgstr[1] ""
+
+#: search.php:134
 msgctxt "search"
 msgid "No results"
 msgstr ""
 
-#: search.php:84
+#: search.php:135
 msgctxt "search"
 msgid "Try searching again"
 msgstr ""
@@ -1533,7 +1633,7 @@ msgstr ""
 msgid "Automatically subscribe to following groups:"
 msgstr ""
 
-#: widgets/gc-e-newsletter.php:127 widgets/gc-footer-widget.php:60
+#: widgets/gc-e-newsletter.php:127
 msgid "Linkt naar pagina:"
 msgstr ""
 
@@ -1686,8 +1786,32 @@ msgstr ""
 msgid "Korte beschrijving van de site:"
 msgstr ""
 
-#: widgets/gc-footer-widget.php:81 widgets/gc-footer-widget.php:95
-msgid "Meer over Gebruiker Centraal"
+#: widgets/gc-footer-widget.php:61
+msgid "Linktekst"
+msgstr ""
+
+#: widgets/gc-footer-widget.php:66
+msgid "Link (URL)"
+msgstr ""
+
+#: widgets/gc-giant-banner-widget.php:40
+msgid "Large banner, with text, link and background image"
+msgstr ""
+
+#: widgets/gc-giant-banner-widget.php:78
+msgid "URL"
+msgstr ""
+
+#: widgets/gc-giant-banner-widget.php:83
+msgid "Link-tekst"
+msgstr ""
+
+#: widgets/gc-giant-banner-widget.php:88
+msgid "Tekst"
+msgstr ""
+
+#: widgets/gc-socialmedia-widget.php:178
+msgid "Social media-kanalen in een widget ("
 msgstr ""
 
 #: widgets/gc-user-welcome-widget.php:58
@@ -1761,7 +1885,15 @@ msgid "GC - Archief en sitemap (page2)"
 msgstr ""
 
 #. Template Name of the plugin/theme
+msgid "GC - Overzichtspagina (met bv. tips, vaardigheden, methodes)"
+msgstr ""
+
+#. Template Name of the plugin/theme
 msgid "ZZZ (niet gebruiken)"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "GC - Pagina met stappenplan"
 msgstr ""
 
 #. Template Name of the plugin/theme

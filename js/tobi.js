@@ -1,3 +1,5 @@
+
+
 /**
  * Tobi
  *
@@ -77,24 +79,24 @@
         captionAttribute: 'alt',
         nav: 'auto',
         navText: [
-          '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 18l-6-6 6-6"/></svg>',
-          '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 6l6 6-6 6"/></svg>'
+	        lightboxtranslation.navTextprev,
+	        lightboxtranslation.navTextnext
         ],
         navLabel: [
-          'Previous image',
-          'Next image'
+	        lightboxtranslation.navLabelprev,
+	        lightboxtranslation.navLabelnext
         ],
         close: true,
-        closeText: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M6 18L18 6"/></svg>',
-        closeLabel: 'Close lightbox',
-        loadingIndicatorLabel: 'Image loading',
+        closeText: lightboxtranslation.closeText,
+        closeLabel: lightboxtranslation.closeLabel,
+        loadingIndicatorLabel: lightboxtranslation.imageloading,
         counter: true,
         download: false, // TODO
         downloadText: '', // TODO
-        downloadLabel: 'Download image', // TODO
+        downloadLabel: lightboxtranslation.downloadimage, // TODO
         keyboard: true,
         zoom: true,
-        zoomText: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 16v5h-5"/><path d="M8 21H3v-5"/><path d="M16 3h5v5"/><path d="M3 8V3h5"/></svg>',
+        zoomText: lightboxtranslation.zoomtext,
         docClose: true,
         swipeClose: true,
         hideScrollbar: true,
@@ -481,7 +483,10 @@
      * @return {string}
      */
     const getGroupName = function getGroupName (el) {
-      return el.hasAttribute('data-group') ? el.getAttribute('data-group') : 'default'
+		console.log( el );
+		if ( el ) {
+			return el.hasAttribute('data-group') ? el.getAttribute('data-group') : 'default'
+		}
     }
 
     /**
@@ -538,8 +543,8 @@
         if (callback) {
           callback.call(this)
         }
-      } else {
-        throw new Error('Ups, element already added to the lightbox.')
+//      } else {
+//        throw new Error('Ups, element already added to the lightbox.')
       }
     }
 
