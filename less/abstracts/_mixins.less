@@ -1202,3 +1202,23 @@
     line-height: 76px;
   }
 }
+.gc-rotated-thing() {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  z-index: 5;
+
+  &:before {
+    position: absolute;
+    content: " ";
+    background: @white;
+    speak: none;
+    height: 5rem;
+    left: 0;
+    top: 0;
+    width: 110%;
+    margin-top: -2rem;
+    margin-left: -2rem;
+    transform: rotate(2deg);
+  }
+}

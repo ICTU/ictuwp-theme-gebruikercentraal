@@ -20,9 +20,9 @@
   }
 }
 
-
 #components-cards-default,
-#components-cards-tipkaarten {
+#components-cards-tipkaarten,
+#components-cards-doelgroep {
   .modifier__example {
     display: flex;
     flex-wrap: wrap;
@@ -169,6 +169,47 @@ h1 {
     &.is-active {
       &:before {
         transform: scaleX(1);
+      }
+    }
+  }
+}
+
+.section-nav {
+  position: fixed;
+
+  li {
+    list-style: none;
+
+    a {
+      display: block;
+      text-decoration: none;
+
+      &:focus,
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &.back-to-top {
+        margin-top :2rem;
+        border-top: .1rem solid @border_color;
+        padding-top: 1rem;
+        font-size: @font_small;
+      }
+    }
+  }
+
+  > li {
+    > a {
+      padding: .3rem 1rem;
+    }
+
+    &.toc-h1 > a {
+      font-family: @font_primary_bold;
+    }
+
+    &.toc-h2 {
+      > a {
+        padding-left: 2rem;
       }
     }
   }

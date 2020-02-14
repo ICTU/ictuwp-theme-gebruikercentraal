@@ -18,7 +18,8 @@
   padding: 3rem;
 }
 #components-cards-default .modifier__example,
-#components-cards-tipkaarten .modifier__example {
+#components-cards-tipkaarten .modifier__example,
+#components-cards-doelgroep .modifier__example {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,7 +31,8 @@
   max-width: 1200px;
 }
 #components-cards-default .modifier__example .card,
-#components-cards-tipkaarten .modifier__example .card {
+#components-cards-tipkaarten .modifier__example .card,
+#components-cards-doelgroep .modifier__example .card {
   margin-top: 3rem;
   width: calc(50% - 3rem);
   margin-left: 1.5rem;
@@ -38,7 +40,8 @@
 }
 @media only screen and (min-width: 960px) {
   #components-cards-default .modifier__example .card,
-  #components-cards-tipkaarten .modifier__example .card {
+  #components-cards-tipkaarten .modifier__example .card,
+  #components-cards-doelgroep .modifier__example .card {
     width: calc(33.333% - 3rem);
   }
 }
@@ -166,4 +169,33 @@
 .navbar-nav a.is-active:before {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
+}
+.section-nav {
+  position: fixed;
+}
+.section-nav li {
+  list-style: none;
+}
+.section-nav li a {
+  display: block;
+  text-decoration: none;
+}
+.section-nav li a:focus,
+.section-nav li a:hover {
+  text-decoration: underline;
+}
+.section-nav li a.back-to-top {
+  margin-top: 2rem;
+  border-top: 0.1rem solid #DEDEDE;
+  padding-top: 1rem;
+  font-size: 1.4rem;
+}
+.section-nav > li > a {
+  padding: 0.3rem 1rem;
+}
+.section-nav > li.toc-h1 > a {
+  font-family: 'montserratbold', Helvetica, Arial, sans-serif;
+}
+.section-nav > li.toc-h2 > a {
+  padding-left: 2rem;
 }
