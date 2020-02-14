@@ -17,7 +17,8 @@
   width: 75%;
   padding: 3rem;
 }
-#components-cards-default .modifier__example {
+#components-cards-default .modifier__example,
+#components-cards-tipkaarten .modifier__example {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,14 +29,16 @@
   width: 100%;
   max-width: 1200px;
 }
-#components-cards-default .modifier__example .card {
+#components-cards-default .modifier__example .card,
+#components-cards-tipkaarten .modifier__example .card {
   margin-top: 3rem;
   width: calc(50% - 3rem);
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
 @media only screen and (min-width: 960px) {
-  #components-cards-default .modifier__example .card {
+  #components-cards-default .modifier__example .card,
+  #components-cards-tipkaarten .modifier__example .card {
     width: calc(33.333% - 3rem);
   }
 }
