@@ -616,14 +616,14 @@ body.login div#login h1,
 }
 body.login div#login h1 a,
 #error-page div#login h1 a {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   width: 1px;
   margin: -1px;
+  overflow: hidden;
   padding: 0;
-  border: 0;
+  position: absolute;
 }
 body.login div#login form#loginform p,
 #error-page div#login form#loginform p,

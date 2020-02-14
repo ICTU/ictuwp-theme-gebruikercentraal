@@ -8,8 +8,8 @@
 // * @package gebruiker-centraal
 // * @author  Paul van Buuren
 // * @license GPL-2.0+
-// * @version 4.1.4
-// * @desc.   Moved section home_template_teasers functions and styling from inlusie plugin to theme.
+// * @version 4.2.1
+// * @desc.   ACF bidirectional relationship function; function voor een lightbox.
 // * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 ///
 
@@ -767,17 +767,55 @@ function gc_shared_add_menu_script() {
 
 	if ( ! is_admin() ) {
 
-	  wp_enqueue_script( 'gc-shared-menu', WBVB_THEMEFOLDER . '/js/gc-main-min.js', '', '', true );
-
-
+		wp_enqueue_script( 'gc-shared-menu', WBVB_THEMEFOLDER . '/js/gc-main-min.js', '', '', true );
 		$params = array(
 			'showmenu'	=> _x( 'Show menu', 'Screen reader text for menu', 'gebruikercentraal' ),
 			'closemenu'	=> _x( 'Close menu', 'Screen reader text for menu', 'gebruikercentraal' ),
 			'menuname'	=> _x( 'Menu', 'Screen reader text for menu', 'gebruikercentraal' ),
 		);
-
+		
 		wp_localize_script( 'gc-shared-menu', 'menustrings', $params );
 
+		// @since	  4.2.1
+		if (
+			 ( ICTU_GC_CPT_STAP == get_post_type() ) ||
+			 ( GC_BEELDBANK_BEELD_CPT == get_post_type() ) ||
+			 ( GC_BEELDBANK_BRIEF_CPT == get_post_type() ) 
+			 ) {
+			 
+			 // dit kan vast handiger
+		
+			wp_enqueue_script( LIGHTBOXSCRIPT, WBVB_THEMEFOLDER . '/js/tobi.js', '', '', true );
+			
+			$inlinescript = "var tobi = new Tobi({
+			// Options
+			})
+			var newElement = document.querySelector('.lightbox');
+
+if ( newElement && newElement.hasAttribute(\"data-group\")) {
+			tobi.add(newElement);
+}";
+			wp_add_inline_script( LIGHTBOXSCRIPT, $inlinescript );
+		
+			$params = array(
+			  'navLabelprev'	=> _x( 'Previous image', 'lightbox', 'gebruikercentraal' ),
+			  'navLabelnext'	=> _x( 'Next image', 'lightbox', 'gebruikercentraal' ),
+			  'navTextprev'		=> _x( ' < ', 'lightbox', 'gebruikercentraal' ),
+			  'navTextnext'		=> _x( ' > ', 'lightbox', 'gebruikercentraal' ),
+			
+			  
+			  'closeLabel'		=> _x( 'Close lightbox', 'lightbox', 'gebruikercentraal' ),
+			  'closeText'		=> _x( '×', 'lightbox', 'gebruikercentraal' ),
+			  'zoomtext'		=> _x( 'Zoom', 'lightbox', 'gebruikercentraal' ),
+			  'downloadimage'	=> _x( 'Download image', 'lightbox', 'gebruikercentraal' ),
+			  'imageloading'	=> _x( 'Image is loading', 'lightbox', 'gebruikercentraal' ), 
+			  
+			  
+			);
+			
+			wp_localize_script( LIGHTBOXSCRIPT, 'lightboxtranslation', $params );
+
+		}		
 	}
 
 }
@@ -939,3 +977,55 @@ if (! function_exists( 'ictu_gctheme_breadcrumbstring' ) ) {
 }
 
 //========================================================================================================
+
+if (! function_exists( 'ictu_gctheme_write_lightboximage' ) ) {
+
+	function ictu_gctheme_write_lightboximage( $args = array() ) {
+	    /**
+	     * Handles the front-end display.
+	     *
+	     * @return void
+	     */
+
+		global $post;
+
+		$defaults = array(
+			'ID'			=> 0,
+			'titletag'		=> 'h2',
+			'thumb-size' 	=> 'thumbnail',
+			'full-size' 	=> 'full',
+			'data-group' 	=> 'lightbox',
+			'cssclass' 		=> '',
+			'echo' 			=> FALSE,
+		);
+
+		// Parse incoming $args into an array and merge it with $defaults
+		$args = wp_parse_args($args, $defaults);
+		$cssclass = 'lightbox';
+
+		if ( ! $args['ID'] ) {
+			return;
+		}
+		if ( ! $args['alt'] ) {
+			$args['alt'] = sprintf( _x( "Image for '%s'", 'Alternatief voor een ontbrekende alt-tekst: post-titel.', 'gebruikercentraal' ), get_the_title( $post->ID ) );
+		}
+		if ( $args['cssclass'] ) {
+			$cssclass .= ' ' . trim( $args['cssclass'] );
+		}
+
+		
+		// tobi 
+		// see: https://codepen.io/rqrauhvmra/pen/PvKVxp
+		
+		$image 		= wp_get_attachment_image_src( $args['ID'], $args['full-size'] );
+		$thumb 		= wp_get_attachment_image_src( $args['ID'], $args['thumb-size'] );
+		
+		return '<a href="' . $image[0] . '" class="' . $cssclass . '" data-group="' . $args['data-group'] . '"><img src="' . $thumb[0] . '" width="' . $thumb[1] . '" height="' . $thumb[2] . '" alt="' . $args['alt'] . '"></a>';
+
+
+	}
+
+}
+
+//========================================================================================================
+
