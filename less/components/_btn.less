@@ -82,4 +82,20 @@
   &--toggle-menu {
     min-width: 12rem;
   }
+
+  &--primary {
+    .gc-box-shadow();
+    font-size: 2.6rem;
+    padding: 1rem 5rem 1rem 1.6rem;
+    line-height: 2.6rem;
+    transition: padding .2s;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      background-color: @gc_a11y_green_dark_1;
+      padding-left: 1.7rem;
+      color: @white;
+    }
+  }
 }

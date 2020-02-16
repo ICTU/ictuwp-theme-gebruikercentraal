@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <title>Gebruiker Centraal Living Styleguide</title>
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <link rel="shortcut icon" href="" type="image/vnd.microsoft.icon" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="../style.css"/>
+<link rel="stylesheet" href="../../gebruiker-centraal/frontend/styleguide/css/styleguide.css"/>
+
+  <link rel="stylesheet" href="kss-assets/lib/docs.css">
+  <link rel="stylesheet" href="assets/css/styleguide.css">
+</head>
+<body id="" >
+  <div class="layout-container">
+    <a href="#main-content" class="sr-only sr-only-focusable"> Skip to main content </a>
+      <div class="page-navigation" id="navigation" style="top:0px">
+      <nav role="navigation" aria-labelledby="block-mainnavigation-menu" class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="./" title="Home" rel="home">
+            <img src="assets/images/logo.svg" alt="Gebruiker Centraal Living Styleguide" />
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                              <li class="nav-item"><a class="nav-link" href="section-components.html">Components</a></li>
+                              <li class="nav-item"><a class="nav-link is-active " href="section-sections.html">Sections</a></li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+      <div class="container">
+      <div class="row flex-xl-nowrap">
+                  <div class="d-none d-md-block col-md-3 col-xl-2 bd-toc" id="scrollspy" >
+                                                                    <div class="btn-group btn-group-sm float-right" role="group" aria-label="Example toolbar">
+                  <a href="#" onclick="event.preventDefault();" data-kss-guides="true" class="btn btn-light btn-guides">
+                    <span class="kss-toolbar__tooltip sr-only">Toggle example guides</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="toggle-guides" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M6,3 L8,3 L8,4 L6,4 L6,3 Z M9,3 L11,3 L11,4 L9,4 L9,3 Z M14,3 L14,7 L11,7 L11,6 L13,6 L13,4 L12,4 L12,3 L14,3 Z M5,6 L7,6 L7,7 L5,7 L5,6 Z M8,6 L10,6 L10,7 L8,7 L8,6 Z M3,4 L3,6 L4,6 L4,7 L2,7 L2,3 L5,3 L5,4 L3,4 Z M6,9 L8,9 L8,10 L6,10 L6,9 Z M9,9 L11,9 L11,10 L9,10 L9,9 Z M14,9 L14,13 L11,13 L11,12 L13,12 L13,10 L12,10 L12,9 L14,9 Z M5,12 L7,12 L7,13 L5,13 L5,12 Z M8,12 L10,12 L10,13 L8,13 L8,12 Z M3,10 L3,12 L4,12 L4,13 L2,13 L2,9 L5,9 L5,10 L3,10 Z M15,1 L1,1 L1,15 L15,15 L15,1 Z M16,0 L16,16 L0,16 L0,0 L16,0 Z"/>
+                      </g>
+                    </svg>
+                  </a>
+                  <a href="#" onclick="event.preventDefault();" data-kss-markup="true" class="btn btn-light btn-markup">
+                    <span class="kss-toolbar__tooltip sr-only">Toggle HTML markup</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="toggle-markup" fill="none" fill-rule="evenodd">
+                        <polygon id="Shape" fill="#000" fill-rule="nonzero" points="10.526 11.711 11.789 12.974 16 8.763 11.789 4.553 10.526 5.816 13.474 8.763"/>
+                        <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.474 5.816 4.211 4.553 0 8.763 4.211 12.974 5.474 11.711 2.526 8.763"/>
+                        <polygon id="Shape" fill="#000" fill-rule="nonzero" points="8.807 4.007 9.721 4.256 7.194 13.52 6.28 13.27 8.807 4.007"/>
+                      </g>
+                    </svg>
+                  </a>
+                </div>
+
+                <ul class="section-nav nav">
+                  <li class="toc-entry toc-h1 nav-item"><a href="#main-content" class="h6 text-secondary"><span class="nav__name">Sections</span></a></li>
+                                      <li class="toc-entry toc-h2 nav-item">
+                      <a class="menu-link nav-link" href="#sections-links">
+                        <span class="ref sr-only">2.1</span> <span class="nav__name">Links</span>
+                      </a>
+                    </li>
+                                      <li class="toc-entry toc-h2 nav-item">
+                      <a class="menu-link nav-link" href="#sections-related">
+                        <span class="ref sr-only">2.2</span> <span class="nav__name">Related Content</span>
+                      </a>
+                    </li>
+                                    <li class="toc-entry toc-h2">
+                    <a href="#main-content" class="back-to-top">
+                      <span>Back to top</span>
+                    </a>
+                  </li>
+                </ul>
+                                    </div>
+                      <main class="col-12 col-md-9 col-xl-10 py-md-3 bd-content" role="main">
+          <a id="main-content" tabindex="-1"></a>
+            
+                                    <div id="sections" class="section section--depth-1 ">
+                            <h1 class="bd-title">
+                Sections
+                <a href="#sections" class="text-muted">
+                  <small>#
+                    <span class="sr-only">
+                      2 Sections
+                    </span>
+                  </small>
+                </a>
+              </h1>
+
+            
+
+            
+            
+
+            
+                      </div>
+                                  <section id="sections-links" class="section section--depth-2 ">
+                            <h2 class="">
+                Links
+                <a href="#sections-links" class="text-muted">
+                  <small>#
+                    <span class="sr-only">
+                      2.1 Sections.Links
+                    </span>
+                  </small>
+                </a>
+              </h2>
+
+                          <div class="btn-group btn-group-sm bd-toolbar" role="group" aria-label="Example toolbar">
+                                  <a href="#sections-links" onclick="event.preventDefault();" data-kss-fullscreen="sections-links" class="btn btn-light btn-fullscreen">
+                    <span class="kss-toolbar__tooltip sr-only">Toggle full screen</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="toggle-full-screen" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M16,0 L16,6.5 L13.5,4 L10.5,7 L9,5.5 L12,2.5 L9.5,0 L16,0 Z M7,10.5 L4,13.5 L6.5,16 L0,16 L0,9.5 L2.5,12 L5.5,9 L7,10.5 Z"/>
+                      </g>
+                    </svg>
+                  </a>
+                  <a href="item-sections-links.html" target="_blank" class="btn btn-light btn-newwindow">
+                    <span class="kss-toolbar__tooltip sr-only">Open in new window</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="new-tab" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M2.85714286,2 L2.85714286,13.1428571 L14,13.1428571 L14,2 L2.85714286,2 Z M13.0714286,12.2142857 L3.78571429,12.2142857 L3.78571429,2.92857143 L13.0714286,2.92857143 L13.0714286,12.2142857 Z M1.92857143,14.0714286 L1.92857143,4.32142857 L1,3.39285714 L1,15 L12.6071429,15 L11.6785714,14.0714286 L1.92857143,14.0714286 Z"/>
+                        <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.179 4.786 7.5 7.107 4.714 9.893 6.107 11.286 8.893 8.5 11.214 10.821 11.214 4.786"/>
+                      </g>
+                    </svg>
+                  </a>
+                                <a href="#sections-links" onclick="event.preventDefault();" data-kss-guides="true" class="btn btn-light btn-guides">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle example guides</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-guides" fill="none" fill-rule="evenodd">
+                      <path id="Shape" fill="#000" fill-rule="nonzero" d="M6,3 L8,3 L8,4 L6,4 L6,3 Z M9,3 L11,3 L11,4 L9,4 L9,3 Z M14,3 L14,7 L11,7 L11,6 L13,6 L13,4 L12,4 L12,3 L14,3 Z M5,6 L7,6 L7,7 L5,7 L5,6 Z M8,6 L10,6 L10,7 L8,7 L8,6 Z M3,4 L3,6 L4,6 L4,7 L2,7 L2,3 L5,3 L5,4 L3,4 Z M6,9 L8,9 L8,10 L6,10 L6,9 Z M9,9 L11,9 L11,10 L9,10 L9,9 Z M14,9 L14,13 L11,13 L11,12 L13,12 L13,10 L12,10 L12,9 L14,9 Z M5,12 L7,12 L7,13 L5,13 L5,12 Z M8,12 L10,12 L10,13 L8,13 L8,12 Z M3,10 L3,12 L4,12 L4,13 L2,13 L2,9 L5,9 L5,10 L3,10 Z M15,1 L1,1 L1,15 L15,15 L15,1 Z M16,0 L16,16 L0,16 L0,0 L16,0 Z"/>
+                    </g>
+                  </svg>
+                </a>
+                <a href="#sections-links" onclick="event.preventDefault();" data-kss-markup="true" class="btn btn-light btn-markup">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle HTML markup</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-markup" fill="none" fill-rule="evenodd">
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="10.526 11.711 11.789 12.974 16 8.763 11.789 4.553 10.526 5.816 13.474 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.474 5.816 4.211 4.553 0 8.763 4.211 12.974 5.474 11.711 2.526 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="8.807 4.007 9.721 4.256 7.194 13.52 6.28 13.27 8.807 4.007"/>
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            
+
+                          <div class="description">
+                <p>This section can be used for adding related content.</p>
+
+              </div>
+            
+            
+
+                          <div class="bd-example">
+
+                  
+                                      <div class="modifier__example">
+                      
+<section class="section section--related">
+  <div class="l-section-top">
+    <h2 class="section__title">
+      Interessante links
+    </h2>
+    <p class="section__description">
+      Deze sectie kan gebruikt worden voor (externe) links en bronvermeldingen.
+    </p>
+  </div>
+
+
+  <div class="l-section-content">
+
+    <ul class="item-list">
+      <li class="item-list__item">
+        <a href="#" class="link link--linklist">Design System Gitlab</a>
+        <p class="item-list__description">Ook bijdragen? Klik snel op de link en bekijk wat je kunt doen!</p>
+      </li>
+      <li class="item-list__item">
+        <a href="#" class="link link--linklist link--external">Google</a>
+        <p class="item-list__description">Ben je op zoek naar iets? Google helpt je verder.</p>
+      </li>
+      <li class="item-list__item">
+        <a href="#" class="link link--linklist link--external">Optimaal Digitaal</a>
+        <p class="item-list__description">Meer weten over het spel en alle workshops? Lees er alles over op de site van Optimaal Digitaal.</p>
+      </li>
+    </ul>
+
+  </div>
+</section>
+
+
+                      <div class="modifier__example-footer"></div>
+                    </div>
+                  
+                  
+              </div>
+
+                              <details class="highlight">
+                  <summary style="padding: 5px 20px; cursor: pointer;">
+                                          Markup: <code>../elements/sections/section-links.twig</code>
+                                      </summary>
+                  <pre><code class="language-markup" data-language="html">
+&lt;section class=&quot;section section--related&quot;&gt;
+  &lt;div class=&quot;l-section-top&quot;&gt;
+    &lt;h2 class=&quot;section__title&quot;&gt;
+      Interessante links
+    &lt;/h2&gt;
+    &lt;p class=&quot;section__description&quot;&gt;
+      Deze sectie kan gebruikt worden voor (externe) links en bronvermeldingen.
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+
+  &lt;div class=&quot;l-section-content&quot;&gt;
+
+    &lt;ul class=&quot;item-list&quot;&gt;
+      &lt;li class=&quot;item-list__item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;link link--linklist&quot;&gt;Design System Gitlab&lt;/a&gt;
+        &lt;p class=&quot;item-list__description&quot;&gt;Ook bijdragen? Klik snel op de link en bekijk wat je kunt doen!&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;item-list__item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;link link--linklist link--external&quot;&gt;Google&lt;/a&gt;
+        &lt;p class=&quot;item-list__description&quot;&gt;Ben je op zoek naar iets? Google helpt je verder.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;item-list__item&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;link link--linklist link--external&quot;&gt;Optimaal Digitaal&lt;/a&gt;
+        &lt;p class=&quot;item-list__description&quot;&gt;Meer weten over het spel en alle workshops? Lees er alles over op de site van Optimaal Digitaal.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+
+  &lt;/div&gt;
+&lt;/section&gt;
+
+</code></pre>
+
+                </details>
+              
+            
+                          <small class="text-muted">
+                Source: <code>styleguide/elements/sections/section-links.scss</code>, line 1
+              </small>
+                      </section>
+                                  <section id="sections-related" class="section section--depth-2 ">
+                            <h2 class="">
+                Related Content
+                <a href="#sections-related" class="text-muted">
+                  <small>#
+                    <span class="sr-only">
+                      2.2 Sections.Related
+                    </span>
+                  </small>
+                </a>
+              </h2>
+
+                          <div class="btn-group btn-group-sm bd-toolbar" role="group" aria-label="Example toolbar">
+                                  <a href="#sections-related" onclick="event.preventDefault();" data-kss-fullscreen="sections-related" class="btn btn-light btn-fullscreen">
+                    <span class="kss-toolbar__tooltip sr-only">Toggle full screen</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="toggle-full-screen" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M16,0 L16,6.5 L13.5,4 L10.5,7 L9,5.5 L12,2.5 L9.5,0 L16,0 Z M7,10.5 L4,13.5 L6.5,16 L0,16 L0,9.5 L2.5,12 L5.5,9 L7,10.5 Z"/>
+                      </g>
+                    </svg>
+                  </a>
+                  <a href="item-sections-related.html" target="_blank" class="btn btn-light btn-newwindow">
+                    <span class="kss-toolbar__tooltip sr-only">Open in new window</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="new-tab" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M2.85714286,2 L2.85714286,13.1428571 L14,13.1428571 L14,2 L2.85714286,2 Z M13.0714286,12.2142857 L3.78571429,12.2142857 L3.78571429,2.92857143 L13.0714286,2.92857143 L13.0714286,12.2142857 Z M1.92857143,14.0714286 L1.92857143,4.32142857 L1,3.39285714 L1,15 L12.6071429,15 L11.6785714,14.0714286 L1.92857143,14.0714286 Z"/>
+                        <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.179 4.786 7.5 7.107 4.714 9.893 6.107 11.286 8.893 8.5 11.214 10.821 11.214 4.786"/>
+                      </g>
+                    </svg>
+                  </a>
+                                <a href="#sections-related" onclick="event.preventDefault();" data-kss-guides="true" class="btn btn-light btn-guides">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle example guides</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-guides" fill="none" fill-rule="evenodd">
+                      <path id="Shape" fill="#000" fill-rule="nonzero" d="M6,3 L8,3 L8,4 L6,4 L6,3 Z M9,3 L11,3 L11,4 L9,4 L9,3 Z M14,3 L14,7 L11,7 L11,6 L13,6 L13,4 L12,4 L12,3 L14,3 Z M5,6 L7,6 L7,7 L5,7 L5,6 Z M8,6 L10,6 L10,7 L8,7 L8,6 Z M3,4 L3,6 L4,6 L4,7 L2,7 L2,3 L5,3 L5,4 L3,4 Z M6,9 L8,9 L8,10 L6,10 L6,9 Z M9,9 L11,9 L11,10 L9,10 L9,9 Z M14,9 L14,13 L11,13 L11,12 L13,12 L13,10 L12,10 L12,9 L14,9 Z M5,12 L7,12 L7,13 L5,13 L5,12 Z M8,12 L10,12 L10,13 L8,13 L8,12 Z M3,10 L3,12 L4,12 L4,13 L2,13 L2,9 L5,9 L5,10 L3,10 Z M15,1 L1,1 L1,15 L15,15 L15,1 Z M16,0 L16,16 L0,16 L0,0 L16,0 Z"/>
+                    </g>
+                  </svg>
+                </a>
+                <a href="#sections-related" onclick="event.preventDefault();" data-kss-markup="true" class="btn btn-light btn-markup">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle HTML markup</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-markup" fill="none" fill-rule="evenodd">
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="10.526 11.711 11.789 12.974 16 8.763 11.789 4.553 10.526 5.816 13.474 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.474 5.816 4.211 4.553 0 8.763 4.211 12.974 5.474 11.711 2.526 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="8.807 4.007 9.721 4.256 7.194 13.52 6.28 13.27 8.807 4.007"/>
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            
+
+                          <div class="description">
+                <p>This section can be used for adding related content.</p>
+
+              </div>
+            
+            
+
+                          <div class="bd-example">
+
+                  
+                                      <div class="modifier__example">
+                      <section class="section section--related">
+
+
+  
+  <div class="l-section-top">
+    <h2 class="section__title">
+      Kijk ook eens bij...
+    </h2>
+    <p class="section__description">
+      Deze sectie kan gebruikt worden voor gerelateerde inhoud. Het aantal items is flexibel en wordt altijd in een tweekoloms grid weergegeven - tenzij er 3 items zijn. Dan worden de 3 items naast elkaar weergegeven.
+    </p>
+  </div>
+
+  
+  <div class="l-section-content">
+
+    <div class="grid grid--col-2">
+      <div class="card">
+        <div class="card__content">
+          <h2 class="card__title">
+            <a class="link link--arrow" href="#">
+              Een andere pagina binnen deze website
+              <span class="link link--arrow link__icon"></span>
+            </a>
+          </h2>
+          <p class="card__description">
+            [Samenvatting] Een andere, interessante pagina die je zeker moet lezen. Snel klikken voor je het mist!
+          </p>
+        </div>
+      </div>
+
+      <div class="card card--with-image">
+        <div class="card__image">
+          <img src="/wp-content/themes/gebruiker-centraal/frontend/styleguide/img/img-16-9-2.jpg" alt="Gebruiker Centraal Plaatje">
+        </div>
+        <div class="card__content">
+          <h2 class="card__title">
+            <a class="link link--arrow" href="#">
+              Een andere pagina binnen deze website
+              <span class="link link--arrow link__icon"></span>
+            </a>
+          </h2>
+          <p class="card__description">
+            [Samenvatting] Een andere, interessante pagina die je zeker moet lezen. Snel klikken voor je het mist!
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+                      <div class="modifier__example-footer"></div>
+                    </div>
+                  
+                  
+              </div>
+
+                              <details class="highlight">
+                  <summary style="padding: 5px 20px; cursor: pointer;">
+                                          Markup: <code>../elements/sections/section-related.twig</code>
+                                      </summary>
+                  <pre><code class="language-markup" data-language="html">&lt;section class=&quot;section section--related&quot;&gt;
+
+
+  {# Wrapper for section intro #}
+  &lt;div class=&quot;l-section-top&quot;&gt;
+    &lt;h2 class=&quot;section__title&quot;&gt;
+      Kijk ook eens bij...
+    &lt;/h2&gt;
+    &lt;p class=&quot;section__description&quot;&gt;
+      Deze sectie kan gebruikt worden voor gerelateerde inhoud. Het aantal items is flexibel en wordt altijd in een tweekoloms grid weergegeven - tenzij er 3 items zijn. Dan worden de 3 items naast elkaar weergegeven.
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  {# Wrapper for all section content #}
+  &lt;div class=&quot;l-section-content&quot;&gt;
+
+    &lt;div class=&quot;grid grid--col-2&quot;&gt;
+      &lt;div class=&quot;card&quot;&gt;
+        &lt;div class=&quot;card__content&quot;&gt;
+          &lt;h2 class=&quot;card__title&quot;&gt;
+            &lt;a class=&quot;link link--arrow&quot; href=&quot;#&quot;&gt;
+              Een andere pagina binnen deze website
+              &lt;span class=&quot;link link--arrow link__icon&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;p class=&quot;card__description&quot;&gt;
+            [Samenvatting] Een andere, interessante pagina die je zeker moet lezen. Snel klikken voor je het mist!
+          &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;card card--with-image&quot;&gt;
+        &lt;div class=&quot;card__image&quot;&gt;
+          &lt;img src=&quot;{{ base_url }}/img-16-9-2.jpg&quot; alt=&quot;Gebruiker Centraal Plaatje&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card__content&quot;&gt;
+          &lt;h2 class=&quot;card__title&quot;&gt;
+            &lt;a class=&quot;link link--arrow&quot; href=&quot;#&quot;&gt;
+              Een andere pagina binnen deze website
+              &lt;span class=&quot;link link--arrow link__icon&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/h2&gt;
+          &lt;p class=&quot;card__description&quot;&gt;
+            [Samenvatting] Een andere, interessante pagina die je zeker moet lezen. Snel klikken voor je het mist!
+          &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/section&gt;
+
+</code></pre>
+
+                </details>
+              
+            
+                          <small class="text-muted">
+                Source: <code>styleguide/elements/sections/section-related.scss</code>, line 1
+              </small>
+                      </section>
+          
+        </main>
+            </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+
+
+  <script src="kss-assets/lib/kss-fullscreen.js"></script>
+  <script src="kss-assets/lib/kss-guides.js"></script>
+  <script src="kss-assets/lib/kss-markup.js"></script>
+  <script src="kss-assets/lib/prism.js"></script>
+  <script src="kss-assets/lib/prism-scss.min.js"></script>
+
+  
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <script>
+    // Escape code
+    // ============================================================
+
+    var $lang_markup       = document.querySelectorAll('pre.language-html code'),
+        $lang_js           = document.querySelectorAll('script.atomic-js'),
+        $lang_jscode       = document.querySelectorAll('pre code.language-javascript'),
+        lang_markupsnippet = [],
+        lang_jsnippet      = [];
+
+    // Markup
+    // order matters!
+    // ============================================================
+
+    for(var i = 0, l = $lang_markup.length; i < l; i++) {
+      lang_markupsnippet.push(
+        $lang_markup[i].innerHTML.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      );
+      $lang_markup[i].innerHTML = lang_markupsnippet[i];
+    }
+
+    // JavaScript
+    // order matters!
+    // ============================================================
+    for(var i = 0, l = $lang_jscode.length; i < l; i++) {
+      lang_jsnippet.push(
+        $lang_jscode[i].innerHTML.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      );
+    }
+
+    for(var i = 0, l = $lang_js.length; i < l; i++) {
+      $lang_js[i].innerHTML = lang_jsnippet[i];
+    }
+
+    var KssFullScreen = new KssFullScreen({
+      idPrefix: 'fullscreen-',
+      bodyClass: 'kss-fullscreen-mode',
+      elementClass: 'is-fullscreen'
+    });
+    var kssGuides = new KssGuides({
+      bodyClass: 'guides-mode'
+    });
+    var kssMarkup = new KssMarkup({
+      bodyClass: 'markup-mode',
+      detailsClass: 'highlight'
+    });
+
+  </script>
+
+  <script src="kss-assets/styleguide.js"></script>
+</body>
+</html>

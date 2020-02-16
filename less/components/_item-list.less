@@ -1,0 +1,25 @@
+.item-list__item {
+  position: relative;
+  padding: 1.8rem 2rem 0 3.5rem;
+  list-style: none;
+
+  &:before {
+    content: " ";
+    top: 2.7rem;
+    left: 0;
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background: url('images/arrow-right-blue.svg') top center no-repeat;
+    background-size: .8rem auto;
+  }
+
+  + .item-list__item {
+    border-top: .1rem solid @border_color;
+    margin-top: 1.8rem;
+  }
+
+  p {
+    margin: 0;
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "base_url": "/wp-content/themes/gebruiker-centraal/frontend/styleguide/img",
+  "cards": [
+    {
+      "title": "Test title",
+      "modifier": "",
+      "image": ""
+    },
+    {
+      "title": "Test title",
+      "modifier": "",
+      "image": ""
+    }
+  ]
+}

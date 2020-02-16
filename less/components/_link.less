@@ -1,0 +1,55 @@
+.link {
+  &--arrow {
+    text-decoration: none;
+    display: flex;
+    padding-top: .8rem;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+
+      .link__icon {
+        .gc-box-shadow;
+        border-color: @gc_darkerblue;
+      }
+    }
+  }
+
+  &--linklist {
+    font-family: @font_primary_bold;
+    font-size: 2rem;
+    line-height: 2.6rem;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  &--external {
+    &:after {
+      display: inline-block;
+      content: " ";
+      background: url('./images/ico-external.svg') left center no-repeat;
+      width: 2rem;
+      height: 2rem;
+      margin-left: .8rem;
+    }
+  }
+}
+
+.link__icon {
+  display: inline-block;
+  margin-top: -.8rem;
+  transition: border-color .2s;
+
+  .link--arrow & {
+    height: 5rem;
+    width: 3.4rem;
+    margin-left: auto;
+    background: url('images/arrow-right-blue.svg') center center no-repeat;
+    background-size: .9rem auto;
+    border: .1rem solid transparent;
+  }
+}

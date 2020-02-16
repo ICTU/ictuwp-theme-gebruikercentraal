@@ -12,6 +12,7 @@ const gulp = require('gulp'),
   concat = require('gulp-concat-util'),
   minify = require("gulp-minify"),
   plumber = require("gulp-plumber"),
+  kss = require('kss'),
   browserSync = require("browser-sync").create();
 
 
@@ -65,11 +66,7 @@ function prod() {
 }
 
 function baseStyles(done) {
-  //console.log(siteConfig.path);
-  console.log(fs.existsSync(siteConfig.path));
-  console.log('less/*.less');
-
-  return gulp.src('less/*.less')
+  return gulp.src('../less/*.less')
     .pipe(sourcemaps.init())
     .pipe(less({
       plugins: [autoprefix],
@@ -153,6 +150,39 @@ function prodAll(done) {
 }
 
 
+/*
+ * StyleGuide
+ */
+
+const kssConfig = require('./styleguide/kss-config.json');
+
+function styleGuide(done){
+  return kss(kssConfig);
+
+  done();
+}
+
+
+// Watch Styleguide styles
+function sgStyles(done) {
+
+  return gulp.src('styleguide/less/*.less')
+    .pipe(less({
+      plugins: [autoprefix],
+      paths: [path.join(__dirname, 'less')]
+    }).on('error', function (err) {
+      gutil.log(err);
+      this.emit('end');
+      done();
+    }))
+    .pipe(gulp.dest('./styleguide/css'))
+    .pipe(notify({message: siteConfig.name + ' LESS task complete'}))
+    .pipe(browserSync.stream());
+
+  done();
+}
+
+
 // Watch files
 function watch() {
 
@@ -163,8 +193,13 @@ function watch() {
   if (argv.site) {
     gulp.watch('../less/**/*.less', gulp.series(baseStyles, styles));
   }
+
   gulp.watch('../js/components/*.js', gulp.series(baseJs));
   gulp.watch(siteConfig.path + 'less/**/*.less', gulp.series(styles));
+
+  // Styleguide
+  gulp.watch('styleguide/elements/**', gulp.series(styleGuide));
+  gulp.watch('styleguide/less/**', gulp.series(sgStyles));
 }
 
 
@@ -173,3 +208,4 @@ exports.prod = prod;
 exports.baseJs = baseJs;
 exports.default = watch;
 exports.all = prodAll;
+exports.styleguide = gulp.series(sgStyles, styleGuide);
