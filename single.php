@@ -37,8 +37,6 @@ add_filter('genesis_attr_entry-header', 'gc_shared_add_wrap_class');
 add_filter('genesis_attr_entry-content', 'gc_shared_add_wrap_class');
 add_filter('genesis_attr_entry-footer', 'gc_shared_add_wrap_class');
 
-
-
 //========================================================================================================
 
 // widget voor grote banners
