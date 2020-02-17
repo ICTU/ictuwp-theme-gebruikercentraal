@@ -1,8 +1,13 @@
+<div class="hp-wrapper">
+
 # GC Styleguide #
+
 
 Dit is de Living Styleguide voor het Gebruiker Centraal thema. Hier vind je (bijna) alle componenten die gebruikt worden in de diverse layouts. Hij is beschikbaar onder URL:
 
 [siteurl]/wp-content/themes/gebruiker-centraal/styleguide
+
+Deze styleguide maakt gebruikt van de CSS uit het Gebruiker Centraal thema.
 
 ## 1. Front-end tools installeren ##
 
@@ -37,7 +42,7 @@ Iedere site in de config heeft:
 - Een directory (path). Deze wordt gebruikt om de correcte map te kunnen watchen. 
 - Een proxy. Deze gebruikt browsersync om front-end wijzigingen direct te kunnen zien. Met browsersync zie je wijzigingen die gemaakt worden direct in de browser én is je lokale omgeving via een URL beschikbaar voor andere devices. Je kunt dus meteen testen op mobiel of tablet.
 
-#### 1.3.1 De front-end compilen  ####
+#### 1.3.2 De front-end compilen  ####
 
 **Voor het hoofdthema**
 
@@ -63,26 +68,31 @@ Wanneer je `gulp` intikt in de terminal gebeuren de volgende dingen:
 - Directory frontend/styleguide wordt gewatched voor wijzigingen aan de styleguide. Wanneer er iets wordt gewijzigd in de specifieke styleguide .less wordt eerst de CSS taak en vervolgens de styleguide taak uitgevoerd.  
 
 
-### 1.4 De werkwijze ###
+## 2 De werkwijze ##
 
 Een nieuw component maken? Kijk eerst of hij hier al bestaat. Voeg 'm bij voorkeur eerst hier toe en verwerk hem vervolgens in de front-end waar nodig. Hergebruik zoveel mogelijk.
 
-#### 1.4.1 Gebruik als het kan BEM #### 
+### 3.1 Gebruik als het kan BEM ### 
 Bem, ofwel Block / Element / Modifier is een methodologie die veel gebruikt wordt in front-end. Het zorgt ervoor dat je herbruikbare componenten krijgt. Kort gezegd heb je een html object, een element (aangeduid met __[element]) en een modifier (zelfde component, net een beetje anders).
 
 Voor een card bijvoorbeeld: 
 
 - .card , 
-- elementen erin bijvoorbeeld .card__title , 
-- modifiers bijvoorbeeld .card--doelgroep.  
+- elementen in .card bijvoorbeeld .card__title , 
+- card modifier bijvoorbeeld .card--doelgroep, card--with-image.  
 
 Ieder component krijgt zijn eigen less. Ga er bij alles vanuit dat het overal hergebruikt moet kunnen worden en dat een component een losstaand iets is. Responsive gedrag zit in het component. Het moet in principe overal geplaatst kunnen worden.
+
+Gebruik voor wrappers van elementen de prefix "l-" ofwel layout. Bijvoorbeeld l-content-wrapper.
 
 https://www.ezrabotter.com/blog/bem-block-element-modifier/
 
 
-#### 1.4.2 Gebruik Atomic Design ####
+
+### 1.4.2 Gebruik Atomic Design ###
 
 Met Atomic Design bouw je met al je BEM componenten samen uiteindelijk een hele pagina. Je begint met je kleinste elementen (atomen) zoals bijvoorbeeld knopjes, inputs en linkjes. Vervolgens gebruk je die in je grotere componenten (kaartjes, teasers, lijsten) die je weer gebruikt in je nog grotere componenten (contentblokken, zijbalken). Met al deze dingen samen maak je vervolgens pagina's. 
 
 https://bradfrost.com/blog/post/atomic-web-design/
+
+</div>

@@ -7,6 +7,10 @@
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+  width: 100%;
+}
+.container > .flex-xl-nowrap > main {
+  width: 100%;
 }
 .container > .flex-xl-nowrap .col-md-3 {
   width: 25%;
@@ -16,6 +20,43 @@
 .container > .flex-xl-nowrap .col-md-9 {
   width: 75%;
   padding: 3rem;
+}
+.hp-wrapper {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  width: 90%;
+  max-width: 1180px;
+  margin: 0 auto;
+  background: #fff;
+}
+@media 960px {
+  .hp-wrapper {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+.hp-wrapper h1 {
+  margin: 0;
+  padding: 0;
+}
+.hp-wrapper h1 + p {
+  margin-top: 2rem;
+}
+.hp-wrapper h2 {
+  border-top: 0.2rem solid #D1DFE3;
+  margin-top: 3rem;
+}
+@media only screen and (min-width: 960px) {
+  .hp-wrapper {
+    padding: 5rem;
+    margin-top: 5rem;
+  }
+}
+.hp-wrapper code {
+  border: 0.1rem solid #D1DFE3;
+  display: inline-block;
+  padding: 0.1rem 1rem;
+  border-radius: 0.3rem;
 }
 #components-cards-default .modifier__example,
 #components-cards-tipkaarten .modifier__example,
@@ -198,4 +239,7 @@
 }
 .section-nav > li.toc-h2 > a {
   padding-left: 2rem;
+}
+.stepchart {
+  margin-top: 0 !important;
 }

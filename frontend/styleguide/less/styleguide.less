@@ -6,6 +6,11 @@
 .container > .flex-xl-nowrap {
   display: flex;
   flex-direction: row-reverse;
+  width: 100%;
+
+  > main {
+    width: 100%;
+  }
 
   .col-md-3 {
     width: 25%;
@@ -17,6 +22,40 @@
   .col-md-9 {
     width: 75%;
     padding: 3rem;
+  }
+}
+
+.hp-wrapper {
+  .gc-padding;
+  width: 90%;
+  max-width: @contentmaxwidth;
+  margin: 0 auto;
+  background: @white;
+
+  h1 {
+    margin: 0;
+    padding: 0;
+
+    + p {
+      margin-top: 2rem;
+    }
+  }
+
+  h2 {
+    border-top: .2rem solid @gc_cardbordergrey;
+    margin-top: 3rem;
+  }
+
+  @media @desktop {
+    padding: 5rem;
+    margin-top: 5rem;
+  }
+
+  code {
+    border: .1rem solid @gc_cardbordergrey;
+    display: inline-block;
+    padding: .1rem 1rem;
+    border-radius: .3rem;
   }
 }
 
@@ -213,4 +252,8 @@ h1 {
       }
     }
   }
+}
+
+.stepchart {
+  margin-top: 0 !important;
 }

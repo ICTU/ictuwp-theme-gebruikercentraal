@@ -6,6 +6,7 @@
   "homepage": "styleguide/homepage.md",
   "css": [
     "../style.css",
-    "../../gebruiker-centraal/frontend/styleguide/css/styleguide.css"
+    "../../gebruiker-centraal/frontend/styleguide/css/styleguide.css",
+    "../../../../../wp-content/plugins/ictu-gc-posttypes-inclusie/css/frontend.css"
   ]
 }
