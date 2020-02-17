@@ -1058,7 +1058,7 @@
       }
     }
 
-    a, p, h2, h3, h4, h5, h6 {
+    p, h2, h3, h4, h5, h6 {
       color: @call_to_action_color;
     }
 
@@ -1199,4 +1199,26 @@
     margin-left: -2rem;
     transform: rotate(2deg);
   }
+}
+
+//========================================================================================================
+
+.font-size(@input) {
+  // deze mixin zet een font-size in px en in een rem-size.
+  // dit zorgt ervoor dat we de grootte uit het ontwerp kunnen gebruiken als
+  // een relatieve lettergrootte.
+  // px als maat voor lettergroottes zijn de absolute satan voor toegankelijkheid
+  // want daarmee beperk je de gebruiker in zijn vrijheid om zelf een leesbare
+  // lettergrootte te kiezen.
+  // door een relatieve grootte te gebruiken, houden we die vrijheid in stand.
+  //
+  // @input-70 levert dit op:
+  // font-size: 70px;
+  // font-size: 7rem;
+
+  // Dit maakt alles kapot, beter niet gebruiken?
+
+
+  font-size: ( ( ( @input / @basefontsize ) * @basefontsize ) * @pixel ); // @input
+  font-size: ( ( @input / @basefontsize ) * @baserem );
 }
