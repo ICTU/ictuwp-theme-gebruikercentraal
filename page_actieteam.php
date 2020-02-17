@@ -25,6 +25,28 @@ add_action( 'genesis_loop', 'ictu_gctheme_frontend_general_get_related_content',
 //========================================================================================================
 
 function gc_wbvb_show_actieteamleden() {
+	
+	if( have_rows('actieteamleden', 'option') ):
+	
+		echo '<div class="actieteam">';
+		
+		// loop through the rows of data
+		while ( have_rows('actieteamleden', 'option') ) : the_row();
+		
+			$userdata	= get_sub_field('actielid');
+			$acf_userid	= $userdata['ID'];   // grabs the user ID        
+			echo  gc_wbvb_authorbox_compose_box( $acf_userid );
+		
+		endwhile;
+		
+		echo '</div>';
+	
+	else :
+	
+		// no rows found
+		echo 'Geen actieteam bekend';
+	
+	endif;
 
 	if( have_rows('actieteamleden', 'option') ):
 	

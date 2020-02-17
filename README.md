@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-4.2.2 - Paginatemplates gecheckt en functionaliteit voor relevante links toegevoegd.
+4.3.1 - Fixes voor actieteamwidget bug (sanitize_title) en authorbox (get user ID from get_queried_object).
 
 ## Version history
+* 4.3.1 - Fixes voor actieteamwidget bug (sanitize_title) en authorbox (get user ID from get_queried_object).
 * 4.2.2 - Paginatemplates gecheckt en functionaliteit voor relevante links toegevoegd.
 * 4.2.1 - ACF bidirectional relationship function; function voor een lightbox.
 * 4.1.9 - Card-type 'card--vaardigheid' added.

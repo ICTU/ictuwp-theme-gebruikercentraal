@@ -46,12 +46,10 @@ function gc_wbvb_show_alle_auteurs() {
 	
 	// Iterate through users, filtering out the ones which don't have the roles we want 
 	foreach(array_filter($users, 'filter_two_roles') as $user) {
-
 		$user_post_count        = count_user_posts( $user->ID ); 
 		if ( $user_post_count > 0 ) {
 			echo  gc_wbvb_authorbox_compose_box( $user->ID );
 		}
-
 	}
 	
 	echo '</div>';
