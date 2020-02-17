@@ -40,12 +40,61 @@
     </div>
       <div class="container">
       <div class="row flex-xl-nowrap">
-                  <div class="d-none d-md-block col-md-3 col-xl-2 bd-toc" id="scrollspy" >
-                                                                          </div>
-                      <main class="col-12 col-md-9 col-xl-10 py-md-3 bd-content" role="main">
-          <a id="main-content" tabindex="-1"></a>
-            
-            
+                      <main id="main" class="bd-content" role="main">
+          <h1>GC Styleguide</h1>
+<p>Dit is de Living Styleguide voor het Gebruiker Centraal thema. Hier vind je (bijna) alle componenten die gebruikt worden in de diverse layouts. Hij is beschikbaar onder URL:</p>
+<p>[siteurl]/wp-content/themes/gebruiker-centraal/styleguide</p>
+<h2>1. Front-end tools installeren</h2>
+<h3>1.1 Wat heb je nodig?</h3>
+<p>De front-end maakt gebruik van Gulp en Node. Om de CSS te kunnen compilen heb je Node, NPM (node package manager) en Yarn (frontend package manager) nodig.
+Installeer dus eerst Node, NPM en Yarn volgens de online handleidingen:</p>
+<ul>
+<li>https://nodejs.org/en/download/</li>
+<li>https://www.npmjs.com/get-npm</li>
+<li>https://classic.yarnpkg.com/en/docs/install/#mac-stable</li>
+</ul>
+<p>Yarn is een package manager voor frontend die het een heel stukje gemakkelijker maakt onderlinge dependency problemen op te lossen.</p>
+<h3>1.2 Lokaal opzetten</h3>
+<ul>
+<li>Navigeer in de terminal naar het thema &quot;gebruiker-centraal&quot; en daarna naar mapje &quot;frontend&quot;</li>
+<li>Typ <code>yarn install</code> . De benodigde packages, onder andere Gulp, worden geinstalleerd. De map &quot;node_modules&quot; wordt gegenereerd. Deze wordt niet meegecommit - hij is alleen nodig voor het compilen.</li>
+<li>Typ om te testen &quot;gulp prod&quot;. Als het goed is zie je nu het bericht <code>gulp-notify: [Gulp notification] GC - Base Theme LESS task complete</code> verschijnen. Is dit niet zo? Dan is er waarschijnlijk iets nog niet goed geïnstalleerd.</li>
+</ul>
+<h3>1.3 De taken</h3>
+<p>De front-end is zo opgezet dat vanuit de frontend directory alle subthema's en modules gecompiled kunnen worden. In de &quot;sites_config.json&quot; vind je een overzicht van alle sites die momenteeel in de configuratie zitten. gebruiker-centraal is het basisthema.</p>
+<h4>1.3.1 De configuratie</h4>
+<p>Iedere site in de config heeft:</p>
+<ul>
+<li>Een shortname</li>
+<li>Een directory (path). Deze wordt gebruikt om de correcte map te kunnen watchen.</li>
+<li>Een proxy. Deze gebruikt browsersync om front-end wijzigingen direct te kunnen zien. Met browsersync zie je wijzigingen die gemaakt worden direct in de browser én is je lokale omgeving via een URL beschikbaar voor andere devices. Je kunt dus meteen testen op mobiel of tablet.</li>
+</ul>
+<h4>1.3.1 De front-end compilen</h4>
+<p><strong>Voor het hoofdthema</strong></p>
+<ul>
+<li><code>gulp</code> - Om het Gebruiker Centraal theme zelf te watchen typ je simpelweg &quot;gulp&quot; in je terminal. Browsersync wordt gestart met als proxy (lokale url) http://live-gebruikercentraal.co.uk. Iedere keer als je iets wijzigt wordt de css opnieuw gecompiled.</li>
+<li><code>gulp prod</code> - Taak voor productie. Met gulp prod wordt de CSS gecompiled zonder sourcemaps. Gebruik deze taak als je klaar bent en je wil gaan committen.</li>
+<li><code>gulp all</code> - Deze taak compiled voor alle sites uit sites_config.json de CSS. Heel handig als je veel hebt gewijzigd in het basisthema.</li>
+<li><code>gulp js</code> - Deze taak compiled de javascript bestanden uit js/components tot 1 minified bestand Javascript bestand.</li>
+<li><code>gulp styleguide</code> - Deze taak compiled deze Styleguide en de CSS die nodig is voor de Styleguide .</li>
+</ul>
+<p><strong>Voor een subthema of module</strong></p>
+<ul>
+<li><code>gulp --site=[site_name]</code> - Met deze taak watch je een specifiek thema of module. Bijvoorbeeld <code>gulp --site=inclusie</code> of <code>gulp --site=beeldbank</code></li>
+<li><code>gulp prod --site=[site_name]</code> - Met deze taak voer je de productietaak uit voor een specifieke site. Bijvoorbeeld <code>gulp prod --site=beeldbank</code></li>
+</ul>
+<p><strong>Wat doet commando 'gulp'?</strong></p>
+<p>Wanneer je <code>gulp</code> intikt in de terminal gebeuren de volgende dingen:</p>
+<ul>
+<li>Browsersync start met de ingegeven proxy.</li>
+<li>Thema 'gebruiker-centraal' less bestanden worden gewatched. Wanneer er je een wijziging maakt wordt de CSS opnieuw gecompiled en zie je de wijzigingen in je Browsersync.</li>
+<li>Indien ingevoerd wordt de directory van de ingegeven module of thema ook gewatched. Bij het wijzigingen in het gebruiker-centraal thema wordt eerst de css van het thema opnieuw gecompiled, vervolgends de CSS van het subthema.</li>
+<li>Directory js/components wordt gewatched voor wijzigingen in de javascript bestanden</li>
+<li>Directory frontend/styleguide wordt gewatched voor wijzigingen aan de styleguide. Wanneer er iets wordt gewijzigd in de specifieke styleguide .less wordt eerst de CSS taak en vervolgens de styleguide taak uitgevoerd.</li>
+</ul>
+<h3>1.4 De werkwijze</h3>
+<p>Een nieuw component maken? Kijk eerst of hij hier al bestaat. Voeg 'm bij voorkeur eerst hier toe en verwerk hem vervolgens in de front-end waar nodig. Hergebruik zoveel mogelijk.'</p>
+
         </main>
             </div>
     </div>

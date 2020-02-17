@@ -3,7 +3,7 @@
   "source": "styleguide/**",
   "destination": "../styleguide/",
   "builder": "styleguide/em_builder",
-  "homepage": "../styleguide.md",
+  "homepage": "styleguide/homepage.md",
   "css": [
     "../style.css",
     "../../gebruiker-centraal/frontend/styleguide/css/styleguide.css"
