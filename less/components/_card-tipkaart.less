@@ -19,7 +19,7 @@
   .card.tipkaart {
     text-align: center;
     position: relative;
-    background: @gc_cardbordergrey;
+    background: @border_color;
     color: @white;
 
     * {
@@ -49,7 +49,7 @@
         height: @tipkleurhoogte;
         border: 5px solid transparent;
         border-top-style: none;
-        background-color: darken(@gc_cardbordergrey, 10%);
+        background-color: darken(@border_color, 10%);
         clip-path: polygon(0 14%, 100% 0, 100% 100%, 0% 100%);
         speak: none;
       }
@@ -133,6 +133,8 @@
     .odcard_color_icon(inclusie, @inclusierood, darken(@inclusierood, 10%), @wit, 'images/optimaal-digitaal/icon-inclusie.svg');
   }
 }
+
+// Waaarom alles specifiek voor Tipkaarten definieren? Dit zijn immmers gewoon GC kleuren die we ook voor andere websites gaan gebruiken.
 
 //=========================================================================================================
 // locale mixin voor het combineren van een class met de juiste optimaal-digitaal-icoontjes

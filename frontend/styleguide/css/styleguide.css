@@ -1,4 +1,5 @@
 /* Typografie */
+/* Default variables for textblocks */
 .container > .flex-xl-nowrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14,7 +15,7 @@
 }
 .container > .flex-xl-nowrap .col-md-3 {
   width: 25%;
-  border-right: 0.2rem solid #DEDEDE;
+  border-right: 0.2rem solid #D1DFE3;
   padding: 3rem;
 }
 .container > .flex-xl-nowrap .col-md-9 {
@@ -29,7 +30,7 @@
   margin: 0 auto;
   background: #fff;
 }
-@media 960px {
+@media only screen and (min-width: 960px) {
   .hp-wrapper {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -86,6 +87,23 @@
     width: calc(33.333% - 3rem);
   }
 }
+#components-textblock .modifier__example {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  width: 100%;
+  max-width: 1200px;
+}
+#components-textblock .modifier__example .text-block {
+  margin-top: 3rem;
+  width: calc(50% - 3rem);
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
 .layout-container {
   background: #f9f6f3;
 }
@@ -117,7 +135,7 @@
   }
 }
 .btn-group {
-  border: 0.1rem solid #DEDEDE;
+  border: 0.1rem solid #D1DFE3;
   padding: 0.5rem 1rem;
   font-size: 1.4rem;
   display: -webkit-box;
@@ -141,15 +159,15 @@
 }
 .highlight {
   margin-top: 3rem;
-  border: 0.1rem solid #DEDEDE;
+  border: 0.1rem solid #D1DFE3;
 }
 .highlight pre {
-  border-top: 0.1rem solid #DEDEDE;
+  border-top: 0.1rem solid #D1DFE3;
   padding: 2rem;
   background: #f9f6f3;
 }
 .page-navigation {
-  background: #00303d;
+  background: #004152;
 }
 .page-navigation .container {
   display: -webkit-box;
@@ -227,7 +245,7 @@
 }
 .section-nav li a.back-to-top {
   margin-top: 2rem;
-  border-top: 0.1rem solid #DEDEDE;
+  border-top: 0.1rem solid #D1DFE3;
   padding-top: 1rem;
   font-size: 1.4rem;
 }
@@ -242,4 +260,7 @@
 }
 .stepchart {
   margin-top: 0 !important;
+}
+.text-block + .text-block {
+  margin-top: 3rem;
 }

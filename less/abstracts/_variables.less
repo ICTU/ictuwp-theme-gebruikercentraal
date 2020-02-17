@@ -77,35 +77,9 @@
 @groen_3:                   #A1E4B6; // erg licht groen
 @groen_4:                   #00932F;
 
-@gc_a11y_green:             #148839; // ook wel 'GC Green - Accessible'
-@gc_a11y_green_dark_1:      #0b732c; // ook wel 'GC Green - Darker'
-@gc_a11y_green_dark_2:      #0B732C;
-@gc_a11y_green_light_1:     pink; // lighten( @gc_a11y_green, 10% );
-@gc_a11y_green_light_2:     #E0F6E7; // voor hover
-
 @gc_a11y_orange:            #c73d19; // ook wel 'Inclusie Accessible Orange'
 @gc_a11y_orange_less:       #d94721; // ook wel 'Inclusie Less Accessible Orange'
 
-@gc_darkblue: 				#004152; // ook wel 'GC Dark Blue'
-@gc_darkerblue: 			#00303d; // ook wel 'GC Darker Blue'
-@gc_greyblue:               #4f7781; // Submenuborders
-
-@gc_pantybrown_light:       #f2ebe4; // ook wel 'GC PantyBrown Light'
-@gc_pantybrown_xlight:      #f9f6f3; // ook wel 'GC PantyBrown X Light'
-@gc_pantybrown:             #e8d8c7; // ook wel 'GC PantyBrown'
-
-
-@gc_cardbordergrey: 		#D1DFE3;
-@border_color:              @gc_cardbordergrey;
-
-@gc_greyblue:				#52757E;
-
-@oranje:                    #FF8005;
-@blauw:                     #0095DA;
-@blauw3:                    #002F3E;
-@blauw4:                    #608A95;
-@blauw5:                    #005870;
-@blauw6:                    #27779C;
 
 @heelerglichtgrijs:         #F7F7F7;
 @sitecontainer_bg:          #DEDEDE;
@@ -118,7 +92,7 @@
 @comment-list-odd:          #F7F7F7;
 
 @sidebar_bg:                @wit;
-@sidebarwidget:             @blauw3;
+@sidebarwidget:             @gc_blue_darkest;
 @entry_bg:                  @wit;
 
 @code:                      #1C5BB7;
@@ -131,24 +105,20 @@
 
 @oranje:                    #F7941E; // ondermeer gebruikt voor 'vol'
 
-
 @white:                     #fff;
 
-// Primary's & secondary's
-@color_primary:             @gc_a11y_green;
-
-
 @header_color:              #210800;
-@header_color_2:            @blauw;
+@header_color_2:            @gc_blue_dark;
 
+@gc_darkblue:               @gc_blue_dark;
 
 //========================================================================================================
 // koeleuren voor de navigatiedinges
 @nav_bg:                    @wit;
-@nav_wrap_bg:               @gc_darkblue;
+@nav_wrap_bg:               @gc_blue_dark;
 @nav_a_color:               @wit;
 
-@header_bg_color:           @gc_darkerblue;
+@header_bg_color:           @gc_blue_darkest;
 
 @breadcrumb_bg_color:       @wit;
 
@@ -172,7 +142,7 @@
 
 //========================================================================================================
 // tekst-koeleuren, best belangrijk
-@txt:                       @blauw3;
+@txt:                       @gc_blue_darkest;
 @wit:                       #fff;
 
 @meta_color:                lighten(@txt, 10%);
@@ -188,7 +158,7 @@
 @button-hover:              @wit;
 
 @button-sidebar-normal:     @gc_a11y_green;
-@button-sidebar-hover:      @blauw3;
+@button-sidebar-hover:      @gc_blue_darkest;
 @button-sidebar-normal-color: @wit;
 
 
@@ -214,6 +184,8 @@
 @font_smaller:              1.6rem;
 @font_small:                1.4rem;
 
+@baserem:                   2.4rem;
+
 @fontsize_title_h1:         ( 6.8 * @basefontsize );
 @fontsize_title_h2:         ( 4.6 * @basefontsize );
 @fontsize_title_h3:         ( 2.4 * @basefontsize );
@@ -233,8 +205,10 @@
 
 @import "variables/_socmed.less";
 @import "variables/_rekendingen.less";
+@import "variables/_colors";
 @import "variables/_colors-optimaaldigitaal.less";
 @import "variables/_colors-inclusie.less";
+@import "variables/_textblock.less";
 
 
 //========================================================================================================

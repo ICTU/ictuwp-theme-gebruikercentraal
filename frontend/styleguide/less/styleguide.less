@@ -42,7 +42,7 @@
   }
 
   h2 {
-    border-top: .2rem solid @gc_cardbordergrey;
+    border-top: .2rem solid @border_color;
     margin-top: 3rem;
   }
 
@@ -52,7 +52,7 @@
   }
 
   code {
-    border: .1rem solid @gc_cardbordergrey;
+    border: .1rem solid @border_color;
     display: inline-block;
     padding: .1rem 1rem;
     border-radius: .3rem;
@@ -81,6 +81,24 @@
       .card {
         width: ~"calc(33.333% - @{gutter})";
       }
+    }
+  }
+}
+
+#components-textblock {
+  .modifier__example {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -( @gutter / 2 );
+    margin-right: -( @gutter / 2 );
+    width: 100%;
+    max-width: 1200px;
+
+    .text-block {
+      margin-top: @gutter;
+      width: ~"calc(50% - @{gutter})";
+      margin-left: ( @gutter / 2 );
+      margin-right: ( @gutter / 2 );
     }
   }
 }
@@ -151,7 +169,7 @@ h1 {
 }
 
 .page-navigation {
-  background: @gc_darkerblue;
+  background: @gc_blue_dark;
   .container {
     display: flex;
     align-items: center;
@@ -256,4 +274,8 @@ h1 {
 
 .stepchart {
   margin-top: 0 !important;
+}
+
+.text-block + .text-block {
+  margin-top: @gutter;
 }

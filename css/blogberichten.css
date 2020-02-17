@@ -15,6 +15,7 @@
  * Variables, mixins, extendables - things we use everywhere
  */
 /* Typografie */
+/* Default variables for textblocks */
 #maincontent .has-header-image {
   max-width: 1440px;
   margin: 0 auto;

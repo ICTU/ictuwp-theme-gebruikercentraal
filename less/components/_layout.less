@@ -79,7 +79,7 @@
       transform: translateX(0);
     }
 
-    .logged-in.admin-bar &{
+    .logged-in.admin-bar & {
       top: ~"calc(@{menu_height} + 4.6rem)";
     }
   }
@@ -97,7 +97,7 @@
     width: 100vw;
     z-index: 64;
 
-    .logged-in.admin-bar &{
+    .logged-in.admin-bar & {
       top: 4.6rem;
     }
   }
@@ -143,9 +143,12 @@
     .breadcrumb,
     .footer-widgets,
     .site-footer,
-    .andere-bijeenkomsten{
+    .andere-bijeenkomsten {
       transform: translateX(85%);
     }
   }
 }
 
+.l-text-centered {
+  text-align: center;
+}
