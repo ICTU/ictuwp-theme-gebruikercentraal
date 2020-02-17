@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <title>Title of the Style Guide</title>
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <link rel="shortcut icon" href="" type="image/vnd.microsoft.icon" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="../style.css"/>
+<link rel="stylesheet" href="../../gebruiker-centraal/frontend/styleguide/css/styleguide.css"/>
+
+  <link rel="stylesheet" href="kss-assets/lib/docs.css">
+  <link rel="stylesheet" href="assets/css/styleguide.css">
+</head>
+<body id="" >
+  <div class="layout-container">
+    <a href="#main-content" class="sr-only sr-only-focusable"> Skip to main content </a>
+      <div class="page-navigation" id="navigation" style="top:0px">
+      <nav role="navigation" aria-labelledby="block-mainnavigation-menu" class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="./" title="Home" rel="home">
+            <img src="assets/images/logo.svg" alt="Title of the Style Guide" />
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                              <li class="nav-item"><a class="nav-link is-active " href="section-1.html">Modules</a></li>
+                              <li class="nav-item"><a class="nav-link" href="section-components.html">Components</a></li>
+                              <li class="nav-item"><a class="nav-link" href="section-sections.html">Sections</a></li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+      <div class="container">
+      <div class="row flex-xl-nowrap">
+                  <div class="d-none d-md-block col-md-3 col-xl-2 bd-toc" id="scrollspy" >
+                                                                                                    </div>
+                      <main class="col-12 col-md-9 col-xl-10 py-md-3 bd-content" role="main">
+          <a id="main-content" tabindex="-1"></a>
+            
+                                    <div id="1" class="section section--depth-1 ">
+                            <h1 class="bd-title">
+                Modules
+                <a href="#1" class="text-muted">
+                  <small>#
+                    <span class="sr-only">
+                      1 1
+                    </span>
+                  </small>
+                </a>
+              </h1>
+
+            
+
+                          <div class="description bd-lead">
+                <p>Reusable elements that can be used across the site.
+So far this just includes buttons.</p>
+
+              </div>
+            
+            
+
+            
+                      </div>
+          
+        </main>
+            </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+
+
+  <script src="kss-assets/lib/kss-fullscreen.js"></script>
+  <script src="kss-assets/lib/kss-guides.js"></script>
+  <script src="kss-assets/lib/kss-markup.js"></script>
+  <script src="kss-assets/lib/prism.js"></script>
+  <script src="kss-assets/lib/prism-scss.min.js"></script>
+
+  
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <script>
+    // Escape code
+    // ============================================================
+
+    var $lang_markup       = document.querySelectorAll('pre.language-html code'),
+        $lang_js           = document.querySelectorAll('script.atomic-js'),
+        $lang_jscode       = document.querySelectorAll('pre code.language-javascript'),
+        lang_markupsnippet = [],
+        lang_jsnippet      = [];
+
+    // Markup
+    // order matters!
+    // ============================================================
+
+    for(var i = 0, l = $lang_markup.length; i < l; i++) {
+      lang_markupsnippet.push(
+        $lang_markup[i].innerHTML.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      );
+      $lang_markup[i].innerHTML = lang_markupsnippet[i];
+    }
+
+    // JavaScript
+    // order matters!
+    // ============================================================
+    for(var i = 0, l = $lang_jscode.length; i < l; i++) {
+      lang_jsnippet.push(
+        $lang_jscode[i].innerHTML.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      );
+    }
+
+    for(var i = 0, l = $lang_js.length; i < l; i++) {
+      $lang_js[i].innerHTML = lang_jsnippet[i];
+    }
+
+    var KssFullScreen = new KssFullScreen({
+      idPrefix: 'fullscreen-',
+      bodyClass: 'kss-fullscreen-mode',
+      elementClass: 'is-fullscreen'
+    });
+    var kssGuides = new KssGuides({
+      bodyClass: 'guides-mode'
+    });
+    var kssMarkup = new KssMarkup({
+      bodyClass: 'markup-mode',
+      detailsClass: 'highlight'
+    });
+
+  </script>
+
+  <script src="kss-assets/styleguide.js"></script>
+</body>
+</html>

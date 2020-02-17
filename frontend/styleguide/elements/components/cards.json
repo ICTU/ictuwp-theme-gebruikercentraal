@@ -1,0 +1,11 @@
+{
+  "base_url": "/wp-content/themes/gebruiker-centraal/frontend/styleguide/img",
+  "cards": [
+    {
+      "modifiers": "",
+      "linktext": "Standaard card",
+      "content": "Default template voor een card. Kan gebruikt worden bij een verwijzing naar bijvoorbeeld gewone pagina. Mag over de gehele breedte wanneer hij niet in een grid staat."
+    }
+  ]
+
+}

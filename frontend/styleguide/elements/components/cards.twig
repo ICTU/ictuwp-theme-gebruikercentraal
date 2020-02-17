@@ -1,0 +1,53 @@
+<div class="card">
+  <div class="card__content">
+    <h2 class="card__title">
+      <a class="link link--arrow" href="#">
+        Standaard card
+        <span class="link link--arrow link__icon"></span>
+      </a>
+    </h2>
+    <p class="card__description">
+      Default template voor een kaart. Kan gebruikt worden bij een verwijzing naar bijvoorbeeld gewone pagina. Mag over
+      de gehele breedte wanneer hij niet in een grid staat.
+    </p>
+  </div>
+</div>
+
+
+<div class="card card--with-image">
+  <div class="card__image">
+    <img src="{{ base_url }}/img-16-9.jpg" alt="Gebruiker Centraal Plaatje">
+  </div>
+  <div class="card__content">
+    <h2 class="card__title">
+      <a class="link link--arrow" href="#">
+        Card met afbeelding
+        <span class="link link--arrow link__icon"></span>
+      </a>
+    </h2>
+    <p class="card__description">
+      Template voor een kaartje met een afbeelding. Deze krijgt modifier class "card--with-image" mee.
+    </p>
+  </div>
+</div>
+
+<div class="card card--with-image">
+  <div class="card__image">
+    <img src="{{ base_url }}/img-16-9-2.jpg" alt="Gebruiker Centraal Plaatje">
+  </div>
+  <div class="card__content">
+    <h2 class="card__title">
+      <a class="link link--arrow" href="#">
+        Card met metadata
+        <span class="link link--arrow link__icon"></span>
+      </a>
+    </h2>
+    <p class="card__description">
+      Template voor een kaartje met een afbeelding én metadata. Metadata heeft zijn eigen component - die kan overal worden gebruikt waar verschillende items als metadata worden getoond.
+    </p>
+    <div class="meta-data">
+      <span class="meta-data__item"><label>Auteur:</label> Mariska</span>
+      <span class="meta-data__item">09 februari 2020</span>
+    </div>
+  </div>
+</div>

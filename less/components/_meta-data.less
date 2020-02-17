@@ -1,0 +1,29 @@
+
+
+.meta-data {
+  color: @gc_greyblue;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+}
+
+.meta-data__item {
+  display: inline-block;
+
+  label {
+    font-weight: normal;
+    font-family: @font_primary_semi;
+  }
+
+  + .meta-data__item {
+    &:before {
+      content: " ";
+      speak: none;
+      background: @border_color;
+      width: .4rem;
+      height: .4rem;
+      margin: .8rem 1rem 0 .6rem;
+      display: inline-block;
+      float: left;
+    }
+  }
+}

@@ -1,17 +1,39 @@
 
-
 .section__title {
   padding: 2rem 0;
 //  text-transform: uppercase;
   border-top: .2rem solid @border_color;
   margin-top: 3rem;
+  font-family: @font_secondary;
 
   @media @tablet {
     margin-top: 5rem;
   }
 }
 
-.content .section__title {
+.l-section-top {
+  max-width: @max-width-inner;
+  margin: 0 auto;
+}
+
+.l-section-content {
+  max-width: @contentmaxwidth;
+  margin: 0 auto;
+
+  .grid:not(.grid--col-3),
+  .item-list {
+    max-width: ~"calc(@{max-width-inner} + @{gutter})";
+    margin: 0 auto;
+  }
+
+  .item-list {
+    max-width: ~"calc(@{max-width-inner} + @{gutter})";
+    margin: 2rem auto 0;
+  }
+}
+
+.content .section__title,
+.section__title {
   .font-size(38);
 
   @media @desktop {
