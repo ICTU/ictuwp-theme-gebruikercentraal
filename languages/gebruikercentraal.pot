@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Gebruiker Centraal\n"
-"POT-Creation-Date: 2020-02-13 20:41+0100\n"
+"POT-Creation-Date: 2020-02-17 15:45+0100\n"
 "PO-Revision-Date: 2018-03-26 23:12+0200\n"
 "Last-Translator: \n"
 "Language-Team: paul@wbvb.nl\n"
@@ -217,37 +217,37 @@ msgstr ""
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:2682
+#: functions.php:2684
 msgid "Older"
 msgstr ""
 
-#: functions.php:2695
+#: functions.php:2697
 msgid "Newer"
 msgstr ""
 
-#: functions.php:2740 includes/author-box.php:240
+#: functions.php:2742 includes/author-box.php:240
 msgctxt "author box"
 msgid "LinkedIn page"
 msgstr ""
 
-#: functions.php:2741 includes/author-box.php:236
+#: functions.php:2743 includes/author-box.php:236
 msgctxt "author box"
 msgid "Personal website"
 msgstr ""
 
-#: functions.php:2825
+#: functions.php:2827
 msgid "Previous"
 msgstr ""
 
-#: functions.php:2826
+#: functions.php:2828
 msgid "Next"
 msgstr ""
 
-#: functions.php:2991
+#: functions.php:2993
 msgid "LinkedIn-profiel"
 msgstr ""
 
-#: functions.php:2997
+#: functions.php:2999
 msgid "Twitter-account"
 msgstr ""
 
@@ -493,63 +493,21 @@ msgstr ""
 msgid " - Select - "
 msgstr ""
 
-#: page_contentpagina.php:35 page_overzichtspagina.php:37
+#: page_contentpagina.php:35 page_overzichtspagina.php:54
 msgid "Zie ook:"
 msgstr ""
 
-#: page_mailinglijst.php:37 page_mailinglijst.php:45
-msgid ""
-"We hebben onvoldoende informatie ontvangen.<br />Vul alsnog de vereiste "
-"velden in."
-msgstr ""
-
-#: page_mailinglijst.php:39
-msgid "Vul een mail-adres in, alsjeblieft."
-msgstr ""
-
-#: page_mailinglijst.php:47
-msgid "E-mailadres lijkt ongeldig."
-msgstr ""
-
-#: page_mailinglijst.php:124
-msgid "Geef aan voor welke mailinglijsten je je in of uit wilt schrijven"
-msgstr ""
-
-#: page_mailinglijst.php:134
-msgid "Newsletters:"
-msgstr ""
-
-#: page_mailinglijst.php:156
-msgid "Save Subscribes"
-msgstr ""
-
-#: page_mailinglijst.php:158
-msgid "Unsubscribe from all newsletters"
-msgstr ""
-
-#: page_mailinglijst.php:168
-msgid "Meld je aan voor onze nieuwsbrief"
-msgstr ""
-
-#: page_mailinglijst.php:170 widgets/gc-e-newsletter.php:262
-msgid "Your Email:"
-msgstr ""
-
-#: page_mailinglijst.php:186
-msgid "Subscribe on Newsletters"
-msgstr ""
-
-#: page_stappenplan.php:43
+#: page_stappenplan.php:50
 #, php-format
 msgctxt "stappen"
 msgid "%s in %s stappen"
 msgstr ""
 
-#: page_stappenplan.php:74
+#: page_stappenplan.php:81
 msgid "Stap"
 msgstr ""
 
-#: page_stappenplan.php:80
+#: page_stappenplan.php:87
 #, php-format
 msgctxt "stappen"
 msgid ""
@@ -557,7 +515,7 @@ msgid ""
 "\">van %s:</span> %s"
 msgstr ""
 
-#: page_stappenplan.php:95
+#: page_stappenplan.php:102
 msgctxt "Stap, voorbeeld"
 msgid "Bijvoorbeeld:"
 msgstr ""
@@ -1651,6 +1609,10 @@ msgid ""
 "worden van alles nieuws rond Gebruiker Centraal"
 msgstr ""
 
+#: widgets/gc-e-newsletter.php:262
+msgid "Your Email:"
+msgstr ""
+
 #: widgets/gc-e-newsletter.php:268
 msgid "Your Name:"
 msgstr ""
@@ -1849,59 +1811,43 @@ msgid "https://wbvb.nl/"
 msgstr ""
 
 #. Template Name of the plugin/theme
-msgid "GC - Actieteampagina"
+msgid "GC-pagina - Actieteampagina"
 msgstr ""
 
 #. Template Name of the plugin/theme
-msgid "GC - Sitemap"
+msgid "GC-pagina - Sitemap"
 msgstr ""
 
 #. Template Name of the plugin/theme
-msgid "GC Agenda - pagina met een enkel event"
+msgid "GC-events - pagina met een enkel event"
 msgstr ""
 
 #. Template Name of the plugin/theme
-msgid "GC - Homepage"
+msgid "GC-pagina - Homepage"
 msgstr ""
 
 #. Template Name of the plugin/theme
-msgid "GC - Contentpagina"
+msgid "GC-pagina - Pagina Relevante Content Oude Stijl"
 msgstr ""
 
 #. Template Name of the plugin/theme
-msgid "GC - Overzichtspagina"
+msgid "GC-pagina - Toon onderliggende pagina's"
 msgstr ""
 
 #. Template Name of the plugin/theme
-msgid "GC - Pagina met mailinglijstinschrijving"
+msgid "GC-pagina - Overzichtspagina (met bv. tips, vaardigheden, methodes)"
 msgstr ""
 
 #. Template Name of the plugin/theme
-msgid "GC - Pagina met blog-artikelen"
+msgid "GC-pagina - Pagina met stappenplan"
 msgstr ""
 
 #. Template Name of the plugin/theme
-msgid "GC - Archief en sitemap (page2)"
+msgid "GC-events - pagina met overzicht van de agenda"
 msgstr ""
 
 #. Template Name of the plugin/theme
-msgid "GC - Overzichtspagina (met bv. tips, vaardigheden, methodes)"
-msgstr ""
-
-#. Template Name of the plugin/theme
-msgid "ZZZ (niet gebruiken)"
-msgstr ""
-
-#. Template Name of the plugin/theme
-msgid "GC - Pagina met stappenplan"
-msgstr ""
-
-#. Template Name of the plugin/theme
-msgid "GC Agenda - overzicht van de agenda"
-msgstr ""
-
-#. Template Name of the plugin/theme
-msgid "GC - Alle auteurs"
+msgid "GC-pagina - Alle auteurs"
 msgstr ""
 
 #. Template Name of the plugin/theme

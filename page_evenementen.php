@@ -1,6 +1,5 @@
 <?php 
 
-//* Template Name: GC Agenda - overzicht van de agenda  
 
 /**
  * Gebruiker Centraal page_evenement.php
@@ -17,6 +16,9 @@
 
 showdebug(__FILE__, 'page_evenementen'); 
 
+// Template naam hernoemd
+// * @since	  4.2.2
+//* Template Name: GC-events - pagina met overzicht van de agenda  
 
 
 

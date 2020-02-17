@@ -23,6 +23,82 @@
 
 //========================================================================================================
 
+if ( !function_exists( 'ictu_gctheme_frontend_general_get_related_content_headercss' ) ) :
+
+    function ictu_gctheme_frontend_general_get_related_content_headercss( $args = [] ) {
+
+        global $post;
+
+        // defaults
+		$menuarray  = array();
+		$return     = '';
+		$defaults   = array(
+	          'ID' => 0,
+	          'titletag' => 'h2',
+	          'getmenu' => FALSE,
+	          'echo' => TRUE,
+	        );
+
+
+        // Parse incoming $args into an array and merge it with $defaults
+        $args			= wp_parse_args( $args, $defaults );
+        $currentpageID	= get_the_id();
+        $header_css		= '';
+
+        if ( function_exists( 'get_field' ) ) {
+
+			// interne links
+            $gerelateerdecontent = get_field( 'gerelateerde_content_toevoegen', $currentpageID );
+
+
+            if ( 'ja' === $gerelateerdecontent ) {
+
+		        $items = get_field('content_block_items', $currentpageID );
+		
+		        if ($items) {
+
+		            foreach ($items as $post):
+		
+			            setup_postdata($post);
+		
+						$currentpageID = $post->ID;
+						$image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large');
+						
+			            if ($image[0]) {
+			                $header_css .= "#related_" . $currentpageID . " .card__image { ";
+			                $header_css .= "background-image: url('" . $image[0] . "'); ";
+			                $header_css .= "} ";
+			            }
+		
+		            endforeach;
+			        
+		            wp_reset_query();
+		
+		        } // if ($items) {
+
+		    } // if ( 'ja' === $gerelateerdecontent ) {
+		    
+	    } // if ( function_exists( 'get_field' ) ) {
+
+    if ($header_css) {
+
+		wp_enqueue_style(
+			ID_BLOGBERICHTEN_CSS,
+			WBVB_THEMEFOLDER . '/css/blogberichten.css?v=' . CHILD_THEME_VERSION
+		);
+	    
+        wp_add_inline_style(ID_BLOGBERICHTEN_CSS, $header_css);
+    }
+
+    
+    
+    }
+
+endif;
+
+//========================================================================================================
+
+
 if ( !function_exists( 'ictu_gctheme_frontend_general_get_related_content' ) ) :
 
 
@@ -121,9 +197,11 @@ if ( !function_exists( 'ictu_gctheme_frontend_general_get_related_content' ) ) :
 
 						$imageplaceholder = '';
 						$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
-						
+
+//						if ( is_object( $image ) && $image[0] ) {
 						if ( $image[0] ) {
 							$imageplaceholder = '<div class="card__image"></div>';
+							$imageplaceholder .= '<!-- ' . sanitize_title( $image[0] ) . '-->';
 						}
 						
 						$return .= '<div class="card card--featured-image" id="' . $block_id . '">';

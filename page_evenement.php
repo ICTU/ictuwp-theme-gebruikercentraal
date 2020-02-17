@@ -21,7 +21,9 @@ add_filter( 'get_the_author_genesis_author_box_single', '__return_false' );
  
 showdebug(__FILE__, 'page_evenement'); 
 
-//* Template Name: GC Agenda - pagina met een enkel event  
+// Template naam hernoemd
+// * @since	  4.2.2
+//* Template Name: GC-events - pagina met een enkel event  
 
 //* Remove standard header
 remove_action( 'genesis_entry_header', 'genesis_entry_header_markup_open', 5 );

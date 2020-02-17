@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-4.2.1 - ACF bidirectional relationship function; function voor een lightbox.
+4.2.2 - Paginatemplates gecheckt en functionaliteit voor relevante links toegevoegd.
 
 ## Version history
+* 4.2.2 - Paginatemplates gecheckt en functionaliteit voor relevante links toegevoegd.
 * 4.2.1 - ACF bidirectional relationship function; function voor een lightbox.
 * 4.1.9 - Card-type 'card--vaardigheid' added.
 * 4.1.8 - Incremented version number, to prevent cache errors.

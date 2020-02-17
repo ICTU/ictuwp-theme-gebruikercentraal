@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.2.1
-// @desc.   ACF bidirectional relationship function; function voor een lightbox.
+// @version 4.2.2
+// @desc.   Paginatemplates gecheckt en functionaliteit voor relevante links toegevoegd.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '4.2.1' );
-define( 'CHILD_THEME_DESCRIPTION', "4.2.1 - ACF bidirectional relationship function; function voor een lightbox." );
+define( 'CHILD_THEME_VERSION', '4.2.2' );
+define( 'CHILD_THEME_DESCRIPTION', "4.2.2 - Paginatemplates gecheckt en functionaliteit voor relevante links toegevoegd." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -2668,6 +2668,8 @@ function gc_wbvb_add_taxonomy_description() {
 add_filter( 'theme_page_templates', 'gc_wbvb_remove_genesis_page_templates' );
 
 function gc_wbvb_remove_genesis_page_templates( $page_templates ) {
+	// deze paginatemplates zijn verwijderd als php bestand 
+	// * @since	  4.2.2
 	unset( $page_templates['page_archive.php'] );
 	unset( $page_templates['page_blog.php'] );
 	return $page_templates;
