@@ -7,15 +7,13 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.11.5
-// @desc.   Bug removed that caused empty author page.
+// @version 4.3.1
+// @desc.   Fixes voor actieteamwidget bug (sanitize_title) en authorbox (get user ID from get_queried_object).
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
 /**
  * Template Name: Author Page
  */
-
-
 
 genesis();

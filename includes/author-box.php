@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.26.1
-// @desc.   Icons (microfoon, level, flag) toegevoegd. Code cleanup voor event manager bestanden.
+// @version 4.3.1
+// @desc.   Fixes voor actieteamwidget bug (sanitize_title) en authorbox (get user ID from get_queried_object).
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
   
   
@@ -130,16 +130,25 @@ function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = 
     $prefix                 = _x( 'About', 'author box', 'gebruikercentraal');
     $user_info              = '';
     
-    if ( is_archive() ) {
-      $header_tag             = 'h1';
-      $prefix                 = _x( 'Posts by', 'author box', 'gebruikercentraal');
-    }
+	if ( is_archive() ) {
+		$header_tag             = 'h1';
+		$prefix                 = _x( 'Posts by', 'author box', 'gebruikercentraal');
+	}
 
-    $sectiondiv = '<section class="author-box wrap" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">';
+    $sectiondiv = '<section class="author-box wrap odd" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">';
 
-    if ( 'even' == get_post_type() ) {
-      $sectiondiv = '<section class="author-box wrap" itemprop="organizer" itemscope="itemscope" itemtype="http://schema.org/Person">';
-    }
+	if ( 'even' == get_post_type() ) {
+		// Wat is deze posttype?
+		$sectiondiv = '<section class="author-box wrap even" itemprop="organizer" itemscope="itemscope" itemtype="http://schema.org/Person">';
+	}
+
+	if ( ! $userid ) {
+
+		// * @since	  4.3.1	
+		$userid = get_queried_object()->data->ID;
+		
+	}
+
 
     if ( $default_persoon_plaatje == 'voorbeeld-persoon-2.png' ) {
     	$default_persoon_plaatje = 'voorbeeld-persoon-1.png';
@@ -157,9 +166,9 @@ function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = 
 		$displayname            = '';
 
 		if ( is_object( $user_info ) ) {
-			$gebruikersnaam         = $user_info->display_name;
-			$biografie              =( $user_info->description ) ? $user_info->description : '';
-			$displayname = ( $user_info->user_firstname ? $user_info->user_firstname : ( $user_info->display_name ? $user_info->display_name : 'geen naam'  ) );
+			$gebruikersnaam     = $user_info->display_name;
+			$biografie          =( $user_info->description ) ? $user_info->description : '';
+			$displayname 		= ( $user_info->user_firstname ? $user_info->user_firstname : ( $user_info->display_name ? $user_info->display_name : 'geen naam'  ) );
 		}
 		
 		$functiebeschrijving    = get_field('functiebeschrijving', $acf_userid);

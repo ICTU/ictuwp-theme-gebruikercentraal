@@ -77,7 +77,8 @@
   .content-sidebar-sidebar .content-sidebar-wrap,
   .sidebar-content-sidebar .content-sidebar-wrap,
   .sidebar-sidebar-content .content-sidebar-wrap {
-    width: ( @break_fullwidth - ( 1 * ( @gutter + @sidebar_width ) ) );
+//    width: ( @break_fullwidth - ( 1 * ( @gutter + @sidebar_width ) ) );
+    width: ( @break_fullwidth - ( 1 * ( @gutterpx + @sidebar_width ) ) );
   }
   
   .content-sidebar-sidebar .content-sidebar-wrap {
@@ -93,7 +94,8 @@
   
   .content {
     float: right;
-    width: ( @break_fullwidth - ( @gutter + @sidebar_width ) ) ;
+//    width: ( @break_fullwidth - ( @gutter + @sidebar_width ) ) ;
+    width: ( @break_fullwidth - ( @gutterpx + @sidebar_width ) ) ;
 //    width: 100%;
   }
   
@@ -106,7 +108,8 @@
   .content-sidebar-sidebar .content,
   .sidebar-content-sidebar .content,
   .sidebar-sidebar-content .content {
-    width: ( @break_fullwidth - ( 2 * ( @gutter + @sidebar_width ) ) );
+//    width: ( @break_fullwidth - ( 2 * ( @gutter + @sidebar_width ) ) );
+    width: ( @break_fullwidth - ( 2 * ( @gutterpx + @sidebar_width ) ) );
   }
   
   
@@ -122,7 +125,9 @@
       .entry-content,
       .content {
         @media only screen and (min-width: @break_fullwidth ) {
-          min-height: 400px;
+			// WEG ERMEE, geen min hoogte van de content meer
+			// min-height: 400px;
+
           &.manifest {
             min-height: intrinsic;
           }

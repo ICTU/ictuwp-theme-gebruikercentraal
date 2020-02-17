@@ -40,9 +40,10 @@
 
 // Gutters & Margins
 @gutter:                     3rem;
+@gutterpx: 					( 3 * 16px ); 	// 3rem?
 
 @spacer_default:             3rem;
-@spacer_medium:              5rem;
+@spacer_medium:                 5rem;
 @spacer-large:               8rem;
 
 @max-width-content:          960px;
@@ -68,8 +69,6 @@
 @paars:                     #4B2974;
 @violet:                    #C42C76;
 @paars:                     #4C2974;
-
-@gc_green:                  #25b34b;
 
 // alle groenen
 //@groen_1:                 #1bb24b;
@@ -98,7 +97,7 @@
 @gc_cardbordergrey: 		#D1DFE3;
 @border_color:              @gc_cardbordergrey;
 
-@gc_greyblue:				#52757E;
+@gc_greyblue:				@gc_cardbordergrey;
 
 @oranje:                    #FF8005;
 @blauw:                     #0095DA;
@@ -137,10 +136,7 @@
 // Primary's & secondary's
 @color_primary:             @gc_a11y_green;
 
-
-@header_color:              #210800;
-@header_color_2:            @blauw;
-
+@gc_green: 					@gc_a11y_green;
 
 //========================================================================================================
 // koeleuren voor de navigatiedinges
@@ -200,7 +196,6 @@
 @font_primary_bold:         'montserratbold', Helvetica, Arial, sans-serif;
 @font_primary_light:        'Montserrat light', Helvetica, Arial, sans-serif;
 @font_primary_semi:         'montserrat_semiboldregular', Helvetica, Arial, sans-serif;
-
 @button-normal:             @gc_a11y_green;
 
 @font_secondary:            'League Gothic', Impact, Helvetica, Arial, sans-serif;
@@ -210,6 +205,9 @@
 @bodyfont:                  @font_primary_light;
 @bodyfont_bold:             @font_primary_bold;
 @montserrat_semibold:       @font_primary_semi;
+
+@header_color:              #210800;
+@header_color_2:            @blauw;
 
 @font_smaller:              1.6rem;
 @font_small:                1.4rem;
