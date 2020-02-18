@@ -176,16 +176,16 @@
 //=========================================================================================================
 
 .knoppify(
-  @bordercolor: @blauw5,
-  @box_shadow: @blauw5,
-  @ctacolor: @blauw5,
+  @bordercolor: @gc_blue_darker,
+  @box_shadow: @gc_blue_darker,
+  @ctacolor: @gc_blue_darker,
   @bg_color: transparent,
   @fontcolor: @wit,
   @fontsize: 32,
   @borderwidth: 1px,
   @color_arrow: @wit,
-  @bg_color_txt_hover: @gc_darkblue,
-  @bg_color_after_hover: @gc_darkerblue,
+  @bg_color_txt_hover: @gc_blue_dark,
+  @bg_color_after_hover: @gc_blue_darkest,
   @txt_color_hover: @wit ) {
 
   background-color: @bg_color;
@@ -511,7 +511,7 @@
       }
       .twitter {
         background-image: url('../images/icon-twitter.png');
-        .icon_socmed_icon('../images/icon-twitter.svg', @blauw3);
+        .icon_socmed_icon('../images/icon-twitter.svg', @gc_blue_darkest);
         background-size: 18px 15px;
 
         &:hover,
@@ -522,7 +522,7 @@
       }
       .slack {
         background-image: url('../images/icon-slack.png');
-        .icon_socmed_icon('../images/icon-slack.svg', @blauw3);
+        .icon_socmed_icon('../images/icon-slack.svg', @gc_blue_darkest);
         background-size: 16px 16px;
 
         &:hover,
@@ -533,18 +533,18 @@
       }
       .email {
         background-image: url('../images/icon-mail.png');
-        .icon_socmed_icon('../images/icon-mail.svg', @blauw3);
+        .icon_socmed_icon('../images/icon-mail.svg', @gc_blue_darkest);
         background-size: 16px 16px;
 
         &:hover,
         &:active,
         &:focus {
-          .icon_socmed_icon('../images/icon-mail.svg', @gc_a11y_green );
+          .icon_socmed_icon('../images/icon-mail.svg', @gc_blue_darkest );
         }
       }
       .facebook {
         background-image: url('../images/icon-facebook.png');
-        .icon_socmed_icon('../images/icon-facebook.svg', @blauw3);
+        .icon_socmed_icon('../images/icon-facebook.svg', @gc_blue_darkest);
         background-size: 10px 18px;
 
         &:hover,
@@ -557,7 +557,7 @@
       .other,
       .personallink {
         background-image: url('../images/icon-personallink.png');
-        .icon_socmed_icon('../images/icon-personallink.svg', @blauw3);
+        .icon_socmed_icon('../images/icon-personallink.svg', @gc_blue_darkest);
         background-size: 18px 16px;
 
         &:hover,
@@ -568,7 +568,7 @@
       }
       .linkedin {
         background-image: url('../images/icon-linkedin.png');
-        .icon_socmed_icon('../images/icon-linkedin.svg', @blauw3);
+        .icon_socmed_icon('../images/icon-linkedin.svg', @gc_blue_darkest);
         background-size: 18px 17px;
 
         &:hover,
@@ -657,8 +657,8 @@
             20deg,
             @gc_a11y_green,
             @gc_a11y_green 50px,
-            @gc_a11y_green_dark_1 25px,
-            @gc_a11y_green_dark_1 120px
+            @gc_a11y_green_dark 25px,
+            @gc_a11y_green_dark 120px
     );
   }
 
@@ -1015,17 +1015,9 @@
 //=========================================================================================================
 
 .calltoactionstyling() {
-  /*
-  .knoppify(
-      @bordercolor: @blauw5,
-      @box_shadow: @blauw5,
-      @ctacolor: @blauw5,
-
-  */
 
   a.cta {
-    .knoppify( transparent, @gc_a11y_green_light_1, @gc_a11y_green_dark_2, @gc_a11y_green, @wit, 24, 0);
-    //		.knoppify( transparent, @gc_a11y_green_light_1, @gc_a11y_green_dark_2, @gc_a11y_green, @wit, 24, 0);
+    .knoppify( transparent, @gc_a11y_green_dark, @gc_a11y_green_darker, @gc_a11y_green, @wit, 24, 0);
     float: right;
     text-transform: uppercase;
   }
@@ -1034,17 +1026,17 @@
   @call_to_action_2nd_link_schaduw:               darken( @call_to_action_2nd_link_achtergrond, 20% );
   @call_to_action_2nd_link_pijltje_achtergrond:   @light_gray;
   @call_to_action_2nd_link_color:                 @txt;
-  @call_to_action_2nd_bg:                         @blauw6;
+  @call_to_action_2nd_bg:                         @gc_greyblue;
   @call_to_action_2nd_border:                     @call_to_action_2nd_link_pijltje_achtergrond;
 
-  @call_to_action_link_achtergrond:           	#1bb24b;
+  @call_to_action_link_achtergrond:           	  @gc_a11y_green; //waarom -weer- kleuren definieren hier?
   @call_to_action_link_schaduw:               	#00832A;
   @call_to_action_link_pijltje_achtergrond:   	#0CA13B;
   @call_to_action_link_color:                 	@wit;
 
   @call_to_action_bg:                         	@wit;
   @call_to_action_color:                      	@txt;
-  @call_to_action_border:                     	@blauw6;
+  @call_to_action_border:                     	@gc_greyblue;
 
 
   .call-to-action {
@@ -1066,7 +1058,7 @@
       }
     }
 
-    a, p, h2, h3, h4, h5, h6 {
+    p, h2, h3, h4, h5, h6 {
       color: @call_to_action_color;
     }
 
@@ -1074,10 +1066,6 @@
     h2, h3, h4, h5, h6 {
       padding: 0;
       margin: 0;
-    }
-
-    a.cta {
-      .knoppify(transparent, @call_to_action_link_schaduw, @call_to_action_link_pijltje_achtergrond, @call_to_action_link_achtergrond, @call_to_action_link_color, 24, 0, @call_to_action_link_color);
     }
   }
 
@@ -1130,7 +1118,7 @@
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
 	
-	@media @break_fullwidth {
+	@media @desktop {
 		padding-left: 3rem;
 		padding-right: 3rem;
 	}
@@ -1157,14 +1145,14 @@
 //=========================================================================================================
 
 .gc-section-heading() {
-  .font-size(34);
+  .font-size(32);
   font-family: @font_secondary;
   text-transform: uppercase;
-  line-height: 40px;
+  line-height: 36px;
 
   @media only screen and ( min-width: @break_fullwidth ) {
-    .font-size(46);
-    line-height: 50px;
+    .font-size(42);
+    line-height: 44px;
   }
 }
 
@@ -1183,7 +1171,7 @@
   .font-size(40);
 
   @media only screen and ( min-width: @break_tablet ) {
-    .font-size(44);
+    .font-size(40);
     line-height: 48px;
   }
 
@@ -1211,4 +1199,26 @@
     margin-left: -2rem;
     transform: rotate(2deg);
   }
+}
+
+//========================================================================================================
+
+.font-size(@input) {
+  // deze mixin zet een font-size in px en in een rem-size.
+  // dit zorgt ervoor dat we de grootte uit het ontwerp kunnen gebruiken als
+  // een relatieve lettergrootte.
+  // px als maat voor lettergroottes zijn de absolute satan voor toegankelijkheid
+  // want daarmee beperk je de gebruiker in zijn vrijheid om zelf een leesbare
+  // lettergrootte te kiezen.
+  // door een relatieve grootte te gebruiken, houden we die vrijheid in stand.
+  //
+  // @input-70 levert dit op:
+  // font-size: 70px;
+  // font-size: 7rem;
+
+  // Dit maakt alles kapot, beter niet gebruiken?
+
+
+  font-size: ( ( ( @input / @basefontsize ) * @basefontsize ) * @pixel ); // @input
+  font-size: ( ( @input / @basefontsize ) * @baserem );
 }

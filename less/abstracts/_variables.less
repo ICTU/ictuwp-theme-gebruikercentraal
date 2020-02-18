@@ -36,14 +36,13 @@
 
 @nav-up:                    ~"only screen and (min-width: @{break_show_menu_button})";
 @nav-down:                  ~"only screen and (max-width: calc(@{break_show_menu_button} - 1px))";
-@oranje:                    #FF8005;
 
 // Gutters & Margins
 @gutter:                     3rem;
 @gutterpx: 					( 3 * 16px ); 	// 3rem?
 
 @spacer_default:             3rem;
-@spacer_medium:                 5rem;
+@spacer_medium:              5rem;
 @spacer-large:               8rem;
 
 @max-width-content:          960px;
@@ -70,17 +69,13 @@
 @violet:                    #C42C76;
 @paars:                     #4C2974;
 
+@gc_green:                  #25b34b;
+
 // alle groenen
 //@groen_1:                 #1bb24b;
 @groen_2:                   #009F33;
 @groen_3:                   #A1E4B6; // erg licht groen
 @groen_4:                   #00932F;
-
-@gc_a11y_green:             #148839; // ook wel 'GC Green - Accessible'
-@gc_a11y_green_dark_1:      #0b732c; // ook wel 'GC Green - Darker'
-@gc_a11y_green_dark_2:      #0B732C;
-@gc_a11y_green_light_1:     pink; // lighten( @gc_a11y_green, 10% );
-@gc_a11y_green_light_2:     #E0F6E7; // voor hover
 
 @gc_a11y_orange:            #c73d19; // ook wel 'Inclusie Accessible Orange'
 @gc_a11y_orange_less:       #d94721; // ook wel 'Inclusie Less Accessible Orange'
@@ -97,7 +92,7 @@
 @gc_cardbordergrey: 		#D1DFE3;
 @border_color:              @gc_cardbordergrey;
 
-@gc_greyblue:				@gc_cardbordergrey;
+@gc_greyblue:				#52757E;
 
 @oranje:                    #FF8005;
 @blauw:                     #0095DA;
@@ -117,7 +112,7 @@
 @comment-list-odd:          #F7F7F7;
 
 @sidebar_bg:                @wit;
-@sidebarwidget:             @blauw3;
+@sidebarwidget:             @gc_blue_darkest;
 @entry_bg:                  @wit;
 
 @code:                      #1C5BB7;
@@ -130,9 +125,12 @@
 
 @oranje:                    #F7941E; // ondermeer gebruikt voor 'vol'
 
-
 @white:                     #fff;
 
+@header_color:              #210800;
+@header_color_2:            @gc_blue_dark;
+
+@gc_darkblue:               @gc_blue_dark;
 // Primary's & secondary's
 @color_primary:             @gc_a11y_green;
 
@@ -141,10 +139,10 @@
 //========================================================================================================
 // koeleuren voor de navigatiedinges
 @nav_bg:                    @wit;
-@nav_wrap_bg:               @gc_darkblue;
+@nav_wrap_bg:               @gc_blue_dark;
 @nav_a_color:               @wit;
 
-@header_bg_color:           @gc_darkerblue;
+@header_bg_color:           @gc_blue_darkest;
 
 @breadcrumb_bg_color:       @wit;
 
@@ -168,7 +166,7 @@
 
 //========================================================================================================
 // tekst-koeleuren, best belangrijk
-@txt:                       @blauw3;
+@txt:                       @gc_blue_darkest;
 @wit:                       #fff;
 
 @meta_color:                lighten(@txt, 10%);
@@ -184,7 +182,7 @@
 @button-hover:              @wit;
 
 @button-sidebar-normal:     @gc_a11y_green;
-@button-sidebar-hover:      @blauw3;
+@button-sidebar-hover:      @gc_blue_darkest;
 @button-sidebar-normal-color: @wit;
 
 
@@ -212,6 +210,8 @@
 @font_smaller:              1.6rem;
 @font_small:                1.4rem;
 
+@baserem:                   1rem;
+
 @fontsize_title_h1:         ( 6.8 * @basefontsize );
 @fontsize_title_h2:         ( 4.6 * @basefontsize );
 @fontsize_title_h3:         ( 2.4 * @basefontsize );
@@ -231,8 +231,10 @@
 
 @import "variables/_socmed.less";
 @import "variables/_rekendingen.less";
+@import "variables/_colors";
 @import "variables/_colors-optimaaldigitaal.less";
 @import "variables/_colors-inclusie.less";
+@import "variables/_textblock.less";
 
 
 //========================================================================================================

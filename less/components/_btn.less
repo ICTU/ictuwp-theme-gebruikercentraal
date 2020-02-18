@@ -45,7 +45,7 @@
     &:hover,
     &:focus {
       .gc-box-shadow();
-      border-color: @gc_cardbordergrey;
+      border-color: @border_color;
       color: transparent;
     }
   }
@@ -89,13 +89,41 @@
     padding: 1rem 5rem 1rem 1.6rem;
     line-height: 2.6rem;
     transition: padding .2s;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: auto;
+    border-radius: 0;
+    background: @gc_a11y_green;
+    font-family: @font_secondary;
+    font-weight: normal;
+    text-decoration: none;
+    position: relative;
+
+
+    &:after {
+      content: " ";
+      position: absolute;
+      display: block;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 3.2rem;
+      background: @gc_a11y_green_darker url('images/arrow-right.svg') center center no-repeat;
+      background-size: 8px  auto;
+      transition: background .2s;
+    }
 
     &:hover,
     &:focus {
       text-decoration: underline;
-      background-color: @gc_a11y_green_dark_1;
+      background-color: @gc_a11y_green_dark;
       padding-left: 1.7rem;
       color: @white;
+
+      &:after {
+        background-color: @gc_a11y_green_dark;
+      }
     }
   }
 }

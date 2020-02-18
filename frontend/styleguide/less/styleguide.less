@@ -6,6 +6,11 @@
 .container > .flex-xl-nowrap {
   display: flex;
   flex-direction: row-reverse;
+  width: 100%;
+
+  > main {
+    width: 100%;
+  }
 
   .col-md-3 {
     width: 25%;
@@ -17,6 +22,40 @@
   .col-md-9 {
     width: 75%;
     padding: 3rem;
+  }
+}
+
+.hp-wrapper {
+  .gc-padding;
+  width: 90%;
+  max-width: @contentmaxwidth;
+  margin: 0 auto;
+  background: @white;
+
+  h1 {
+    margin: 0;
+    padding: 0;
+
+    + p {
+      margin-top: 2rem;
+    }
+  }
+
+  h2 {
+    border-top: .2rem solid @border_color;
+    margin-top: 3rem;
+  }
+
+  @media @desktop {
+    padding: 5rem;
+    margin-top: 5rem;
+  }
+
+  code {
+    border: .1rem solid @border_color;
+    display: inline-block;
+    padding: .1rem 1rem;
+    border-radius: .3rem;
   }
 }
 
@@ -42,6 +81,24 @@
       .card {
         width: ~"calc(33.333% - @{gutter})";
       }
+    }
+  }
+}
+
+#components-textblock {
+  .modifier__example {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -( @gutter / 2 );
+    margin-right: -( @gutter / 2 );
+    width: 100%;
+    max-width: 1200px;
+
+    .text-block {
+      margin-top: @gutter;
+      width: ~"calc(50% - @{gutter})";
+      margin-left: ( @gutter / 2 );
+      margin-right: ( @gutter / 2 );
     }
   }
 }
@@ -112,7 +169,7 @@ h1 {
 }
 
 .page-navigation {
-  background: @gc_darkerblue;
+  background: @gc_blue_dark;
   .container {
     display: flex;
     align-items: center;
@@ -213,4 +270,12 @@ h1 {
       }
     }
   }
+}
+
+.stepchart {
+  margin-top: 0 !important;
+}
+
+.text-block + .text-block {
+  margin-top: @gutter;
 }

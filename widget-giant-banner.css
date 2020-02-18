@@ -15,6 +15,7 @@
  * Variables, mixins, extendables - things we use everywhere
  */
 /* Typografie */
+/* Default variables for textblocks */
 .banner-widget {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -39,7 +40,7 @@
   padding-right: 4rem;
 }
 .banner-widget.no-image .widget-title {
-  background: #0b732c;
+  background: #055C21;
   color: #fff;
   padding: 2rem 4rem;
 }
@@ -98,7 +99,7 @@
 }
 .banner-widget.left .banner-widget_text .widget-title,
 .banner-widget.right .banner-widget_text .widget-title {
-  background: #0b732c;
+  background: #055C21;
   color: #fff;
   padding: 2rem 4rem;
 }
@@ -115,7 +116,7 @@
   font-size: 24px;
   font-size: 2.4rem;
   font-weight: normal;
-  color: #002F3E;
+  color: #00303d;
   text-decoration: none;
   padding-left: 0.75em;
   padding-right: 2em;
@@ -144,21 +145,21 @@
   display: block;
   float: right;
   background: #f2ebe4 url('../images/arrow-wit.svg') no-repeat center center;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20height%3D%2242%22%20viewBox%3D%220%200%2028%2042%22%20width%3D%2228%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m12.014785%2016-.014785.0132201v2.5053476l2.4767983%202.9034654-2.4767983%202.9036032v2.5052099l.014785.0132201%204.9851688-5.4220332z%22%20fill%3D%22%23002F3E%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20height%3D%2242%22%20viewBox%3D%220%200%2028%2042%22%20width%3D%2228%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m12.014785%2016-.014785.0132201v2.5053476l2.4767983%202.9034654-2.4767983%202.9036032v2.5052099l.014785.0132201%204.9851688-5.4220332z%22%20fill%3D%22%2300303d%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E");
 }
 .banner-widget a.cta:hover,
 .banner-widget a.cta:focus,
 .banner-widget a.cta:active {
   text-decoration: underline;
-  border-color: #002F3E;
-  color: #002F3E;
+  border-color: #00303d;
+  color: #00303d;
   background-color: #f2ebe4;
 }
 .banner-widget a.cta:hover:after,
 .banner-widget a.cta:focus:after,
 .banner-widget a.cta:active:after {
   background-color: #e8d8c7;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20height%3D%2242%22%20viewBox%3D%220%200%2028%2042%22%20width%3D%2228%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m12.014785%2016-.014785.0132201v2.5053476l2.4767983%202.9034654-2.4767983%202.9036032v2.5052099l.014785.0132201%204.9851688-5.4220332z%22%20fill%3D%22%23002F3E%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20height%3D%2242%22%20viewBox%3D%220%200%2028%2042%22%20width%3D%2228%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m12.014785%2016-.014785.0132201v2.5053476l2.4767983%202.9034654-2.4767983%202.9036032v2.5052099l.014785.0132201%204.9851688-5.4220332z%22%20fill%3D%22%2300303d%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E");
 }
 @media only screen {
   .banner-widget a.cta {

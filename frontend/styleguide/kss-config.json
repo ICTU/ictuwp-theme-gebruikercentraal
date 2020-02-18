@@ -3,9 +3,15 @@
   "source": "styleguide/**",
   "destination": "../styleguide/",
   "builder": "styleguide/em_builder",
-  "homepage": "../styleguide.md",
+  "homepage": "styleguide/homepage.md",
   "css": [
     "../style.css",
-    "../../gebruiker-centraal/frontend/styleguide/css/styleguide.css"
+    "../../gebruiker-centraal/frontend/styleguide/css/styleguide.css",
+    "../../../../../wp-content/plugins/ictu-gc-posttypes-inclusie/css/frontend.css"
+  ],
+  "js": [
+    "../styleguide/kss-assets/lib/jquery-3.4.1.min.js",
+    "../../../../../wp-content/plugins/ictu-gc-posttypes-inclusie/js/libs/jquery.waypoints.min.js",
+    "../../../../../wp-content/plugins/ictu-gc-posttypes-inclusie/js/min/stepchart-min.js"
   ]
 }

@@ -343,7 +343,7 @@ body {
 
 	header {
 		padding:  2rem;
-		background: @gc_a11y_green_dark_1;
+		background: @gc_a11y_green_dark;
 		h1 {
 			margin: 0;
 			padding: 0;
@@ -367,7 +367,7 @@ body {
 	}
 
 	a.cta {
-		.knoppify(transparent, @gc_a11y_green_light_1, @gc_pantybrown_light, @wit, @txt, 24, 0, @txt, @gc_pantybrown_light, @gc_pantybrown, @txt );
+		.knoppify(transparent, @gc_a11y_green, @gc_pantybrown_light, @wit, @txt, 24, 0, @txt, @gc_pantybrown_light, @gc_pantybrown, @txt );
 		float: none;
 		@media only screen {
 			text-transform: uppercase;
@@ -529,7 +529,7 @@ body {
 
 .andere-bijeenkomsten {
 	background: @gc_a11y_green;
-	margin: 1em 0 2em 0;
+	margin: 1em 0 0;
 
 	.wrap {
 		padding: 1em;
@@ -558,11 +558,15 @@ body {
 		}
 
 	    a {
-			.knoppify(transparent, @gc_a11y_green_light_1, @gc_pantybrown_light, @wit, @txt, 24, 0, @txt, @gc_pantybrown_light, @gc_pantybrown, @txt );
+			.knoppify(transparent, @gc_a11y_green, @gc_pantybrown_light, @wit, @txt, 24, 0, @txt, @gc_pantybrown_light, @gc_pantybrown, @txt );
 			@media only screen {
 				text-transform: uppercase;
 			}
 	    }
+  }
+
+  + .footer-widgets {
+    margin-top: 0;
   }
 }
 
@@ -612,7 +616,7 @@ body {
 		&:hover,
 		&:active,
 		&:focus {
-			background: @gc_a11y_green_light_2;
+			background: @gc_a11y_green;
 			.ezelsoortje();
 
 			&,
@@ -653,7 +657,7 @@ body {
 @dinges2_neg:	( @dinges2 * -1 );
 
 .event-bookings {
-	background: @blauw5;
+	background: @gc_blue_darker;
 
     @media only screen and (min-width: @break_tablet ) {
 		margin-left: ( -1 * @dinges2 );
@@ -674,12 +678,12 @@ body {
 	}
 
 	.wrap {
-		background: @blauw6 !important;
+		background: @gc_greyblue !important;
 	}
 }
 
 .attendees-list {
-	background: @blauw6;
+	background: @gc_greyblue;
 	color: @wit;
 
 	.event-aanmeldingen {
