@@ -1,2 +1,44 @@
-#maincontent .has-header-image{max-width:1440px;margin:0 auto}#maincontent .has-header-image+.content article.entry{margin-top:0}#maincontent .has-header-image+.content article.entry .entry-title{font-size:40px;font-size:4rem;text-transform:none}@media only screen and (min-width:650px){#maincontent .has-header-image+.content article.entry .entry-title{font-size:44px;font-size:4.4rem;line-height:48px}}@media only screen and (min-width:960px){#maincontent .has-header-image+.content article.entry .entry-title{font-size:68px;font-size:6.8rem;line-height:76px}}
-/*# sourceMappingURL=blogberichten.css.map */
+/*
+// Gebruiker Centraal - blogberichten.less
+// ----------------------------------------------------------------------------------
+// Extra styling voor archive-pages
+// ----------------------------------------------------------------------------------
+// @package gebruiker-centraal
+// @author  Paul van Buuren
+// @license GPL-2.0+
+// @version 4.1.6
+// @desc.   Separate CSS files restored. Login form slightly retouched.
+// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+*/
+/*
+ * Abstracts
+ * Variables, mixins, extendables - things we use everywhere
+ */
+/* Typografie */
+/* Default variables for textblocks */
+#maincontent .has-header-image {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+#maincontent .has-header-image + .content article.entry {
+  margin-top: 0;
+}
+#maincontent .has-header-image + .content article.entry .entry-title {
+  font-size: 40px;
+  font-size: 4rem;
+  text-transform: none;
+}
+@media only screen and (min-width: 650px) {
+  #maincontent .has-header-image + .content article.entry .entry-title {
+    font-size: 44px;
+    font-size: 4.4rem;
+    line-height: 48px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  #maincontent .has-header-image + .content article.entry .entry-title {
+    font-size: 68px;
+    font-size: 6.8rem;
+    line-height: 76px;
+  }
+}

@@ -13,15 +13,15 @@ Deze styleguide maakt gebruikt van de CSS uit het Gebruiker Centraal thema.
 
 ### 1.1 Wat heb je nodig? ###
 
-De front-end maakt gebruik van Gulp en Node. Om de CSS te kunnen compilen heb je Node, NPM (node package manager) en Yarn (frontend package manager) nodig.
+De front-end maakt gebruik van Gulp en NodeJS. Om de CSS te kunnen compilen heb je Node, NPM (node package manager) en Yarn (frontend package manager) nodig.
 Installeer dus eerst Node, NPM en Yarn volgens de online handleidingen:
 
 
-- https://nodejs.org/en/download/
-- https://www.npmjs.com/get-npm
-- https://classic.yarnpkg.com/en/docs/install/#mac-stable
+- [Hoe NodeJS installeren?](https://nodejs.org/en/download/)
+- [Hoe NPM installeren?](https://www.npmjs.com/get-npm)
+- [Hoe Yarn installeren?](https://classic.yarnpkg.com/en/docs/install/#mac-stable)
 
-Yarn is een package manager voor frontend die het een heel stukje gemakkelijker maakt onderlinge dependency problemen op te lossen.
+Yarn is een package manager voor frontend packages die het een heel stukje gemakkelijker maakt onderlinge dependency problemen op te lossen.
 
 ### 1.2 Lokaal opzetten ###
 
@@ -62,8 +62,8 @@ Iedere site in de config heeft:
 Wanneer je `gulp` intikt in de terminal gebeuren de volgende dingen:
 
 - Browsersync start met de ingegeven proxy.
-- Thema 'gebruiker-centraal' less bestanden worden gewatched. Wanneer er je een wijziging maakt wordt de CSS opnieuw gecompiled en zie je de wijzigingen in je Browsersync. 
-- Indien ingevoerd wordt de directory van de ingegeven module of thema ook gewatched. Bij het wijzigingen in het gebruiker-centraal thema wordt eerst de css van het thema opnieuw gecompiled, vervolgends de CSS van het subthema.
+- Thema 'gebruiker-centraal' less bestanden worden gewatched. Wanneer er je een wijziging maakt wordt de CSS opnieuw gecompiled en zie je de wijzigingen in je Browsersync venster. 
+- Indien een site is ingegeven met --site=[site] wordt de directory van de ingegeven site ook gewatched. Bij het wijzigingen in het gebruiker-centraal thema wordt eerst de CSS van dat thema opnieuw gecompiled. Vervolgens wordt de CSS van de ingegeven site gecompiled.
 - Directory js/components wordt gewatched voor wijzigingen in de javascript bestanden
 - Directory frontend/styleguide wordt gewatched voor wijzigingen aan de styleguide. Wanneer er iets wordt gewijzigd in de specifieke styleguide .less wordt eerst de CSS taak en vervolgens de styleguide taak uitgevoerd.  
 
@@ -85,7 +85,8 @@ Ieder component krijgt zijn eigen less. Ga er bij alles vanuit dat het overal he
 
 Gebruik voor wrappers van elementen de prefix "l-" ofwel layout. Bijvoorbeeld l-content-wrapper.
 
-https://www.ezrabotter.com/blog/bem-block-element-modifier/
+[BEM door Ezra Botter](https://www.ezrabotter.com/blog/bem-block-element-modifier/)
+
 
 
 
@@ -93,6 +94,6 @@ https://www.ezrabotter.com/blog/bem-block-element-modifier/
 
 Met Atomic Design bouw je met al je BEM componenten samen uiteindelijk een hele pagina. Je begint met je kleinste elementen (atomen) zoals bijvoorbeeld knopjes, inputs en linkjes. Vervolgens gebruk je die in je grotere componenten (kaartjes, teasers, lijsten) die je weer gebruikt in je nog grotere componenten (contentblokken, zijbalken). Met al deze dingen samen maak je vervolgens pagina's. 
 
-https://bradfrost.com/blog/post/atomic-web-design/
+[Atomic Design door Brad Frost](https://bradfrost.com/blog/post/atomic-web-design/)
 
 </div>
