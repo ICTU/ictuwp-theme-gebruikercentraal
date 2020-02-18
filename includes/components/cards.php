@@ -180,17 +180,19 @@ if ( !function_exists( 'ictu_gctheme_card_doelgroep' ) ) :
 	    $return .= '<div class="card__content">';
 	    $return .=
 	      '<h2 class="card__title" id="' . $title_id . '">' .
-	      '<a href="' . get_permalink($post->ID) . '">' .
-	      '<span>' . _x('Ontwerpen voor', 'Home section doelgroep', 'ictu-gc-posttypes-inclusie') . ' </span>' .
-	      '<span>' . $cardtitle . '</span>' .
-	      '<span class="btn btn--arrow"></span>' .
-	      '</a></h2>';
+
+	      '<a href="' . get_permalink($post->ID) . '" class="arrow-link">' .
+	      '<span class="arrow-link__descr">' . _x('Ontwerpen voor', 'Home section doelgroep', 'ictu-gc-posttypes-inclusie') . ' </span>' .
+	      '<span class="arrow-link__text">' . $cardtitle . '</span>' .
+	      '<span class="arrow-link__icon"></span>' .
+	      '</a>'.
+        '</h2>';
 	    $return .= '<div class="tegeltje">' . $content . '<p><strong>' . $quoteobject_auteur . '</strong></p></div>';
 	    $return .= '</div>';
 	    $return .= '</section>';
 	
 	    return $return;
-	
+        
 	}
 
 endif;

@@ -1,19 +1,4 @@
 .link {
-  &--arrow {
-    text-decoration: none;
-    display: flex;
-    padding-top: .8rem;
-
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-
-      .link__icon {
-        .gc-box-shadow;
-        border-color: @gc_darkerblue;
-      }
-    }
-  }
 
   &--linklist {
     font-family: @font_primary_bold;
@@ -39,17 +24,49 @@
   }
 }
 
-.link__icon {
-  display: inline-block;
-  margin-top: -.8rem;
-  transition: border-color .2s;
+@btn_width: 3rem;
 
-  .link--arrow & {
-    height: 5rem;
-    width: 3.4rem;
-    margin-left: auto;
-    background: url('images/arrow-right-blue.svg') center center no-repeat;
-    background-size: .9rem auto;
-    border: .1rem solid transparent;
+// Arrow link, in card titles
+.arrow-link {
+  text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: .8rem;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+
+    .arrow-link__icon {
+      .gc-box-shadow;
+      border-color: @gc_blue_dark;;
+    }
   }
+
+  span {
+    display: inline-block;
+  }
+}
+
+.arrow-link__descr {
+  font-size: @font_small;
+  font-family: @font_primary_semi;
+  text-transform: none;
+  width: ~"calc(100% - @{btn_width})";
+}
+
+.arrow-link__text {
+  padding-right: 1.6rem;
+  width: ~"calc(100% - @{btn_width})";
+}
+
+.arrow-link__icon {
+  display: inline-block;
+  margin: -1rem -1rem 0 auto;
+  transition: border-color .2s;
+  height: 5rem;
+  width: 3.4rem;
+  background: url('images/arrow-right-blue.svg') center center no-repeat;
+  background-size: .9rem auto;
+  border: .1rem solid transparent;
 }

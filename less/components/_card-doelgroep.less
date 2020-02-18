@@ -38,13 +38,13 @@
 
   h2 {
     .gc-rotated-thing;
-    .font-size(40);
     font-family: @font_secondary;
     width: 100%;
     overflow: hidden;
     background: none;
     margin-top: -5rem;
-    padding: 3rem 3rem 2rem;
+    padding: 2rem 3rem 2rem;
+    text-transform: uppercase;
 
     &:before {
       background: @white;
@@ -55,25 +55,27 @@
     }
   }
 
-  > a:not(.link--arrow) {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 1rem 3.5rem 1.5rem @gutter;
-
-    .btn {
-      margin-right: 0;
-    }
-  }
-
-  span {
+  .arrow-link {
     display: block;
+    line-height: 3.4rem;
+    position: relative;
   }
 
-  .btn--arrow {
+  .arrow-link__descr {
+    line-height: 1.4rem;
+    margin-bottom: .2rem;
+  }
+
+  .arrow-link__text {
+    font-size: 4rem;
+    line-height: 4.2rem;
+  }
+
+  .arrow-link__icon {
     position: absolute;
-    right: 1.5rem;
-    top: 7.8rem;
-    height: 4.5rem;
+    right: 0;
+    top: 4rem;
+    margin: 0 -1rem 0 0;
   }
 }
 

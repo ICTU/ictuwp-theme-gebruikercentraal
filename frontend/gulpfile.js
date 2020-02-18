@@ -191,6 +191,7 @@ function watch() {
   });
 
   if (argv.site) {
+    console.log('ja hoor');
     gulp.watch('../less/**/*.less', gulp.series(baseStyles, styles));
   }
 

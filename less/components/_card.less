@@ -79,7 +79,7 @@
   overflow: hidden;
 
   .card__content {
-    padding-top: .5rem;
+    padding-top: .3rem;
     position: relative;
     z-index: 5;
 
@@ -97,5 +97,20 @@
       margin-left: -2rem;
       transform: rotate(2deg);
     }
+  }
+}
+
+.card.no-image {
+  .gc-padding;
+  align-items: flex-start;
+
+  @media @desktop {
+    padding: 3rem;
+  }
+
+  .card__title,
+  h2,
+  h3 {
+    font-family: @font_secondary;
   }
 }

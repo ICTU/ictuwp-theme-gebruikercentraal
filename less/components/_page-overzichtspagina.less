@@ -19,6 +19,12 @@
 
 	background-color: @gc_pantybrown_light;
 
+	.entry {
+		> .entry-content {
+			background: @white;
+		}
+	}
+
 	#maincontent {
 		background-color: @gc_pantybrown_light;
 		max-width: none;
@@ -27,18 +33,25 @@
 		article.entry {
 			
 			.entry-content.wrap {
+				.gc-box-shadow();
 				min-height: 0;
 				padding: 1rem;
-				.gc-box-shadow();			
 			}
-			
+
 			.wrap {
-				background-color: @wit;
+				background-color: @white;
 				padding-bottom: 2rem;
 			}
 			.inleiding {
+				padding: 2rem;
 				background-color: @color_primary;
 				color: @wit;
+				max-width: @max-width-content;
+				margin: 0 auto;
+
+				@media @desktop {
+					padding: 3rem 5rem;
+				}
 			}
 
 			

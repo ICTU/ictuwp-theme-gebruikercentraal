@@ -73,11 +73,12 @@ if ( !function_exists( 'ictu_gctheme_home_template_teasers' ) ) :
 	                $section_link = get_sub_field('home_template_teaser_link');
 	                $title_id = sanitize_title($section_title);
 	
-	                echo '<section aria-labelledby="' . $title_id . '" class="card no-image">';
-	                echo '<h2 id="' . $title_id . '">' . $section_title . '</h2>';
+	                echo '<section aria-labelledby="' . $title_id . '" class="text-block">';
+	                echo '<h2 id="' . $title_id . '" class="text-block__title">' . $section_title . '</h2>';
 	                echo $section_text;
+
 	                if ($section_link) {
-	                    echo '<p class="home_template_teaser_link"><a href="' . $section_link['url'] . '" class="cta">' . $section_link['title'] . '</a></p>';
+	                    echo '<a class="btn btn--primary" href="' . $section_link['url'] . '">' . $section_link['title'] . '</a>';
 	                }
 	                echo '</section>';
 	
