@@ -22,3 +22,5 @@ js/menu-backup.js
 fonts/webfontkit-20190417-103909/
 gebruikercentraal-wp-theme.code-workspace
 *.code-workspace
+*.lock
+node_modules/.yarn-integrity

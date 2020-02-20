@@ -3,8 +3,8 @@ Theme Name:             Gebruiker Centraal
 Description:            Wordpress-theme voor gebruikercentraal.nl
 Author:                 Paul van Buuren - Tamara de Haas
 Author URI:             https://wbvb.nl/
-Version:                4.3.1
-Version description:    Fixes voor actieteamwidget bug (sanitize_title) en authorbox (get user ID from get_queried_object).
+Version:                4.3.2
+Version description:    Spoedreparatie blogarchiefpagina.
 Link:                   https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 Template: genesis
@@ -395,7 +395,6 @@ Imports
 }
 .footer-widgets .widget-title {
   font-family: 'League Gothic', Impact, Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   font-size: 24px;
   font-size: 2.4rem;
 }
@@ -776,7 +775,6 @@ Imports
 }
 .section__title {
   padding: 2rem 0;
-  text-transform: uppercase;
   border-top: 0.2rem solid #D1DFE3;
   margin-top: 3rem;
   font-family: 'League Gothic', Impact, Helvetica, Arial, sans-serif;
@@ -1716,11 +1714,13 @@ h1 {
   font-family: 'League Gothic', Impact, Helvetica, Arial, sans-serif;
   font-weight: normal;
 }
-@media only screen {
-  h1,
-  .content h2 {
-    text-transform: uppercase;
-  }
+h1,
+.content h2 {
+  /* NO MORE! 
+		@media only screen {
+//			text-transform: uppercase;
+		}
+		*/
 }
 h3,
 .sidebar h2 {
@@ -9584,6 +9584,306 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
 /*
 ==============================================================================================================
 */
+.page-template-page_stappenplan .content .entry {
+  background-color: #fff;
+}
+.stappenplan-h2 {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+.stappenplan.flexbox {
+  margin-left: 0;
+  padding-left: 0;
+  background: #fff;
+}
+.stappenplan.flexbox *,
+.stappenplan.flexbox li {
+  list-style: none;
+}
+.stappenplan.flexbox li {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.stappenplan.flexbox h3,
+.stappenplan.flexbox h4 {
+  margin: 0;
+  padding: 0;
+}
+.stappenplan.flexbox .titelspan {
+  margin: 0;
+  padding: 0 1rem 0 0;
+  font-family: 'montserratbold', Helvetica, Arial, sans-serif;
+}
+.stappenplan.flexbox .stap-example {
+  background: #f2ebe4;
+  color: #00303d;
+  padding: 2rem;
+  -webkit-box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  position: relative;
+  font-size: 90%;
+}
+.stappenplan.flexbox .stap-example h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+.stappenplan.flexbox .stap-example p {
+  margin-bottom: 0;
+  font-size: 1.5rem;
+}
+.stappenplan.flexbox .stap-example:before {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  display: block;
+  -webkit-transform: rotate(45deg) translate(0, -15px);
+          transform: rotate(45deg) translate(0, -15px);
+  content: ' ';
+  color: #f2ebe4;
+  background: #f2ebe4;
+  width: 21px;
+  height: 21px;
+  speak: none;
+}
+.stappenplan.flexbox .stap-intro {
+  font-family: 'montserratbold', Helvetica, Arial, sans-serif;
+}
+@media only screen and (max-width: 960px) {
+  .stappenplan.flexbox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    counter-reset: stappenplan;
+    padding-bottom: 3rem;
+    position: relative;
+  }
+  .stappenplan.flexbox li {
+    background: #148839;
+    counter-increment: stappenplan;
+  }
+  .stappenplan.flexbox li:before {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: block;
+    float: left;
+    background-color: #055C21;
+    color: #fff;
+    font-size: 130%;
+    content: counter(stappenplan) '.';
+    width: 6rem;
+    text-align: center;
+    padding-top: 2.5rem;
+    padding-bottom: 1.5rem;
+    font-family: 'montserratbold', Helvetica, Arial, sans-serif;
+    background-image: url('images/steps-vertical-middle-bottom.svg');
+    background-position: center -6px;
+  }
+  .stappenplan.flexbox li .step-content {
+    width: 95%;
+    width: calc(100% - 6rem);
+    background: #fff;
+    float: left;
+    padding-left: 3rem;
+    padding-right: 1rem;
+    padding-top: 3rem;
+    margin: 0;
+  }
+  .stappenplan.flexbox li .step-content .stap-example {
+    margin-right: 1rem;
+  }
+  .stappenplan.flexbox li .step-content .titelspan {
+    margin-bottom: 2rem;
+    position: relative;
+    font-size: 125%;
+  }
+  .stappenplan.flexbox li .step-content .titelspan:before {
+    content: ' ';
+    display: block;
+    background: #e8d8c7;
+    position: absolute;
+    left: 0;
+    height: 0.5rem;
+    width: 2.5rem;
+    -webkit-transform: translateX(-4rem) translateY(1rem);
+            transform: translateX(-4rem) translateY(1rem);
+    speak: none;
+  }
+  .stappenplan.flexbox li .step-counter {
+    display: none;
+  }
+  .stappenplan.flexbox li:first-of-type:before {
+    background-image: url('images/steps-vertical-first.svg');
+    background-position: center -63px;
+  }
+  .stappenplan.flexbox li:last-of-type:after {
+    display: block;
+    background-image: url('images/steps-vertical-last.svg');
+    background-position: center bottom;
+    content: ' - ';
+    width: 6rem;
+    min-height: 6rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    speak: none;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .stappenplan.flexbox {
+    margin-left: -110px;
+    margin-right: -110px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .stappenplan.flexbox {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .stappenplan.flexbox li {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 20rem;
+            flex: 1 0 20rem;
+    -ms-flex: 1 0 20%;
+        flex: 1 0 20%;
+  }
+  .stappenplan.flexbox li .titelspan {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: #148839;
+    background-image: url('images/steps-horizontal-middle-left.svg');
+    background-position: right center;
+    background-repeat: no-repeat;
+    color: #fff;
+    min-height: 7.5rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .stappenplan.flexbox li .titelspan .step-counter {
+    max-width: 60px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 60px;
+            flex: 1 1 60px;
+  }
+  .stappenplan.flexbox li .titelspan .step-counter {
+    background-image: url('images/steps-horizontal-middle-right.svg');
+    background-color: #055C21;
+    background-position: left center;
+    background-repeat: no-repeat;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 7.5rem;
+    text-align: center;
+  }
+  .stappenplan.flexbox li .titelspan .step-title {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    padding-left: 2rem;
+    background: #148839;
+  }
+  .stappenplan.flexbox li .stap-intro,
+  .stappenplan.flexbox li .stap-example,
+  .stappenplan.flexbox li .stap-text {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .stappenplan.flexbox li .stap-intro p,
+  .stappenplan.flexbox li .stap-example p,
+  .stappenplan.flexbox li .stap-text p {
+    margin-bottom: 0;
+  }
+  .stappenplan.flexbox li .stap-intro,
+  .stappenplan.flexbox li .stap-text {
+    margin-top: 1rem;
+    padding: 0 1em;
+  }
+  .stappenplan.flexbox li .stap-intro p,
+  .stappenplan.flexbox li .stap-text p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .stappenplan.flexbox li:first-of-type {
+    border-color: green;
+  }
+  .stappenplan.flexbox li:first-of-type .titelspan .step-counter {
+    background-image: url('images/steps-horizontal-left-first.svg');
+    background-position: right center;
+  }
+  .stappenplan.flexbox li:last-of-type {
+    border-color: purple;
+  }
+  .stappenplan.flexbox li:last-of-type .titelspan {
+    background-image: url('images/steps-horizontal-right-last.svg');
+  }
+  .stappenplan.flexbox li:nth-last-child(3):first-child,
+  .stappenplan.flexbox li:nth-last-child(3):first-child ~ li {
+    /* green squids! */
+  }
+  .stappenplan.flexbox li:nth-last-child(3):first-child .step-title,
+  .stappenplan.flexbox li:nth-last-child(3):first-child ~ li .step-title {
+    font-size: 2rem;
+  }
+  .stappenplan.flexbox li:nth-last-child(4):first-child,
+  .stappenplan.flexbox li:nth-last-child(4):first-child ~ li {
+    /* green squids! */
+  }
+  .stappenplan.flexbox li:nth-last-child(4):first-child .step-title,
+  .stappenplan.flexbox li:nth-last-child(4):first-child ~ li .step-title {
+    font-size: 1.8rem;
+  }
+  .stappenplan.flexbox li:nth-last-child(5):first-child,
+  .stappenplan.flexbox li:nth-last-child(5):first-child ~ li {
+    /* green squids! */
+  }
+  .stappenplan.flexbox li:nth-last-child(5):first-child .step-title,
+  .stappenplan.flexbox li:nth-last-child(5):first-child ~ li .step-title {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .entry-content > .stappenplan.flexbox {
+    margin-top: 4rem;
+  }
+}
+@media screen and (-ms-high-contrast: active) and (min-width: 960px), screen and (-ms-high-contrast: none) and (min-width: 960px) {
+  /* IE10+ specific styles go here */
+  .step-counter {
+    font-size: 3rem;
+    padding-top: 2rem;
+  }
+  nav.nav-primary li.menu-item-has-children span:after,
+  nav.nav-primary li.menu-item-has-children span[itemprop="name"]:after {
+    top: 3px;
+  }
+}
+/*
+==============================================================================================================
+*/
 .region--intro {
   margin-left: -1.5rem;
   margin-right: -1.5rem;
@@ -10550,7 +10850,8 @@ body.single-stap {
 }
 .card--featured-image.beeld .card__image,
 .card--featured-image.brief .card__image {
-  border: 1px solid #52757e;
+  border-bottom: 1px solid #52757e;
+  padding-bottom: 2rem;
   background-size: contain;
   margin: 2rem;
   width: auto;
