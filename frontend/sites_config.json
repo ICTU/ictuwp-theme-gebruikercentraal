@@ -10,5 +10,11 @@
     "path": "../../../plugins/ictu-gc-posttypes-inclusie/",
     "dest": "../../../plugins/ictu-gc-posttypes-inclusie/css",
     "proxy": "inclusie.gebruikercentraal.co.uk/"
+  },
+  "beeldbank": {
+    "name": "Beeldbank - Plugin",
+    "path": "../../../plugins/ictu-gc-posttypes-brieven-beelden/",
+    "dest": "../../../plugins/ictu-gc-posttypes-brieven-beelden/css",
+    "proxy": "beeldbank.gebruikercentraal.co.uk/"
   }
 }

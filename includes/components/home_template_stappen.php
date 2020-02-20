@@ -114,9 +114,12 @@ if ( !function_exists( 'ictu_gctheme_home_template_stappen' ) ) :
 	
 	
 	                echo '<li class="stepchart__item">';
-	
+
+	                // SVG sprites a
 	                echo '<button class="stepchart__button btn btn--stepchart ' . $class . '" aria-selected="false" role="tab">' .
-	                  '<span class="btn__icon"></span>' .
+                        '<svg class="btn__icon icon icon--stepchart" focusable="false">' .
+                          '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="'. get_stylesheet_directory_uri()  .'/images/svg/stepchart/defs/svg/sprite.defs.svg#'. $class. '"></use> '.
+                      '</svg> '.
 	                  '<span class="btn__text">' . $steptitle . '</span>' .
 	                  '</button>';
 	

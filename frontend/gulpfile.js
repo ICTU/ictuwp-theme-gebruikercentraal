@@ -13,6 +13,8 @@ const gulp = require('gulp'),
   minify = require("gulp-minify"),
   plumber = require("gulp-plumber"),
   kss = require('kss'),
+  svgSprite = require('gulp-svg-sprite'),
+  svgmin = require('gulp-svgmin'),
   browserSync = require("browser-sync").create();
 
 
@@ -96,9 +98,9 @@ function baseJs(done) {
     .pipe(concat.footer('})(jQuery, document, window);'))
     .pipe(plumber())
     .pipe(minify({
-      ext:{
-        src:'-debug.js',
-        min:'-min.js'
+      ext: {
+        src: '-debug.js',
+        min: '-min.js'
       },
     }))
     .pipe(sourcemaps.write())
@@ -149,14 +151,13 @@ function prodAll(done) {
   }
 }
 
-
 /*
  * StyleGuide
  */
 
 const kssConfig = require('./styleguide/kss-config.json');
 
-function styleGuide(done){
+function styleGuide(done) {
   return kss(kssConfig);
 
   done();
@@ -180,6 +181,58 @@ function sgStyles(done) {
     .pipe(browserSync.stream());
 
   done();
+}
+
+/*
+ * SVG Sprites
+ * Make sprites for each directory in images/svg
+ */
+
+// Basic configuration example
+const svgSpriteConfig = {
+  log: 'info',
+  shape: {
+    dimension: {
+      maxWidth: 100,
+      maxHeight: 100
+    }
+  },
+  mode: {
+    defs: true,
+  }
+};
+
+function getFolders(dir) {
+  return fs.readdirSync(dir)
+    .filter(function (file) {
+      return fs.statSync(path.join(dir, file)).isDirectory();
+    });
+}
+
+function makeSprites(done) {
+  var folders = getFolders('../images/svg/');
+
+  if (folders) {
+    console.log(folders);
+
+    folders.map(function (folder) {
+
+      return gulp.src('../images/svg/' + folder + '/*.svg')
+        .pipe(svgmin())
+        .pipe(svgSprite(svgSpriteConfig)).on('error', function (error) {
+          gutil.log(gutil.colors.red(error));
+        })
+        .pipe(gulp.dest('../images/svg/' + folder))
+        .pipe(notify({message: folder + 'SVG Sprite generated'}));
+    });
+
+    done();
+
+  } else {
+    console.log(folders + 'not found');
+    done();
+  }
+
 }
 
 
@@ -209,4 +262,5 @@ exports.prod = prod;
 exports.baseJs = baseJs;
 exports.default = watch;
 exports.all = prodAll;
+exports.sprites = makeSprites;
 exports.styleguide = gulp.series(sgStyles, styleGuide);

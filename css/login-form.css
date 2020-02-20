@@ -52,6 +52,8 @@
  */
 /* Typografie */
 /* Default variables for textblocks */
+/* Chart */
+/* Nav */
 /*
 ---------------------------------------------------------------------------------------------------- */
 /*
@@ -553,12 +555,6 @@ h5 a:active,
 h6 a:active {
   color: #C42C76;
   text-decoration: underline;
-}
-h1 {
-  font-size: 36px;
-  font-size: 3.6rem;
-  font-family: 'League Gothic', Impact, Helvetica, Arial, sans-serif;
-  font-weight: normal;
 }
 .content h2 {
   font-size: 26px;
