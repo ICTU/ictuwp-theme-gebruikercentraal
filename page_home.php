@@ -12,7 +12,7 @@
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
-//* Template Name: GC - Homepage
+//* Template Name: GC-pagina - Homepage
 
 add_filter('genesis_attr_entry-header', 'gc_shared_add_wrap_class');
 add_filter('genesis_attr_entry-content', 'gc_shared_add_wrap_class');

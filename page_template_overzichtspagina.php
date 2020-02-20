@@ -8,16 +8,14 @@
 // * @package gebruiker-centraal
 // * @author  Paul van Buuren
 // * @license GPL-2.0+
-// * @version 4.1.3
-// * @version 4.1.9
-// * @desc.   Card-type 'card--vaardigheid' added.
+// * @version 4.2.2
+// * @desc.   Paginatemplates gecheckt en functionaliteit voor relevante links toegevoegd.
 // * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
-//* Template Name: GC - Overzichtspagina (met bv. tips, vaardigheden, methodes)
+//* Template Name: GC-pagina - Overzichtspagina (met bv. tips, vaardigheden, methodes)
 
-
-// template voor vaardighedenpagina.
+//========================================================================================================
 
 remove_action( 'genesis_loop', 'genesis_do_loop' );
 				
@@ -25,15 +23,16 @@ add_action( 'genesis_loop', 'gc_page_template_loop', 10 );
 
 add_action('wp_enqueue_scripts', 'ictu_gc_append_header_css_local' );
 
-// tips toevoegen
+// relevante content en externe links toevoegen
+// @since	  4.2.2
+add_action('wp_enqueue_scripts', 'ictu_gctheme_frontend_general_get_related_content_headercss' );
 add_action( 'genesis_loop', 'ictu_gctheme_frontend_general_get_related_content', 12 );
 
-
+//========================================================================================================
 
 genesis();
 
-
-
+//========================================================================================================
 
 /**
  * Adds extra CSS to header for background images in cards
@@ -148,6 +147,7 @@ function ictu_gc_append_header_css_local() {
     }
 
 }
+//========================================================================================================
 
 /**
  * extra content for page with template = page_template_overzichtspagina
@@ -331,4 +331,5 @@ function gc_page_template_loop() {
 
 }
 
+//========================================================================================================
 

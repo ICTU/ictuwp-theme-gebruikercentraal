@@ -8,17 +8,24 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.29.4
-// @desc.   Stappenplan-functionaliteit verplaatst naar pagina-template 'page_stappenplan'.
+// @version 4.2.2
+// @desc.   Paginatemplates gecheckt en functionaliteit voor relevante links toegevoegd.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
  */
 
 
-//* Template Name: GC - Pagina met stappenplan
+//* Template Name: GC-pagina - Pagina met stappenplan
 
 //========================================================================================================
 
 add_action( 'genesis_entry_content', 'check_stappenplan', 8 );
+
+// relevante content en externe links toevoegen
+// @since	  4.2.2
+add_action('wp_enqueue_scripts', 'ictu_gctheme_frontend_general_get_related_content_headercss' );
+add_action( 'genesis_loop', 'ictu_gctheme_frontend_general_get_related_content', 12 );
+
+//========================================================================================================
 
 /*
 	stappenplan invoegen voor de rest content
