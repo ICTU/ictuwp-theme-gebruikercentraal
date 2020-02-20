@@ -6,8 +6,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.1.6
-// @desc.   Separate CSS files restored. Login form slightly retouched.
+// @version 4.3.2
+// @desc.   Spoedreparatie blogarchiefpagina.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 */
 
@@ -15,6 +15,8 @@
  * Abstracts
  * Variables, mixins, extendables - things we use everywhere
  */
+
+
 
 @import "abstracts/_fonts.less";
 @import "abstracts/_variables.less";
@@ -50,4 +52,657 @@
 	}
 }
 
+/*!
+// Gebruiker Centraal - blogberichten.less
+// ----------------------------------------------------------------------------------
+// Extra styling voor archive-pages
+// ----------------------------------------------------------------------------------
+// @package gebruiker-centraal
+// @author  Paul van Buuren
+// @license GPL-2.0+
+// @version 3.29.1
+// @desc.   Public Service nominatie-widget op homepage.
+// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+*/
 
+
+// ----------------------------------------------------------------------------------
+// START TIJDELIJKE CODE VOOR BLOG ARCHIEF
+// Dit is tijdelijk om ervoor te zorgen dat de blogarchiefpagina's toonbaar blijven.
+// zie verder: https://trello.com/c/4NdiAzyQ/88-spoedreparatie-blogarchiefpagina
+// ----------------------------------------------------------------------------------
+
+@media only screen and (max-width:830px) {
+	.admin-bar .nav-primary.active {
+		top: 120px
+	}
+}
+
+.archive .archive-list .entry a,
+.beeldbank .archive-list .entry a,
+.page .archive-list .entry a {
+	overflow: hidden;
+	min-height: 72px
+}
+
+.archive .archive-list .entry .bloginfo,
+.beeldbank .archive-list .entry .bloginfo,
+.page .archive-list .entry .bloginfo {
+	margin-left: 40px;
+	width: calc(100% - 40px)
+}
+
+.archive .archive-list .entry .feature-image,
+.beeldbank .archive-list .entry .feature-image,
+.page .archive-list .entry .feature-image {
+	width: 40px;
+	height: 40px
+}
+
+.archive .entry+.entry,
+.beeldbank .entry+.entry,
+.page .entry+.entry {
+	border-top: 2px solid #F0F0F0
+}
+
+.archive .archive-list,
+.beeldbank .archive-list,
+.page .archive-list {
+	overflow: hidden;
+	font-size: 14px;
+	font-size: 1.4rem;
+	padding: 0;
+	margin-bottom: 4em
+}
+
+.archive .archive-list section:hover,
+.beeldbank .archive-list section:hover,
+.page .archive-list section:hover {
+	box-shadow: 2px 2px 5px #bbb
+}
+
+.archive .archive-list header,
+.beeldbank .archive-list header,
+.page .archive-list header {
+	overflow: hidden
+}
+
+.archive .archive-list .entry,
+.beeldbank .archive-list .entry,
+.page .archive-list .entry {
+	overflow: hidden;
+	width: 100%;
+	position: relative
+}
+
+.archive .archive-list .entry a,
+.beeldbank .archive-list .entry a,
+.page .archive-list .entry a {
+	text-decoration: none;
+	color: #6E6E6E;
+	display: block;
+	border: 1px solid transparent
+}
+
+.archive .archive-list .entry a:active,
+.archive .archive-list .entry a:focus,
+.archive .archive-list .entry a:hover,
+.beeldbank .archive-list .entry a:active,
+.beeldbank .archive-list .entry a:focus,
+.beeldbank .archive-list .entry a:hover,
+.page .archive-list .entry a:active,
+.page .archive-list .entry a:focus,
+.page .archive-list .entry a:hover {
+	box-shadow: 2px 2px 5px #bbb;
+	z-index: 9999;
+	border-color: #002F3E
+}
+
+.archive .archive-list .entry a:active .entry-title,
+.archive .archive-list .entry a:active .excerpt,
+.archive .archive-list .entry a:active .tijdenplaats,
+.archive .archive-list .entry a:focus .entry-title,
+.archive .archive-list .entry a:focus .excerpt,
+.archive .archive-list .entry a:focus .tijdenplaats,
+.archive .archive-list .entry a:hover .entry-title,
+.archive .archive-list .entry a:hover .excerpt,
+.archive .archive-list .entry a:hover .tijdenplaats,
+.beeldbank .archive-list .entry a:active .entry-title,
+.beeldbank .archive-list .entry a:active .excerpt,
+.beeldbank .archive-list .entry a:active .tijdenplaats,
+.beeldbank .archive-list .entry a:focus .entry-title,
+.beeldbank .archive-list .entry a:focus .excerpt,
+.beeldbank .archive-list .entry a:focus .tijdenplaats,
+.beeldbank .archive-list .entry a:hover .entry-title,
+.beeldbank .archive-list .entry a:hover .excerpt,
+.beeldbank .archive-list .entry a:hover .tijdenplaats,
+.page .archive-list .entry a:active .entry-title,
+.page .archive-list .entry a:active .excerpt,
+.page .archive-list .entry a:active .tijdenplaats,
+.page .archive-list .entry a:focus .entry-title,
+.page .archive-list .entry a:focus .excerpt,
+.page .archive-list .entry a:focus .tijdenplaats,
+.page .archive-list .entry a:hover .entry-title,
+.page .archive-list .entry a:hover .excerpt,
+.page .archive-list .entry a:hover .tijdenplaats {
+	color: #002F3E!important
+}
+
+.archive .archive-list .entry a:active .date-badge,
+.archive .archive-list .entry a:active .excerpt:after,
+.archive .archive-list .entry a:focus .date-badge,
+.archive .archive-list .entry a:focus .excerpt:after,
+.archive .archive-list .entry a:hover .date-badge,
+.archive .archive-list .entry a:hover .excerpt:after,
+.beeldbank .archive-list .entry a:active .date-badge,
+.beeldbank .archive-list .entry a:active .excerpt:after,
+.beeldbank .archive-list .entry a:focus .date-badge,
+.beeldbank .archive-list .entry a:focus .excerpt:after,
+.beeldbank .archive-list .entry a:hover .date-badge,
+.beeldbank .archive-list .entry a:hover .excerpt:after,
+.page .archive-list .entry a:active .date-badge,
+.page .archive-list .entry a:active .excerpt:after,
+.page .archive-list .entry a:focus .date-badge,
+.page .archive-list .entry a:focus .excerpt:after,
+.page .archive-list .entry a:hover .date-badge,
+.page .archive-list .entry a:hover .excerpt:after {
+	border-color: #002F3E
+}
+
+.archive .archive-list .entry a:active .excerpt:after,
+.archive .archive-list .entry a:focus .excerpt:after,
+.archive .archive-list .entry a:hover .excerpt:after,
+.beeldbank .archive-list .entry a:active .excerpt:after,
+.beeldbank .archive-list .entry a:focus .excerpt:after,
+.beeldbank .archive-list .entry a:hover .excerpt:after,
+.page .archive-list .entry a:active .excerpt:after,
+.page .archive-list .entry a:focus .excerpt:after,
+.page .archive-list .entry a:hover .excerpt:after {
+	box-shadow: 3px 3px 0 #a1a1a1;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20height%3D%2213%22%20viewBox%3D%220%200%207%2013%22%20width%3D%227%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m1.43603516%200-1.43603516%201.87664462%203.49723918%204.09969324-3.49723918%204.09988764%201.43603516%202.2206495%205.62389954-6.32053714z%22%20fill%3D%22%23148839%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E%0A")
+}
+
+.archive .archive-list .entry a:active:after,
+.archive .archive-list .entry a:focus:after,
+.archive .archive-list .entry a:hover:after,
+.beeldbank .archive-list .entry a:active:after,
+.beeldbank .archive-list .entry a:focus:after,
+.beeldbank .archive-list .entry a:hover:after,
+.page .archive-list .entry a:active:after,
+.page .archive-list .entry a:focus:after,
+.page .archive-list .entry a:hover:after {
+	position: absolute;
+	top: 0;
+	right: -70px;
+	content: ' ';
+	background: #002F3E;
+	width: 100px;
+	height: 40px;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg)
+}
+
+.archive .archive-list section:not(.enorm-huge) a:active,
+.archive .archive-list section:not(.enorm-huge) a:focus,
+.archive .archive-list section:not(.enorm-huge) a:hover,
+.beeldbank .archive-list section:not(.enorm-huge) a:active,
+.beeldbank .archive-list section:not(.enorm-huge) a:focus,
+.beeldbank .archive-list section:not(.enorm-huge) a:hover,
+.page .archive-list section:not(.enorm-huge) a:active,
+.page .archive-list section:not(.enorm-huge) a:focus,
+.page .archive-list section:not(.enorm-huge) a:hover {
+	background: #fff!important
+}
+
+.archive .archive-list .excerpt,
+.beeldbank .archive-list .excerpt,
+.page .archive-list .excerpt {
+	position: relative;
+	padding-right: 40px;
+	min-height: 8px
+}
+
+.archive .archive-list .excerpt:after,
+.beeldbank .archive-list .excerpt:after,
+.page .archive-list .excerpt:after {
+	content: ' ';
+	border: 2px solid #148839;
+	width: 24px;
+	height: 32px;
+	display: block;
+	position: absolute;
+	right: 0;
+	bottom: 1em;
+	box-shadow: 3px 3px 0 rgba(0, 0, 0, .2);
+	background-image: url('../images/cta-pijl.png');
+	background-image: url('../images/cta-pijl.svg'), none;
+	background-position: center center;
+	background-repeat: no-repeat
+}
+
+.archive .archive-list .bloginfo,
+.beeldbank .archive-list .bloginfo,
+.page .archive-list .bloginfo {
+	display: inline-block;
+	padding: 0 1em
+}
+
+.archive .archive-list .feature-image,
+.beeldbank .archive-list .feature-image,
+.page .archive-list .feature-image {
+	background-image: url('../images/featured-image-default.png');
+	background-size: cover;
+	background-position: center center;
+	position: absolute
+}
+
+.archive .archive-list section,
+.beeldbank .archive-list section,
+.page .archive-list section {
+	background: #fff
+}
+
+.archive .archive-list .entry,
+.archive .archive-list .widget-wrap,
+.archive .archive-list h2,
+.archive .archive-list header,
+.archive .archive-list p,
+.beeldbank .archive-list .entry,
+.beeldbank .archive-list .widget-wrap,
+.beeldbank .archive-list h2,
+.beeldbank .archive-list header,
+.beeldbank .archive-list p,
+.page .archive-list .entry,
+.page .archive-list .widget-wrap,
+.page .archive-list h2,
+.page .archive-list header,
+.page .archive-list p {
+	padding: 0;
+	margin: 0
+}
+
+.archive .archive-list h2,
+.beeldbank .archive-list h2,
+.page .archive-list h2 {
+	color: #002F3E
+}
+
+.archive .archive-list .entry a,
+.beeldbank .archive-list .entry a,
+.page .archive-list .entry a {
+	padding: 1em;
+	margin: 0
+}
+
+.archive .archive-list .feature-image.noimage,
+.beeldbank .archive-list .feature-image.noimage,
+.page .archive-list .feature-image.noimage {
+	background-color: #00932F;
+	background-image: url(images/blog-feature-image-default.png);
+	background-image: url(images/blog-feature-image-default.svg), repeating-linear-gradient(20deg, #148839, #148839 50px, #0b732c 25px, #0b732c 120px)
+}
+
+.archive .archive-list section:nth-child(3n+3) .feature-image.noimage,
+.beeldbank .archive-list section:nth-child(3n+3) .feature-image.noimage,
+.page .archive-list section:nth-child(3n+3) .feature-image.noimage {
+	background-color: #00932F;
+	background-image: url(images/blog-feature-image-default.png);
+	background-image: url(images/blog-feature-image-default.svg), repeating-linear-gradient(60deg, #004152, #004152 50px, #006985 25px, #006985 120px)
+}
+
+.archive .archive-list section:nth-child(4n+4) .feature-image.noimage,
+.beeldbank .archive-list section:nth-child(4n+4) .feature-image.noimage,
+.page .archive-list section:nth-child(4n+4) .feature-image.noimage {
+	background-color: #00932F;
+	background-image: url(images/blog-feature-image-default.png);
+	background-image: url(images/blog-feature-image-default.svg), repeating-linear-gradient(150deg, #4C2974, #4C2974 50px, #65369a 25px, #65369a 120px)
+}
+
+@media only screen and (min-width:650px) {
+	.archive .archive-list .entry a,
+	.beeldbank .archive-list .entry a,
+	.page .archive-list .entry a {
+		overflow: hidden;
+		min-height: 132px
+	}
+	.archive .archive-list .entry .bloginfo,
+	.beeldbank .archive-list .entry .bloginfo,
+	.page .archive-list .entry .bloginfo {
+		margin-left: 150px;
+		width: calc(100% - 150px)
+	}
+	.archive .archive-list .entry .feature-image,
+	.beeldbank .archive-list .entry .feature-image,
+	.page .archive-list .entry .feature-image {
+		width: 150px;
+		height: 100px
+	}
+	.archive .entry.enorm-huge,
+	.beeldbank .entry.enorm-huge,
+	.page .entry.enorm-huge {
+		min-height: 400px
+	}
+	.archive .entry.enorm-huge.entry a,
+	.beeldbank .entry.enorm-huge.entry a,
+	.page .entry.enorm-huge.entry a {
+		padding: 0;
+		min-height: 400px
+	}
+	.archive .entry.enorm-huge.entry a:active .bloginfo,
+	.archive .entry.enorm-huge.entry a:focus .bloginfo,
+	.archive .entry.enorm-huge.entry a:hover .bloginfo,
+	.beeldbank .entry.enorm-huge.entry a:active .bloginfo,
+	.beeldbank .entry.enorm-huge.entry a:focus .bloginfo,
+	.beeldbank .entry.enorm-huge.entry a:hover .bloginfo,
+	.page .entry.enorm-huge.entry a:active .bloginfo,
+	.page .entry.enorm-huge.entry a:focus .bloginfo,
+	.page .entry.enorm-huge.entry a:hover .bloginfo {
+		border: 1px solid #002F3E
+	}
+	.archive .entry.enorm-huge .feature-image,
+	.beeldbank .entry.enorm-huge .feature-image,
+	.page .entry.enorm-huge .feature-image {
+		display: block;
+		float: none;
+		clear: both;
+		min-height: 400px;
+		width: 100%
+	}
+	.archive .entry.enorm-huge .bloginfo,
+	.beeldbank .entry.enorm-huge .bloginfo,
+	.page .entry.enorm-huge .bloginfo {
+		background: #fff;
+		border: 1px solid transparent;
+		overflow: hidden;
+		z-index: 999;
+		position: absolute;
+		bottom: 16px;
+		left: 16px;
+		margin: 0 16px 0 0;
+		padding: 16px
+	}
+}
+
+@media only screen and (min-width:960px) {
+	.archive .archive-list .entry a,
+	.beeldbank .archive-list .entry a,
+	.page .archive-list .entry a {
+		overflow: hidden;
+		min-height: 208px
+	}
+	.archive .archive-list .entry .bloginfo,
+	.beeldbank .archive-list .entry .bloginfo,
+	.page .archive-list .entry .bloginfo {
+		margin-left: 264px;
+		width: calc(100% - 264px)
+	}
+	.archive .archive-list .entry .feature-image,
+	.beeldbank .archive-list .entry .feature-image,
+	.page .archive-list .entry .feature-image {
+		width: 264px;
+		height: 176px
+	}
+	.archive .entry.enorm-huge,
+	.beeldbank .entry.enorm-huge,
+	.page .entry.enorm-huge {
+		min-height: 550px
+	}
+	.archive .entry.enorm-huge.entry a,
+	.beeldbank .entry.enorm-huge.entry a,
+	.page .entry.enorm-huge.entry a {
+		padding: 0;
+		min-height: 550px
+	}
+	.archive .entry.enorm-huge .feature-image,
+	.beeldbank .entry.enorm-huge .feature-image,
+	.page .entry.enorm-huge .feature-image {
+		min-height: 550px
+	}
+	.archive .entry.enorm-huge .feature-image,
+	.beeldbank .entry.enorm-huge .feature-image,
+	.page .entry.enorm-huge .feature-image {
+		min-height: 550px;
+		width: 100%
+	}
+	.archive.for-brief .archive-list .entry a,
+	.beeldbank.for-brief .archive-list .entry a,
+	.page.for-brief .archive-list .entry a {
+		min-height: 120px;
+		min-height: calc(2em + 120px)
+	}
+	.archive.for-brief .archive-list .entry .feature-image,
+	.beeldbank.for-brief .archive-list .entry .feature-image,
+	.page.for-brief .archive-list .entry .feature-image {
+		height: 120px;
+		width: 120px
+	}
+	.archive.for-brief .archive-list .entry .bloginfo,
+	.beeldbank.for-brief .archive-list .entry .bloginfo,
+	.page.for-brief .archive-list .entry .bloginfo {
+		margin-left: 120px;
+		width: calc(100% - 120px)
+	}
+	.archive.for-beeld .archive-list .entry a,
+	.beeldbank.for-beeld .archive-list .entry a,
+	.page.for-beeld .archive-list .entry a {
+		min-height: 90px;
+		min-height: calc(2em + 90px)
+	}
+	.archive.for-beeld .archive-list .entry .feature-image,
+	.beeldbank.for-beeld .archive-list .entry .feature-image,
+	.page.for-beeld .archive-list .entry .feature-image {
+		height: 90px;
+		width: 90px
+	}
+	.archive.for-beeld .archive-list .entry .bloginfo,
+	.beeldbank.for-beeld .archive-list .entry .bloginfo,
+	.page.for-beeld .archive-list .entry .bloginfo {
+		margin-left: 90px;
+		width: calc(100% - 90px)
+	}
+}
+
+#maincontent .has-header-image {
+	max-width: 1440px;
+	margin: 0 auto
+}
+
+#maincontent .has-header-image+.content article.entry {
+	margin-top: 0
+}
+
+#maincontent .has-header-image+.content article.entry .entry-title {
+	font-size: 40px;
+	font-size: 4rem;
+	text-transform: none
+}
+
+@media only screen and (min-width:650px) {
+	#maincontent .has-header-image+.content article.entry .entry-title {
+		font-size: 44px;
+		font-size: 4.4rem;
+		line-height: 48px
+	}
+}
+
+@media only screen and (min-width:960px) {
+	#maincontent .has-header-image+.content article.entry .entry-title {
+		font-size: 68px;
+		font-size: 6.8rem;
+		line-height: 76px
+	}
+}
+
+.banner-widget {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	box-shadow: 4px 4px 0 rgba(0, 0, 0, .1);
+	margin-bottom: 4rem;
+	color: #fff
+}
+
+.banner-widget.no-image {
+	background: #148839;
+	padding-bottom: 4rem
+}
+
+.banner-widget.no-image p {
+	padding-left: 4rem;
+	padding-right: 4rem
+}
+
+.banner-widget.no-image .widget-title {
+	background: #0b732c;
+	color: #fff;
+	padding: 2rem 4rem
+}
+
+.banner-widget.right {
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: reverse;
+	flex-direction: row-reverse
+}
+
+.banner-widget .widget-title {
+	font-family: 'League Gothic', Impact, Helvetica, Arial, sans-serif;
+	font-size: 44px;
+	font-size: 4.4rem;
+	line-height: 48px;
+	text-transform: uppercase
+}
+
+.banner-widget p {
+	margin: 0
+}
+
+.banner-widget p+p {
+	margin-top: 2rem
+}
+
+.banner-widget.fullwidth {
+	padding: 4rem 6rem
+}
+
+.banner-widget.fullwidth .banner-widget_text {
+	padding: 2rem;
+	background: #000;
+	background: rgba(8, 8, 8, .7);
+	color: #fff
+}
+
+.banner-widget.left,
+.banner-widget.right {
+	background: #148839
+}
+
+.banner-widget.left .banner-widget_image,
+.banner-widget.right .banner-widget_image {
+	-webkit-box-flex: 1;
+	flex: 1 0 34%;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat
+}
+
+.banner-widget.left .banner-widget_text,
+.banner-widget.right .banner-widget_text {
+	-webkit-box-flex: 2;
+	flex: 2 0 66%;
+	padding-bottom: 4rem
+}
+
+.banner-widget.left .banner-widget_text p,
+.banner-widget.right .banner-widget_text p {
+	padding-left: 4rem;
+	padding-right: 4rem
+}
+
+.banner-widget.left .banner-widget_text .widget-title,
+.banner-widget.right .banner-widget_text .widget-title {
+	background: #0b732c;
+	color: #fff;
+	padding: 2rem 4rem
+}
+
+.banner-widget a.cta {
+	background-color: #fff;
+	display: table-cell;
+	overflow: hidden;
+	vertical-align: middle;
+	position: relative;
+	border: 0 solid transparent;
+	box-shadow: 3px 3px 0 rgba(0, 0, 0, .2);
+	font-family: 'League Gothic', Impact, Helvetica, Arial, sans-serif;
+	font-size: 24px;
+	font-size: 2.4rem;
+	font-weight: 400;
+	color: #002F3E;
+	text-decoration: none;
+	padding-left: .75em;
+	padding-right: 2em;
+	float: none
+}
+
+@media only screen and (max-width:650px) {
+	.banner-widget a.cta {
+		font-size: 19.2px;
+		font-size: 1.92rem
+	}
+}
+
+@media only screen and (min-width:651px) {
+	.banner-widget a.cta {
+		line-height: 2;
+		font-size: 24px;
+		font-size: 2.4rem
+	}
+}
+
+.banner-widget a.cta:after {
+	position: absolute;
+	right: 0;
+	top: 0;
+	content: ' ';
+	width: 1.25em;
+	height: 100%;
+	display: block;
+	float: right;
+	background: #f2ebe4 url(images/arrow-wit.svg) no-repeat center center;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20height%3D%2242%22%20viewBox%3D%220%200%2028%2042%22%20width%3D%2228%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m12.014785%2016-.014785.0132201v2.5053476l2.4767983%202.9034654-2.4767983%202.9036032v2.5052099l.014785.0132201%204.9851688-5.4220332z%22%20fill%3D%22%23002F3E%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E")
+}
+
+.banner-widget a.cta:active,
+.banner-widget a.cta:focus,
+.banner-widget a.cta:hover {
+	text-decoration: underline;
+	border-color: #002F3E;
+	color: #002F3E;
+	background-color: #f2ebe4
+}
+
+.banner-widget a.cta:active:after,
+.banner-widget a.cta:focus:after,
+.banner-widget a.cta:hover:after {
+	background-color: #e8d8c7;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20height%3D%2242%22%20viewBox%3D%220%200%2028%2042%22%20width%3D%2228%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m12.014785%2016-.014785.0132201v2.5053476l2.4767983%202.9034654-2.4767983%202.9036032v2.5052099l.014785.0132201%204.9851688-5.4220332z%22%20fill%3D%22%23002F3E%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E")
+}
+
+@media only screen {
+	.banner-widget a.cta {
+		text-transform: uppercase
+	}
+}
+
+.page-template-default .banner-widget,
+.page-template-page_contentpagina .banner-widget,
+.page-template-page_sitemap .banner-widget {
+	margin-top: 4rem
+}
+
+// ----------------------------------------------------------------------------------
+// EINDE TIJDELIJKE CODE VOOR BLOG ARCHIEF
+// ----------------------------------------------------------------------------------
