@@ -16,19 +16,19 @@ html {
 }
 
 /* Chrome fix http://surefirewebservices.com/development/genesis-framework/genesis-rem-chrome-font-size-bug */
-body > div { font-size: 1.6rem; }
+body > div {
+  font-size: 1.6rem;
+}
 
 body {
   background-color: @bodybgcolor;
   .basefont();
 }
 
-
 hr {
   border-bottom-style: none;
-  border-top: 1px solid rgba( 256, 256, 256, .5 );
+  border-top: 1px solid rgba(256, 256, 256, .5);
 }
-
 
 ::-moz-selection {
   background-color: #333;
@@ -44,17 +44,14 @@ hr {
   display: none;
 }
 
-
 .subscribe_groups {
   list-style: none outside none;
 }
-
 
 /* Text styles, shared with admin CSS
 --------------------------------------------- */
 
 .textstyles();
-
 
 /* Objects
 --------------------------------------------- */
@@ -67,6 +64,7 @@ video,
 .wp-caption {
   max-width: 100%;
 }
+
 img {
   height: auto;
 }
@@ -80,7 +78,6 @@ iframe {
     max-width: 100% !important;
   }
 }
-
 
 twitterwidget {
   padding: 1em;
@@ -97,8 +94,8 @@ twitterwidget {
 }
 
 .mejs-container {
-  border: 2px solid darken( @border_color, 5% ) !important;
-  background: lighten( @border_color, 10% ) !important;
+  border: 2px solid darken(@border_color, 5%) !important;
+  background: lighten(@border_color, 10%) !important;
 }
 
 .sitestructure();
@@ -133,31 +130,31 @@ Common Classes
   text-align: center;
 }
 
-
 /* # Skip Links
 ---------------------------------------------------------------------------------------------------- */
 .genesis-skip-link {
   margin: 0;
 }
+
 .genesis-skip-link li {
   height: 0;
   width: 0;
   list-style: none;
 }
+
 /* Display outline on focus */
 :focus {
   outline: #ccc solid 1px;
 }
+
 #maincontent, article, section, main, .nav-primary, #mainnav, #mainnav ul {
   &:focus {
     outline: none;
   }
 }
 
-
 /* Genesis
 --------------------------------------------- */
-
 
 .breadcrumb {
   .gc-padding();
@@ -213,7 +210,6 @@ Common Classes
   }
 }
 
-
 .archive-description {
   margin: ( @padding ) 0;
 }
@@ -230,7 +226,6 @@ Common Classes
     margin-top: 0;
   }
 }
-
 
 .author-box-title {
   color: @txt;
@@ -253,10 +248,13 @@ Common Classes
   padding: 0 0 .3em 0;
 }
 
-
-
-
 .entry-title {
+  .gc-heading-1;
+  text-transform: none;
+  font-family: @font_secondary;
+  margin: 0;
+  padding: 0;
+
   a {
     color: @txt;
     border: none;
@@ -267,6 +265,13 @@ Common Classes
   }
 }
 
+// Make sure title has right align with whatever comes next
+.entry-title,
+.entry-header {
+  + p {
+    margin-top: 1.6rem;
+  }
+}
 
 /*
 Widgets
@@ -283,7 +288,7 @@ Widgets
 .featured-content {
   .entry-title {
     border: none;
-    .fontsize( ( 1.6 * @basefontsize ) );
+    .fontsize(( 1.6 * @basefontsize ));
     margin: 0;
 
     a {
@@ -299,9 +304,6 @@ Widgets
     clear: right;
   }
 }
-
-
-
 
 /*
 Plugins
@@ -334,6 +336,7 @@ Plugins
     color: @txt;
   }
 }
+
 .em-warning {
 
   p {
@@ -352,8 +355,6 @@ Plugins
     }
   }
 }
-
-
 
 /* One All Social login
 --------------------------------------------- */
@@ -376,8 +377,6 @@ body .sidebar .widget_oa_social_login .oneall_social_login {
 
 }
 
-
-
 .entry-title {
   a {
     color: @txt;
@@ -389,10 +388,6 @@ body .sidebar .widget_oa_social_login .oneall_social_login {
   }
 }
 
-
-
-
-
 /* Entries
 --------------------------------------------- */
 
@@ -400,10 +395,10 @@ body .sidebar .widget_oa_social_login .oneall_social_login {
   //  background-color: @entry_bg;
   padding: @padding;
 }
+
 .entry + .entry {
   padding-top: @padding;
 }
-
 
 .entry-content {
   a {
@@ -425,7 +420,6 @@ body .sidebar .widget_oa_social_login .oneall_social_login {
     list-style: square;
     overflow: visible;
   }
-
 
   .attachment a,
   .gallery a {
@@ -449,7 +443,6 @@ body .sidebar .widget_oa_social_login .oneall_social_login {
     list-style-type: decimal;
   }
 
-
   ol ol,
   ul ul {
     margin-bottom: 0;
@@ -465,7 +458,6 @@ body .sidebar .widget_oa_social_login .oneall_social_login {
       margin-left: 0;
       padding-left: 0;
     }
-
 
     li {
       border-top: 1px solid @border_grijs;
@@ -497,7 +489,7 @@ body .sidebar .widget_oa_social_login .oneall_social_login {
     }
 
     li:nth-child(even) {
-      background: darken( @wit, 2% );
+      background: darken(@wit, 2%);
     }
     li:nth-child(odd) {
       background: @wit;
@@ -518,11 +510,7 @@ body .sidebar .widget_oa_social_login .oneall_social_login {
 
   //----------------------------------------------------------------------------
 
-
 }
-
-
-
 
 .entry-meta {
   color: @meta_color;
@@ -540,6 +528,7 @@ body .sidebar .widget_oa_social_login .oneall_social_login {
 .entry-header .entry-meta {
   margin-bottom: @padding;
 }
+
 .entry-header + .entry-content {
   clear: both;
 }
@@ -559,7 +548,6 @@ body .sidebar .widget_oa_social_login .oneall_social_login {
   display: block;
 }
 
-
 .comment_form_styling(); // from 40-forms.less
 
 /*
@@ -577,7 +565,6 @@ Social media buttons
 /*
 Accessibility Extras
 ---------------------------------------------------------------------------------------------------- */
-
 
 /* Hide visually but not from screen readers and keyboard users */
 .screen-reader-text,
@@ -610,7 +597,7 @@ Accessibility Extras
   z-index: 100000;
   line-height: normal;
   text-decoration: none;
-  box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
 }
 
 .wpacc-genesis-skip-link li {
@@ -619,8 +606,9 @@ Accessibility Extras
   list-style: none;
 
 }
+
 /* Display search button */
-.search-form, #search-members-form, #search-groups-form  {
+.search-form, #search-members-form, #search-groups-form {
   input[type="submit"],
   input[type="search"],
   input[type="text"] {
@@ -646,13 +634,10 @@ input[type="text"] {
   }
 }
 
-
-
 /*
 Styling voor header en logo
 ---------------------------------------------------------------------------------------------------- */
 .header-logo(); // afkomstig van header-logo.less
-
 
 /*
 Styling voor aparte paginatypes
@@ -675,16 +660,13 @@ Styling voor aparte paginatypes
       text-align: center;
       width: 40%;
       height: 300px;
-      background:  url('images/avatar/poppetje-15.png') no-repeat right top;
+      background: url('images/avatar/poppetje-15.png') no-repeat right top;
       background-image: url('images/avatar/poppetje-15.svg'), none; // niet huilen, Victor...
       background-size: contain;
       content: ' ';
     }
   }
 }
-
-
-
 
 a.blocklink {
   text-decoration: none;
@@ -739,9 +721,7 @@ a.blocklink {
       visibility: hidden;
     }
 
-
   }
-
 
   &:hover,
   &:active,
@@ -765,7 +745,7 @@ a.blocklink {
       }
 
       span {
-        visibility:visible;
+        visibility: visible;
       }
     }
   }
@@ -777,9 +757,7 @@ article + article a.blocklink {
   }
 }
 
-
 div.related {
-
 
   h2, h3 {
     margin-top: 0;
@@ -818,10 +796,8 @@ div.related {
           background: @wit url('images/arrow-wit.png') no-repeat left center;
           background-image: url('images/arrow-wit.svg'), none;
 
-
         }
       }
-
 
       &:hover,
       &:active,
@@ -836,7 +812,7 @@ div.related {
           }
 
           span {
-            visibility:visible;
+            visibility: visible;
           }
         }
 
@@ -849,11 +825,9 @@ div.related {
       border-color: @txt;
     }
 
-
   }
 
 }
-
 
 /*
 Media Queries
@@ -865,8 +839,6 @@ Media Queries
 //  only screen and (min-device-pixel-ratio: 1.5) {
 //
 //}
-
-
 
 @media only screen and (max-width: ( @break_fullwidth - 1 ) ) {
 
@@ -881,7 +853,6 @@ Media Queries
     //    width: 740px;
   }
 
-
   .sidebar-content-sidebar .content,
   .sidebar-sidebar-content .content,
   .content-sidebar-sidebar .content {
@@ -891,8 +862,6 @@ Media Queries
   .sidebar-primary {
     //    width: 300px;
   }
-
-
 
 }
 
@@ -913,8 +882,6 @@ Media Queries
     width: 100%;
   }
 
-
-
   .site-inner {
     //    padding-left: @padding;
     //    padding-right: @padding;
@@ -931,6 +898,7 @@ Media Queries
   .site-header {
     padding: 0;
   }
+
   .entry-footer .entry-meta {
     margin: 0;
     padding-top: @padding;
@@ -956,12 +924,7 @@ Media Queries
   }
 }
 
-
-
-
-
 @media only screen and (min-width: ( @break_tablet ) ) {
-
 
   .site-inner {
     .heroimage {
@@ -970,14 +933,12 @@ Media Queries
     }
   }
 
-
   div.related {
 
-    display:flex;
+    display: flex;
 
     flex-flow: row wrap;
     justify-content: flex-start;
-
 
     &, * {
       box-sizing: border-box;
@@ -996,12 +957,7 @@ Media Queries
 
   }
 
-
-
 }
-
-
-
 
 @media only screen and (min-width: @break_fullwidth ) {
 
@@ -1021,7 +977,6 @@ Media Queries
     //      min-height: 650px;
   }
 
-
   .entry {
     padding: 0 @padding 0 @bigmargin;
     .testbg(@test2);
@@ -1030,13 +985,16 @@ Media Queries
   .breadcrumb, .author-box, #respond {
     //      padding: 0 @padding 0 @bigmargin;
   }
+
   #respond,
   .entry-comments {
     margin-top: @padding;
   }
+
   #reply-title {
     padding-top: ( @padding / 2 );
   }
+
   .entry-comments {
     padding-bottom: @padding;
     ul.children {
@@ -1133,13 +1091,12 @@ Media Queries
   }
 }
 
-
 /*
 ==============================================================================================================
 */
 
 .flexbox {
-  display:flex;
+  display: flex;
   justify-content: flex-start;
 
   //	@media only screen and (max-width: @break_fullwidth ) {
@@ -1169,24 +1126,24 @@ Media Queries
 ==============================================================================================================
 */
 
-
 dl.dl-level,
 dl.dl-speaker-names,
 dl.dl-time-location {
   .cards-meta();
 }
+
 dl.dl-level,
 dl.dl-speaker-names {
   background-repeat: no-repeat;
   background-position: left center;
   background-image: url('images/icon-microphone.png');
-  .icon_pin_fill('../images/icon-microphone.svg', @gc_a11y_green );
+  .icon_pin_fill('../images/icon-microphone.svg', @gc_a11y_green);
   padding-left: 20px;
 }
 
 dl.dl-level {
   background-image: url('images/icon-level.png');
-  .icon_pin_fill('../images/icon-level.svg', @gc_a11y_green );
+  .icon_pin_fill('../images/icon-level.svg', @gc_a11y_green);
 }
 
 .cards-meta() {
@@ -1199,5 +1156,5 @@ dl.dl-level {
 CSS overwrites for plugins
 */
 
-.overwrite-block-gallery();		// overwrite for styles from plugins/block-gallery
+.overwrite-block-gallery(); // overwrite for styles from plugins/block-gallery
 

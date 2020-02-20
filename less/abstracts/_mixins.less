@@ -1,4 +1,3 @@
-
 // Gebruiker Centraal - _mixins.less
 // ----------------------------------------------------------------------------------
 // bevat mixins en kleuren en breedtes en groottes etc.
@@ -9,8 +8,6 @@
 // @version 3.29.1
 // @desc.   Public Service nominatie-widget op homepage.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
-
-
 @import "_variables.less";
 
 //========================================================================================================
@@ -51,7 +48,7 @@
   font-weight: normal;
 
   @media only screen and (max-width: @break_tablet ) {
-    .fontsize( ( @fontsize / 1.25 ) );
+    .fontsize(( @fontsize / 1.25 ));
   }
   @media only screen and (min-width: ( @break_tablet + 1 ) ) {
     line-height: 2;
@@ -90,9 +87,8 @@
 
     &:after {
       background-color: @txt;
-      .pijltje_wit('../images/arrow-wit.svg', @wit );
+      .pijltje_wit('../images/arrow-wit.svg', @wit);
     }
-
 
   }
 }
@@ -148,14 +144,14 @@
 //========================================================================================================
 
 .visuallyhidden() {
-	border: 0;
-	clip: rect(1px, 1px, 1px, 1px);
-	height: 1px;
-	width: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
 }
 
 //========================================================================================================
@@ -235,22 +231,21 @@
 //=========================================================================================================
 
 .icon_time_fill(@src, @fill-new) {
-  @data-uri:       data-uri('image/svg+xml;charset=UTF-8', "@{src}");
-  @replace-default:   escape('id="icon-pin" fill="#1bb24b"');
-  @replace-new:     escape('id="icon-pin" fill="@{fill-new}"');
-  @replacesrc1:     replace("@{data-uri}", @replace-default, @replace-new, "g");
+  @data-uri: data-uri('image/svg+xml;charset=UTF-8', "@{src}");
+  @replace-default: escape('id="icon-pin" fill="#1bb24b"');
+  @replace-new: escape('id="icon-pin" fill="@{fill-new}"');
+  @replacesrc1: replace("@{data-uri}", @replace-default, @replace-new, "g");
 
   background-image: e(@replacesrc1);
 }
 
-
 //=========================================================================================================
 
 .icon_socmed_icon(@src, @fill-new) {
-  @data-uri:          data-uri('image/svg+xml;charset=UTF-8', "@{src}");
-  @replace-default:   escape('fill="#00586f"');
-  @replace-new:       escape('fill="@{fill-new}"');
-  @replacesrc1:       replace("@{data-uri}", @replace-default, @replace-new, "g");
+  @data-uri: data-uri('image/svg+xml;charset=UTF-8', "@{src}");
+  @replace-default: escape('fill="#00586f"');
+  @replace-new: escape('fill="@{fill-new}"');
+  @replacesrc1: replace("@{data-uri}", @replace-default, @replace-new, "g");
 
   background-image: e(@replacesrc1);
 }
@@ -258,10 +253,10 @@
 //=========================================================================================================
 
 .icon_pin_fill(@src, @fill-new) {
-  @data-uri:       data-uri('image/svg+xml;charset=UTF-8', "@{src}");
-  @replace-default:   escape('fill="#1bb24b"');
-  @replace-new:     escape('fill="@{fill-new}"');
-  @replacesrc1:     replace("@{data-uri}", @replace-default, @replace-new, "g");
+  @data-uri: data-uri('image/svg+xml;charset=UTF-8', "@{src}");
+  @replace-default: escape('fill="#1bb24b"');
+  @replace-new: escape('fill="@{fill-new}"');
+  @replacesrc1: replace("@{data-uri}", @replace-default, @replace-new, "g");
 
   background-image: e(@replacesrc1);
 }
@@ -269,20 +264,20 @@
 //=========================================================================================================
 
 .icon_replace_filler(@src, @fill-old, @fill-new) {
-  @data-uri:          data-uri('image/svg+xml;charset=UTF-8', "@{src}");
-  @replace-default:   escape('fill="@{fill-old}"');
-  @replace-new:       escape('fill="@{fill-new}"');
-  @replacesrc1:       replace("@{data-uri}", @replace-default, @replace-new, "g");
+  @data-uri: data-uri('image/svg+xml;charset=UTF-8', "@{src}");
+  @replace-default: escape('fill="@{fill-old}"');
+  @replace-new: escape('fill="@{fill-new}"');
+  @replacesrc1: replace("@{data-uri}", @replace-default, @replace-new, "g");
   background-image: e(@replacesrc1);
 }
 
 //=========================================================================================================
 
 .icon_separator_fill(@src, @fill-new) {
-  @data-uri:       	data-uri('image/svg+xml;charset=UTF-8', "@{src}");
-  @replace-default:	escape('fill="#009f33"');
-  @replace-new:     	escape('fill="@{fill-new}"');
-  @replacesrc1:     	replace("@{data-uri}", @replace-default, @replace-new, "g");
+  @data-uri: data-uri('image/svg+xml;charset=UTF-8', "@{src}");
+  @replace-default: escape('fill="#009f33"');
+  @replace-new: escape('fill="@{fill-new}"');
+  @replacesrc1: replace("@{data-uri}", @replace-default, @replace-new, "g");
   background-image: e(@replacesrc1);
 }
 
@@ -290,11 +285,11 @@
 
 .iconaddbullet(@src, @fill-new) {
 
-  @data-uri:          data-uri('image/svg+xml;charset=UTF-8', "@{src}");
+  @data-uri: data-uri('image/svg+xml;charset=UTF-8', "@{src}");
 
-  @replace-default:   escape('fill="#002F3E"');
-  @replace-new:       escape('fill="@{fill-new}"');
-  @replace-src:       replace("@{data-uri}", @replace-default, @replace-new, "g");
+  @replace-default: escape('fill="#002F3E"');
+  @replace-new: escape('fill="@{fill-new}"');
+  @replace-src: replace("@{data-uri}", @replace-default, @replace-new, "g");
 
   list-style-image: e(@replace-src);
 
@@ -304,11 +299,11 @@
 
 .pijltje_wit(@src, @fill-new) {
 
-  @data-uri:          data-uri('image/svg+xml;charset=UTF-8', "@{src}");
+  @data-uri: data-uri('image/svg+xml;charset=UTF-8', "@{src}");
 
-  @replace-default:   escape('fill="#fff"');
-  @replace-new:       escape('fill="@{fill-new}"');
-  @replace-src:       replace("@{data-uri}", @replace-default, @replace-new, "g");
+  @replace-default: escape('fill="#fff"');
+  @replace-new: escape('fill="@{fill-new}"');
+  @replace-src: replace("@{data-uri}", @replace-default, @replace-new, "g");
 
   background-image: e(@replace-src);
 
@@ -339,37 +334,37 @@
   }
   .event-aanmeldingen {
     background-image: url('../images/icon-calendar.png');
-    .icon_pin_fill('../images/icon-calendar.svg', @gc_a11y_green );
+    .icon_pin_fill('../images/icon-calendar.svg', @gc_a11y_green);
     padding-left: 20px;
   }
   .event-pricing {
     background-image: url('../images/icon-price.png');
-    .icon_pin_fill('../images/icon-price.svg', @gc_a11y_green );
+    .icon_pin_fill('../images/icon-price.svg', @gc_a11y_green);
     padding-left: 16px;
   }
   .event-times {
     background-image: url('../images/icon-time.png');
-    .icon_pin_fill('../images/icon-time.svg', @gc_a11y_green );
+    .icon_pin_fill('../images/icon-time.svg', @gc_a11y_green);
     padding-left: 20px;
-    & +  .event-times {
+    & + .event-times {
       padding-left: 0;
       background: none;
     }
   }
   .event-level {
     background-image: url('../images/icon-level.png');
-    .icon_pin_fill('../images/icon-level.svg', @gc_a11y_green );
+    .icon_pin_fill('../images/icon-level.svg', @gc_a11y_green);
     padding-left: 20px;
-    & +  .event-level {
+    & + .event-level {
       padding-left: 0;
       background: none;
     }
   }
   .event-type {
     background-image: url('../images/icon-type.png');
-    .icon_pin_fill('../images/icon-type.svg', @gc_a11y_green );
+    .icon_pin_fill('../images/icon-type.svg', @gc_a11y_green);
     padding-left: 20px;
-    & +  .event-type {
+    & + .event-type {
       padding-left: 0;
       background: none;
     }
@@ -377,9 +372,9 @@
   .event-location,
   [itemprop="location"] {
     background-image: url('../images/icon-pin.png');
-    .icon_pin_fill('../images/icon-pin.svg', @gc_a11y_green );
+    .icon_pin_fill('../images/icon-pin.svg', @gc_a11y_green);
     padding-left: 15px;
-    & +  .event-location {
+    & + .event-location {
       padding-left: 0;
       background: none;
     }
@@ -517,7 +512,7 @@
         &:hover,
         &:active,
         &:focus {
-          .icon_socmed_icon('../images/icon-twitter.svg', @gc_a11y_green );
+          .icon_socmed_icon('../images/icon-twitter.svg', @gc_a11y_green);
         }
       }
       .slack {
@@ -528,7 +523,7 @@
         &:hover,
         &:active,
         &:focus {
-          .icon_socmed_icon('../images/icon-slack.svg', @gc_a11y_green );
+          .icon_socmed_icon('../images/icon-slack.svg', @gc_a11y_green);
         }
       }
       .email {
@@ -539,7 +534,7 @@
         &:hover,
         &:active,
         &:focus {
-          .icon_socmed_icon('../images/icon-mail.svg', @gc_blue_darkest );
+          .icon_socmed_icon('../images/icon-mail.svg', @gc_blue_darkest);
         }
       }
       .facebook {
@@ -550,7 +545,7 @@
         &:hover,
         &:active,
         &:focus {
-          .icon_socmed_icon('../images/icon-facebook.svg', @gc_a11y_green );
+          .icon_socmed_icon('../images/icon-facebook.svg', @gc_a11y_green);
         }
       }
       .website,
@@ -563,7 +558,7 @@
         &:hover,
         &:active,
         &:focus {
-          .icon_socmed_icon('../images/icon-personallink.svg', @gc_a11y_green );
+          .icon_socmed_icon('../images/icon-personallink.svg', @gc_a11y_green);
         }
       }
       .linkedin {
@@ -574,7 +569,7 @@
         &:hover,
         &:active,
         &:focus {
-          .icon_socmed_icon('../images/icon-linkedin.svg', @gc_a11y_green );
+          .icon_socmed_icon('../images/icon-linkedin.svg', @gc_a11y_green);
         }
       }
     }
@@ -602,7 +597,6 @@
 //=========================================================================================================
 
 .event-header-info() {
-
 
   header {
     overflow: hidden;
@@ -652,8 +646,8 @@
 
   .feature-image.noimage {
     background-color: @groen_4;
-    background-image: url( @image_png );
-    background-image: url( @image_svg ), repeating-linear-gradient(
+    background-image: url(@image_png);
+    background-image: url(@image_svg), repeating-linear-gradient(
             20deg,
             @gc_a11y_green,
             @gc_a11y_green 50px,
@@ -666,8 +660,8 @@
 
     .feature-image.noimage {
       background-color: @groen_4;
-      background-image: url( @image_png );
-      background-image: url( @image_svg ), repeating-linear-gradient(
+      background-image: url(@image_png);
+      background-image: url(@image_svg), repeating-linear-gradient(
               60deg,
               @gc_darkblue,
               @gc_darkblue 50px,
@@ -680,8 +674,8 @@
 
     .feature-image.noimage {
       background-color: @groen_4;
-      background-image: url( @image_png );
-      background-image: url( @image_svg ), repeating-linear-gradient(
+      background-image: url(@image_png);
+      background-image: url(@image_svg), repeating-linear-gradient(
               150deg,
               @paars,
               @paars 50px,
@@ -810,7 +804,6 @@
     position: relative;
     overflow: hidden;
 
-
     .social-media {
       display: inline;
       float: left;
@@ -849,7 +842,7 @@
       margin: 0;
       padding: 0;
 
-      .fontsize( @fontsize_title_h2 );
+      .fontsize(@fontsize_title_h2);
       text-transform: uppercase;
       font-family: @headerfont;
       font-weight: normal;
@@ -891,8 +884,6 @@
       color: @wit;
       text-decoration: none;
     }
-
-
 
     a[href*="mailto:"],
     a[href*="tel:"] {
@@ -937,14 +928,13 @@
     }
   }
 
-
 }
 
 //=========================================================================================================
 
 .authorbox_css_pijl_bottom( @bg_color: @lichtgrijs ) {
 
-  .authorbox_css( @bg_color );
+  .authorbox_css(@bg_color);
 
   .author-box {
 
@@ -971,7 +961,7 @@
       position: absolute;
       bottom: 0;
       left: ( 1.3 * @pijltje);
-      transform: translateY( -1 * @transform );
+      transform: translateY(-1 * @transform);
     }
   }
 }
@@ -980,8 +970,7 @@
 
 .authorbox_css_pijl_top( @bg_color: @lichtgrijs ) {
 
-  .authorbox_css( @bg_color );
-
+  .authorbox_css(@bg_color);
 
   .author-box {
 
@@ -1006,7 +995,7 @@
       position: absolute;
       top: 0;
       left: ( 1.3 * @pijltje);
-      transform: translateY( @transform );
+      transform: translateY(@transform);
     }
   }
 
@@ -1017,27 +1006,26 @@
 .calltoactionstyling() {
 
   a.cta {
-    .knoppify( transparent, @gc_a11y_green_dark, @gc_a11y_green_darker, @gc_a11y_green, @wit, 24, 0);
+    .knoppify(transparent, @gc_a11y_green_dark, @gc_a11y_green_darker, @gc_a11y_green, @wit, 24, 0);
     float: right;
     text-transform: uppercase;
   }
 
-  @call_to_action_2nd_link_achtergrond:           darken( @wit, 10% );
-  @call_to_action_2nd_link_schaduw:               darken( @call_to_action_2nd_link_achtergrond, 20% );
-  @call_to_action_2nd_link_pijltje_achtergrond:   @light_gray;
-  @call_to_action_2nd_link_color:                 @txt;
-  @call_to_action_2nd_bg:                         @gc_greyblue;
-  @call_to_action_2nd_border:                     @call_to_action_2nd_link_pijltje_achtergrond;
+  @call_to_action_2nd_link_achtergrond: darken(@wit, 10%);
+  @call_to_action_2nd_link_schaduw: darken(@call_to_action_2nd_link_achtergrond, 20%);
+  @call_to_action_2nd_link_pijltje_achtergrond: @light_gray;
+  @call_to_action_2nd_link_color: @txt;
+  @call_to_action_2nd_bg: @gc_greyblue;
+  @call_to_action_2nd_border: @call_to_action_2nd_link_pijltje_achtergrond;
 
-  @call_to_action_link_achtergrond:           	  @gc_a11y_green; //waarom -weer- kleuren definieren hier?
-  @call_to_action_link_schaduw:               	#00832A;
-  @call_to_action_link_pijltje_achtergrond:   	#0CA13B;
-  @call_to_action_link_color:                 	@wit;
+  @call_to_action_link_achtergrond: @gc_a11y_green; //waarom -weer- kleuren definieren hier?
+  @call_to_action_link_schaduw: #00832A;
+  @call_to_action_link_pijltje_achtergrond: #0CA13B;
+  @call_to_action_link_color: @wit;
 
-  @call_to_action_bg:                         	@wit;
-  @call_to_action_color:                      	@txt;
-  @call_to_action_border:                     	@gc_greyblue;
-
+  @call_to_action_bg: @wit;
+  @call_to_action_color: @txt;
+  @call_to_action_border: @gc_greyblue;
 
   .call-to-action {
     background: @call_to_action_bg;
@@ -1062,7 +1050,6 @@
       color: @call_to_action_color;
     }
 
-
     h2, h3, h4, h5, h6 {
       padding: 0;
       margin: 0;
@@ -1077,7 +1064,6 @@
       .knoppify(transparent, @call_to_action_2nd_link_schaduw, @call_to_action_2nd_link_pijltje_achtergrond, @call_to_action_2nd_link_achtergrond, @call_to_action_2nd_link_color, 24, 0, @call_to_action_2nd_link_color);
     }
   }
-
 
   @media only screen and (min-width: @break_tablet ) {
     .call-to-action.floatright {
@@ -1115,31 +1101,31 @@
 //=========================================================================================================
 
 .gc-padding() {
-	padding-left: 1.5rem;
-	padding-right: 1.5rem;
-	
-	@media @desktop {
-		padding-left: 3rem;
-		padding-right: 3rem;
-	}
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  @media @desktop {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 
 //=========================================================================================================
 
 .gc-reverse-padding() { // oy, een mix is herkenbaar aan de haakjes...
-	margin-left: -1.5rem;
-	margin-right: -1.5rem;
-	
-	@media @break_fullwidth {
-		margin-left: -3rem;
-		margin-right: -3rem;
-	}
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+
+  @media @break_fullwidth {
+    margin-left: -3rem;
+    margin-right: -3rem;
+  }
 }
 
 //=========================================================================================================
 
 .gc-box-shadow() {
-	box-shadow: 4px 4px 0 rgba(#000, 0.1);
+  box-shadow: 4px 4px 0 rgba(#000, 0.1);
 }
 
 //=========================================================================================================
@@ -1168,18 +1154,21 @@
 }
 
 .gc-heading-1() {
-  .font-size(40);
 
-  @media only screen and ( min-width: @break_tablet ) {
-    .font-size(40);
-    line-height: 48px;
+  .font-size(40);
+  line-height: 42px;
+
+  @media @desktop {
+    .font-size(54);
+    line-height: 56px;
   }
 
-  @media only screen and ( min-width: @break_fullwidth ) {
+  @media @desktop {
     .font-size(68);
-    line-height: 76px;
+    line-height: 72px;
   }
 }
+
 .gc-rotated-thing() {
   position: relative;
   width: 100%;
@@ -1217,7 +1206,6 @@
   // font-size: 7rem;
 
   // Dit maakt alles kapot, beter niet gebruiken?
-
 
   font-size: ( ( ( @input / @basefontsize ) * @basefontsize ) * @pixel ); // @input
   font-size: ( ( @input / @basefontsize ) * @baserem );

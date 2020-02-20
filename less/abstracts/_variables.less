@@ -28,8 +28,8 @@
 
 @gc_pantybrown_light:         #f2ebe4; // ook wel 'GC PantyBrown Light'
 @mobile:                    ~"only screen and (max-width: @{break_phone})";
-@tablet_only:               ~"only screen and (min-width: @{break_phone}) and (max-width: @{break_fullwidth})";
-@tablet:                    ~"only screen and (min-width: 500px)";
+@tablet_only:               ~"only screen and (max-width: calc(@{break_tablet} - 1px))";
+@tablet:                    ~"only screen and (min-width: @{break_tablet})";
 @desktop:                   ~"only screen and (min-width: @{break_fullwidth})";
 @desktop-xl:                ~"only screen and (min-width: @{break_xlarge})";
 @cm:                        ~"only screen and (min-width: 1000px)";
@@ -235,6 +235,7 @@
 @import "variables/_colors-optimaaldigitaal.less";
 @import "variables/_colors-inclusie.less";
 @import "variables/_textblock.less";
+@import "variables/_steps.less";
 
 
 //========================================================================================================

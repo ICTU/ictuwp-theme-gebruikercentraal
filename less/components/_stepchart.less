@@ -4,7 +4,11 @@
   margin-left: auto;
   margin-right: auto;
 
-  @media only screen and ( min-width: ( @break_tablet )) {
+  @media @tablet {
+    margin-top: -4rem;
+  }
+
+  @media @desktop {
     margin-top: -13rem;
   }
 }
@@ -127,7 +131,7 @@
       margin-bottom: -3rem;
       left: 50%;
       margin-left: -15px;
-	speak: none;
+      speak: none;
     }
 
     &:before {
@@ -170,13 +174,13 @@
     outline: none;
   }
 
-  @media only screen and ( max-width: ( @break_tablet )) {
+  @media @tablet_only {
     .font-size(26);
     text-align: left;
     display: flex;
-    background: @gc_a11y_green url('../images/icon-identificeer.svg') 14px center no-repeat;
+    background: @stepchart_label;
     background-size: 30px auto;
-    padding: 1rem 1rem 1rem 5.5rem;
+    padding: 1rem 1.5rem;
     align-items: center;
     transition: background-color .2s;
     width: 100%;
@@ -189,13 +193,13 @@
       height: 3.4rem;
       background: url(../images/arrow-down.svg) center center no-repeat;
       border: .1rem solid transparent;
-	speak: none;
+      speak: none;
     }
 
     &:hover,
     &:focus {
       text-decoration: underline;
-      background-color: @gc_a11y_green_dark;
+      background-color: darken(@stepchart_label, 10%);
       color: @wit;
       border: none;
       outline: none;
@@ -205,87 +209,111 @@
         border-color: @wit;
       }
     }
-
-    &.verdiep {
-      background-image: url('../images/icon-verdiep.svg');
-    }
-
-    &.ontwerp {
-      background-image: url('../images/icon-ontwerp.svg');
-    }
-
-    &.evalueer {
-      background-image: url('../images/icon-evalueer.svg');
-    }
-
-    &.deel {
-      background-image: url('../images/icon-deel.svg');
-    }
   }
 
-  @media only screen and ( min-width: ( @break_tablet )) {
+  @media @tablet {
     background: none;
     width: 140px;
     height: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0;
+    padding: 1.5rem 0 0 0;
+    position: relative;
+    z-index: 5;
+
+    &:before {
+      content: " ";
+      position: absolute;
+      width: 8rem;
+      height: 8rem;
+      background: @stepchart_icon_bg;
+      border-radius: 50%;
+      z-index: -1;
+      top: 0;
+      transition: background-color .2s;
+    }
 
     &:hover,
     &:focus {
+      text-decoration: underline;
       background: none;
-      border: none;
+      color: @white;
 
-      .btn__text {
-        color: @wit;
-        text-decoration: underline;
-        background: @gc_a11y_green_dark;
-        position: relative;
-        z-index: +5;
+      &:before {
+        background: @stepchart_icon_bg_hover;
       }
 
-      .btn__icon {
-        transform: scale(1.05);
-        background-color: lighten(@gc_orange, 10%);
+      .icon--stepchart {
+        transform: scale(1.1);
       }
     }
+  }
 
-    .btn__icon {
-      background: @gc_orange url('../images/icon-identificeer.svg') center center no-repeat;
-      background-size: 55px auto;
-      display: block;
-      width: 95px;
-      height: 95px;
-      border-radius: 50%;
-      transition: transform .2s, background-color .2s;
-    }
+  @media @desktop {
 
-    .btn__text {
-      .font-size(24);
-      background: @gc_a11y_green;
-      padding: .6rem 1.2rem;
-      line-height: 2.8rem;
-      box-shadow: 2px 2px 0 rgba(#000, 0.1);
-      margin-top: -1.3rem;
+    &:before {
+      width: 9.6rem;
+      height: 9.6rem;
+      background: @stepchart_icon_bg;
     }
   }
 }
 
-.btn__icon {
-  .verdiep & {
-    background-image: url('../images/icon-verdiep.svg');
+
+.icon--stepchart {
+  width: 3rem;
+  height: 3.5rem;
+  display: inline-block;
+  transition: transform .2s;
+
+  @media @tablet_only {
+    margin-right: 1.5rem;
+    fill: @stepchart_icon_color;
   }
 
-  .ontwerp & {
-    background-image: url('../images/icon-ontwerp.svg');
+  @media @tablet {
+    width: 6rem;
+    height: 5.5rem;
+    fill: @stepchart_icon_color_desktop;
+    position: relative;
+  }
+}
+
+
+.btn__text {
+  @media @tablet {
+    .gc-box-shadow;
+    display: inline-block;
+    color: white;
+    background: @stepchart_label;
+    margin-top: .5rem;
+    padding: .8rem 1.5rem;
+    font-size: 2.4rem;
+    line-height: 2.4rem
+  }
+}
+
+.stepchart_page(@brand_color: @color_primary) {
+  .site-inner {
+    max-width: none;
+  }
+  .content {
+    float: none;
   }
 
-  .evalueer & {
-    background-image: url('../images/icon-evalueer.svg');
+  .region--intro {
+    font-size: 2rem;
+    line-height: 3.2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
-  .deel & {
-    background-image: url('../images/icon-deel.svg');
+  .type-page.entry {
+    background: @brand_color;
+
+    @media @desktop {
+      padding-top: 10rem;
+    }
   }
 }

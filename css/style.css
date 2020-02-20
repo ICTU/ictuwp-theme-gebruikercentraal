@@ -3,8 +3,8 @@ Theme Name:             Gebruiker Centraal
 Description:            Wordpress-theme voor gebruikercentraal.nl
 Author:                 Paul van Buuren - Tamara de Haas
 Author URI:             https://wbvb.nl/
-Version:                4.3.1
-Version description:    Fixes voor actieteamwidget bug (sanitize_title) en authorbox (get user ID from get_queried_object).
+Version:                4.3.2
+Version description:    Spoedreparatie blogarchiefpagina.
 Link:                   https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 Template: genesis
@@ -57,6 +57,8 @@ License URI: http://www.opensource.org/licenses/gpl-license.php
  */
 /* Typografie */
 /* Default variables for textblocks */
+/* Chart */
+/* Nav */
 /*
 Imports
 ---------------------------------------------------------------------------------------------------- */
@@ -430,7 +432,7 @@ Imports
   text-decoration: underline;
   color: #fff;
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 650px) {
   .footer-widgets .wrap {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -781,7 +783,7 @@ Imports
   margin-top: 3rem;
   font-family: 'League Gothic', Impact, Helvetica, Arial, sans-serif;
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 650px) {
   .section__title {
     margin-top: 5rem;
   }
@@ -1704,12 +1706,6 @@ h6 a:active {
   color: #C42C76;
   text-decoration: underline;
 }
-h1 {
-  font-size: 36px;
-  font-size: 3.6rem;
-  font-family: 'League Gothic', Impact, Helvetica, Arial, sans-serif;
-  font-weight: normal;
-}
 .content h2 {
   font-size: 26px;
   font-size: 2.6rem;
@@ -2108,12 +2104,39 @@ main:focus,
 .archive .entry-title {
   padding: 0 0 0.3em 0;
 }
+.entry-title {
+  font-size: 40px;
+  font-size: 4rem;
+  line-height: 42px;
+  text-transform: none;
+  font-family: 'League Gothic', Impact, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+@media only screen and (min-width: 960px) {
+  .entry-title {
+    font-size: 54px;
+    font-size: 5.4rem;
+    line-height: 56px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .entry-title {
+    font-size: 68px;
+    font-size: 6.8rem;
+    line-height: 72px;
+  }
+}
 .entry-title a {
   color: #00303d;
   border: none;
 }
 .entry-title a:hover {
   color: #C42C76;
+}
+.entry-title + p,
+.entry-header + p {
+  margin-top: 1.6rem;
 }
 /*
 Widgets
@@ -3895,11 +3918,6 @@ a.cta:active:after {
   .page .entry-header {
     padding-left: 4em;
     padding-right: 4em;
-  }
-  .page .entry-header .entry-title {
-    padding-top: 0.5em;
-    font-size: 36px;
-    font-size: 3.6rem;
   }
   .page .entry-content {
     position: relative;
@@ -9584,10 +9602,6 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
 /*
 ==============================================================================================================
 */
-.region--intro {
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
-}
 body.single.single-stap.full-width-content .site-inner header {
   margin: 0;
   padding: 0;
@@ -9774,22 +9788,23 @@ body.single-stap {
 .page-template-page_template_overzichtspagina #maincontent .entry-header .entry-title {
   font-size: 40px;
   font-size: 4rem;
+  line-height: 42px;
   padding: 0;
   margin: 0;
   text-transform: none;
 }
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 960px) {
   .page-template-page_template_overzichtspagina #maincontent .entry-header .entry-title {
-    font-size: 40px;
-    font-size: 4rem;
-    line-height: 48px;
+    font-size: 54px;
+    font-size: 5.4rem;
+    line-height: 56px;
   }
 }
 @media only screen and (min-width: 960px) {
   .page-template-page_template_overzichtspagina #maincontent .entry-header .entry-title {
     font-size: 68px;
     font-size: 6.8rem;
-    line-height: 76px;
+    line-height: 72px;
   }
 }
 .page-template-page_template_overzichtspagina #maincontent .inleiding {
@@ -9845,7 +9860,7 @@ body.single-stap {
     position: absolute;
     right: 0;
     top: 0;
-    margin: 0;
+    margin-top: 1.8rem;
   }
 }
 #home_template_teasers {
@@ -9858,7 +9873,7 @@ body.single-stap {
     padding-right: 3rem;
   }
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 650px) {
   #home_template_teasers {
     padding-top: 4rem;
     padding-bottom: 4rem;

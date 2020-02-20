@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="../style.css"/>
 <link rel="stylesheet" href="../../gebruiker-centraal/frontend/styleguide/css/styleguide.css"/>
 <link rel="stylesheet" href="../../../../../wp-content/plugins/ictu-gc-posttypes-inclusie/css/frontend.css"/>
+<link rel="stylesheet" href="../../../../../wp-content/plugins/ictu-gc-posttypes-brieven-beelden/css/frontend-beeldbank.css"/>
 
   <link rel="stylesheet" href="kss-assets/lib/docs.css">
   <link rel="stylesheet" href="assets/css/styleguide.css">
@@ -113,6 +114,11 @@
                                       <li class="toc-entry toc-h2 nav-item">
                       <a class="menu-link nav-link" href="#components-steps-stepchart">
                         <span class="ref sr-only child">1.3.1</span> <span class="nav__name">Stepchart</span>
+                      </a>
+                    </li>
+                                      <li class="toc-entry toc-h2 nav-item">
+                      <a class="menu-link nav-link" href="#components-steps-stepnav">
+                        <span class="ref sr-only child">1.3.2</span> <span class="nav__name">Stapnavigatie</span>
                       </a>
                     </li>
                                       <li class="toc-entry toc-h2 nav-item">
@@ -1150,116 +1156,108 @@
 
                   
                                       <div class="modifier__example">
-                      <div aria-labelledby="stappen-15" class="stepchart">
-  <h2 id="stappen-15" class="visuallyhidden">Stappen</h2>
-
-  <div class="stepchart__bg"
-  ><img src="/wp-content/plugins/ictu-gc-posttypes-inclusie/images/stappenplan-bg-fullscreen.svg"
-        alt="Stepchart Background"></div>
-
+                      <div aria-labelledby="stappen-4692" class="stepchart"><h2 id="stappen-4692" class="visuallyhidden">Stappen</h2>
+  <div class="stepchart__bg"><img
+        src="http://beeldbank.gebruikercentraal.co.uk/wp-content/plugins/ictu-gc-posttypes-brieven-beelden/images/stappenplan-bg-fullscreen.svg"
+        alt=""></div>
   <ol class="stepchart__items" role="tablist">
     <li class="stepchart__item">
-      <button class="stepchart__button btn btn--stepchart identificeer" aria-selected="false" role="tab"
+      <button class="stepchart__button btn btn--stepchart doc-magnify" aria-selected="false" role="tab"
               data-ol-has-click-handler="">
-        <span class="btn__icon"></span>
-        <span class="btn__text">1. Identificeer</span>
-      </button>
-
-      <section class="stepchart__description" aria-hidden="true"
-               aria-labelledby="1-identificeer-inclusive-design-doelen-1" role="tabpanel">
+        <svg class="btn__icon icon icon--stepchart" focusable="false">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink"
+               xlink:href="/wp-content/themes/gebruiker-centraal/images/svg/stepchart/defs/svg/sprite.defs.svg#doc-magnify"></use>
+        </svg>
+        <span class="btn__text">1. bereid je voor </span></button>
+      <section class="stepchart__description" aria-hidden="true" aria-labelledby="stap-1-voorbereiding-1"
+               role="tabpanel">
         <button type="button" class="btn btn--close" data-trigger="action-popover-close" data-ol-has-click-handler="">
           Sluit
         </button>
-
-        <h3 id="1-identificeer-inclusive-design-doelen-1" class="stepchart__title">1: Identificeer Inclusive Design
-          doelen</h3>
+        <h3 id="stap-1-voorbereiding-1" class="stepchart__title">Stap 1: Voorbereiding</h3>
         <div class="description">
-          <p>Identificeer gezamenlijk op welke manier je aandacht gaat besteden aan inclusie in je project en wat je
-            wilt bereiken. Neem dit op in je projectplan.</p>
+          <div class="page" title="Page 7">
+            <div class="layoutArea">
+              <div class="column">
+                <p>In een goede, begrijpelijke brief zijn content en beeld onlosmakelijk met elkaar verbonden.</p>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <a href="https://inclusie.gebruikercentraal.nl/stap/identificeer-inclusive-design-doelen/" class="cta"
-           data-ol-has-click-handler="">Lees meer <span class="visuallyhidden">over 1: Identificeer Inclusive Design doelen</span></a>
-      </section>
+        <a href="http://beeldbank.gebruikercentraal.co.uk/stap/stap-1/" class="cta">Lees meer <span
+              class="visuallyhidden">over Stap 1: Voorbereiding</span></a></section>
     </li>
-
     <li class="stepchart__item">
-      <button class="stepchart__button btn btn--stepchart verdiep" aria-selected="false" role="tab"
-              data-ol-has-click-handler=""><span class="btn__icon"></span><span class="btn__text">2. Verdiep</span>
-      </button>
-      <section class="stepchart__description" aria-hidden="true" aria-labelledby="2-verdiep-je-in-je-gebruikers-2"
-               role="tabpanel">
+      <button class="stepchart__button btn btn--stepchart doc-design" aria-selected="false" role="tab"
+              data-ol-has-click-handler="">
+        <svg class="btn__icon icon icon--stepchart" focusable="false">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink"
+               xlink:href="/wp-content/themes/gebruiker-centraal/images/svg/stepchart/defs/svg/sprite.defs.svg#doc-design"></use>
+        </svg>
+        <span class="btn__text">2. Ontwerp</span></button>
+      <section class="stepchart__description" aria-hidden="true" aria-labelledby="stap-2-ontwerp-2" role="tabpanel">
         <button type="button" class="btn btn--close" data-trigger="action-popover-close" data-ol-has-click-handler="">
           Sluit
         </button>
-        <h3 id="2-verdiep-je-in-je-gebruikers-2" class="stepchart__title">2: Verdiep je in je gebruikers</h3>
-        <div class="description"><p>Verdiep je in de vaardigheden, beperkingen en omstandigheden van je gebruikers in
-            het licht van de te ontwikkelen toepassing. Betrek hierbij je gebruikers. Breng hun behoeften en wensen in
-            kaart.</p>
-        </div>
-        <a href="https://inclusie.gebruikercentraal.nl/stap/2-verdiep-je-in-je-gebruikers/" class="cta"
-           data-ol-has-click-handler="">Lees meer <span
-              class="visuallyhidden">over 2: Verdiep je in je gebruikers</span></a></section>
+        <h3 id="stap-2-ontwerp-2" class="stepchart__title">Stap 2: Ontwerp</h3>
+        <div class="description"></div>
+        <a href="http://beeldbank.gebruikercentraal.co.uk/stap/stap-2/" class="cta">Lees meer <span
+              class="visuallyhidden">over Stap 2: Ontwerp</span></a></section>
     </li>
-
     <li class="stepchart__item">
-      <button class="stepchart__button btn btn--stepchart ontwerp" aria-selected="false" role="tab"
-              data-ol-has-click-handler=""><span class="btn__icon"></span><span class="btn__text">3. Ontwerp</span>
-      </button>
-      <section class="stepchart__description" aria-hidden="true" aria-labelledby="3-ontwerp-inclusieve-toepassingen-3"
-               role="tabpanel">
+      <button class="stepchart__button btn btn--stepchart persons-ok" aria-selected="false" role="tab"
+              data-ol-has-click-handler="">
+        <svg class="btn__icon icon icon--stepchart" focusable="false">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink"
+               xlink:href="/wp-content/themes/gebruiker-centraal/images/svg/stepchart/defs/svg/sprite.defs.svg#persons-ok"></use>
+        </svg>
+        <span class="btn__text">3. Test</span></button>
+      <section class="stepchart__description" aria-hidden="true" aria-labelledby="stap-3-test-3" role="tabpanel">
         <button type="button" class="btn btn--close" data-trigger="action-popover-close" data-ol-has-click-handler="">
           Sluit
         </button>
-        <h3 id="3-ontwerp-inclusieve-toepassingen-3" class="stepchart__title">3: Ontwerp inclusieve toepassingen</h3>
-        <div class="description"><p>Ontwerp iteratief inclusieve toepassingen die aansluiten bij fysieke, cognitieve en
-            psychosociale kenmerken van je gebruikers en hun omstandigheden. Betrek hierbij je gebruikers. Licht je
-            inclusieve ontwerpkeuzes toe.</p>
-          <p>&nbsp;</p>
+        <h3 id="stap-3-test-3" class="stepchart__title">Stap 3: Test</h3>
+        <div class="description"><p>Test je concept beeldbrief in een zo vroeg mogelijk stadium.</p>
         </div>
-        <a href="https://inclusie.gebruikercentraal.nl/stap/3-creeer-inclusieve-oplossingen/" class="cta"
-           data-ol-has-click-handler="">Lees meer <span
-              class="visuallyhidden">over 3: Ontwerp inclusieve toepassingen</span></a></section>
+        <a href="http://beeldbank.gebruikercentraal.co.uk/stap/stap-3/" class="cta">Lees meer <span
+              class="visuallyhidden">over Stap 3: Test</span></a></section>
     </li>
-
     <li class="stepchart__item">
-      <button class="stepchart__button btn btn--stepchart evalueer" aria-selected="false" role="tab"
-              data-ol-has-click-handler=""><span class="btn__icon"></span><span class="btn__text">4. Evalueer</span>
-      </button>
-      <section class="stepchart__description" aria-hidden="true" aria-labelledby="4-evalueer-met-je-gebruikers-4"
-               role="tabpanel">
+      <button class="stepchart__button btn btn--stepchart doc-checklist" aria-selected="false" role="tab"
+              data-ol-has-click-handler="">
+        <svg class="btn__icon icon icon--stepchart" focusable="false">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink"
+               xlink:href="/wp-content/themes/gebruiker-centraal/images/svg/stepchart/defs/svg/sprite.defs.svg#doc-checklist"></use>
+        </svg>
+        <span class="btn__text">4. Pas aan</span></button>
+      <section class="stepchart__description" aria-hidden="true" aria-labelledby="stap-4-pas-aan-4" role="tabpanel">
         <button type="button" class="btn btn--close" data-trigger="action-popover-close" data-ol-has-click-handler="">
           Sluit
         </button>
-        <h3 id="4-evalueer-met-je-gebruikers-4" class="stepchart__title">4: Evalueer met je gebruikers</h3>
-        <div class="description"><p>Evalueer na elke iteratie je inclusieve ontwerpen met je gebruikers. Leg bevindingen
-            en aanbevelingen voor verbetering vast.</p>
-          <p>&nbsp;</p>
+        <h3 id="stap-4-pas-aan-4" class="stepchart__title">Stap 4: Pas aan</h3>
+        <div class="description"><p>Pas het ontwerp van brief aan naar aanleiding van het testen met échte
+            gebruikers.</p>
         </div>
-        <a href="https://inclusie.gebruikercentraal.nl/stap/4-evalueer-met-je-gebruikers/" class="cta"
-           data-ol-has-click-handler="">Lees meer <span class="visuallyhidden">over 4: Evalueer met je gebruikers</span></a>
-      </section>
+        <a href="http://beeldbank.gebruikercentraal.co.uk/stap/stap-4/" class="cta">Lees meer <span
+              class="visuallyhidden">over Stap 4: Pas aan</span></a></section>
     </li>
-
     <li class="stepchart__item">
-      <button class="stepchart__button btn btn--stepchart deel" aria-selected="false" role="tab"
-              data-ol-has-click-handler=""><span class="btn__icon"></span><span class="btn__text">5. Deel</span>
-      </button>
-      <section class="stepchart__description" aria-hidden="true"
-               aria-labelledby="5-deel-je-inclusive-design-inzichten-5" role="tabpanel">
+      <button class="stepchart__button btn btn--stepchart doc-arrow" aria-selected="false" role="tab"
+              data-ol-has-click-handler="">
+        <svg class="btn__icon icon icon--stepchart" focusable="false">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink"
+               xlink:href="/wp-content/themes/gebruiker-centraal/images/svg/stepchart/defs/svg/sprite.defs.svg#doc-arrow"></use>
+        </svg>
+        <span class="btn__text">5. deel</span></button>
+      <section class="stepchart__description" aria-hidden="true" aria-labelledby="stap-5-deel-5" role="tabpanel">
         <button type="button" class="btn btn--close" data-trigger="action-popover-close" data-ol-has-click-handler="">
           Sluit
         </button>
-        <h3 id="5-deel-je-inclusive-design-inzichten-5" class="stepchart__title">5: Deel je Inclusive Design
-          inzichten</h3>
-        <div class="description"><p>Reflecteer gedurende het iteratieve ontwerpproces (stap 2-4) op proces en resultaat
-            in het licht van de gestelde inclusie-doelen (stap 1). Deel je inzichten over ontwerpen voor inclusie om bij
-            te dragen aan een (digitale) samenleving waarin iedereen mee kan doen.</p>
-          <p>&nbsp;</p>
+        <h3 id="stap-5-deel-5" class="stepchart__title">Stap 5: Deel</h3>
+        <div class="description"><p>Is de beeldbrief getest en aangepast? Deel de brief vervolgens.</p>
         </div>
-        <a href="https://inclusie.gebruikercentraal.nl/stap/5-deel-je-inclusive-design-inzichten/" class="cta"
-           data-ol-has-click-handler="">Lees meer <span class="visuallyhidden">over 5: Deel je Inclusive Design inzichten</span></a>
-      </section>
+        <a href="http://beeldbank.gebruikercentraal.co.uk/stap/stap-5/" class="cta">Lees meer <span
+              class="visuallyhidden">over Stap 5: Deel</span></a></section>
     </li>
   </ol>
 </div>
@@ -1273,116 +1271,108 @@
                   <summary style="padding: 5px 20px; cursor: pointer;">
                                           Markup: <code>../elements/components/stepchart.twig</code>
                                       </summary>
-                  <pre><code class="language-markup" data-language="html">&lt;div aria-labelledby=&quot;stappen-15&quot; class=&quot;stepchart&quot;&gt;
-  &lt;h2 id=&quot;stappen-15&quot; class=&quot;visuallyhidden&quot;&gt;Stappen&lt;/h2&gt;
-
-  &lt;div class=&quot;stepchart__bg&quot;
-  &gt;&lt;img src=&quot;/wp-content/plugins/ictu-gc-posttypes-inclusie/images/stappenplan-bg-fullscreen.svg&quot;
-        alt=&quot;Stepchart Background&quot;&gt;&lt;/div&gt;
-
+                  <pre><code class="language-markup" data-language="html">&lt;div aria-labelledby=&quot;stappen-4692&quot; class=&quot;stepchart&quot;&gt;&lt;h2 id=&quot;stappen-4692&quot; class=&quot;visuallyhidden&quot;&gt;Stappen&lt;/h2&gt;
+  &lt;div class=&quot;stepchart__bg&quot;&gt;&lt;img
+        src=&quot;http://beeldbank.gebruikercentraal.co.uk/wp-content/plugins/ictu-gc-posttypes-brieven-beelden/images/stappenplan-bg-fullscreen.svg&quot;
+        alt=&quot;&quot;&gt;&lt;/div&gt;
   &lt;ol class=&quot;stepchart__items&quot; role=&quot;tablist&quot;&gt;
     &lt;li class=&quot;stepchart__item&quot;&gt;
-      &lt;button class=&quot;stepchart__button btn btn--stepchart identificeer&quot; aria-selected=&quot;false&quot; role=&quot;tab&quot;
+      &lt;button class=&quot;stepchart__button btn btn--stepchart doc-magnify&quot; aria-selected=&quot;false&quot; role=&quot;tab&quot;
               data-ol-has-click-handler=&quot;&quot;&gt;
-        &lt;span class=&quot;btn__icon&quot;&gt;&lt;/span&gt;
-        &lt;span class=&quot;btn__text&quot;&gt;1. Identificeer&lt;/span&gt;
-      &lt;/button&gt;
-
-      &lt;section class=&quot;stepchart__description&quot; aria-hidden=&quot;true&quot;
-               aria-labelledby=&quot;1-identificeer-inclusive-design-doelen-1&quot; role=&quot;tabpanel&quot;&gt;
+        &lt;svg class=&quot;btn__icon icon icon--stepchart&quot; focusable=&quot;false&quot;&gt;
+          &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;
+               xlink:href=&quot;{{ sprite_url }}#doc-magnify&quot;&gt;&lt;/use&gt;
+        &lt;/svg&gt;
+        &lt;span class=&quot;btn__text&quot;&gt;1. bereid je voor &lt;/span&gt;&lt;/button&gt;
+      &lt;section class=&quot;stepchart__description&quot; aria-hidden=&quot;true&quot; aria-labelledby=&quot;stap-1-voorbereiding-1&quot;
+               role=&quot;tabpanel&quot;&gt;
         &lt;button type=&quot;button&quot; class=&quot;btn btn--close&quot; data-trigger=&quot;action-popover-close&quot; data-ol-has-click-handler=&quot;&quot;&gt;
           Sluit
         &lt;/button&gt;
-
-        &lt;h3 id=&quot;1-identificeer-inclusive-design-doelen-1&quot; class=&quot;stepchart__title&quot;&gt;1: Identificeer Inclusive Design
-          doelen&lt;/h3&gt;
+        &lt;h3 id=&quot;stap-1-voorbereiding-1&quot; class=&quot;stepchart__title&quot;&gt;Stap 1: Voorbereiding&lt;/h3&gt;
         &lt;div class=&quot;description&quot;&gt;
-          &lt;p&gt;Identificeer gezamenlijk op welke manier je aandacht gaat besteden aan inclusie in je project en wat je
-            wilt bereiken. Neem dit op in je projectplan.&lt;/p&gt;
+          &lt;div class=&quot;page&quot; title=&quot;Page 7&quot;&gt;
+            &lt;div class=&quot;layoutArea&quot;&gt;
+              &lt;div class=&quot;column&quot;&gt;
+                &lt;p&gt;In een goede, begrijpelijke brief zijn content en beeld onlosmakelijk met elkaar verbonden.&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
         &lt;/div&gt;
-
-        &lt;a href=&quot;https://inclusie.gebruikercentraal.nl/stap/identificeer-inclusive-design-doelen/&quot; class=&quot;cta&quot;
-           data-ol-has-click-handler=&quot;&quot;&gt;Lees meer &lt;span class=&quot;visuallyhidden&quot;&gt;over 1: Identificeer Inclusive Design doelen&lt;/span&gt;&lt;/a&gt;
-      &lt;/section&gt;
+        &lt;a href=&quot;http://beeldbank.gebruikercentraal.co.uk/stap/stap-1/&quot; class=&quot;cta&quot;&gt;Lees meer &lt;span
+              class=&quot;visuallyhidden&quot;&gt;over Stap 1: Voorbereiding&lt;/span&gt;&lt;/a&gt;&lt;/section&gt;
     &lt;/li&gt;
-
     &lt;li class=&quot;stepchart__item&quot;&gt;
-      &lt;button class=&quot;stepchart__button btn btn--stepchart verdiep&quot; aria-selected=&quot;false&quot; role=&quot;tab&quot;
-              data-ol-has-click-handler=&quot;&quot;&gt;&lt;span class=&quot;btn__icon&quot;&gt;&lt;/span&gt;&lt;span class=&quot;btn__text&quot;&gt;2. Verdiep&lt;/span&gt;
-      &lt;/button&gt;
-      &lt;section class=&quot;stepchart__description&quot; aria-hidden=&quot;true&quot; aria-labelledby=&quot;2-verdiep-je-in-je-gebruikers-2&quot;
-               role=&quot;tabpanel&quot;&gt;
+      &lt;button class=&quot;stepchart__button btn btn--stepchart doc-design&quot; aria-selected=&quot;false&quot; role=&quot;tab&quot;
+              data-ol-has-click-handler=&quot;&quot;&gt;
+        &lt;svg class=&quot;btn__icon icon icon--stepchart&quot; focusable=&quot;false&quot;&gt;
+          &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;
+               xlink:href=&quot;{{sprite_url}}#doc-design&quot;&gt;&lt;/use&gt;
+        &lt;/svg&gt;
+        &lt;span class=&quot;btn__text&quot;&gt;2. Ontwerp&lt;/span&gt;&lt;/button&gt;
+      &lt;section class=&quot;stepchart__description&quot; aria-hidden=&quot;true&quot; aria-labelledby=&quot;stap-2-ontwerp-2&quot; role=&quot;tabpanel&quot;&gt;
         &lt;button type=&quot;button&quot; class=&quot;btn btn--close&quot; data-trigger=&quot;action-popover-close&quot; data-ol-has-click-handler=&quot;&quot;&gt;
           Sluit
         &lt;/button&gt;
-        &lt;h3 id=&quot;2-verdiep-je-in-je-gebruikers-2&quot; class=&quot;stepchart__title&quot;&gt;2: Verdiep je in je gebruikers&lt;/h3&gt;
-        &lt;div class=&quot;description&quot;&gt;&lt;p&gt;Verdiep je in de vaardigheden, beperkingen en omstandigheden van je gebruikers in
-            het licht van de te ontwikkelen toepassing. Betrek hierbij je gebruikers. Breng hun behoeften en wensen in
-            kaart.&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;a href=&quot;https://inclusie.gebruikercentraal.nl/stap/2-verdiep-je-in-je-gebruikers/&quot; class=&quot;cta&quot;
-           data-ol-has-click-handler=&quot;&quot;&gt;Lees meer &lt;span
-              class=&quot;visuallyhidden&quot;&gt;over 2: Verdiep je in je gebruikers&lt;/span&gt;&lt;/a&gt;&lt;/section&gt;
+        &lt;h3 id=&quot;stap-2-ontwerp-2&quot; class=&quot;stepchart__title&quot;&gt;Stap 2: Ontwerp&lt;/h3&gt;
+        &lt;div class=&quot;description&quot;&gt;&lt;/div&gt;
+        &lt;a href=&quot;http://beeldbank.gebruikercentraal.co.uk/stap/stap-2/&quot; class=&quot;cta&quot;&gt;Lees meer &lt;span
+              class=&quot;visuallyhidden&quot;&gt;over Stap 2: Ontwerp&lt;/span&gt;&lt;/a&gt;&lt;/section&gt;
     &lt;/li&gt;
-
     &lt;li class=&quot;stepchart__item&quot;&gt;
-      &lt;button class=&quot;stepchart__button btn btn--stepchart ontwerp&quot; aria-selected=&quot;false&quot; role=&quot;tab&quot;
-              data-ol-has-click-handler=&quot;&quot;&gt;&lt;span class=&quot;btn__icon&quot;&gt;&lt;/span&gt;&lt;span class=&quot;btn__text&quot;&gt;3. Ontwerp&lt;/span&gt;
-      &lt;/button&gt;
-      &lt;section class=&quot;stepchart__description&quot; aria-hidden=&quot;true&quot; aria-labelledby=&quot;3-ontwerp-inclusieve-toepassingen-3&quot;
-               role=&quot;tabpanel&quot;&gt;
+      &lt;button class=&quot;stepchart__button btn btn--stepchart persons-ok&quot; aria-selected=&quot;false&quot; role=&quot;tab&quot;
+              data-ol-has-click-handler=&quot;&quot;&gt;
+        &lt;svg class=&quot;btn__icon icon icon--stepchart&quot; focusable=&quot;false&quot;&gt;
+          &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;
+               xlink:href=&quot;{{sprite_url}}#persons-ok&quot;&gt;&lt;/use&gt;
+        &lt;/svg&gt;
+        &lt;span class=&quot;btn__text&quot;&gt;3. Test&lt;/span&gt;&lt;/button&gt;
+      &lt;section class=&quot;stepchart__description&quot; aria-hidden=&quot;true&quot; aria-labelledby=&quot;stap-3-test-3&quot; role=&quot;tabpanel&quot;&gt;
         &lt;button type=&quot;button&quot; class=&quot;btn btn--close&quot; data-trigger=&quot;action-popover-close&quot; data-ol-has-click-handler=&quot;&quot;&gt;
           Sluit
         &lt;/button&gt;
-        &lt;h3 id=&quot;3-ontwerp-inclusieve-toepassingen-3&quot; class=&quot;stepchart__title&quot;&gt;3: Ontwerp inclusieve toepassingen&lt;/h3&gt;
-        &lt;div class=&quot;description&quot;&gt;&lt;p&gt;Ontwerp iteratief inclusieve toepassingen die aansluiten bij fysieke, cognitieve en
-            psychosociale kenmerken van je gebruikers en hun omstandigheden. Betrek hierbij je gebruikers. Licht je
-            inclusieve ontwerpkeuzes toe.&lt;/p&gt;
-          &lt;p&gt;&amp;nbsp;&lt;/p&gt;
+        &lt;h3 id=&quot;stap-3-test-3&quot; class=&quot;stepchart__title&quot;&gt;Stap 3: Test&lt;/h3&gt;
+        &lt;div class=&quot;description&quot;&gt;&lt;p&gt;Test je concept beeldbrief in een zo vroeg mogelijk stadium.&lt;/p&gt;
         &lt;/div&gt;
-        &lt;a href=&quot;https://inclusie.gebruikercentraal.nl/stap/3-creeer-inclusieve-oplossingen/&quot; class=&quot;cta&quot;
-           data-ol-has-click-handler=&quot;&quot;&gt;Lees meer &lt;span
-              class=&quot;visuallyhidden&quot;&gt;over 3: Ontwerp inclusieve toepassingen&lt;/span&gt;&lt;/a&gt;&lt;/section&gt;
+        &lt;a href=&quot;http://beeldbank.gebruikercentraal.co.uk/stap/stap-3/&quot; class=&quot;cta&quot;&gt;Lees meer &lt;span
+              class=&quot;visuallyhidden&quot;&gt;over Stap 3: Test&lt;/span&gt;&lt;/a&gt;&lt;/section&gt;
     &lt;/li&gt;
-
     &lt;li class=&quot;stepchart__item&quot;&gt;
-      &lt;button class=&quot;stepchart__button btn btn--stepchart evalueer&quot; aria-selected=&quot;false&quot; role=&quot;tab&quot;
-              data-ol-has-click-handler=&quot;&quot;&gt;&lt;span class=&quot;btn__icon&quot;&gt;&lt;/span&gt;&lt;span class=&quot;btn__text&quot;&gt;4. Evalueer&lt;/span&gt;
-      &lt;/button&gt;
-      &lt;section class=&quot;stepchart__description&quot; aria-hidden=&quot;true&quot; aria-labelledby=&quot;4-evalueer-met-je-gebruikers-4&quot;
-               role=&quot;tabpanel&quot;&gt;
+      &lt;button class=&quot;stepchart__button btn btn--stepchart doc-checklist&quot; aria-selected=&quot;false&quot; role=&quot;tab&quot;
+              data-ol-has-click-handler=&quot;&quot;&gt;
+        &lt;svg class=&quot;btn__icon icon icon--stepchart&quot; focusable=&quot;false&quot;&gt;
+          &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;
+               xlink:href=&quot;{{sprite_url}}#doc-checklist&quot;&gt;&lt;/use&gt;
+        &lt;/svg&gt;
+        &lt;span class=&quot;btn__text&quot;&gt;4. Pas aan&lt;/span&gt;&lt;/button&gt;
+      &lt;section class=&quot;stepchart__description&quot; aria-hidden=&quot;true&quot; aria-labelledby=&quot;stap-4-pas-aan-4&quot; role=&quot;tabpanel&quot;&gt;
         &lt;button type=&quot;button&quot; class=&quot;btn btn--close&quot; data-trigger=&quot;action-popover-close&quot; data-ol-has-click-handler=&quot;&quot;&gt;
           Sluit
         &lt;/button&gt;
-        &lt;h3 id=&quot;4-evalueer-met-je-gebruikers-4&quot; class=&quot;stepchart__title&quot;&gt;4: Evalueer met je gebruikers&lt;/h3&gt;
-        &lt;div class=&quot;description&quot;&gt;&lt;p&gt;Evalueer na elke iteratie je inclusieve ontwerpen met je gebruikers. Leg bevindingen
-            en aanbevelingen voor verbetering vast.&lt;/p&gt;
-          &lt;p&gt;&amp;nbsp;&lt;/p&gt;
+        &lt;h3 id=&quot;stap-4-pas-aan-4&quot; class=&quot;stepchart__title&quot;&gt;Stap 4: Pas aan&lt;/h3&gt;
+        &lt;div class=&quot;description&quot;&gt;&lt;p&gt;Pas het ontwerp van brief aan naar aanleiding van het testen met échte
+            gebruikers.&lt;/p&gt;
         &lt;/div&gt;
-        &lt;a href=&quot;https://inclusie.gebruikercentraal.nl/stap/4-evalueer-met-je-gebruikers/&quot; class=&quot;cta&quot;
-           data-ol-has-click-handler=&quot;&quot;&gt;Lees meer &lt;span class=&quot;visuallyhidden&quot;&gt;over 4: Evalueer met je gebruikers&lt;/span&gt;&lt;/a&gt;
-      &lt;/section&gt;
+        &lt;a href=&quot;http://beeldbank.gebruikercentraal.co.uk/stap/stap-4/&quot; class=&quot;cta&quot;&gt;Lees meer &lt;span
+              class=&quot;visuallyhidden&quot;&gt;over Stap 4: Pas aan&lt;/span&gt;&lt;/a&gt;&lt;/section&gt;
     &lt;/li&gt;
-
     &lt;li class=&quot;stepchart__item&quot;&gt;
-      &lt;button class=&quot;stepchart__button btn btn--stepchart deel&quot; aria-selected=&quot;false&quot; role=&quot;tab&quot;
-              data-ol-has-click-handler=&quot;&quot;&gt;&lt;span class=&quot;btn__icon&quot;&gt;&lt;/span&gt;&lt;span class=&quot;btn__text&quot;&gt;5. Deel&lt;/span&gt;
-      &lt;/button&gt;
-      &lt;section class=&quot;stepchart__description&quot; aria-hidden=&quot;true&quot;
-               aria-labelledby=&quot;5-deel-je-inclusive-design-inzichten-5&quot; role=&quot;tabpanel&quot;&gt;
+      &lt;button class=&quot;stepchart__button btn btn--stepchart doc-arrow&quot; aria-selected=&quot;false&quot; role=&quot;tab&quot;
+              data-ol-has-click-handler=&quot;&quot;&gt;
+        &lt;svg class=&quot;btn__icon icon icon--stepchart&quot; focusable=&quot;false&quot;&gt;
+          &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;
+               xlink:href=&quot;{{sprite_url}}#doc-arrow&quot;&gt;&lt;/use&gt;
+        &lt;/svg&gt;
+        &lt;span class=&quot;btn__text&quot;&gt;5. deel&lt;/span&gt;&lt;/button&gt;
+      &lt;section class=&quot;stepchart__description&quot; aria-hidden=&quot;true&quot; aria-labelledby=&quot;stap-5-deel-5&quot; role=&quot;tabpanel&quot;&gt;
         &lt;button type=&quot;button&quot; class=&quot;btn btn--close&quot; data-trigger=&quot;action-popover-close&quot; data-ol-has-click-handler=&quot;&quot;&gt;
           Sluit
         &lt;/button&gt;
-        &lt;h3 id=&quot;5-deel-je-inclusive-design-inzichten-5&quot; class=&quot;stepchart__title&quot;&gt;5: Deel je Inclusive Design
-          inzichten&lt;/h3&gt;
-        &lt;div class=&quot;description&quot;&gt;&lt;p&gt;Reflecteer gedurende het iteratieve ontwerpproces (stap 2-4) op proces en resultaat
-            in het licht van de gestelde inclusie-doelen (stap 1). Deel je inzichten over ontwerpen voor inclusie om bij
-            te dragen aan een (digitale) samenleving waarin iedereen mee kan doen.&lt;/p&gt;
-          &lt;p&gt;&amp;nbsp;&lt;/p&gt;
+        &lt;h3 id=&quot;stap-5-deel-5&quot; class=&quot;stepchart__title&quot;&gt;Stap 5: Deel&lt;/h3&gt;
+        &lt;div class=&quot;description&quot;&gt;&lt;p&gt;Is de beeldbrief getest en aangepast? Deel de brief vervolgens.&lt;/p&gt;
         &lt;/div&gt;
-        &lt;a href=&quot;https://inclusie.gebruikercentraal.nl/stap/5-deel-je-inclusive-design-inzichten/&quot; class=&quot;cta&quot;
-           data-ol-has-click-handler=&quot;&quot;&gt;Lees meer &lt;span class=&quot;visuallyhidden&quot;&gt;over 5: Deel je Inclusive Design inzichten&lt;/span&gt;&lt;/a&gt;
-      &lt;/section&gt;
+        &lt;a href=&quot;http://beeldbank.gebruikercentraal.co.uk/stap/stap-5/&quot; class=&quot;cta&quot;&gt;Lees meer &lt;span
+              class=&quot;visuallyhidden&quot;&gt;over Stap 5: Deel&lt;/span&gt;&lt;/a&gt;&lt;/section&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;</code></pre>
@@ -1392,6 +1382,162 @@
             
                           <small class="text-muted">
                 Source: <code>styleguide/elements/components/stepchart.scss</code>, line 1
+              </small>
+                      </section>
+                                  <section id="components-steps-stepnav" class="section section--depth-3 ">
+                            <h3 class="">
+                Stapnavigatie
+                <a href="#components-steps-stepnav" class="text-muted">
+                  <small>#
+                    <span class="sr-only">
+                      1.3.2 Components.Steps.Stepnav
+                    </span>
+                  </small>
+                </a>
+              </h3>
+
+                          <div class="btn-group btn-group-sm bd-toolbar" role="group" aria-label="Example toolbar">
+                                  <a href="#components-steps-stepnav" onclick="event.preventDefault();" data-kss-fullscreen="components-steps-stepnav" class="btn btn-light btn-fullscreen">
+                    <span class="kss-toolbar__tooltip sr-only">Toggle full screen</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="toggle-full-screen" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M16,0 L16,6.5 L13.5,4 L10.5,7 L9,5.5 L12,2.5 L9.5,0 L16,0 Z M7,10.5 L4,13.5 L6.5,16 L0,16 L0,9.5 L2.5,12 L5.5,9 L7,10.5 Z"/>
+                      </g>
+                    </svg>
+                  </a>
+                  <a href="item-components-steps-stepnav.html" target="_blank" class="btn btn-light btn-newwindow">
+                    <span class="kss-toolbar__tooltip sr-only">Open in new window</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="new-tab" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M2.85714286,2 L2.85714286,13.1428571 L14,13.1428571 L14,2 L2.85714286,2 Z M13.0714286,12.2142857 L3.78571429,12.2142857 L3.78571429,2.92857143 L13.0714286,2.92857143 L13.0714286,12.2142857 Z M1.92857143,14.0714286 L1.92857143,4.32142857 L1,3.39285714 L1,15 L12.6071429,15 L11.6785714,14.0714286 L1.92857143,14.0714286 Z"/>
+                        <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.179 4.786 7.5 7.107 4.714 9.893 6.107 11.286 8.893 8.5 11.214 10.821 11.214 4.786"/>
+                      </g>
+                    </svg>
+                  </a>
+                                <a href="#components-steps-stepnav" onclick="event.preventDefault();" data-kss-guides="true" class="btn btn-light btn-guides">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle example guides</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-guides" fill="none" fill-rule="evenodd">
+                      <path id="Shape" fill="#000" fill-rule="nonzero" d="M6,3 L8,3 L8,4 L6,4 L6,3 Z M9,3 L11,3 L11,4 L9,4 L9,3 Z M14,3 L14,7 L11,7 L11,6 L13,6 L13,4 L12,4 L12,3 L14,3 Z M5,6 L7,6 L7,7 L5,7 L5,6 Z M8,6 L10,6 L10,7 L8,7 L8,6 Z M3,4 L3,6 L4,6 L4,7 L2,7 L2,3 L5,3 L5,4 L3,4 Z M6,9 L8,9 L8,10 L6,10 L6,9 Z M9,9 L11,9 L11,10 L9,10 L9,9 Z M14,9 L14,13 L11,13 L11,12 L13,12 L13,10 L12,10 L12,9 L14,9 Z M5,12 L7,12 L7,13 L5,13 L5,12 Z M8,12 L10,12 L10,13 L8,13 L8,12 Z M3,10 L3,12 L4,12 L4,13 L2,13 L2,9 L5,9 L5,10 L3,10 Z M15,1 L1,1 L1,15 L15,15 L15,1 Z M16,0 L16,16 L0,16 L0,0 L16,0 Z"/>
+                    </g>
+                  </svg>
+                </a>
+                <a href="#components-steps-stepnav" onclick="event.preventDefault();" data-kss-markup="true" class="btn btn-light btn-markup">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle HTML markup</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-markup" fill="none" fill-rule="evenodd">
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="10.526 11.711 11.789 12.974 16 8.763 11.789 4.553 10.526 5.816 13.474 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.474 5.816 4.211 4.553 0 8.763 4.211 12.974 5.474 11.711 2.526 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="8.807 4.007 9.721 4.256 7.194 13.52 6.28 13.27 8.807 4.007"/>
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            
+
+                          <div class="description">
+                <p>Navigatie tussen de stappen voor pagina's met een stappenplan. Heeft iets ruimte aan de onderkant zodat het intro eroverheen kan vallen.</p>
+
+              </div>
+            
+            
+
+                          <div class="bd-example">
+
+                  
+                                      <div class="modifier__example">
+                      <div aria-labelledby="stappen-4688" class="stepnav"><h2 id="stappen-4688" class="visuallyhidden">Stappen</h2>
+  <ol class="stepnav__items l-item-count-5">
+    <li id="step_1" class="stepnav__step"><a href="http://beeldbank.gebruikercentraal.co.uk/stap/stap-1/"
+                                             class="stepnav__link " title="bereid je voor ">
+        <svg class="icon icon--stepnav" focusable="false">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink"
+               xlink:href="/wp-content/themes/gebruiker-centraal/images/svg/stepchart/defs/svg/sprite.defs.svg#doc-magnify"></use>
+        </svg>
+        <span class="stepnav__linktext">bereid je voor </span></a></li>
+    <li id="step_2" class="stepnav__step"><a href="http://beeldbank.gebruikercentraal.co.uk/stap/stap-2/"
+                                             class="stepnav__link " title="Ontwerp">
+        <svg class="icon icon--stepnav" focusable="false">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink"
+               xlink:href="/wp-content/themes/gebruiker-centraal/images/svg/stepchart/defs/svg/sprite.defs.svg#doc-design"></use>
+        </svg>
+        <span class="stepnav__linktext">Ontwerp</span></a></li>
+    <li id="step_3" class="stepnav__step"><a href="http://beeldbank.gebruikercentraal.co.uk/stap/stap-3/"
+                                             class="stepnav__link is-active" title="Test">
+        <svg class="icon icon--stepnav" focusable="false">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink"
+               xlink:href="/wp-content/themes/gebruiker-centraal/images/svg/stepchart/defs/svg/sprite.defs.svg#persons-ok"></use>
+        </svg>
+        <span class="stepnav__linktext">Test</span></a></li>
+    <li id="step_4" class="stepnav__step"><a href="http://beeldbank.gebruikercentraal.co.uk/stap/stap-4/"
+                                             class="stepnav__link " title="Pas aan">
+        <svg class="icon icon--stepnav" focusable="false">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink"
+               xlink:href="/wp-content/themes/gebruiker-centraal/images/svg/stepchart/defs/svg/sprite.defs.svg#doc-checklist"></use>
+        </svg>
+        <span class="stepnav__linktext">Pas aan</span></a></li>
+    <li id="step_5" class="stepnav__step"><a href="http://beeldbank.gebruikercentraal.co.uk/stap/stap-5/"
+                                             class="stepnav__link " title="deel">
+        <svg class="icon icon--stepnav" focusable="false">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink"
+               xlink:href="/wp-content/themes/gebruiker-centraal/images/svg/stepchart/defs/svg/sprite.defs.svg#doc-arrow"></use>
+        </svg>
+        <span class="stepnav__linktext">deel</span></a></li>
+  </ol>>
+                      <div class="modifier__example-footer"></div>
+                    </div>
+                  
+                  
+              </div>
+
+                              <details class="highlight">
+                  <summary style="padding: 5px 20px; cursor: pointer;">
+                                          Markup: <code>../elements/components/stepnav.twig</code>
+                                      </summary>
+                  <pre><code class="language-markup" data-language="html">&lt;div aria-labelledby=&quot;stappen-4688&quot; class=&quot;stepnav&quot;&gt;&lt;h2 id=&quot;stappen-4688&quot; class=&quot;visuallyhidden&quot;&gt;Stappen&lt;/h2&gt;
+  &lt;ol class=&quot;stepnav__items l-item-count-5&quot;&gt;
+    &lt;li id=&quot;step_1&quot; class=&quot;stepnav__step&quot;&gt;&lt;a href=&quot;http://beeldbank.gebruikercentraal.co.uk/stap/stap-1/&quot;
+                                             class=&quot;stepnav__link &quot; title=&quot;bereid je voor &quot;&gt;
+        &lt;svg class=&quot;icon icon--stepnav&quot; focusable=&quot;false&quot;&gt;
+          &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;
+               xlink:href=&quot;{{sprite_url}}#doc-magnify&quot;&gt;&lt;/use&gt;
+        &lt;/svg&gt;
+        &lt;span class=&quot;stepnav__linktext&quot;&gt;bereid je voor &lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li id=&quot;step_2&quot; class=&quot;stepnav__step&quot;&gt;&lt;a href=&quot;http://beeldbank.gebruikercentraal.co.uk/stap/stap-2/&quot;
+                                             class=&quot;stepnav__link &quot; title=&quot;Ontwerp&quot;&gt;
+        &lt;svg class=&quot;icon icon--stepnav&quot; focusable=&quot;false&quot;&gt;
+          &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;
+               xlink:href=&quot;{{sprite_url}}#doc-design&quot;&gt;&lt;/use&gt;
+        &lt;/svg&gt;
+        &lt;span class=&quot;stepnav__linktext&quot;&gt;Ontwerp&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li id=&quot;step_3&quot; class=&quot;stepnav__step&quot;&gt;&lt;a href=&quot;http://beeldbank.gebruikercentraal.co.uk/stap/stap-3/&quot;
+                                             class=&quot;stepnav__link is-active&quot; title=&quot;Test&quot;&gt;
+        &lt;svg class=&quot;icon icon--stepnav&quot; focusable=&quot;false&quot;&gt;
+          &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;
+               xlink:href=&quot;{{sprite_url}}#persons-ok&quot;&gt;&lt;/use&gt;
+        &lt;/svg&gt;
+        &lt;span class=&quot;stepnav__linktext&quot;&gt;Test&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li id=&quot;step_4&quot; class=&quot;stepnav__step&quot;&gt;&lt;a href=&quot;http://beeldbank.gebruikercentraal.co.uk/stap/stap-4/&quot;
+                                             class=&quot;stepnav__link &quot; title=&quot;Pas aan&quot;&gt;
+        &lt;svg class=&quot;icon icon--stepnav&quot; focusable=&quot;false&quot;&gt;
+          &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;
+               xlink:href=&quot;{{sprite_url}}#doc-checklist&quot;&gt;&lt;/use&gt;
+        &lt;/svg&gt;
+        &lt;span class=&quot;stepnav__linktext&quot;&gt;Pas aan&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li id=&quot;step_5&quot; class=&quot;stepnav__step&quot;&gt;&lt;a href=&quot;http://beeldbank.gebruikercentraal.co.uk/stap/stap-5/&quot;
+                                             class=&quot;stepnav__link &quot; title=&quot;deel&quot;&gt;
+        &lt;svg class=&quot;icon icon--stepnav&quot; focusable=&quot;false&quot;&gt;
+          &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;
+               xlink:href=&quot;{{sprite_url}}#doc-arrow&quot;&gt;&lt;/use&gt;
+        &lt;/svg&gt;
+        &lt;span class=&quot;stepnav__linktext&quot;&gt;deel&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;/ol&gt;&gt;</code></pre>
+
+                </details>
+              
+            
+                          <small class="text-muted">
+                Source: <code>styleguide/elements/components/stepnav.scss</code>, line 1
               </small>
                       </section>
                                   <section id="components-textblock" class="section section--depth-2 ">

@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="../style.css"/>
 <link rel="stylesheet" href="../../gebruiker-centraal/frontend/styleguide/css/styleguide.css"/>
 <link rel="stylesheet" href="../../../../../wp-content/plugins/ictu-gc-posttypes-inclusie/css/frontend.css"/>
+<link rel="stylesheet" href="../../../../../wp-content/plugins/ictu-gc-posttypes-brieven-beelden/css/frontend-beeldbank.css"/>
 
   <link rel="stylesheet" href="kss-assets/lib/docs.css">
   <link rel="stylesheet" href="assets/css/styleguide.css">
@@ -49,14 +50,14 @@
 <p>Deze styleguide maakt gebruikt van de CSS uit het Gebruiker Centraal thema.</p>
 <h2>1. Front-end tools installeren</h2>
 <h3>1.1 Wat heb je nodig?</h3>
-<p>De front-end maakt gebruik van Gulp en Node. Om de CSS te kunnen compilen heb je Node, NPM (node package manager) en Yarn (frontend package manager) nodig.
+<p>De front-end maakt gebruik van Gulp en NodeJS. Om de CSS te kunnen compilen heb je Node, NPM (node package manager) en Yarn (frontend package manager) nodig.
 Installeer dus eerst Node, NPM en Yarn volgens de online handleidingen:</p>
 <ul>
-<li>https://nodejs.org/en/download/</li>
-<li>https://www.npmjs.com/get-npm</li>
-<li>https://classic.yarnpkg.com/en/docs/install/#mac-stable</li>
+<li><a href="https://nodejs.org/en/download/">Hoe NodeJS installeren?</a></li>
+<li><a href="https://www.npmjs.com/get-npm">Hoe NPM installeren?</a></li>
+<li><a href="https://classic.yarnpkg.com/en/docs/install/#mac-stable">Hoe Yarn installeren?</a></li>
 </ul>
-<p>Yarn is een package manager voor frontend die het een heel stukje gemakkelijker maakt onderlinge dependency problemen op te lossen.</p>
+<p>Yarn is een package manager voor frontend packages die het een heel stukje gemakkelijker maakt onderlinge dependency problemen op te lossen.</p>
 <h3>1.2 Lokaal opzetten</h3>
 <ul>
 <li>Navigeer in de terminal naar het thema &quot;gebruiker-centraal&quot; en daarna naar mapje &quot;frontend&quot;</li>
@@ -90,8 +91,8 @@ Installeer dus eerst Node, NPM en Yarn volgens de online handleidingen:</p>
 <p>Wanneer je <code>gulp</code> intikt in de terminal gebeuren de volgende dingen:</p>
 <ul>
 <li>Browsersync start met de ingegeven proxy.</li>
-<li>Thema 'gebruiker-centraal' less bestanden worden gewatched. Wanneer er je een wijziging maakt wordt de CSS opnieuw gecompiled en zie je de wijzigingen in je Browsersync.</li>
-<li>Indien ingevoerd wordt de directory van de ingegeven module of thema ook gewatched. Bij het wijzigingen in het gebruiker-centraal thema wordt eerst de css van het thema opnieuw gecompiled, vervolgends de CSS van het subthema.</li>
+<li>Thema 'gebruiker-centraal' less bestanden worden gewatched. Wanneer er je een wijziging maakt wordt de CSS opnieuw gecompiled en zie je de wijzigingen in je Browsersync venster.</li>
+<li>Indien een site is ingegeven met --site=[site] wordt de directory van de ingegeven site ook gewatched. Bij het wijzigingen in het gebruiker-centraal thema wordt eerst de CSS van dat thema opnieuw gecompiled. Vervolgens wordt de CSS van de ingegeven site gecompiled.</li>
 <li>Directory js/components wordt gewatched voor wijzigingen in de javascript bestanden</li>
 <li>Directory frontend/styleguide wordt gewatched voor wijzigingen aan de styleguide. Wanneer er iets wordt gewijzigd in de specifieke styleguide .less wordt eerst de CSS taak en vervolgens de styleguide taak uitgevoerd.</li>
 </ul>
@@ -107,10 +108,10 @@ Installeer dus eerst Node, NPM en Yarn volgens de online handleidingen:</p>
 </ul>
 <p>Ieder component krijgt zijn eigen less. Ga er bij alles vanuit dat het overal hergebruikt moet kunnen worden en dat een component een losstaand iets is. Responsive gedrag zit in het component. Het moet in principe overal geplaatst kunnen worden.</p>
 <p>Gebruik voor wrappers van elementen de prefix &quot;l-&quot; ofwel layout. Bijvoorbeeld l-content-wrapper.</p>
-<p>https://www.ezrabotter.com/blog/bem-block-element-modifier/</p>
+<p><a href="https://www.ezrabotter.com/blog/bem-block-element-modifier/">BEM door Ezra Botter</a></p>
 <h3>1.4.2 Gebruik Atomic Design</h3>
 <p>Met Atomic Design bouw je met al je BEM componenten samen uiteindelijk een hele pagina. Je begint met je kleinste elementen (atomen) zoals bijvoorbeeld knopjes, inputs en linkjes. Vervolgens gebruk je die in je grotere componenten (kaartjes, teasers, lijsten) die je weer gebruikt in je nog grotere componenten (contentblokken, zijbalken). Met al deze dingen samen maak je vervolgens pagina's.</p>
-<p>https://bradfrost.com/blog/post/atomic-web-design/</p>
+<p><a href="https://bradfrost.com/blog/post/atomic-web-design/">Atomic Design door Brad Frost</a></p>
 </div>
         </main>
             </div>
