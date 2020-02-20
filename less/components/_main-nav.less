@@ -19,6 +19,10 @@
     padding: 0;
   }
 
+  ul li {
+    list-style: none;
+  }
+
   @media @nav-down {
     position: fixed;
     left: 0;
@@ -159,6 +163,7 @@
           &:hover,
           &:focus {
             &:after {
+
               transform: scaleX(1);
             }
           }
@@ -181,7 +186,7 @@
       }
     }
 
-    button {
+    .icon--arrow {
       position: relative;
       padding: 0;
       background: none;
@@ -198,17 +203,18 @@
         transform: rotate(90deg);
         background: url('images/arrow-wit.svg') center center no-repeat;
         box-sizing: border-box;
+        border: .2rem solid transparent;
+        transition: background-color .2s;
       }
 
       &:hover,
       &:focus {
-        outline: none;
-        border: none;
         background: none;
         padding-top: .2rem;
 
         &:after {
-          background-color: @gc_blue_dark;
+          background-color: @gc_blue_darkest;
+          border-color: @gc_greyblue;
         }
       }
     }
