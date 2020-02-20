@@ -1,5 +1,7 @@
 /* Typografie */
 /* Default variables for textblocks */
+/* Chart */
+/* Nav */
 .container > .flex-xl-nowrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -263,4 +265,7 @@
 }
 .text-block + .text-block {
   margin-top: 3rem;
+}
+.stepnav:before {
+  margin: 0 !important;
 }

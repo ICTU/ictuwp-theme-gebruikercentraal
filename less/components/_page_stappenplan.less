@@ -40,21 +40,21 @@
 		}
 	}
 
-	
+
 	.stappenplan-h2 {
 		.visuallyhidden();
 	}
 
 	.stappenplan.flexbox {
-	
+
 		margin-left: 0;
 		padding-left: 0;
 		background: @wit;
-		
+
 		*, li {
 			list-style: none;
 		}
-		
+
 		li {
 			box-sizing: border-box;
 			overflow: hidden;
@@ -62,18 +62,18 @@
 			margin: 0;
 			padding: 0;
 		}
-		
+
 		h3, h4 {
 			margin: 0;
 			padding: 0;
 		}
-	
+
 		.titelspan {
 			margin: 0;
 			padding: 0 1rem 0 0;
 			font-family: @bodyfont_bold;
 		}
-	
+
 		.stap-example {
 			background: @gc_pantybrown_light;
 			color: @txt;
@@ -83,7 +83,7 @@
 			margin-bottom: 2rem;
 			position: relative;
 			font-size: 90%;
-			
+
 			h4 {
 				margin-bottom: .5rem;
 				font-size: 1.5rem;
@@ -92,7 +92,7 @@
 				margin-bottom: 0;
 				font-size: 1.5rem;
 			}
-			
+
 			&:before {
 				position: absolute;
 				top: 0;
@@ -110,18 +110,18 @@
 		.stap-intro {
 			.bold-font();
 		}
-	
+
 		@media only screen and (max-width: ( @break_fullwidth ) ) {
-			
+
 			flex-direction: column;
 			counter-reset: stappenplan;
 			padding-bottom: 3rem;
 			position: relative;
-	
+
 			li {
 				background: @gc_a11y_green;
 				counter-increment: stappenplan;
-	
+
 				&:before {
 					box-sizing: border-box;
 					display: block;
@@ -129,18 +129,18 @@
 					background-color: @gc_a11y_green_dark;
 					color: @wit;
 					font-size: 130%;
-					content: counter(stappenplan) '.';	
+					content: counter(stappenplan) '.';
 					width: @stepcounter_width;
 					text-align: center;
 					padding-top: 2.5rem;
 					padding-bottom: 1.5rem;
 					font-family: @bodyfont_bold;
-	
+
 					background-image: url('images/steps-vertical-middle-bottom.svg');
 					background-position: center -6px;
-	
-				}	
-				
+
+				}
+
 				.step-content {
 					width: 95%;
 					width: ~"calc(100% - @{stepcounter_width})";
@@ -150,16 +150,16 @@
 					padding-right: 1rem;
 					padding-top: 3rem;
 					margin: 0;
-					
+
 					.stap-example {
 						margin-right: 1rem;
 					}
-	
+
 					.titelspan {
 						margin-bottom: 2rem;
 						position: relative;
 						font-size: 125%;
-						
+
 						&:before {
 							content: ' ';
 							display: block;
@@ -172,26 +172,26 @@
 							speak: none;
 						}
 					}
-					
-				}				
+
+				}
 				.step-counter {
 					display: none;
 				}
-	
+
 				&:first-of-type {
 					&:before {
 						background-image: url('images/steps-vertical-first.svg');
 						background-position: center -63px;
 					}
-	
+
 				}
 				&:last-of-type {
 					&:after {
 						display: block;
 						background-image: url('images/steps-vertical-last.svg');
 						background-position: center bottom;
-						content: ' - ';	
-						width: @stepcounter_width;					
+						content: ' - ';
+						width: @stepcounter_width;
 						min-height: @stepcounter_width;
 						position: absolute;
 						bottom: 0;
@@ -201,20 +201,20 @@
 				}
 			}
 		}
-	
+
 		@media only screen and (min-width: ( @contentmaxwidth ) ) {
 			margin-left: ( ( ( @contentmaxwidth - @break_fullwidth ) / 2 ) * -1 );
 			margin-right: ( ( ( @contentmaxwidth - @break_fullwidth ) / -2 ) * 1 );
 		}
-	
+
 		@media only screen and (min-width: ( @break_fullwidth ) ) {
-	
+
 			flex-direction: row;
-	
+
 			li {
 				flex: 1 0 20rem;
 				flex: 1 0 20%;
-				
+
 				.titelspan {
 					display: flex;
 					background: @gc_a11y_green;
@@ -224,7 +224,7 @@
 					color: @wit;
 					min-height: @stepminheight;
 					align-items: center;
-	
+
 					.step-counter {
 						max-width: @widthclip;
 						flex: 1 1 @widthclip;
@@ -234,7 +234,7 @@
 						background-color: @gc_a11y_green_dark;
 						background-position: left center;
 						background-repeat: no-repeat;
-	
+
 					    display: flex;
 					    justify-content: center;
 					    flex-direction: column;
@@ -247,7 +247,7 @@
 						background: @gc_a11y_green;
 					}
 				}
-	
+
 				.stap-intro,
 				.stap-example,
 				.stap-text {
@@ -266,7 +266,7 @@
 						margin-right: 1rem;
 					}
 				}
-	
+
 				&:first-of-type {
 					border-color: green;
 					.titelspan {
@@ -282,22 +282,22 @@
 						background-image: url('images/steps-horizontal-right-last.svg');
 					}
 				}
-				
-				&:nth-last-child(3):first-child, 
+
+				&:nth-last-child(3):first-child,
 				&:nth-last-child(3):first-child ~ li {
 					/* green squids! */
 					.step-title {
 						font-size: 2rem;
 					}
 				}
-				&:nth-last-child(4):first-child, 
+				&:nth-last-child(4):first-child,
 				&:nth-last-child(4):first-child ~ li {
 					/* green squids! */
 					.step-title {
 						font-size: 1.8rem;
 					}
 				}
-				&:nth-last-child(5):first-child, 
+				&:nth-last-child(5):first-child,
 				&:nth-last-child(5):first-child ~ li {
 					/* green squids! */
 					.step-title {
@@ -307,23 +307,23 @@
 			}
 		}
 	}
-	
+
 	@media only screen and (min-width: ( @contentmaxwidth ) ) {
 		.entry-content > .stappenplan.flexbox {
 			margin-top: 4rem; // because of sharing icons.
 		}
 	}
-	
-	
-	@media screen and (-ms-high-contrast: active) and (min-width: ( @break_fullwidth ) ), screen and (-ms-high-contrast: none) and (min-width: ( @break_fullwidth ) ) {  
-	   /* IE10+ specific styles go here */  
+
+
+	@media screen and (-ms-high-contrast: active) and (min-width: ( @break_fullwidth ) ), screen and (-ms-high-contrast: none) and (min-width: ( @break_fullwidth ) ) {
+	   /* IE10+ specific styles go here */
 		.step-counter {
 			font-size: 3rem;
 			padding-top: 2rem;
 		}
-	
+
 		nav.nav-primary {
-	
+
 			li.menu-item-has-children {
 				span,
 				span[itemprop="name"] {
@@ -338,7 +338,3 @@
 }
 
 
-.region--intro {
-	margin-left: -1.5rem;
-	margin-right: -1.5rem;
-}

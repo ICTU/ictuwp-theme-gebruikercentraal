@@ -1,10 +1,9 @@
-@import "../mixins";
 
 .stepnav {
-  padding: 3rem 0 3rem;
+  padding-bottom: 5rem;
   display: flex;
-  height: 15rem;
   align-items: flex-end;
+  height: 20rem;
   position: relative;
 
   &:before {
@@ -16,13 +15,16 @@
     right: 0;
     top: 0;
     bottom: 0;
-    background: @inclusiekoraal;
-		speak: none;
+    background: @brand_color;
+    speak: none;
   }
 
+  @media @tablet {
+    height: 26rem;
+  }
 
-  @media only screen and ( min-width: ( @break_fullwidth )) {
-    padding: 10rem 0 17rem;
+  @media @desktop {
+    padding-bottom: 17rem;
     height: 42rem;
   }
 }
@@ -35,20 +37,21 @@
   justify-content: space-between;
   counter-reset: stepnav;
   max-width: @contentwidth_960;
+  position: relative;
 
   &:before,
   &:after {
     position: absolute;
     display: block;
     content: " ";
-    top: 0;
-    height: 6.5rem;
+    top: 50%;
+    height: 5.5rem;
     width: auto;
     background: url('../images/b-stepnav.svg') 0 100% no-repeat;
     background-size: 350px auto;
     z-index: 15;
-    border: none;
-		speak: none;
+    speak: none;
+    margin-top: -10rem;
   }
 
   &:before {
@@ -63,22 +66,20 @@
     background-position: 100% 100%;
   }
 
-
-  @media only screen and ( min-width: ( @break_fullwidth )) {
+  @media @tablet {
     height: 11rem;
 
     &:before,
     &:after {
-      background-size: 450px auto;
-      height: 12rem;
+      margin-top: -13rem;
     }
 
     &:before {
-      left: 32.5%;
+      left: 29%;
     }
 
     &:after {
-      right: 33%;
+      right: 29%;
     }
   }
 }
@@ -104,13 +105,13 @@
     background: @gc_pantybrown_light;
     width: 100%;
     left: 50%;
-		speak: none;
+    speak: none;
   }
 
   &:first-child,
   &:nth-last-child(2) {
     &:before {
-      background: @inclusiekoraal_2;
+      background: @brand_color_darker;
     }
   }
 
@@ -133,13 +134,37 @@
 .stepnav__link {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   position: relative;
   z-index: 5;
   text-decoration: none;
+  padding-top: 1.2rem;
 
   &:before {
-    display: none;
+    content: " ";
+    position: absolute;
+    width: 5.5rem;
+    height: 5.5rem;
+    top: 0;
+    left: 50%;
+    margin-left: -2.75rem;
+    background: @stepnav_icon_bg;
+    z-index: -1;
+    border-radius: 50%;
+    transition: background .2s, transform .2s;
+    outline: 1rem solid @brand_color;
+  }
+
+  @media @desktop {
+    padding-top: 1.4rem;
+
+    &:before {
+      width: 8.4rem;
+      height: 8.4rem;
+      margin-left: -4.2rem;
+      outline: 1.5rem solid @brand_color;
+    }
   }
 
   span {
@@ -151,77 +176,42 @@
   &:focus,
   &.is-active {
 
-   .stepnav__linktext {
-     text-decoration: underline;
-   }
+    &:before {
+      background: @stepnav_icon_active_bg;
+    }
 
-    .stepnav__icon {
-      background-color: @gc_pantybrown_light;
-      transform: scale(1.05);
-
-      &.icon--identificeer {
-        background-image: url('../images/icon-identificeer-blue.svg');
-      }
-
-      &.icon--deel {
-        background-image: url('../images/icon-deel-blue.svg');
-      }
-
-      &.icon--evalueer {
-        background-image: url('../images/icon-evalueer-blue.svg');
-      }
-
-      &.icon--ontwerp {
-        background-image: url('../images/icon-ontwerp-blue.svg');
-      }
-
-      &.icon--verdiep {
-        background-image: url('../images/icon-verdiep-blue.svg');
-      }
+    .stepnav__linktext {
+      text-decoration: underline;
     }
   }
 
-  @media only screen and ( max-width: ( @break_fullwidth )) {
+  &:hover,
+  &:focus {
 
+    &:before {
+      transform: scale(1.05);
+    }
+
+    .icon--stepnav {
+      transform: scale(1.05);
+    }
   }
 }
 
-.stepnav__icon {
+.icon--stepnav {
   display: inline-block;
-  width: 4.5rem;
-  height: 4.5rem;
-  background: @gc_orange url('../images/icon-identificeer.svg') center center no-repeat;
-  background-size: 65% auto;
-  margin: 0 auto;
-  border-radius: 50rem;
+  width: 3rem;
+  height: 3.5rem;
   transition: background-color .2s, transform .2s;
-  outline: .7rem solid @inclusiekoraal;
+  fill: @stepnav_icon_color;
 
-  &.icon--deel {
-    background-image: url('../images/icon-deel.svg');
+  .is-active & {
+    color: @stepnav_icon_active_color;
   }
 
-  &.icon--evalueer {
-    background-image: url('../images/icon-evalueer.svg');
-  }
-
-  &.icon--ontwerp {
-    background-image: url('../images/icon-ontwerp.svg');
-  }
-
-  &.icon--verdiep {
-    background-image: url('../images/icon-verdiep.svg');
-  }
-
-  @media only screen and ( min-width: ( @break_phone )) {
-    outline-width: 1.5rem;
-  }
-
-  @media only screen and ( min-width: ( @break_fullwidth )) {
-    width: 8.5rem;
-    height: 8.5rem;
-    background-size: 50% auto;
-    outline-width: 2.5rem;
+  @media @desktop {
+    width: 5rem;
+    height: 5.5rem;
   }
 
 }
@@ -230,9 +220,11 @@
   .font-size(16);
   font-family: @bodyfont_bold;
   color: @white;
-  margin-top: 1.6rem;
+  margin-top: 2.5rem;
 
-  @media only screen and ( max-width: ( @break_fullwidth )) {
+  @media @tablet_only {
     .visuallyhidden();
   }
 }
+
+
