@@ -8,7 +8,7 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.3.2
+// @version 4.3.3.a
 // @desc.   Spoedreparatie blogarchiefpagina.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '4.3.2' );
-define( 'CHILD_THEME_DESCRIPTION', "4.3.2 - Spoedreparatie blogarchiefpagina." );
+define( 'CHILD_THEME_VERSION', '4.3.3.a' );
+define( 'CHILD_THEME_DESCRIPTION', "4.3.3.a - Spoedreparatie blogarchiefpagina." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -1209,7 +1209,7 @@ function gc_wbvb_add_pageheader_css() {
 	
 	wp_enqueue_style(
 		ID_SINGLE_CSS,
-		WBVB_THEMEFOLDER . '/css/blogberichten.css?v=' . CHILD_THEME_VERSION
+		WBVB_THEMEFOLDER . '/blogberichten.css?v=' . CHILD_THEME_VERSION
 	);
 	
 	$BLOGBERICHTEN_CSS   = '';
@@ -1249,7 +1249,7 @@ function gc_wbvb_add_pageheader_css() {
 						$image = wp_get_attachment_image_src( get_post_thumbnail_id( $postid ), $breakpoint['img_size_archive_list'] );
 							
 						$BLOGBERICHTEN_CSS .= '@media only screen and ('  . $breakpoint['direction'] .  '-width: ' . $breakpoint['width'] . " ) {\n";
-						$BLOGBERICHTEN_CSS .= " #" . $theid . " { \n";
+						$BLOGBERICHTEN_CSS .= " #" . $theid . ". { \n";
 						$BLOGBERICHTEN_CSS .= "   height: " . $breakpoint['header-padding'] . ";\n";
 						$BLOGBERICHTEN_CSS .= "   background-image: url('" . $image[0] . "');\n";
 						$BLOGBERICHTEN_CSS .= "   background-size: cover;\n";
@@ -1283,7 +1283,7 @@ function gc_wbvb_add_blog_single_css() {
 	
 	wp_enqueue_style(
 		ID_SINGLE_CSS,
-		WBVB_THEMEFOLDER . '/css/blogberichten.css?v=' . CHILD_THEME_VERSION
+		WBVB_THEMEFOLDER . '/blogberichten.css?v=' . CHILD_THEME_VERSION
 	);
 	
 	$BLOGBERICHTEN_CSS   = '';
@@ -1488,7 +1488,7 @@ function gc_wbvb_add_blog_archive_css() {
 	
 	wp_enqueue_style(
 		ID_BLOGBERICHTEN_CSS,
-		WBVB_THEMEFOLDER . '/css/blogberichten.css?v=' . CHILD_THEME_VERSION
+		WBVB_THEMEFOLDER . '/blogberichten.css?v=' . CHILD_THEME_VERSION
 	);
 
 	$BLOGBERICHTEN_CSS	= '';
@@ -1504,7 +1504,7 @@ function gc_wbvb_add_blog_archive_css() {
 			$posttype     	= get_post_type( $getid );
 			$permalink    	= get_permalink( $getid );
 			$publishdate  	= get_the_date();
-			$theID        	= 'featured_image_post_' . $getid;
+			$theID        	= 'featured_image_post_' . $getid; // archive header css
 			$the_image_ID 	= 'image_' . $theID; // HIERO, header css
 			$extra_class 	= '';
 			$class        	= 'feature-image noimage';
@@ -1522,21 +1522,29 @@ function gc_wbvb_add_blog_archive_css() {
 					
 					if ( $image[1] >= IMG_SIZE_HUGE_MIN_WIDTH ) {
 						
+$breakpointcounter = 0;						
 						// width > 1200px
 						
 						foreach ( $imgbreakpoints as $breakpoint ) {
 
+$breakpointcounter++;
+
+$theID2 = $theID;
+
+if ( $breakpointcounter === 1 ) {
+	$theID2 = $theID . '.feature-image';	
+}
 							$image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), $breakpoint['img_size_archive_list'] );
 							$BLOGBERICHTEN_CSS .= '@media only screen and ('  . $breakpoint['direction'] .  '-width: ' . $breakpoint['width'] . " ) {\n";
-							$BLOGBERICHTEN_CSS .= ' #' . $theID . " { \n";
+							$BLOGBERICHTEN_CSS .= ' #' . $theID2 . " { \n";
 							$BLOGBERICHTEN_CSS .= "	background-image: url('" . $image[0] . "');\n";
 							$BLOGBERICHTEN_CSS .= "	background-repeat: no-repeat;\n";
 							$BLOGBERICHTEN_CSS .= " } \n";
 							$BLOGBERICHTEN_CSS .= "} \n";
 						}
 						
-						$class      = 'feature-image';
-						$extra_class  = ' enorm-huge';
+						$class      	= 'feature-image';
+						$extra_class  	= ' enorm-huge';
 						
 					}
 					else {
@@ -1550,7 +1558,7 @@ function gc_wbvb_add_blog_archive_css() {
 							$BLOGBERICHTEN_CSS .= "} \n";
 							$extra_class  = ' ';
 							$class = 'simple feature-image';
-							$BLOGBERICHTEN_CSS .= '/* gc_wbvb_add_blog_archive_css: ' . sanitize_title( $image[0] ) . " */\n";
+//							$BLOGBERICHTEN_CSS .= '/* gc_wbvb_add_blog_archive_css: ' . sanitize_title( $image[0] ) . " */\n";
 						}
 					}
 				}
@@ -1569,12 +1577,12 @@ function gc_wbvb_add_blog_archive_css() {
 				}
 				
 				if ( $image && $image[0] ) {
-					$BLOGBERICHTEN_CSS .= '#' . $the_image_ID . " { \n";
-					$BLOGBERICHTEN_CSS .= "background-image: url('" . $image[0] . "');\n";
-					$BLOGBERICHTEN_CSS .= "} \n";
+					$BLOGBERICHTEN_CSS .= '#' . $the_image_ID . "_thumbnail { ";
+					$BLOGBERICHTEN_CSS .= "background-image: url('" . $image[0] . "'); ";
+					$BLOGBERICHTEN_CSS .= "} ";
 					$class = 'feature-image';
 //					$BLOGBERICHTEN_CSS .= '/* ' . sanitize_title( $image[0] ) . " */\n";
-					$BLOGBERICHTEN_CSS .= '/* gc_wbvb_add_blog_archive_css: ' . sanitize_title( $image[0] ) . " */\n";
+//					$BLOGBERICHTEN_CSS .= '/* gc_wbvb_add_blog_archive_css: ' . sanitize_title( $image[0] ) . " */\n";
 				}
 				
 			}
@@ -2511,7 +2519,7 @@ function gc_wbvb_archive_loop() {
 			$posttype     	= get_post_type( $getid );
 			$permalink    	= get_permalink( $getid );
 			$publishdate  	= get_the_date();
-			$theID        	= 'featured_image_post_' . $getid;
+			$theID        	= 'featured_image_post_' . $getid; // archive loop
 			$the_image_ID 	= 'image_' . $theID; // HIERO, the loop
 			$extra_cssclass = ' ' . $posttype;
 			$class 			= 'feature-image noimage';
@@ -2525,9 +2533,10 @@ function gc_wbvb_archive_loop() {
 					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), IMG_SIZE_HUGE );
 					
 					if ( $image[1] >= IMG_SIZE_HUGE_MIN_WIDTH ) {
-						$class      = 'feature-image';
+						$class = 'feature-image has-image';
 						if ( 'post' == $posttype ) {
 							$extra_cssclass  .= ' enorm-huge';
+							$bluh = sanitize_title( $image[0] );
 						}
 					}
 					else {
@@ -2535,7 +2544,7 @@ function gc_wbvb_archive_loop() {
 						$image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), 'large' );
 						
 						if ( isset( $image[0] ) ) {
-							$class = 'feature-image';
+							$class = 'feature-image has-image';
 							$bluh = sanitize_title( $image[0] );
 						}
 					}
@@ -2556,7 +2565,7 @@ function gc_wbvb_archive_loop() {
 				}
 
 				if ( isset( $image[0] ) ) {
-					$class = 'feature-image';
+					$class = 'feature-image has-image';
 					$bluh = sanitize_title( $image[0] );
 				}
 				
@@ -2566,7 +2575,7 @@ function gc_wbvb_archive_loop() {
 			echo '<section class="entry' . $extra_cssclass . '" itemscope itemtype="http://schema.org/SocialMediaPosting" id="' . $theID . '">';
 			echo '<a href="' . $permalink . '" itemprop="url">';
 			if ( $bluh ) {
-				echo '<div id="' . $the_image_ID . '" class="' . $class . '" data-bluh="' . $bluh . '">&nbsp;</div>';
+				echo '<div id="' . $the_image_ID . '_thumbnail" class="' . $class . '" data-bluh="' . $bluh . '">&nbsp;</div>';
 			}
 			echo '<div class="bloginfo">';
 			
