@@ -15,50 +15,63 @@
 //=========================================================================================================
 
 .page-template-home-inclusie.full-width-content {
-    .content-sidebar-wrap {
-        padding: 0;
+  .content-sidebar-wrap {
+    padding: 0;
 
-        .content {
-          max-width: none; // Zo dus
-        }
+    .content {
+      max-width: none; // Zo dus
     }
+  }
 
-    .site-inner {
-        padding: 0;
+  .site-inner {
+    padding: 0 0 3rem 0;
+
+    @media @desktop {
+      padding-bottom: 8rem;
     }
+  }
 
-    .type-page.entry {
-        .gc-padding;
-        background: @gc_a11y_coral;
+  .type-page.entry {
+    .gc-padding;
+    background: @brand_color;
+  }
+
+  #entry__intro {
+    position: relative;
+    z-index: +1;
+
+    @media @desktop {
+
+      .btn--download {
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin-top: 1.8rem;
+      }
     }
+  }
 
-    #entry__intro {
-        position: relative;
-        z-index: +1;
+  .section {
+    .gc-padding;
+    padding-top: 3rem;
 
-        @media @desktop {
-
-          .btn--download {
-              position: absolute;
-              right: 0;
-              top: 0;
-              margin-top: 1.8rem;
-          }
-        }
+    @media @tablet {
+      padding-top: 5rem;
     }
+  }
 }
 
 #home_template_teasers {
-  .gc-padding;
-
-  @media @tablet {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
+  padding: .1rem 0 3rem;
 
   .grid {
     max-width: ~"calc(@{contentmaxwidth} + @{gutter})";
     margin: 0 auto;
+
+    @media @tablet {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
   }
 }
 

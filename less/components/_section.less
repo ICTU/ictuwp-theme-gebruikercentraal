@@ -1,14 +1,10 @@
 
 .section__title {
-  padding: 2rem 0;
+  margin: 0;
+  padding-top: 2rem;
   text-transform: uppercase;
   border-top: .2rem solid @border_color;
-  margin-top: 3rem;
   font-family: @font_secondary;
-
-  @media @tablet {
-    margin-top: 5rem;
-  }
 }
 
 .l-section-top {
@@ -20,8 +16,7 @@
   max-width: @contentmaxwidth;
   margin: 0 auto;
 
-  .grid:not(.grid--col-3),
-  .item-list {
+  .grid:not(.grid--col-3){
     max-width: ~"calc(@{max-width-inner} + @{gutter})";
     margin: 0 auto;
   }

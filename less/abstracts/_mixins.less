@@ -1100,11 +1100,21 @@
 
 //=========================================================================================================
 
+.clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+//=========================================================================================================
+
 .gc-padding() {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 
-  @media @desktop {
+  @media @tablet {
     padding-left: 3rem;
     padding-right: 3rem;
   }

@@ -43,19 +43,20 @@ if ( !function_exists( 'ictu_gctheme_card_general' ) ) :
             return;
         }
 
-        $section_title	= get_the_title( $post_ID );
-        $section_text	= get_the_excerpt( $post_ID );
-        $section_link	= get_sub_field( 'home_template_teaser_link' );
-        $title_id		= sanitize_title( $section_title );
+        $card_title	= get_the_title( $post_ID );
+        $card_text	= get_the_excerpt( $post_ID );
+        $card_link	= get_sub_field( 'home_template_teaser_link' );
+        $title_id		= sanitize_title( $card_title );
 
-        echo '<div class="card no-image">';
-        echo '<h3 id="' . $title_id . '"><a href="' . get_permalink( $post_ID ) . '">' . $section_title .
-          '<span class="btn btn--arrow"></span>' .
-          '</a></h3>';
-        echo '<p>';
-        echo $section_text;
-        echo '</p>';
-        echo '</div>';
+        $card = '<div class="card"><div class="card__content">';
+        $card .= '<h3 id="' . $title_id . '" class="card__title"><a href="'.get_permalink( $post_ID ) .'" class="link link--arrow">';
+        $card .= '<span class="arrow-link__text">'. $card_title.'</span>';
+        $card .= '<span class="arrow-link__icon">&nbsp;</span>';
+        $card .= '</a></h3>';
+        $card .= '<div></div>';
+
+
+        echo $card;
 
 	    
     }
@@ -102,7 +103,7 @@ if ( !function_exists( 'ictu_gctheme_card_vaardigheid' ) ) :
 			$titleclass  = "icon--" . $icoon;
 			$cardclass 	.= " icon";
 		}
-		
+
 
         echo '<div class="card ' . $cardclass . '">';
         echo '<h3 id="' . $title_id . '" class="' . $titleclass . '"><a href="' . get_permalink( $post_ID ) . '">' . $section_title . ' - ' . $icoon .
@@ -243,8 +244,9 @@ if ( !function_exists( 'ictu_gctheme_card_featuredimage' ) ) :
 		$return = '<div class="card card--featured-image ' . $posttype . '" id="' . $block_id . '">';
 		$return .= $imageplaceholder;
 		$return .= '<div class="card__content">';
-		$return .= '<h2 id="' . $title_id . '" class="card__title"><a href="' . get_permalink( $post_ID ) . '"><span>';
-		$return .= od_wbvb_custom_post_title( $section_title ) . '</span><span class="btn btn--arrow"></a></h2>';
+		$return .= '<h2 id="' . $title_id . '" class="card__title">';
+        $return .= '<a class="arrow-link" href="' . get_permalink( $post_ID ) . '">';
+		$return .= '<span class="arrow-link__text">'.od_wbvb_custom_post_title( $section_title ) . '</span><span class="arrow-link__icon"></a></h2>';
 		$return .= $section_meta;
 		$return .= '<p>';
 		$return .= $section_text;

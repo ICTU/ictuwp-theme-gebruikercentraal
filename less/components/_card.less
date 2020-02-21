@@ -18,14 +18,21 @@
   background: @white;
   position: relative;
   border: .1rem solid @border_color;
+  box-sizing: border-box;
 
   > p {
     margin-right: 1.5rem;
   }
 
+  p:last-child {
+    margin-bottom: 0;
+  }
+
   .meta-data {
     margin-top: auto;
   }
+
+
 }
 
 // Geen margin in tegeltje P
@@ -71,6 +78,11 @@
   .link--arrow .link__icon {
     margin-right: -1rem;
   }
+}
+
+.card__title {
+  font-size: 2.2rem;
+  line-height: 3.2rem;
 }
 
 // Cards with image

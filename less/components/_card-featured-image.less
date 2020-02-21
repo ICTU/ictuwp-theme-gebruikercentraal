@@ -15,40 +15,9 @@
 
 .card--featured-image {
 	padding: 0;
-	
-	.card__content {
-		h2,
-		h3,
-		.card__title {
-			.font-size(24);
-			overflow: visible;
-			
-			&:before {
-				display: none;
-			}
-			a {
-				flex-wrap: nowrap;
-			}
-			span:first-child {
-				width: unset;
-				font-size: inherit;
-			}
-			
-			.btn--arrow {
-				width: 3.6rem;
-			}
-		}
-	}
 
-	.card__content {
-		padding: 2rem 3rem;	
-		
-		h2, h3 {
-			margin-top: 0;
-			padding: 0;
-		}
-	}
-	
+	// bepalingen voor title weggehaald - staan nu in card__title
+
 	.card__image {
 		height: ( ( 400 / 16 ) * 1rem ); // 400px hoog enzo
 		width: 100%;
@@ -69,21 +38,6 @@
 			height: 125px;
 			transform: rotate( 3deg );
 			transform-origin: top right;			
-		}
-	}
-	
-	&.beeld,
-	&.brief {
-		.card__title {
-			&:before {
-				display: none;
-			}
-		}
-		.card__image {
-			border: 1px solid @gc_greyblue;
-			background-size: contain;
-			margin: 2rem;
-			width: auto;
 		}
 	}
 }
