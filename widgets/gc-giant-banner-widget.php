@@ -160,6 +160,7 @@ function append_header_css_for_gc_giant_banner_widget() {
 
 //	$header_css = "";
 	$header_css = "/* JOEHOE */ \n\n";
+    $header_css				= '/* append_header_css_for_gc_giant_banner_widget */ ';
 	
 	if ( is_array( $wp_registered_widgets )  ) {
 
@@ -185,7 +186,7 @@ function append_header_css_for_gc_giant_banner_widget() {
 					}
 					
 					
-					$header_css .= '/* URL: ' . sanitize_title( $image['url'] ) . "  \n";
+//					$header_css .= '/* URL: ' . sanitize_title( $image['url'] ) . "  \n";
 					$header_css .= ' $widget_id: ' . $widget_id . "  \n";
 					$header_css .= ' $image_alignment: ' . $image_alignment . "  \n";
 					

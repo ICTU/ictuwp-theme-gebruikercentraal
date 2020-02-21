@@ -13,7 +13,7 @@
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
-//* Template Name: GC - Contentpagina
+//* Template Name: GC-pagina - Pagina Relevante Content Oude Stijl
 
 //========================================================================================================
 
@@ -47,11 +47,9 @@ function gc_wbvb_show_related_content() {
            echo '</div>';
     
         else :
-        
-//            echo "<p>Ai, aan deze pagina zijn nog geen blokken toegevoegd.</p>";
-    
-            
+
         endif; 
+
     }
     else {
 	    echo ACF_PLUGIN_NOT_ACTIVE_WARNING;

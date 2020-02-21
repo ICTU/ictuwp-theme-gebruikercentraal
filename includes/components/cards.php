@@ -103,7 +103,7 @@ if ( !function_exists( 'ictu_gctheme_card_vaardigheid' ) ) :
 			$titleclass  = "icon--" . $icoon;
 			$cardclass 	.= " icon";
 		}
-
+		
 
         echo '<div class="card ' . $cardclass . '">';
         echo '<h3 id="' . $title_id . '" class="' . $titleclass . '"><a href="' . get_permalink( $post_ID ) . '">' . $section_title . ' - ' . $icoon .
@@ -244,9 +244,8 @@ if ( !function_exists( 'ictu_gctheme_card_featuredimage' ) ) :
 		$return = '<div class="card card--featured-image ' . $posttype . '" id="' . $block_id . '">';
 		$return .= $imageplaceholder;
 		$return .= '<div class="card__content">';
-		$return .= '<h2 id="' . $title_id . '" class="card__title">';
-        $return .= '<a class="arrow-link" href="' . get_permalink( $post_ID ) . '">';
-		$return .= '<span class="arrow-link__text">'.od_wbvb_custom_post_title( $section_title ) . '</span><span class="arrow-link__icon"></a></h2>';
+		$return .= '<h2 id="' . $title_id . '" class="card__title"><a href="' . get_permalink( $post_ID ) . '"><span>';
+		$return .= od_wbvb_custom_post_title( $section_title ) . '</span><span class="btn btn--arrow"></span></a></h2>';
 		$return .= $section_meta;
 		$return .= '<p>';
 		$return .= $section_text;
@@ -277,7 +276,7 @@ function ictu_gctheme_card_append_header_css() {
 		WBVB_THEMEFOLDER . '/css/blogberichten.css?v=' . CHILD_THEME_VERSION
 	);
 
-    $header_css				= '';
+    $header_css				= '/* ictu_gctheme_card_append_header_css */ ';
     $acfid					= get_the_id();
     $gerelateerdecontent	= get_field('gerelateerde_content_toevoegen', $acfid);
 
@@ -287,6 +286,30 @@ function ictu_gctheme_card_append_header_css() {
 
         // loop through the rows of data
         foreach ($related_items as $post):
+
+            setup_postdata($post);
+
+            $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large');
+
+            if ($image[0]) {
+                $header_css .= "#related_" . $post->ID . " .card__image { ";
+                $header_css .= "background-image: url('" . $image[0] . "'); ";
+                $header_css .= "} ";
+            }
+
+
+        endforeach;
+
+        wp_reset_postdata();
+
+    }
+
+    $related_items2	= get_field( 'relation_beeldbrief_beeld', $post->ID );
+
+    if ( $related_items2 ) {
+
+        // loop through the rows of data
+        foreach ( $related_items2 as $post ):
 
             setup_postdata($post);
 
