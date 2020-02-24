@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.3.3.a
-// @desc.   Spoedreparatie blogarchiefpagina.
+// @version 4.3.3
+// @desc.   Editor.css aangepast; spoedreparatie blogarchiefpagina.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '4.3.3.a' );
-define( 'CHILD_THEME_DESCRIPTION', "4.3.3.a - Spoedreparatie blogarchiefpagina." );
+define( 'CHILD_THEME_VERSION', '4.3.3' );
+define( 'CHILD_THEME_DESCRIPTION', "4.3.3 - Editor.css aangepast; spoedreparatie blogarchiefpagina." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -1666,7 +1666,7 @@ function gc_wbvb_add_css() {
 */
 
 function admin_append_editor_styles() {
-    add_editor_style(WBVB_THEMEFOLDER . '/css/editor-styles.css?v=' . CHILD_THEME_VERSION );
+    add_editor_style(WBVB_THEMEFOLDER . '/editor-styles.css?v=' . CHILD_THEME_VERSION );
 }
 
 add_action( 'init', 'admin_append_editor_styles' );

@@ -6,8 +6,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.3.3.a
-// @desc.   Spoedreparatie blogarchiefpagina.
+// @version 4.3.3.d
+// @desc.   Editor.css aangepast; spoedreparatie blogarchiefpagina.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 */
 
@@ -270,8 +270,7 @@
 	right: 0;
 	bottom: 1em;
 	box-shadow: 3px 3px 0 rgba(0, 0, 0, .2);
-	background-image: url('../images/cta-pijl.png');
-	background-image: url('../images/cta-pijl.svg'), none;
+	background-image: url('images/cta-pijl.svg');
 	background-position: center center;
 	background-repeat: no-repeat
 }
@@ -288,7 +287,7 @@
 .page {
 	
 	.archive-list .feature-image {
-		background-image: url('../images/featured-image-default.png');
+		background-image: url('images/featured-image-default.png');
 		background-size: cover;
 		background-position: center center;
 		position: absolute;
@@ -389,7 +388,7 @@
 	.beeldbank .entry.enorm-huge.entry a,
 	.page .entry.enorm-huge.entry a {
 		padding: 0;
-		min-height: 400px
+//		min-height: 400px
 	}
 	.archive .entry.enorm-huge.entry a:active .bloginfo,
 	.archive .entry.enorm-huge.entry a:focus .bloginfo,
@@ -420,7 +419,7 @@
 		z-index: 999;
 		position: absolute;
 		bottom: 16px;
-		left: 16px;
+		right: 0px;
 		margin: 0 16px 0 0;
 		padding: 16px
 	}
@@ -450,12 +449,21 @@
 	.page .entry.enorm-huge {
 		min-height: 550px
 	}
-	.archive .entry.enorm-huge.entry a,
-	.beeldbank .entry.enorm-huge.entry a,
-	.page .entry.enorm-huge.entry a {
-		padding: 0;
-		min-height: 550px
+	.archive,
+	.beeldbank,
+	.page {
+		.entry.enorm-huge { 
+			a {
+				padding: 0;
+				min-height: 550px;
+			}
+			.bloginfo {
+				width: 67.6%;
+				margin-left: 0;
+			}
+		}
 	}
+	
 	.archive .entry.enorm-huge .feature-image,
 	.beeldbank .entry.enorm-huge .feature-image,
 	.page .entry.enorm-huge .feature-image {

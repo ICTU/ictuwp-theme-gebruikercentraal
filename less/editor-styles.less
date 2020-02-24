@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.1.6
-// @desc.   Separate CSS files restored. Login form slightly retouched.
+// @version 4.3.3
+// @desc.   Editor.css aangepast; spoedreparatie blogarchiefpagina.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 */
 
@@ -25,50 +25,50 @@
 Imports
 ---------------------------------------------------------------------------------------------------- */ 
 @import "includes/30-text-styles.less";                 // font-styles, shared with admin editor-styles.less */
-@import "includes/40-forms.less";                       // styling for forms */
-@import "includes/50-header-logo-menu.less";            // all styling for the header and the logo */
-@import "includes/60-sidebar-widgets.less";             // sidebar widgets */
-@import "includes/70-pagetypes.less";                   // various page types etc */
-@import "includes/71-search-and-404-pagetype.less";     // styling for search
-@import "includes/80-structure.less";                   // mediaqueries */ // footer thingies */
-@import "includes/82-pagination.less";                  // all pagination related stuff */
-@import "includes/90-printstyles.less";                 // non screen / print only */
-@import "includes/99-browserhacks.less";                // non screen / print only */
+//@import "includes/40-forms.less";                       // styling for forms */
+//@import "includes/50-header-logo-menu.less";            // all styling for the header and the logo */
+//@import "includes/60-sidebar-widgets.less";             // sidebar widgets */
+//@import "includes/70-pagetypes.less";                   // various page types etc */
+//@import "includes/71-search-and-404-pagetype.less";     // styling for search
+//@import "includes/80-structure.less";                   // mediaqueries */ // footer thingies */
+//@import "includes/82-pagination.less";                  // all pagination related stuff */
+//@import "includes/90-printstyles.less";                 // non screen / print only */
+//@import "includes/99-browserhacks.less";                // non screen / print only */
 
 // Components
-@import "components/_btn";
-@import "components/_card";
+// @import "components/_btn";
+// @import "components/_card";
 //@import "components/_card_tipkaart"; Komt dees nog?
-@import "components/_grid";
-@import "components/_layout";
-@import "components/_layout-footer";
-@import "components/_main-nav.less";
-@import "components/_overview";
-@import "components/_section";
+// @import "components/_grid";
+// @import "components/_layout";
+// @import "components/_layout-footer";
+// @import "components/_main-nav.less";
+// @import "components/_overview";
+// @import "components/_section";
 
 
 // Pages
-@import "components/_layout.less";
-@import "components/_layout-footer.less";
-@import "components/_page.less";                        // Dit was wat er in style stond
-@import "components/_page_stappenplan";
-@import "components/_page-overzichtspagina";
+// @import "components/_layout.less";
+// @import "components/_layout-footer.less";
+// @import "components/_page.less";                        // Dit was wat er in style stond
+// @import "components/_page_stappenplan";
+// @import "components/_page-overzichtspagina";
 
-@import "components/_entry-home";
+// @import "components/_entry-home";
 
 
 // cards
-@import "components/_card.less";                        // @since	  4.1.1 
-@import "components/_card-tipkaart.less";               // @since	  4.1.1 
-@import "components/_card-doelgroep.less";              // @since	  4.1.1 
-@import "components/_card-featured-image.less";         // @since	  4.1.1 
+// @import "components/_card.less";                        // @since	  4.1.1 
+// @import "components/_card-tipkaart.less";               // @since	  4.1.1 
+// @import "components/_card-doelgroep.less";              // @since	  4.1.1 
+// @import "components/_card-featured-image.less";         // @since	  4.1.1 
 
 
 
 // sections
-@import "components/_section-related-content.less";     // @since	  4.1.1 
-@import "components/_section-resultaatblok.less";       // @since	  4.1.1 
-
+// @import "components/_section-related-content.less";     // @since	  4.1.1 
+// @import "components/_section-resultaatblok.less";       // @since	  4.1.1 
+								
 // overwriting style of plugins
 @import "components/block-gallery";
 
@@ -148,3 +148,9 @@ strong:before, b:before {
 */
 
 .calltoactionstyling();
+
+body {
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
