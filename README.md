@@ -13,6 +13,7 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 
 ## Version history
 * 4.3.4 - Betere checks op get_field, ofwel: is ACF-plugin actief?
+* 4.3.3 - Editor.css aangepast; spoedreparatie blogarchiefpagina.
 * 4.3.2 - Spoedreparatie blogarchiefpagina.
 * 4.3.1 - Fixes voor actieteamwidget bug (sanitize_title) en authorbox (get user ID from get_queried_object).
 * 4.2.2 - Paginatemplates gecheckt en functionaliteit voor relevante links toegevoegd.

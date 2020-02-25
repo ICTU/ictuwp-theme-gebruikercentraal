@@ -13,19 +13,30 @@ rsync -r -a -v --delete '/Users/paul/shared-paul-files/Webs/ICTU/Gebruiker Centr
 # clean up temp dir
 rm -rf '/Users/paul/shared-paul-files/Webs/temp/.codekit-cache/'
 rm -rf '/Users/paul/shared-paul-files/Webs/temp/.git/'
+rm -rf '/Users/paul/shared-paul-files/Webs/temp/.idea/'
+rm -rf '/Users/paul/shared-paul-files/Webs/temp/node_modules/'
+rm -rf '/Users/paul/shared-paul-files/Webs/temp/frontend/'
+
+
 rm '/Users/paul/shared-paul-files/Webs/temp/config.codekit'
 rm '/Users/paul/shared-paul-files/Webs/temp/config.codekit3'
 rm '/Users/paul/shared-paul-files/Webs/temp/distribute.sh'
 rm '/Users/paul/shared-paul-files/Webs/temp/readme.txt'
 rm '/Users/paul/shared-paul-files/Webs/temp/.config.codekit3'
 rm '/Users/paul/shared-paul-files/Webs/temp/.gitignore'
+rm '/Users/paul/shared-paul-files/Webs/temp/.idea'
 rm '/Users/paul/shared-paul-files/Webs/temp/gebruikercentraal-wp-theme.code-workspace'
+rm '/Users/paul/shared-paul-files/Webs/temp/yarn.lock'
+rm '/Users/paul/shared-paul-files/Webs/temp/gulpfile.js'
+rm '/Users/paul/shared-paul-files/Webs/temp/package.json'
+
 
 
 
 cd '/Users/paul/shared-paul-files/Webs/temp/'
-find . -name ‘*.DS_Store’ -type f -delete
-find . -name ‘*.map’ -type f -delete
+find . -name "*.code-workspace" -type f -delete
+find . -name "*.DS_Store" -type f -delete
+find . -name "*.map" -type f -delete
 
 
 # --------------------------------------------------------------------------------------------------------------------------------
