@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.3.2
-// @desc.   Spoedreparatie blogarchiefpagina.
+// @version 4.3.4
+// @desc.   Betere checks op get_field, ofwel: is ACF-plugin actief?
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -547,67 +547,74 @@ function gc_wbvb_post_append_postinfo($post_info) {
 	global $wp_query;
 	global $post;
 	
-	$show_socialmedia_buttons_global		= get_field('show_socialmedia_buttons_global', 'option');
-	$show_socialmedia_buttons_on_this_page	= SOC_MED_YES;
+	// @since 4.3.4
+	if ( ! function_exists( 'get_field' ) ) {
+		return ACF_PLUGIN_NOT_ACTIVE_WARNING;
+	}
+	else {
 
-	if (
-		( 'page'    == get_post_type() ) ||
-		( 'post'    == get_post_type() ) ||
-		( 'event'   == get_post_type() )
-		) {
+		$show_socialmedia_buttons_global		= get_field('show_socialmedia_buttons_global', 'option');
+		$show_socialmedia_buttons_on_this_page	= SOC_MED_YES;
 	
-		if ( function_exists( 'get_field' ) ) {
-			$show_socialmedia_buttons_on_this_page    = get_field('socialmedia_icoontjes', $post->ID );
-		}
-		else {
-			$show_socialmedia_buttons_on_this_page    = '';
-		}
-	}
-
-
-	if  ( ( $show_socialmedia_buttons_global !== SOC_MED_NO ) && ( $show_socialmedia_buttons_on_this_page !== SOC_MED_NO ) && ( is_single() || is_page() ) )  {
-		$show_socialmedia_buttons_on_this_page = gc_wbvb_socialbuttons( $post, '' );
-	}
-	else {
-		$show_socialmedia_buttons_on_this_page = '';
-	}
-
-	if ( is_home() ) {
-		// niks, eigenlijk
-		return '[post_date]';
-	}
-	elseif ( is_page() ) {
-		// niks, eigenlijk
-		return '[post_date]';
-	}
-	else {
+		if (
+			( 'page'    == get_post_type() ) ||
+			( 'post'    == get_post_type() ) ||
+			( 'event'   == get_post_type() )
+			) {
 		
-		if ( 'event' == get_post_type() ) {
-			return '';
-		}
-		elseif ( ICTU_GC_CPT_STAP == get_post_type() ) {
-			return '';
-		}
-		elseif ( GC_BEELDBANK_BEELD_CPT == get_post_type() ) {
-			if ( is_single() ) {
-				return do_shortcode('[post_terms taxonomy="' . GC_TAX_LICENTIE . '" before=""] - [post_terms taxonomy="' . GC_TAX_ORGANISATIE . '" before=""]');
-			}
-		}
-		elseif ( GC_BEELDBANK_BRIEF_CPT == get_post_type() ) {
-			if ( is_single() ) {
-				return do_shortcode('[post_terms taxonomy="' . GC_TAX_ORGANISATIE . '" before=""]');
-			}
-		}
-		elseif ( 'post' == get_post_type() ) {
-			if ( is_single() ) {
-				return  __('Author', 'gebruikercentraal' ) . ': ' . '[post_author_posts_link]';
+			if ( function_exists( 'get_field' ) ) {
+				$show_socialmedia_buttons_on_this_page    = get_field('socialmedia_icoontjes', $post->ID );
 			}
 			else {
-				return '[post_author_posts_link] [post_date] [post_comments] ' . $show_socialmedia_buttons_on_this_page ;
+				$show_socialmedia_buttons_on_this_page    = '';
 			}
 		}
+	
+	
+		if  ( ( $show_socialmedia_buttons_global !== SOC_MED_NO ) && ( $show_socialmedia_buttons_on_this_page !== SOC_MED_NO ) && ( is_single() || is_page() ) )  {
+			$show_socialmedia_buttons_on_this_page = gc_wbvb_socialbuttons( $post, '' );
+		}
 		else {
-			return '';
+			$show_socialmedia_buttons_on_this_page = '';
+		}
+	
+		if ( is_home() ) {
+			// niks, eigenlijk
+			return '[post_date]';
+		}
+		elseif ( is_page() ) {
+			// niks, eigenlijk
+			return '[post_date]';
+		}
+		else {
+			
+			if ( 'event' == get_post_type() ) {
+				return '';
+			}
+			elseif ( ICTU_GC_CPT_STAP == get_post_type() ) {
+				return '';
+			}
+			elseif ( GC_BEELDBANK_BEELD_CPT == get_post_type() ) {
+				if ( is_single() ) {
+					return do_shortcode('[post_terms taxonomy="' . GC_TAX_LICENTIE . '" before=""] - [post_terms taxonomy="' . GC_TAX_ORGANISATIE . '" before=""]');
+				}
+			}
+			elseif ( GC_BEELDBANK_BRIEF_CPT == get_post_type() ) {
+				if ( is_single() ) {
+					return do_shortcode('[post_terms taxonomy="' . GC_TAX_ORGANISATIE . '" before=""]');
+				}
+			}
+			elseif ( 'post' == get_post_type() ) {
+				if ( is_single() ) {
+					return  __('Author', 'gebruikercentraal' ) . ': ' . '[post_author_posts_link]';
+				}
+				else {
+					return '[post_author_posts_link] [post_date] [post_comments] ' . $show_socialmedia_buttons_on_this_page ;
+				}
+			}
+			else {
+				return '';
+			}
 		}
 	}
 }
@@ -673,7 +680,12 @@ function gc_wbvb_add_single_socialmedia_buttons() {
 
 function gc_wbvb_check_socialbuttons( $post_info, $hidden = '' ) {
 
-	$show_socialmedia_buttons_global		= get_field('show_socialmedia_buttons_global', 'option');
+	$show_socialmedia_buttons_global = '';
+
+	// @since 4.3.4
+	if ( function_exists( 'get_field' ) ) {
+		$show_socialmedia_buttons_global		= get_field('show_socialmedia_buttons_global', 'option');
+	}
 	
 	if ( $show_socialmedia_buttons_global !== SOC_MED_NO ) {
 		return gc_wbvb_socialbuttons( $post_info, $hidden );
@@ -695,7 +707,13 @@ function gc_wbvb_socialbuttons($post_info, $hidden = '') {
     $summary    = urlencode($post_info->post_excerpt);
     $comment    = '';
 
-	$twitteraccount   = ( get_field('siteoptions_twitter_account', 'option') ) ? get_field('siteoptions_twitter_account', 'option') : GC_TWITTERACCOUNT;
+	$twitteraccount	= 'gebrcentraal';
+
+	// @since 4.3.4
+	if ( function_exists( 'get_field' ) ) {
+		$twitteraccount   = ( get_field('siteoptions_twitter_account', 'option') ) ? get_field('siteoptions_twitter_account', 'option') : GC_TWITTERACCOUNT;
+	}
+
 
     if ( $hidden ) {
         $comment    = '<!-- ey, we hoeven maar 1 werkende set sokmetknoppen te gebruiken ja? dit hiero is versiering -->';
@@ -756,25 +774,33 @@ function gc_wbvb_sharebuttons_for_page_top( $title ) {
 
     global $post;
 
-	$show_socialmedia_buttons_global		= get_field('show_socialmedia_buttons_global', 'option');
-	$show_socialmedia_buttons_on_this_page	= SOC_MED_YES;
-
-    if ( is_page() ) {
-        if ( function_exists( 'get_field' ) ) {
-            $show_socialmedia_buttons_on_this_page    = get_field('socialmedia_icoontjes', $post->ID );
-        }
-
-		if  ( ( $show_socialmedia_buttons_global !== SOC_MED_NO ) && ( $show_socialmedia_buttons_on_this_page !== SOC_MED_NO ) && ( is_single() ) )  {
-            $show_socialmedia_buttons_on_this_page = gc_wbvb_socialbuttons($post, '' );
-        }
-        else {
-            $show_socialmedia_buttons_on_this_page = '';
-        }
-        $title .= $show_socialmedia_buttons_on_this_page;
-    }
-
-    return $title;
-
+	// @since 4.3.4
+	if ( ! function_exists( 'get_field' ) ) {
+		echo ACF_PLUGIN_NOT_ACTIVE_WARNING;
+	}
+	else {
+	
+		$show_socialmedia_buttons_global		= get_field('show_socialmedia_buttons_global', 'option');
+		$show_socialmedia_buttons_on_this_page	= SOC_MED_YES;
+	
+	    if ( is_page() ) {
+	        if ( function_exists( 'get_field' ) ) {
+	            $show_socialmedia_buttons_on_this_page    = get_field('socialmedia_icoontjes', $post->ID );
+	        }
+	
+			if  ( ( $show_socialmedia_buttons_global !== SOC_MED_NO ) && ( $show_socialmedia_buttons_on_this_page !== SOC_MED_NO ) && ( is_single() ) )  {
+	            $show_socialmedia_buttons_on_this_page = gc_wbvb_socialbuttons($post, '' );
+	        }
+	        else {
+	            $show_socialmedia_buttons_on_this_page = '';
+	        }
+	        $title .= $show_socialmedia_buttons_on_this_page;
+	    }
+	
+	    return $title;
+	
+	}
+	
 }
 
 
@@ -1174,7 +1200,12 @@ if (! function_exists( 'dovardump' ) ) {
 function gc_wbvb_add_pageheader_tags() {
 	
 	$postid       				= get_the_ID();
-	$featimg_automatic_insert	= get_field( 'featimg_automatic_insert', $postid );
+	$featimg_automatic_insert	= 'ja';
+
+	// @since 4.3.4
+	if ( function_exists( 'get_field' ) ) {
+		$featimg_automatic_insert	= get_field( 'featimg_automatic_insert', $postid );
+	}
 	
 	if ( 'nee' !== $featimg_automatic_insert ) {
 		$featimg_automatic_insert = 'ja';
@@ -1311,7 +1342,12 @@ function gc_wbvb_add_blog_single_css() {
 			$the_image_ID 				= 'image_' . $theID;
 			$extra_class  				= '';
 			$class        				= 'feature-image noimage';
-			$featimg_automatic_insert	= get_field( 'featimg_automatic_insert', $postid );
+			$featimg_automatic_insert	= 'ja';
+
+			// @since 4.3.4
+			if ( function_exists( 'get_field' ) ) {
+				$featimg_automatic_insert	= get_field( 'featimg_automatic_insert', $postid );
+			}
 			
 			if ( 'nee' !== $featimg_automatic_insert ) {
 				$featimg_automatic_insert = 'ja';
@@ -2544,10 +2580,15 @@ function gc_wbvb_archive_loop() {
 			else {
 
 				if ( GC_BEELDBANK_BEELD_CPT == get_post_type() ) {
-					$attachment     = get_field('beeld_foto', $getid );
-					if ( isset( $attachment['ID'] ) ) {
-						$image = wp_get_attachment_image_src( $attachment['ID'], 'large' );
+
+					// @since 4.3.4
+					if ( function_exists( 'get_field' ) ) {
+						$attachment     = get_field('beeld_foto', $getid );
+						if ( isset( $attachment['ID'] ) ) {
+							$image = wp_get_attachment_image_src( $attachment['ID'], 'large' );
+						}
 					}
+
 				} 
 				elseif ( has_post_thumbnail( $getid ) ) {
 					
@@ -2807,6 +2848,9 @@ function gc_wbvb_breadcrumb_add_newspage( $crumb, $args ) {
 				$crumb = ictu_gctheme_breadcrumbstring( $currentpageID, $args );
 			}
 		}
+	}
+	else {
+		return ACF_PLUGIN_NOT_ACTIVE_WARNING;
 	}
 	
 	return $crumb;

@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.1.6
-// @desc.   Separate CSS files restored. Login form slightly retouched.
+// @version 4.3.4
+// @desc.   Betere checks op get_field, ofwel: is ACF-plugin actief?
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -114,43 +114,51 @@ function append_header_css_for_gc_beeldbank_homewidget() {
 	global $wp_registered_widgets;    
 	
 	$header_css = '';
+
+	if ( ! function_exists( 'get_field' ) ) {
+		return;
+	}
+	else {
 	
-	if ( is_array( $wp_registered_widgets )  ) {
-
-		foreach ( $wp_registered_widgets as $breakpoint ) {
-			
-			if ( WBVB_GC_BEELDEN_HOMEWIDGET == $breakpoint['name'] ) {
-			
-				$widget_id = $breakpoint['id'];	
-
-				$posts = get_field( 'selecteer_content', 'widget_' . $widget_id );
+		if ( is_array( $wp_registered_widgets )  ) {
+	
+			foreach ( $wp_registered_widgets as $breakpoint ) {
 				
-				if ( $posts ) {
-					
-				 	// loop through the rows of data
-				    foreach( $posts as $p ):
-			
-						$getid        	= $p->ID;
-						$the_image_ID	= $widget_id . '_widget_posts_' . $getid;
-			          
-						if (has_post_thumbnail( $getid ) ) {
+				if ( WBVB_GC_BEELDEN_HOMEWIDGET == $breakpoint['name'] ) {
+				
+					$widget_id = $breakpoint['id'];	
 	
-							$image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), 'medium' );
-							
-							if ( $image[0] ) {
-								$header_css .= '#' . $the_image_ID . " { \n";
-								$header_css .= " background-image: url('" . $image[0] . "');\n";
-								$header_css .= "} \n";
-								$class = 'feature-image';
-								$header_css .= '/* append_header_css_for_gc_beeldbank_homewidget: ' . sanitize_title( $image[0] ) . " */\n";
-							}
-						}
-						    
-				    endforeach;
+					$posts = get_field( 'selecteer_content', 'widget_' . $widget_id );
+					
+					if ( $posts ) {
+						
+					 	// loop through the rows of data
+					    foreach( $posts as $p ):
+				
+							$getid        	= $p->ID;
+							$the_image_ID	= $widget_id . '_widget_posts_' . $getid;
+				          
+							if (has_post_thumbnail( $getid ) ) {
 		
+								$image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), 'medium' );
+								
+								if ( $image[0] ) {
+									$header_css .= '#' . $the_image_ID . " { \n";
+									$header_css .= " background-image: url('" . $image[0] . "');\n";
+									$header_css .= "} \n";
+									$class = 'feature-image';
+									$header_css .= '/* append_header_css_for_gc_beeldbank_homewidget: ' . sanitize_title( $image[0] ) . " */\n";
+								}
+							}
+							    
+					    endforeach;
+			
+					}
 				}
 			}
 		}
+	
+		
 	}
 	
 	if ( $header_css ) {

@@ -8,8 +8,8 @@
 // * @package gebruiker-centraal
 // * @author  Paul van Buuren
 // * @license GPL-2.0+
-// * @version 4.2.1
-// * @desc.   ACF bidirectional relationship function; function voor een lightbox.
+// * @version 4.3.4
+// * @desc.   Betere checks op get_field, ofwel: is ACF-plugin actief?
 // * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 ///
 
@@ -25,16 +25,24 @@ add_action( 'genesis_header_right', 'gc_wbvb_get_search_form' );
 
 function gc_wbvb_get_search_form( ) {
 
-	$acfshowsearchform		= get_field('site_option_show_search_in_header', 'option');
-	if ( 'nee' == $acfshowsearchform ) {
-		// no search form in header
+	// @since 4.3.4
+	if ( ! function_exists( 'get_field' ) ) {
+		echo ACF_PLUGIN_NOT_ACTIVE_WARNING;
+		return;
 	}
 	else {
-		if ( is_search() || is_404() ) {
-			// do nothing
+
+		$acfshowsearchform		= get_field('site_option_show_search_in_header', 'option');
+		if ( 'nee' == $acfshowsearchform ) {
+			// no search form in header
 		}
 		else {
-			echo get_search_form();
+			if ( is_search() || is_404() ) {
+				// do nothing
+			}
+			else {
+				echo get_search_form();
+			}
 		}
 	}
 }

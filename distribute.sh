@@ -72,19 +72,29 @@ find . -name ‘*.bak’ -type f -delete
 echo 'naar sentia folder: accept'
 rsync -r -a -v --delete '/Users/paul/shared-paul-files/Webs/temp/' '/Users/paul/shared-paul-files/Webs/ICTU/Gebruiker Centraal/sentia/accept/www/wp-content/themes/gebruiker-centraal/'
 
-echo 'naar development folder, versiebackup: 4.3.2'
-rsync -r -a -v --delete '/Users/paul/shared-paul-files/Webs/temp/' '/Users/paul/shared-paul-files/Webs/ICTU/Gebruiker Centraal/development/wp-content/themes/xxx_old_versions/gebruiker-centraal-4.3.2/'
+echo 'naar development folder, versiebackup: 4.3.4'
+rsync -r -a -v --delete '/Users/paul/shared-paul-files/Webs/temp/' '/Users/paul/shared-paul-files/Webs/ICTU/Gebruiker Centraal/development/wp-content/themes/xxx_old_versions/gebruiker-centraal-4.3.4/'
 
-echo 'naar sentia folder: accept, versiebackup 4.3.2'
-rsync -r -a -v --delete '/Users/paul/shared-paul-files/Webs/temp/' '/Users/paul/shared-paul-files/Webs/ICTU/Gebruiker Centraal/sentia/accept/www/wp-content/themes/XXX_oude_versies/gebruiker-centraal-4.3.2/'
+## go to development folder
+cd '/Users/paul/shared-paul-files/Webs/ICTU/Gebruiker Centraal/development/wp-content/themes/xxx_old_versions/';
+
+## create a tar ball
+tar czf gebruiker-centraal-4.3.4.tar.gz 'gebruiker-centraal-4.3.4'
+
+## remove the folder
+rm -rf '/Users/paul/shared-paul-files/Webs/ICTU/Gebruiker Centraal/development/wp-content/themes/xxx_old_versions/gebruiker-centraal-4.3.4/'
+
+
+echo 'naar sentia folder: accept, versiebackup 4.3.4'
+rsync -r -a -v --delete '/Users/paul/shared-paul-files/Webs/temp/' '/Users/paul/shared-paul-files/Webs/ICTU/Gebruiker Centraal/sentia/accept/www/wp-content/themes/XXX_oude_versies/gebruiker-centraal-4.3.4/'
 
 
 
 echo 'naar sentia folder: live'
 rsync -r -a -v --delete '/Users/paul/shared-paul-files/Webs/temp/' '/Users/paul/shared-paul-files/Webs/ICTU/Gebruiker Centraal/sentia/live/www/wp-content/themes/gebruiker-centraal/'
 
-echo 'naar sentia folder: live, versiebackup 4.3.2'
-rsync -r -a -v --delete '/Users/paul/shared-paul-files/Webs/temp/' '/Users/paul/shared-paul-files/Webs/ICTU/Gebruiker Centraal/sentia/live/www/wp-content/themes/XXX_oude_versies/gebruiker-centraal-4.3.2/'
+echo 'naar sentia folder: live, versiebackup 4.3.4'
+rsync -r -a -v --delete '/Users/paul/shared-paul-files/Webs/temp/' '/Users/paul/shared-paul-files/Webs/ICTU/Gebruiker Centraal/sentia/live/www/wp-content/themes/XXX_oude_versies/gebruiker-centraal-4.3.4/'
 
 
 # remove temp dir
