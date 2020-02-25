@@ -1,0 +1,19 @@
+{
+  "name": "ictu/ictuwp-theme-gebruikercentraal",
+  "type": "wordpress-theme",
+  "license": "GPL-3.0",
+  "description": "Theme voor gebruikercentraal.nl",
+  "homepage": "https://www.gebruikercentraal.nl",
+  "authors": [
+    {
+      "name": "Paul van Buuren",
+      "email": "paul@wbvb.nl",
+      "homepage": "https://wbvb.nl"
+    },
+    {
+      "name": "Tamara de Haas",
+      "email": "info@haas-ontwerp.nl",
+      "homepage": "http://haas-ontwerp.nl/"
+    }
+  ]
+}
