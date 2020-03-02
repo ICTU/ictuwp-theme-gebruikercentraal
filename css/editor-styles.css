@@ -4470,6 +4470,7 @@ body {
   text-decoration: none;
   display: block;
   background: #fff;
+  border: 1px solid transparent;
 }
 #em-wrapper section a header {
   position: relative;
@@ -4500,7 +4501,7 @@ body {
 #em-wrapper section a:hover,
 #em-wrapper section a:active,
 #em-wrapper section a:focus {
-  background: #148839;
+  border-color: #00303d;
 }
 #em-wrapper section a:hover:after,
 #em-wrapper section a:active:after,
@@ -4524,11 +4525,6 @@ body {
 #em-wrapper section a:active .meta,
 #em-wrapper section a:focus .meta {
   color: #00303d;
-}
-#em-wrapper section a:hover .excerpt,
-#em-wrapper section a:active .excerpt,
-#em-wrapper section a:focus .excerpt {
-  border-color: #148839;
 }
 #em-wrapper section a:hover .date-badge,
 #em-wrapper section a:active .date-badge,

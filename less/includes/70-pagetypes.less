@@ -1,19 +1,19 @@
-//@import "../abstracts/_variables"; // wordt niet zelfstandig gecompiled, dus geen includes
-//@import "../abstracts/_mixins";
-
-.pagetypes() {
-
 // Gebruiker Centraal - 70-pagetypes.less
 // ----------------------------------------------------------------------------------
 // bevat CSS voor de diverse type pagina's
+// er zijn twee mixins actief via dit less-bestand:
+// - .pagetypes()
+// - .archive_page()
 // ----------------------------------------------------------------------------------
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.29.4
-// @desc.   Stappenplan-functionaliteit verplaatst naar pagina-template 'page_stappenplan'.
+// @version 4.3.4
+// @desc.   Event-single: niet meer tonen van samenvatting.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
+
+.pagetypes() {
 
 // ================================================================================
 
@@ -570,33 +570,33 @@ body {
 // ========================================================================
 
 #em-wrapper {
-
-  section {
-    .standardboxshadow();
-    position: relative;
-    overflow: hidden;
-  }
-
-  section + section {
-    margin-top: .5em;
-  }
-
+	
+	section {
+		.standardboxshadow();
+		position: relative;
+		overflow: hidden;
+	}
+	
+	section + section {
+		margin-top: .5em;
+	}
 
 	section a {
 		text-decoration: none;
 		display: block;
 		background: @wit;
-
+		border: 1px solid transparent;
+		
 		header {
 			position: relative;
 			padding: @padding @padding 0 60px;
-
+			
 			h3 {
 				margin: 0;
 				padding: 0 0 .2em 0;
 			}
 		}
-
+		
 		.excerpt {
 			border-top: 2px solid @border_grijs;
 			margin: 0 @padding;
@@ -607,25 +607,26 @@ body {
 		.meta {
 			color: @txt_grijs;
 		}
-
+		
 		.datebadge();
-
+		
 		&:hover,
 		&:active,
 		&:focus {
-			background: @gc_a11y_green;
+//			background: @gc_a11y_green;
+			border-color: @txt;
 			.ezelsoortje();
-
+			
 			&,
 			.excerpt,
 			.meta {
 				color: @txt;
 			}
-
+			
 			.excerpt {
-				border-color: @gc_a11y_green;
+//				border-color: @gc_a11y_green;
 			}
-
+			
 			.date-badge {
 				border-color: @txt;
 			}
