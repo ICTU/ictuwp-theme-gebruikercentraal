@@ -12,7 +12,10 @@ rsync -r -a -v --delete '/Users/paul/shared-paul-files/Webs/ICTU/Gebruiker Centr
 
 # clean up temp dir
 rm -rf '/Users/paul/shared-paul-files/Webs/temp/.codekit-cache/'
+rm -rf '/Users/paul/shared-paul-files/Webs/temp/.idea/'
 rm -rf '/Users/paul/shared-paul-files/Webs/temp/.git/'
+rm -rf '/Users/paul/shared-paul-files/Webs/temp/node_modules/'
+rm -rf '/Users/paul/shared-paul-files/Webs/temp/frontend/'
 rm '/Users/paul/shared-paul-files/Webs/temp/config.codekit'
 rm '/Users/paul/shared-paul-files/Webs/temp/config.codekit3'
 rm '/Users/paul/shared-paul-files/Webs/temp/distribute.sh'
@@ -24,8 +27,9 @@ rm '/Users/paul/shared-paul-files/Webs/temp/gebruikercentraal-wp-theme.code-work
 
 
 cd '/Users/paul/shared-paul-files/Webs/temp/'
-find . -name ‘*.DS_Store’ -type f -delete
-find . -name ‘*.map’ -type f -delete
+find . -name '*.DS_Store' -type f -delete
+find . -name '*.map' -type f -delete
+find . -name '*.zip' -type f -delete
 
 
 # --------------------------------------------------------------------------------------------------------------------------------
