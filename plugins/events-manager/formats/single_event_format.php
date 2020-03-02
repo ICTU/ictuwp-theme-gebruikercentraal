@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.26.1
-// @desc.   Icons (microfoon, level, flag) toegevoegd. Code cleanup voor event manager bestanden.
+// @version 4.3.4
+// @desc.   Event-single: niet meer tonen van samenvatting.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
     
@@ -30,6 +30,7 @@ $event_times              = '';
 $event_location           = ''; 
 
 if ( is_object( $EM_Event ) ) {
+
 	$event_start_datetime     = strtotime( $EM_Event->event_start_date . ' ' . $EM_Event->event_start_time );
 	$event_end_datetime       = strtotime( $EM_Event->event_end_date . ' ' . $EM_Event->event_end_time);
 	
@@ -79,12 +80,12 @@ elseif( $EM_Event->event_start_date != $EM_Event->event_end_date ) {
 
 
 
-$header_meta_info = '';
-$lebookings       = $EM_Event->bookings;
+$header_meta_info	= '';
+$lebookings 		= $EM_Event->bookings;
 
-$kostduurquageld  =  __( 'Free of charge', 'gebruikercentraal' );
-$price_min        = 0;
-$price_max        = 0;
+$event_cost 		=  __( 'Free of charge', 'gebruikercentraal' );
+$price_min        	= 0;
+$price_max        	= 0;
 
 if ( is_array( $lebookings ) || is_object( $lebookings ) ) {
 	// has bookings
@@ -118,15 +119,15 @@ if ( is_array( $lebookings ) || is_object( $lebookings ) ) {
 	}
 
 	if ( floatval( $price_min ) > 0 ) {
-		$kostduurquageld = '<span itemprop="lowPrice">' . round($price_min,2) . '</span>';
+		$event_cost = '<span itemprop="lowPrice">' . round($price_min,2) . '</span>';
 		if ( ( floatval( $price_max ) > 0 )  && ( $price_max > $price_min ) ) {
-			$kostduurquageld .= ' - ' . '<span itemprop="highPrice">' . round($price_max,2) . '</span>';
+			$event_cost .= ' - ' . '<span itemprop="highPrice">' . round($price_max,2) . '</span>';
 		}  
-		$header_meta_info .= '<div class="event-pricing" itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">' . $kostduurquageld . $availabletickets . '</div>';
+		$header_meta_info .= '<div class="event-pricing" itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">' . $event_cost . $availabletickets . '</div>';
 	}  
 	else {
-		$kostduurquageld .= '<div class="visuallyhidden" itemprop="price">0</div>';
-		$header_meta_info .= '<div class="event-pricing" itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">' . $kostduurquageld . $availabletickets . '</div>';
+		$event_cost .= '<div class="visuallyhidden" itemprop="price">0</div>';
+		$header_meta_info .= '<div class="event-pricing" itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">' . $event_cost . $availabletickets . '</div>';
 	}
 
 	$header_meta_info .= $EM_gc_wbvb_single_event_aanmeldingen;
@@ -140,7 +141,6 @@ else {
 	}
 }
 
-
 ?>
 
     <header class="wrap">#_AVAILABILITYCHECK
@@ -149,41 +149,26 @@ else {
         <div class="meta"><?php echo $header_meta_info ?></div>
 
     </header>
-    <?php
-    //=======================
-		if ( has_excerpt() ) { 
-		?>
-		<div class="wrap excerpt">
-			<?php echo gc_wbvb_check_socialbuttons($post, '' ) ?>
-			#_EVENTEXCERPT
-		</div>
-		<div class="wrap description" itemprop="description">
-			#_EVENTNOTES
-		</div>
-		<?php  // echo $EM_gc_wbvb_single_event_organizor;
-	}
-	else { 
-		
+	<?php
 		//=======================
 		?>
 		<div class="wrap description" itemprop="description">
 			<?php echo gc_wbvb_check_socialbuttons($post, '' ) ?>
 			#_EVENTNOTES
 		</div>
-		<?php  // echo $EM_gc_wbvb_single_event_organizor; 
-		
-	} 
-    //=======================
+	
+	<?php  // echo $EM_gc_wbvb_single_event_organizor; 
+	//=======================
      
-     if ( $EM_gc_wbvb_single_event_links ) {
+	if ( $EM_gc_wbvb_single_event_links ) {
+		
+		echo '<div class="event-links wrap">';
+		echo $EM_gc_wbvb_single_event_links;
+		echo '</div>';
+		
+	}
 
-      echo '<div class="event-links wrap">';
-      echo $EM_gc_wbvb_single_event_links;
-      echo '</div>';
-       
-     }
-
-    if ( $EM_gc_wbvb_single_event_programma ) { 
+	if ( $EM_gc_wbvb_single_event_programma ) { 
         // toon programma
         ?>
         <div id="event_map_en_programma" class="wrap">
