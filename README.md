@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-4.3.4 - Event-single: niet meer tonen van samenvatting.
+4.3.5 - Verder oplappen van homepage.
 
 ## Version history
+* 4.3.5 - Verder oplappen van homepage.
 * 4.3.4 - Event-single: niet meer tonen van samenvatting.
 * 4.3.2 - Spoedreparatie blogarchiefpagina.
 * 4.3.1 - Fixes voor actieteamwidget bug (sanitize_title) en authorbox (get user ID from get_queried_object).

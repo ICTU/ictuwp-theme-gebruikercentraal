@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.3.4
-// @desc.   Event-single: niet meer tonen van samenvatting.
+// @version 4.3.5
+// @desc.   Verder oplappen van homepage.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '4.3.4' );
-define( 'CHILD_THEME_DESCRIPTION', "4.3.4 - Event-single: niet meer tonen van samenvatting." );
+define( 'CHILD_THEME_VERSION', '4.3.5' );
+define( 'CHILD_THEME_DESCRIPTION', "4.3.5 - Verder oplappen van homepage." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );

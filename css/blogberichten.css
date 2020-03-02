@@ -10,10 +10,6 @@
 // @desc.   Spoedreparatie blogarchiefpagina.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 */
-/*
- * Abstracts
- * Variables, mixins, extendables - things we use everywhere
- */
 /* Typografie */
 /* Default variables for textblocks */
 /* Chart */
@@ -96,8 +92,7 @@
 .archive .archive-list section:hover,
 .beeldbank .archive-list section:hover,
 .page .archive-list section:hover {
-  -webkit-box-shadow: 2px 2px 5px #bbb;
-          box-shadow: 2px 2px 5px #bbb;
+  box-shadow: 2px 2px 5px #bbb;
 }
 .archive .archive-list header,
 .beeldbank .archive-list header,
@@ -128,8 +123,7 @@
 .page .archive-list .entry a:active,
 .page .archive-list .entry a:focus,
 .page .archive-list .entry a:hover {
-  -webkit-box-shadow: 2px 2px 5px #bbb;
-          box-shadow: 2px 2px 5px #bbb;
+  box-shadow: 2px 2px 5px #bbb;
   z-index: 9999;
   border-color: #002F3E;
 }
@@ -191,8 +185,7 @@
 .page .archive-list .entry a:active .excerpt:after,
 .page .archive-list .entry a:focus .excerpt:after,
 .page .archive-list .entry a:hover .excerpt:after {
-  -webkit-box-shadow: 3px 3px 0 #a1a1a1;
-          box-shadow: 3px 3px 0 #a1a1a1;
+  box-shadow: 3px 3px 0 #a1a1a1;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20height%3D%2213%22%20viewBox%3D%220%200%207%2013%22%20width%3D%227%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m1.43603516%200-1.43603516%201.87664462%203.49723918%204.09969324-3.49723918%204.09988764%201.43603516%202.2206495%205.62389954-6.32053714z%22%20fill%3D%22%23148839%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E%0A");
 }
 .archive .archive-list .entry a:active:after,
@@ -243,8 +236,7 @@
   position: absolute;
   right: 0;
   bottom: 1em;
-  -webkit-box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
   background-image: url('../images/cta-pijl.png');
   background-image: url('../images/cta-pijl.svg'), none;
   background-position: center center;
@@ -489,16 +481,12 @@
 }
 .banner-widget {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
-          box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  flex-direction: row;
+  flex-wrap: nowrap;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
   margin-bottom: 4rem;
   color: #fff;
 }
@@ -518,8 +506,7 @@
 .banner-widget.right {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
-  -ms-flex-direction: row-reverse;
-      flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 .banner-widget .widget-title {
   font-family: 'League Gothic', Impact, Helvetica, Arial, sans-serif;
@@ -550,8 +537,7 @@
 .banner-widget.left .banner-widget_image,
 .banner-widget.right .banner-widget_image {
   -webkit-box-flex: 1;
-  -ms-flex: 1 0 34%;
-      flex: 1 0 34%;
+  flex: 1 0 34%;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -559,8 +545,7 @@
 .banner-widget.left .banner-widget_text,
 .banner-widget.right .banner-widget_text {
   -webkit-box-flex: 2;
-  -ms-flex: 2 0 66%;
-      flex: 2 0 66%;
+  flex: 2 0 66%;
   padding-bottom: 4rem;
 }
 .banner-widget.left .banner-widget_text p,
@@ -581,8 +566,7 @@
   vertical-align: middle;
   position: relative;
   border: 0 solid transparent;
-  -webkit-box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
   font-family: 'League Gothic', Impact, Helvetica, Arial, sans-serif;
   font-size: 24px;
   font-size: 2.4rem;
