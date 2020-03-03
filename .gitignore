@@ -24,3 +24,8 @@ gebruikercentraal-wp-theme.code-workspace
 *.code-workspace
 *.lock
 node_modules/.yarn-integrity
+
+development/plugins/ictuwp-plugin-inclusie_XXX
+development/plugins/ictuwp-plugin-conference_XXX
+development/plugins/ictuwp-plugin-conference
+
