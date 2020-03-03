@@ -54,6 +54,12 @@
 /* Default variables for textblocks */
 /* Chart */
 /* Nav */
+.gc-list-title {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  font-family: 'montserrat_semiboldregular', Helvetica, Arial, sans-serif;
+}
 /*
 ---------------------------------------------------------------------------------------------------- */
 /*

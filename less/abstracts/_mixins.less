@@ -384,7 +384,6 @@
 //=========================================================================================================
 
 .datebadge_klein( @achtergrondkleur: @gc_a11y_green, @width: 3em) {
-
   float: left;
   display: inline-block;
   border: 1px solid @achtergrondkleur;
@@ -398,7 +397,6 @@
     display: block;
     float: none;
     clear: both;
-    color: @txt;
     .fontsize(10);
     padding-left: .15em;
     padding-right: .15em;
@@ -1238,4 +1236,10 @@
     transform: rotate(4deg);
     margin: 0 -10rem -10rem;
   }
+}
+
+.gc-list-title {
+  .font-size(18);
+  line-height: 2.8rem;
+  font-family: @font_primary_semi;
 }

@@ -146,7 +146,6 @@
 		}	
 	}
 
-  .gc-event-widget .bg-color + a,  
   .widget-read-all {
     display: block;
     text-align: right;
@@ -237,9 +236,7 @@
 		}
 	}
 
-	.gc-event-widget,
-	.gc-site-home-contentwidget,
-	.gc-berichten-widget {
+	.gc-site-home-contentwidget {
 		.bg-color {
 			background: @wit;
 		}
@@ -278,6 +275,7 @@
 			color: @txt_grijs;  
 		}
 		.author-box-title {
+			.font-size(16);
 			display: inline-block;
 			clear: both;
 			margin-bottom: 0;
@@ -319,9 +317,7 @@
 	}
 
 	.gc-actieteam-widget,
-	.gc-event-widget,
-	.gc-site-home-contentwidget,
-	.gc-berichten-widget {
+	.gc-site-home-contentwidget {
 
 		.blogberichtshared( 50px, @readmore_width, @readmore_height, 50 );
 		
@@ -347,67 +343,7 @@
 		}    
 	}
 
-  .gc-event-widget {
-
-    .tijdenplaats {
-      .eventicons();
-    }
-
-    .bg-color {
-      background: #F8F8F8;
-    }
-
-    .entry {
-      a {
-        padding: 0 @padding @padding @padding;
-      }
-
-      &:not(.first) {
-        .excerpt,
-          .tijdenplaats {
-            .visuallyhidden();
-          }
-      }      
-
-@lewidth: 45px;
-
-      &.first {
-        position: relative;
-        a {
-          background: @wit;
-        }
-
-        header, [itemprop="description"] {
-          margin: 0 0 0 ( @lewidth + @padding);
-        }
-        header {
-          position:static;
-          &, h3 {
-            padding: 0;
-          }
-        }
-        .tijdenplaats {
-          padding-bottom: ( @padding / 2 );
-          margin-bottom: ( @padding / 2 );
-          border-bottom: 2px solid @lichtgrijs;
-        }
-
-        h3 {
-          font-family: @headerfont;
-          .fontsize(32);
-          line-height: 1;
-          margin-top: ( @padding / 2 );
-        }
-
-        .date-badge {
-          .datebadge_groot(@paars, 45px, ( @padding / 1.5 ), @padding);
-        }
-      }
-    }
-  }
-
-	.gc-site-home-contentwidget,
-	.gc-berichten-widget {
+	.gc-site-home-contentwidget {
 		.entry {
 			padding: 0;
 		}
@@ -624,8 +560,7 @@
 
 	#home-widgets-left {
 		
-		.gc-site-home-contentwidget,
-		.gc-berichten-widget {
+		.gc-site-home-contentwidget {
 			.entry {
 				&, a {
 					min-height: ( @width + 1 );
@@ -643,8 +578,7 @@
 	
 	#home-widgets-right {
 		
-		.gc-site-home-contentwidget,
-		.gc-berichten-widget {
+		.gc-site-home-contentwidget {
 			.entry {
 				&, a {
 					min-height: ( @width / 2 );
