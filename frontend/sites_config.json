@@ -6,15 +6,45 @@
     "proxy": "live-gebruikercentraal.co.uk"
   },
   "inclusie": {
-    "name": "Inclusie - Plugin",
-    "path": "../../../plugins/ictu-gc-posttypes-inclusie/",
-    "dest": "../../../plugins/ictu-gc-posttypes-inclusie/css",
-    "proxy": "inclusie.gebruikercentraal.co.uk/"
+    "name":            "GC Inclusie plugin",
+    "type":            "plugin",
+    "path":            "../development/plugins/ictuwp-plugin-inclusie/",
+    "proxy":           "inclusie.gebruikercentraal.co.uk/",
+    "csssource":       "../development/plugins/ictuwp-plugin-inclusie/assets/less/",
+    "cssdest":         "../development/plugins/ictuwp-plugin-inclusie/assets/css",
+    "pluginsource":    "../development/plugins/ictuwp-plugin-inclusie/**/",
+    "plugintarget":    "../../../plugins/ictuwp-plugin-inclusie/"
   },
   "beeldbank": {
-    "name": "Beeldbank - Plugin",
-    "path": "../../../plugins/ictu-gc-posttypes-brieven-beelden/",
-    "dest": "../../../plugins/ictu-gc-posttypes-brieven-beelden/css",
-    "proxy": "beeldbank.gebruikercentraal.co.uk/"
+    "name":            "GC Beeldbank plugin",
+    "type":            "plugin",
+    "proxy":           "beeldbank.gebruikercentraal.co.uk/",
+    "path":            "../development/plugins/ictuwp-plugin-beeldbank/",
+    "csssource":       "../development/plugins/ictuwp-plugin-beeldbank/less/",
+    "cssdest":         "../development/plugins/ictuwp-plugin-beeldbank/css",
+    "pluginsource":    "../development/plugins/ictuwp-plugin-beeldbank/**/",
+    "plugintarget":    "../../../plugins/ictuwp-plugin-beeldbank/"
+  },
+  "maturityscore": {
+    "name":            "GC maturityscore plugin",
+    "type":            "plugin",
+    "proxy":           "beeldbank.gebruikercentraal.co.uk/",
+    "path":            "../development/plugins/ictuwp-plugin-maturityscore/",
+    "csssource":       "../development/plugins/ictuwp-plugin-maturityscore/less/",
+    "cssdest":         "../development/plugins/ictuwp-plugin-maturityscore/assets/css",
+    "pluginsource":    "../development/plugins/ictuwp-plugin-maturityscore/**/",
+    "plugintarget":    "../../../plugins/ictuwp-plugin-maturityscore/"
+  },
+  "conference": {
+    "name":            "GC conference plugin",
+    "type":            "plugin",
+    "proxy":           "conference.gebruikercentraal.co.uk/",
+    "path":            "../development/plugins/ictuwp-plugin-conference/",
+    "csssource":       "../development/plugins/ictuwp-plugin-conference/less/",
+    "cssdest":         "../development/plugins/ictuwp-plugin-conference/css",
+    "pluginsource":    "../development/plugins/ictuwp-plugin-conference/**/",
+    "plugintarget":    "../../../plugins/ictuwp-plugin-conference/"
   }
 }
+
+
