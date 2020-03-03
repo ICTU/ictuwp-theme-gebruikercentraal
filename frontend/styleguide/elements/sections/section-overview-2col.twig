@@ -1,0 +1,21 @@
+<section class="section section--overview">
+
+  <div class="l-section-top">
+    <h2 class="section__title">Tweekoloms grid</h2>
+        <p class="section__description">Een standaard 2 kolomsgrid in een sectie. De tweekoloms krijgt altijd dezelfde breedte als de intro - de "smallere" inhoud (@max-width-inner)..</p>
+  </div>
+
+
+  <div class="l-section-content">
+
+    <div class="grid grid--col-2">
+      {% include '../includes/card.twig' with {'card_title': 'Kaartje zonder afbeelding'} %}
+      {% include '../includes/card--with-image.twig' with {'card_title': 'Kaartje met een afbeelding'} %}
+      {% include '../includes/card--doelgroep.twig' %}
+      {% include '../includes/card--tipkaart.twig' with {'modifier' : 'Kanaalsturing'} %}
+    </div>
+
+
+  </div>
+</section>
+

@@ -11,9 +11,22 @@
 
 .single.single-stap.full-width-content {
 
-  #maincontent:before {
-    @media @desktop {
-      height: 44rem;
+  #maincontent {
+    position: relative;
+
+    &:before {
+      content: " ";
+      position: absolute;
+      background: @brand_color;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 30rem;
+      display: block;
+
+      @media @desktop {
+        height: 44rem;
+      }
     }
   }
 
@@ -37,12 +50,17 @@
 
   .content-sidebar-wrap {
     padding: 0;
+    position: relative;
 
     > .content {
       padding: 0;
       background: none;
       box-shadow: none;
     }
+  }
+
+  .content .entry {
+    padding: 0;
   }
 
   .l-content-menu-wrapper {

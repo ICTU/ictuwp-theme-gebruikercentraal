@@ -1,0 +1,19 @@
+<section class="section section--overview">
+
+  <div class="l-section-top">
+    <h2 class="section__title">Éen koloms grid</h2>
+        <p class="section__description">Wanneer kaartjes in een 1 koloms grid worden getoond</p>
+  </div>
+
+
+  <div class="l-section-content">
+
+    <div class="grid grid--col-1">
+      {% include '../includes/card.twig' with {'card_title': 'Kaartje zonder afbeelding'} %}
+      {% include '../includes/card--with-image.twig' with {'card_title': 'Kaartje met afbeelding in 1 koloms', 'card_description': 'Bij een kaartje met een afbeelding in een 1 kolomsgrid mag de afbeelding altijd naast de samenvattende tekst komen.'} %}
+    </div>
+
+
+  </div>
+</section>
+

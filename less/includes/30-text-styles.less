@@ -18,7 +18,7 @@
   font-family: @bodyfont;
   font-size: 16px;
   font-weight: normal;
-  line-height: 1.625;    
+  line-height: 1.625;
 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -29,10 +29,10 @@
   // - editor-styles.less
   // - style.less
   // - login-form.less
-  
+
   .write-defaults();
   .write-table();
-  .write-headings();    
+  .write-headings();
 }
 
 
@@ -42,31 +42,31 @@
   // wordt gebruikt in 
   // - mailtemplate.less
   // .textstyles()     
-  
+
   a {
     color: @a-content-color;
     text-decoration: underline;
   }
-  
+
   a img {
     margin-bottom: -4px;
     margin-bottom: -0.4rem;
   }
-  
+
   a:hover {
     color: @a-content-hover-color;
   }
-  
+
   p {
     margin: 0 0 @padding 0;
     padding: 0;
   }
-  
-  
+
+
 	ol,
 	ul {
 		padding: 0 0 0 @padding;
-		
+
 		li {
 			.children {
 				// ul or ol
@@ -74,13 +74,13 @@
 			}
 		}
 	}
-  
+
 	blockquote {
 		color: @txt;
 		margin: 2rem 4rem;
 		position: relative;
 	}
-  
+
 	blockquote::before {
 		color: @gc_greyblue;
 		position: absolute;
@@ -93,16 +93,16 @@
 	blockquote::before {
 		left: ( -1 * @padding );
 	}
-  
+
   .entry-content code {
     background-color: @code-bg;
     color: @txt;
   }
-  
+
   cite {
     font-style: normal;
   }
-  
+
 	aside {
 		font-size: 110%;
 		float: none;
@@ -112,7 +112,7 @@
 		padding: .5rem 1rem;
 		text-align: center;
 		margin: .5rem 0 .5rem 1rem;
-		
+
 		&.alignleft,
 		&.alignright {
 			max-width: 40%;
@@ -124,7 +124,7 @@
 		&.alignright {
 			float: right;
 		}
-				
+
 		@media only screen and (min-width: ( @break_tablet ) ) {
 			font-size: 125%;
 			margin: 0 4rem 3rem 4rem;
@@ -143,28 +143,28 @@
   p:empty {
     display: none;
   }
-  
+
   .attachment a,
   .gallery a {
     border: none;
   }
-  
-  
+
+
   ol li {
     list-style-type: decimal;
   }
-  
+
   ul li {
-    list-style-image: url('images/bullet.png');      
+    list-style-image: url('images/bullet.png');
     .iconaddbullet( '../images/bullet.svg', @txt );
   }
-  
-  
+
+
   ol ol,
   ul ul {
     margin-bottom: 0;
   }
-  
+
   .infoblock {
     background: @lichtgrijs;
     border: 1px solid @border_grijs;
@@ -172,28 +172,28 @@
     margin: 1em 0;
   }
 
-  
+
   img.centered,
   .aligncenter {
     display: block;
     margin: 0 auto @padding;
   }
-  
+
   .alignleft {
     float: left;
     text-align: left;
   }
-  
+
   .alignright {
     float: right;
     text-align: right;
   }
-  
+
   img.alignleft,
   .wp-caption.alignleft {
     margin: ( @padding / 3 ) ( @padding / 2 ) @padding 0;
   }
-  
+
   img.alignright,
   .wp-caption.alignright {
     margin: ( @padding / 3 ) 0 @padding ( @padding / 2 );
@@ -202,7 +202,7 @@
   .wp-caption.alignnone {
     margin: ( @padding / 3 ) 0 0 0;
   }
-  
+
   .thumbnail {
 	  &.alignleft {
 		  margin: .5rem 1rem 1rem 0;
@@ -227,17 +227,17 @@
     overflow: hidden;
     width: 100%;
     margin-bottom: 1em;
-    
+
     @media only screen and (min-width: @break_tablet ) {
       background: @light_gray;
       display: flex;
       padding-top: .5em;
       padding-bottom: .5em;
-    }    
-    
+    }
+
     .wp-caption-text {
       border-bottom-style: none;
-      font-size: 1.6rem;      
+      font-size: 1.6rem;
     }
 
 @breakpoint_nzmz: ( 2 * 300px );
@@ -257,14 +257,14 @@
         border-bottom-width: .25em;
         margin-top: 0;
 
-        &:first-of-type {      
+        &:first-of-type {
           border-top-width: .5em;
         }
-        &:last-of-type {      
+        &:last-of-type {
           border-bottom-width: .5em;
         }
       }
-      
+
       @media only screen and (min-width: @breakpoint_nzmz ) {
         max-width: 49% !important;
         width: 49%;
@@ -279,10 +279,10 @@
 
 
       @media only screen and (min-width: @breakpoint_nzmz ) {
-        &:first-of-type {      
+        &:first-of-type {
           margin-left: 1%;
         }
-        &:last-of-type {      
+        &:last-of-type {
           margin-right: 1%;
         }
       }
@@ -291,7 +291,7 @@
 		.good-example,
 		.bad-example {
 			position: relative;
-			
+
 			&:after {
 				content: ' ';
 				color: @wit;
@@ -306,7 +306,7 @@
 				background-position: 3px center;
 				background-size: 20px 20px;
 				padding-right: 5px;
-			}      
+			}
 		}
 
 		.good-example {
@@ -325,9 +325,9 @@
 				text-indent: 24px;
 			}
 		}
-    
+
   }
-  
+
   .wp-caption-text {
     .fontsize(12);
     font-weight: normal;
@@ -345,11 +345,11 @@
       margin-right: 10px;
       margin-bottom: 0 !important;
   }
-  
+
   .gallery-caption {
     border-bottom: none;
   }
-  
+
 
 }
 
@@ -367,26 +367,26 @@
 
     /* Headings
     --------------------------------------------- */
-    
+
     h1,
     h2,
     h3,
     h4,
     h5,
     h6 {
-		font-weight: normal; 
+		font-weight: normal;
 		line-height: 1.2;
 		margin: ( @gutter / 2 ) 0 ( @gutter / 4 );
 		padding: 1em 0 .3em 0;
 		text-rendering: optimizeLegibility;
 		-webkit-font-smoothing: antialiased;
-		font-family: @montserrat_semibold;		    
-      
-      
+		font-family: @montserrat_semibold;
+
+
       a {
         color: @txt;
         text-decoration: none;
-        
+
         &:hover, &:focus, &:active {
           color: @a_hover;
           text-decoration: underline;
@@ -402,52 +402,52 @@
 //      font-family: @headerfont2;
 //      font-weight: bold;
     }
-	
+
 	.content h2 {
 		.fontsize( @fontsize_title_h2 );
-		font-family: @headerfont;
 		font-weight: normal;
+        font-family: @font_primary_bold;
 	}
-	
+
 	h1,
 	.content h2 {
-		/* NO MORE! 
+		/* NO MORE!
 		@media only screen {
 //			text-transform: uppercase;
 		}
 		*/
 	}
 
-    
+
     h3, .sidebar h2 {
       .fontsize( @fontsize_title_h3 );
     }
-    
+
     h4 {
       .fontsize( @fontsize_title_h4 );
     }
-    
+
     h5 {
       .fontsize( @fontsize_title_h5 );
     }
-    
+
     h6 {
       .fontsize( @fontsize_title_h6 );
     }
 }
 
 .write-table() {
-  
+
   /* Tables
   --------------------------------------------- */
-  
+
   table {
     border-collapse: collapse;
     border-spacing: 0;
     line-height: 1.4;
     margin-bottom: @padding;
     width: 100%;
-    
+
     .time {
       width: 20%;
       min-width: 80px;
@@ -458,25 +458,25 @@
     .topic {
       width: 45%;
     }
-    
+
     tbody {
 //      border-top: 1px solid @border_color;
     }
-    
+
     th,
     td {
       text-align: left;
       vertical-align: top;
       padding-bottom: .4em;
     }
-    
+
     th {
       .bold-font();
 
 		@media only screen {
 			text-transform: uppercase;
 		}
-      
+
     }
   }
 }
