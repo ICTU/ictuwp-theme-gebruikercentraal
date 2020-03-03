@@ -4470,6 +4470,7 @@ body {
   text-decoration: none;
   display: block;
   background: #fff;
+  border: 1px solid transparent;
 }
 #em-wrapper section a header {
   position: relative;
@@ -4500,7 +4501,7 @@ body {
 #em-wrapper section a:hover,
 #em-wrapper section a:active,
 #em-wrapper section a:focus {
-  background: #148839;
+  border-color: #00303d;
 }
 #em-wrapper section a:hover:after,
 #em-wrapper section a:active:after,
@@ -4524,11 +4525,6 @@ body {
 #em-wrapper section a:active .meta,
 #em-wrapper section a:focus .meta {
   color: #00303d;
-}
-#em-wrapper section a:hover .excerpt,
-#em-wrapper section a:active .excerpt,
-#em-wrapper section a:focus .excerpt {
-  border-color: #148839;
 }
 #em-wrapper section a:hover .date-badge,
 #em-wrapper section a:active .date-badge,
@@ -6151,7 +6147,6 @@ aside.sidebar .widget article {
 .gc-site-home-contentwidget .entry a:focus .excerpt:after,
 .gc-berichten-widget .entry a:focus .excerpt:after {
   box-shadow: 3px 3px 0px #a1a1a1;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20height%3D%2213%22%20viewBox%3D%220%200%207%2013%22%20width%3D%227%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m1.43603516%200-1.43603516%201.87664462%203.49723918%204.09969324-3.49723918%204.09988764%201.43603516%202.2206495%205.62389954-6.32053714z%22%20fill%3D%22%23148839%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E%0A");
 }
 .gc-actieteam-widget .entry a:hover:after,
 .gc-event-widget .entry a:hover:after,
@@ -6246,10 +6241,11 @@ aside.sidebar .widget article {
 .gc-event-widget h3,
 .gc-site-home-contentwidget h3,
 .gc-berichten-widget h3 {
-  font-size: 15px;
-  font-size: 1.5rem;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 1;
   color: #00303d;
-  padding-top: 0.4em;
+  padding-top: 0;
 }
 .gc-actieteam-widget .entry,
 .gc-event-widget .entry,
