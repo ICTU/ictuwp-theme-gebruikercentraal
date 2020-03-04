@@ -237,7 +237,8 @@
   right: 0;
   bottom: 1em;
   box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
-  background-image: url('images/cta-pijl.svg');
+  background-image: url('../images/cta-pijl.png');
+  background-image: url('../images/cta-pijl.svg'), none;
   background-position: center center;
   background-repeat: no-repeat;
 }

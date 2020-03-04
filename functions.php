@@ -2536,7 +2536,7 @@ function gc_wbvb_archive_loop() {
 		( is_tax( ICTU_GCCONF_CT_COUNTRY ) ) ||
 		( is_tax( ICTU_GCCONF_CT_TIMESLOT ) ) 
 		)  {
-		// these have their own loop in the 'ictu-gc-plugin-conference' plugin
+		// these have their own loop in the 'ictuwp-plugin-conference' plugin
 		return;
 	}
 		
