@@ -241,22 +241,45 @@ function makeSprites(done) {
 // Watch files
 function watch() {
 
-  browserSync.init({
-    proxy: siteConfig.proxy
-  });
+	browserSync.init({
+		proxy: siteConfig.proxy
+	});
+	
+	if (argv.site) {
+		console.log('ja hoor: ' + argv.site );
+	}
 
-  if (argv.site) {
-    console.log('ja hoor: ' + argv.site );
-    gulp.watch('../less/**/*.less', gulp.series(baseStyles, styles));
-  }
+	if ( siteConfig.type === 'plugin' ) {
+	
+		// naar welke bestanden kijken we precies?
+		console.log("Less source = " + siteConfig.csssource + '*.less' );
+		console.log("PHP sources = " + siteConfig.pluginsource + '*.php' );
+		console.log("language sources = " + siteConfig.path + 'languages/*.po' );
+	
+		// watch the less sources
+	    gulp.watch( siteConfig.csssource + '*.less', gulp.series( pluginstyle, plugincollect, plugincopyfolder ));
+	
+		// watch any php
+	    gulp.watch( siteConfig.pluginsource + '*.php', gulp.series( plugincollect, plugincopyfolder ));
+	
+		// watch any translation files: trigger this if a .po or *.pot file changes
+		gulp.watch( siteConfig.path + 'languages/*.po', gulp.series( plugintranslations, plugincollect, plugincopyfolder ));
+		gulp.watch( siteConfig.path + 'languages/*.pot', gulp.series( plugintranslations, plugincollect, plugincopyfolder ));
+	
+	}
+	else {
+	
+		gulp.watch('../less/**/*.less', gulp.series(baseStyles, styles));
+		
+		gulp.watch('../js/components/*.js', gulp.series(baseJs));
+		gulp.watch(siteConfig.path + 'less/**/*.less', gulp.series(styles));
+	
+	}
 
-  gulp.watch('../js/components/*.js', gulp.series(baseJs));
-  gulp.watch(siteConfig.path + 'less/**/*.less', gulp.series(styles));
-
-  // Styleguide
-  gulp.watch('styleguide/elements/**', gulp.series(styleGuide));
-  gulp.watch('styleguide/less/**', gulp.series(sgStyles));
-  
+	// Styleguide
+	gulp.watch('styleguide/elements/**', gulp.series(styleGuide));
+	gulp.watch('styleguide/less/**', gulp.series(sgStyles));
+	
 }
 
 //--------------------------------------------------------
@@ -328,6 +351,11 @@ function plugincopyfolder(done) {
 
 function pluginstyle(done) {
 
+	// dit is voor nu nog een aparte functie omdat de folderstructuur van 
+	// de less bestanden per plugin verschilt
+	// ik heb de path.join gekopieerd uit 'styles()', maar ik 
+	// snap 'm nog niet zo goed. Wat doet het en waarom?
+
 	return gulp.src(siteConfig.csssource + '*.less')
 		.pipe(sourcemaps.init())
 		.pipe(less({
@@ -340,47 +368,13 @@ function pluginstyle(done) {
 		}))
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest( siteConfig.cssdest ) )
-		.pipe(notify({message: siteConfig.name + ' LESS task complete'}))
+		.pipe(notify({message: 'pluginstyle: ' + siteConfig.name + ' LESS task complete'}))
 		.pipe(browserSync.stream());
-
-	console.log( 'pluginstyle DONE' );
 		
 	done();
 
 }
 
-//--------------------------------------------------------
-
-function plugindevelopment() {
-
-
-	if ( siteConfig.type !== 'plugin' ) {
-		console.log("Geen plugin");
-		return;
-	}
-
-	// browsersync aanzetten
-	browserSync.init({
-		proxy: siteConfig.proxy
-	});
-
-	// naar welke bestanden kijken we precies?
-	console.log("Less source = " + siteConfig.csssource + '*.less' );
-	console.log("PHP sources = " + siteConfig.pluginsource + '*.php' );
-	console.log("language sources = " + siteConfig.path + 'languages/*.po' );
-
-	// watch the less sources
-    gulp.watch( siteConfig.csssource + '*.less', gulp.series( pluginstyle, plugincollect, plugincopyfolder ));
-
-	// watch any php
-    gulp.watch( siteConfig.pluginsource + '*.php', gulp.series( plugincollect, plugincopyfolder ));
-
-	// watch any translation files: trigger this if a .po or *.pot file changes
-	gulp.watch( siteConfig.path + 'languages/*.po', gulp.series( plugintranslations, plugincollect, plugincopyfolder ));
-	gulp.watch( siteConfig.path + 'languages/*.pot', gulp.series( plugintranslations, plugincollect, plugincopyfolder ));
-
-
-}
 
 //--------------------------------------------------------
 
@@ -393,6 +387,5 @@ exports.all = prodAll;
 exports.sprites = makeSprites;
 exports.styleguide = gulp.series(sgStyles, styleGuide);
 
-// commando's voor plugin ontwikkeling
-exports.plugindevelopment = plugindevelopment;
+
 // to do: productie commando voor plugin ontwikkeling
