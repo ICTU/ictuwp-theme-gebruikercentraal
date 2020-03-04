@@ -28,19 +28,53 @@ Yarn is een package manager voor frontend packages die het een heel stukje gemak
 - Navigeer in de terminal naar het thema "gebruiker-centraal" en daarna naar mapje "frontend"
 - Typ `yarn install` . De benodigde packages, onder andere Gulp, worden geinstalleerd. De map "node_modules" wordt gegenereerd. Deze wordt niet meegecommit - hij is alleen nodig voor het compilen.
 - Typ om te testen "gulp prod". Als het goed is zie je nu het bericht `gulp-notify: [Gulp notification] GC - Base Theme LESS task complete` verschijnen. Is dit niet zo? Dan is er waarschijnlijk iets nog niet goed geïnstalleerd.
+- om plugins te ontwikkelen: haal de juiste plugins op via Git. Op dit moment (3 maart) hebben alle GC plugins nog een eigen GIT-repo. Het is onze bedoeling om het ontwikkelen van alle GC-gerelateerde plugins vanuit de GC-theme folder te doen. Hiermee willen we dubbele code en vergissingen voorkomen. Deze plugins zijn nu verwerkt in de sites_config:
+  - [ictuwp-plugin-inclusie](https://github.com/ICTU/ictuwp-plugin-inclusie)
+  - [ictuwp-plugin-conference](https://github.com/ICTU/ictuwp-plugin-conference)
+  - [ictuwp-plugin-maturityscore](https://github.com/ICTU/gc-maturityscore-plugin)
+  - [ictuwp-plugin-beeldbank](https://github.com/ICTU/ictuwp-plugin-beeldbank)
 
+
+Deze plugins moet je hier neerzetten:
+
+```
+[WordPress root]
+├── wp-content/ 
+│    └── themes/
+│         └── gebruiker-centraal/
+│              └── development/
+│                   ├── ictuwp-plugin-inclusie
+│                   ├── ictuwp-plugin-conference
+│                   ├── ictuwp-plugin-maturityscore
+│                   └── ictuwp-plugin-beeldbank
+
+```
 
 ### 1.3 De taken ###
 
-De front-end is zo opgezet dat vanuit de frontend directory alle subthema's en modules gecompiled kunnen worden. In de "sites_config.json" vind je een overzicht van alle sites die momenteeel in de configuratie zitten. gebruiker-centraal is het basisthema.
+De front-end is zo opgezet dat vanuit de frontend directory alle subthema's en modules gecompiled kunnen worden. 
+In de "sites_config.json" vind je een overzicht van alle sites die momenteel in de configuratie zitten: 
+- gebruiker-centraal is het basisthema.
+- inclusie (plugin voor inclusie.gebruikercentraal.nl)
+- beeldbank (plugin voor beeldbank.gebruikercentraal.nl)
+- maturityscore (plugin voor volwassenheidsscan.gebruikercentraal.nl)
+- conference (plugin voor conference.gebruikercentraal.nl)
 
 #### 1.3.1 De configuratie
 
 Iedere site in de config heeft:
 
-- Een shortname
-- Een directory (path). Deze wordt gebruikt om de correcte map te kunnen watchen. 
-- Een proxy. Deze gebruikt browsersync om front-end wijzigingen direct te kunnen zien. Met browsersync zie je wijzigingen die gemaakt worden direct in de browser én is je lokale omgeving via een URL beschikbaar voor andere devices. Je kunt dus meteen testen op mobiel of tablet.
+- Een shortname (`name`)
+- Een directory (`path`). Deze wordt gebruikt om de correcte map te kunnen watchen. 
+- Een proxy (`proxy`). Deze gebruikt browsersync om front-end wijzigingen direct te kunnen zien. Met browsersync zie je wijzigingen die gemaakt worden direct in de browser én is je lokale omgeving via een URL beschikbaar voor andere devices. Je kunt dus meteen testen op mobiel of tablet.
+- Plugin folders hebben ook nog een aantal andere velden:
+  - `type`: plugin
+  - `csssource`: de folder met daarin de bronbestanden voor de CSS (Less)
+  - `cssdest`: de folder waarin de uiteindelijke CSS-bestanden terecht moeten komen
+  - `pluginsource`: deze folder wordt gekopieerd naar `plugintarget`
+  - `plugintarget`: de locatie waar de plugin in de plugins folder moet komen
+  
+  
 
 #### 1.3.2 De front-end compilen  ####
 
@@ -52,9 +86,9 @@ Iedere site in de config heeft:
 - `gulp js` - Deze taak compiled de javascript bestanden uit js/components tot 1 minified bestand Javascript bestand. 
 - `gulp styleguide` - Deze taak compiled deze Styleguide en de CSS die nodig is voor de Styleguide . 
 
-**Voor een subthema of module**
+**Voor een plugin**
 
-- `gulp --site=[site_name]` - Met deze taak watch je een specifiek thema of module. Bijvoorbeeld `gulp --site=inclusie` of `gulp --site=beeldbank`
+- `gulp --site=[site_name]` - Met deze taak watch je een specifieke plugin. Bijvoorbeeld `gulp --site=inclusie` of `gulp --site=beeldbank`
 - `gulp prod --site=[site_name]` - Met deze taak voer je de productietaak uit voor een specifieke site. Bijvoorbeeld `gulp prod --site=beeldbank`
 
 **Wat doet commando 'gulp'?**
