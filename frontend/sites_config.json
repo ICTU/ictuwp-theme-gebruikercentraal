@@ -28,7 +28,7 @@
   "maturityscore": {
     "name":            "GC maturityscore plugin",
     "type":            "plugin",
-    "proxy":           "beeldbank.gebruikercentraal.co.uk/",
+    "proxy":           "volwassenheidsscan.gebruikercentraal.co.uk/",
     "path":            "../development/plugins/ictuwp-plugin-maturityscore/",
     "csssource":       "../development/plugins/ictuwp-plugin-maturityscore/less/",
     "cssdest":         "../development/plugins/ictuwp-plugin-maturityscore/assets/css",
