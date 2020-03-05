@@ -18,6 +18,11 @@ html {
 /* Chrome fix http://surefirewebservices.com/development/genesis-framework/genesis-rem-chrome-font-size-bug */
 body > div {
   font-size: 1.6rem;
+
+  @media @mobile {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+  }
 }
 
 body {
@@ -157,9 +162,9 @@ Common Classes
 --------------------------------------------- */
 
 .breadcrumb {
-  .gc-padding();
-  .fontsize(10);
-  line-height: 1;
+  padding: 0 2rem;
+  .fontsize(12);
+  line-height: 1.6rem;
   min-height: 46px;
   background-color: @header_bg_color;
 
@@ -169,10 +174,7 @@ Common Classes
 
   .wrap {
     max-width: @contentmaxwidth;
-  }
-
-  @media only screen and ( min-width: @break_show_menu_button ) {
-    padding-left: 1rem;
+    margin: 0 auto;
   }
 
   .breadlist {
@@ -245,7 +247,7 @@ Common Classes
 --------------------------------------------- */
 
 .archive .entry-title {
-  padding: 0 0 .3em 0;
+  padding: 0;
 }
 
 h1 {
@@ -265,13 +267,6 @@ h1 {
   }
 }
 
-// Make sure title has right align with whatever comes next
-.entry-title,
-.entry-header {
-  + p {
-    margin-top: 1.6rem;
-  }
-}
 
 /*
 Widgets
@@ -391,14 +386,6 @@ body .sidebar .widget_oa_social_login .oneall_social_login {
 /* Entries
 --------------------------------------------- */
 
-.entry {
-  //  background-color: @entry_bg;
-  padding: @padding;
-}
-
-.entry + .entry {
-  padding-top: @padding;
-}
 
 .entry-content {
   a {
@@ -553,7 +540,10 @@ body .sidebar .widget_oa_social_login .oneall_social_login {
 /*
 Social media buttons
 ---------------------------------------------------------------------------------------------------- */
-.socialmedia_styling();
+
+.social-media {
+  .socialmedia_styling;
+}
 
 .entry-content {
   .social-media {
@@ -963,28 +953,6 @@ Media Queries
 
   @position_navbar2: ( @position_navbar + @bigmargin );
 
-
-  .site-inner {
-    //        background: @light_gray;
-    //        padding-left: @padding;
-  }
-
-  .content {
-    //      padding: 0 ( 2 * @padding ) ( 2 * @padding ) ( 2 * @padding );
-    //      background: @wit;
-    //      margin-top: @padding;
-    //      margin-bottom: @padding;
-    //      min-height: 650px;
-  }
-
-  .entry {
-    padding: 0 @padding 0 @bigmargin;
-    .testbg(@test2);
-  }
-
-  .breadcrumb, .author-box, #respond {
-    //      padding: 0 @padding 0 @bigmargin;
-  }
 
   #respond,
   .entry-comments {

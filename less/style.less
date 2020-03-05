@@ -83,7 +83,7 @@ Imports
 @import "includes/70-pagetypes.less";                   // various page types etc */
 @import "includes/71-search-and-404-pagetype.less";     // styling for search
 @import "includes/80-structure.less";                   // mediaqueries */ // footer thingies */
-@import "includes/82-pagination.less";                  // all pagination related stuff */
+//@import "includes/82-pagination.less";                  // all pagination related stuff */
 @import "includes/90-printstyles.less";                 // non screen / print only */
 @import "includes/99-browserhacks.less";                // non screen / print only */
 
@@ -93,6 +93,7 @@ Imports
 @import "components/_layout";
 @import "components/_layout-footer";
 @import "components/_main-nav.less";
+@import "components/_grid";
 @import "components/_overview";
 @import "components/_section";
 @import "components/_link";
@@ -105,17 +106,19 @@ Imports
 
 
 
-// Pages
+// General layout
+@import "components/_base.less";
 @import "components/_layout.less";
-@import "components/_layout-footer.less";
-@import "components/_page.less";                        // Dit was wat er in style stond
+@import "components/_layout-footer.less"; // Dit was wat er in style stond
+
+
+// PAges and singles
 @import "components/_page_stappenplan";
 @import "components/_page-step";
-@import "components/_page-overzichtspagina";
-
+@import "components/_page-archive-overview"; // Overviews, archives
+@import "components/_entry";
+@import "components/_entry-event";
 @import "components/_entry-home";
-
-@import "components/_grid";                          // VERPLAATSEN NAAR THEME?
 
 
 // cards

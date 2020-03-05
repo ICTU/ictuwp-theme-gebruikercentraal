@@ -1,10 +1,22 @@
 .site-header {
+  padding: 0 2rem;
 
   .wrap {
-    max-width: @contentmaxwidth
+    max-width: @contentmaxwidth;
+    margin: 0 auto;
   }
+
   @media @nav-down {
     box-shadow: .3rem .3rem 0 rgba(#000, 0.2);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    z-index: 64;
+
+    .logged-in.admin-bar & {
+      top: 4.6rem;
+    }
 
     > .wrap {
       display: flex;
@@ -21,14 +33,75 @@
       margin: 0;
     }
   }
+}
 
-  @media @nav-up {
-    padding-left: 1rem;
+.site-header {
+  @media @nav-down {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    z-index: 64;
+
+    .logged-in.admin-bar & {
+      top: 4.6rem;
+    }
   }
 }
 
 .site-inner {
   .gc-padding();
+}
+
+.entry-header {
+  position: relative;
+
+  .social-media {
+    margin: 1rem 0 0;
+    padding: 0;
+
+    li {
+      margin: 0 1rem 0 0;
+    }
+  }
+
+  @media @tablet {
+    padding-left: 5rem;
+
+    .social-media {
+      position: absolute;
+      max-width: 3.2rem;
+      margin: 0;
+      top: 0;
+      left: 0;
+
+      li {
+        margin: 0;
+      }
+    }
+  }
+
+  @media @desktop {
+    padding-left: 0;
+
+    .social-media {
+      margin-left: -5.5rem;
+    }
+  }
+}
+
+.content-sidebar-wrap {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  @media @tablet {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  @media @desktop {
+    padding-top: 8rem;
+  }
 }
 
 .nav-primary {
@@ -48,20 +121,6 @@
 
   @media @mobile {
     width: 85%;
-  }
-}
-
-.site-header {
-  @media @nav-down {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    z-index: 64;
-
-    .logged-in.admin-bar & {
-      top: 4.6rem;
-    }
   }
 }
 

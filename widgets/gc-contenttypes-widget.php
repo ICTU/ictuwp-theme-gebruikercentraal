@@ -244,7 +244,7 @@ function filter_for_gc_beeldbank_homewidget( $params ) {
 
 
 			$params[0]['after_title'] .= '<div id="' . $the_image_ID . '" class="' . $class . '">&nbsp;</div>';
-			$params[0]['after_title'] .= '<div class="bloginfo">';
+			$params[0]['after_title'] .= '<div class="bloginfo"> ';
 			$params[0]['after_title'] .= '<header>' . $datebadge;        
 			$params[0]['after_title'] .= '<h3 class="entry-title" itemprop="headline">' . get_the_title( $getid ) . '</h3></header>';
 			$params[0]['after_title'] .= $theexcerpt;

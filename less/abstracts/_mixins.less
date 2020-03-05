@@ -419,7 +419,6 @@
   background: @achtergrondkleur;
   position: absolute;
   width: @width;
-  z-index: 400;
   margin-right: @padding;
   top: @top;
   left: @left;
@@ -461,114 +460,99 @@
 
 //=========================================================================================================
 
-.socialmedia_styling() {
+.socialmedia_styling(@bg: @wit, @color: @base_font_color, @bc: @border_color) {
 
-  .social-media {
+  overflow: hidden;
+  margin-bottom: 0;
 
-    overflow: hidden;
-    margin-bottom: 0;
+  li {
+    display: inline-block;
+    margin: 0 0 0 1rem;
+    padding: 0;
+  }
 
-    &, li {
-      list-style: none;
-      margin-left: 0;
-      padding-left: 0;
+  a {
+    background-color: @bg;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 1px solid @border_color;
+    display: block;
+    width: 2em;
+    height: 2em;
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: @txt;
     }
-    li {
-      display: inline;
-      float: left;
-      margin: 0;
 
-      a {
-        &.website,
-        &.other,
-        &.personallink,
-        &.linkedin,
-        &.facebook,
-        &.twitter,
-        &.slack,
-        &.email {
-          background-color: @wit;
-          background-repeat: no-repeat;
-          background-position: center center;
-          border: 1px solid @light_gray;
-          display: block;
-          width: 2em;
-          height: 2em;
+    &.twitter {
+      background-image: url('../images/icon-twitter.png');
+      .icon_socmed_icon('../images/icon-twitter.svg', @color);
+      background-size: 18px 15px;
 
-          &:hover,
-          &:active,
-          &:focus {
-            border-color: @txt;
-          }
-        }
+      &:hover,
+      &:active,
+      &:focus {
+        .icon_socmed_icon('../images/icon-twitter.svg', @color);
       }
-      .twitter {
-        background-image: url('../images/icon-twitter.png');
-        .icon_socmed_icon('../images/icon-twitter.svg', @gc_blue_darkest);
-        background-size: 18px 15px;
+    }
 
-        &:hover,
-        &:active,
-        &:focus {
-          .icon_socmed_icon('../images/icon-twitter.svg', @gc_a11y_green);
-        }
-      }
-      .slack {
-        background-image: url('../images/icon-slack.png');
-        .icon_socmed_icon('../images/icon-slack.svg', @gc_blue_darkest);
-        background-size: 16px 16px;
+    &.slack {
+      background-image: url('../images/icon-slack.png');
+      .icon_socmed_icon('../images/icon-slack.svg', @gc_blue_darkest);
+      background-size: 16px 16px;
 
-        &:hover,
-        &:active,
-        &:focus {
-          .icon_socmed_icon('../images/icon-slack.svg', @gc_a11y_green);
-        }
+      &:hover,
+      &:active,
+      &:focus {
+        .icon_socmed_icon('../images/icon-slack.svg', @color);
       }
-      .email {
-        background-image: url('../images/icon-mail.png');
+    }
+    &.email {
+      background-image: url('../images/icon-mail.png');
+      .icon_socmed_icon('../images/icon-mail.svg', @gc_blue_darkest);
+      background-size: 16px 16px;
+
+      &:hover,
+      &:active,
+      &:focus {
         .icon_socmed_icon('../images/icon-mail.svg', @gc_blue_darkest);
-        background-size: 16px 16px;
-
-        &:hover,
-        &:active,
-        &:focus {
-          .icon_socmed_icon('../images/icon-mail.svg', @gc_blue_darkest);
-        }
       }
-      .facebook {
-        background-image: url('../images/icon-facebook.png');
-        .icon_socmed_icon('../images/icon-facebook.svg', @gc_blue_darkest);
-        background-size: 10px 18px;
+    }
+    &.facebook {
+      background-image: url('../images/icon-facebook.png');
+      .icon_socmed_icon('../images/icon-facebook.svg', @gc_blue_darkest);
+      background-size: 10px 18px;
 
-        &:hover,
-        &:active,
-        &:focus {
-          .icon_socmed_icon('../images/icon-facebook.svg', @gc_a11y_green);
-        }
+      &:hover,
+      &:active,
+      &:focus {
+        .icon_socmed_icon('../images/icon-facebook.svg', @color);
       }
-      .website,
-      .other,
-      .personallink {
-        background-image: url('../images/icon-personallink.png');
-        .icon_socmed_icon('../images/icon-personallink.svg', @gc_blue_darkest);
-        background-size: 18px 16px;
+    }
+    &.website,
+    &.other,
+    &.personallink {
+      background-image: url('../images/icon-personallink.png');
+      .icon_socmed_icon('../images/icon-personallink.svg', @gc_blue_darkest);
+      background-size: 18px 16px;
 
-        &:hover,
-        &:active,
-        &:focus {
-          .icon_socmed_icon('../images/icon-personallink.svg', @gc_a11y_green);
-        }
+      &:hover,
+      &:active,
+      &:focus {
+        .icon_socmed_icon('../images/icon-personallink.svg', @color);
       }
-      .linkedin {
-        background-image: url('../images/icon-linkedin.png');
-        .icon_socmed_icon('../images/icon-linkedin.svg', @gc_blue_darkest);
-        background-size: 18px 17px;
+    }
+    &.linkedin {
+      background-image: url('../images/icon-linkedin.png');
+      .icon_socmed_icon('../images/icon-linkedin.svg', @gc_blue_darkest);
+      background-size: 18px 17px;
 
-        &:hover,
-        &:active,
-        &:focus {
-          .icon_socmed_icon('../images/icon-linkedin.svg', @gc_a11y_green);
-        }
+      &:hover,
+      &:active,
+      &:focus {
+        .icon_socmed_icon('../images/icon-linkedin.svg', @color);
       }
     }
   }
@@ -805,8 +789,10 @@
       display: inline;
       float: left;
       clear: none;
+
       li {
         margin: 0 .8em .5em 0;
+
         a {
           &.website,
           &.other,
@@ -1045,6 +1031,10 @@
 
     p, h2, h3, h4, h5, h6 {
       color: @call_to_action_color;
+
+      + p {
+        margin-top: 1.8rem;
+      }
     }
 
     h2, h3, h4, h5, h6 {
@@ -1176,6 +1166,29 @@
   }
 }
 
+.gc-heading-medium() {
+  .font-size(26);
+  font-family: @font_secondary;
+  line-height: 28px;
+
+  @media only screen and ( min-width: @break_fullwidth ) {
+    .font-size(32);
+    line-height: 32px;
+  }
+}
+
+.gc-heading-teaser() {
+  .font-size(18);
+  font-family: @font_primary_bold;
+  font-weight: normal;
+  line-height: 26px;
+
+  @media @tablet {
+    .font-size(22);
+    line-height: 30px;
+  }
+}
+
 .gc-rotated-thing() {
   position: relative;
   width: 100%;
@@ -1218,8 +1231,7 @@
   font-size: ( ( @input / @basefontsize ) * @baserem );
 }
 
-
-.gc-rotated-bg(@section_bg_rotated: @gc_pantybrown_xlight){
+.gc-rotated-bg(@section_bg_rotated: @gc_pantybrown_xlight) {
   position: relative;
   display: block;
   width: 100%;
@@ -1242,4 +1254,25 @@
   .font-size(18);
   line-height: 2.8rem;
   font-family: @font_primary_semi;
+}
+
+.gc-date-badge-color(@bg: @gc_dark_purple, @color: @white) {
+  background: @bg;
+  color: @color;
+  padding: 1rem;
+  border: none;
+  position: relative;
+
+  &:before {
+    content: " ";
+    background: @bg;
+    position: absolute;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    right: 0;
+    top: 1rem;
+    transform: rotate(45deg);
+    margin-right: -.3rem;
+  }
 }
