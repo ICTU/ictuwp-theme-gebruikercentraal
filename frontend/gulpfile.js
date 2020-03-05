@@ -26,7 +26,9 @@ const siteConfig = config[(argv.site === undefined) ? 'base' : argv.site];
 const autoprefix = new LessAutoprefix({browsers: ['last 2 versions']});
 
 function styles() {
-  //console.log(siteConfig.path);
+	
+  console.log( 'styles path is dus: ' + siteConfig.path);
+	
   console.log(fs.existsSync(siteConfig.path));
   console.log(siteConfig.path + 'less/*.less');
 
@@ -239,22 +241,142 @@ function makeSprites(done) {
 // Watch files
 function watch() {
 
-  browserSync.init({
-    proxy: siteConfig.proxy
-  });
+	browserSync.init({
+		proxy: siteConfig.proxy
+	});
+	
+	if (argv.site) {
+		console.log('ja hoor: ' + argv.site );
+	}
 
-  if (argv.site) {
-    console.log('ja hoor');
-    gulp.watch('../less/**/*.less', gulp.series(baseStyles, styles));
-  }
+	if ( siteConfig.type === 'plugin' ) {
+	
+		// naar welke bestanden kijken we precies?
+		console.log("Less source = " + siteConfig.csssource + '*.less' );
+		console.log("PHP sources = " + siteConfig.pluginsource + '*.php' );
+		console.log("language sources = " + siteConfig.path + 'languages/*.po' );
+	
+		// watch the less sources
+	    gulp.watch( siteConfig.csssource + '*.less', gulp.series( pluginstyle, plugincollect, plugincopyfolder ));
+	
+		// watch any php
+	    gulp.watch( siteConfig.pluginsource + '*.php', gulp.series( plugincollect, plugincopyfolder ));
+	
+		// watch any translation files: trigger this if a .po or *.pot file changes
+		gulp.watch( siteConfig.path + 'languages/*.po', gulp.series( plugintranslations, plugincollect, plugincopyfolder ));
+		gulp.watch( siteConfig.path + 'languages/*.pot', gulp.series( plugintranslations, plugincollect, plugincopyfolder ));
+	
+	}
+	else {
+	
+		gulp.watch('../less/**/*.less', gulp.series(baseStyles, styles));
+		
+		gulp.watch('../js/components/*.js', gulp.series(baseJs));
+		gulp.watch(siteConfig.path + 'less/**/*.less', gulp.series(styles));
+	
+	}
 
-  gulp.watch('../js/components/*.js', gulp.series(baseJs));
-  gulp.watch(siteConfig.path + 'less/**/*.less', gulp.series(styles));
-
-  // Styleguide
-  gulp.watch('styleguide/elements/**', gulp.series(styleGuide));
-  gulp.watch('styleguide/less/**', gulp.series(sgStyles));
+	// Styleguide
+	gulp.watch('styleguide/elements/**', gulp.series(styleGuide));
+	gulp.watch('styleguide/less/**', gulp.series(sgStyles));
+	
 }
+
+//--------------------------------------------------------
+
+function plugincollect(done) {
+
+	console.log( 'plugincollect' );
+
+	// to do:
+	// in sites_config een array aanmaken waarin
+	// diverse bestanden zitten die hier in de plugin folder 
+	// onderhouden worden, maar nodig zijn in de plugin folder
+	// zoiets als '../plugincomponenten/bestand1.dinges' 
+	// en dit bestand kopieren naar '[plugin folder]/[bestemming]'
+	// 
+
+//    copyarray.map(function (currentfile) {
+//
+//		gulp.src( currentfile )
+//			.pipe(gulp.dest( targetfolder ));
+//
+//    });
+
+	done();
+
+}
+
+//--------------------------------------------------------
+
+function plugintranslations(done) {
+	
+	// to do:
+	// watch zodanig inrichten dat de bestanden in [plugin]/languages
+	// naar de juiste plek worden gekopieerd.
+	// voorbeeldstructuuur:
+	// [plugin]
+	// ├── languages/ 
+	// │   ├── ictuwp-plugin-conference.pot
+	// │   ├── ictuwp-plugin-conference-nl_NL.mo
+	// │   ├── ictuwp-plugin-conference-nl_NL.po
+	// │   ├── ictuwp-plugin-conference-en_US.mo
+	// │   ├── ictuwp-plugin-conference-en_US.po
+	// │   ├── ictuwp-plugin-conference-en_GB.mo
+	// │   └── ictuwp-plugin-conference-en_GB.po            
+	// 
+	// al deze bestanden moeten worden gekopieerd behalve 1: het *.pot bestand
+	// Ze moeten worden gekopieerd naar ]webroot]/wp-content/languages/themes
+	// en de bestandsnaam moet overeenstemmen met de vertaalsleutel in de plugin
+	
+	console.log( 'plugintranslations' );
+	
+	done();
+
+}
+
+//--------------------------------------------------------
+
+function plugincopyfolder(done) {
+
+	gulp.src([ siteConfig.pluginsource + '/*' ]).pipe(gulp.dest( siteConfig.plugintarget ));
+	
+	console.log("Kopieer de plugin naar de juiste folder: from: " + siteConfig.pluginsource + " to: " + siteConfig.plugintarget );
+
+	done();
+
+}
+
+//--------------------------------------------------------
+
+function pluginstyle(done) {
+
+	// dit is voor nu nog een aparte functie omdat de folderstructuur van 
+	// de less bestanden per plugin verschilt
+	// ik heb de path.join gekopieerd uit 'styles()', maar ik 
+	// snap 'm nog niet zo goed. Wat doet het en waarom?
+
+	return gulp.src(siteConfig.csssource + '*.less')
+		.pipe(sourcemaps.init())
+		.pipe(less({
+			plugins: [autoprefix],
+			paths: [path.join(__dirname, 'includes', 'abstracts', 'plugins', 'components')]
+		}).on('error', function (err) {
+			gutil.log(err);
+			this.emit('end');
+			done();
+		}))
+		.pipe(sourcemaps.write())
+		.pipe(gulp.dest( siteConfig.cssdest ) )
+		.pipe(notify({message: 'pluginstyle: ' + siteConfig.name + ' LESS task complete'}))
+		.pipe(browserSync.stream());
+		
+	done();
+
+}
+
+
+//--------------------------------------------------------
 
 
 exports.styles = styles;
@@ -264,3 +386,6 @@ exports.default = watch;
 exports.all = prodAll;
 exports.sprites = makeSprites;
 exports.styleguide = gulp.series(sgStyles, styleGuide);
+
+
+// to do: productie commando voor plugin ontwikkeling

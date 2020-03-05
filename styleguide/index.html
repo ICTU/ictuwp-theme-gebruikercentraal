@@ -63,15 +63,52 @@ Installeer dus eerst Node, NPM en Yarn volgens de online handleidingen:</p>
 <li>Navigeer in de terminal naar het thema &quot;gebruiker-centraal&quot; en daarna naar mapje &quot;frontend&quot;</li>
 <li>Typ <code>yarn install</code> . De benodigde packages, onder andere Gulp, worden geinstalleerd. De map &quot;node_modules&quot; wordt gegenereerd. Deze wordt niet meegecommit - hij is alleen nodig voor het compilen.</li>
 <li>Typ om te testen &quot;gulp prod&quot;. Als het goed is zie je nu het bericht <code>gulp-notify: [Gulp notification] GC - Base Theme LESS task complete</code> verschijnen. Is dit niet zo? Dan is er waarschijnlijk iets nog niet goed geïnstalleerd.</li>
+<li>om plugins te ontwikkelen: haal de juiste plugins op via Git. Op dit moment (3 maart) hebben alle GC plugins nog een eigen GIT-repo. Het is onze bedoeling om het ontwikkelen van alle GC-gerelateerde plugins vanuit de GC-theme folder te doen. Hiermee willen we dubbele code en vergissingen voorkomen. Deze plugins zijn nu verwerkt in de sites_config:
+<ul>
+<li><a href="https://github.com/ICTU/ictuwp-plugin-inclusie">ictuwp-plugin-inclusie</a></li>
+<li><a href="https://github.com/ICTU/ictuwp-plugin-conference">ictuwp-plugin-conference</a></li>
+<li><a href="https://github.com/ICTU/gc-maturityscore-plugin">ictuwp-plugin-maturityscore</a></li>
+<li><a href="https://github.com/ICTU/ictuwp-plugin-beeldbank">ictuwp-plugin-beeldbank</a></li>
 </ul>
+</li>
+</ul>
+<p>Deze plugins moet je hier neerzetten:</p>
+<pre class="hljs"><code class="language-">[WordPress root]
+├── wp-content/ 
+│    └── themes/
+│         └── gebruiker-centraal/
+│              └── development/
+│                   ├── ictuwp-plugin-inclusie
+│                   ├── ictuwp-plugin-conference
+│                   ├── ictuwp-plugin-maturityscore
+│                   └── ictuwp-plugin-beeldbank
+
+</code></pre>
 <h3>1.3 De taken</h3>
-<p>De front-end is zo opgezet dat vanuit de frontend directory alle subthema's en modules gecompiled kunnen worden. In de &quot;sites_config.json&quot; vind je een overzicht van alle sites die momenteeel in de configuratie zitten. gebruiker-centraal is het basisthema.</p>
+<p>De front-end is zo opgezet dat vanuit de frontend directory alle subthema's en modules gecompiled kunnen worden.
+In de &quot;sites_config.json&quot; vind je een overzicht van alle sites die momenteel in de configuratie zitten:</p>
+<ul>
+<li>gebruiker-centraal is het basisthema.</li>
+<li>inclusie (plugin voor inclusie.gebruikercentraal.nl)</li>
+<li>beeldbank (plugin voor beeldbank.gebruikercentraal.nl)</li>
+<li>maturityscore (plugin voor volwassenheidsscan.gebruikercentraal.nl)</li>
+<li>conference (plugin voor conference.gebruikercentraal.nl)</li>
+</ul>
 <h4>1.3.1 De configuratie</h4>
 <p>Iedere site in de config heeft:</p>
 <ul>
-<li>Een shortname</li>
-<li>Een directory (path). Deze wordt gebruikt om de correcte map te kunnen watchen.</li>
-<li>Een proxy. Deze gebruikt browsersync om front-end wijzigingen direct te kunnen zien. Met browsersync zie je wijzigingen die gemaakt worden direct in de browser én is je lokale omgeving via een URL beschikbaar voor andere devices. Je kunt dus meteen testen op mobiel of tablet.</li>
+<li>Een shortname (<code>name</code>)</li>
+<li>Een directory (<code>path</code>). Deze wordt gebruikt om de correcte map te kunnen watchen.</li>
+<li>Een proxy (<code>proxy</code>). Deze gebruikt browsersync om front-end wijzigingen direct te kunnen zien. Met browsersync zie je wijzigingen die gemaakt worden direct in de browser én is je lokale omgeving via een URL beschikbaar voor andere devices. Je kunt dus meteen testen op mobiel of tablet.</li>
+<li>Plugin folders hebben ook nog een aantal andere velden:
+<ul>
+<li><code>type</code>: plugin</li>
+<li><code>csssource</code>: de folder met daarin de bronbestanden voor de CSS (Less)</li>
+<li><code>cssdest</code>: de folder waarin de uiteindelijke CSS-bestanden terecht moeten komen</li>
+<li><code>pluginsource</code>: deze folder wordt gekopieerd naar <code>plugintarget</code></li>
+<li><code>plugintarget</code>: de locatie waar de plugin in de plugins folder moet komen</li>
+</ul>
+</li>
 </ul>
 <h4>1.3.2 De front-end compilen</h4>
 <p><strong>Voor het hoofdthema</strong></p>
@@ -82,9 +119,9 @@ Installeer dus eerst Node, NPM en Yarn volgens de online handleidingen:</p>
 <li><code>gulp js</code> - Deze taak compiled de javascript bestanden uit js/components tot 1 minified bestand Javascript bestand.</li>
 <li><code>gulp styleguide</code> - Deze taak compiled deze Styleguide en de CSS die nodig is voor de Styleguide .</li>
 </ul>
-<p><strong>Voor een subthema of module</strong></p>
+<p><strong>Voor een plugin</strong></p>
 <ul>
-<li><code>gulp --site=[site_name]</code> - Met deze taak watch je een specifiek thema of module. Bijvoorbeeld <code>gulp --site=inclusie</code> of <code>gulp --site=beeldbank</code></li>
+<li><code>gulp --site=[site_name]</code> - Met deze taak watch je een specifieke plugin. Bijvoorbeeld <code>gulp --site=inclusie</code> of <code>gulp --site=beeldbank</code></li>
 <li><code>gulp prod --site=[site_name]</code> - Met deze taak voer je de productietaak uit voor een specifieke site. Bijvoorbeeld <code>gulp prod --site=beeldbank</code></li>
 </ul>
 <p><strong>Wat doet commando 'gulp'?</strong></p>

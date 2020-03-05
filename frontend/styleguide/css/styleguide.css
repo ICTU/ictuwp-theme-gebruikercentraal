@@ -1,10 +1,11 @@
-/* Typografie */
-/* Default variables for textblocks */
-/* Chart */
-/* Nav */
 .container > .flex-xl-nowrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row-reverse;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   width: 100%;
 }
 .container > .flex-xl-nowrap > main {
@@ -59,8 +60,11 @@
 #components-cards-default .modifier__example,
 #components-cards-tipkaarten .modifier__example,
 #components-cards-doelgroep .modifier__example {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-left: -1.5rem;
   margin-right: -1.5rem;
   width: 100%;
@@ -82,8 +86,11 @@
   }
 }
 #components-textblock .modifier__example {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-left: -1.5rem;
   margin-right: -1.5rem;
   width: 100%;
@@ -102,7 +109,8 @@
   background: #fff;
   padding: 2rem;
   margin-top: 3rem;
-  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
 }
 .bd-content > section > h2 {
   font-weight: normal;
@@ -128,11 +136,17 @@
   border: 0.1rem solid #D1DFE3;
   padding: 0.5rem 1rem;
   font-size: 1.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .btn-group a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-right: 3rem;
 }
 .btn-group a svg {
@@ -154,8 +168,12 @@
   background: #004152;
 }
 .page-navigation .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .navbar-brand {
   display: block;
@@ -171,6 +189,8 @@
   display: none;
 }
 .navbar-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 1rem 0;
 }
@@ -194,13 +214,18 @@
   width: 100%;
   background: #25b34b;
   height: 0.3rem;
-  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 .navbar-nav a:hover:before,
 .navbar-nav a:focus:before,
 .navbar-nav a.is-active:before {
-  transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 .section-nav {
   position: fixed;
