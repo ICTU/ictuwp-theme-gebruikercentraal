@@ -5,11 +5,11 @@
 // * cards in the related-content block
 // * ----------------------------------------------------------------------------------
 // * @package gebruiker-centraal
-// * @author  Paul van Buuren
+// * @author  Paul van Buuren / Tamara de Haas
 // * @license GPL-2.0+
 // * @version 4.1.3
 // * @since   4.1.3
-// * @desc.   Moved card backend functions and page_template_overzichtspagina from inlusie plugin to theme.
+// * @desc.   All theming for all overzichtspages
 // * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 //=========================================================================================================
@@ -44,10 +44,8 @@
     margin: 0 auto;
   }
 
-  .bloginfo {
-    width: ~"calc(100% - 4rem)";
-    padding-left: @gutter;
-    padding-right: 1rem;
+  header {
+    min-height: 6rem;
   }
 
   .excerpt {
@@ -63,15 +61,38 @@
     }
   }
 
+  .arrow-link {
+    padding-top: 0;
+  }
+
+  .arrow-link__icon {
+    margin-top: 0;
+  }
 
   + .teaser {
     border-top: .1rem solid @border_color;
   }
 
+  &--with-image {
+    .bloginfo {
+      width: ~"calc(100% - 4rem)";
+      padding-left: @gutter;
+      padding-right: 1rem;
+    }
+  }
+
+  &--without-image {
+    .blog-info {
+      width: 100%;
+      padding-left: 0;
+    }
+  }
 
   @media @desktop {
-    .bloginfo {
-      width: ~"calc(100% - 220px)";
+    &--with-image {
+      .bloginfo {
+        width: ~"calc(100% - 220px)";
+      }
     }
   }
 }
@@ -94,11 +115,14 @@
   text-decoration: none;
   display: flex;
   padding: 2rem;
+  background: @grey_x_light;
+  transition: background-color .2s;
 
   &:hover,
   &:focus,
   &:active {
     color: @base_font_color;
+    background: @white;
 
     h2, h3 {
       text-decoration: underline;
@@ -120,6 +144,10 @@
   background-position: center 25%;
   background-size: cover;
   margin-bottom: @gutter;
+
+  .teaser__link {
+    background: none;
+  }
 
   .arrow-link {
     padding-top: 0;
@@ -208,5 +236,77 @@
 
 .archive-pagination {
   display: flex;
-  bordeR: .2rem solid #00f;
+  margin-top: @gutter;
+  border: none;
+
+  @media @desktop {
+    margin-top: 7rem;
+  }
+
+  a {
+    .gc-box-shadow;
+    font-family: @font_primary_bold;
+    display: inline-block;
+    border: .1rem solid @gc_greyblue;
+    padding: .5rem 1.5rem;
+    text-decoration: none;
+    position: relative;
+    transition: padding .2s, background-color .2s;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: @white;
+      border-color: @gc_blue_dark;
+      text-decoration: underline;
+      color: @base_font_color;
+    }
+  }
+
+  .alignright {
+    margin-left: auto;
+  }
+
+  .pagination-previous a:before,
+  .pagination-next a:after {
+    width: 1.5rem;
+    height: 1.5rem;
+    content: " ";
+    position: absolute;
+    display: block;
+    top: 50%;
+    margin-top: -.75rem;
+    background: url('images/arrow-right-blue.svg') center center no-repeat;
+    background-size: auto 1.2rem;
+    border: none;
+  }
+
+  .pagination-previous a {
+    padding-left: 3rem;
+
+    &:before {
+      left: .6rem;
+      transform: rotate(180deg);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      padding-left: 3.1rem;
+    }
+  }
+
+  .pagination-next a {
+    padding-right: 3rem;
+
+    &:after {
+      right: .6rem;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      padding-right: 3.1rem;
+    }
+  }
 }
