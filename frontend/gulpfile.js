@@ -146,7 +146,7 @@ function prodAll(done) {
         done();
       }
     } else {
-      console.log('Site ' + name + ' not found');
+      console.log('Site ' + siteName + ' not found');
     }
     done();
 

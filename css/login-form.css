@@ -50,10 +50,12 @@
  * Abstracts
  * Variables, mixins, extendables - things we use everywhere
  */
-/* Typografie */
-/* Default variables for textblocks */
-/* Chart */
-/* Nav */
+.gc-list-title {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  font-family: 'montserrat_semiboldregular', Helvetica, Arial, sans-serif;
+}
 /*
 ---------------------------------------------------------------------------------------------------- */
 /*
@@ -254,7 +256,6 @@ aside.alignright {
 }
 p {
   -webkit-hyphens: auto;
-  -moz-hyphens: auto;
   -ms-hyphens: auto;
   -o-hyphens: auto;
   hyphens: auto;
@@ -330,6 +331,8 @@ img.alignright,
   .image-examples,
   .nietzomaarzo {
     background: #DEDEDE;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
@@ -388,7 +391,9 @@ img.alignright,
   .nietzomaarzo .wp-caption {
     max-width: 49% !important;
     width: 49%;
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     margin: 0 0.5% 0 0.5%;
   }
 }
@@ -503,7 +508,6 @@ b,
 strong {
   font-weight: bold;
   -webkit-hyphens: manual;
-  -moz-hyphens: manual;
   -ms-hyphens: manual;
   -o-hyphens: manual;
   hyphens: manual;
@@ -557,12 +561,12 @@ h6 a:active {
 .content h2 {
   font-size: 26px;
   font-size: 2.6rem;
-  font-family: 'League Gothic', Impact, Helvetica, Arial, sans-serif;
   font-weight: normal;
+  font-family: 'montserratbold', Helvetica, Arial, sans-serif;
 }
 h1,
 .content h2 {
-  /* NO MORE! 
+  /* NO MORE!
 		@media only screen {
 //			text-transform: uppercase;
 		}
@@ -652,7 +656,8 @@ body.login div#login form#lostpasswordform p.submit input#wp-submit,
 #error-page div#login form#lostpasswordform p.submit input#wp-submit,
 body.login div#login form#registerform p.submit input#wp-submit,
 #error-page div#login form#registerform p.submit input#wp-submit {
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   color: #fff;
   cursor: pointer;
   text-transform: uppercase;
@@ -758,7 +763,8 @@ body.login div#login form#lostpasswordform input#user_email,
 body.login div#login form#registerform input#user_email,
 #error-page div#login form#registerform input#user_email {
   background-color: #fff;
-  box-shadow: 1px 1px 3px #eee inset;
+  -webkit-box-shadow: 1px 1px 3px #eee inset;
+          box-shadow: 1px 1px 3px #eee inset;
   color: #00303d;
   font-size: 14px;
   font-size: 1.4rem;
