@@ -34,17 +34,17 @@ if ( is_object( $EM_Event ) ) {
 	}
 }
 
-$event_times      = '<div class="event-times">#_EVENTTIMES</div>'; 
+$event_times      = '<div class="meta-data__item meta-data--with-icon event-times">#_EVENTTIMES</div>';
 $event_location   = '#_EVENTLOCATIONMETA'; 
 $header_meta_info = $event_times . $event_location;
 
 
-echo '<section><a href="#_EVENTURL">';
+echo '<section class="teaser teaser--event"><a class="teaser__link" href="#_EVENTURL">';
 echo '<header class="wrap' . $classmultiple . '">
         #_AVAILABILITYCHECK
         <div class="date-badge">#_DATEBADGE</div>
-        <h3 itemprop="name">#_EVENTNAME</h3>
-        <div class="meta">' .  $header_meta_info . '</div>
+        <h3 itemprop="name"><span class="arrow-link"><span class="arrow-link__text">#_EVENTNAME</span><span class="arrow-link__icon"></span></span></h3>
+        <div class="meta-data">' .  $header_meta_info . '</div>
     </header>';
 
 if ( has_excerpt() ) { 
@@ -52,16 +52,3 @@ if ( has_excerpt() ) {
 }
 echo '</a></section>';
 
-/*
-<tr>
-  <td>
-    #_EVENTDATES<br/>
-    #_EVENTTIMES
-  </td>
-  <td>
-    #_EVENTLINK
-    {has_location}<br/><i>#_LOCATIONNAME, #_LOCATIONTOWN #_LOCATIONSTATE</i>{/has_location}
-  </td>
-</tr>
-
-*/

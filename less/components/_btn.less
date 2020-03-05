@@ -80,75 +80,6 @@
   &--toggle-menu {
     min-width: 12rem;
   }
-
-  &--primary,
-  &--white {
-    .gc-box-shadow();
-    font-size: 2.6rem;
-    padding: 1rem 5rem 1rem 1.6rem;
-    line-height: 2.6rem;
-    transition: padding .2s, ba;
-    cursor: pointer;
-    text-transform: uppercase;
-    width: auto;
-    border-radius: 0;
-    font-family: @font_secondary;
-    color: @white;
-    font-weight: normal;
-    text-decoration: none;
-    position: relative;
-
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-      padding-left: 1.7rem;
-      color: @white;
-    }
-
-    &:after {
-      content: " ";
-      position: absolute;
-      display: block;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      width: 3.2rem;
-      background: @gc_a11y_green_darker url('images/arrow-right.svg') center center no-repeat;
-      background-size: 8px auto;
-      transition: background .2s;
-    }
-  }
-
-  &--primary {
-    .gc-box-shadow();
-    background: @gc_a11y_green;
-
-    &:after {
-      background: @gc_a11y_green_darker url('images/arrow-right.svg') center center no-repeat;
-    }
-  }
-
-  &--white {
-    background: @white;
-    color: @base_font_color;
-
-    &:after {
-      background-color: @gc_blue_xlight;
-      background-image: url('images/arrow-right-blue.svg');
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: @gc_blue_dark;
-      color: @white;
-
-      &:after {
-        background-image: url('images/arrow-right.svg');
-        background-color: @gc_blue_darkest;
-      }
-    }
-  }
 }
 
 /*
@@ -167,6 +98,7 @@
   text-transform: none;
   font-size: 1.7rem;
   min-width: 12rem;
+
 
   &:focus,
   &:hover {
@@ -189,3 +121,85 @@
     line-height: 3.4rem;
   }
 }
+
+/*
+ * Button Mixin
+ */
+
+.make-btn(@bg: @gc_a11y_green, @bg_h: @gc_a11y_green_darker, @color: @white,@color_h: @white, @after: @gc_a11y_green_darker, @after_h: @gc_a11y_green_dark) {
+  .gc-box-shadow();
+  display: inline-block;
+  padding: .8rem 5rem .8rem 1.6rem;
+  font-size: 2.2rem;
+  line-height: 2.2rem;
+  transition: padding .2s, ba;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: auto;
+  border-radius: 0;
+  font-family: @font_secondary;
+  color: @color;
+  background: @bg;
+  font-weight: normal;
+  text-decoration: none;
+  position: relative;
+
+  @media @tablet {
+    line-height: 2.6rem;
+    font-size: 2.6rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  &:after {
+    content: " ";
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 3.2rem;
+    background: @after url('images/arrow-right.svg') center center no-repeat;
+    background-size: 8px auto;
+    transition: background .2s;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: underline;
+    padding-left: 1.7rem;
+    color: @color_h;
+    background: @bg_h;
+
+    &:after {
+      background-color: @after_h;
+    }
+  }
+
+}
+
+.btn--primary {
+  .make-btn();
+}
+
+.btn--secondary {
+  .make-btn(@bg: @gc_pink, @after: darken(@gc_pink, 10%));
+}
+
+.btn--white {
+  .make-btn(@bg: @white, @bg_h: @gc_blue_dark, @after: @gc_blue_xlight, @after_h: @gc_blue_darkest, @color: @gc_blue_dark, @color_h: @white);
+
+  &:after {
+    background-image: url('images/arrow-right-blue.svg');
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    &:after {
+      background-image: url('images/arrow-right-white.svg');
+    }
+  }
+}
+

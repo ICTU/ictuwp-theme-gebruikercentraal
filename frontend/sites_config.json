@@ -3,7 +3,8 @@
     "name": "GC - Base Theme",
     "path": "../",
     "dest": "../",
-    "proxy": "live-gebruikercentraal.co.uk"
+    "proxy": "live-gebruikercentraal.co.uk",
+    "type": "theme"
   },
   "inclusie": {
     "name":            "GC Inclusie plugin",

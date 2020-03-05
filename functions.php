@@ -2075,7 +2075,7 @@ function gc_wbvb_eventmanager_styles_placeholders($replace, $EM_Event, $result) 
 			$event_start_datetime     = strtotime( $EM_Event->event_start_date . ' ' . $EM_Event->event_start_time );
 			
 			if ( $EM_Event->location_id ) {
-				return '<div class="event-location">#_LOCATIONNAME</div>';
+				return '<div class="meta-data__item meta-data--with-icon event-location">#_LOCATIONNAME</div>';
 			}
 			else {
 				return '';
