@@ -2,16 +2,18 @@
   "base": {
     "name": "GC - Base Theme",
     "path": "../",
-    "dest": "../",
-    "proxy": "live-gebruikercentraal.co.uk"
+    "dest": "../css/",
+    "proxy": "live-gebruikercentraal.co.uk",
+    "type": "theme"
   },
   "inclusie": {
     "name":            "GC Inclusie plugin",
     "type":            "plugin",
-    "path":            "../development/plugins/ictuwp-plugin-inclusie/",
+    "path":            "../../../plugins/ictuwp-plugin-inclusie/",
     "proxy":           "inclusie.gebruikercentraal.co.uk/",
     "csssource":       "../development/plugins/ictuwp-plugin-inclusie/assets/less/",
-    "cssdest":         "../development/plugins/ictuwp-plugin-inclusie/assets/css",
+    "dest":           "../development/plugins/ictuwp-plugin-inclusie/assets/css",
+    "plugindevpath":   "../development/plugins/ictuwp-plugin-inclusie/",
     "pluginsource":    "../development/plugins/ictuwp-plugin-inclusie/**/",
     "plugintarget":    "../../../plugins/ictuwp-plugin-inclusie/"
   },
@@ -19,9 +21,10 @@
     "name":            "GC Beeldbank plugin",
     "type":            "plugin",
     "proxy":           "beeldbank.gebruikercentraal.co.uk/",
-    "path":            "../development/plugins/ictuwp-plugin-beeldbank/",
+    "path":            "../../../plugins/ictuwp-plugin-beeldbank/",
     "csssource":       "../development/plugins/ictuwp-plugin-beeldbank/less/",
-    "cssdest":         "../development/plugins/ictuwp-plugin-beeldbank/css",
+    "dest":         "../development/plugins/ictuwp-plugin-beeldbank/css",
+    "plugindevpath":   "../development/plugins/ictuwp-plugin-beeldbank/",
     "pluginsource":    "../development/plugins/ictuwp-plugin-beeldbank/**/",
     "plugintarget":    "../../../plugins/ictuwp-plugin-beeldbank/"
   },
@@ -31,7 +34,8 @@
     "proxy":           "volwassenheidsscan.gebruikercentraal.co.uk/",
     "path":            "../development/plugins/ictuwp-plugin-maturityscore/",
     "csssource":       "../development/plugins/ictuwp-plugin-maturityscore/less/",
-    "cssdest":         "../development/plugins/ictuwp-plugin-maturityscore/assets/css",
+    "dest":         "../development/plugins/ictuwp-plugin-maturityscore/assets/css",
+    "plugindevpath":   "../development/plugins/ictuwp-plugin-maturityscore/",
     "pluginsource":    "../development/plugins/ictuwp-plugin-maturityscore/**/",
     "plugintarget":    "../../../plugins/ictuwp-plugin-maturityscore/"
   },
@@ -41,7 +45,8 @@
     "proxy":           "conference.gebruikercentraal.co.uk/",
     "path":            "../development/plugins/ictuwp-plugin-conference/",
     "csssource":       "../development/plugins/ictuwp-plugin-conference/less/",
-    "cssdest":         "../development/plugins/ictuwp-plugin-conference/css",
+    "dest":         "../development/plugins/ictuwp-plugin-conference/css",
+    "plugindevpath":   "../development/plugins/ictuwp-plugin-conference/",
     "pluginsource":    "../development/plugins/ictuwp-plugin-conference/**/",
     "plugintarget":    "../../../plugins/ictuwp-plugin-conference/"
   }

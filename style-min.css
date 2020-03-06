@@ -76,7 +76,7 @@ Imports
   display: inline-block;
 }
 .btn--arrow {
-  background: url('images/arrow-right-blue.svg') center center no-repeat;
+  background: url('../images/arrow-right-blue.svg') center center no-repeat;
   background-size: 12px auto;
   min-width: 3.6rem;
   display: inline-block;
@@ -90,7 +90,7 @@ Imports
           box-shadow: 4px 4px 0 #F0F0F0;
 }
 .btn--close {
-  background: url('images/cross.svg') center center no-repeat;
+  background: url('../images/cross.svg') center center no-repeat;
   background-size: 18px auto;
   padding: 0;
   width: 3.6rem;
@@ -113,7 +113,7 @@ Imports
   padding: 1rem 2rem 1rem 4.4rem;
   font-family: 'League Gothic', Impact, Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  background: #148839 url('images/icon-download.svg') 16px center no-repeat;
+  background: #148839 url('../images/icon-download.svg') 16px center no-repeat;
   font-size: 2.6rem;
   line-height: 2.6rem;
   text-decoration: none;
@@ -164,7 +164,7 @@ Imports
   top: 0;
   bottom: 0;
   width: 3.2rem;
-  background: #0b732c url('images/arrow-right.svg') center center no-repeat;
+  background: #0b732c url('../images/arrow-right.svg') center center no-repeat;
   background-size: 8px  auto;
   -webkit-transition: background 0.2s;
   transition: background 0.2s;
@@ -486,7 +486,7 @@ Imports
 .gc-site-footer-widget {
   overflow: hidden;
   min-height: 110px;
-  background: url('images/logos/gc-edo-beeldmerk.svg') left top no-repeat;
+  background: url('../images/logos/gc-edo-beeldmerk.svg') left top no-repeat;
   background-size: 110px auto;
   padding-top: 8rem;
 }
@@ -600,7 +600,7 @@ Imports
     top: 1.3rem;
     width: 2rem;
     height: 2rem;
-    background: url('images/arrow-right-white.svg') center center no-repeat;
+    background: url('../images/arrow-right-white.svg') center center no-repeat;
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
   }
@@ -611,7 +611,7 @@ Imports
   }
   .nav-primary .menu-primary .sub-menu a {
     padding: 0.3rem 1rem 0.3rem 3rem;
-    background: url('images/arrow-right-white.svg') 8px 11px no-repeat;
+    background: url('../images/arrow-right-white.svg') 8px 11px no-repeat;
     -webkit-transition: padding 0.2s;
     transition: padding 0.2s;
   }
@@ -692,7 +692,7 @@ Imports
     height: 2.5rem;
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
-    background: url('images/arrow-wit.svg') center center no-repeat;
+    background: url('../images/arrow-wit.svg') center center no-repeat;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
@@ -754,7 +754,7 @@ Imports
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background: url('images/arrow-right-white.svg') 18px 14px no-repeat;
+    background: url('../images/arrow-right-white.svg') 18px 14px no-repeat;
   }
   .nav-primary .sub-menu a:hover,
   .nav-primary .sub-menu a:focus {
@@ -871,7 +871,7 @@ Imports
   transition: border-color 0.2s;
   height: 5rem;
   width: 3.4rem;
-  background: url('images/arrow-right-blue.svg') center center no-repeat;
+  background: url('../images/arrow-right-blue.svg') center center no-repeat;
   background-size: 0.9rem auto;
   border: 0.1rem solid transparent;
 }
@@ -909,7 +909,7 @@ Imports
   position: absolute;
   width: 2rem;
   height: 2rem;
-  background: url('images/arrow-right-blue.svg') top center no-repeat;
+  background: url('../images/arrow-right-blue.svg') top center no-repeat;
   background-size: 0.8rem auto;
 }
 .item-list__item + .item-list__item {
@@ -1416,7 +1416,7 @@ ol li {
   list-style-type: decimal;
 }
 ul li {
-  list-style-image: url('images/bullet.png');
+  list-style-image: url('../images/bullet.png');
   list-style-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20height%3D%226%22%20viewBox%3D%220%200%206%206%22%20width%3D%226%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m0%200h6v6h-6z%22%20fill%3D%22%2300303d%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E%0A");
 }
 ol ol,
@@ -1585,14 +1585,14 @@ img.alignright,
 .nietzomaarzo .good-example:after {
   content: 'maar zo';
   background-color: #1bb24b;
-  background-image: url('images/icon-circle-check.svg');
+  background-image: url('../images/icon-circle-check.svg');
   background-position: 4px center;
 }
 .image-examples .bad-example:after,
 .nietzomaarzo .bad-example:after {
   content: 'niet zo';
   background-color: #C42C76;
-  background-image: url('images/icon-circle-error.svg');
+  background-image: url('../images/icon-circle-error.svg');
   text-indent: 24px;
 }
 .wp-caption-text {
@@ -2304,8 +2304,8 @@ body .sidebar .widget_oa_social_login .oneall_social_login + em {
   line-height: 1.4;
   margin: 0 16px;
   text-decoration: none;
-  background-image: url('images/cta-pijl.png');
-  background-image: url('images/cta-pijl.svg'), none;
+  background-image: url('../images/cta-pijl.png');
+  background-image: url('../images/cta-pijl.svg'), none;
   background-position: right center;
   background-repeat: no-repeat;
 }
@@ -2513,8 +2513,8 @@ li.comment {
 input[type="button"].gform_previous_button {
   padding-left: 32px;
   padding-right: 16px;
-  background: #148839 url('images/icon-knop-groen-inverse.png') no-repeat left center;
-  background-image: url('images/icon-knop-groen-inverse.svg'), none;
+  background: #148839 url('../images/icon-knop-groen-inverse.png') no-repeat left center;
+  background-image: url('../images/icon-knop-groen-inverse.svg'), none;
 }
 input[type="button"].gform_previous_button + input[type="button"].gform_next_button {
   float: right;
@@ -2806,7 +2806,7 @@ Styling voor header en logo
   float: left;
   width: 55px;
   height: 55px;
-  background-image: url('images/logos/gc-edo-beeldmerk.svg');
+  background-image: url('../images/logos/gc-edo-beeldmerk.svg');
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -2859,16 +2859,16 @@ Styling voor header en logo
   text-decoration: underline;
 }
 .site-header .title-area.inclusie a:before {
-  background-image: url('images/logos/logo-inclusie.svg');
+  background-image: url('../images/logos/logo-inclusie.svg');
 }
 .site-header .title-area.beeldbank a:before {
-  background-image: url('images/logos/beeldmerk-beeldbank.svg');
+  background-image: url('../images/logos/beeldmerk-beeldbank.svg');
 }
 .site-header .title-area.rotterdammercentraal a:before {
-  background-image: url('images/logos/logo-rotterdammercentraal.svg');
+  background-image: url('../images/logos/logo-rotterdammercentraal.svg');
 }
 .site-header .title-area.beeldbank a:before {
-  background-image: url('images/logos/beeldmerk-beeldbank.svg');
+  background-image: url('../images/logos/beeldmerk-beeldbank.svg');
 }
 @media only screen and (max-width: 900px) {
   .site-header .title-area.gebruikercentraal a:before {
@@ -3117,8 +3117,8 @@ Styling voor aparte paginatypes
   text-align: center;
   width: 40%;
   height: 300px;
-  background: url('images/avatar/poppetje-15.png') no-repeat right top;
-  background-image: url('images/avatar/poppetje-15.svg'), none;
+  background: url('../images/avatar/poppetje-15.png') no-repeat right top;
+  background-image: url('../images/avatar/poppetje-15.svg'), none;
   background-size: contain;
   content: ' ';
 }
@@ -3188,8 +3188,8 @@ a.blocklink:focus .read-more {
 a.blocklink:hover .read-more:after,
 a.blocklink:active .read-more:after,
 a.blocklink:focus .read-more:after {
-  background: #fff url('images/arrow-wit.png') no-repeat -7px center;
-  background-image: url('images/arrow-wit.svg'), none;
+  background: #fff url('../images/arrow-wit.png') no-repeat -7px center;
+  background-image: url('../images/arrow-wit.svg'), none;
 }
 a.blocklink:hover .read-more span,
 a.blocklink:active .read-more span,
@@ -3230,8 +3230,8 @@ div.related section a .read-more:after {
   width: 32px;
   height: 24px;
   margin-left: 8px;
-  background: #fff url('images/arrow-wit.png') no-repeat left center;
-  background-image: url('images/arrow-wit.svg'), none;
+  background: #fff url('../images/arrow-wit.png') no-repeat left center;
+  background-image: url('../images/arrow-wit.svg'), none;
 }
 div.related section a:hover,
 div.related section a:active,
@@ -3241,8 +3241,8 @@ div.related section a:focus {
 div.related section a:hover .read-more:after,
 div.related section a:active .read-more:after,
 div.related section a:focus .read-more:after {
-  background: #fff url('images/arrow-wit.png') no-repeat left center;
-  background-image: url('images/arrow-wit.svg'), none;
+  background: #fff url('../images/arrow-wit.png') no-repeat left center;
+  background-image: url('../images/arrow-wit.svg'), none;
 }
 div.related section a:hover .read-more span,
 div.related section a:active .read-more span,
@@ -3786,8 +3786,8 @@ a.cta:active:after {
   bottom: 2px;
   -webkit-box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
-  background-image: url('images/cta-pijl.png');
-  background-image: url('images/cta-pijl.svg'), none;
+  background-image: url('../images/cta-pijl.png');
+  background-image: url('../images/cta-pijl.svg'), none;
   background-position: center center;
   background-repeat: no-repeat;
 }
@@ -4066,8 +4066,8 @@ body {
   bottom: 2px;
   -webkit-box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
-  background-image: url('images/cta-pijl.png');
-  background-image: url('images/cta-pijl.svg'), none;
+  background-image: url('../images/cta-pijl.png');
+  background-image: url('../images/cta-pijl.svg'), none;
   background-position: center center;
   background-repeat: no-repeat;
 }
@@ -4252,8 +4252,8 @@ body {
   bottom: 2px;
   -webkit-box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
-  background-image: url('images/cta-pijl.png');
-  background-image: url('images/cta-pijl.svg'), none;
+  background-image: url('../images/cta-pijl.png');
+  background-image: url('../images/cta-pijl.svg'), none;
   background-position: center center;
   background-repeat: no-repeat;
 }
@@ -4398,7 +4398,7 @@ body {
   display: list-item;
   padding: 0 2em 0 0.3em;
   margin-left: 0.2em;
-  list-style-image: url('images/bullet-white.png');
+  list-style-image: url('../images/bullet-white.png');
   list-style-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20height%3D%226%22%20viewBox%3D%220%200%206%206%22%20width%3D%226%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m0%200h6v6h-6z%22%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E%0A");
 }
 .manifest h2,
@@ -4817,7 +4817,7 @@ body {
 }
 .attendees-list .event-aanmeldingen {
   display: inline-block;
-  background: transparent url('images/icon-calendar.png') no-repeat left center;
+  background: transparent url('../images/icon-calendar.png') no-repeat left center;
   margin-left: 2em;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20height%3D%2215%22%20viewBox%3D%220%200%2014%2015%22%20width%3D%2214%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22m12.0168204%2013.0067619h-11.01537869v-7.94561904h11.01537869zm-9.01249526-11.67009523c0-.07247619.02343003-.132.07038611-.17847619.04695609-.04647619.10687551-.06980953.17995031-.06980953h.50067285c.0730748%200%20.13309025.0232381.17995031.06980953.04686006.04657142.07038611.10609523.07038611.17847619v2.23466666c0%20.07247619-.02343003.132-.07038611.17847619-.04695609.04647619-.10687551.06980953-.17995031.06980953h-.50067285c-.0730748%200-.13309025-.0232381-.17995031-.06980953-.04686005-.04657142-.07038611-.106-.07038611-.17847619zm6.00845823%200c0-.07247619.02333401-.132.07019407-.17847619s.1068755-.06980953.18004633-.06980953h.50057682c.07317083%200%20.13299423.0232381.18004633.06980953.04686006.04657142.07029008.10609523.07029008.17847619v2.23466666c0%20.07247619-.02343002.13190477-.07029008.17847619-.0470521.04647619-.1068755.06980953-.18004633.06980953h-.50057682c-.07317083%200-.13318627-.0232381-.18004633-.06980953-.04686006-.04657142-.07019407-.106-.07019407-.17847619zm3.70828233%201.03971428c-.198003-.19657143-.4328794-.29485714-.7040532-.29485714h-1.0013457v-.74495238c0-.34133333-.1226236-.63361905-.3677746-.87676191-.2452472-.24314285-.5397549-.3647619-.88409956-.3647619h-.50057682c-.34434461%200-.63894843.12161905-.88409952.3647619-.24524711.24314286-.36777464.53542858-.36777464.87676191v.74495238h-3.00413309v-.74495238c0-.34133333-.12262356-.63361905-.36777465-.87676191-.24515108-.24314285-.53985092-.3647619-.88409951-.3647619h-.50067285c-.34424859%200-.63894843.12161905-.88409951.3647619-.24515109.24314286-.36777465.53542858-.36777465.87676191v.74495238h-1.00134569c-.27126981%200-.5059542.09828571-.7041492.29485714-.19819501.19657143-.29729251.42942857-.29729251.69838095v9.9320952c0%20.2688572.0990975.5016191.29729251.6982858.198195.1965714.43287939.2948571.7041492.2948571h11.01537869c.2711738%200%20.5060503-.0982857.7040532-.2948571.198195-.1965715.2972925-.4294286.2972925-.6982858v-9.9320952c0-.26904761-.0990014-.50180952-.2971004-.69838095z%22%2F%3E%3Cpath%20d%3D%22m5.54375624%2011.2778476c.07067419.07.15440774.1051429.25110462.1051429.09679291-.0000953.18052646-.0351429.25120065-.1052381l3.42606567-3.39790478c.07048214-.07.10591526-.15304762.10591526-.24904762%200-.09590476-.03543312-.17885714-.10591526-.24895238l-.56933051-.56457143c-.07067419-.07009524-.15431171-.10514286-.2510086-.10514286-.09669688%200-.18052645.03504762-.25110462.10514286l-2.60572656%202.58438095-1.17735899-1.16761904c-.07067418-.07009524-.15431171-.10514286-.25110462-.10514286-.0967929%200-.18043043.03504762-.25110461.10514286l-.56913847.56457142c-.07067419.07-.10601128.15304762-.10601128.24904762%200%20.09590476.03533709.17885715.10601128.24895238z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
   padding-left: 20px;
@@ -5167,7 +5167,7 @@ body {
 .search main section,
 .search.full-width-content main section {
   padding-left: 2rem;
-  background-image: url('images/icon-list-item.svg');
+  background-image: url('../images/icon-list-item.svg');
   background-repeat: no-repeat;
   background-position: left 2.25rem;
   padding-top: 2rem;
@@ -5352,7 +5352,7 @@ input[type="submit"] {
   border: 2px solid transparent;
   padding: 8px 46px 8px 16px;
   border-radius: 0;
-  background: #148839 url('images/icon-knop-groen.svg') no-repeat right center;
+  background: #148839 url('../images/icon-knop-groen.svg') no-repeat right center;
   font-family: 'League Gothic', Impact, Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-size: 1.8rem;
@@ -6263,7 +6263,7 @@ aside.sidebar .widget article {
   width: 20px;
   content: ' ';
   display: inline-block;
-  background-image: url('images/cta-pijl.png');
+  background-image: url('../images/cta-pijl.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-image: url("../../images/cta-pijl.svg");
@@ -6478,8 +6478,8 @@ aside.sidebar .widget article {
   bottom: 1em;
   -webkit-box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
-  background-image: url('images/cta-pijl.png');
-  background-image: url('images/cta-pijl.svg'), none;
+  background-image: url('../images/cta-pijl.png');
+  background-image: url('../images/cta-pijl.svg'), none;
   background-position: center center;
   background-repeat: no-repeat;
 }
@@ -6494,7 +6494,7 @@ aside.sidebar .widget article {
 .gc-event-widget .feature-image,
 .gc-site-home-contentwidget .feature-image,
 .gc-berichten-widget .feature-image {
-  background-image: url('images/featured-image-default.png');
+  background-image: url('../images/featured-image-default.png');
   background-size: cover;
   background-position: center center;
   position: absolute;
@@ -6902,18 +6902,18 @@ aside.sidebar .widget article {
 }
 .widgetarea-home-links .feature-image.noimage {
   background-color: #00932F;
-  background-image: url('images/featured-image-default.png');
-  background-image: url('images/featured-image-default.svg'), repeating-linear-gradient(20deg, #148839, #148839 50px, #055C21 25px, #055C21 120px);
+  background-image: url('../images/featured-image-default.png');
+  background-image: url('../images/featured-image-default.svg'), repeating-linear-gradient(20deg, #148839, #148839 50px, #055C21 25px, #055C21 120px);
 }
 .widgetarea-home-links section:nth-child(3n+3) .feature-image.noimage {
   background-color: #00932F;
-  background-image: url('images/featured-image-default.png');
-  background-image: url('images/featured-image-default.svg'), repeating-linear-gradient(60deg, #004152, #004152 50px, #006985 25px, #006985 120px);
+  background-image: url('../images/featured-image-default.png');
+  background-image: url('../images/featured-image-default.svg'), repeating-linear-gradient(60deg, #004152, #004152 50px, #006985 25px, #006985 120px);
 }
 .widgetarea-home-links section:nth-child(4n+4) .feature-image.noimage {
   background-color: #00932F;
-  background-image: url('images/featured-image-default.png');
-  background-image: url('images/featured-image-default.svg'), repeating-linear-gradient(150deg, #4C2974, #4C2974 50px, #65369a 25px, #65369a 120px);
+  background-image: url('../images/featured-image-default.png');
+  background-image: url('../images/featured-image-default.svg'), repeating-linear-gradient(150deg, #4C2974, #4C2974 50px, #65369a 25px, #65369a 120px);
 }
 #home-widgets-left .gc-site-home-contentwidget .entry,
 #home-widgets-left .gc-berichten-widget .entry,
@@ -7072,7 +7072,7 @@ aside.sidebar .widget article {
 .site-footer .widget ul.menu li a {
   color: #fff;
   text-decoration: none;
-  background-image: url('images/arrow-right-white.svg');
+  background-image: url('../images/arrow-right-white.svg');
   background-position: left 50%;
   background-repeat: no-repeat;
   padding: 0.5rem 0 0.5rem 1.5rem;
@@ -7473,8 +7473,8 @@ aside.sidebar .widget article {
 					content: ' ';
 					float: right;
 					right: 0;
-					background-image: url('images/nav-icon-rechts.png');
-					background-image: url('images/nav-icon-rechts.svg'), none;
+					background-image: url('../images/nav-icon-rechts.png');
+					background-image: url('../images/nav-icon-rechts.svg'), none;
 				}
 				*/
 }
@@ -7515,8 +7515,8 @@ aside.sidebar .widget article {
 					content: ' ';
 					float: left;
 					left: 0;
-					background-image: url('images/nav-icon-links.png');
-					background-image: url('images/nav-icon-links.svg'), none;
+					background-image: url('../images/nav-icon-links.png');
+					background-image: url('../images/nav-icon-links.svg'), none;
 				}
 				*/
 }
@@ -7878,12 +7878,12 @@ dl.dl-level,
 dl.dl-speaker-names {
   background-repeat: no-repeat;
   background-position: left center;
-  background-image: url('images/icon-microphone.png');
+  background-image: url('../images/icon-microphone.png');
   background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20width%3D%2214%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m5.001%207c.829%200%201.499-.672%201.499-1.5v-4c0-.827-.67-1.5-1.499-1.5-.828%200-1.501.673-1.501%201.5v4c0%20.828.673%201.5%201.501%201.5zm2.948-1c-.238%201.418-1.463%202.5-2.949%202.5-1.484%200-2.71-1.082-2.949-2.5h-1.5c.214%201.91%201.614%203.453%203.449%203.875v2.125h2v-2.125c1.836-.422%203.235-1.965%203.449-3.875z%22%20fill%3D%22%23148839%22%20fill-rule%3D%22evenodd%22%20transform%3D%22translate(2%202)%22%2F%3E%3C%2Fsvg%3E");
   padding-left: 20px;
 }
 dl.dl-level {
-  background-image: url('images/icon-level.png');
+  background-image: url('../images/icon-level.png');
   background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%20width%3D%2214%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22%23148839%22%20fill-rule%3D%22evenodd%22%3E%3Cpath%20d%3D%22m1%207h3v6h-3z%22%2F%3E%3Cpath%20d%3D%22m5%205h3v8h-3z%22%2F%3E%3Cpath%20d%3D%22m9%202h3v11h-3z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
 }
 /*
@@ -9701,7 +9701,7 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
     padding-top: 2.5rem;
     padding-bottom: 1.5rem;
     font-family: 'montserratbold', Helvetica, Arial, sans-serif;
-    background-image: url('images/steps-vertical-middle-bottom.svg');
+    background-image: url('../images/steps-vertical-middle-bottom.svg');
     background-position: center -6px;
   }
   .stappenplan.flexbox li .step-content {
@@ -9738,12 +9738,12 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
     display: none;
   }
   .stappenplan.flexbox li:first-of-type:before {
-    background-image: url('images/steps-vertical-first.svg');
+    background-image: url('../images/steps-vertical-first.svg');
     background-position: center -63px;
   }
   .stappenplan.flexbox li:last-of-type:after {
     display: block;
-    background-image: url('images/steps-vertical-last.svg');
+    background-image: url('../images/steps-vertical-last.svg');
     background-position: center bottom;
     content: ' - ';
     width: 6rem;
@@ -9779,7 +9779,7 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
     display: -ms-flexbox;
     display: flex;
     background: #148839;
-    background-image: url('images/steps-horizontal-middle-left.svg');
+    background-image: url('../images/steps-horizontal-middle-left.svg');
     background-position: right center;
     background-repeat: no-repeat;
     color: #fff;
@@ -9795,7 +9795,7 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
             flex: 1 1 60px;
   }
   .stappenplan.flexbox li .titelspan .step-counter {
-    background-image: url('images/steps-horizontal-middle-right.svg');
+    background-image: url('../images/steps-horizontal-middle-right.svg');
     background-color: #055C21;
     background-position: left center;
     background-repeat: no-repeat;
@@ -9844,14 +9844,14 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
     border-color: green;
   }
   .stappenplan.flexbox li:first-of-type .titelspan .step-counter {
-    background-image: url('images/steps-horizontal-left-first.svg');
+    background-image: url('../images/steps-horizontal-left-first.svg');
     background-position: right center;
   }
   .stappenplan.flexbox li:last-of-type {
     border-color: purple;
   }
   .stappenplan.flexbox li:last-of-type .titelspan {
-    background-image: url('images/steps-horizontal-right-last.svg');
+    background-image: url('../images/steps-horizontal-right-last.svg');
   }
   .stappenplan.flexbox li:nth-last-child(3):first-child,
   .stappenplan.flexbox li:nth-last-child(3):first-child ~ li {
@@ -10437,12 +10437,12 @@ body.single-stap {
   border-color: #1D9D42;
 }
 .card.tipkaart.commitment .contentinfo {
-  background-image: url('images/optimaal-digitaal/icon-draagvlak.svg');
+  background-image: url('../images/optimaal-digitaal/icon-draagvlak.svg');
   background-size: 90px 90px;
   background-position: center top;
 }
 .card.tipkaart.commitment .tipkaart__categorie:before {
-  background-image: url('images/optimaal-digitaal/icon-draagvlak.svg');
+  background-image: url('../images/optimaal-digitaal/icon-draagvlak.svg');
 }
 .card.tipkaart.draagvlak {
   background-color: #25b34b;
@@ -10465,12 +10465,12 @@ body.single-stap {
   border-color: #1D9D42;
 }
 .card.tipkaart.draagvlak .contentinfo {
-  background-image: url('images/optimaal-digitaal/icon-draagvlak.svg');
+  background-image: url('../images/optimaal-digitaal/icon-draagvlak.svg');
   background-size: 90px 90px;
   background-position: center top;
 }
 .card.tipkaart.draagvlak .tipkaart__categorie:before {
-  background-image: url('images/optimaal-digitaal/icon-draagvlak.svg');
+  background-image: url('../images/optimaal-digitaal/icon-draagvlak.svg');
 }
 .card.tipkaart.gebruiksgemak {
   background-color: #4c2974;
@@ -10493,12 +10493,12 @@ body.single-stap {
   border-color: #361454;
 }
 .card.tipkaart.gebruiksgemak .contentinfo {
-  background-image: url('images/optimaal-digitaal/icon-mobiel.svg');
+  background-image: url('../images/optimaal-digitaal/icon-mobiel.svg');
   background-size: 90px 90px;
   background-position: center top;
 }
 .card.tipkaart.gebruiksgemak .tipkaart__categorie:before {
-  background-image: url('images/optimaal-digitaal/icon-mobiel.svg');
+  background-image: url('../images/optimaal-digitaal/icon-mobiel.svg');
 }
 .card.tipkaart.informatieveiligheid {
   background-color: #c42c76;
@@ -10521,12 +10521,12 @@ body.single-stap {
   border-color: #B1266B;
 }
 .card.tipkaart.informatieveiligheid .contentinfo {
-  background-image: url('images/optimaal-digitaal/icon-mobiel.svg');
+  background-image: url('../images/optimaal-digitaal/icon-mobiel.svg');
   background-size: 90px 90px;
   background-position: center top;
 }
 .card.tipkaart.informatieveiligheid .tipkaart__categorie:before {
-  background-image: url('images/optimaal-digitaal/icon-mobiel.svg');
+  background-image: url('../images/optimaal-digitaal/icon-mobiel.svg');
 }
 .card.tipkaart.kanaalsturing {
   background-color: #f99d1c;
@@ -10549,12 +10549,12 @@ body.single-stap {
   border-color: #F89521;
 }
 .card.tipkaart.kanaalsturing .contentinfo {
-  background-image: url('images/optimaal-digitaal/icon-kannibaalsturing.svg');
+  background-image: url('../images/optimaal-digitaal/icon-kannibaalsturing.svg');
   background-size: 90px 90px;
   background-position: center top;
 }
 .card.tipkaart.kanaalsturing .tipkaart__categorie:before {
-  background-image: url('images/optimaal-digitaal/icon-kannibaalsturing.svg');
+  background-image: url('../images/optimaal-digitaal/icon-kannibaalsturing.svg');
 }
 .card.tipkaart.procesaanpak {
   background-color: #00b4ac;
@@ -10577,12 +10577,12 @@ body.single-stap {
   border-color: #009F98;
 }
 .card.tipkaart.procesaanpak .contentinfo {
-  background-image: url('images/optimaal-digitaal/icon-procesaanpak.svg');
+  background-image: url('../images/optimaal-digitaal/icon-procesaanpak.svg');
   background-size: 90px 90px;
   background-position: center top;
 }
 .card.tipkaart.procesaanpak .tipkaart__categorie:before {
-  background-image: url('images/optimaal-digitaal/icon-procesaanpak.svg');
+  background-image: url('../images/optimaal-digitaal/icon-procesaanpak.svg');
 }
 .card.tipkaart.samenwerking {
   background-color: #0095da;
@@ -10605,12 +10605,12 @@ body.single-stap {
   border-color: #0086C0;
 }
 .card.tipkaart.samenwerking .contentinfo {
-  background-image: url('images/optimaal-digitaal/icon-deel.svg');
+  background-image: url('../images/optimaal-digitaal/icon-deel.svg');
   background-size: 90px 90px;
   background-position: center top;
 }
 .card.tipkaart.samenwerking .tipkaart__categorie:before {
-  background-image: url('images/optimaal-digitaal/icon-deel.svg');
+  background-image: url('../images/optimaal-digitaal/icon-deel.svg');
 }
 .card.tipkaart.inclusie {
   background-color: #D94721;
@@ -10633,12 +10633,12 @@ body.single-stap {
   border-color: #ad391a;
 }
 .card.tipkaart.inclusie .contentinfo {
-  background-image: url('images/optimaal-digitaal/icon-inclusie.svg');
+  background-image: url('../images/optimaal-digitaal/icon-inclusie.svg');
   background-size: 90px 90px;
   background-position: center top;
 }
 .card.tipkaart.inclusie .tipkaart__categorie:before {
-  background-image: url('images/optimaal-digitaal/icon-inclusie.svg');
+  background-image: url('../images/optimaal-digitaal/icon-inclusie.svg');
 }
 .card--doelgroep {
   padding: 0;
@@ -11015,7 +11015,7 @@ Related external links block
 .section--related-links .wrap div {
   border-top: 1px solid #D1DFE3;
   padding-left: 3rem;
-  background: url('images/arrow-right-blue.svg') left 40px no-repeat;
+  background: url('../images/arrow-right-blue.svg') left 40px no-repeat;
   background-size: 10px auto;
   font-size: 18px;
   font-size: 1.8rem;
@@ -11157,19 +11157,19 @@ Optimaal digitaal block
 }
 .section--resultaten .label.nietzo,
 .section--resultaten .label.maarzo {
-  background-image: url('images/icon-dosdonts-do-white.svg');
+  background-image: url('../images/icon-dosdonts-do-white.svg');
   background-repeat: no-repeat;
   background-position: 1rem 0.75rem;
   background-size: 1.25rem 1.25rem;
   padding-left: 3rem;
 }
 .section--resultaten .label.nietzo {
-  background-image: url('images/icon-dosdonts-dont-white.svg');
+  background-image: url('../images/icon-dosdonts-dont-white.svg');
   background-color: #c73d19;
   color: #fff;
 }
 .section--resultaten .label.maarzo {
-  background-image: url('images/icon-dosdonts-do-white.svg');
+  background-image: url('../images/icon-dosdonts-do-white.svg');
   background-color: #148839;
   color: #fff;
 }
@@ -11222,7 +11222,7 @@ Optimaal digitaal block
   padding-left: 2.75rem;
   padding-right: 0.75rem;
   font-size: 90%;
-  background-image: url('images/icon-search-plus.svg');
+  background-image: url('../images/icon-search-plus.svg');
   background-position: 7px center;
   background-repeat: no-repeat;
   background-size: 12px 12px;

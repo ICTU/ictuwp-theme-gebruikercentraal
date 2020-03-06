@@ -1,0 +1,25 @@
+<section class="section section--overview">
+
+  <div class="l-section-top">
+    <h2 class="section__title">Drie kolomsgrid</h2>
+        <p class="section__description">Een standaard 3 kolomsgrid. In principe kunnen alle kaartjes gecombineerd worden in het driekoloms grid.</p>
+  </div>
+
+
+  <div class="l-section-content">
+
+    <div class="grid grid--col-3">
+      {% include '../includes/card.twig' with {'card_title': 'Kaartje zonder afbeelding'} %}
+      {% include '../includes/card--with-image.twig' with {'card_title': 'Kaartje met een afbeelding'} %}
+      {% include '../includes/card--tipkaart.twig' with {'modifier' : 'Kanaalsturing'} %}
+      {% include '../includes/card--with-image.twig' with {'card_title': 'Kaartje met afbeelding'} %}
+      {% include '../includes/card--tipkaart.twig' with {'card_title': 'Stel je coulanter op bij fouten', 'modifier' : 'Procesaanpak'} %}
+    </div>
+
+    <div class="l-section-links">
+    {% include '../includes/btn.twig' with 'btn_text': 'Bekijk alle nieuws' %}
+    </div>
+
+  </div>
+</section>
+

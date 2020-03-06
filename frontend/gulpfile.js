@@ -81,7 +81,7 @@ function baseStyles(done) {
       done();
     }))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('../'))
+    .pipe(gulp.dest('../css/'))
     .pipe(notify({message: siteConfig.name + ' LESS task complete'}))
     .pipe(browserSync.stream());
 
@@ -146,7 +146,7 @@ function prodAll(done) {
         done();
       }
     } else {
-      console.log('Site ' + name + ' not found');
+      console.log('Site ' + siteName + ' not found');
     }
     done();
 
@@ -241,45 +241,41 @@ function makeSprites(done) {
 // Watch files
 function watch() {
 
+  console.log(' ** Sitename: ' + siteConfig.name + ', Plugintype: ' + siteConfig.type + ' ** ');
+
 	browserSync.init({
 		proxy: siteConfig.proxy
 	});
-	
-	if (argv.site) {
-		console.log('ja hoor: ' + argv.site );
-	}
 
-	if ( siteConfig.type === 'plugin' ) {
-	
-		// naar welke bestanden kijken we precies?
-		console.log("Less source = " + siteConfig.csssource + '*.less' );
-		console.log("PHP sources = " + siteConfig.pluginsource + '*.php' );
-		console.log("language sources = " + siteConfig.path + 'languages/*.po' );
-	
-		// watch the less sources
-	    gulp.watch( siteConfig.csssource + '*.less', gulp.series( pluginstyle, plugincollect, plugincopyfolder ));
-	
-		// watch any php
-	    gulp.watch( siteConfig.pluginsource + '*.php', gulp.series( plugincollect, plugincopyfolder ));
-	
-		// watch any translation files: trigger this if a .po or *.pot file changes
-		gulp.watch( siteConfig.path + 'languages/*.po', gulp.series( plugintranslations, plugincollect, plugincopyfolder ));
-		gulp.watch( siteConfig.path + 'languages/*.pot', gulp.series( plugintranslations, plugincollect, plugincopyfolder ));
-	
-	}
-	else {
-	
-		gulp.watch('../less/**/*.less', gulp.series(baseStyles, styles));
-		
-		gulp.watch('../js/components/*.js', gulp.series(baseJs));
-		gulp.watch(siteConfig.path + 'less/**/*.less', gulp.series(styles));
-	
-	}
+  //Base Styles
 
-	// Styleguide
-	gulp.watch('styleguide/elements/**', gulp.series(styleGuide));
-	gulp.watch('styleguide/less/**', gulp.series(sgStyles));
-	
+  // Javascripts
+  gulp.watch('../js/components/*.js', gulp.series(baseJs));
+
+  // Styleguide
+  gulp.watch('styleguide/elements/**', gulp.series(styleGuide));
+  gulp.watch('styleguide/less/**', gulp.series(sgStyles));
+
+	switch(siteConfig.type) {
+    case 'plugin':
+
+      // watch any php
+      gulp.watch( siteConfig.pluginsource + '*.php', gulp.series( plugincollect, plugincopyfolder ));
+
+      // watch any translation files: trigger this if a .po or *.pot file changes
+      gulp.watch( siteConfig.path + 'languages/*.po', gulp.series( plugintranslations, plugincollect, plugincopyfolder ));
+      gulp.watch( siteConfig.path + 'languages/*.pot', gulp.series( plugintranslations, plugincollect, plugincopyfolder ));
+
+      // Watch less
+      gulp.watch('../less/**/*.less', gulp.series(baseStyles, styles));
+      gulp.watch(siteConfig.path + 'less/**/*.less', gulp.series(styles));
+
+      break;
+
+    case 'theme':
+      gulp.watch('../less/**/*.less', gulp.series(baseStyles));
+      break;
+  }
 }
 
 //--------------------------------------------------------
@@ -356,6 +352,10 @@ function pluginstyle(done) {
 	// ik heb de path.join gekopieerd uit 'styles()', maar ik 
 	// snap 'm nog niet zo goed. Wat doet het en waarom?
 
+
+  /*
+  Gaan we nog bespreken, is nu dubbel ;).
+
 	return gulp.src(siteConfig.csssource + '*.less')
 		.pipe(sourcemaps.init())
 		.pipe(less({
@@ -370,8 +370,8 @@ function pluginstyle(done) {
 		.pipe(gulp.dest( siteConfig.cssdest ) )
 		.pipe(notify({message: 'pluginstyle: ' + siteConfig.name + ' LESS task complete'}))
 		.pipe(browserSync.stream());
-		
-	done();
+
+	done();*/
 
 }
 

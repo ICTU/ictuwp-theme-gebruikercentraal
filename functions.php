@@ -1593,9 +1593,11 @@ function gc_wbvb_add_blog_archive_css() {
 
 function gc_wbvb_add_css() {
 
+
+
 	wp_enqueue_style(
 		ID_SKIPLINKS,
-		WBVB_THEMEFOLDER . '/css/blanco.css'
+    get_stylesheet_directory_uri() .'/css/gc-style.css'
 	);
 
 	$custom_css = '
@@ -1888,7 +1890,7 @@ function gc_wbvb_home_manifest() {
 			$class = 'manifest entry';
 			
 			if ( get_field('lees-meer-link') && get_field('lees-meer-tekst') ) {
-				$leesmeer = '<a class="cta" href="' . get_field('lees-meer-link') . '">' . get_field('lees-meer-tekst') . '</a>';
+				$leesmeer = '<a class="btn btn--white" href="' . get_field('lees-meer-link') . '">' . get_field('lees-meer-tekst') . '</a>';
 			}
 		}
 	}
@@ -1908,14 +1910,14 @@ function gc_wbvb_home_manifest() {
 	echo '</div>';
 	echo '</article>';
 	
-	echo '<div id="home-widgets-left">';
+	echo '<div class="l-widget-wrapper"><div id="home-widgets-left">';
 	// GC_WBVB_WIDGET_HOME_WIDGET_1
 	gc_wbvb_write_widget_home_widget_left();
 	echo '</div>';
 	echo '<div id="home-widgets-right">';
 	// GC_WBVB_WIDGET_HOME_WIDGET_2
 	gc_wbvb_write_widget_home_widget_right();
-	echo '</div>';
+	echo '</div></div>';
 	
 }
 
@@ -2075,7 +2077,7 @@ function gc_wbvb_eventmanager_styles_placeholders($replace, $EM_Event, $result) 
 			$event_start_datetime     = strtotime( $EM_Event->event_start_date . ' ' . $EM_Event->event_start_time );
 			
 			if ( $EM_Event->location_id ) {
-				return '<div class="event-location">#_LOCATIONNAME</div>';
+				return '<div class="meta-data__item meta-data--with-icon event-location">#_LOCATIONNAME</div>';
 			}
 			else {
 				return '';
@@ -2556,17 +2558,15 @@ function gc_wbvb_archive_loop() {
 				}
 
 				if ( isset( $image[0] ) ) {
-					$class = 'feature-image';
 					$bluh = sanitize_title( $image[0] );
 				}
-				
 
 			}
 			
-			echo '<section class="entry' . $extra_cssclass . '" itemscope itemtype="http://schema.org/SocialMediaPosting" id="' . $theID . '">';
-			echo '<a href="' . $permalink . '" itemprop="url">';
+			echo '<section class="entry teaser' . $extra_cssclass . ($bluh ? ' teaser--with-image' : ' teaser--without-image') .'" itemscope itemtype="http://schema.org/SocialMediaPosting" id="' . $theID . '">';
+			echo '<a href="' . $permalink . '" itemprop="url" class="teaser__link">';
 			if ( $bluh ) {
-				echo '<div id="' . $the_image_ID . '" class="' . $class . '" data-bluh="' . $bluh . '">&nbsp;</div>';
+				echo '<div id="' . $the_image_ID . '" class="feature-image teaser__image" data-bluh="' . $bluh . '">&nbsp;</div>';
 			}
 			echo '<div class="bloginfo">';
 			
@@ -2598,7 +2598,7 @@ function gc_wbvb_archive_loop() {
 
 			}
 				
-			echo '<h2 class="entry-title" itemprop="headline">' . get_the_title() . '</h2></header>';
+			echo '<h2 class="teaser__title entry-title" itemprop="headline"><span class="arrow-link"><span class="arrow-link__text">' . get_the_title() . '</span><span class="arrow-link__icon"></span></span></h2></header>';
 			echo '<div class="excerpt">';
 			echo the_excerpt();
 			echo '</div>';

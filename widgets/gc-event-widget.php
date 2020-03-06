@@ -90,22 +90,20 @@ class GC_event_widget extends WP_Widget {
           echo $args['after_title'];
         }
         
-        echo '<div class="bg-color">';
+        echo '<div class="entry-list entry-list--events">';
         
         foreach($events as $event){    
           
           $icounter++;
           
           if ( $icounter == 1 ) {
-            echo '<section class="entry first" itemscope itemtype="http://schema.org/Event">';
+            echo '<section class="entry entry--event first" itemscope itemtype="http://schema.org/Event">';
           }
           else {
-            echo '<section class="entry" itemscope itemtype="http://schema.org/Event">';
+            echo '<section class="entry entry--event" itemscope itemtype="http://schema.org/Event">';
           }
           
-          echo '<a itemprop="url" href="';
-          echo get_permalink( $event->post_id );
-          echo '">';
+          echo '<a class="entry__link" itemprop="url" href="' .get_permalink( $event->post_id ) . '">';
           
           $eventstart   = strtotime( $event->event_start_date );
           $eventend     = strtotime( $event->event_end_date );
@@ -121,18 +119,18 @@ class GC_event_widget extends WP_Widget {
             
 
           echo '<header>' . $availability . '<span class="date-badge" itemprop="startDate" content="' . date('c', $eventstart) . '"><span class="dag">' . date_i18n('d', $eventstart) . '</span> <span class="maand">' . date_i18n('M', $eventstart) . '</span>' . $jaar . '</span>';        
-          echo '<h3 class="entry-title" itemprop="name">';
+          echo '<h3 class="entry-title" itemprop="name"><span class="arrow-link"><span class="arrow-link__text">';
           echo $event->event_name;
-          echo '</h3>';
+          echo '</span><span class="arrow-link__icon"></span></span></h3>';
           
-          echo '<div class="tijdenplaats">';
+          echo '<div class="meta-data">';
           
           if ( $event->output( '#_EVENTTIMES' ) ) {
-            echo '<span class="event-times">' . $event->output( '#_EVENTTIMES' ) . '</span>';
+            echo '<span class="meta-data__item meta-data--with-icon event-times">' . $event->output( '#_EVENTTIMES' ) . '</span>';
           }
           
           if ( $event->output( '#_LOCATIONNAME' ) ) {
-            echo '<span class="event-location">' . $event->output( '#_LOCATIONNAME' ) . '</span>';
+            echo '<span class="meta-data__item event-location meta-data--with-icon">' . $event->output( '#_LOCATIONNAME' ) . '</span>';
           }
           
           echo '</div>';

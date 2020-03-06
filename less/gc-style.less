@@ -1,0 +1,144 @@
+@versie: '4.3.5';
+/*!
+Theme Name:             Gebruiker Centraal
+Description:            Wordpress-theme voor gebruikercentraal.nl
+Author:                 Paul van Buuren - Tamara de Haas
+Author URI:             https://wbvb.nl/
+Version:                4.3.5
+Version description:    Verder oplappen van homepage.
+Link:                   https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+
+Template: genesis
+Template Version: 2.0.2
+
+License: GPL-2.0+
+License URI: http://www.opensource.org/licenses/gpl-license.php
+
+
+<!--                                                            -->
+<!-- ========================================================   -->
+<!--                                                            -->
+<!--                  .:::::::::::::::}}}}}}}                   -->
+<!--                  .:::::::::::::::}}}}}}}                   -->
+<!--                  .:::::::::::::::}}}}}}}                   -->
+<!--              ````.:::::::::::::::::}}}}}``````             -->
+<!--        ``.------------------::::::::::::::::}}}::.`        -->
+<!--      `.---------------------::::::::::::::::}}}}}}}:`      -->
+<!--     `-----------------------::::::::::::::::}}}}}}}}}.     -->
+<!--     .-----------------------::::::::::::::::}}}}}}}}}}     -->
+<!--     ------------------------::::::::::::::::}}}}}}}}}}     -->
+<!--     ------------------------::::::::::::::::}}}}}}}}}}     -->
+<!--     ------------------------::::::::::::::::}}}}}}}}}}     -->
+<!--     -----------------::-----:::::::}::::::::}}}}}}}}}}     -->
+<!--     ---------------:hmmd+---:::::smmmy::::::}}}}}}}}}}     -->
+<!--     ---------------+MMMMy---:::::NMMMN}:::::}}}}}}}}}}     -->
+<!--     ----------------oyhs:---:::::}yhy+::::::}}}}}}}}}}     -->
+<!--     ------------------------::::::::::::::::}}}}}}}}}}     -->
+<!--     ------------------------::::::::::::::::}}}}}}}}}}     -->
+<!--     ------------------oso}}:::}}+sy}::::::::}}}}}}}}}}     -->
+<!--     ------------------}oyhhdhhdhys+:::::::::}}}}}}}}}}     -->
+<!--     -----------------------:::::::::::::::::}}}}}}}}}}     -->
+<!--     ------------------------::::::::::::::::}}}}}}}}}}     -->
+<!--     `-----------------------::::::::::::::::}}}}}}}}}.     -->
+<!--      `.---------------------::::::::::::::::}}}}}}}:`      -->
+<!--        `..-----------------::::::::::::::::}}}}::-`        -->
+<!--             ``::::::::::::::::}}}}}}}}}}}}}}-`             -->
+<!--              `::::::::::::::::}}}}}}}}}}}}}}.              -->
+<!--              `::::::::::::::::}}}}}}}}}}}}}}.              -->
+<!--                                                            -->
+<!-- ========================================================   -->
+<!--                                                            -->
+
+
+*/
+
+// Gebruiker Centraal - style.less
+// ----------------------------------------------------------------------------------
+// Dit ding zorgt voor style.css. Dat is zeg maar het allerbelangrijkste CSS-bestand
+// ----------------------------------------------------------------------------------
+// @package gebruiker-centraal
+// @author  Paul van Buuren
+// @license GPL-2.0+
+// @version 4.3.5
+// @desc.   Verder oplappen van homepage.
+// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+
+/*
+ * Abstracts
+ * Variables, mixins, extendables - things we use everywhere
+ */
+
+@import "../fonts/fonts.css";
+@import "abstracts/_variables.less";
+@import "abstracts/_mixins.less";
+@import "abstracts/_normalize.less";
+
+/*
+Imports
+---------------------------------------------------------------------------------------------------- */ 
+@import "includes/30-text-styles.less";                 // font-styles, shared with admin editor-styles.less */ // styling for forms */
+@import "includes/50-header-logo-menu.less";            // all styling for the header and the logo */
+@import "includes/60-sidebar-widgets.less";             // sidebar widgets */
+@import "includes/70-pagetypes.less";                   // various page types etc */
+@import "includes/71-search-and-404-pagetype.less";     // styling for search
+@import "includes/80-structure.less";                   // mediaqueries */ // footer thingies */
+@import "includes/90-printstyles.less";                 // non screen / print only */
+@import "includes/99-browserhacks.less";                // non screen / print only */
+
+
+/*
+ * Base
+ * Basic layout for pages, page parts or html elements
+ */
+
+@import "base/_layout-footer";
+@import "base/_forms";
+@import "base/_layout";
+@import "base/_main-nav.less";
+@import "base/_base.less";
+@import "base/_layout-footer.less"; // Dit was wat er in style stond
+@import "base/block-gallery";
+
+// Components
+@import "components/_btn";
+@import "components/_definition-list";
+@import "components/_grid";
+@import "components/_overview";
+@import "components/_section";
+@import "components/_link";
+@import "components/_meta-data";
+@import "components/_item-list";
+@import "components/_text-block";
+@import "components/_teaser";
+@import "components/_widgets";
+
+
+// Pages. singles and entries
+@import "components/_page";
+@import "components/_page_stappenplan";
+@import "components/_page-step";
+@import "components/_page-archive-overview"; // Overviews, archives
+
+//Specifics for antries and singles per Post Type
+@import "components/_single";
+@import "components/_single-home";
+@import "components/_single-event";
+@import "components/_single-author";
+
+// cards
+@import "components/_card.less";                        // @since	  4.1.1 
+@import "components/_card-tipkaart.less";               // @since	  4.1.1 
+@import "components/_card-doelgroep.less";              // @since	  4.1.1 
+@import "components/_card-featured-image.less";         // @since	  4.1.1
+@import "components/_card-vaardigheden.less";         	// @since	  4.2.1
+
+
+// sections
+@import "components/_section-related-content.less";     // @since	  4.1.1 
+@import "components/_section-resultaatblok.less";     		// @since	  4.1.1 
+
+
+// components
+@import "includes/image-lightbox.less";                // non screen / print only */
+
+

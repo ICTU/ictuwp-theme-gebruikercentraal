@@ -1,0 +1,95 @@
+.archive.author {
+
+  .site-inner {
+    .gc-page-background;
+  }
+
+  .content-sidebar-wrap {
+    max-width: @max-width-content;
+  }
+
+  .author-box {
+    background: @gc_dark_purple;
+    color: @white;
+    &:before {
+      display: none;
+    }
+
+    hr {
+      border-color: darken(@gc_dark_purple, 10%);
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+
+    .wrap,
+    .author-info {
+      width: 100%;
+    }
+
+    .lid-actieteam {
+      .gc-box-shadow();
+      .clearfix;
+      position: relative;
+      background: @white;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+
+      @media @desktop {
+        padding-top: 6rem;
+      }
+
+      h2 {
+        margin: 0;
+        padding: 0;
+
+        + p {
+          margin-top: 1rem;
+        }
+      }
+
+      .bg-color {
+        max-width: @max-width-inner;
+        margin: 0 auto;
+      }
+    }
+
+    .type-post {
+      .gc-box-shadow;
+      background: @white;
+      margin-top: @gutter;
+      width: ~"calc(50% - (@{gutter} / 2))";
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+
+      .entry-header {
+        width: 100%;
+      }
+
+
+      @media @desktop {
+        padding-left: 3rem;
+        padding-right: 3rem;
+      }
+
+      &:nth-child(odd){
+        margin-right: @gutter / 2;
+      }
+
+      &:nth-child(even){
+        margin-left: @gutter / 2;
+      }
+
+      .read-more {
+        margin-top: auto;
+
+        a {
+          .gc-read-more;
+        }
+      }
+    }
+  }
+}

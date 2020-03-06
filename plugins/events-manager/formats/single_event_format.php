@@ -29,13 +29,13 @@ $event_end_datetime       = '';
 $event_times              = ''; 
 $event_location           = ''; 
 
-if ( is_object( $EM_Event ) ) {
+if ( is_object( $EM_Event ) )  {
 
 	$event_start_datetime     = strtotime( $EM_Event->event_start_date . ' ' . $EM_Event->event_start_time );
 	$event_end_datetime       = strtotime( $EM_Event->event_end_date . ' ' . $EM_Event->event_end_time);
 	
 	if ( isset( $EM_Event->location->name ) ) {
-		$event_location  = '<div class="event-location">' . $EM_Event->location->name . '</div>'; 
+		$event_location  = '<div class="meta-data__item meta-data--with-icon event-location">' . $EM_Event->location->name . '</div>';
 	}
 	
 }
@@ -43,7 +43,7 @@ if ( is_object( $EM_Event ) ) {
 
 if ( $event_start_datetime && ( $EM_Event->event_start_date === $EM_Event->event_end_date ) ) {
 	// only accept events with a start time
-	$event_times .= '<div class="event-times">
+	$event_times .= '<div class="meta-data__item meta-data--with-icon event-times">
 	<span class="starttime" itemprop="startDate" content="' . date_i18n( 'c', $event_start_datetime ) . '">' . date_i18n( 'G:i', $event_start_datetime ) . '</span>';
 	
 	if ( $event_end_datetime ) {
@@ -69,7 +69,7 @@ elseif( $EM_Event->event_start_date != $EM_Event->event_end_date ) {
 		$period =  sprintf( '%s - %s', date_i18n('d M', $event_start_datetime), date_i18n('d M', $event_end_datetime) );
 	}
 	
-	$event_times .= '<div class="event-times">' . $startDate . '</span>' . $endDate . '</span></div>';
+	$event_times .= '<div class="meta-data__item meta-data--with-icon event-times">' . $startDate . '</span>' . $endDate . '</span></div>';
 /*	
 	<span class="starttime" itemprop="startDate" content="' . date_i18n( 'c', $event_start_datetime ) . '">' . date_i18n( 'G:i', $event_start_datetime ) . '</span>
 	
@@ -123,11 +123,11 @@ if ( is_array( $lebookings ) || is_object( $lebookings ) ) {
 		if ( ( floatval( $price_max ) > 0 )  && ( $price_max > $price_min ) ) {
 			$event_cost .= ' - ' . '<span itemprop="highPrice">' . round($price_max,2) . '</span>';
 		}  
-		$header_meta_info .= '<div class="event-pricing" itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">' . $event_cost . $availabletickets . '</div>';
+		$header_meta_info .= '<div class=",eta-data__item meta-data--with-icon event-pricing" itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">' . $event_cost . $availabletickets . '</div>';
 	}  
 	else {
 		$event_cost .= '<div class="visuallyhidden" itemprop="price">0</div>';
-		$header_meta_info .= '<div class="event-pricing" itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">' . $event_cost . $availabletickets . '</div>';
+		$header_meta_info .= '<div class="meta-data__item meta-data--with-icon event-pricing" itemprop="offers" itemscope itemtype="http://schema.org/AggregateOffer">' . $event_cost . $availabletickets . '</div>';
 	}
 
 	$header_meta_info .= $EM_gc_wbvb_single_event_aanmeldingen;
@@ -146,7 +146,7 @@ else {
     <header class="wrap">#_AVAILABILITYCHECK
         <div class="date-badge">#_DATEBADGE</div>
         <h1 itemprop="name">#_EVENTNAME</h1>
-        <div class="meta"><?php echo $header_meta_info ?></div>
+        <div class="meta-data"><?php echo $header_meta_info ?></div>
 
     </header>
 	<?php

@@ -6,6 +6,8 @@
   line-height: 2.4rem;
 }
 
+.meta-data > div,
+.meta-data > span,
 .meta-data__item {
   display: inline-block;
 
@@ -14,7 +16,7 @@
     font-family: @font_primary_semi;
   }
 
-  + .meta-data__item {
+  + .meta-data__item:not(.meta-data--with-icon) {
     &:before {
       content: " ";
       speak: none;
@@ -24,6 +26,35 @@
       margin: 1.1rem 1rem 0 .6rem;
       display: inline-block;
       float: left;
+    }
+  }
+
+  &.meta-data--with-icon {
+    padding-left: 1.8rem;
+    background-size: auto 13px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    margin-right: 2rem;
+
+    &.event-times {
+      background-image: url('../images/icon-time.png');
+      .icon_pin_fill('../images/icon-time.svg', @gc_a11y_green);
+    }
+
+    &.event-location {
+      background-image: url('../images/icon-pin.png');
+      .icon_pin_fill('../images/icon-pin.svg', @gc_a11y_green);
+      background-size: 10px auto;
+    }
+
+    &.event-aanmeldingen {
+      background-image: url('../images/icon-calendar.png');
+      .icon_pin_fill('../images/icon-calendar.svg', @gc_a11y_green);
+    }
+
+    &.event-pricing {
+      background-image: url('../images/icon-price.png');
+      .icon_pin_fill('../images/icon-price.svg', @gc_a11y_green);
     }
   }
 }

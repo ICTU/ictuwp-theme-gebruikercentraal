@@ -19,11 +19,6 @@
 @break_xlarge:                1200px; // was 960px ( 63 * @padding );
 
 
-@contentmaxwidth:             1180px;
-@contentwidth_960:            960px;
-@contentwidth_761:            761px;
-@containermaxwidth:           1900px;
-
 // Mediaqueries
 
 @gc_pantybrown_light:         #f2ebe4; // ook wel 'GC PantyBrown Light'
@@ -44,9 +39,6 @@
 @spacer_default:             3rem;
 @spacer_medium:              5rem;
 @spacer-large:               8rem;
-
-@max-width-content:          960px;
-@max-width-inner:            770px;
 
 @menu_height:                7rem;
 
@@ -192,15 +184,15 @@
 // font-stijlen en -groottes =======================================================
 @font_primary:              'montserratregular', Helvetica, Arial, sans-serif;
 @font_primary_bold:         'montserratbold', Helvetica, Arial, sans-serif;
-@font_primary_light:        'Montserrat light', Helvetica, Arial, sans-serif;
-@font_primary_semi:         'montserrat_semiboldregular', Helvetica, Arial, sans-serif;
+@font_primary_light:        'montserratlight', Helvetica, Arial, sans-serif;
+@font_primary_semi:         'montserratsemibold', Helvetica, Arial, sans-serif;
 @button-normal:             @gc_a11y_green;
 
-@font_secondary:            'League Gothic', Impact, Helvetica, Arial, sans-serif;
+@font_secondary:            'league_gothicregular', Impact, Helvetica, Arial, sans-serif;
 
 @headerfont:                @font_secondary;
 @headerfont2:               @font_primary;
-@bodyfont:                  @font_primary_light;
+@bodyfont:                  @font_primary;
 @bodyfont_bold:             @font_primary_bold;
 @montserrat_semibold:       @font_primary_semi;
 
@@ -236,7 +228,7 @@
 @import "variables/_colors-inclusie.less";
 @import "variables/_textblock.less";
 @import "variables/_steps.less";
-
+@import "variables/_sizes";
 
 //========================================================================================================
 // Inclusie en de Beeldbank plugins

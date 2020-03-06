@@ -9,134 +9,80 @@
 // @desc.     CPT procestips toegevoegd. Mogelijkheid OD-tips toe te voegen op stap-pagina.
 // @link      https://github.com/ICTU/Gebruiker-Centraal---Inclusie---custom-post-types-taxonomies
 
-
-
-body.single.single-stap.full-width-content {
-
-  .site-inner header {
-    margin: 0;
-    padding: 0;
-  }
-
-  .content-sidebar-wrap {
-    padding: 0;
-  }
-
-  .region--content-top {
-    padding: 0;
-    position: relative;
-
-    @media @desktop {
-      margin-top: -8rem;
-    }
-  }
-
-  .content {
-    .inleiding {
-      @media @desktop {
-        padding: 3rem 5rem;
-      }
-    }
-    .entry {
-      .gc-box-shadow;
-      max-width: @max-width-content;
-      margin: 0 auto;
-      position: relative;
-    }
-  }
-}
-
-/*
-
-body.single-stap {
-
-  .content-sidebar-wrap {
-    padding-top: 0;
-  }
-
-  .region--content-top {
-    position: relative;
-
-    @media only screen and (min-width: ( @break_fullwidth ) ) {
-      margin-top: -8rem;
-    }
-  }
-
-  .page-intro__intro-text {
-    max-width: @max-width-inner;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
+.single.single-stap.full-width-content {
 
   #maincontent {
-
-    article.entry {
-      .gc-box-shadow();
-      max-width: @contentwidth_960;
-      background: @wit;
-      margin-left: auto;
-      margin-right: auto;
-
-      @media only screen and (max-width: ( @break_fullwidth ) ) {
-        padding: 2rem;
-
-        h2 {
-          padding-top: 0;
-        }
-      }
-
-      .wrap {
-        max-width: @max-width-inner;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .entry-content {
-        padding: 5rem 2rem;
-
-        > h2:first-child {
-          padding: 0;
-
-          + p {
-            margin-top: 2rem;
-          }
-        }
-      }
-    }
-  }
-
-
-  .extra-content {
-    // de ruimte voor procestips, gerelateerde content + links
-    max-width: @contentwidth_960;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3rem;
     position: relative;
-    background-color: @wit;
 
-    section {
+    &:before {
+      content: " ";
+      position: absolute;
+      background: @brand_color;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 30rem;
+      display: block;
 
-      .wrap {
-        max-width: @max-width-inner;
-        padding-left: 2rem;
-        padding-right: 2rem;
-        margin-left: auto;
-        margin-right: auto;
+      @media @desktop {
+        height: 44rem;
       }
-    }
-
-    @media only screen and (min-width: ( @contentmaxwidth )) {
-      max-width: @contentwidth_960;
     }
   }
 
-  // OVerride
   .site-inner header {
+    padding: 0;
     margin: 0;
+  }
+
+  .inleiding {
+    .gc-box-shadow;
+    max-width: @max-width-content;
+    background: @bg_intro;
+    color: @white;
+    padding: 2rem;
+    margin: 0 auto;
+
+    @media @tablet {
+      padding: 3rem 5rem;
+    }
+  }
+
+  .content-sidebar-wrap {
+    padding: 0;
+    position: relative;
+
+    > .content {
+      padding: 0;
+      background: none;
+      box-shadow: none;
+    }
+  }
+
+  .content .entry {
     padding: 0;
   }
 
+  .l-content-menu-wrapper {
+    display: none; //sorry sorry - kunnen we deze niet printen op de stap single?
+  }
 
+  .section__title {
+    border-color: @gc_pantybrown;
+  }
+
+  .section,
+  .extra-content {
+    + .section {
+      margin-top: @gutter;
+
+      @media @desktop {
+        margin-top: 8rem;
+      }
+    }
+  }
+
+  .item-list__item {
+    border-color: @gc_pantybrown;
+  }
 }
-*/

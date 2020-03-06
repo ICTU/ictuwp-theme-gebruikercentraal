@@ -96,7 +96,7 @@ class GC_berichten_widget extends WP_Widget {
         echo $before_widget;
         echo '<h2 class="widget-title">'. $gc_berichtenwidget_titel . '</h2>'; 
         
-        echo '<div class="bg-color">';
+        echo '<div class="entry-list entry-list--blogs">';
         
         while ($sidebarposts->have_posts()) : $sidebarposts->the_post();
         
@@ -106,17 +106,15 @@ class GC_berichten_widget extends WP_Widget {
           $permalink    = get_permalink( $getid );
           $publishdate  = get_the_date();
           $theID        = 'featured_image_post_' . $getid;
-          
-          echo '<section class="entry" itemid="' . $permalink . '" itemscope itemtype="http://schema.org/SocialMediaPosting">';
-          echo '<a href="' . $permalink . '" itemprop="url">';
-          
-          $class = 'feature-image noimage';
+
+
+          $has_image = '';
           
           if (has_post_thumbnail( $sidebarposts->ID ) ) {
             $image = wp_get_attachment_image_src( get_post_thumbnail_id( $sidebarposts->ID ), 'medium' );
             
             if ( $image[0] ) {
-              $class = 'feature-image';
+              $has_image = TRUE;
             }
           }
 
@@ -126,13 +124,17 @@ class GC_berichten_widget extends WP_Widget {
           else {
             $jaar =  '<span class="jaar">' . get_the_date( 'Y' ) . '</span>';
           }
-          
-          echo '<div id="' . $theID . '" class="' . $class . '">&nbsp;</div>';
+
+          echo '<section class="entry entry--blog '.( $has_image ? 'entry--with-image' : 'entry--no-image').'" itemid="' . $permalink . '" itemscope itemtype="http://schema.org/SocialMediaPosting">';
+          echo '<a class="entry__link" href="' . $permalink . '" itemprop="url">';
+          // Only primt image if it's there
+
+          echo ($has_image ? '<div id="' . $theID . '" class="entry__featured-image">&nbsp;</div>': '');
           echo '<div class="bloginfo">';
           echo '<header><span class="date-badge" itemprop="datePublished" content="' . $publishdate . '"><span class="dag">' . get_the_date( 'd' ) . '</span> <span class="maand">' . get_the_date( 'M' ) . '</span>' . $jaar . '</span>';        
-          echo '<h3 class="entry-title" itemprop="headline">';
+          echo '<h3 class="entry-title" itemprop="headline"><span class="arrow-link"><span class="arrow-link__text">';
           the_title();
-          echo '</h3></header>';
+          echo '</span><span class="arrow-link__icon"></span></span></h3></header>';
           echo '<div class="excerpt">';
           echo the_excerpt();
           echo '</div>';

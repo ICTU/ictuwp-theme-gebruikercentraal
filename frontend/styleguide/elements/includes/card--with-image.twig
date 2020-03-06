@@ -1,0 +1,30 @@
+{% set default_decription = "Dit is de standaardomschrijving van een kaartje" %}
+
+{% set base_url = "/wp-content/themes/gebruiker-centraal/frontend/styleguide/img" %}
+
+<div class="card card--with-image">
+  <div class="card__image">
+    <img src="{{ base_url }}/img-16-9.jpg" alt="Gebruiker Centraal Plaatje">
+  </div>
+  <div class="card__content">
+    <h2 class="card__title">
+      <a class="arrow-link" href="#">
+        <span class="arrow-link__text">
+      {% if card_title %}
+        {{ card_title }}
+      {% else %}
+        Kaartje zonder titel
+      {% endif %}
+        </span>
+        <span class="arrow-link__icon"></span>
+      </a>
+    </h2>
+    <p class="card__description">
+      {% if card_description %}
+        {{ card_description }}
+      {% else %}
+        Dit is de omschrijving van het kaartje. Hier kan de samenvatting in of de eerste tekst van de detailpagina.
+      {% endif %}
+    </p>
+  </div>
+</div>
