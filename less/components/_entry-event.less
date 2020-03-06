@@ -12,11 +12,21 @@
     padding: 0;
   }
 
+  header {
+    position: relative;
+  }
+
   .entry-content {
+    max-width: none;
 
     .wrap {
       max-width: @max-width-inner;
       margin: 0 auto;
+
+      &.description {
+        margin-top: 2rem;
+        padding-top: 2rem;
+      }
     }
 
     #event_map_en_programma {
@@ -37,6 +47,32 @@
     padding-bottom: 0;
   }
 
+  .social-media {
+    @media @tablet {
+      position: absolute;
+      left: 0;
+      max-width: 4.2rem;
+    }
+
+    @media @desktop {
+      margin-left: -6rem;
+    }
+  }
+
+  .date-badge {
+    @media @tablet {
+      position: absolute;
+      left: 0;
+    }
+
+    @media @desktop {
+      margin-left: -5.2rem;
+    }
+  }
+
+  .description {
+    border-top: .1rem solid @border_color;
+  }
 }
 
 #event_map_en_programma {
@@ -144,6 +180,7 @@
       margin: 0;
       padding: 0;
       list-style: none;
+      position: relative;
 
       span[itemtype="http://schema.org/Person"] {
         border-top: 1px solid #0F90B2;
@@ -310,4 +347,7 @@
   }
 }
 
+.comments-area {
+  display: none; // seems empty and has css property
+}
 
