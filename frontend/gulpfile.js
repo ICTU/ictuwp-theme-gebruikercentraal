@@ -242,7 +242,14 @@ function makeSprites(done) {
 function watch() {
 
 	browserSync.init({
-		proxy: siteConfig.proxy
+		proxy: siteConfig.proxy,
+
+		ghostMode: {
+		    clicks: true,
+		    forms: true,
+		    scroll: false
+		}
+		
 	});
 	
 	if (argv.site) {
