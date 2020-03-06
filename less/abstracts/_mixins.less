@@ -1360,3 +1360,33 @@
     margin-right: -.3rem;
   }
 }
+
+.gc-page-background(@bg: @gc_a11y_green) {
+  position: relative;
+
+  &:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    display: block;
+    height: 30rem;
+    background: @bg;
+    border-color: #0f0;
+  }
+}
+
+.gc-read-more() {
+  font-family: @font_primary_semi;
+
+  &:after {
+    content: " ";
+    display: inline-block;
+    width: 1rem;
+    height: 1.6rem;
+    margin-left: .8rem;
+    background: url('../images/cta-pijl.svg') bottom center no-repeat;
+    background-size: auto 1.2rem;
+  }
+}

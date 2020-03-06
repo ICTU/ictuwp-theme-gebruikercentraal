@@ -82,7 +82,6 @@ Imports
 @import "includes/70-pagetypes.less";                   // various page types etc */
 @import "includes/71-search-and-404-pagetype.less";     // styling for search
 @import "includes/80-structure.less";                   // mediaqueries */ // footer thingies */
-//@import "includes/82-pagination.less";                  // all pagination related stuff */
 @import "includes/90-printstyles.less";                 // non screen / print only */
 @import "includes/99-browserhacks.less";                // non screen / print only */
 
@@ -114,28 +113,29 @@ Imports
 @import "components/_widgets";
 
 
-// PAges and singles
+// Pages. singles and entries
+@import "components/_page";
 @import "components/_page_stappenplan";
 @import "components/_page-step";
 @import "components/_page-archive-overview"; // Overviews, archives
-@import "components/_entry";
-@import "components/_entry-event";
-@import "components/_entry-home";
+
+//Specifics for antries and singles per Post Type
+@import "components/_single";
+@import "components/_single-home";
+@import "components/_single-event";
+@import "components/_single-author";
 
 // cards
 @import "components/_card.less";                        // @since	  4.1.1 
 @import "components/_card-tipkaart.less";               // @since	  4.1.1 
 @import "components/_card-doelgroep.less";              // @since	  4.1.1 
-@import "components/_card-featured-image.less";         // @since	  4.1.1 
-
+@import "components/_card-featured-image.less";         // @since	  4.1.1
 @import "components/_card-vaardigheden.less";         	// @since	  4.2.1
 
 
 // sections
 @import "components/_section-related-content.less";     // @since	  4.1.1 
 @import "components/_section-resultaatblok.less";     		// @since	  4.1.1 
-
-
 
 
 // components

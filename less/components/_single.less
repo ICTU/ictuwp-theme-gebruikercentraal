@@ -185,6 +185,8 @@ h1 + .meta-data {
     flex-wrap: wrap;
     align-items: center;
     font-size: @font_small;
+    max-width: calc(100% - 4rem);
+    padding-left: 0;
 
     li {
       margin: 0 1rem 0 0;
@@ -195,6 +197,7 @@ h1 + .meta-data {
       width: auto;
       padding-top: .2rem;
       box-sizing: border-box;
+      background-color: none;
 
       &:before {
         display: block;
@@ -251,7 +254,11 @@ h1 + .meta-data {
   width: auto;
 }
 
-.author-box-title {
+.avatar {
+  border: none;
+}
+
+h2.author-box-title {
   margin: 0;
   padding: .5rem 0 0 0;
   font-family: @font_primary_bold;
@@ -263,9 +270,28 @@ h1 + .meta-data {
   }
 }
 
+.author-archive {
+  .gc-box-shadow;
+  float: right;
+  border: .1rem solid @border_color;
+  width: 3rem;
+  height: 3.5rem;
+  margin-top: -3rem;
+  background: url('../images/arrow-right-blue.svg') center center no-repeat;
+  background-size: auto 1.2rem;
+  transition: border-color .2s, color .2s;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: @white;
+    border-color: @gc_blue_dark;
+  }
+}
+
 .pagination {
   .gc-pagination;
-
+  width: 100%;
   margin-top: 3rem;
 
   @media @desktop {
