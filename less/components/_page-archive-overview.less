@@ -34,80 +34,12 @@
 /* Pagination */
 
 
-.archive-pagination {
-  display: flex;
-  margin-top: @gutter;
-  border: none;
-
-  @media @desktop {
-    margin-top: 7rem;
-  }
+.archive-pagination.pagination {
+  .gc-pagination;
+  width: 100%;
 
   a {
-    .gc-box-shadow;
-    font-family: @font_primary_bold;
-    display: inline-block;
-    border: .1rem solid @gc_greyblue;
-    padding: .5rem 1.5rem;
-    text-decoration: none;
-    position: relative;
-    transition: padding .2s, background-color .2s;
-
-    &:hover,
-    &:focus,
-    &:active {
-      background: @white;
-      border-color: @gc_blue_dark;
-      text-decoration: underline;
-      color: @base_font_color;
-    }
-  }
-
-  .alignright {
-    margin-left: auto;
-  }
-
-  .pagination-previous a:before,
-  .pagination-next a:after {
-    width: 1.5rem;
-    height: 1.5rem;
-    content: " ";
-    position: absolute;
-    display: block;
-    top: 50%;
-    margin-top: -.75rem;
-    background: url('images/arrow-right-blue.svg') center center no-repeat;
-    background-size: auto 1.2rem;
-    border: none;
-  }
-
-  .pagination-previous a {
-    padding-left: 3rem;
-
-    &:before {
-      left: .6rem;
-      transform: rotate(180deg);
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-      padding-left: 3.1rem;
-    }
-  }
-
-  .pagination-next a {
-    padding-right: 3rem;
-
-    &:after {
-      right: .6rem;
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-      padding-right: 3.1rem;
-    }
+    background: @white;
   }
 }
 

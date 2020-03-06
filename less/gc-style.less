@@ -68,7 +68,7 @@ License URI: http://www.opensource.org/licenses/gpl-license.php
  * Variables, mixins, extendables - things we use everywhere
  */
 
-@import "abstracts/_fonts.less";
+@import "../fonts/fonts.css";
 @import "abstracts/_variables.less";
 @import "abstracts/_mixins.less";
 @import "abstracts/_normalize.less";
@@ -76,8 +76,7 @@ License URI: http://www.opensource.org/licenses/gpl-license.php
 /*
 Imports
 ---------------------------------------------------------------------------------------------------- */ 
-@import "includes/30-text-styles.less";                 // font-styles, shared with admin editor-styles.less */
-@import "includes/40-forms.less";                       // styling for forms */
+@import "includes/30-text-styles.less";                 // font-styles, shared with admin editor-styles.less */ // styling for forms */
 @import "includes/50-header-logo-menu.less";            // all styling for the header and the logo */
 @import "includes/60-sidebar-widgets.less";             // sidebar widgets */
 @import "includes/70-pagetypes.less";                   // various page types etc */
@@ -87,13 +86,24 @@ Imports
 @import "includes/90-printstyles.less";                 // non screen / print only */
 @import "includes/99-browserhacks.less";                // non screen / print only */
 
+
+/*
+ * Base
+ * Basic layout for pages, page parts or html elements
+ */
+
+@import "base/_layout-footer";
+@import "base/_forms";
+@import "base/_layout";
+@import "base/_main-nav.less";
+@import "base/_base.less";
+@import "base/_layout-footer.less"; // Dit was wat er in style stond
+@import "base/block-gallery";
+
 // Components
 @import "components/_btn";
 @import "components/_definition-list";
 @import "components/_grid";
-@import "components/_layout";
-@import "components/_layout-footer";
-@import "components/_main-nav.less";
 @import "components/_overview";
 @import "components/_section";
 @import "components/_link";
@@ -104,13 +114,6 @@ Imports
 @import "components/_widgets";
 
 
-
-// General layout
-@import "components/_base.less";
-@import "components/_layout.less";
-@import "components/_layout-footer.less"; // Dit was wat er in style stond
-
-
 // PAges and singles
 @import "components/_page_stappenplan";
 @import "components/_page-step";
@@ -118,7 +121,6 @@ Imports
 @import "components/_entry";
 @import "components/_entry-event";
 @import "components/_entry-home";
-
 
 // cards
 @import "components/_card.less";                        // @since	  4.1.1 
@@ -133,8 +135,7 @@ Imports
 @import "components/_section-related-content.less";     // @since	  4.1.1 
 @import "components/_section-resultaatblok.less";     		// @since	  4.1.1 
 
-// overwriting style of plugins
-@import "components/block-gallery";
+
 
 
 // components

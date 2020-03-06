@@ -2,7 +2,6 @@
 
 .normalize();
 
-.fontface(); // hihi duckface (kleuter)
 
 /*
 Defaults
@@ -216,8 +215,7 @@ Common Classes
   margin: ( @padding ) 0;
 }
 
-.archive-description,
-.author-box {
+.archive-description {
   padding: 0;
 
   .author-photo {
@@ -229,19 +227,6 @@ Common Classes
   }
 }
 
-.author-box-title {
-  color: @txt;
-  .fontsize(16);
-  margin-bottom: ( @padding / 2 );
-}
-
-.author-box p {
-  margin-bottom: 0;
-}
-
-.author-box .avatar {
-  margin-right: @padding;
-}
 
 /* Titles
 --------------------------------------------- */
@@ -466,8 +451,8 @@ body .sidebar .widget_oa_social_login .oneall_social_login {
         line-height: 1.4;
         margin: 0 @padding;
         text-decoration: none;
-        background-image: url('images/cta-pijl.png');
-        background-image: url('images/cta-pijl.svg'), none;
+        background-image: url('../images/cta-pijl.png');
+        background-image: url('../images/cta-pijl.svg'), none;
         background-position: right center;
         background-repeat: no-repeat;
 
@@ -655,8 +640,8 @@ Styling voor aparte paginatypes
       text-align: center;
       width: 40%;
       height: 300px;
-      background: url('images/avatar/poppetje-15.png') no-repeat right top;
-      background-image: url('images/avatar/poppetje-15.svg'), none; // niet huilen, Victor...
+      background: url('../images/avatar/poppetje-15.png') no-repeat right top;
+      background-image: url('../images/avatar/poppetje-15.svg'), none; // niet huilen, Victor...
       background-size: contain;
       content: ' ';
     }
@@ -735,8 +720,8 @@ a.blocklink {
     .read-more {
 
       &:after {
-        background: @wit url('images/arrow-wit.png') no-repeat -7px center;
-        background-image: url('images/arrow-wit.svg'), none;
+        background: @wit url('../images/arrow-wit.png') no-repeat -7px center;
+        background-image: url('../images/arrow-wit.svg'), none;
       }
 
       span {
@@ -788,8 +773,8 @@ div.related {
           height: ( 1.5 * @padding );
           margin-left: ( @padding / 2 );
 
-          background: @wit url('images/arrow-wit.png') no-repeat left center;
-          background-image: url('images/arrow-wit.svg'), none;
+          background: @wit url('../images/arrow-wit.png') no-repeat left center;
+          background-image: url('../images/arrow-wit.svg'), none;
 
         }
       }
@@ -802,8 +787,8 @@ div.related {
         .read-more {
 
           &:after {
-            background: @wit url('images/arrow-wit.png') no-repeat left center;
-            background-image: url('images/arrow-wit.svg'), none;
+            background: @wit url('../images/arrow-wit.png') no-repeat left center;
+            background-image: url('../images/arrow-wit.svg'), none;
           }
 
           span {
@@ -1108,13 +1093,13 @@ dl.dl-level,
 dl.dl-speaker-names {
   background-repeat: no-repeat;
   background-position: left center;
-  background-image: url('images/icon-microphone.png');
+  background-image: url('../images/icon-microphone.png');
   .icon_pin_fill('../images/icon-microphone.svg', @gc_a11y_green);
   padding-left: 20px;
 }
 
 dl.dl-level {
-  background-image: url('images/icon-level.png');
+  background-image: url('../images/icon-level.png');
   .icon_pin_fill('../images/icon-level.svg', @gc_a11y_green);
 }
 

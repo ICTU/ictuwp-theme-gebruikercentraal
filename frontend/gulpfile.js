@@ -81,7 +81,7 @@ function baseStyles(done) {
       done();
     }))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('../'))
+    .pipe(gulp.dest('../css/'))
     .pipe(notify({message: siteConfig.name + ' LESS task complete'}))
     .pipe(browserSync.stream());
 

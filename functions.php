@@ -1593,9 +1593,11 @@ function gc_wbvb_add_blog_archive_css() {
 
 function gc_wbvb_add_css() {
 
+
+
 	wp_enqueue_style(
 		ID_SKIPLINKS,
-		WBVB_THEMEFOLDER . '/css/blanco.css'
+    get_stylesheet_directory_uri() .'/css/gc-style.css'
 	);
 
 	$custom_css = '

@@ -18,7 +18,7 @@
   font-size: 18px;
   font-size: 1.8rem;
   line-height: 2.8rem;
-  font-family: 'montserrat_semiboldregular', Helvetica, Arial, sans-serif;
+  font-family: 'montserratbold', Helvetica, Arial, sans-serif;
 }
 .banner-widget {
   display: -webkit-box;
@@ -55,7 +55,7 @@
           flex-direction: row-reverse;
 }
 .banner-widget .widget-title {
-  font-family: 'League Gothic', Impact, Helvetica, Arial, sans-serif;
+  font-family: 'league_gothicregular', Impact, Helvetica, Arial, sans-serif;
   font-size: 44px;
   font-size: 4.4rem;
   line-height: 48px;
@@ -116,7 +116,7 @@
   border: 0 solid transparent;
   -webkit-box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
-  font-family: 'League Gothic', Impact, Helvetica, Arial, sans-serif;
+  font-family: 'league_gothicregular', Impact, Helvetica, Arial, sans-serif;
   font-size: 24px;
   font-size: 2.4rem;
   font-weight: normal;
