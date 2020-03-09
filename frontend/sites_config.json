@@ -11,8 +11,8 @@
     "type":            "plugin",
     "path":            "../../../plugins/ictuwp-plugin-inclusie/",
     "proxy":           "inclusie.gebruikercentraal.co.uk/",
+    "dest":            "../../../plugins/ictuwp-plugin-inclusie/css/",
     "csssource":       "../development/plugins/ictuwp-plugin-inclusie/assets/less/",
-    "dest":           "../development/plugins/ictuwp-plugin-inclusie/assets/css",
     "plugindevpath":   "../development/plugins/ictuwp-plugin-inclusie/",
     "pluginsource":    "../development/plugins/ictuwp-plugin-inclusie/**/",
     "plugintarget":    "../../../plugins/ictuwp-plugin-inclusie/"
