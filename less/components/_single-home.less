@@ -14,64 +14,17 @@
 
 //=========================================================================================================
 
-.page-template-home-inclusie.full-width-content {
-  .content-sidebar-wrap {
-    padding: 0;
-
-    .content {
-      max-width: none; // Zo dus
-    }
-  }
-
-  .site-inner {
-    padding: 0 0 3rem 0;
-
-    @media @desktop {
-      padding-bottom: 8rem;
-    }
-  }
-
-  .type-page.entry {
-    .gc-padding;
-    background: @brand_color;
-  }
-
-  #entry__intro {
-    position: relative;
-    z-index: +1;
-
-    @media @desktop {
-
-      .btn--download {
-        position: absolute;
-        right: 0;
-        top: 0;
-        margin-top: 1.8rem;
-      }
-    }
-  }
-
-  .section {
-    .gc-padding;
-    padding-top: 3rem;
-
-    @media @tablet {
-      padding-top: 5rem;
-    }
-  }
-}
-
 #home_template_teasers {
+  .gc-padding;
   padding: .1rem 0 3rem;
 
-  .grid {
-    max-width: ~"calc(@{contentmaxwidth} + @{gutter})";
+  @media @tablet {
     margin: 0 auto;
+    max-width: ~"calc(@{max-width-container} + (@{gutter} * 2))";
+  }
 
-    @media @tablet {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-    }
+  @media @desktop {
+    margin-top: 5rem;
   }
 }
 
@@ -188,7 +141,6 @@
   overflow: hidden;
   padding: 2rem;
 }
-
 
 .entry-list .entry {
 
@@ -358,8 +310,106 @@
 
 // BLogs
 
-.gc-actieteam-widget .author-box:before {
-  display: none;
-}
+.gc-actieteam-widget {
+  .author-box {
+    &:before {
+      display: none;
+    }
+  }
 
+  .author-archive {
+    width: 100%;
+    height: auto;
+    float: none;
+    border: none;
+    margin: 0;
+    box-shadow: none;
+  }
+
+  section {
+    min-height: 10rem;
+
+    a {
+      padding: 2rem;
+      display: block;
+      text-decoration: none;
+      background: @heelerglichtgrijs;
+      position: relative;
+      overflow: hidden;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background: @wit;
+        color: @txt;
+
+        .author-box-title {
+          color: @groen_2;
+          text-decoration: underline;
+          &:after {
+            .icon_separator_fill('../images/cta-pijl.svg', @txt);
+            margin-left: .2rem;
+          }
+        }
+        .ezelsoortje();
+      }
+    }
+
+
+    &:nth-child(odd){
+      a {
+        padding-left: 2rem;
+        padding-right: 12rem;
+      }
+
+      .avatar {
+        right: 2rem;
+        left: auto;
+      }
+    }
+
+    &:nth-child(even){
+      a {
+        padding-left: 12rem;
+      }
+    }
+
+  }
+
+  .author-box-title {
+    .font-size(16);
+    margin: 0;
+
+    &:after {
+      height: 20px;
+      width: 20px;
+      content: ' ';
+      display: inline-block;
+      background-image: url('../images/cta-pijl.png');
+      background-position: bottom center;
+      background-repeat: no-repeat;
+      .icon_separator_fill('../images/cta-pijl.svg', @groen_2);
+      transition: margin .2s;
+    }
+  }
+
+  .author-box {
+    margin: 0;
+    padding: 0;
+    + .author-box {
+      border-top: 2px solid @border_authorbox;
+    }
+  }
+
+  .avatar {
+    margin: 0;
+    width: 69px;
+    height: auto;
+    border-radius: 50%;
+    background: @border_authorbox;
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+  }
+}
 

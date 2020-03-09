@@ -5,9 +5,7 @@
   "builder": "styleguide/em_builder",
   "homepage": "styleguide/homepage.md",
   "css": [
-    "../style.css",
-    "../../../../../wp-content/plugins/ictu-gc-posttypes-inclusie/css/frontend.css",
-    "../../../../../wp-content/plugins/ictu-gc-posttypes-brieven-beelden/css/frontend-beeldbank.css",
+    "../css/gc-style.css",
     "../../gebruiker-centraal/frontend/styleguide/css/styleguide.css"
   ],
   "js": [

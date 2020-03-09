@@ -12,6 +12,8 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="../css/gc-style.css"/>
+<link rel="stylesheet" href="../../../../../wp-content/plugins/ictuwp-plugin-inclusie/css/frontend.css"/>
+<link rel="stylesheet" href="../../../../../wp-content/plugins/ictuwp-plugin-beeldbank/css/frontend-beeldbank.css"/>
 <link rel="stylesheet" href="../../gebruiker-centraal/frontend/styleguide/css/styleguide.css"/>
 
   <link rel="stylesheet" href="kss-assets/lib/docs.css">
@@ -25,20 +27,20 @@
                       <main class="col-12 bd-content" role="main">
           <a id="main-content" tabindex="-1"></a>
             
-                                    <div id="components-steps-stepnav" class="section section--depth-3 is-fullscreen">
+                                    <div id="components-buttons-stom" class="section section--depth-3 is-fullscreen">
                             <h3 class="">
-                Stapnavigatie
-                <a href="#components-steps-stepnav" class="text-muted">
+                Secondary Button
+                <a href="#components-buttons-stom" class="text-muted">
                   <small>#
                     <span class="sr-only">
-                      1.3.2 Components.Steps.Stepnav
+                      1.1.4 Components.Buttons.stom
                     </span>
                   </small>
                 </a>
               </h3>
 
                           <div class="btn-group btn-group-sm bd-toolbar" role="group" aria-label="Example toolbar">
-                                <a href="#components-steps-stepnav" onclick="event.preventDefault();" data-kss-guides="true" class="btn btn-light btn-guides">
+                                <a href="#components-buttons-stom" onclick="event.preventDefault();" data-kss-guides="true" class="btn btn-light btn-guides">
                   <span class="kss-toolbar__tooltip sr-only">Toggle example guides</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                     <g id="toggle-guides" fill="none" fill-rule="evenodd">
@@ -46,7 +48,7 @@
                     </g>
                   </svg>
                 </a>
-                <a href="#components-steps-stepnav" onclick="event.preventDefault();" data-kss-markup="true" class="btn btn-light btn-markup">
+                <a href="#components-buttons-stom" onclick="event.preventDefault();" data-kss-markup="true" class="btn btn-light btn-markup">
                   <span class="kss-toolbar__tooltip sr-only">Toggle HTML markup</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                     <g id="toggle-markup" fill="none" fill-rule="evenodd">
@@ -60,7 +62,7 @@
             
 
                           <div class="description">
-                <p>Navigatie tussen de stappen voor pagina's met een stappenplan. Heeft iets ruimte aan de onderkant zodat het intro eroverheen kan vallen.</p>
+                <p>For the default Secondary button</p>
 
               </div>
             
@@ -70,46 +72,7 @@
 
                   
                                       <div class="modifier__example">
-                      <div class="stepnav">
-  <h2 class="visuallyhidden">Stappen</h2>
-  <ol class="stepnav__items l-item-count-5">
-    <li id="step_1" class="stepnav__step">
-      <a href="#/" class="stepnav__link " title="bereid je voor ">
-        <svg class="icon icon--stepnav" focusable="false">
-          <use xmlns:xlink="http://www.w3.org/1999/xlink"
-               xlink:href="/wp-content/themes/gebruiker-centraal/images/svg/stepchart/defs/svg/sprite.defs.svg#doc-magnify"></use>
-        </svg>
-        <span class="stepnav__linktext">Bereid je voor </span></a></li>
-    <li id="step_2" class="stepnav__step">
-      <a href="#" class="stepnav__link " title="Ontwerp">
-        <svg class="icon icon--stepnav" focusable="false">
-          <use xmlns:xlink="http://www.w3.org/1999/xlink"
-               xlink:href="/wp-content/themes/gebruiker-centraal/images/svg/stepchart/defs/svg/sprite.defs.svg#doc-design"></use>
-        </svg>
-        <span class="stepnav__linktext">Ontwerp</span></a></li>
-    <li id="step_3" class="stepnav__step">
-      <a href="#" class="stepnav__link is-active" title="Test">
-        <svg class="icon icon--stepnav" focusable="false">
-          <use xmlns:xlink="http://www.w3.org/1999/xlink"
-               xlink:href="/wp-content/themes/gebruiker-centraal/images/svg/stepchart/defs/svg/sprite.defs.svg#persons-ok"></use>
-        </svg>
-        <span class="stepnav__linktext">Test</span></a></li>
-    <li id="step_4" class="stepnav__step">
-      <a href="#" class="stepnav__link " title="Pas aan">
-        <svg class="icon icon--stepnav" focusable="false">
-          <use xmlns:xlink="http://www.w3.org/1999/xlink"
-               xlink:href="/wp-content/themes/gebruiker-centraal/images/svg/stepchart/defs/svg/sprite.defs.svg#doc-checklist"></use>
-        </svg>
-        <span class="stepnav__linktext">Pas aan</span></a></li>
-    <li id="step_5" class="stepnav__step">
-      <a href="#" class="stepnav__link " title="deel">
-        <svg class="icon icon--stepnav" focusable="false">
-          <use xmlns:xlink="http://www.w3.org/1999/xlink"
-               xlink:href="/wp-content/themes/gebruiker-centraal/images/svg/stepchart/defs/svg/sprite.defs.svg#doc-arrow"></use>
-        </svg>
-        <span class="stepnav__linktext">Deel</span></a></li>
-  </ol>
-</div>
+                      <a class="btn btn--secondary">Button Secondary</a>
                       <div class="modifier__example-footer"></div>
                     </div>
                   
@@ -118,54 +81,15 @@
 
                               <details class="highlight">
                   <summary style="padding: 5px 20px; cursor: pointer;">
-                                          Markup: <code>../elements/components/stepnav.twig</code>
+                                          Markup
                                       </summary>
-                  <pre><code class="language-markup" data-language="html">&lt;div class=&quot;stepnav&quot;&gt;
-  &lt;h2 class=&quot;visuallyhidden&quot;&gt;Stappen&lt;/h2&gt;
-  &lt;ol class=&quot;stepnav__items l-item-count-5&quot;&gt;
-    &lt;li id=&quot;step_1&quot; class=&quot;stepnav__step&quot;&gt;
-      &lt;a href=&quot;#/&quot; class=&quot;stepnav__link &quot; title=&quot;bereid je voor &quot;&gt;
-        &lt;svg class=&quot;icon icon--stepnav&quot; focusable=&quot;false&quot;&gt;
-          &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;
-               xlink:href=&quot;{{ sprite_url }}#doc-magnify&quot;&gt;&lt;/use&gt;
-        &lt;/svg&gt;
-        &lt;span class=&quot;stepnav__linktext&quot;&gt;Bereid je voor &lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;li id=&quot;step_2&quot; class=&quot;stepnav__step&quot;&gt;
-      &lt;a href=&quot;#&quot; class=&quot;stepnav__link &quot; title=&quot;Ontwerp&quot;&gt;
-        &lt;svg class=&quot;icon icon--stepnav&quot; focusable=&quot;false&quot;&gt;
-          &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;
-               xlink:href=&quot;{{ sprite_url }}#doc-design&quot;&gt;&lt;/use&gt;
-        &lt;/svg&gt;
-        &lt;span class=&quot;stepnav__linktext&quot;&gt;Ontwerp&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;li id=&quot;step_3&quot; class=&quot;stepnav__step&quot;&gt;
-      &lt;a href=&quot;#&quot; class=&quot;stepnav__link is-active&quot; title=&quot;Test&quot;&gt;
-        &lt;svg class=&quot;icon icon--stepnav&quot; focusable=&quot;false&quot;&gt;
-          &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;
-               xlink:href=&quot;{{ sprite_url }}#persons-ok&quot;&gt;&lt;/use&gt;
-        &lt;/svg&gt;
-        &lt;span class=&quot;stepnav__linktext&quot;&gt;Test&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;li id=&quot;step_4&quot; class=&quot;stepnav__step&quot;&gt;
-      &lt;a href=&quot;#&quot; class=&quot;stepnav__link &quot; title=&quot;Pas aan&quot;&gt;
-        &lt;svg class=&quot;icon icon--stepnav&quot; focusable=&quot;false&quot;&gt;
-          &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;
-               xlink:href=&quot;{{ sprite_url }}#doc-checklist&quot;&gt;&lt;/use&gt;
-        &lt;/svg&gt;
-        &lt;span class=&quot;stepnav__linktext&quot;&gt;Pas aan&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;li id=&quot;step_5&quot; class=&quot;stepnav__step&quot;&gt;
-      &lt;a href=&quot;#&quot; class=&quot;stepnav__link &quot; title=&quot;deel&quot;&gt;
-        &lt;svg class=&quot;icon icon--stepnav&quot; focusable=&quot;false&quot;&gt;
-          &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;
-               xlink:href=&quot;{{ sprite_url }}#doc-arrow&quot;&gt;&lt;/use&gt;
-        &lt;/svg&gt;
-        &lt;span class=&quot;stepnav__linktext&quot;&gt;Deel&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;</code></pre>
+                  <pre><code class="language-markup" data-language="html">&lt;a class=&quot;btn btn--secondary&quot;&gt;Button Secondary&lt;/a&gt;</code></pre>
 
                 </details>
               
             
                           <small class="text-muted">
-                Source: <code>styleguide/elements/components/stepnav.scss</code>, line 1
+                Source: <code>styleguide/elements/components/btn.scss</code>, line 10
               </small>
                       </div>
           
