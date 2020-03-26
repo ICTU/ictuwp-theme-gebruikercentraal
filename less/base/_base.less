@@ -1072,7 +1072,10 @@ Media Queries
 dl.dl-level,
 dl.dl-speaker-names,
 dl.dl-time-location {
-  .cards-meta();
+  font-size: @font_small;
+  color: @meta_color;
+  margin: 0;
+  padding: 0;
 }
 
 dl.dl-level,
@@ -1089,10 +1092,6 @@ dl.dl-level {
   .icon_pin_fill('../images/icon-level.svg', @gc_a11y_green);
 }
 
-.cards-meta() {
-  .fontsize(12);
-  .eventicons();
-}
 
 /*
 ==============================================================================================================

@@ -52,7 +52,7 @@ if ( !function_exists( 'ictu_gctheme_home_template_stappen' ) ) :
 	        $poster_linktekst 	= get_field('home_template_poster_linktekst', $post->ID);
 	
 	        echo '<div class="region region--intro">' .
-	          '<div id="entry__intro">' .
+	          '<div class="entry__intro">' .
 	          '<h1 class="entry-title">' . get_the_title() . '</h1>';
 	
 	

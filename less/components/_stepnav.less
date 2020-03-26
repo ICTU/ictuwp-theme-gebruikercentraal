@@ -229,7 +229,7 @@
 
 // stepnav page
 
-.gc-page-step(@brand_color: @gc_a11y_green) {
+.gc-page-step(@bg_page: @gc_a11y_green, @bg_intro: @bg_intro, @color: @white) {
 
   .content-sidebar-wrap {
     padding-top: 0;
@@ -241,7 +241,7 @@
     &:before {
       content: " ";
       position: absolute;
-      background: @brand_color;
+      background: @bg_page;
       left: 0;
       right: 0;
       top: 0;
@@ -261,11 +261,10 @@
 
   .inleiding {
     .gc-box-shadow;
-    max-width: @max-width-content;
+    .gc-content-container;
     background: @bg_intro;
-    color: @white;
+    color: @color;
     padding: 2rem;
-    margin: 0 auto;
 
     @media @tablet {
       padding: 3rem 5rem;
@@ -284,6 +283,7 @@
   }
 
   .content .entry {
+    .gc-content-container;
     .gc-padding;
     padding-top: 3rem;
     padding-bottom: 3rem;

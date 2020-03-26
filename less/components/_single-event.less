@@ -14,7 +14,33 @@
 
   header {
     position: relative;
+
+    .social-media {
+      @media @tablet {
+        position: absolute;
+        left: 0;
+        max-width: 4.2rem;
+        margin-left: -6rem;
+      }
+
+      @media @desktop {
+        margin-left: -6rem;
+      }
+    }
   }
+
+  .date-badge {
+    @media @tablet {
+      position: absolute;
+      left: 0;
+      margin-left: -5.5rem;
+    }
+
+    @media @desktop {
+      margin-left: -5.2rem;
+    }
+  }
+
 
   .entry-content {
     max-width: none;
@@ -45,29 +71,6 @@
 
   .content-sidebar-wrap {
     padding-bottom: 0;
-  }
-
-  .social-media {
-    @media @tablet {
-      position: absolute;
-      left: 0;
-      max-width: 4.2rem;
-    }
-
-    @media @desktop {
-      margin-left: -6rem;
-    }
-  }
-
-  .date-badge {
-    @media @tablet {
-      position: absolute;
-      left: 0;
-    }
-
-    @media @desktop {
-      margin-left: -5.2rem;
-    }
   }
 
   .description {
@@ -106,6 +109,8 @@
   @media @tablet {
     padding: 3rem;
     display: flex;
+    margin-left: -5rem;
+    width: auto;
 
     > div {
       width: 50%;
@@ -117,6 +122,10 @@
         padding-left: @gutter / 2;
       }
     }
+  }
+
+  @media @desktop {
+    margin-left: auto;
   }
 }
 
@@ -133,9 +142,13 @@
   margin-top: 3rem;
 
   @media @tablet {
-    margin-left: -3rem;
+    margin-left: -8rem;
     margin-right: -3rem;
     margin-top: 8rem;
+  }
+
+  @media @desktop {
+    margin-left: -3rem;
   }
 
   h2 {

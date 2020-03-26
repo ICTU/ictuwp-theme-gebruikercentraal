@@ -32,7 +32,36 @@
     margin-top: auto;
   }
 
+  &--featured-image {
+    padding: 0;
 
+    // bepalingen voor title weggehaald - staan nu in card__title
+
+    .card__image {
+      height: ( ( 400 / 16 ) * 1rem ); // 400px hoog enzo
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      position: relative;
+      overflow: hidden;
+
+      &:before {
+        content: ' ';
+        background: @white;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        margin-bottom: -10rem;
+        left: 0;
+        right: 0;
+        margin-left: -2rem;
+        margin-right: -2rem;
+        height: 125px;
+        transform: rotate(3deg);
+      }
+    }
+  }
 }
 
 // Geen margin in tegeltje P
@@ -41,7 +70,7 @@
   margin: 0;
 }
 
-// Atomic design, componentjes!
+// Atomic design, componentjes
 
 .card__title {
   margin: 0;

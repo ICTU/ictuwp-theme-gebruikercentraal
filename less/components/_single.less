@@ -71,51 +71,12 @@ h1 + .meta-data {
   + p {
     margin-top: 1.6rem;
   }
-}
 
-.entry-content {
   @media @tablet {
-    position: relative;
-    padding-left: 5rem;
-
-    > .social-media {
-      position: absolute;
-      max-width: 3.2rem;
-      margin: 0;
-      top: 0;
-      left: 0;
-
-      li {
-        margin: 0;
-
-        + li {
-          margin-top: .4rem;
-        }
-      }
+    // no padding without socmed or date
+    .home & {
+      padding-left: 0;
     }
-  }
-
-  @media @desktop {
-    padding-left: 0;
-
-    > .social-media {
-      margin-left: -5.5rem;
-    }
-  }
-}
-
-.single .entry-content {
-
-  > h2 {
-    .font-size(24);
-    line-height: 3rem;
-    font-family: @font_primary_bold;
-  }
-
-  > h3 {
-    .font-size(20);
-    line-height: 2.6rem;
-    font-family: @font_primary_semi;
   }
 }
 
@@ -143,149 +104,6 @@ h1 + .meta-data {
       margin-left: -3rem;
       margin-right: -3rem;
     }
-  }
-}
-
-.author-box {
-  .gc-box-shadow;
-  position: relative;
-  padding: 2rem;
-  background: @gc_pantybrown_xlight;
-  margin-top: 3rem;
-
-  &:before {
-    content: " ";
-    position: absolute;
-    width: 3rem;
-    height: 3rem;
-    display: block;
-    background: @gc_pantybrown_xlight;
-    top: 0;
-    left: 6rem;
-    margin-top: -1.5rem;
-    transform: rotate(45deg);
-  }
-
-  @media @desktop {
-    padding: 3rem;
-  }
-
-  .bg-color {
-    display: flex;
-    align-items: flex-start;
-  }
-
-  hr {
-    border-color: @border_color;
-    margin: 2rem 0;
-  }
-
-  .social-media {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    font-size: @font_small;
-    max-width: calc(100% - 4rem);
-    padding-left: 0;
-
-    li {
-      margin: 0 1rem 0 0;
-    }
-
-    a[itemprop="email"],
-    a[itemprop="telephone"] {
-      width: auto;
-      padding-top: .2rem;
-      box-sizing: border-box;
-      background-color: none;
-
-      &:before {
-        display: block;
-        content: " ";
-        float: left;
-        width: 1.5rem;
-        height: 1.5rem;
-        margin-top: .5rem;
-        margin-right: .8rem;
-        border: none;
-
-      }
-    }
-
-    a {
-      transition: border-color .2s;
-      text-decoration: none;
-      padding: 0 1rem;
-
-      &:hover,
-      &:focus,
-      &:active {
-        text-decoration: underline;
-      }
-
-      &[itemprop="email"] {
-
-        &:before {
-          background: url('../images/icon-mail.png') no-repeat center center;
-          .icon_replace_filler('../images/icon-mail.svg', @gc_darkblue, @txt);
-          height: 12px;
-        }
-      }
-
-      &[itemprop="telephone"] {
-        &:before {
-          background: url('../images/icon-phone.png') no-repeat center center;
-          .icon_replace_filler('../images/icon-phone.svg', @gc_darkblue, @txt);
-        }
-      }
-    }
-  }
-
-  .enry-content & {
-    li {
-      margin: 0;
-    }
-  }
-}
-
-.author-photo {
-  margin-right: @gutter;
-  max-height: 90px;
-  width: auto;
-}
-
-.avatar {
-  border: none;
-}
-
-h2.author-box-title {
-  margin: 0;
-  padding: .5rem 0 0 0;
-  font-family: @font_primary_bold;
-
-  + p {
-    font-size: @font_small;
-    color: @meta_color;
-    margin: 1rem 0 0 0;
-  }
-}
-
-.author-archive {
-  .gc-box-shadow;
-  float: right;
-  border: .1rem solid @border_color;
-  width: 3rem;
-  height: 3.5rem;
-  margin-top: -3rem;
-  background: url('../images/arrow-right-blue.svg') center center no-repeat;
-  background-size: auto 1.2rem;
-  transition: border-color .2s, color .2s;
-
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: @white;
-    border-color: @gc_blue_dark;
   }
 }
 
@@ -323,5 +141,46 @@ h2.author-box-title {
   @media @tablet {
     padding-bottom: 8rem;
     margin-bottom: -5rem;
+  }
+}
+
+// Location teaser
+
+.entry.location {
+  .teaser__link {
+    display: block;
+    padding-right: 3rem;
+  }
+}
+
+.download-box {
+  border-top: .1rem solid @border_color;
+  border-bottom: .1rem solid @border_color;
+  padding: 2rem 0 1.5rem;
+
+  header {
+    display: flex;
+    margin: 0;
+
+    a {
+      margin-left: auto;
+    }
+
+    h4 {
+      padding-right: 2rem;
+    }
+  }
+
+  h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+  }
+
+  dl {
+    margin: 0;
+  }
+
+  + p {
+    margin-top: @gutter;
   }
 }
