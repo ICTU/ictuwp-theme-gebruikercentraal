@@ -160,6 +160,78 @@ endif;
 
 if ( function_exists( 'acf_add_local_field_group' ) ) :
 
+	$DOELGROEPDEFINTIESHOMEPAGE = '';
+
+	if ( 'inclusie.gebruikercentraal.co.uk' == $_SERVER["HTTP_HOST"] || 'accept.inclusie.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] || 'inclusie.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] ) {
+	
+		$DOELGROEPDEFINTIESHOMEPAGE = 			array(
+					'key' => 'field_5c90e096cca0a',
+					'label' => 'Teasers / doelgroepen',
+					'name' => 'home_template_doelgroepen',
+					'type' => 'repeater',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'collapsed' => '',
+					'min' => 0,
+					'max' => 0,
+					'layout' => 'table',
+					'button_label' => '',
+					'sub_fields' => array(
+						array(
+							'key' => 'field_5c9104bff7ade',
+							'label' => 'Voeg toe',
+							'name' => 'home_template_doelgroepen_doelgroep',
+							'type' => 'post_object',
+							'instructions' => 'Voeg een blokje toe',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'post_type' => array(
+								0 => ICTU_GC_CPT_DOELGROEP,
+							),
+							'taxonomy' => '',
+							'allow_null' => 1,
+							'multiple' => 0,
+							'return_format' => 'object',
+							'ui' => 1,
+						),
+						array(
+							'key' => 'field_5c910507f7adf',
+							'label' => 'Kies citaat',
+							'name' => 'home_template_doelgroepen_citaat',
+							'type' => 'post_object',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'post_type' => array(
+								0 => 'citaat',
+							),
+							'taxonomy' => '',
+							'allow_null' => 1,
+							'multiple' => 0,
+							'return_format' => 'object',
+							'ui' => 1,
+						),
+					),
+				);
+	} 
+	
+
 	// this means the ACF plugin is active and we can add new field definitions
 
 	//--------------------------------------------------------------------------------------------
@@ -213,74 +285,10 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 				'max' => '',
 				'return_format' => 'object',
 			),
-			array(
-				'key' => 'field_5c90e096cca0a',
-				'label' => 'Doelgroepen',
-				'name' => 'home_template_doelgroepen',
-				'type' => 'repeater',
-				'instructions' => '',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array(
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'collapsed' => '',
-				'min' => 0,
-				'max' => 0,
-				'layout' => 'table',
-				'button_label' => '',
-				'sub_fields' => array(
-					array(
-						'key' => 'field_5c9104bff7ade',
-						'label' => 'Kies doelgroep',
-						'name' => 'home_template_doelgroepen_doelgroep',
-						'type' => 'post_object',
-						'instructions' => '',
-						'required' => 0,
-						'conditional_logic' => 0,
-						'wrapper' => array(
-							'width' => '',
-							'class' => '',
-							'id' => '',
-						),
-						'post_type' => array(
-							0 => ICTU_GC_CPT_DOELGROEP,
-						),
-						'taxonomy' => '',
-						'allow_null' => 1,
-						'multiple' => 0,
-						'return_format' => 'object',
-						'ui' => 1,
-					),
-					array(
-						'key' => 'field_5c910507f7adf',
-						'label' => 'Kies citaat',
-						'name' => 'home_template_doelgroepen_citaat',
-						'type' => 'post_object',
-						'instructions' => '',
-						'required' => 0,
-						'conditional_logic' => 0,
-						'wrapper' => array(
-							'width' => '',
-							'class' => '',
-							'id' => '',
-						),
-						'post_type' => array(
-							0 => 'citaat',
-						),
-						'taxonomy' => '',
-						'allow_null' => 1,
-						'multiple' => 0,
-						'return_format' => 'object',
-						'ui' => 1,
-					),
-				),
-			),
+			$DOELGROEPDEFINTIESHOMEPAGE,
 			array(
 				'key' => 'field_5ccfec39e2de3',
-				'label' => 'home_template_poster',
+				'label' => 'PDF met poster',
 				'name' => 'home_template_poster',
 				'type' => 'file',
 				'instructions' => 'Upload de PDF voor de poster',
@@ -299,7 +307,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 			),
 			array(
 				'key' => 'field_5ccfeccee8a61',
-				'label' => 'home_template_poster_linktekst',
+				'label' => 'Linktekst voor PDF-poster',
 				'name' => 'home_template_poster_linktekst',
 				'type' => 'text',
 				'instructions' => 'Dit is de tekst op de downloadknop als je een PDF met de poster hebt toegevoegd.',
