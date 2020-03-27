@@ -1,0 +1,191 @@
+/*
+ * Everything regarding entry content
+ */
+
+// General header image, negate base padding + margin
+
+.has-header-image {
+  margin: -3rem -1.5rem 3rem -1.5rem;
+  max-width: 1920px;
+
+  @media @tablet {
+    margin-top: -5rem;
+    margin-left: -3rem;
+    margin-right: -3rem;
+  }
+
+  @media @desktop {
+    margin-top: -8rem;
+    margin-bottom: 8rem;
+  }
+
+  @media @desktop-xl {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.entry-content {
+
+  .has-background {
+    .gc-box-shadow;
+
+    &.has-very-light-gray-background-color {
+      background: @gc_pantybrown_xlight;
+    }
+  }
+
+  p + .has-background {
+    margin-top: 3rem;
+
+    @media @tablet {
+      margin-top: 5rem;
+    }
+  }
+
+  blockquote {
+    .font-size(24);
+    line-height: 3.8rem;
+    color: @gc_a11y_green;
+    position: relative;
+    padding: 3rem 6rem;
+    margin: 0;
+    font-family: @font_primary_semi;
+
+    &:before,
+    &:after {
+      .fontsize(50);
+      color: @gc_greyblue;
+      position: absolute;
+      content: "“";
+      display: block;
+      speak: none;
+    }
+
+    &:before {
+      top: 3rem;
+      left: 2rem;
+    }
+
+    &:after {
+      right: 2rem;
+      bottom: 3rem;
+      transform: rotate(180deg);
+    }
+  }
+
+  aside {
+    padding: 3rem 10%;
+    font-family: @font_primary_bold;
+    margin: 3rem 0 0 0;
+
+    @media @tablet {
+      .font-size(24);
+      line-height: 3.8rem;
+    }
+  }
+
+  .infoblock,
+  .call-to-action {
+    background: @gc_pantybrown_xlight;
+    border-color: @gc_pantybrown;
+    padding: 2rem;
+
+    h2, h3 {
+      margin: 0;
+      padding: 0;
+
+      + p {
+        margin-top: 1.8rem;
+      }
+    }
+
+    @media @tablet {
+      padding: 3rem;
+    }
+  }
+
+  .call-to-action {
+    .gc-box-shadow;
+    background: @gc_a11y_green;
+    color: @white;
+    margin-top: 5rem;
+
+    h2, h3 {
+      .gc-section-heading;
+      color: @white;
+    }
+
+    a {
+      color: @white;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+
+  @media @tablet {
+    position: relative;
+    padding-left: 5rem;
+
+    > .social-media {
+      position: absolute;
+      max-width: 3.2rem;
+      margin: 0;
+      top: 0;
+      left: 0;
+
+      li {
+        margin: 0;
+
+        + li {
+          margin-top: .4rem;
+        }
+      }
+    }
+
+    // not for pages without social
+  }
+
+  @media @desktop {
+    padding-left: 0;
+
+    > .social-media {
+      margin-left: -5.5rem;
+    }
+  }
+}
+
+.single .entry-content {
+
+  > h2 {
+    .font-size(24);
+    line-height: 3rem;
+    font-family: @font_primary_bold;
+  }
+
+  > h3 {
+    .font-size(20);
+    line-height: 2.6rem;
+    font-family: @font_primary_semi;
+  }
+}
+
+/*
+ * Block gallery
+ */
+
+.wp-block-blockgallery-masonry {
+  margin-top: 3rem;
+
+  @media @tablet {
+    margin-top: 5rem;
+  }
+}
+
+.blockgallery:not(.has-caption-color).has-caption-style-dark .blockgallery--figure figcaption {
+  background: rgba(@gc_darkblue, 0.8);
+}
+

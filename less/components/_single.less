@@ -1,0 +1,186 @@
+.entry-header + .entry-content {
+  margin-top: 1.8rem;
+}
+
+h1 + .meta-data {
+  margin-top: 1rem;
+}
+
+.comments-area {
+  max-width: @max-width-inner;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.entry-header {
+  position: relative;
+
+  .social-media {
+    margin: 1rem 0 0;
+    padding: 0;
+
+    li {
+      margin: 0 1rem 0 0;
+    }
+  }
+
+  .entry-meta {
+    margin-top: 1rem;
+  }
+
+  @media @tablet {
+    padding-left: 5rem;
+
+    .social-media {
+      position: absolute;
+      max-width: 3.2rem;
+      margin: 0;
+      top: 0;
+      left: 0;
+
+      li {
+        margin: 0;
+      }
+    }
+
+    .date-badge {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  @media @desktop {
+    padding-left: 0;
+
+    .social-media {
+      margin-left: -5.5rem;
+    }
+
+    .date-badge {
+      margin-left: -6rem;
+    }
+  }
+}
+
+.entry-header,
+.entry-content {
+  max-width: @max-width-inner;
+  margin: 0 auto;
+
+  + p {
+    margin-top: 1.6rem;
+  }
+
+  @media @tablet {
+    // no padding without socmed or date
+    .home & {
+      padding-left: 0;
+    }
+  }
+}
+
+// Entry blog, can contain image
+
+.single-post {
+  .content-sidebar-wrap {
+    padding-top: 0;
+  }
+
+  .post {
+    padding-top: 3rem;
+
+    @media @desktop {
+      padding-top: 5rem;
+    }
+  }
+
+  .content:before {
+    // Negate default padding
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+
+    @media @tablet {
+      margin-left: -3rem;
+      margin-right: -3rem;
+    }
+  }
+}
+
+.pagination {
+  .gc-pagination;
+  width: 100%;
+  margin-top: 3rem;
+
+  @media @desktop {
+    margin-top: 3rem;
+  }
+
+  a {
+    border-color: @border_color;
+    //box-shadow: none;
+  }
+
+  > div:not(.pagination) {
+    width: 50%;
+  }
+
+  .pagination-previous {
+    padding-right: @gutter / 2;
+  }
+  .pagination-next {
+    padding-left: @gutter / 2;
+  }
+}
+
+.comments-area {
+  .gc-rotated-bg;
+  padding-bottom: 3rem;
+  margin-bottom: -3rem;
+
+  @media @tablet {
+    padding-bottom: 8rem;
+    margin-bottom: -5rem;
+  }
+}
+
+// Location teaser
+
+.entry.location {
+  .teaser__link {
+    display: block;
+    padding-right: 3rem;
+  }
+}
+
+.download-box {
+  border-top: .1rem solid @border_color;
+  border-bottom: .1rem solid @border_color;
+  padding: 2rem 0 1.5rem;
+
+  header {
+    display: flex;
+    margin: 0;
+
+    a {
+      margin-left: auto;
+    }
+
+    h4 {
+      padding-right: 2rem;
+    }
+  }
+
+  h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+  }
+
+  dl {
+    margin: 0;
+  }
+
+  + p {
+    margin-top: @gutter;
+  }
+}

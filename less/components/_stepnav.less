@@ -24,8 +24,8 @@
   }
 
   @media @desktop {
-    padding-bottom: 17rem;
-    height: 42rem;
+    height: 34rem;
+    padding-bottom: 10rem;
   }
 }
 
@@ -227,4 +227,90 @@
   }
 }
 
+// stepnav page
 
+.gc-page-step(@bg_page: @gc_a11y_green, @bg_intro: @bg_intro, @color: @white) {
+
+  .content-sidebar-wrap {
+    padding-top: 0;
+  }
+
+  #maincontent {
+    position: relative;
+
+    &:before {
+      content: " ";
+      position: absolute;
+      background: @bg_page;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 30rem;
+      display: block;
+
+      @media @desktop {
+        height: 44rem;
+      }
+    }
+  }
+
+  .site-inner header {
+    padding: 0;
+    margin: 0;
+  }
+
+  .inleiding {
+    .gc-box-shadow;
+    .gc-content-container;
+    background: @bg_intro;
+    color: @color;
+    padding: 2rem;
+
+    @media @tablet {
+      padding: 3rem 5rem;
+    }
+  }
+
+  .content-sidebar-wrap {
+    padding: 0;
+    position: relative;
+
+    > .content {
+      padding: 0;
+      background: none;
+      box-shadow: none;
+    }
+  }
+
+  .content .entry {
+    .gc-content-container;
+    .gc-padding;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background: @white;
+  }
+
+  .l-content-menu-wrapper {
+    display: none; //sorry sorry - kunnen we deze niet printen op de stap single?
+  }
+
+  .section__title {
+    border-color: @gc_pantybrown;
+  }
+
+  .section,
+  .extra-content {
+    + .section {
+      margin-top: @gutter;
+
+      @media @desktop {
+        margin-top: 8rem;
+      }
+    }
+  }
+
+  .item-list__item {
+    border-color: @gc_pantybrown;
+  }
+
+}

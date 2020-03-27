@@ -1,4 +1,3 @@
-
 // Gebruiker Centraal - _bnt.less
 // ----------------------------------------------------------------------------------
 // bevat CSS voor buttons
@@ -10,7 +9,6 @@
 // @desc.     JS homepage voor openen en sluiten modal windows verbeterd.
 // @link      https://github.com/ICTU/Gebruiker-Centraal---Inclusie---custom-post-types-taxonomies
 
-
 .cta {
   margin-top: 2rem;
 }
@@ -19,7 +17,7 @@
   display: inline-block;
 
   &--arrow {
-    background: url('images/arrow-right-blue.svg') center center no-repeat;
+    background: url('../images/arrow-right-blue.svg') center center no-repeat;
     background-size: 12px auto;
     min-width: 3.6rem;
     display: inline-block;
@@ -33,7 +31,7 @@
   }
 
   &--close {
-    background: url('images/cross.svg') center center no-repeat;
+    background: url('../images/cross.svg') center center no-repeat;
     background-size: 18px auto;
     padding: 0;
     width: 3.6rem;
@@ -55,7 +53,7 @@
     padding: 1rem 2rem 1rem 4.4rem;
     font-family: @font_secondary;
     text-transform: uppercase;
-    background: @color_primary url('images/icon-download.svg') 16px center no-repeat;
+    background: @color_primary url('../images/icon-download.svg') 16px center no-repeat;
     font-size: 2.6rem;
     line-height: 2.6rem;
     text-decoration: none;
@@ -83,47 +81,134 @@
     min-width: 12rem;
   }
 
-  &--primary {
-    .gc-box-shadow();
-    font-size: 2.6rem;
-    padding: 1rem 5rem 1rem 1.6rem;
-    line-height: 2.6rem;
-    transition: padding .2s;
-    color: #fff;
-    cursor: pointer;
-    text-transform: uppercase;
-    width: auto;
-    border-radius: 0;
-    background: @gc_a11y_green;
-    font-family: @font_secondary;
-    font-weight: normal;
-    text-decoration: none;
-    position: relative;
+  &--stepchart {
+    display: flex;
+  }
 
+  &--trigger-open {
+    display: block;
+  }
+}
+
+/*
+ * Menu behaviours
+ */
+
+.btn--toggle-menu {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0 2rem 0rem 1.5rem;
+  height: 7rem;
+  margin-left: 2rem;
+  font-family: @font_primary_semi;
+  text-transform: none;
+  font-size: 1.7rem;
+  min-width: 12rem;
+  color: @white;
+
+
+  &:focus,
+  &:hover {
+    background: @gc_darkblue;
+    color: @white;
+    text-decoration: none;
+    border: none;
+    outline: none;
+
+    span {
+      text-decoration: underline;
+    }
+  }
+
+  i {
+    font-style: normal;
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 2.6rem;
+    line-height: 3.4rem;
+  }
+}
+
+/*
+ * Button Mixin
+ */
+
+.make-btn(@bg: @gc_a11y_green, @bg_h: @gc_a11y_green_darker, @color: @white,@color_h: @white, @after: @gc_a11y_green_darker, @after_h: @gc_a11y_green_dark) {
+  .gc-box-shadow();
+  display: inline-block;
+  padding: .8rem 5rem .8rem 1.6rem;
+  font-size: 2.2rem;
+  line-height: 2.2rem;
+  transition: padding .2s, ba;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: auto;
+  border-radius: 0;
+  font-family: @font_secondary;
+  color: @color;
+  background: @bg;
+  font-weight: normal;
+  text-decoration: none;
+  position: relative;
+
+  @media @tablet {
+    line-height: 2.6rem;
+    font-size: 2.6rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  &:after {
+    content: " ";
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 3.2rem;
+    background: @after url('../images/arrow-right.svg') center center no-repeat;
+    background-size: 8px auto;
+    transition: background .2s;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: underline;
+    padding-left: 1.7rem;
+    color: @color_h;
+    background: @bg_h;
 
     &:after {
-      content: " ";
-      position: absolute;
-      display: block;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      width: 3.2rem;
-      background: @gc_a11y_green_darker url('images/arrow-right.svg') center center no-repeat;
-      background-size: 8px  auto;
-      transition: background .2s;
+      background-color: @after_h;
     }
+  }
 
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-      background-color: @gc_a11y_green_dark;
-      padding-left: 1.7rem;
-      color: @white;
+}
 
-      &:after {
-        background-color: @gc_a11y_green_dark;
-      }
+.btn--primary {
+  .make-btn();
+}
+
+.btn--secondary {
+  .make-btn(@bg: @gc_pink, @after: darken(@gc_pink, 10%));
+}
+
+.btn--white {
+  .make-btn(@bg: @white, @bg_h: @gc_blue_dark, @after: @gc_blue_xlight, @after_h: @gc_blue_darkest, @color: @gc_blue_dark, @color_h: @white);
+
+  &:after {
+    background-image: url('../images/arrow-right-blue.svg');
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    &:after {
+      background-image: url('../images/arrow-right-white.svg');
     }
   }
 }
+

@@ -1,0 +1,415 @@
+///
+// * Gebruiker Centraal - less/components/_entry-home.less
+// * ----------------------------------------------------------------------------------
+// * cards with featured images, such as
+// * cards in the related-content block
+// * ----------------------------------------------------------------------------------
+// * @package gebruiker-centraal
+// * @author  Paul van Buuren
+// * @license GPL-2.0+
+// * @version 4.1.4
+// * @since   4.1.4
+// * @desc.   Moved section home_template_teasers functions and styling from inlusie plugin to theme.
+// * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+
+//=========================================================================================================
+
+#home_template_teasers {
+  .gc-padding;
+  margin-top: 3rem;
+
+  @media @tablet {
+    margin: 3rem auto 0;
+    max-width: ~"calc(@{max-width-container} + (@{gutter} * 2))";
+  }
+
+  @media @desktop {
+    margin-top: 5rem;
+  }
+}
+
+/* ---- GC Hompage ---*/
+
+.page-template-page_home-php {
+  background: @light_gray;
+
+  .content-sidebar-wrap {
+    max-width: @max-width-content;
+    margin: 0 auto;
+  }
+
+  .l-widget-wrapper {
+    margin-top: 3rem;
+
+    @media @tablet {
+      display: flex;
+      flex-wrap: wrap;
+
+      .manifest {
+        width: 100%;
+      }
+
+      #home-widgets-left {
+        padding-right: @gutter / 2;
+      }
+
+      #home-widgets-right {
+        padding-left: @gutter / 2;
+      }
+    }
+
+    @media @desktop {
+      #home-widgets-left {
+        width: 60%;
+      }
+
+      #home-widgets-right {
+        width: 40%;
+      }
+    }
+  }
+}
+
+.manifest {
+  background: @gc_a11y_green;
+  color: @wit;
+
+  .content,
+  header {
+    padding: 2rem;
+
+    @media @tablet {
+      padding: 2.5rem 4rem;
+    }
+  }
+
+  header {
+    background: @gc_a11y_green_dark;
+    h1 {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .content {
+    padding: 2rem;
+
+    @media @tablet {
+      padding: 3rem 4rem;
+    }
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
+
+  a:not(.btn) {
+    &,
+    &:active,
+    &:focus,
+    &:hover {
+      color: @wit;
+    }
+  }
+
+  hr {
+    width: 100%;
+  }
+
+  h2, h3 {
+    .gc-heading-medium;
+    margin: 2rem 0 0 0;
+    padding: 0;
+    text-transform: uppercase;
+
+    + p {
+      margin-top: 1.8rem;
+    }
+  }
+
+  ul li {
+    display: list-item;
+    padding: 0 2em 0 .3em;
+    margin-left: .2em;
+    list-style-image: url('../images/bullet-white.png');
+    .iconaddbullet('../images/bullet.svg', @wit);
+  }
+}
+
+.custom-html-widget {
+  background: @wit;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.entry-list .entry {
+
+  header {
+    padding: 2rem;
+  }
+
+  .excerpt {
+    padding: 0 2rem 2rem;
+  }
+
+  + .entry {
+    border-top: .1rem solid @border_color;
+    padding: 0;
+
+    &:hover,
+    &:focus {
+      border-color: @gc_blue_dark;
+    }
+  }
+
+  .entry-title {
+    .gc-list-title;
+    margin: 0;
+    padding: 0 1rem 0 0;
+  }
+
+  .meta-data {
+    margin-top: .8rem;
+  }
+
+  .arrow-link {
+    padding-top: 0;
+    position: relative;
+  }
+
+  .arrow-link__icon {
+    margin-top: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  // With images (blog)
+  &--with-image {
+    .entry__link {
+      display: flex;
+    }
+
+    .bloginfo {
+      width: ~"calc(100% - @{fi_sm})";
+
+      @media @tablet_only {
+        width: ~"calc(100% - @{fi_md})";
+      }
+
+      @media @desktop {
+        width: ~"calc(100% - @{fi_lg})";
+      }
+    }
+  }
+
+  // Event
+
+  &--event {
+    .entry__link {
+      min-height: 10rem;
+    }
+
+    header {
+      position: relative;
+      padding-left: 7rem;
+
+      .date-badge {
+        position: absolute;
+        left: 2rem;
+        top: 2rem;
+      }
+    }
+
+    &:first-child {
+      .entry__link {
+        background: @white;
+      }
+
+      header {
+        padding-left: 9rem;
+      }
+
+      .date-badg {
+
+      }
+    }
+
+    &:not(:first-child) {
+      .excerpt,
+      .meta-data {
+        .visuallyhidden;
+      }
+    }
+  }
+}
+
+.entry__featured-image {
+  flex: 1;
+  width: @fi_sm;
+  height: @fi_sm;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @media @tablet {
+    width: @fi_md;
+    height: @fi_md;
+  }
+
+  @media @desktop {
+    width: @fi_lg;
+    height: @fi_lg;
+  }
+}
+
+// Events
+
+.entry__link {
+  display: block;
+  text-decoration: none;
+  background: @grey_x_light;
+  transition: color .2s, background .2s;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    background: @white;
+    border-color: @gc_blue_dark;
+    color: @gc_blue_darkest;
+    box-shadow: 0 0 .6rem rgba(#000, 0.1);
+    z-index: +1;
+
+    h3,
+    .excerpt {
+      text-decoration: underline;
+    }
+
+    .arrow-link__icon {
+      .gc-box-shadow;
+      background-color: @white;
+      border-color: @gc_blue_dark;
+    }
+
+    .date-badge {
+      background: @gc_a11y_green;
+      text-decoration: none;
+
+      span {
+        color: @white;
+        text-decoration: none;
+        display: block;
+      }
+    }
+
+    .arrow-link__text {
+      text-decoration: underline;
+    }
+  }
+}
+
+// BLogs
+
+.gc-actieteam-widget {
+  .author-box {
+    &:before {
+      display: none;
+    }
+  }
+
+  .author-archive {
+    width: 100%;
+    height: auto;
+    float: none;
+    border: none;
+    margin: 0;
+    box-shadow: none;
+  }
+
+  section {
+    min-height: 10rem;
+
+    a {
+      padding: 2rem;
+      display: block;
+      text-decoration: none;
+      background: @heelerglichtgrijs;
+      position: relative;
+      overflow: hidden;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background: @wit;
+        color: @txt;
+
+        .author-box-title {
+          color: @groen_2;
+          text-decoration: underline;
+          &:after {
+            .icon_separator_fill('../images/cta-pijl.svg', @txt);
+            margin-left: .2rem;
+          }
+        }
+        .ezelsoortje();
+      }
+    }
+
+
+    &:nth-child(odd){
+      a {
+        padding-left: 2rem;
+        padding-right: 12rem;
+      }
+
+      .avatar {
+        right: 2rem;
+        left: auto;
+      }
+    }
+
+    &:nth-child(even){
+      a {
+        padding-left: 12rem;
+      }
+    }
+
+  }
+
+  .author-box-title {
+    .font-size(16);
+    margin: 0;
+
+    &:after {
+      height: 20px;
+      width: 20px;
+      content: ' ';
+      display: inline-block;
+      background-image: url('../images/cta-pijl.png');
+      background-position: bottom center;
+      background-repeat: no-repeat;
+      .icon_separator_fill('../images/cta-pijl.svg', @groen_2);
+      transition: margin .2s;
+    }
+  }
+
+  .author-box {
+    margin: 0;
+    padding: 0;
+    + .author-box {
+      border-top: 2px solid @border_authorbox;
+    }
+  }
+
+  .avatar {
+    margin: 0;
+    width: 69px;
+    height: auto;
+    border-radius: 50%;
+    background: @border_authorbox;
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+  }
+}
+

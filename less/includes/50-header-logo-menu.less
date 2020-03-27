@@ -57,8 +57,8 @@
 					width: @logo_mobile_width;
 					height: @logo_mobile_height;
 
-//					background-image: url('images/logos/logo-gebruikercentraal-v2.svg');
-					background-image: url('images/logos/gc-edo-beeldmerk.svg');
+//					background-image: url('../images/logos/logo-gebruikercentraal-v2.svg');
+					background-image: url('../images/logos/gc-edo-beeldmerk.svg');
 					background-repeat: no-repeat;
 					background-position: center center;
 
@@ -136,22 +136,22 @@
 
 			&.inclusie {
 			    a:before {
-					background-image: url('images/logos/logo-inclusie.svg');
+					background-image: url('../images/logos/logo-inclusie.svg');
 				}
 			}
 			&.beeldbank {
 			    a:before {
-					background-image: url('images/logos/beeldmerk-beeldbank.svg');
+					background-image: url('../images/logos/beeldmerk-beeldbank.svg');
 				}
 			}
 			&.rotterdammercentraal {
 			    a:before {
-					background-image: url('images/logos/logo-rotterdammercentraal.svg');
+					background-image: url('../images/logos/logo-rotterdammercentraal.svg');
 				}
 			}
 			&.beeldbank {
 			    a:before {
-					background-image: url('images/logos/beeldmerk-beeldbank.svg');
+					background-image: url('../images/logos/beeldmerk-beeldbank.svg');
 				}
 			}
 			&.gebruikercentraal {
@@ -305,6 +305,7 @@
 			position: absolute;
 			top: 0;
 			bottom: 0;
+			height: 38px;
 
 			@media only screen and ( max-width: @break_show_menu_button ) {
 				margin-right: 0;
@@ -389,6 +390,8 @@
 			&:focus {
 				background-color: @wit;
 				box-shadow: inset 0 0 4px #aaaaaa;
+				// voor IE11: expliciet tekst NIET wit maken
+				color: @txt;
 			}
 
 			//----------------------------------------------------------------------------

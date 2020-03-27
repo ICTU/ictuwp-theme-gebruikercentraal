@@ -1,7 +1,6 @@
 
-
 .grid {
-	
+
   > div,
   > section {
     margin-top: @gutter;
@@ -33,10 +32,10 @@
     @media only screen and ( min-width: ( @break_fullwidth )) {
       > div,
       > section {
-		width: ~"calc(33.333% - @{gutter})";
+        width: ~"calc(33.333% - @{gutter})";
 
         &:first-child {
-			width: ~"calc(33.333% - @{gutter})";
+          width: ~"calc(33.333% - @{gutter})";
         }
       }
     }
@@ -47,10 +46,27 @@
 
       > div,
       > section {
-		width: ~"calc(50% - @{gutter})";
+        width: ~"calc(50% - @{gutter})";
         margin-left: ( @gutter / 2 );
         margin-right: ( @gutter / 2 );
       }
     }
   }
 }
+
+.grid-col-2() {
+
+  @media @tablet {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -@gutter / 2;
+    margin-right: -@gutter / 2;
+
+    > div,
+    > section {
+      width: ~"calc(50% - @{gutter})";
+      margin: @gutter @gutter / 2 0;
+    }
+  }
+}
+

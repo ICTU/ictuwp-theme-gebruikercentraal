@@ -146,7 +146,6 @@
 		}	
 	}
 
-  .gc-event-widget .bg-color + a,  
   .widget-read-all {
     display: block;
     text-align: right;
@@ -223,23 +222,8 @@
   .sidebar .enews-widget {
     background-color: @wit;
   }
-  
-  
-	#home-widgets-left {
-		.widget_custom_html {
-			margin-left: .5em;
-			margin-right: .5em;
-		}
-		.custom-html-widget {
-			background: @wit;
-			overflow: hidden;
-			padding: 1em;
-		}
-	}
 
-	.gc-event-widget,
-	.gc-site-home-contentwidget,
-	.gc-berichten-widget {
+	.gc-site-home-contentwidget {
 		.bg-color {
 			background: @wit;
 		}
@@ -247,87 +231,12 @@
 			border-top: 2px solid @lichtgrijs;
 		}
 	}
-  
-	.gc-actieteam-widget {
-
-		section a {
-			overflow: hidden;
-			padding: @padding;
-			display: block;
-			overflow: hidden;
-			text-decoration: none;
-			background: @heelerglichtgrijs;
-			position: relative;
-			
-			&:hover,
-			&:active,
-			&:focus {
-				background: @wit;
-				color: @txt;
-				
-				.author-box-title {
-					color: @groen_2;
-					&:after {
-						.icon_separator_fill('../../images/cta-pijl.svg', @txt);
-					}
-				}
-				.ezelsoortje();
-			}
-		}
-		p {
-			color: @txt_grijs;  
-		}
-		.author-box-title {
-			display: inline-block;
-			clear: both;
-			margin-bottom: 0;
-			padding-bottom: 0;
-			
-			&:after {
-				height: 20px;
-				width: 20px;
-				content: ' ';
-				display: inline-block;
-				background-image: url('images/cta-pijl.png');
-				background-position: center center;
-				background-repeat: no-repeat;
-				.icon_separator_fill('../../images/cta-pijl.svg', @groen_2);
-			}
-		}
-		
-		.author-box {
-			margin: 0;
-			padding: 0;
-		}
-		.author-box + .author-box {
-			border-top: 2px solid @border_authorbox;
-		}
-		.avatar,
-		.author-photo {
-			max-width: 69px;
-			height: auto;
-			border-radius: 50%;
-			background: @border_authorbox;
-		}
-		.actieteam section:nth-child(2n+2) {
-		.avatar,
-		.author-photo {
-			float: right;
-			margin: 0;
-		}
-		}
-	}
 
 	.gc-actieteam-widget,
-	.gc-event-widget,
-	.gc-site-home-contentwidget,
-	.gc-berichten-widget {
+	.gc-site-home-contentwidget {
 
 		.blogberichtshared( 50px, @readmore_width, @readmore_height, 50 );
-		
-		.widget-wrap {
-			padding: 0 .5em .5em .5em;
-		}
+
 		header {
 			padding-top: @padding;
 		}    
@@ -347,67 +256,7 @@
 		}    
 	}
 
-  .gc-event-widget {
-
-    .tijdenplaats {
-      .eventicons();
-    }
-
-    .bg-color {
-      background: #F8F8F8;
-    }
-
-    .entry {
-      a {
-        padding: 0 @padding @padding @padding;
-      }
-
-      &:not(.first) {
-        .excerpt,
-          .tijdenplaats {
-            .visuallyhidden();
-          }
-      }      
-
-@lewidth: 45px;
-
-      &.first {
-        position: relative;
-        a {
-          background: @wit;
-        }
-
-        header, [itemprop="description"] {
-          margin: 0 0 0 ( @lewidth + @padding);
-        }
-        header {
-          position:static;
-          &, h3 {
-            padding: 0;
-          }
-        }
-        .tijdenplaats {
-          padding-bottom: ( @padding / 2 );
-          margin-bottom: ( @padding / 2 );
-          border-bottom: 2px solid @lichtgrijs;
-        }
-
-        h3 {
-          font-family: @headerfont;
-          .fontsize(32);
-          line-height: 1;
-          margin-top: ( @padding / 2 );
-        }
-
-        .date-badge {
-          .datebadge_groot(@paars, 45px, ( @padding / 1.5 ), @padding);
-        }
-      }
-    }
-  }
-
-	.gc-site-home-contentwidget,
-	.gc-berichten-widget {
+	.gc-site-home-contentwidget {
 		.entry {
 			padding: 0;
 		}
@@ -547,18 +396,6 @@
 		}      
 	}
 
-  
-	.footer-widgets {
-		margin-top: 2rem;
-
-		.widget_gc_newsletter_subscribe {
-			input[type="text"] {
-				border-color: @wit;
-			}
-		}
-	}
-  
-
 
 	.date-badge {
 		.datebadge_klein();
@@ -624,8 +461,7 @@
 
 	#home-widgets-left {
 		
-		.gc-site-home-contentwidget,
-		.gc-berichten-widget {
+		.gc-site-home-contentwidget {
 			.entry {
 				&, a {
 					min-height: ( @width + 1 );
@@ -643,8 +479,7 @@
 	
 	#home-widgets-right {
 		
-		.gc-site-home-contentwidget,
-		.gc-berichten-widget {
+		.gc-site-home-contentwidget {
 			.entry {
 				&, a {
 					min-height: ( @width / 2 );

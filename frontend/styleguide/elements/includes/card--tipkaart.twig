@@ -1,0 +1,16 @@
+<div class="card card--tipkaart tipkaart {{ modifier|lower }}">
+  <a href="#" class="tipkaart__link">
+    <span class="tipkaart__nummer">Tip 104</span>
+    <h2 class="card__title">
+      {% if card_title %}
+        {{ card_title }}
+      {% else %}
+        Gebruik het juiste kanaal op het juiste moment
+      {% endif %}
+    </h2>
+
+    <span class="tipkaart__categorie">
+      {{ modifier }}
+    </span>
+  </a>
+</div>

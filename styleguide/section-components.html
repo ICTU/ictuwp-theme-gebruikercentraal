@@ -11,9 +11,7 @@
   <link rel="shortcut icon" href="" type="image/vnd.microsoft.icon" />
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="../style.css"/>
-<link rel="stylesheet" href="../../../../../wp-content/plugins/ictu-gc-posttypes-inclusie/css/frontend.css"/>
-<link rel="stylesheet" href="../../../../../wp-content/plugins/ictu-gc-posttypes-brieven-beelden/css/frontend-beeldbank.css"/>
+  <link rel="stylesheet" href="../css/gc-style.css"/>
 <link rel="stylesheet" href="../../gebruiker-centraal/frontend/styleguide/css/styleguide.css"/>
 
   <link rel="stylesheet" href="kss-assets/lib/docs.css">
@@ -67,63 +65,83 @@
                 <ul class="section-nav nav">
                   <li class="toc-entry toc-h1 nav-item"><a href="#main-content" class="h6 text-secondary"><span class="nav__name">Components</span></a></li>
                                       <li class="toc-entry toc-h2 nav-item">
+                      <a class="menu-link nav-link" href="#components-author">
+                        <span class="ref sr-only">1.1</span> <span class="nav__name">Auteur</span>
+                      </a>
+                    </li>
+                                      <li class="toc-entry toc-h2 nav-item">
                       <a class="menu-link nav-link" href="#components-buttons">
-                        <span class="ref sr-only">1.1</span> <span class="nav__name">Components.Buttons</span>
+                        <span class="ref sr-only">1.2</span> <span class="nav__name">Components.Buttons</span>
                       </a>
                     </li>
                                       <li class="toc-entry toc-h2 nav-item">
                       <a class="menu-link nav-link" href="#components-buttons-cta">
-                        <span class="ref sr-only child">1.1.1</span> <span class="nav__name">CTA Button</span>
+                        <span class="ref sr-only child">1.2.1</span> <span class="nav__name">CTA Button</span>
                       </a>
                     </li>
                                       <li class="toc-entry toc-h2 nav-item">
                       <a class="menu-link nav-link" href="#components-buttons-icon">
-                        <span class="ref sr-only child">1.1.2</span> <span class="nav__name">Iconbutton</span>
+                        <span class="ref sr-only child">1.2.2</span> <span class="nav__name">Iconbutton</span>
                       </a>
                     </li>
                                       <li class="toc-entry toc-h2 nav-item">
                       <a class="menu-link nav-link" href="#components-buttons-primary">
-                        <span class="ref sr-only child">1.1.3</span> <span class="nav__name">Primary Button</span>
+                        <span class="ref sr-only child">1.2.3</span> <span class="nav__name">Primary Button</span>
+                      </a>
+                    </li>
+                                      <li class="toc-entry toc-h2 nav-item">
+                      <a class="menu-link nav-link" href="#components-buttons-secondary">
+                        <span class="ref sr-only child">1.2.4</span> <span class="nav__name">Secondary Button</span>
+                      </a>
+                    </li>
+                                      <li class="toc-entry toc-h2 nav-item">
+                      <a class="menu-link nav-link" href="#components-buttons-white">
+                        <span class="ref sr-only child">1.2.5</span> <span class="nav__name">White Background Button</span>
                       </a>
                     </li>
                                       <li class="toc-entry toc-h2 nav-item">
                       <a class="menu-link nav-link" href="#components-cards">
-                        <span class="ref sr-only">1.2</span> <span class="nav__name">Components.Cards</span>
+                        <span class="ref sr-only">1.3</span> <span class="nav__name">Components.Cards</span>
                       </a>
                     </li>
                                       <li class="toc-entry toc-h2 nav-item">
                       <a class="menu-link nav-link" href="#components-cards-default">
-                        <span class="ref sr-only child">1.2.1</span> <span class="nav__name">Card</span>
+                        <span class="ref sr-only child">1.3.1</span> <span class="nav__name">Card</span>
                       </a>
                     </li>
                                       <li class="toc-entry toc-h2 nav-item">
                       <a class="menu-link nav-link" href="#components-cards-doelgroep">
-                        <span class="ref sr-only child">1.2.2</span> <span class="nav__name">Doelgroep Cards</span>
+                        <span class="ref sr-only child">1.3.2</span> <span class="nav__name">Doelgroep Cards</span>
                       </a>
                     </li>
                                       <li class="toc-entry toc-h2 nav-item">
                       <a class="menu-link nav-link" href="#components-cards-tipkaarten">
-                        <span class="ref sr-only child">1.2.3</span> <span class="nav__name">Tipkaarten</span>
+                        <span class="ref sr-only child">1.3.3</span> <span class="nav__name">Tipkaarten</span>
+                      </a>
+                    </li>
+                                      <li class="toc-entry toc-h2 nav-item">
+                      <a class="menu-link nav-link" href="#components-steplist">
+                        <span class="ref sr-only">1.4</span> <span class="nav__name">Steplist</span>
                       </a>
                     </li>
                                       <li class="toc-entry toc-h2 nav-item">
                       <a class="menu-link nav-link" href="#components-steps">
-                        <span class="ref sr-only">1.3</span> <span class="nav__name">Components.Steps</span>
+                        <span class="ref sr-only">1.5</span> <span class="nav__name">Components.Steps</span>
                       </a>
                     </li>
                                       <li class="toc-entry toc-h2 nav-item">
                       <a class="menu-link nav-link" href="#components-steps-stepchart">
-                        <span class="ref sr-only child">1.3.1</span> <span class="nav__name">Stepchart</span>
+                        <span class="ref sr-only child">1.5.1</span> <span class="nav__name">Stepchart</span>
                       </a>
                     </li>
                                       <li class="toc-entry toc-h2 nav-item">
                       <a class="menu-link nav-link" href="#components-steps-stepnav">
-                        <span class="ref sr-only child">1.3.2</span> <span class="nav__name">Stapnavigatie</span>
+                        <span class="ref sr-only child">1.5.2</span> <span class="nav__name">Stapnavigatie</span>
                       </a>
                     </li>
                                       <li class="toc-entry toc-h2 nav-item">
                       <a class="menu-link nav-link" href="#components-textblock">
-                        <span class="ref sr-only">1.4</span> <span class="nav__name">Tekstblok</span>
+                        <span class="ref sr-only">1.6</span> <span class="nav__name">Tekstblok</span>
                       </a>
                     </li>
                                     <li class="toc-entry toc-h2">
@@ -155,13 +173,163 @@
 
             
                       </div>
+                                  <section id="components-author" class="section section--depth-2 ">
+                            <h2 class="">
+                Auteur
+                <a href="#components-author" class="text-muted">
+                  <small>#
+                    <span class="sr-only">
+                      1.1 Components.Author
+                    </span>
+                  </small>
+                </a>
+              </h2>
+
+                          <div class="btn-group btn-group-sm bd-toolbar" role="group" aria-label="Example toolbar">
+                                  <a href="#components-author" onclick="event.preventDefault();" data-kss-fullscreen="components-author" class="btn btn-light btn-fullscreen">
+                    <span class="kss-toolbar__tooltip sr-only">Toggle full screen</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="toggle-full-screen" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M16,0 L16,6.5 L13.5,4 L10.5,7 L9,5.5 L12,2.5 L9.5,0 L16,0 Z M7,10.5 L4,13.5 L6.5,16 L0,16 L0,9.5 L2.5,12 L5.5,9 L7,10.5 Z"/>
+                      </g>
+                    </svg>
+                  </a>
+                  <a href="item-components-author.html" target="_blank" class="btn btn-light btn-newwindow">
+                    <span class="kss-toolbar__tooltip sr-only">Open in new window</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="new-tab" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M2.85714286,2 L2.85714286,13.1428571 L14,13.1428571 L14,2 L2.85714286,2 Z M13.0714286,12.2142857 L3.78571429,12.2142857 L3.78571429,2.92857143 L13.0714286,2.92857143 L13.0714286,12.2142857 Z M1.92857143,14.0714286 L1.92857143,4.32142857 L1,3.39285714 L1,15 L12.6071429,15 L11.6785714,14.0714286 L1.92857143,14.0714286 Z"/>
+                        <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.179 4.786 7.5 7.107 4.714 9.893 6.107 11.286 8.893 8.5 11.214 10.821 11.214 4.786"/>
+                      </g>
+                    </svg>
+                  </a>
+                                <a href="#components-author" onclick="event.preventDefault();" data-kss-guides="true" class="btn btn-light btn-guides">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle example guides</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-guides" fill="none" fill-rule="evenodd">
+                      <path id="Shape" fill="#000" fill-rule="nonzero" d="M6,3 L8,3 L8,4 L6,4 L6,3 Z M9,3 L11,3 L11,4 L9,4 L9,3 Z M14,3 L14,7 L11,7 L11,6 L13,6 L13,4 L12,4 L12,3 L14,3 Z M5,6 L7,6 L7,7 L5,7 L5,6 Z M8,6 L10,6 L10,7 L8,7 L8,6 Z M3,4 L3,6 L4,6 L4,7 L2,7 L2,3 L5,3 L5,4 L3,4 Z M6,9 L8,9 L8,10 L6,10 L6,9 Z M9,9 L11,9 L11,10 L9,10 L9,9 Z M14,9 L14,13 L11,13 L11,12 L13,12 L13,10 L12,10 L12,9 L14,9 Z M5,12 L7,12 L7,13 L5,13 L5,12 Z M8,12 L10,12 L10,13 L8,13 L8,12 Z M3,10 L3,12 L4,12 L4,13 L2,13 L2,9 L5,9 L5,10 L3,10 Z M15,1 L1,1 L1,15 L15,15 L15,1 Z M16,0 L16,16 L0,16 L0,0 L16,0 Z"/>
+                    </g>
+                  </svg>
+                </a>
+                <a href="#components-author" onclick="event.preventDefault();" data-kss-markup="true" class="btn btn-light btn-markup">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle HTML markup</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-markup" fill="none" fill-rule="evenodd">
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="10.526 11.711 11.789 12.974 16 8.763 11.789 4.553 10.526 5.816 13.474 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.474 5.816 4.211 4.553 0 8.763 4.211 12.974 5.474 11.711 2.526 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="8.807 4.007 9.721 4.256 7.194 13.52 6.28 13.27 8.807 4.007"/>
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            
+
+                          <div class="description">
+                <p>Voor het weergeven van de auteur op een detailpagina / single</p>
+
+              </div>
+            
+            
+
+                          <div class="bd-example">
+
+                  
+                                      <div class="modifier__example">
+                      <section class="author author--box" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+    <figure class="author__picture">
+        <img src="/wp-content/themes/gebruiker-centraal/frontend/styleguide/img/doelgroep-1.svg" alt="Auteur">
+    </figure>
+
+    <div class="author__content">
+        <h2 class="author_title">
+            <a class="arrow-link" href="#">
+                <span class="arrow-link__text"><span class="visuallyhidden">Over</span>Gebruiker Centraal Auteur</span>
+                <span class="arrow-link__icon"></span>
+            </a>
+        </h2>
+
+        <span class="meta-data__item">Adviseur online communicatie en analyse</span>
+
+        <hr>
+        <p>Sinds 2006 werkzaam voor ICTU. In diverse projecten gewerkt op gebied van de digitale overheid. Ik onderzoek
+            en adviseer in het gebruiksvriendelijker en toegankelijker maken van websites, het verbeteren van de
+            kwaliteit van de content en de inzet van social media.</p>
+
+        <div class="author__contact-info">
+            <a class="link link--contact link--phone" href="tel:0612345678">06 1234567</a>
+            <a class="link link--contact link--email" href="mailto:info@gebruikercentraal.nl">info@gebruikercentraal.nl</a>
+
+            <ul class="social-media">
+                <li><a href="http://www.linkedin.com" class="link--social linkedin" title="LinkedIn-profiel van Gebruiker Centraal">
+                        LinkedIn-profiel van Gebruiker Centraal</a></li>
+                <li><a href="http://www.twitter.com" class="link--social twitter" title="Twitter van Gebruiker Centraal">
+                        Twitter van Gebruiker Centraal</a></li>
+                <li><a href="http://www.facebook.com" class="link--social facebook" title="Facebook van Gebruiker Centraal">
+                        Facebook van Gebruiker Centraal</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+                      <div class="modifier__example-footer"></div>
+                    </div>
+                  
+                  
+              </div>
+
+                              <details class="highlight">
+                  <summary style="padding: 5px 20px; cursor: pointer;">
+                                          Markup: <code>../elements/components/author.twig</code>
+                                      </summary>
+                  <pre><code class="language-markup" data-language="html">&lt;section class=&quot;author author--box&quot; itemprop=&quot;author&quot; itemscope=&quot;itemscope&quot; itemtype=&quot;http://schema.org/Person&quot;&gt;
+    &lt;figure class=&quot;author__picture&quot;&gt;
+        &lt;img src=&quot;{{ base_url }}/doelgroep-1.svg&quot; alt=&quot;Auteur&quot;&gt;
+    &lt;/figure&gt;
+
+    &lt;div class=&quot;author__content&quot;&gt;
+        &lt;h2 class=&quot;author_title&quot;&gt;
+            &lt;a class=&quot;arrow-link&quot; href=&quot;#&quot;&gt;
+                &lt;span class=&quot;arrow-link__text&quot;&gt;&lt;span class=&quot;visuallyhidden&quot;&gt;Over&lt;/span&gt;Gebruiker Centraal Auteur&lt;/span&gt;
+                &lt;span class=&quot;arrow-link__icon&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/h2&gt;
+
+        &lt;span class=&quot;meta-data__item&quot;&gt;Adviseur online communicatie en analyse&lt;/span&gt;
+
+        &lt;hr&gt;
+        &lt;p&gt;Sinds 2006 werkzaam voor ICTU. In diverse projecten gewerkt op gebied van de digitale overheid. Ik onderzoek
+            en adviseer in het gebruiksvriendelijker en toegankelijker maken van websites, het verbeteren van de
+            kwaliteit van de content en de inzet van social media.&lt;/p&gt;
+
+        &lt;div class=&quot;author__contact-info&quot;&gt;
+            &lt;a class=&quot;link link--contact link--phone&quot; href=&quot;tel:0612345678&quot;&gt;06 1234567&lt;/a&gt;
+            &lt;a class=&quot;link link--contact link--email&quot; href=&quot;mailto:info@gebruikercentraal.nl&quot;&gt;info@gebruikercentraal.nl&lt;/a&gt;
+
+            &lt;ul class=&quot;social-media&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;http://www.linkedin.com&quot; class=&quot;link--social linkedin&quot; title=&quot;LinkedIn-profiel van Gebruiker Centraal&quot;&gt;
+                        LinkedIn-profiel van Gebruiker Centraal&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;http://www.twitter.com&quot; class=&quot;link--social twitter&quot; title=&quot;Twitter van Gebruiker Centraal&quot;&gt;
+                        Twitter van Gebruiker Centraal&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;http://www.facebook.com&quot; class=&quot;link--social facebook&quot; title=&quot;Facebook van Gebruiker Centraal&quot;&gt;
+                        Facebook van Gebruiker Centraal&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+
+                </details>
+              
+            
+                          <small class="text-muted">
+                Source: <code>styleguide/elements/components/author.scss</code>, line 1
+              </small>
+                      </section>
                                   <section id="components-buttons" class="section section--depth-2 ">
                             <h2 class="">
                 Components.Buttons
                 <a href="#components-buttons" class="text-muted">
                   <small>#
                     <span class="sr-only">
-                      1.1 Components.Buttons
+                      1.2 Components.Buttons
                     </span>
                   </small>
                 </a>
@@ -180,7 +348,7 @@
                 <a href="#components-buttons-cta" class="text-muted">
                   <small>#
                     <span class="sr-only">
-                      1.1.1 Components.Buttons.cta
+                      1.2.1 Components.Buttons.cta
                     </span>
                   </small>
                 </a>
@@ -257,7 +425,7 @@
               
             
                           <small class="text-muted">
-                Source: <code>styleguide/elements/components/btn.scss</code>, line 20
+                Source: <code>styleguide/elements/components/btn.scss</code>, line 38
               </small>
                       </section>
                                   <section id="components-buttons-icon" class="section section--depth-3 ">
@@ -266,7 +434,7 @@
                 <a href="#components-buttons-icon" class="text-muted">
                   <small>#
                     <span class="sr-only">
-                      1.1.2 Components.Buttons.icon
+                      1.2.2 Components.Buttons.icon
                     </span>
                   </small>
                 </a>
@@ -339,7 +507,7 @@
               
             
                           <small class="text-muted">
-                Source: <code>styleguide/elements/components/btn.scss</code>, line 10
+                Source: <code>styleguide/elements/components/btn.scss</code>, line 28
               </small>
                       </section>
                                   <section id="components-buttons-primary" class="section section--depth-3 ">
@@ -348,7 +516,7 @@
                 <a href="#components-buttons-primary" class="text-muted">
                   <small>#
                     <span class="sr-only">
-                      1.1.3 Components.Buttons.primary
+                      1.2.3 Components.Buttons.primary
                     </span>
                   </small>
                 </a>
@@ -424,13 +592,177 @@
                 Source: <code>styleguide/elements/components/btn.scss</code>, line 1
               </small>
                       </section>
+                                  <section id="components-buttons-secondary" class="section section--depth-3 ">
+                            <h3 class="">
+                Secondary Button
+                <a href="#components-buttons-secondary" class="text-muted">
+                  <small>#
+                    <span class="sr-only">
+                      1.2.4 Components.Buttons.secondary
+                    </span>
+                  </small>
+                </a>
+              </h3>
+
+                          <div class="btn-group btn-group-sm bd-toolbar" role="group" aria-label="Example toolbar">
+                                  <a href="#components-buttons-secondary" onclick="event.preventDefault();" data-kss-fullscreen="components-buttons-secondary" class="btn btn-light btn-fullscreen">
+                    <span class="kss-toolbar__tooltip sr-only">Toggle full screen</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="toggle-full-screen" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M16,0 L16,6.5 L13.5,4 L10.5,7 L9,5.5 L12,2.5 L9.5,0 L16,0 Z M7,10.5 L4,13.5 L6.5,16 L0,16 L0,9.5 L2.5,12 L5.5,9 L7,10.5 Z"/>
+                      </g>
+                    </svg>
+                  </a>
+                  <a href="item-components-buttons-secondary.html" target="_blank" class="btn btn-light btn-newwindow">
+                    <span class="kss-toolbar__tooltip sr-only">Open in new window</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="new-tab" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M2.85714286,2 L2.85714286,13.1428571 L14,13.1428571 L14,2 L2.85714286,2 Z M13.0714286,12.2142857 L3.78571429,12.2142857 L3.78571429,2.92857143 L13.0714286,2.92857143 L13.0714286,12.2142857 Z M1.92857143,14.0714286 L1.92857143,4.32142857 L1,3.39285714 L1,15 L12.6071429,15 L11.6785714,14.0714286 L1.92857143,14.0714286 Z"/>
+                        <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.179 4.786 7.5 7.107 4.714 9.893 6.107 11.286 8.893 8.5 11.214 10.821 11.214 4.786"/>
+                      </g>
+                    </svg>
+                  </a>
+                                <a href="#components-buttons-secondary" onclick="event.preventDefault();" data-kss-guides="true" class="btn btn-light btn-guides">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle example guides</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-guides" fill="none" fill-rule="evenodd">
+                      <path id="Shape" fill="#000" fill-rule="nonzero" d="M6,3 L8,3 L8,4 L6,4 L6,3 Z M9,3 L11,3 L11,4 L9,4 L9,3 Z M14,3 L14,7 L11,7 L11,6 L13,6 L13,4 L12,4 L12,3 L14,3 Z M5,6 L7,6 L7,7 L5,7 L5,6 Z M8,6 L10,6 L10,7 L8,7 L8,6 Z M3,4 L3,6 L4,6 L4,7 L2,7 L2,3 L5,3 L5,4 L3,4 Z M6,9 L8,9 L8,10 L6,10 L6,9 Z M9,9 L11,9 L11,10 L9,10 L9,9 Z M14,9 L14,13 L11,13 L11,12 L13,12 L13,10 L12,10 L12,9 L14,9 Z M5,12 L7,12 L7,13 L5,13 L5,12 Z M8,12 L10,12 L10,13 L8,13 L8,12 Z M3,10 L3,12 L4,12 L4,13 L2,13 L2,9 L5,9 L5,10 L3,10 Z M15,1 L1,1 L1,15 L15,15 L15,1 Z M16,0 L16,16 L0,16 L0,0 L16,0 Z"/>
+                    </g>
+                  </svg>
+                </a>
+                <a href="#components-buttons-secondary" onclick="event.preventDefault();" data-kss-markup="true" class="btn btn-light btn-markup">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle HTML markup</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-markup" fill="none" fill-rule="evenodd">
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="10.526 11.711 11.789 12.974 16 8.763 11.789 4.553 10.526 5.816 13.474 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.474 5.816 4.211 4.553 0 8.763 4.211 12.974 5.474 11.711 2.526 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="8.807 4.007 9.721 4.256 7.194 13.52 6.28 13.27 8.807 4.007"/>
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            
+
+                          <div class="description">
+                <p>For the default Secondary button</p>
+
+              </div>
+            
+            
+
+                          <div class="bd-example">
+
+                  
+                                      <div class="modifier__example">
+                      <a class="btn btn--secondary">Button Secondary</a>
+                      <div class="modifier__example-footer"></div>
+                    </div>
+                  
+                  
+              </div>
+
+                              <details class="highlight">
+                  <summary style="padding: 5px 20px; cursor: pointer;">
+                                          Markup
+                                      </summary>
+                  <pre><code class="language-markup" data-language="html">&lt;a class=&quot;btn btn--secondary&quot;&gt;Button Secondary&lt;/a&gt;</code></pre>
+
+                </details>
+              
+            
+                          <small class="text-muted">
+                Source: <code>styleguide/elements/components/btn.scss</code>, line 10
+              </small>
+                      </section>
+                                  <section id="components-buttons-white" class="section section--depth-3 ">
+                            <h3 class="">
+                White Background Button
+                <a href="#components-buttons-white" class="text-muted">
+                  <small>#
+                    <span class="sr-only">
+                      1.2.5 Components.Buttons.white
+                    </span>
+                  </small>
+                </a>
+              </h3>
+
+                          <div class="btn-group btn-group-sm bd-toolbar" role="group" aria-label="Example toolbar">
+                                  <a href="#components-buttons-white" onclick="event.preventDefault();" data-kss-fullscreen="components-buttons-white" class="btn btn-light btn-fullscreen">
+                    <span class="kss-toolbar__tooltip sr-only">Toggle full screen</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="toggle-full-screen" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M16,0 L16,6.5 L13.5,4 L10.5,7 L9,5.5 L12,2.5 L9.5,0 L16,0 Z M7,10.5 L4,13.5 L6.5,16 L0,16 L0,9.5 L2.5,12 L5.5,9 L7,10.5 Z"/>
+                      </g>
+                    </svg>
+                  </a>
+                  <a href="item-components-buttons-white.html" target="_blank" class="btn btn-light btn-newwindow">
+                    <span class="kss-toolbar__tooltip sr-only">Open in new window</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="new-tab" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M2.85714286,2 L2.85714286,13.1428571 L14,13.1428571 L14,2 L2.85714286,2 Z M13.0714286,12.2142857 L3.78571429,12.2142857 L3.78571429,2.92857143 L13.0714286,2.92857143 L13.0714286,12.2142857 Z M1.92857143,14.0714286 L1.92857143,4.32142857 L1,3.39285714 L1,15 L12.6071429,15 L11.6785714,14.0714286 L1.92857143,14.0714286 Z"/>
+                        <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.179 4.786 7.5 7.107 4.714 9.893 6.107 11.286 8.893 8.5 11.214 10.821 11.214 4.786"/>
+                      </g>
+                    </svg>
+                  </a>
+                                <a href="#components-buttons-white" onclick="event.preventDefault();" data-kss-guides="true" class="btn btn-light btn-guides">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle example guides</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-guides" fill="none" fill-rule="evenodd">
+                      <path id="Shape" fill="#000" fill-rule="nonzero" d="M6,3 L8,3 L8,4 L6,4 L6,3 Z M9,3 L11,3 L11,4 L9,4 L9,3 Z M14,3 L14,7 L11,7 L11,6 L13,6 L13,4 L12,4 L12,3 L14,3 Z M5,6 L7,6 L7,7 L5,7 L5,6 Z M8,6 L10,6 L10,7 L8,7 L8,6 Z M3,4 L3,6 L4,6 L4,7 L2,7 L2,3 L5,3 L5,4 L3,4 Z M6,9 L8,9 L8,10 L6,10 L6,9 Z M9,9 L11,9 L11,10 L9,10 L9,9 Z M14,9 L14,13 L11,13 L11,12 L13,12 L13,10 L12,10 L12,9 L14,9 Z M5,12 L7,12 L7,13 L5,13 L5,12 Z M8,12 L10,12 L10,13 L8,13 L8,12 Z M3,10 L3,12 L4,12 L4,13 L2,13 L2,9 L5,9 L5,10 L3,10 Z M15,1 L1,1 L1,15 L15,15 L15,1 Z M16,0 L16,16 L0,16 L0,0 L16,0 Z"/>
+                    </g>
+                  </svg>
+                </a>
+                <a href="#components-buttons-white" onclick="event.preventDefault();" data-kss-markup="true" class="btn btn-light btn-markup">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle HTML markup</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-markup" fill="none" fill-rule="evenodd">
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="10.526 11.711 11.789 12.974 16 8.763 11.789 4.553 10.526 5.816 13.474 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.474 5.816 4.211 4.553 0 8.763 4.211 12.974 5.474 11.711 2.526 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="8.807 4.007 9.721 4.256 7.194 13.52 6.28 13.27 8.807 4.007"/>
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            
+
+                          <div class="description">
+                <p>Button with a white background</p>
+
+              </div>
+            
+            
+
+                          <div class="bd-example">
+
+                  
+                                      <div class="modifier__example">
+                      <a class="btn btn--white">Button White BG</a>
+                      <div class="modifier__example-footer"></div>
+                    </div>
+                  
+                  
+              </div>
+
+                              <details class="highlight">
+                  <summary style="padding: 5px 20px; cursor: pointer;">
+                                          Markup
+                                      </summary>
+                  <pre><code class="language-markup" data-language="html">&lt;a class=&quot;btn btn--white&quot;&gt;Button White BG&lt;/a&gt;</code></pre>
+
+                </details>
+              
+            
+                          <small class="text-muted">
+                Source: <code>styleguide/elements/components/btn.scss</code>, line 19
+              </small>
+                      </section>
                                   <section id="components-cards" class="section section--depth-2 ">
                             <h2 class="">
                 Components.Cards
                 <a href="#components-cards" class="text-muted">
                   <small>#
                     <span class="sr-only">
-                      1.2 Components.Cards
+                      1.3 Components.Cards
                     </span>
                   </small>
                 </a>
@@ -449,7 +781,7 @@
                 <a href="#components-cards-default" class="text-muted">
                   <small>#
                     <span class="sr-only">
-                      1.2.1 Components.Cards.Default
+                      1.3.1 Components.Cards.Default
                     </span>
                   </small>
                 </a>
@@ -637,7 +969,7 @@
                 <a href="#components-cards-doelgroep" class="text-muted">
                   <small>#
                     <span class="sr-only">
-                      1.2.2 Components.Cards.Doelgroep
+                      1.3.2 Components.Cards.Doelgroep
                     </span>
                   </small>
                 </a>
@@ -829,7 +1161,7 @@
                 <a href="#components-cards-tipkaarten" class="text-muted">
                   <small>#
                     <span class="sr-only">
-                      1.2.3 Components.Cards.Tipkaarten
+                      1.3.3 Components.Cards.Tipkaarten
                     </span>
                   </small>
                 </a>
@@ -1075,13 +1407,173 @@
                 Source: <code>styleguide/elements/components/cards-tip.scss</code>, line 1
               </small>
                       </section>
+                                  <section id="components-steplist" class="section section--depth-2 ">
+                            <h2 class="">
+                Steplist
+                <a href="#components-steplist" class="text-muted">
+                  <small>#
+                    <span class="sr-only">
+                      1.4 Components.StepList
+                    </span>
+                  </small>
+                </a>
+              </h2>
+
+                          <div class="btn-group btn-group-sm bd-toolbar" role="group" aria-label="Example toolbar">
+                                  <a href="#components-steplist" onclick="event.preventDefault();" data-kss-fullscreen="components-steplist" class="btn btn-light btn-fullscreen">
+                    <span class="kss-toolbar__tooltip sr-only">Toggle full screen</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="toggle-full-screen" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M16,0 L16,6.5 L13.5,4 L10.5,7 L9,5.5 L12,2.5 L9.5,0 L16,0 Z M7,10.5 L4,13.5 L6.5,16 L0,16 L0,9.5 L2.5,12 L5.5,9 L7,10.5 Z"/>
+                      </g>
+                    </svg>
+                  </a>
+                  <a href="item-components-steplist.html" target="_blank" class="btn btn-light btn-newwindow">
+                    <span class="kss-toolbar__tooltip sr-only">Open in new window</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="new-tab" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M2.85714286,2 L2.85714286,13.1428571 L14,13.1428571 L14,2 L2.85714286,2 Z M13.0714286,12.2142857 L3.78571429,12.2142857 L3.78571429,2.92857143 L13.0714286,2.92857143 L13.0714286,12.2142857 Z M1.92857143,14.0714286 L1.92857143,4.32142857 L1,3.39285714 L1,15 L12.6071429,15 L11.6785714,14.0714286 L1.92857143,14.0714286 Z"/>
+                        <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.179 4.786 7.5 7.107 4.714 9.893 6.107 11.286 8.893 8.5 11.214 10.821 11.214 4.786"/>
+                      </g>
+                    </svg>
+                  </a>
+                                <a href="#components-steplist" onclick="event.preventDefault();" data-kss-guides="true" class="btn btn-light btn-guides">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle example guides</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-guides" fill="none" fill-rule="evenodd">
+                      <path id="Shape" fill="#000" fill-rule="nonzero" d="M6,3 L8,3 L8,4 L6,4 L6,3 Z M9,3 L11,3 L11,4 L9,4 L9,3 Z M14,3 L14,7 L11,7 L11,6 L13,6 L13,4 L12,4 L12,3 L14,3 Z M5,6 L7,6 L7,7 L5,7 L5,6 Z M8,6 L10,6 L10,7 L8,7 L8,6 Z M3,4 L3,6 L4,6 L4,7 L2,7 L2,3 L5,3 L5,4 L3,4 Z M6,9 L8,9 L8,10 L6,10 L6,9 Z M9,9 L11,9 L11,10 L9,10 L9,9 Z M14,9 L14,13 L11,13 L11,12 L13,12 L13,10 L12,10 L12,9 L14,9 Z M5,12 L7,12 L7,13 L5,13 L5,12 Z M8,12 L10,12 L10,13 L8,13 L8,12 Z M3,10 L3,12 L4,12 L4,13 L2,13 L2,9 L5,9 L5,10 L3,10 Z M15,1 L1,1 L1,15 L15,15 L15,1 Z M16,0 L16,16 L0,16 L0,0 L16,0 Z"/>
+                    </g>
+                  </svg>
+                </a>
+                <a href="#components-steplist" onclick="event.preventDefault();" data-kss-markup="true" class="btn btn-light btn-markup">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle HTML markup</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-markup" fill="none" fill-rule="evenodd">
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="10.526 11.711 11.789 12.974 16 8.763 11.789 4.553 10.526 5.816 13.474 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.474 5.816 4.211 4.553 0 8.763 4.211 12.974 5.474 11.711 2.526 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="8.807 4.007 9.721 4.256 7.194 13.52 6.28 13.27 8.807 4.007"/>
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            
+
+                          <div class="description">
+                <p>Voor het weergeven van een lijst met stappen. Deze kan in de text editor velden worden toegevoegd.</p>
+
+              </div>
+            
+            
+
+                          <div class="bd-example">
+
+                  
+                                      <div class="modifier__example">
+                      <ol class="steplist">
+    <li class="steplist__item">
+        <h3>Maak twee versies van dezelfde brief</h3>
+        <p>Om een goede test uit te kunnen voeren, maak je twee versies van dezelfde brief. Op die manier kun je een
+            zogenaamde A/B-test uitvoeren om uit te vinden wat het beste werkt voor de doelgroep. Denk bijvoorbeeld aan
+            het gebruik van verschillende foto’s, teksten of volgorde.</p>
+    </li>
+    <li class="steplist__item">
+        <h3>Zoek frisse testers binnen en buiten de gemeente</h3>
+        <p>Om goed te kunnen testen, is het belangrijk om testers te vinden onder de doelgroep die met een frisse blik
+            naar de brieven kunnen kijken. Ga op zoek naar intermediairs binnen en buiten de gemeente die je hierbij
+            kunnen helpen. Denk bijvoorbeeld aan collega’s die je in contact kunnen brengen met
+            vrijwilligersorganisaties, maatschappelijke stichtingen en taalambassadeurs van Stichting ABC of Stichting
+            Lezen en Schrijven..</p>
+    </li>
+    <li class="steplist__item">
+        <h3>Stel een multidisciplinair team samen</h3>
+        <p>Om ervoor te zorgen dat de verbeteringen die gevonden worden ook doorgevoerd worden in de bestaande brief, is
+            het slim om de collega’s die de brieven schrijven te betrekken bij het testen. Doordat zij de test uitvoeren
+            en met lezers het gesprek voeren, zien zij zelf wat werkt en wat niet. Door het samen te doen werk je aan
+            een gezamenlijk beeld van benodigde verbeteringen en creëer je gezamenlijke verantwoordelijkheid.</p>
+    </li>
+    <li class="steplist__item">
+        <h3>Bereid de testdag voor</h3>
+        <p>Als projectleider organiseer je 1 testdag, waarop alle collega’s op dezelfde manier en op dezelfde dag testen
+            uitvoeren bij de doelgroep. Zorg ervoor dat alles klaarligt en er een planning is wie waar naartoe gaat,
+            zodat de testers zich kunnen concentreren op hun taak. Maak testsetjes per brief, zorg voor een gezamenlijke
+            kick-off die inspireert en waarin nog een laatste keer de bedoeling wordt uitgelegd en plan een afsluitend
+            uur in waarin alle collega’s weer bij elkaar komen om de belangrijkste bevindingen door te spreken.</p>
+    </li>
+    <li class="steplist__item">
+        <h3>Maak een verslag en zorg voor follow-up</h3>
+        <p>In het reflectie-uur na afloop van de testdag, haal je gezamenlijk de belangrijkste bevindingen op. Als
+            projectleider schrijf je hiervan een samenvatting met de opzet van de test, de belangrijkste bevindingen en
+            de verbeteracties. Iedere collega die een test heeft uitgevoerd, maakt hiervan een eigen verslag. Dit voeg
+            je toe aan de samenvatting. De communicatiemedewerker, redacteur of briefeigenaar die de brieven schrijft,
+            heeft dan voldoende input om de brief te herschrijven. Als projectleider houd je in de gaten of de
+            verbeteracties ook daadwerkelijk doorgevoerd worden.</p>
+    </li>
+</ol>
+                      <div class="modifier__example-footer"></div>
+                    </div>
+                  
+                  
+              </div>
+
+                              <details class="highlight">
+                  <summary style="padding: 5px 20px; cursor: pointer;">
+                                          Markup: <code>../elements/components/steplist.twig</code>
+                                      </summary>
+                  <pre><code class="language-markup" data-language="html">&lt;ol class=&quot;steplist&quot;&gt;
+    &lt;li class=&quot;steplist__item&quot;&gt;
+        &lt;h3&gt;Maak twee versies van dezelfde brief&lt;/h3&gt;
+        &lt;p&gt;Om een goede test uit te kunnen voeren, maak je twee versies van dezelfde brief. Op die manier kun je een
+            zogenaamde A/B-test uitvoeren om uit te vinden wat het beste werkt voor de doelgroep. Denk bijvoorbeeld aan
+            het gebruik van verschillende foto’s, teksten of volgorde.&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;steplist__item&quot;&gt;
+        &lt;h3&gt;Zoek frisse testers binnen en buiten de gemeente&lt;/h3&gt;
+        &lt;p&gt;Om goed te kunnen testen, is het belangrijk om testers te vinden onder de doelgroep die met een frisse blik
+            naar de brieven kunnen kijken. Ga op zoek naar intermediairs binnen en buiten de gemeente die je hierbij
+            kunnen helpen. Denk bijvoorbeeld aan collega’s die je in contact kunnen brengen met
+            vrijwilligersorganisaties, maatschappelijke stichtingen en taalambassadeurs van Stichting ABC of Stichting
+            Lezen en Schrijven..&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;steplist__item&quot;&gt;
+        &lt;h3&gt;Stel een multidisciplinair team samen&lt;/h3&gt;
+        &lt;p&gt;Om ervoor te zorgen dat de verbeteringen die gevonden worden ook doorgevoerd worden in de bestaande brief, is
+            het slim om de collega’s die de brieven schrijven te betrekken bij het testen. Doordat zij de test uitvoeren
+            en met lezers het gesprek voeren, zien zij zelf wat werkt en wat niet. Door het samen te doen werk je aan
+            een gezamenlijk beeld van benodigde verbeteringen en creëer je gezamenlijke verantwoordelijkheid.&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;steplist__item&quot;&gt;
+        &lt;h3&gt;Bereid de testdag voor&lt;/h3&gt;
+        &lt;p&gt;Als projectleider organiseer je 1 testdag, waarop alle collega’s op dezelfde manier en op dezelfde dag testen
+            uitvoeren bij de doelgroep. Zorg ervoor dat alles klaarligt en er een planning is wie waar naartoe gaat,
+            zodat de testers zich kunnen concentreren op hun taak. Maak testsetjes per brief, zorg voor een gezamenlijke
+            kick-off die inspireert en waarin nog een laatste keer de bedoeling wordt uitgelegd en plan een afsluitend
+            uur in waarin alle collega’s weer bij elkaar komen om de belangrijkste bevindingen door te spreken.&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;steplist__item&quot;&gt;
+        &lt;h3&gt;Maak een verslag en zorg voor follow-up&lt;/h3&gt;
+        &lt;p&gt;In het reflectie-uur na afloop van de testdag, haal je gezamenlijk de belangrijkste bevindingen op. Als
+            projectleider schrijf je hiervan een samenvatting met de opzet van de test, de belangrijkste bevindingen en
+            de verbeteracties. Iedere collega die een test heeft uitgevoerd, maakt hiervan een eigen verslag. Dit voeg
+            je toe aan de samenvatting. De communicatiemedewerker, redacteur of briefeigenaar die de brieven schrijft,
+            heeft dan voldoende input om de brief te herschrijven. Als projectleider houd je in de gaten of de
+            verbeteracties ook daadwerkelijk doorgevoerd worden.&lt;/p&gt;
+    &lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+                </details>
+              
+            
+                          <small class="text-muted">
+                Source: <code>styleguide/elements/components/steplist.scss</code>, line 1
+              </small>
+                      </section>
                                   <section id="components-steps" class="section section--depth-2 ">
                             <h2 class="">
                 Components.Steps
                 <a href="#components-steps" class="text-muted">
                   <small>#
                     <span class="sr-only">
-                      1.3 Components.Steps
+                      1.5 Components.Steps
                     </span>
                   </small>
                 </a>
@@ -1100,7 +1592,7 @@
                 <a href="#components-steps-stepchart" class="text-muted">
                   <small>#
                     <span class="sr-only">
-                      1.3.1 Components.Steps.Stepchart
+                      1.5.1 Components.Steps.Stepchart
                     </span>
                   </small>
                 </a>
@@ -1158,7 +1650,7 @@
                                       <div class="modifier__example">
                       <div aria-labelledby="stappen-4692" class="stepchart"><h2 id="stappen-4692" class="visuallyhidden">Stappen</h2>
   <div class="stepchart__bg"><img
-        src="http://beeldbank.gebruikercentraal.co.uk/wp-content/plugins/ictu-gc-posttypes-brieven-beelden/images/stappenplan-bg-fullscreen.svg"
+        src="http://beeldbank.gebruikercentraal.co.uk/wp-content/plugins/ictuwp-plugin-inclusie/images/stappenplan-bg-fullscreen.svg"
         alt=""></div>
   <ol class="stepchart__items" role="tablist">
     <li class="stepchart__item">
@@ -1273,7 +1765,7 @@
                                       </summary>
                   <pre><code class="language-markup" data-language="html">&lt;div aria-labelledby=&quot;stappen-4692&quot; class=&quot;stepchart&quot;&gt;&lt;h2 id=&quot;stappen-4692&quot; class=&quot;visuallyhidden&quot;&gt;Stappen&lt;/h2&gt;
   &lt;div class=&quot;stepchart__bg&quot;&gt;&lt;img
-        src=&quot;http://beeldbank.gebruikercentraal.co.uk/wp-content/plugins/ictu-gc-posttypes-brieven-beelden/images/stappenplan-bg-fullscreen.svg&quot;
+        src=&quot;http://beeldbank.gebruikercentraal.co.uk/wp-content/plugins/ictuwp-plugin-inclusie/images/stappenplan-bg-fullscreen.svg&quot;
         alt=&quot;&quot;&gt;&lt;/div&gt;
   &lt;ol class=&quot;stepchart__items&quot; role=&quot;tablist&quot;&gt;
     &lt;li class=&quot;stepchart__item&quot;&gt;
@@ -1390,7 +1882,7 @@
                 <a href="#components-steps-stepnav" class="text-muted">
                   <small>#
                     <span class="sr-only">
-                      1.3.2 Components.Steps.Stepnav
+                      1.5.2 Components.Steps.Stepnav
                     </span>
                   </small>
                 </a>
@@ -1446,44 +1938,46 @@
 
                   
                                       <div class="modifier__example">
-                      <div aria-labelledby="stappen-4688" class="stepnav"><h2 id="stappen-4688" class="visuallyhidden">Stappen</h2>
+                      <div class="stepnav">
+  <h2 class="visuallyhidden">Stappen</h2>
   <ol class="stepnav__items l-item-count-5">
-    <li id="step_1" class="stepnav__step"><a href="http://beeldbank.gebruikercentraal.co.uk/stap/stap-1/"
-                                             class="stepnav__link " title="bereid je voor ">
+    <li id="step_1" class="stepnav__step">
+      <a href="#/" class="stepnav__link " title="bereid je voor ">
         <svg class="icon icon--stepnav" focusable="false">
           <use xmlns:xlink="http://www.w3.org/1999/xlink"
                xlink:href="/wp-content/themes/gebruiker-centraal/images/svg/stepchart/defs/svg/sprite.defs.svg#doc-magnify"></use>
         </svg>
-        <span class="stepnav__linktext">bereid je voor </span></a></li>
-    <li id="step_2" class="stepnav__step"><a href="http://beeldbank.gebruikercentraal.co.uk/stap/stap-2/"
-                                             class="stepnav__link " title="Ontwerp">
+        <span class="stepnav__linktext">Bereid je voor </span></a></li>
+    <li id="step_2" class="stepnav__step">
+      <a href="#" class="stepnav__link " title="Ontwerp">
         <svg class="icon icon--stepnav" focusable="false">
           <use xmlns:xlink="http://www.w3.org/1999/xlink"
                xlink:href="/wp-content/themes/gebruiker-centraal/images/svg/stepchart/defs/svg/sprite.defs.svg#doc-design"></use>
         </svg>
         <span class="stepnav__linktext">Ontwerp</span></a></li>
-    <li id="step_3" class="stepnav__step"><a href="http://beeldbank.gebruikercentraal.co.uk/stap/stap-3/"
-                                             class="stepnav__link is-active" title="Test">
+    <li id="step_3" class="stepnav__step">
+      <a href="#" class="stepnav__link is-active" title="Test">
         <svg class="icon icon--stepnav" focusable="false">
           <use xmlns:xlink="http://www.w3.org/1999/xlink"
                xlink:href="/wp-content/themes/gebruiker-centraal/images/svg/stepchart/defs/svg/sprite.defs.svg#persons-ok"></use>
         </svg>
         <span class="stepnav__linktext">Test</span></a></li>
-    <li id="step_4" class="stepnav__step"><a href="http://beeldbank.gebruikercentraal.co.uk/stap/stap-4/"
-                                             class="stepnav__link " title="Pas aan">
+    <li id="step_4" class="stepnav__step">
+      <a href="#" class="stepnav__link " title="Pas aan">
         <svg class="icon icon--stepnav" focusable="false">
           <use xmlns:xlink="http://www.w3.org/1999/xlink"
                xlink:href="/wp-content/themes/gebruiker-centraal/images/svg/stepchart/defs/svg/sprite.defs.svg#doc-checklist"></use>
         </svg>
         <span class="stepnav__linktext">Pas aan</span></a></li>
-    <li id="step_5" class="stepnav__step"><a href="http://beeldbank.gebruikercentraal.co.uk/stap/stap-5/"
-                                             class="stepnav__link " title="deel">
+    <li id="step_5" class="stepnav__step">
+      <a href="#" class="stepnav__link " title="deel">
         <svg class="icon icon--stepnav" focusable="false">
           <use xmlns:xlink="http://www.w3.org/1999/xlink"
                xlink:href="/wp-content/themes/gebruiker-centraal/images/svg/stepchart/defs/svg/sprite.defs.svg#doc-arrow"></use>
         </svg>
-        <span class="stepnav__linktext">deel</span></a></li>
-  </ol>>
+        <span class="stepnav__linktext">Deel</span></a></li>
+  </ol>
+</div>
                       <div class="modifier__example-footer"></div>
                     </div>
                   
@@ -1494,44 +1988,46 @@
                   <summary style="padding: 5px 20px; cursor: pointer;">
                                           Markup: <code>../elements/components/stepnav.twig</code>
                                       </summary>
-                  <pre><code class="language-markup" data-language="html">&lt;div aria-labelledby=&quot;stappen-4688&quot; class=&quot;stepnav&quot;&gt;&lt;h2 id=&quot;stappen-4688&quot; class=&quot;visuallyhidden&quot;&gt;Stappen&lt;/h2&gt;
+                  <pre><code class="language-markup" data-language="html">&lt;div class=&quot;stepnav&quot;&gt;
+  &lt;h2 class=&quot;visuallyhidden&quot;&gt;Stappen&lt;/h2&gt;
   &lt;ol class=&quot;stepnav__items l-item-count-5&quot;&gt;
-    &lt;li id=&quot;step_1&quot; class=&quot;stepnav__step&quot;&gt;&lt;a href=&quot;http://beeldbank.gebruikercentraal.co.uk/stap/stap-1/&quot;
-                                             class=&quot;stepnav__link &quot; title=&quot;bereid je voor &quot;&gt;
+    &lt;li id=&quot;step_1&quot; class=&quot;stepnav__step&quot;&gt;
+      &lt;a href=&quot;#/&quot; class=&quot;stepnav__link &quot; title=&quot;bereid je voor &quot;&gt;
         &lt;svg class=&quot;icon icon--stepnav&quot; focusable=&quot;false&quot;&gt;
           &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;
-               xlink:href=&quot;{{sprite_url}}#doc-magnify&quot;&gt;&lt;/use&gt;
+               xlink:href=&quot;{{ sprite_url }}#doc-magnify&quot;&gt;&lt;/use&gt;
         &lt;/svg&gt;
-        &lt;span class=&quot;stepnav__linktext&quot;&gt;bereid je voor &lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;li id=&quot;step_2&quot; class=&quot;stepnav__step&quot;&gt;&lt;a href=&quot;http://beeldbank.gebruikercentraal.co.uk/stap/stap-2/&quot;
-                                             class=&quot;stepnav__link &quot; title=&quot;Ontwerp&quot;&gt;
+        &lt;span class=&quot;stepnav__linktext&quot;&gt;Bereid je voor &lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li id=&quot;step_2&quot; class=&quot;stepnav__step&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;stepnav__link &quot; title=&quot;Ontwerp&quot;&gt;
         &lt;svg class=&quot;icon icon--stepnav&quot; focusable=&quot;false&quot;&gt;
           &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;
-               xlink:href=&quot;{{sprite_url}}#doc-design&quot;&gt;&lt;/use&gt;
+               xlink:href=&quot;{{ sprite_url }}#doc-design&quot;&gt;&lt;/use&gt;
         &lt;/svg&gt;
         &lt;span class=&quot;stepnav__linktext&quot;&gt;Ontwerp&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;li id=&quot;step_3&quot; class=&quot;stepnav__step&quot;&gt;&lt;a href=&quot;http://beeldbank.gebruikercentraal.co.uk/stap/stap-3/&quot;
-                                             class=&quot;stepnav__link is-active&quot; title=&quot;Test&quot;&gt;
+    &lt;li id=&quot;step_3&quot; class=&quot;stepnav__step&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;stepnav__link is-active&quot; title=&quot;Test&quot;&gt;
         &lt;svg class=&quot;icon icon--stepnav&quot; focusable=&quot;false&quot;&gt;
           &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;
-               xlink:href=&quot;{{sprite_url}}#persons-ok&quot;&gt;&lt;/use&gt;
+               xlink:href=&quot;{{ sprite_url }}#persons-ok&quot;&gt;&lt;/use&gt;
         &lt;/svg&gt;
         &lt;span class=&quot;stepnav__linktext&quot;&gt;Test&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;li id=&quot;step_4&quot; class=&quot;stepnav__step&quot;&gt;&lt;a href=&quot;http://beeldbank.gebruikercentraal.co.uk/stap/stap-4/&quot;
-                                             class=&quot;stepnav__link &quot; title=&quot;Pas aan&quot;&gt;
+    &lt;li id=&quot;step_4&quot; class=&quot;stepnav__step&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;stepnav__link &quot; title=&quot;Pas aan&quot;&gt;
         &lt;svg class=&quot;icon icon--stepnav&quot; focusable=&quot;false&quot;&gt;
           &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;
-               xlink:href=&quot;{{sprite_url}}#doc-checklist&quot;&gt;&lt;/use&gt;
+               xlink:href=&quot;{{ sprite_url }}#doc-checklist&quot;&gt;&lt;/use&gt;
         &lt;/svg&gt;
         &lt;span class=&quot;stepnav__linktext&quot;&gt;Pas aan&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;li id=&quot;step_5&quot; class=&quot;stepnav__step&quot;&gt;&lt;a href=&quot;http://beeldbank.gebruikercentraal.co.uk/stap/stap-5/&quot;
-                                             class=&quot;stepnav__link &quot; title=&quot;deel&quot;&gt;
+    &lt;li id=&quot;step_5&quot; class=&quot;stepnav__step&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;stepnav__link &quot; title=&quot;deel&quot;&gt;
         &lt;svg class=&quot;icon icon--stepnav&quot; focusable=&quot;false&quot;&gt;
           &lt;use xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;
-               xlink:href=&quot;{{sprite_url}}#doc-arrow&quot;&gt;&lt;/use&gt;
+               xlink:href=&quot;{{ sprite_url }}#doc-arrow&quot;&gt;&lt;/use&gt;
         &lt;/svg&gt;
-        &lt;span class=&quot;stepnav__linktext&quot;&gt;deel&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;/ol&gt;&gt;</code></pre>
+        &lt;span class=&quot;stepnav__linktext&quot;&gt;Deel&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</code></pre>
 
                 </details>
               
@@ -1546,7 +2042,7 @@
                 <a href="#components-textblock" class="text-muted">
                   <small>#
                     <span class="sr-only">
-                      1.4 Components.Textblock
+                      1.6 Components.Textblock
                     </span>
                   </small>
                 </a>

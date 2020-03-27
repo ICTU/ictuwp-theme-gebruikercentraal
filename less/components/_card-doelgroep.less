@@ -13,6 +13,7 @@
 
 .card--doelgroep {
   padding: 0;
+  border: none;
 
   .tegeltje {
     position: absolute;
@@ -25,7 +26,7 @@
   .card__image {
     height: 42rem;
     width: 100%;
-    background: @color_primary url('./images/avatar/poppetje-1.svg') center bottom no-repeat;
+    background: @gc_green url('../images/avatar/poppetje-1.svg') center bottom no-repeat;
     background-size: auto 290px;
   }
 
@@ -33,7 +34,6 @@
     background: none;
     position: relative;
     padding: 0;
-    z-index: 100;
   }
 
   h2 {
@@ -83,13 +83,13 @@
 
 .card__image {
   .poppetje-1 & {
-    background-image: url('./images/avatar/poppetje-1.svg');
+    background-image: url('../images/avatar/poppetje-1.svg');
   }
   .poppetje-2 & {
-    background-image: url('./images/avatar/poppetje-2.svg');
+    background-image: url('../images/avatar/poppetje-2.svg');
   }
   .poppetje-3 & {
-    background-image: url('./images/avatar/poppetje-3.svg');
+    background-image: url('../images/avatar/poppetje-3.svg');
   }
 }
 
@@ -114,7 +114,6 @@
 
   box-shadow: 3px 3px 0px rgba(#000, 0.2);
   position: relative;
-  z-index: 500;
 
   &:before {
     content: ' ';

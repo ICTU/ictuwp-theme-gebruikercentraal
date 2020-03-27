@@ -44,7 +44,7 @@ $EM_gc_wbvb_single_event_aanmeldingen = '';
 
 
 if ( $EM_Event->get_bookings()->get_booked_spaces() > 0 ) {
-  $EM_gc_wbvb_single_event_aanmeldingen = '<div class="event-aanmeldingen">' . $EM_Event->get_bookings()->get_booked_spaces() . ' ' . __( 'Registrations', 'gebruikercentraal' ) . '</div>';
+  $EM_gc_wbvb_single_event_aanmeldingen = '<div class="meta-data__item meta-data--with-icon event-aanmeldingen">' . $EM_Event->get_bookings()->get_booked_spaces() . ' ' . __( 'Registrations', 'gebruikercentraal' ) . '</div>';
 }
 
 

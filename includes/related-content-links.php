@@ -167,13 +167,11 @@ if ( !function_exists( 'ictu_gctheme_frontend_general_get_related_content' ) ) :
 
 					$return .= '<section aria-labelledby="' . $title_id . '" class="section section--related section--related-content ' . $columncounter . '">';
 
-                    $return .= '<div class="wrap">';
+                    $return .= '<div class="l-section-top">';
                     $return .= '<h2 id="' . $title_id . '" class="section__title">' . $section_title . '</h2>';
                     $return .= '</div>'; // class="wrap";
-					
-                    $return .= '<div class="wrap-outer">';
-                    $return .= '</div>'; // class="wrap-outer";
 
+                    $return .= '<div class="l-section-content">';
                     $return .= '<div class="grid grid--' . $columncounter . '">';
 
                 }
@@ -207,8 +205,8 @@ if ( !function_exists( 'ictu_gctheme_frontend_general_get_related_content' ) ) :
 						$return .= '<div class="card card--featured-image" id="' . $block_id . '">';
 						$return .= $imageplaceholder;
 						$return .= '<div class="card__content">';
-						$return .= '<h3 id="' . $title_id . '" class="card__title"><a href="' . get_permalink( $theid ) . '"><span>';
-						$return .= $section_title . '</span><span class="btn btn--arrow"></a></h3>';
+						$return .= '<h3 id="' . $title_id . '" class="card__title"><a class="arrow-link" href="' . get_permalink( $theid ) . '">';
+						$return .= '<span class="arrow-link__text">'. $section_title . '</span><span class="arrow-link__icon"></span></a></h3>';
 						$return .= '<p>';
 						$return .= $section_text;
 						$return .= '</p>';
@@ -223,7 +221,7 @@ if ( !function_exists( 'ictu_gctheme_frontend_general_get_related_content' ) ) :
 
                 if ( !$args['getmenu'] ) {
 
-                    $return .= '</div>'; // class="grid ' . $columncounter . '">';
+                    $return .= '</div></div>'; // class="grid ' . $columncounter . '">';
                     $return .= '</section>';
 
                 }
@@ -246,12 +244,19 @@ if ( !function_exists( 'ictu_gctheme_frontend_general_get_related_content' ) ) :
                 }
                 else {
 					$return .= '<section  aria-labelledby="' . $title_id . '" class="section section--related section--related-links">';
-                    $return .= '<div class="wrap">';
+                    $return .= '<div class="l-section-top">';
 					$return .= '<h2 id="' . $title_id . '" class="section__title">' . $section_title . '</h2>';
+					// If needed intro can be added here
+					$return .= '</div>'; // End section top
+
+
+					$return .= '<div class="l-section-content">'; // Start section content
 
                     $links_block_items = get_field( 'links_block_items' );
 
                     if ( $links_block_items ):
+
+                        $return .= '<ul class="item-list">';
 
 						while ( have_rows( 'links_block_items' ) ): the_row();
 							
@@ -259,21 +264,23 @@ if ( !function_exists( 'ictu_gctheme_frontend_general_get_related_content' ) ) :
 							$item_linktext      = get_sub_field( 'links_block_item_linktext' );
 							$item_description   = get_sub_field( 'links_block_item_description' );
 
-                            $return .= '<div>';
-                            $return .= '<h3><a href="' . esc_url( $item_url ) . '">';
-                            $return .= sanitize_text_field( $item_linktext ) . '</a></h3>';
+                            $return .= '<li class="item-list__item">';
+                            $return .= '<a href="' . esc_url( $item_url ) . '" class="link link--linklist">';
+                            $return .= sanitize_text_field( $item_linktext ) . '</a>';
 
                             if ( $item_description ) {
-                                $return .= '<p>' . sanitize_text_field( $item_description ) . '</p>';
+                                $return .= '<p class="item-list__description">' . sanitize_text_field( $item_description ) . '</p>';
                             }
 
-                            $return .= '</div>';
+                            $return .= '</li>';
 
                         endwhile;
 
+                        $return .= '</ul>';
+
                     endif;
 
-                    $return .= '</div>'; //  class="wrap";
+                    $return .= '</div>'; //  class="l-section-contentcontent";
                     $return .= '</section>'; // .section--related-links
 
                 }

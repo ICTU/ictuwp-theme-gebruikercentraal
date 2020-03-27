@@ -22,7 +22,58 @@
       margin-left: .8rem;
     }
   }
+
+  &--social {
+    color: transparent;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: transparent;
+    }
+  }
+
+  &--contact {
+    border: .1rem solid @border_color;
+    display: inline-block;
+    padding: .2rem 1rem;
+    transition: border-color .2s;
+    text-decoration: none;
+
+    &:before {
+      content: " ";
+      display: block;
+      width: 1.5rem;
+      height: 1.5rem;
+      margin: .5rem 1rem 0 0;
+      float: left;
+      transition: margin .2s;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: @gc_blue_dark;
+      text-decoration: underline;
+
+      &:before {
+        margin-right: 1.1rem;
+      }
+    }
+
+    &.link--phone:before {
+      background: url('../images/icon-mail.png') no-repeat center center;
+      .icon_replace_filler('../images/icon-mail.svg', @gc_darkblue, @txt);
+      height: 12px;
+    }
+
+    &.link--email:before {
+      background: url('../images/icon-phone.png') no-repeat center center;
+      .icon_replace_filler('../images/icon-phone.svg', @gc_darkblue, @txt);
+    }
+  }
 }
+
 
 @btn_width: 3rem;
 
@@ -66,7 +117,7 @@
   transition: border-color .2s;
   height: 5rem;
   width: 3.4rem;
-  background: url('images/arrow-right-blue.svg') center center no-repeat;
+  background: url('../images/arrow-right-blue.svg') center center no-repeat;
   background-size: .9rem auto;
   border: .1rem solid transparent;
 }
