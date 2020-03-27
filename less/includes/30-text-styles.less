@@ -75,25 +75,6 @@
 		}
 	}
 
-	blockquote {
-		color: @txt;
-		margin: 2rem 4rem;
-		position: relative;
-	}
-
-	blockquote::before {
-		color: @gc_greyblue;
-		position: absolute;
-		content: "“";
-		display: block;
-		.fontsize( 50 );
-		top: ( -1 * @padding );
-		speak: none;
-	}
-	blockquote::before {
-		left: ( -1 * @padding );
-	}
-
   .entry-content code {
     background-color: @code-bg;
     color: @txt;

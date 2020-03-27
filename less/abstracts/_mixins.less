@@ -8,7 +8,6 @@
 // @version 4.3.5
 // @desc.   Verder oplappen van homepage.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
-
 @import "_variables.less";
 
 //========================================================================================================
@@ -883,7 +882,6 @@
       }
     }
 
-
     a.more {
       overflow: hidden;
       position: relative;
@@ -997,39 +995,6 @@
   @call_to_action_color: @txt;
   @call_to_action_border: @gc_greyblue;
 
-  .call-to-action {
-    background: @call_to_action_bg;
-    border: 1px solid @call_to_action_border;
-
-    background: @heelerglichtgrijs;
-    border-color: @heelerglichtgrijs;
-
-    padding: 1em;
-    margin: 0 0 1em 0;
-    color: @call_to_action_color;
-    overflow: hidden;
-
-    p {
-      margin-bottom: 0;
-      & + p {
-        margin-top: 1em;
-      }
-    }
-
-    p, h2, h3, h4, h5, h6 {
-      color: @call_to_action_color;
-
-      + p {
-        margin-top: 1.8rem;
-      }
-    }
-
-    h2, h3, h4, h5, h6 {
-      padding: 0;
-      margin: 0;
-    }
-  }
-
   .call-to-action.secondary {
     background: @heelerglichtgrijs;
     border-color: @heelerglichtgrijs;
@@ -1113,7 +1078,6 @@
 }
 
 //=========================================================================================================
-
 
 .gc-pagination() {
   display: flex;
@@ -1215,6 +1179,7 @@
   margin-left: auto;
   margin-right: auto;
 }
+
 .gc-inner-container() {
   max-width: @max-width-inner;
   margin-left: auto;
@@ -1344,7 +1309,6 @@
   font-size: ( ( @input / @basefontsize ) * @baserem );
 }
 
-
 .gc-list-title {
   .font-size(18);
   line-height: 2.8rem;
@@ -1381,10 +1345,25 @@
     left: 0;
     top: 0;
     right: 0;
-    display: block;
-    height: 30rem;
+    display: block !important;
+    height: 16rem;
     background: @bg;
-    border-color: #0f0;
+
+    @media @desktop {
+      height: 30rem;
+    }
+  }
+
+  .content-sidebar-wrap {
+    position: relative;
+
+    @media @tablet {
+      padding-top: 8rem;
+    }
+
+    @media @desktop {
+      padding-top: 14rem;
+    }
   }
 }
 
@@ -1399,5 +1378,51 @@
     margin-left: .8rem;
     background: url('../images/cta-pijl.svg') bottom center no-repeat;
     background-size: auto 1.2rem;
+  }
+}
+
+// Overzichtspagina's
+
+.gc-overviewpage(@bg: @gc_a11y_green, @color: @white) {
+  .grid {
+    .gc-container;
+  }
+
+  .inleiding {
+    .gc-box-shadow;
+    background: @bg;
+    padding: 2rem;
+    color: @color;
+
+    h2, h3, a {
+      color: @color;
+    }
+
+    @media @tablet {
+      padding: 3rem 5rem;
+    }
+  }
+
+  .entry-header,
+  .entry-content {
+    max-width: @max-width-content;
+  }
+
+  .entry-header + .entry-content {
+    margin-top: 0;
+  }
+
+  .entry-content {
+    .gc-box-shadow;
+    .gc-padding;
+    background: @white;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    > * {
+      max-width: @max-width-inner;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }

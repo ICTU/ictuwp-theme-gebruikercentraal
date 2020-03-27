@@ -25,20 +25,20 @@
                       <main class="col-12 bd-content" role="main">
           <a id="main-content" tabindex="-1"></a>
             
-                                    <div id="components-cards-tipkaarten" class="section section--depth-3 is-fullscreen">
-                            <h3 class="">
-                Tipkaarten
-                <a href="#components-cards-tipkaarten" class="text-muted">
+                                    <div id="components-author" class="section section--depth-2 is-fullscreen">
+                            <h2 class="">
+                Auteur
+                <a href="#components-author" class="text-muted">
                   <small>#
                     <span class="sr-only">
-                      1.3.3 Components.Cards.Tipkaarten
+                      1.1 Components.Author
                     </span>
                   </small>
                 </a>
-              </h3>
+              </h2>
 
                           <div class="btn-group btn-group-sm bd-toolbar" role="group" aria-label="Example toolbar">
-                                <a href="#components-cards-tipkaarten" onclick="event.preventDefault();" data-kss-guides="true" class="btn btn-light btn-guides">
+                                <a href="#components-author" onclick="event.preventDefault();" data-kss-guides="true" class="btn btn-light btn-guides">
                   <span class="kss-toolbar__tooltip sr-only">Toggle example guides</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                     <g id="toggle-guides" fill="none" fill-rule="evenodd">
@@ -46,7 +46,7 @@
                     </g>
                   </svg>
                 </a>
-                <a href="#components-cards-tipkaarten" onclick="event.preventDefault();" data-kss-markup="true" class="btn btn-light btn-markup">
+                <a href="#components-author" onclick="event.preventDefault();" data-kss-markup="true" class="btn btn-light btn-markup">
                   <span class="kss-toolbar__tooltip sr-only">Toggle HTML markup</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                     <g id="toggle-markup" fill="none" fill-rule="evenodd">
@@ -60,7 +60,7 @@
             
 
                           <div class="description">
-                <p>Tipkaart layout</p>
+                <p>Voor het weergeven van de auteur op een detailpagina / single</p>
 
               </div>
             
@@ -70,92 +70,41 @@
 
                   
                                       <div class="modifier__example">
-                      <div class="card card--tipkaart tipkaart commitment">
+                      <section class="author author--box" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+    <figure class="author__picture">
+        <img src="/wp-content/themes/gebruiker-centraal/frontend/styleguide/img/doelgroep-1.svg" alt="Auteur">
+    </figure>
 
-  <a href="#" class="tipkaart__link">
-    <span class="tipnummer">Tip 108</span>
+    <div class="author__content">
+        <h2 class="author_title">
+            <a class="arrow-link" href="#">
+                <span class="arrow-link__text"><span class="visuallyhidden">Over</span>Gebruiker Centraal Auteur</span>
+                <span class="arrow-link__icon"></span>
+            </a>
+        </h2>
 
-    <h2 class="card__title">Spreek de taal van alle betrokkenen</h2>
+        <span class="meta-data__item">Adviseur online communicatie en analyse</span>
 
-    <span class="tipkaart__categorie">
-      Commitment
-    </span>
-  </a>
-</div>
+        <hr>
+        <p>Sinds 2006 werkzaam voor ICTU. In diverse projecten gewerkt op gebied van de digitale overheid. Ik onderzoek
+            en adviseer in het gebruiksvriendelijker en toegankelijker maken van websites, het verbeteren van de
+            kwaliteit van de content en de inzet van social media.</p>
 
-<div class="card card--tipkaart tipkaart gebruiksgemak">
+        <div class="author__contact-info">
+            <a class="link link--contact link--phone" href="tel:0612345678">06 1234567</a>
+            <a class="link link--contact link--email" href="mailto:info@gebruikercentraal.nl">info@gebruikercentraal.nl</a>
 
-  <a href="#" class="tipkaart__link">
-    <span class="tipnummer">Tip 98</span>
-    <h2 class="card__title">Maak het makkelijk voor iedereen</h2>
-
-    <span class="tipkaart__categorie">
-      Gebruiksgemak
-    </span>
-  </a>
-</div>
-
-<div class="card card--tipkaart tipkaart informatieveiligheid">
-
-  <a href="#" class="tipkaart__link">
-    <span class="tipnummer">Tip 109</span>
-    <h2 class="card__title">Richt je op werk én prive </h2>
-
-    <span class="tipkaart__categorie">
-      Informatieveiligheid
-    </span>
-  </a>
-</div>
-
-
-<div class="card card--tipkaart tipkaart kanaalsturing">
-  <a href="#" class="tipkaart__link">
-    <span class="tipnummer">Tip 104</span>
-    <h2 class="card__title">Gebruik het juiste kanaal op het juiste moment</h2>
-
-    <span class="tipkaart__categorie">
-      Kanaalsturing
-    </span>
-  </a>
-</div>
-
-
-<div class="card card--tipkaart tipkaart procesaanpak">
-  <a href="#" class="tipkaart__link">
-    <span class="tipnummer">Tip 105</span>
-    <h2 class="card__title">Voel zelf eens wat de klant voelt</h2>
-
-    <span class="tipkaart__categorie">
-      Procesaanpak
-    </span>
-  </a>
-</div>
-
-
-<div class="card card--tipkaart tipkaart samenwerking">
-  <a href="#" class="tipkaart__link">
-    <span class="tipnummer">Tip 106</span>
-    <h2 class="card__title">Maak 'bondjes'</h2>
-
-    <span class="tipkaart__categorie">
-      Samenwerking
-    </span>
-  </a>
-</div>
-
-
-<div class="card card--tipkaart tipkaart inclusie">
-  <a href="#" class="tipkaart__link">
-    <span class="tipnummer">Tip 113</span>
-    <h2 class="card__title">Wees je bewust van diversiteit binnen een doelgroep</h2>
-
-    <span class="tipkaart__categorie">
-      Inclusie
-    </span>
-  </a>
-</div>
-
-
+            <ul class="social-media">
+                <li><a href="http://www.linkedin.com" class="link--social linkedin" title="LinkedIn-profiel van Gebruiker Centraal">
+                        LinkedIn-profiel van Gebruiker Centraal</a></li>
+                <li><a href="http://www.twitter.com" class="link--social twitter" title="Twitter van Gebruiker Centraal">
+                        Twitter van Gebruiker Centraal</a></li>
+                <li><a href="http://www.facebook.com" class="link--social facebook" title="Facebook van Gebruiker Centraal">
+                        Facebook van Gebruiker Centraal</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
                       <div class="modifier__example-footer"></div>
                     </div>
                   
@@ -164,100 +113,49 @@
 
                               <details class="highlight">
                   <summary style="padding: 5px 20px; cursor: pointer;">
-                                          Markup: <code>../elements/components/cards-tip.twig</code>
+                                          Markup: <code>../elements/components/author.twig</code>
                                       </summary>
-                  <pre><code class="language-markup" data-language="html">&lt;div class=&quot;card card--tipkaart tipkaart commitment&quot;&gt;
+                  <pre><code class="language-markup" data-language="html">&lt;section class=&quot;author author--box&quot; itemprop=&quot;author&quot; itemscope=&quot;itemscope&quot; itemtype=&quot;http://schema.org/Person&quot;&gt;
+    &lt;figure class=&quot;author__picture&quot;&gt;
+        &lt;img src=&quot;{{ base_url }}/doelgroep-1.svg&quot; alt=&quot;Auteur&quot;&gt;
+    &lt;/figure&gt;
 
-  &lt;a href=&quot;#&quot; class=&quot;tipkaart__link&quot;&gt;
-    &lt;span class=&quot;tipnummer&quot;&gt;Tip 108&lt;/span&gt;
+    &lt;div class=&quot;author__content&quot;&gt;
+        &lt;h2 class=&quot;author_title&quot;&gt;
+            &lt;a class=&quot;arrow-link&quot; href=&quot;#&quot;&gt;
+                &lt;span class=&quot;arrow-link__text&quot;&gt;&lt;span class=&quot;visuallyhidden&quot;&gt;Over&lt;/span&gt;Gebruiker Centraal Auteur&lt;/span&gt;
+                &lt;span class=&quot;arrow-link__icon&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/h2&gt;
 
-    &lt;h2 class=&quot;card__title&quot;&gt;Spreek de taal van alle betrokkenen&lt;/h2&gt;
+        &lt;span class=&quot;meta-data__item&quot;&gt;Adviseur online communicatie en analyse&lt;/span&gt;
 
-    &lt;span class=&quot;tipkaart__categorie&quot;&gt;
-      Commitment
-    &lt;/span&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
+        &lt;hr&gt;
+        &lt;p&gt;Sinds 2006 werkzaam voor ICTU. In diverse projecten gewerkt op gebied van de digitale overheid. Ik onderzoek
+            en adviseer in het gebruiksvriendelijker en toegankelijker maken van websites, het verbeteren van de
+            kwaliteit van de content en de inzet van social media.&lt;/p&gt;
 
-&lt;div class=&quot;card card--tipkaart tipkaart gebruiksgemak&quot;&gt;
+        &lt;div class=&quot;author__contact-info&quot;&gt;
+            &lt;a class=&quot;link link--contact link--phone&quot; href=&quot;tel:0612345678&quot;&gt;06 1234567&lt;/a&gt;
+            &lt;a class=&quot;link link--contact link--email&quot; href=&quot;mailto:info@gebruikercentraal.nl&quot;&gt;info@gebruikercentraal.nl&lt;/a&gt;
 
-  &lt;a href=&quot;#&quot; class=&quot;tipkaart__link&quot;&gt;
-    &lt;span class=&quot;tipnummer&quot;&gt;Tip 98&lt;/span&gt;
-    &lt;h2 class=&quot;card__title&quot;&gt;Maak het makkelijk voor iedereen&lt;/h2&gt;
-
-    &lt;span class=&quot;tipkaart__categorie&quot;&gt;
-      Gebruiksgemak
-    &lt;/span&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;card card--tipkaart tipkaart informatieveiligheid&quot;&gt;
-
-  &lt;a href=&quot;#&quot; class=&quot;tipkaart__link&quot;&gt;
-    &lt;span class=&quot;tipnummer&quot;&gt;Tip 109&lt;/span&gt;
-    &lt;h2 class=&quot;card__title&quot;&gt;Richt je op werk én prive &lt;/h2&gt;
-
-    &lt;span class=&quot;tipkaart__categorie&quot;&gt;
-      Informatieveiligheid
-    &lt;/span&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-
-
-&lt;div class=&quot;card card--tipkaart tipkaart kanaalsturing&quot;&gt;
-  &lt;a href=&quot;#&quot; class=&quot;tipkaart__link&quot;&gt;
-    &lt;span class=&quot;tipnummer&quot;&gt;Tip 104&lt;/span&gt;
-    &lt;h2 class=&quot;card__title&quot;&gt;Gebruik het juiste kanaal op het juiste moment&lt;/h2&gt;
-
-    &lt;span class=&quot;tipkaart__categorie&quot;&gt;
-      Kanaalsturing
-    &lt;/span&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-
-
-&lt;div class=&quot;card card--tipkaart tipkaart procesaanpak&quot;&gt;
-  &lt;a href=&quot;#&quot; class=&quot;tipkaart__link&quot;&gt;
-    &lt;span class=&quot;tipnummer&quot;&gt;Tip 105&lt;/span&gt;
-    &lt;h2 class=&quot;card__title&quot;&gt;Voel zelf eens wat de klant voelt&lt;/h2&gt;
-
-    &lt;span class=&quot;tipkaart__categorie&quot;&gt;
-      Procesaanpak
-    &lt;/span&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-
-
-&lt;div class=&quot;card card--tipkaart tipkaart samenwerking&quot;&gt;
-  &lt;a href=&quot;#&quot; class=&quot;tipkaart__link&quot;&gt;
-    &lt;span class=&quot;tipnummer&quot;&gt;Tip 106&lt;/span&gt;
-    &lt;h2 class=&quot;card__title&quot;&gt;Maak &#039;bondjes&#039;&lt;/h2&gt;
-
-    &lt;span class=&quot;tipkaart__categorie&quot;&gt;
-      Samenwerking
-    &lt;/span&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-
-
-&lt;div class=&quot;card card--tipkaart tipkaart inclusie&quot;&gt;
-  &lt;a href=&quot;#&quot; class=&quot;tipkaart__link&quot;&gt;
-    &lt;span class=&quot;tipnummer&quot;&gt;Tip 113&lt;/span&gt;
-    &lt;h2 class=&quot;card__title&quot;&gt;Wees je bewust van diversiteit binnen een doelgroep&lt;/h2&gt;
-
-    &lt;span class=&quot;tipkaart__categorie&quot;&gt;
-      Inclusie
-    &lt;/span&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-
-</code></pre>
+            &lt;ul class=&quot;social-media&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;http://www.linkedin.com&quot; class=&quot;link--social linkedin&quot; title=&quot;LinkedIn-profiel van Gebruiker Centraal&quot;&gt;
+                        LinkedIn-profiel van Gebruiker Centraal&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;http://www.twitter.com&quot; class=&quot;link--social twitter&quot; title=&quot;Twitter van Gebruiker Centraal&quot;&gt;
+                        Twitter van Gebruiker Centraal&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;http://www.facebook.com&quot; class=&quot;link--social facebook&quot; title=&quot;Facebook van Gebruiker Centraal&quot;&gt;
+                        Facebook van Gebruiker Centraal&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
 
                 </details>
               
             
                           <small class="text-muted">
-                Source: <code>styleguide/elements/components/cards-tip.scss</code>, line 1
+                Source: <code>styleguide/elements/components/author.scss</code>, line 1
               </small>
                       </div>
           

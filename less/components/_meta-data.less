@@ -1,9 +1,17 @@
-
+.gc-meta-data() {
+  color: @gc_greyblue;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+}
 
 .meta-data {
   color: @gc_greyblue;
   font-size: 1.4rem;
   line-height: 2.4rem;
+
+  + p {
+    margin-top: 2rem;
+  }
 }
 
 .meta-data > div,
@@ -32,7 +40,7 @@
   &.meta-data--with-icon {
     padding-left: 1.8rem;
     background-size: auto 13px;
-    background-position: left center;
+    background-position: left 5px;
     background-repeat: no-repeat;
     margin-right: 2rem;
 
@@ -56,5 +64,21 @@
       background-image: url('../images/icon-price.png');
       .icon_pin_fill('../images/icon-price.svg', @gc_a11y_green);
     }
+
+    &.speaker {
+      background-image: url('../images/icon-microphone.png');
+      .icon_pin_fill('../images/icon-microphone.svg', @gc_a11y_green);
+    }
+    &.level {
+      background-image: url('../images/icon-level.png');
+      .icon_pin_fill('../images/icon-level.svg', @gc_a11y_green);
+    }
+    &.session-type {
+      background-image: url('../images/icon-type.svg');
+    }
   }
 }
+
+.entry-meta {
+  .gc-meta-data;
+ }
