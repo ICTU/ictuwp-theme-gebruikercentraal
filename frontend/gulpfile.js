@@ -244,7 +244,14 @@ function watch() {
   console.log(' ** Sitename: ' + siteConfig.name + ', Plugintype: ' + siteConfig.type + ' ** ');
 
 	browserSync.init({
-		proxy: siteConfig.proxy
+		proxy: siteConfig.proxy,
+
+		ghostMode: {
+		    clicks: true,
+		    forms: true,
+		    scroll: false
+		}
+		
 	});
 
   //Base Styles

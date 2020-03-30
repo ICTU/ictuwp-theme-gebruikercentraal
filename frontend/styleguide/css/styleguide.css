@@ -244,6 +244,8 @@
     border-radius: 50%;
     z-index: -1;
     top: 0;
+    left: 50%;
+    margin-left: -4rem;
     -webkit-transition: background-color 0.2s;
     transition: background-color 0.2s;
   }
@@ -268,6 +270,7 @@
     width: 9.6rem;
     height: 9.6rem;
     background: #f99d1c;
+    margin-left: -4.8rem;
   }
 }
 .icon--stepchart {

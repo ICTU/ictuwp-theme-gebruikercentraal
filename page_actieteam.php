@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.2.2
-// @desc.   Paginatemplates gecheckt en functionaliteit voor relevante links toegevoegd.
+// @version 4.3.6
+// @desc.   Verbeteringen search en niet meer dubbel tonen van leden actieteam.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 //* Template Name: GC-pagina - Actieteampagina
@@ -25,6 +25,7 @@ add_action( 'genesis_loop', 'ictu_gctheme_frontend_general_get_related_content',
 //========================================================================================================
 
 function gc_wbvb_show_actieteamleden() {
+
 	
 	if( have_rows('actieteamleden', 'option') ):
 	
@@ -40,7 +41,7 @@ function gc_wbvb_show_actieteamleden() {
 		endwhile;
 		
 		echo '</div>';
-	
+
 	else :
 	
 		// no rows found
@@ -48,27 +49,6 @@ function gc_wbvb_show_actieteamleden() {
 	
 	endif;
 
-	if( have_rows('actieteamleden', 'option') ):
-	
-		echo '<div class="actieteam">';
-		
-		// loop through the rows of data
-		while ( have_rows('actieteamleden', 'option') ) : the_row();
-			
-			$username = get_sub_field('actielid');
-			$acf_userid = $username['ID'];   // grabs the user ID        
-			echo  gc_wbvb_authorbox_compose_box( $acf_userid );
-		
-		endwhile;
-		
-		echo '</div>';
-	
-	else :
-	
-		// no rows found
-		echo 'Geen actieteam bekend';
-		
-	endif;
 
 }
 
