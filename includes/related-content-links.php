@@ -187,6 +187,7 @@ if ( !function_exists( 'ictu_gctheme_frontend_general_get_related_content' ) ) :
 					$section_link   = get_sub_field( 'home_template_teaser_link' );
 					$title_id       = sanitize_title( $section_title );
 					$block_id       = sanitize_title( 'related_' . $theid );
+					$image          = false;
 
                     if ( $args['getmenu'] ) {
                         $menuarray[$title_id] = $section_title;
@@ -200,9 +201,10 @@ if ( !function_exists( 'ictu_gctheme_frontend_general_get_related_content' ) ) :
 						if ( $image[0] ) {
 							$imageplaceholder = '<div class="card__image"></div>';
 							$imageplaceholder .= '<!-- ' . sanitize_title( $image[0] ) . '-->';
+							$image = true;
 						}
 						
-						$return .= '<div class="card card--featured-image" id="' . $block_id . '">';
+						$return .= '<div class="card'.($image ? ' card--featured-image' : '').'" id="' . $block_id . '">';
 						$return .= $imageplaceholder;
 						$return .= '<div class="card__content">';
 						$return .= '<h3 id="' . $title_id . '" class="card__title"><a class="arrow-link" href="' . get_permalink( $theid ) . '">';

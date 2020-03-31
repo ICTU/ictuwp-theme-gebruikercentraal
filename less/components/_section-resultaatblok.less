@@ -17,6 +17,11 @@
 .section--resultaten {
 	display: flex;
 	flex-flow: wrap;
+	margin-top: 3rem;
+
+	@media @desktop {
+		margin-top: 5rem;
+	}
 
 	@media only screen and ( min-width: ( @break_fullwidth )) {
 		padding-left: 5rem;
@@ -25,7 +30,11 @@
 
 	.section--resultaten_block {
 		padding: 0;
-		flex: 1 0 50%;
+		width: 100%;
+
+		@media @tablet {
+			flex: 1 0 50%;
+		}
 
 		display: flex;
 		flex-direction: column;
@@ -37,6 +46,10 @@
 		.resultaten_block_text {
 			padding: 2rem;
 			flex-grow: 1;
+
+			@media @desktop {
+				padding: 2rem 3rem;
+			}
 		}
 
 		& + .section--resultaten_block {
@@ -67,6 +80,12 @@
 				flex-basis: 100%;
 				flex-direction: row;
 				margin-bottom: ( @section_border_width * -1 );
+
+				.resultaten_block_text {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+				}
 								
 				.resultaten_block_text,
 				.resultaten_block_image {
