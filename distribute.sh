@@ -22,7 +22,12 @@ rm '/Users/paul/shared-paul-files/Webs/temp/distribute.sh'
 rm '/Users/paul/shared-paul-files/Webs/temp/readme.txt'
 rm '/Users/paul/shared-paul-files/Webs/temp/.config.codekit3'
 rm '/Users/paul/shared-paul-files/Webs/temp/.gitignore'
+rm '/Users/paul/shared-paul-files/Webs/temp/.idea'
 rm '/Users/paul/shared-paul-files/Webs/temp/gebruikercentraal-wp-theme.code-workspace'
+rm '/Users/paul/shared-paul-files/Webs/temp/yarn.lock'
+rm '/Users/paul/shared-paul-files/Webs/temp/gulpfile.js'
+rm '/Users/paul/shared-paul-files/Webs/temp/package.json'
+
 
 
 

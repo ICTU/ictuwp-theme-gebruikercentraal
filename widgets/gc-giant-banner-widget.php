@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.1.6
-// @desc.   Separate CSS files restored. Login form slightly retouched.
+// @version 4.3.4
+// @desc.   Betere checks op get_field, ofwel: is ACF-plugin actief?
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -161,37 +161,43 @@ function append_header_css_for_gc_giant_banner_widget() {
 //	$header_css = "";
 	$header_css = "/* JOEHOE */ \n\n";
     $header_css				= '/* append_header_css_for_gc_giant_banner_widget */ ';
+
+	if ( ! function_exists( 'get_field' ) ) {
+		return;
+	}
+	else {
 	
-	if ( is_array( $wp_registered_widgets )  ) {
-
-		foreach ( $wp_registered_widgets as $breakpoint ) {
-			
-			if ( WBVB_GC_WIDGET_GIANTBANNER == $breakpoint['name'] ) {
-			
-				$widget_id 			= $breakpoint['id'];	
-				$image 				= get_field( 'giantbanner_bg_image', 'widget_' . $widget_id ); 
-				$image_alignment	= get_field( 'giantbanner_bg_image_alignment', 'widget_' . $widget_id );
+		if ( is_array( $wp_registered_widgets )  ) {
+	
+			foreach ( $wp_registered_widgets as $breakpoint ) {
 				
-				if( !empty( $image ) ) {
-
-					if ( 'left' === $image_alignment ||  'right' === $image_alignment ) {
-						$header_css .= "\n #" . $widget_id . " .banner-widget_image { \n";
-						$header_css .= " background-image: url('" . $image['url'] . "');\n";
-						$header_css .= "} \n";
+				if ( WBVB_GC_WIDGET_GIANTBANNER == $breakpoint['name'] ) {
+				
+					$widget_id 			= $breakpoint['id'];	
+					$image 				= get_field( 'giantbanner_bg_image', 'widget_' . $widget_id ); 
+					$image_alignment	= get_field( 'giantbanner_bg_image_alignment', 'widget_' . $widget_id );
+					
+					if( !empty( $image ) ) {
+	
+						if ( 'left' === $image_alignment ||  'right' === $image_alignment ) {
+							$header_css .= "\n #" . $widget_id . " .banner-widget_image { \n";
+							$header_css .= " background-image: url('" . $image['url'] . "');\n";
+							$header_css .= "} \n";
+						}
+						else {
+							$header_css .= "\n #" . $widget_id . " { \n";
+							$header_css .= " background-image: url('" . $image['url'] . "');\n";
+							$header_css .= "} \n";
+						}
+						
+						
+	//					$header_css .= '/* URL: ' . sanitize_title( $image['url'] ) . "  \n";
+						$header_css .= ' $widget_id: ' . $widget_id . "  \n";
+						$header_css .= ' $image_alignment: ' . $image_alignment . "  \n";
+						
+						$header_css .= "  breakpoint['id']: " . $breakpoint['id'] . " */\n";
+						
 					}
-					else {
-						$header_css .= "\n #" . $widget_id . " { \n";
-						$header_css .= " background-image: url('" . $image['url'] . "');\n";
-						$header_css .= "} \n";
-					}
-					
-					
-//					$header_css .= '/* URL: ' . sanitize_title( $image['url'] ) . "  \n";
-					$header_css .= ' $widget_id: ' . $widget_id . "  \n";
-					$header_css .= ' $image_alignment: ' . $image_alignment . "  \n";
-					
-					$header_css .= "  breakpoint['id']: " . $breakpoint['id'] . " */\n";
-					
 				}
 			}
 		}
