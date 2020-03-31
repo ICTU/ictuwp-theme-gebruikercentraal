@@ -32,75 +32,76 @@
   @media @tablet {
     margin-top: 3rem;
   }
-}
 
-.steplist__item {
-  position: relative;
-  padding-left: 5.5rem;
-  list-style: none;
-  padding-bottom: 3rem;
+  li {
+    position: relative;
+    padding-left: 5.5rem;
+    list-style: none;
+    padding-bottom: 3rem;
 
-  h3, h2 {
-    .font-size(22);
-    line-height: 3rem;
-    margin: 0;
-    padding: 0;
-  }
+    h3, h2 {
+      .font-size(22);
+      line-height: 3rem;
+      margin: 0;
+      padding: 0;
+    }
 
-  p {
-    margin: 1rem 0 0;
-  }
-
-  &:before {
-    .font-size(22);
-    counter-increment: steplist;
-    content: counter(steplist);
-    background: @steplist_circle_bg;
-    color: @steplist_color;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 4.5rem;
-    height: 4.5rem;
-    line-height: 4.5rem;
-    border-radius: 50%;
-    text-align: center;
-    font-family: @font_primary_bold;
-    z-index: +1;
-    border: 1rem solid @white;
-    margin-left: -2rem;
-    margin-top: -1.8rem;
-
-  }
-
-  &:after {
-    content: " ";
-    position: absolute;
-    left: 1rem;
-    width: .6rem;
-    top: 2rem;
-    bottom: 0;
-    background: @gc_blue_xlight;
-  }
-
-  &:last-child:after {
-    display: none;
-  }
-
-  @media @tablet {
-    padding-left: 7rem;
-    padding-bottom: 5rem;
+    p {
+      margin: 1rem 0 0;
+    }
 
     &:before {
-      .font-size(28);
-      width: 6rem;
-      height: 6rem;
-      line-height: 6rem;
-      margin-left: -2.6rem;
-      margin-top: -2.6rem;
+      .font-size(22);
+      counter-increment: steplist;
+      content: counter(steplist);
+      background: @steplist_circle_bg;
+      color: @steplist_color;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 4.5rem;
+      height: 4.5rem;
+      line-height: 4.5rem;
+      border-radius: 50%;
+      text-align: center;
+      font-family: @font_primary_bold;
+      z-index: +1;
+      border: 1rem solid @white;
+      margin-left: -2rem;
+      margin-top: -1.8rem;
+
     }
+
     &:after {
-      width: 1rem;
+      content: " ";
+      position: absolute;
+      left: 1rem;
+      width: .6rem;
+      top: 2rem;
+      bottom: 0;
+      background: @gc_blue_xlight;
+    }
+
+    &:last-child:after {
+      display: none;
+    }
+
+    @media @tablet {
+      padding-left: 7rem;
+      padding-bottom: 5rem;
+
+      &:before {
+        .font-size(28);
+        width: 6rem;
+        height: 6rem;
+        line-height: 6rem;
+        margin-left: -2.6rem;
+        margin-top: -2.6rem;
+      }
+
+      &:after {
+        width: 1rem;
+      }
     }
   }
 }
