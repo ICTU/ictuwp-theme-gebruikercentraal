@@ -4,6 +4,19 @@
   line-height: 2.4rem;
 }
 
+.gc-meta-bolletje(){
+  &:before {
+    content: " ";
+    speak: none;
+    background: @border_color;
+    width: .4rem;
+    height: .4rem;
+    margin: 1.1rem 1rem 0 .6rem;
+    display: inline-block;
+    float: left;
+  }
+}
+
 .meta-data {
   color: @gc_greyblue;
   font-size: 1.4rem;
@@ -11,6 +24,21 @@
 
   + p {
     margin-top: 2rem;
+  }
+
+  dl,
+  dd {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+  }
+
+  dd  {
+    .gc-meta-bolletje;
+  }
+
+  dt:first-child + dd:before {
+    display: none;
   }
 }
 

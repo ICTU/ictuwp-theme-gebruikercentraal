@@ -1682,7 +1682,7 @@ function gc_wbvb_add_css() {
 */
 
 function admin_append_editor_styles() {
-	add_editor_style( WBVB_THEMEFOLDER . '/editor-styles.css?v=' . CHILD_THEME_VERSION );
+	add_editor_style( WBVB_THEMEFOLDER . '/css/editor-styles.css?v=' . CHILD_THEME_VERSION );
 }
 
 add_action( 'init', 'admin_append_editor_styles' );
@@ -2434,7 +2434,7 @@ function gc_wbvb_comment_item( $comment, $args, $depth ) {
 	}
 
 	?>
-    <<?php echo $tag ?><?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() ?>"<?php echo $status ?>>
+    <<?php echo $tag ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() ?>"<?php echo $status ?>>
 
 	<?php if ( 'div' != $args['style'] ) : ?>
         <div id="div-comment-<?php comment_ID() ?>" class="comment-body">
