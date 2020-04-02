@@ -252,7 +252,11 @@ add_image_size( BLOG_SINGLE_TABLET, 250, 9999, false );
 add_image_size( BLOG_SINGLE_DESKTOP, 380, 9999, false );
 add_image_size( IMG_SIZE_HUGE, IMG_SIZE_HUGE_MIN_WIDTH, 9999, false );
 
-add_image_size( 'thumb-card', 9999, 600, false );
+//add_image_size( 'thumb-cardv1', 1600, 900, false );	// max 1600w, max 900h, niet croppen
+//add_image_size( 'thumb-cardv2', 1600, 900, true );	// max 1600w, max 900h, wel croppen
+add_image_size( 'thumb-cardv3', 99999, 600, false );	// max  600px hoog, niet croppen
+//add_image_size( 'thumb-cardv4', 99999, 600, true );	// max  600px hoog, wel croppen
+//add_image_size( 'thumb-cardv5', 600, 600, true );		// max  600px hoog en breed, wel croppen
 
 //========================================================================================================
 
