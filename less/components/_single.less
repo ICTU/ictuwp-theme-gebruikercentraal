@@ -128,6 +128,7 @@ h1 + .meta-data {
   .pagination-previous {
     padding-right: @gutter / 2;
   }
+
   .pagination-next {
     padding-left: @gutter / 2;
   }
@@ -153,34 +154,47 @@ h1 + .meta-data {
   }
 }
 
+
+/* Download box - only used on singles */
+
 .download-box {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
   border-top: .1rem solid @border_color;
   border-bottom: .1rem solid @border_color;
-  padding: 2rem 0 1.5rem;
+  padding: 1.5rem 0;
 
-  header {
-    display: flex;
+
+  .meta-data {
+    width: 100%;
+    margin: .8rem 0 0 0;
+  }
+
+  h3,
+  h2 {
+    .font-size(18);
+    line-height: 2.4rem;
+    padding: .5rem 2rem 0 0;
     margin: 0;
+    flex: 1;
+  }
 
-    a {
-      margin-left: auto;
+  .btn {
+    margin-left: auto;
+  }
+
+  @media @tablet_only {
+    .btn {
+      color: transparent;
+      width: 3.6rem;
+      height: 3.6rem;
+      padding: 0;
+      background-position: center center;
     }
 
-    h4 {
-      padding-right: 2rem;
+    h3 {
+      width: calc(100% - 4.5rem);
     }
-  }
-
-  h2, h3, h4 {
-    margin: 0;
-    padding: 0;
-  }
-
-  dl {
-    margin: 0;
-  }
-
-  + p {
-    margin-top: @gutter;
   }
 }
