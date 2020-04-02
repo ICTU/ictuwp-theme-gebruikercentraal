@@ -31,6 +31,7 @@
 .section__title {
   font-family: @font_secondary;
   .font-size(38);
+  padding: 2rem 0 0;
 
   @media @desktop {
     .font-size(48);
@@ -40,4 +41,10 @@
 .l-section-links {
   text-align: right;
   margin-top: @gutter;
+}
+
+.section--related-content + .section--related-links {
+  .section__title {
+    border: none;
+  }
 }
