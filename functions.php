@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.3.5
-// @desc.   Verbeteringen search en niet meer dubbel tonen van leden actieteam.
+// @version 4.3.6
+// @desc.   Nieuwe beeldformaten toegevoegd. single / detailpagina's met kader. Steplist toegevoegd.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '4.3.5' );
-define( 'CHILD_THEME_DESCRIPTION', "4.3.5 - Verbeteringen search en niet meer dubbel tonen van leden actieteam." );
+define( 'CHILD_THEME_VERSION', '4.3.6' );
+define( 'CHILD_THEME_DESCRIPTION', "4.3.6 - Nieuwe beeldformaten toegevoegd. single / detailpagina's met kader. Steplist toegevoegd." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -252,7 +252,11 @@ add_image_size( BLOG_SINGLE_TABLET, 250, 9999, false );
 add_image_size( BLOG_SINGLE_DESKTOP, 380, 9999, false );
 add_image_size( IMG_SIZE_HUGE, IMG_SIZE_HUGE_MIN_WIDTH, 9999, false );
 
-add_image_size( 'thumb-card', 9999, 600, false );
+//add_image_size( 'thumb-cardv1', 1600, 900, false );	// max 1600w, max 900h, niet croppen
+//add_image_size( 'thumb-cardv2', 1600, 900, true );	// max 1600w, max 900h, wel croppen
+add_image_size( 'thumb-cardv3', 99999, 600, false );	// max  600px hoog, niet croppen
+//add_image_size( 'thumb-cardv4', 99999, 600, true );	// max  600px hoog, wel croppen
+//add_image_size( 'thumb-cardv5', 600, 600, true );		// max  600px hoog en breed, wel croppen
 
 //========================================================================================================
 
@@ -1619,7 +1623,7 @@ function gc_wbvb_add_css() {
 
 	wp_enqueue_style(
 		ID_SKIPLINKS,
-		get_stylesheet_directory_uri() . '/css/gc-style.css'
+		get_stylesheet_directory_uri() . '/css/gc-style.css?v=' . CHILD_THEME_VERSION
 	);
 
 	$custom_css = '

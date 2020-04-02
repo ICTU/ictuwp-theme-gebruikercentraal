@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-4.3.5 - Verbeteringen search en niet meer dubbel tonen van leden actieteam.
+4.3.6 - Nieuwe beeldformaten toegevoegd. single / detailpagina's met kader. Steplist toegevoegd.
 
 ## Version history
+* 4.3.6 - Nieuwe beeldformaten toegevoegd. single / detailpagina's met kader. Steplist toegevoegd.
 * 4.3.5 - Verbeteringen search en niet meer dubbel tonen van leden actieteam.
 * 4.3.4 - Event-single: niet meer tonen van samenvatting.
 * 4.3.2 - Spoedreparatie blogarchiefpagina.
