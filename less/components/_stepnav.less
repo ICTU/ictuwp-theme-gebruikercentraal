@@ -281,23 +281,28 @@
 			
 			ul {
 				display: flex;
-				flex-direction: row;
+				flex-direction: column;
 				padding: 0;
 				margin: 0;
 				
 				li {
 					flex: 0 0 auto;
 					list-style: none;
-					padding-left: 0;
+					padding: 1rem 1rem 1rem 0;
+					
+					&:before {
+						// voorkomen dat .gc-fancy-list een wit vierkantje toevoegt
+						display: none;
+					}
 				
 					a {
 						color: @nav_color_inactive;
 						font-family: @font_primary_bold;
 						.fontsize( 18 );
-						padding: 2.4rem 2rem;
+						padding: 1rem 1rem 1rem 2rem;
 						text-decoration: none;
+						display: inline-block;
 						position: relative;
-						display: block;
 						
 						&:after {
 							content: " ";
@@ -305,30 +310,42 @@
 							position: absolute;
 							background: @marklink;
 							left: 2rem;
-							right: 2rem;
+							right: 1rem;
 							height: .3rem;
-							bottom: 1.8rem;
+							bottom: .1rem;
 							transform: scaleX(0);
 							transition: transform .2s;
 						}
 					}
 					
+					&:hover,
 					a:hover,
 					a:focus,
 					a:active,
-					&[aria-current="page"] a {
-						background: @bg_intro;
+					&[aria-current="page"] {
 						color: @color;
 				
 						&:after {
 							transform: scaleX(1);
 						}
 					}
+					
+					&[aria-current="page"],
+					&:hover {
+						background: @bg_intro;
+
+						a {
+							color: @color;
+							&:after {
+								transform: scaleX(1);
+							}
+						}
+					}
 				}    
 			}    
 		}
 		
-		@media @tablet {
+		@media @desktop {
 			padding: 3rem 5rem;
 	
 			nav {
@@ -337,14 +354,25 @@
 				margin-right: -5rem;	    
 				margin-bottom: 3rem;
 				
-				ul li {
-					a {
-						.fontsize( 20 );
-						padding-left: 5rem;	    
-						padding-right: 5rem;	    
-						&:after {
-							left: 5rem;
-							right: 5rem;
+				ul {
+					flex-direction: row;
+					li {
+						a {
+							display: block;
+							.fontsize( 20 );
+							padding: 2.5rem 5rem;	    
+							
+							&:after {
+								left: 5rem;
+								right: 5rem;
+							}
+						}
+
+						a:hover,
+						a:focus,
+						a:active {
+							background: @bg_intro;
+							color: @color;
 						}
 					}
 				}
@@ -395,3 +423,5 @@
   }
 
 }
+
+
