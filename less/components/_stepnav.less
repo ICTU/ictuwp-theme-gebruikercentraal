@@ -229,7 +229,13 @@
 
 // stepnav page
 
-.gc-page-step(@bg_page: @gc_a11y_green, @bg_intro: @bg_intro, @color: @white) {
+.gc-page-step(
+	@bg_page: @gc_a11y_green,
+	@bg_intro: @bg_intro,
+	@color: @white,
+	@bg_nav: darken( @bg_intro, 10% ),
+	@nav_color_inactive: @color,
+	@marklink: @color_primary ) {
 
   .content-sidebar-wrap {
     padding-top: 0;
@@ -259,17 +265,92 @@
     margin: 0;
   }
 
-  .inleiding {
-    .gc-box-shadow;
-    .gc-content-container;
-    background: @bg_intro;
-    color: @color;
-    padding: 2rem;
-
-    @media @tablet {
-      padding: 3rem 5rem;
-    }
-  }
+	.inleiding {
+		.gc-box-shadow();
+		.gc-content-container();
+		background: @bg_intro;
+		color: @color;
+		padding: 2rem;
+		
+		nav {
+			margin-top: -2rem;	    
+			margin-left: -2rem;	    
+			margin-right: -2rem;	
+			margin-bottom: 2rem;
+			background: @bg_nav;
+			
+			ul {
+				display: flex;
+				flex-direction: row;
+				padding: 0;
+				margin: 0;
+				
+				li {
+					flex: 0 0 auto;
+					list-style: none;
+					padding-left: 0;
+				
+					a {
+						color: @nav_color_inactive;
+						font-family: @font_primary_bold;
+						.fontsize( 18 );
+						padding: 2.4rem 2rem;
+						text-decoration: none;
+						position: relative;
+						display: block;
+						
+						&:after {
+							content: " ";
+							display: block;
+							position: absolute;
+							background: @marklink;
+							left: 2rem;
+							right: 2rem;
+							height: .3rem;
+							bottom: 1.8rem;
+							transform: scaleX(0);
+							transition: transform .2s;
+						}
+					}
+					
+					a:hover,
+					a:focus,
+					a:active,
+					&[aria-current="page"] a {
+						background: @bg_intro;
+						color: @color;
+				
+						&:after {
+							transform: scaleX(1);
+						}
+					}
+				}    
+			}    
+		}
+		
+		@media @tablet {
+			padding: 3rem 5rem;
+	
+			nav {
+				margin-top: -3rem;	    
+				margin-left: -5rem;	    
+				margin-right: -5rem;	    
+				margin-bottom: 3rem;
+				
+				ul li {
+					a {
+						.fontsize( 20 );
+						padding-left: 5rem;	    
+						padding-right: 5rem;	    
+						&:after {
+							left: 5rem;
+							right: 5rem;
+						}
+					}
+				}
+			}
+		}
+	}
 
   .content-sidebar-wrap {
     padding: 0;
