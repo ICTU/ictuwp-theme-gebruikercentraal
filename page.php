@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.2.2
-// @desc.   Paginatemplates gecheckt en functionaliteit voor relevante links toegevoegd.
+// @version 4.3.7
+// @desc.   Spotlight-component toegevoegd; tekstblok-component voor home toegevoegd.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 //========================================================================================================
@@ -32,7 +32,7 @@ add_action('wp_enqueue_scripts', 'ictu_gctheme_frontend_general_get_related_cont
 
 add_action( 'genesis_loop', 'ictu_gctheme_frontend_general_get_spotlight', 12 );
 
-add_action( 'genesis_loop', 'ictu_gctheme_frontend_general_get_related_content', 14 );
+add_action( 'genesis_loop', 'ictu_gctheme_frontend_general_get_related_content', 16 );
 
 showdebug(__FILE__, '/');
 
