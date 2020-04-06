@@ -32,7 +32,11 @@ add_action('wp_enqueue_scripts', 'ictu_gctheme_frontend_general_get_related_cont
 
 add_action( 'genesis_loop', 'ictu_gctheme_frontend_general_get_spotlight', 12 );
 
+// test test test. Deze functionaliteit hoort alleen op homepage
+//add_action( 'genesis_loop', 'ictu_gctheme_frontend_general_get_textblocks', 14 );
+
 add_action( 'genesis_loop', 'ictu_gctheme_frontend_general_get_related_content', 16 );
+
 
 showdebug(__FILE__, '/');
 
