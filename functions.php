@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.3.5
-// @desc.   Verbeteringen search en niet meer dubbel tonen van leden actieteam.
+// @version 4.3.6
+// @desc.   Nieuwe beeldformaten toegevoegd. single / detailpagina's met kader. Steplist toegevoegd.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '4.3.5' );
-define( 'CHILD_THEME_DESCRIPTION', "4.3.5 - Verbeteringen search en niet meer dubbel tonen van leden actieteam." );
+define( 'CHILD_THEME_VERSION', '4.3.6' );
+define( 'CHILD_THEME_DESCRIPTION', "4.3.6 - Nieuwe beeldformaten toegevoegd. single / detailpagina's met kader. Steplist toegevoegd." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -1627,7 +1627,7 @@ function gc_wbvb_add_css() {
 
 	wp_enqueue_style(
 		ID_SKIPLINKS,
-		get_stylesheet_directory_uri() . '/css/gc-style.css'
+		get_stylesheet_directory_uri() . '/css/gc-style.css?v=' . CHILD_THEME_VERSION
 	);
 
 	$custom_css = '
