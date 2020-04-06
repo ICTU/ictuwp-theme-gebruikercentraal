@@ -18,11 +18,9 @@
 ///
 
 
-
-
 //========================================================================================================
 
-if ( !function_exists( 'ictu_gctheme_frontend_general_get_textblocks' ) ) :
+if ( ! function_exists( 'ictu_gctheme_frontend_general_get_textblocks' ) ) :
 
 
 	/**
@@ -34,98 +32,101 @@ if ( !function_exists( 'ictu_gctheme_frontend_general_get_textblocks' ) ) :
 	 *
 	 * This function either returns an array with links, or returns an HTML string, or echoes HTML string.
 	 *
-	 * @since 4.3.7
-	 *
 	 * @param array $args Argument for what to do: echo or return links or return HTML string.
+	 *
 	 * @return array $menuarray Array with links and link text (if $args['getmenu'] => TRUE).
 	 * @return string $return HTML string with related links (if $args['echo'] => FALSE).
+	 * @since 4.3.7
+	 *
 	 */
- 	
-    function ictu_gctheme_frontend_general_get_textblocks( $args = [] ) {
 
-        global $post;
+	function ictu_gctheme_frontend_general_get_textblocks( $args = [] ) {
 
-        // defaults
-		$menuarray  = array();
-		$return     = '';
-		$defaults   = array(
-	          'ID' => 0,
-	          'titletag' => 'h2',
-	          'getmenu' => FALSE,
-	          'echo' => TRUE,
-	        );
+		global $post;
 
-        // Parse incoming $args into an array and merge it with $defaults
-        $args		= wp_parse_args( $args, $defaults );
+		// defaults
+		$menuarray = array();
+		$return    = '';
+		$defaults  = array(
+			'ID'       => 0,
+			'titletag' => 'h2',
+			'getmenu'  => false,
+			'echo'     => true,
+		);
 
-
-        if ( function_exists( 'get_field' ) ) {
+		// Parse incoming $args into an array and merge it with $defaults
+		$args = wp_parse_args( $args, $defaults );
 
 
-	        $textblocks = get_field( 'textblocks', $post->ID );
+		if ( function_exists( 'get_field' ) ) {
 
-	        if( $textblocks ):
+			$textblocks = get_field( 'textblocks', $post->ID );
 
-	            // count the items
+			if ( $textblocks ):
+
+				// count the items
+				$countcount    = count( $textblocks );
 				$columncounter = 'grid--col-2';
-	            $countcount     = count( $textblocks );
 
-	            if ( $countcount < 2  ) {
-		            $columncounter = 'grid--col-1';
-	            }
-		        elseif ( $countcount > 2  ) {
-			        $columncounter = 'grid--col-3';
-	            }
+				if ( $countcount < 2 ) {
+					$columncounter = 'grid--col-1';
+				} elseif ( $countcount > 2 ) {
+					$columncounter = 'grid--col-3';
+				}
 
-		        $return = '<div class="grid ' . $columncounter . '">';
+				$return = '<section class="section section--overview">';
+				$return .= '<div class="l-section-content">';
+				$return .= '<div class="grid ' . $columncounter . '">';
 
-	            while ( have_rows( 'textblocks' ) ): the_row();
+				while ( have_rows( 'textblocks' ) ): the_row();
 
-		            $textblock_title    = get_sub_field( 'textblock_title' );
-		            $textblock_content  = get_sub_field( 'textblock_content' );
-		            $textblock_class    = get_sub_field( 'textblock_class' ) ? ' ' . get_sub_field( 'textblock_class' ) : '';
-		            $title_id 		    = sanitize_title( $textblock_title . '-title' );
+					$textblock_title   = get_sub_field( 'textblock_title' );
+					$textblock_content = get_sub_field( 'textblock_content' );
+					$textblock_class   = get_sub_field( 'textblock_class' ) ? 'text-block ' . get_sub_field( 'textblock_class' ) : 'text-block';
+					$title_id          = sanitize_title( $textblock_title . '-title' );
 
-		            $return .= '<section aria-labelledby="' . $title_id . '" class="text-block' . $textblock_class . '">';
+					$return .= '<section aria-labelledby="' . $title_id . '" class="' . $textblock_class . '">';
 
-		            $return .= '<' . $args['titletag'] . ' class="text-block__title">' . $textblock_title . '</' . $args['titletag'] . '>';
-		            $return .= $textblock_content;
+					$return .= '<' . $args['titletag'] . ' class="text-block__title">' . $textblock_title . '</' . $args['titletag'] . '>';
+					$return .= $textblock_content;
 
-		            if( have_rows('optional_links') ):
-			            while ( have_rows( 'optional_links' ) ): the_row();
+					if ( have_rows( 'optional_links' ) ):
+						while ( have_rows( 'optional_links' ) ): the_row();
 
-				            $link = get_sub_field('optional_link');
-				            if( $link ):
-					            $link_url       = $link['url'];
-					            $link_title     = $link['title'];
-					            $link_target    = $link['target'] ? ' target="' . $link['target'] . '"' : '';
-					            $link_class   = get_sub_field( 'optional_link_class' );
-					            $return .= '<a href="' . $link_url . '" class="btn btn--' . esc_attr( $link_class ) . '"' . esc_attr( $link_target ) . '">' . $link_title . '</a>';
-				            endif;
+							$link = get_sub_field( 'optional_link' );
+							if ( $link ):
+								$link_url    = $link['url'];
+								$link_title  = $link['title'];
+								$link_target = $link['target'] ? ' target="' . $link['target'] . '"' : '';
+								$link_class  = get_sub_field( 'optional_link_class' );
+								$return      .= '<a href="' . $link_url . '" class="btn btn--' . esc_attr( $link_class ) . '"' . esc_attr( $link_target ) . '">' . $link_title . '</a>';
+							endif;
 
-			            endwhile;
-		            endif; //if( get_sub_field('spotlight__links') ):
+						endwhile;
+					endif; //if( get_sub_field('spotlight__links') ):
 
-		            $return .= '</section>'; // .text-block
+					$return .= '</section>'; // .text-block
 
-	            endwhile;
+				endwhile;
 
+				$return .= '</div>'; // .grid
+				$return .= '</div>'; // .l-section-content
+				$return .= '</section>'; // .text-block
 
-	        endif;
+			endif;
 
-        } // if ( function_exists( 'get_field' ) )
-        else {
-            $return = 'Activeer ACF plugin';
-        }
+		} // if ( function_exists( 'get_field' ) )
+		else {
+			$return = 'Activeer ACF plugin';
+		}
 
 		if ( $args['echo'] ) {
-            echo $return;
-        }
-        else {
-            return $return;
-        }
+			echo $return;
+		} else {
+			return $return;
+		}
 
-    }
+	}
 
 endif;
 
@@ -138,191 +139,191 @@ endif;
  *
  */
 
-if( function_exists('acf_add_local_field_group') ):
+if ( function_exists( 'acf_add_local_field_group' ) ):
 
-	acf_add_local_field_group(array(
-		'key' => 'group_5e8b140493a09',
-		'title' => '03 - tekstblokken voor home',
-		'fields' => array(
+	acf_add_local_field_group( array(
+		'key'                   => 'group_5e8b140493a09',
+		'title'                 => '03 - tekstblokken voor home',
+		'fields'                => array(
 			array(
-				'key' => 'field_5e8b1404ab7f0',
-				'label' => 'Tekstblok',
-				'name' => 'textblocks',
-				'type' => 'repeater',
-				'instructions' => 'Hier kun je 1-3 teksblokken toevoegen.',
-				'required' => 0,
+				'key'               => 'field_5e8b1404ab7f0',
+				'label'             => 'Tekstblok',
+				'name'              => 'textblocks',
+				'type'              => 'repeater',
+				'instructions'      => 'Hier kun je 1-3 teksblokken toevoegen.',
+				'required'          => 0,
 				'conditional_logic' => 0,
-				'wrapper' => array(
+				'wrapper'           => array(
 					'width' => '',
 					'class' => '',
-					'id' => '',
+					'id'    => '',
 				),
-				'collapsed' => 'field_5e8af09948ad7',
-				'min' => 1,
-				'max' => 3,
-				'layout' => 'row',
-				'button_label' => 'Blok toevoegen',
-				'sub_fields' => array(
+				'collapsed'         => 'field_5e8af09948ad7',
+				'min'               => 1,
+				'max'               => 3,
+				'layout'            => 'row',
+				'button_label'      => 'Blok toevoegen',
+				'sub_fields'        => array(
 					array(
-						'key' => 'field_5e8b1404afb52',
-						'label' => 'Titel',
-						'name' => 'textblock_title',
-						'type' => 'text',
-						'instructions' => '',
-						'required' => 1,
+						'key'               => 'field_5e8b1404afb52',
+						'label'             => 'Titel',
+						'name'              => 'textblock_title',
+						'type'              => 'text',
+						'instructions'      => '',
+						'required'          => 1,
 						'conditional_logic' => 0,
-						'wrapper' => array(
+						'wrapper'           => array(
 							'width' => '',
 							'class' => '',
-							'id' => '',
+							'id'    => '',
 						),
-						'default_value' => '',
-						'placeholder' => '',
-						'prepend' => '',
-						'append' => '',
-						'maxlength' => '',
+						'default_value'     => '',
+						'placeholder'       => '',
+						'prepend'           => '',
+						'append'            => '',
+						'maxlength'         => '',
 					),
 					array(
-						'key' => 'field_5e8b1404afb60',
-						'label' => 'Korte tekst',
-						'name' => 'textblock_content',
-						'type' => 'wysiwyg',
-						'instructions' => '',
-						'required' => 1,
+						'key'               => 'field_5e8b1404afb60',
+						'label'             => 'Korte tekst',
+						'name'              => 'textblock_content',
+						'type'              => 'wysiwyg',
+						'instructions'      => '',
+						'required'          => 1,
 						'conditional_logic' => 0,
-						'wrapper' => array(
+						'wrapper'           => array(
 							'width' => '',
 							'class' => '',
-							'id' => '',
+							'id'    => '',
 						),
-						'default_value' => '',
-						'tabs' => 'all',
-						'toolbar' => 'basic',
-						'media_upload' => 0,
-						'delay' => 0,
+						'default_value'     => '',
+						'tabs'              => 'all',
+						'toolbar'           => 'basic',
+						'media_upload'      => 0,
+						'delay'             => 0,
 					),
 					array(
-						'key' => 'field_5e8b1404afb66',
-						'label' => 'Links',
-						'name' => 'optional_links',
-						'type' => 'repeater',
-						'instructions' => '',
-						'required' => 0,
+						'key'               => 'field_5e8b1404afb66',
+						'label'             => 'Links',
+						'name'              => 'optional_links',
+						'type'              => 'repeater',
+						'instructions'      => '',
+						'required'          => 0,
 						'conditional_logic' => 0,
-						'wrapper' => array(
+						'wrapper'           => array(
 							'width' => '',
 							'class' => '',
-							'id' => '',
+							'id'    => '',
 						),
-						'collapsed' => 'field_5e8af29a37144',
-						'min' => 0,
-						'max' => 3,
-						'layout' => 'row',
-						'button_label' => 'Link toevoegen',
-						'sub_fields' => array(
+						'collapsed'         => 'field_5e8af29a37144',
+						'min'               => 0,
+						'max'               => 3,
+						'layout'            => 'row',
+						'button_label'      => 'Link toevoegen',
+						'sub_fields'        => array(
 							array(
-								'key' => 'field_5e8b1404b98d1',
-								'label' => 'Link',
-								'name' => 'optional_link',
-								'type' => 'link',
-								'instructions' => '',
-								'required' => 0,
+								'key'               => 'field_5e8b1404b98d1',
+								'label'             => 'Link',
+								'name'              => 'optional_link',
+								'type'              => 'link',
+								'instructions'      => '',
+								'required'          => 0,
 								'conditional_logic' => 0,
-								'wrapper' => array(
+								'wrapper'           => array(
 									'width' => '',
 									'class' => '',
-									'id' => '',
+									'id'    => '',
 								),
-								'return_format' => 'array',
+								'return_format'     => 'array',
 							),
 							array(
-								'key' => 'field_5e8b1404b98e5',
-								'label' => 'CSS-class',
-								'name' => 'optional_link_class',
-								'type' => 'radio',
-								'instructions' => '',
-								'required' => 1,
+								'key'               => 'field_5e8b1404b98e5',
+								'label'             => 'CSS-class',
+								'name'              => 'optional_link_class',
+								'type'              => 'radio',
+								'instructions'      => '',
+								'required'          => 1,
 								'conditional_logic' => 0,
-								'wrapper' => array(
+								'wrapper'           => array(
 									'width' => '',
 									'class' => '',
-									'id' => '',
+									'id'    => '',
 								),
-								'choices' => array(
-									'primary' => 'primary',
+								'choices'           => array(
+									'primary'  => 'primary',
 									'readmore' => 'readmore',
 								),
-								'allow_null' => 0,
-								'other_choice' => 0,
-								'default_value' => 'primary',
-								'layout' => 'vertical',
-								'return_format' => 'value',
+								'allow_null'        => 0,
+								'other_choice'      => 0,
+								'default_value'     => 'primary',
+								'layout'            => 'vertical',
+								'return_format'     => 'value',
 								'save_other_choice' => 0,
 							),
 						),
 					),
 					array(
-						'key' => 'field_5e8b1a49ba053',
-						'label' => 'Styling',
-						'name' => 'textblock_class',
-						'type' => 'radio',
-						'instructions' => '',
-						'required' => 0,
+						'key'               => 'field_5e8b1a49ba053',
+						'label'             => 'Styling',
+						'name'              => 'textblock_class',
+						'type'              => 'radio',
+						'instructions'      => '',
+						'required'          => 0,
 						'conditional_logic' => 0,
-						'wrapper' => array(
+						'wrapper'           => array(
 							'width' => '',
 							'class' => '',
-							'id' => '',
+							'id'    => '',
 						),
-						'choices' => array(
-							'none' => 'Standaard',
-							'l-text-centered' => 'Gecentreerd',
-							'text-block--bg l-bg-white' => 'Wit',
-							'text-block--bg l-bg-primary' => 'Primary',
+						'choices'           => array(
+							'none'                          => 'Standaard',
+							'l-text-centered'               => 'Gecentreerd',
+							'text-block--bg l-bg-white'     => 'Wit',
+							'text-block--bg l-bg-primary'   => 'Primary',
 							'text-block--bg l-bg-secondary' => 'Secondary',
 						),
-						'allow_null' => 0,
-						'other_choice' => 0,
-						'default_value' => '',
-						'layout' => 'vertical',
-						'return_format' => 'value',
+						'allow_null'        => 0,
+						'other_choice'      => 0,
+						'default_value'     => '',
+						'layout'            => 'vertical',
+						'return_format'     => 'value',
 						'save_other_choice' => 0,
 					),
 				),
 			),
 		),
-		'location' => array(
+		'location'              => array(
 			array(
 				array(
-					'param' => 'page_template',
+					'param'    => 'page_template',
 					'operator' => '==',
-					'value' => 'page_home.php',
+					'value'    => 'page_home.php',
 				),
 			),
 			array(
 				array(
-					'param' => 'page_type',
+					'param'    => 'page_type',
 					'operator' => '==',
-					'value' => 'front_page',
+					'value'    => 'front_page',
 				),
 			),
 			array(
 				array(
-					'param' => 'post_type',
+					'param'    => 'page_template',
 					'operator' => '==',
-					'value' => 'page',
+					'value'    => 'home-inclusie.php',
 				),
 			),
 		),
-		'menu_order' => 0,
-		'position' => 'normal',
-		'style' => 'default',
-		'label_placement' => 'top',
+		'menu_order'            => 0,
+		'position'              => 'normal',
+		'style'                 => 'default',
+		'label_placement'       => 'top',
 		'instruction_placement' => 'label',
-		'hide_on_screen' => '',
-		'active' => true,
-		'description' => '',
-	));
+		'hide_on_screen'        => '',
+		'active'                => true,
+		'description'           => '',
+	) );
 
 endif;
 
