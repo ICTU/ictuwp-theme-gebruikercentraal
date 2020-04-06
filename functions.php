@@ -303,6 +303,8 @@ if ( file_exists( GC_FOLDER . '/includes/ignore-me.php' ) ) {
 	require_once( GC_FOLDER . '/includes/ignore-me.php' );
 }
 
+// * @since	  4.1.1
+require_once( GC_FOLDER . '/includes/spotlight.php' );
 
 //========================================================================================================
 
@@ -1222,12 +1224,12 @@ function gc_wbvb_add_pageheader_css() {
 	if ( is_singular( ICTU_GCCONF_CPT_SPEAKER ) ) {
 		return;
 	}
-
+/*
 	wp_enqueue_style(
 		ID_SINGLE_CSS,
 		WBVB_THEMEFOLDER . '/blogberichten.css?v=' . CHILD_THEME_VERSION
 	);
-
+*/
 	$BLOGBERICHTEN_CSS = '';
 
 
@@ -1285,7 +1287,7 @@ function gc_wbvb_add_pageheader_css() {
 	endif;
 	/** end loop **/
 
-	wp_add_inline_style( ID_SINGLE_CSS, $BLOGBERICHTEN_CSS );
+	wp_add_inline_style( ID_SKIPLINKS, $BLOGBERICHTEN_CSS );
 
 }
 
@@ -1298,12 +1300,12 @@ function gc_wbvb_add_blog_single_css() {
 	if ( is_singular( ICTU_GCCONF_CPT_SPEAKER ) ) {
 		return;
 	}
-
+/*
 	wp_enqueue_style(
 		ID_SINGLE_CSS,
 		WBVB_THEMEFOLDER . '/blogberichten.css?v=' . CHILD_THEME_VERSION
 	);
-
+*/
 	$BLOGBERICHTEN_CSS = '';
 
 
@@ -1440,7 +1442,7 @@ function gc_wbvb_add_blog_single_css() {
 	endif;
 	/** end loop **/
 
-	wp_add_inline_style( ID_SINGLE_CSS, $BLOGBERICHTEN_CSS );
+	wp_add_inline_style( ID_SKIPLINKS, $BLOGBERICHTEN_CSS );
 
 }
 
@@ -1458,12 +1460,12 @@ function gc_wbvb_add_berichten_widget_css() {
 
 
 	$sidebarposts = new WP_query( $args );
-
+/*
 	wp_enqueue_style(
 		ID_BLOG_WIDGET_CSS,
 		WBVB_THEMEFOLDER . '/css/blanco.css'
 	);
-
+*/
 	$custom_css = '';
 
 	$countertje = 0; // Run your normal loop
@@ -1493,7 +1495,7 @@ function gc_wbvb_add_berichten_widget_css() {
 
 	}
 
-	wp_add_inline_style( ID_BLOG_WIDGET_CSS, $custom_css );
+	wp_add_inline_style( ID_SKIPLINKS, $custom_css );
 
 }
 
@@ -1505,11 +1507,13 @@ function gc_wbvb_add_berichten_widget_css() {
 function gc_wbvb_add_blog_archive_css() {
 
 	global $imgbreakpoints;
-
+/*
 	wp_enqueue_style(
 		ID_BLOGBERICHTEN_CSS,
 		WBVB_THEMEFOLDER . '/blogberichten.css?v=' . CHILD_THEME_VERSION
 	);
+*/
+
 
 	$BLOGBERICHTEN_CSS = '';
 	$countertje        = 0;
@@ -1612,7 +1616,7 @@ function gc_wbvb_add_blog_archive_css() {
 	endif;
 	/** end loop **/
 
-	wp_add_inline_style( ID_BLOGBERICHTEN_CSS, $BLOGBERICHTEN_CSS );
+	wp_add_inline_style( ID_SKIPLINKS, $BLOGBERICHTEN_CSS );
 
 }
 
