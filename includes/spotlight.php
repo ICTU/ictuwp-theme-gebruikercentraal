@@ -1,20 +1,20 @@
 <?php
 
 ///
-// * Gebruiker Centraal - spotlight.php
-// * ----------------------------------------------------------------------------------
-// * Functies voor het tonen van 1 of 2 spotlight-blokken
-// *
-// * Deze functies worden gebruikt in het GC theme en in plugins.
-// * - ictuwp-plugin-beeldbank
-// * ----------------------------------------------------------------------------------
-// * @package gebruiker-centraal
-// * @author  Paul van Buuren
-// * @license GPL-2.0+
-// * @version 4.1.3
-// * @since   4.1.1
-// * @desc.   Copied styling for .cards and various subsets from inclusie to gc-theme.
-// * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// Gebruiker Centraal - spotlight.php
+// ----------------------------------------------------------------------------------
+// Functies voor het tonen van 1 of 2 spotlight-blokken
+//
+// Deze functies worden gebruikt in het GC theme en in plugins.
+// - ictuwp-plugin-beeldbank
+// ----------------------------------------------------------------------------------
+// @package gebruiker-centraal
+// @author  Paul van Buuren
+// @license GPL-2.0+
+// @version 4.3.7
+// @version 4.3.7
+// @desc.   Spotlight-component toegevoegd; tekstblok-component voor home toegevoegd.
+// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 ///
 
 
@@ -34,7 +34,7 @@ if ( !function_exists( 'ictu_gctheme_frontend_general_get_spotlight' ) ) :
 	 *
 	 * This function either returns an array with links, or returns an HTML string, or echoes HTML string.
 	 *
-	 * @since 4.3.5
+	 * @since 4.3.7
 	 *
 	 * @param array $args Argument for what to do: echo or return links or return HTML string.
 	 * @return array $menuarray Array with links and link text (if $args['getmenu'] => TRUE).
@@ -91,7 +91,7 @@ if ( !function_exists( 'ictu_gctheme_frontend_general_get_spotlight' ) ) :
 						$url    = $spotlight__image['url'];
 						$alt    = $spotlight__image['alt'];
 						$title  = $spotlight__image['title'];
-						$size   = 'thumbnail';
+						$size   = 'large';
 						$thumb  = $spotlight__image['sizes'][ $size ];
 //						$width  = $spotlight__image['sizes'][ $size . '-width' ];
 //						$height = $spotlight__image['sizes'][ $size . '-height' ];
@@ -114,7 +114,7 @@ if ( !function_exists( 'ictu_gctheme_frontend_general_get_spotlight' ) ) :
 		            if( have_rows('spotlight__links') ):
 			            while ( have_rows( 'spotlight__links' ) ): the_row();
 
-				            $link = get_field('link');
+				            $link = get_sub_field('spotlight__link');
 				            if( $link ):
 					            $link_url       = $link['url'];
 					            $link_title     = $link['title'];
@@ -169,10 +169,10 @@ if( function_exists('acf_add_local_field_group') ):
 		'fields' => array(
 			array(
 				'key' => 'field_5e8af1d837142',
-				'label' => 'spotlight_blokken',
+				'label' => 'Spotlight-blokken',
 				'name' => 'spotlight_blokken',
 				'type' => 'repeater',
-				'instructions' => '',
+				'instructions' => 'Hier kun je 1 of 2 spotlight-blokken toevoegen.',
 				'required' => 0,
 				'conditional_logic' => 0,
 				'wrapper' => array(
@@ -184,11 +184,11 @@ if( function_exists('acf_add_local_field_group') ):
 				'min' => 1,
 				'max' => 2,
 				'layout' => 'row',
-				'button_label' => '',
+				'button_label' => 'Blok toevoegen',
 				'sub_fields' => array(
 					array(
 						'key' => 'field_5e8af09948ad7',
-						'label' => 'spotlight_titel',
+						'label' => 'Titel',
 						'name' => 'spotlight_titel',
 						'type' => 'text',
 						'instructions' => '',
@@ -207,7 +207,7 @@ if( function_exists('acf_add_local_field_group') ):
 					),
 					array(
 						'key' => 'field_5e8af0f604b78',
-						'label' => 'spotlight__image',
+						'label' => 'Afbeelding',
 						'name' => 'spotlight__image',
 						'type' => 'image',
 						'instructions' => '',
@@ -231,7 +231,7 @@ if( function_exists('acf_add_local_field_group') ):
 					),
 					array(
 						'key' => 'field_5e8af1186bba9',
-						'label' => 'spotlight__content',
+						'label' => 'Korte tekst',
 						'name' => 'spotlight__content',
 						'type' => 'textarea',
 						'instructions' => '',
@@ -250,7 +250,7 @@ if( function_exists('acf_add_local_field_group') ):
 					),
 					array(
 						'key' => 'field_5e8af23037143',
-						'label' => 'spotlight__links',
+						'label' => 'Links',
 						'name' => 'spotlight__links',
 						'type' => 'repeater',
 						'instructions' => '',
@@ -261,15 +261,15 @@ if( function_exists('acf_add_local_field_group') ):
 							'class' => '',
 							'id' => '',
 						),
-						'collapsed' => '',
+						'collapsed' => 'field_5e8af29a37144',
 						'min' => 0,
 						'max' => 3,
-						'layout' => 'table',
-						'button_label' => '',
+						'layout' => 'row',
+						'button_label' => 'Link toevoegen',
 						'sub_fields' => array(
 							array(
 								'key' => 'field_5e8af29a37144',
-								'label' => 'spotlight__link',
+								'label' => 'Link',
 								'name' => 'spotlight__link',
 								'type' => 'link',
 								'instructions' => '',
@@ -284,7 +284,7 @@ if( function_exists('acf_add_local_field_group') ):
 							),
 							array(
 								'key' => 'field_5e8af2e445b46',
-								'label' => 'spotlight__link_class',
+								'label' => 'CSS-class',
 								'name' => 'spotlight__link_class',
 								'type' => 'radio',
 								'instructions' => '',
