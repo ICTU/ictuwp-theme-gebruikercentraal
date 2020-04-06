@@ -125,13 +125,13 @@
                       </a>
                     </li>
                                       <li class="toc-entry toc-h2 nav-item">
-                      <a class="menu-link nav-link" href="#components-steplist">
-                        <span class="ref sr-only">1.5</span> <span class="nav__name">Steplist</span>
+                      <a class="menu-link nav-link" href="#components-spotlight">
+                        <span class="ref sr-only">1.5</span> <span class="nav__name">Spotlight</span>
                       </a>
                     </li>
                                       <li class="toc-entry toc-h2 nav-item">
                       <a class="menu-link nav-link" href="#components-steps">
-                        <span class="ref sr-only">1.6</span> <span class="nav__name">Components.Steps</span>
+                        <span class="ref sr-only">1.6</span> <span class="nav__name">Steps</span>
                       </a>
                     </li>
                                       <li class="toc-entry toc-h2 nav-item">
@@ -140,8 +140,13 @@
                       </a>
                     </li>
                                       <li class="toc-entry toc-h2 nav-item">
+                      <a class="menu-link nav-link" href="#components-steps-steplist">
+                        <span class="ref sr-only child">1.6.2</span> <span class="nav__name">Steplist</span>
+                      </a>
+                    </li>
+                                      <li class="toc-entry toc-h2 nav-item">
                       <a class="menu-link nav-link" href="#components-steps-stepnav">
-                        <span class="ref sr-only child">1.6.2</span> <span class="nav__name">Stapnavigatie</span>
+                        <span class="ref sr-only child">1.6.3</span> <span class="nav__name">Stapnavigatie</span>
                       </a>
                     </li>
                                       <li class="toc-entry toc-h2 nav-item">
@@ -1518,20 +1523,20 @@
                 Source: <code>styleguide/elements/components/download-box.scss</code>, line 1
               </small>
                       </section>
-                                  <section id="components-steplist" class="section section--depth-2 ">
+                                  <section id="components-spotlight" class="section section--depth-2 ">
                             <h2 class="">
-                Steplist
-                <a href="#components-steplist" class="text-muted">
+                Spotlight
+                <a href="#components-spotlight" class="text-muted">
                   <small>#
                     <span class="sr-only">
-                      1.5 Components.StepList
+                      1.5 Components.Spotlight
                     </span>
                   </small>
                 </a>
               </h2>
 
                           <div class="btn-group btn-group-sm bd-toolbar" role="group" aria-label="Example toolbar">
-                                  <a href="#components-steplist" onclick="event.preventDefault();" data-kss-fullscreen="components-steplist" class="btn btn-light btn-fullscreen">
+                                  <a href="#components-spotlight" onclick="event.preventDefault();" data-kss-fullscreen="components-spotlight" class="btn btn-light btn-fullscreen">
                     <span class="kss-toolbar__tooltip sr-only">Toggle full screen</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                       <g id="toggle-full-screen" fill="none" fill-rule="evenodd">
@@ -1539,7 +1544,7 @@
                       </g>
                     </svg>
                   </a>
-                  <a href="item-components-steplist.html" target="_blank" class="btn btn-light btn-newwindow">
+                  <a href="item-components-spotlight.html" target="_blank" class="btn btn-light btn-newwindow">
                     <span class="kss-toolbar__tooltip sr-only">Open in new window</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                       <g id="new-tab" fill="none" fill-rule="evenodd">
@@ -1548,7 +1553,7 @@
                       </g>
                     </svg>
                   </a>
-                                <a href="#components-steplist" onclick="event.preventDefault();" data-kss-guides="true" class="btn btn-light btn-guides">
+                                <a href="#components-spotlight" onclick="event.preventDefault();" data-kss-guides="true" class="btn btn-light btn-guides">
                   <span class="kss-toolbar__tooltip sr-only">Toggle example guides</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                     <g id="toggle-guides" fill="none" fill-rule="evenodd">
@@ -1556,7 +1561,7 @@
                     </g>
                   </svg>
                 </a>
-                <a href="#components-steplist" onclick="event.preventDefault();" data-kss-markup="true" class="btn btn-light btn-markup">
+                <a href="#components-spotlight" onclick="event.preventDefault();" data-kss-markup="true" class="btn btn-light btn-markup">
                   <span class="kss-toolbar__tooltip sr-only">Toggle HTML markup</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                     <g id="toggle-markup" fill="none" fill-rule="evenodd">
@@ -1570,7 +1575,7 @@
             
 
                           <div class="description">
-                <p>Voor het weergeven van een lijst met stappen. Deze kan in de text editor velden worden toegevoegd.</p>
+                <p>Dit component kan gebruikt worden om iets onder de aandacht te brengen. Er kunnen maximaal twee items worden toegevoegd.</p>
 
               </div>
             
@@ -1580,51 +1585,58 @@
 
                   
                                       <div class="modifier__example">
-                      <ol class="steplist">
-    <li>
-        <h3>Maak twee versies van dezelfde brief</h3>
-        <p>Om een goede test uit te kunnen voeren, maak je twee versies van dezelfde brief. Op die manier kun je een
-            zogenaamde A/B-test uitvoeren om uit te vinden wat het beste werkt voor de doelgroep. Denk bijvoorbeeld aan
-            het gebruik van verschillende foto’s, teksten of volgorde.</p>
-    </li>
-    <li>
-        <h3>Zoek frisse testers binnen en buiten de gemeente</h3>
-        <p>Om goed te kunnen testen, is het belangrijk om testers te vinden onder de doelgroep die met een frisse blik
-            naar de brieven kunnen kijken. Ga op zoek naar intermediairs binnen en buiten de gemeente die je hierbij
-            kunnen helpen. Denk bijvoorbeeld aan collega’s die je in contact kunnen brengen met
-            vrijwilligersorganisaties, maatschappelijke stichtingen en taalambassadeurs van Stichting ABC of Stichting
-            Lezen en Schrijven..</p>
-    </li>
-    <li>
-        <h3>Stel een multidisciplinair team samen</h3>
-        <p>Om ervoor te zorgen dat de verbeteringen die gevonden worden ook doorgevoerd worden in de bestaande brief, is
-            het slim om de collega’s die de brieven schrijven te betrekken bij het testen. Doordat zij de test uitvoeren
-            en met lezers het gesprek voeren, zien zij zelf wat werkt en wat niet. Door het samen te doen werk je aan
-            een gezamenlijk beeld van benodigde verbeteringen en creëer je gezamenlijke verantwoordelijkheid.</p>
-    </li>
-    <li>
-        <h3>Bereid de testdag voor</h3>
-        <p>Als projectleider organiseer je 1 testdag, waarop alle collega’s op dezelfde manier en op dezelfde dag testen
-            uitvoeren bij de doelgroep. Zorg ervoor dat alles klaarligt en er een planning is wie waar naartoe gaat,
-            zodat de testers zich kunnen concentreren op hun taak. Maak testsetjes per brief, zorg voor een gezamenlijke
-            kick-off die inspireert en waarin nog een laatste keer de bedoeling wordt uitgelegd en plan een afsluitend
-            uur in waarin alle collega’s weer bij elkaar komen om de belangrijkste bevindingen door te spreken.</p>
-        <p>Cras ultricies ligula sed magna dictum porta. Vivamus suscipit tortor eget felis porttitor volutpat.
-            Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Quisque velit nisi, pretium ut lacinia
-            in, elementum id enim. Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh
-            pulvinar a. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut
-            lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus.</p>
-    </li>
-    <li>
-        <h3>Maak een verslag en zorg voor follow-up</h3>
-        <p>In het reflectie-uur na afloop van de testdag, haal je gezamenlijk de belangrijkste bevindingen op. Als
-            projectleider schrijf je hiervan een samenvatting met de opzet van de test, de belangrijkste bevindingen en
-            de verbeteracties. Iedere collega die een test heeft uitgevoerd, maakt hiervan een eigen verslag. Dit voeg
-            je toe aan de samenvatting. De communicatiemedewerker, redacteur of briefeigenaar die de brieven schrijft,
-            heeft dan voldoende input om de brief te herschrijven. Als projectleider houd je in de gaten of de
-            verbeteracties ook daadwerkelijk doorgevoerd worden.</p>
-    </li>
-</ol>
+                      <div class="section section--spotlight">
+    <div class="l-spotlight-wrapper l-item-count-1">
+        <div class="spotlight">
+
+            <figure class="spotlight__image">
+                <img src="/wp-content/themes/gebruiker-centraal/frontend/styleguide/img/img-16-9-od.jpg" alt="Optimaal Digitaal Workshopspel">
+            </figure>
+
+            <div class="spotlight__content">
+                <h2>Ook het spel spelen?</h2>
+                <p>Met het spel wordt verassend snel doorgedrongen tot de kern. Het spel eindigt met concrete acties die de volgende dag kunnen worden opgepakt. Het verbeteren van je (digitale) dienstverlening start dus meteen. </p>
+
+                <a  href="#" class="btn btn--primary">Bestellen</a><a  href="#" class="btn btn--primary">Print & Play</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="section section--spotlight">
+    <div class="l-spotlight-wrapper l-item-count-2">
+
+        <div class="spotlight">
+
+            <figure class="spotlight__image">
+                <img src="/wp-content/themes/gebruiker-centraal/frontend/styleguide/img/img-16-9-conference.jpg" alt="International Design in Government Conference">
+            </figure>
+
+            <div class="spotlight__content">
+                <h2>Ook naar de conferentie?</h2>
+                <p>Met meer dan 9000 bezoekers uit 40 verschillende landen was de conferentie een waanzinnig succes. Wil jij daar ook bij zijn dit jaar? Schrijf je snel in!</p>
+
+                <a  href="#" class="btn btn--primary">Schrijf je in</a>
+            </div>
+        </div>
+
+        <div class="spotlight">
+
+            <figure class="spotlight__image">
+                <img src="/wp-content/themes/gebruiker-centraal/frontend/styleguide/img/img-16-9-letter.jpg" alt="International Design in Government Conference">
+            </figure>
+
+            <div class="spotlight__content">
+                <h2>Ook een beeldbrief?</h2>
+                <p>Hebben jullie ook een goede beeldbrief gemaakt of verstuurd? Deel hem! Met goede voorbeelden zorgen we voor meer begrijpelijke brieven.</p>
+
+                <a  href="#" class="btn btn--primary">Deel je brief</a><a  href="#" class="btn btn--readmore">Een minder belangrijke link</a>
+            </div>
+        </div>
+
+    </div>
+</div>
                       <div class="modifier__example-footer"></div>
                     </div>
                   
@@ -1633,64 +1645,71 @@
 
                               <details class="highlight">
                   <summary style="padding: 5px 20px; cursor: pointer;">
-                                          Markup: <code>../elements/components/steplist.twig</code>
+                                          Markup: <code>../elements/components/spotlight.twig</code>
                                       </summary>
-                  <pre><code class="language-markup" data-language="html">&lt;ol class=&quot;steplist&quot;&gt;
-    &lt;li&gt;
-        &lt;h3&gt;Maak twee versies van dezelfde brief&lt;/h3&gt;
-        &lt;p&gt;Om een goede test uit te kunnen voeren, maak je twee versies van dezelfde brief. Op die manier kun je een
-            zogenaamde A/B-test uitvoeren om uit te vinden wat het beste werkt voor de doelgroep. Denk bijvoorbeeld aan
-            het gebruik van verschillende foto’s, teksten of volgorde.&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-        &lt;h3&gt;Zoek frisse testers binnen en buiten de gemeente&lt;/h3&gt;
-        &lt;p&gt;Om goed te kunnen testen, is het belangrijk om testers te vinden onder de doelgroep die met een frisse blik
-            naar de brieven kunnen kijken. Ga op zoek naar intermediairs binnen en buiten de gemeente die je hierbij
-            kunnen helpen. Denk bijvoorbeeld aan collega’s die je in contact kunnen brengen met
-            vrijwilligersorganisaties, maatschappelijke stichtingen en taalambassadeurs van Stichting ABC of Stichting
-            Lezen en Schrijven..&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-        &lt;h3&gt;Stel een multidisciplinair team samen&lt;/h3&gt;
-        &lt;p&gt;Om ervoor te zorgen dat de verbeteringen die gevonden worden ook doorgevoerd worden in de bestaande brief, is
-            het slim om de collega’s die de brieven schrijven te betrekken bij het testen. Doordat zij de test uitvoeren
-            en met lezers het gesprek voeren, zien zij zelf wat werkt en wat niet. Door het samen te doen werk je aan
-            een gezamenlijk beeld van benodigde verbeteringen en creëer je gezamenlijke verantwoordelijkheid.&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-        &lt;h3&gt;Bereid de testdag voor&lt;/h3&gt;
-        &lt;p&gt;Als projectleider organiseer je 1 testdag, waarop alle collega’s op dezelfde manier en op dezelfde dag testen
-            uitvoeren bij de doelgroep. Zorg ervoor dat alles klaarligt en er een planning is wie waar naartoe gaat,
-            zodat de testers zich kunnen concentreren op hun taak. Maak testsetjes per brief, zorg voor een gezamenlijke
-            kick-off die inspireert en waarin nog een laatste keer de bedoeling wordt uitgelegd en plan een afsluitend
-            uur in waarin alle collega’s weer bij elkaar komen om de belangrijkste bevindingen door te spreken.&lt;/p&gt;
-        &lt;p&gt;Cras ultricies ligula sed magna dictum porta. Vivamus suscipit tortor eget felis porttitor volutpat.
-            Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Quisque velit nisi, pretium ut lacinia
-            in, elementum id enim. Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh
-            pulvinar a. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut
-            lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus.&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-        &lt;h3&gt;Maak een verslag en zorg voor follow-up&lt;/h3&gt;
-        &lt;p&gt;In het reflectie-uur na afloop van de testdag, haal je gezamenlijk de belangrijkste bevindingen op. Als
-            projectleider schrijf je hiervan een samenvatting met de opzet van de test, de belangrijkste bevindingen en
-            de verbeteracties. Iedere collega die een test heeft uitgevoerd, maakt hiervan een eigen verslag. Dit voeg
-            je toe aan de samenvatting. De communicatiemedewerker, redacteur of briefeigenaar die de brieven schrijft,
-            heeft dan voldoende input om de brief te herschrijven. Als projectleider houd je in de gaten of de
-            verbeteracties ook daadwerkelijk doorgevoerd worden.&lt;/p&gt;
-    &lt;/li&gt;
-&lt;/ol&gt;</code></pre>
+                  <pre><code class="language-markup" data-language="html">&lt;div class=&quot;section section--spotlight&quot;&gt;
+    &lt;div class=&quot;l-spotlight-wrapper l-item-count-1&quot;&gt;
+        &lt;div class=&quot;spotlight&quot;&gt;
+
+            &lt;figure class=&quot;spotlight__image&quot;&gt;
+                &lt;img src=&quot;{{ base_url }}/img-16-9-od.jpg&quot; alt=&quot;Optimaal Digitaal Workshopspel&quot;&gt;
+            &lt;/figure&gt;
+
+            &lt;div class=&quot;spotlight__content&quot;&gt;
+                &lt;h2&gt;Ook het spel spelen?&lt;/h2&gt;
+                &lt;p&gt;Met het spel wordt verassend snel doorgedrongen tot de kern. Het spel eindigt met concrete acties die de volgende dag kunnen worden opgepakt. Het verbeteren van je (digitale) dienstverlening start dus meteen. &lt;/p&gt;
+
+                &lt;a  href=&quot;#&quot; class=&quot;btn btn--primary&quot;&gt;Bestellen&lt;/a&gt;&lt;a  href=&quot;#&quot; class=&quot;btn btn--primary&quot;&gt;Print &amp; Play&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&quot;section section--spotlight&quot;&gt;
+    &lt;div class=&quot;l-spotlight-wrapper l-item-count-2&quot;&gt;
+
+        &lt;div class=&quot;spotlight&quot;&gt;
+
+            &lt;figure class=&quot;spotlight__image&quot;&gt;
+                &lt;img src=&quot;{{ base_url }}/img-16-9-conference.jpg&quot; alt=&quot;International Design in Government Conference&quot;&gt;
+            &lt;/figure&gt;
+
+            &lt;div class=&quot;spotlight__content&quot;&gt;
+                &lt;h2&gt;Ook naar de conferentie?&lt;/h2&gt;
+                &lt;p&gt;Met meer dan 9000 bezoekers uit 40 verschillende landen was de conferentie een waanzinnig succes. Wil jij daar ook bij zijn dit jaar? Schrijf je snel in!&lt;/p&gt;
+
+                &lt;a  href=&quot;#&quot; class=&quot;btn btn--primary&quot;&gt;Schrijf je in&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;spotlight&quot;&gt;
+
+            &lt;figure class=&quot;spotlight__image&quot;&gt;
+                &lt;img src=&quot;{{ base_url }}/img-16-9-letter.jpg&quot; alt=&quot;International Design in Government Conference&quot;&gt;
+            &lt;/figure&gt;
+
+            &lt;div class=&quot;spotlight__content&quot;&gt;
+                &lt;h2&gt;Ook een beeldbrief?&lt;/h2&gt;
+                &lt;p&gt;Hebben jullie ook een goede beeldbrief gemaakt of verstuurd? Deel hem! Met goede voorbeelden zorgen we voor meer begrijpelijke brieven.&lt;/p&gt;
+
+                &lt;a  href=&quot;#&quot; class=&quot;btn btn--primary&quot;&gt;Deel je brief&lt;/a&gt;&lt;a  href=&quot;#&quot; class=&quot;btn btn--readmore&quot;&gt;Een minder belangrijke link&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
                 </details>
               
             
                           <small class="text-muted">
-                Source: <code>styleguide/elements/components/steplist.scss</code>, line 1
+                Source: <code>styleguide/elements/components/spotlight.scss</code>, line 1
               </small>
                       </section>
                                   <section id="components-steps" class="section section--depth-2 ">
                             <h2 class="">
-                Components.Steps
+                Steps
                 <a href="#components-steps" class="text-muted">
                   <small>#
                     <span class="sr-only">
@@ -1702,6 +1721,10 @@
 
             
 
+                          <div class="description">
+                <p>Alle elementen ten behoeve van stappen en het navigeren tussen stappen</p>
+
+              </div>
             
             
 
@@ -1997,13 +2020,183 @@
                 Source: <code>styleguide/elements/components/stepchart.scss</code>, line 1
               </small>
                       </section>
+                                  <section id="components-steps-steplist" class="section section--depth-3 ">
+                            <h3 class="">
+                Steplist
+                <a href="#components-steps-steplist" class="text-muted">
+                  <small>#
+                    <span class="sr-only">
+                      1.6.2 Components.Steps.StepList
+                    </span>
+                  </small>
+                </a>
+              </h3>
+
+                          <div class="btn-group btn-group-sm bd-toolbar" role="group" aria-label="Example toolbar">
+                                  <a href="#components-steps-steplist" onclick="event.preventDefault();" data-kss-fullscreen="components-steps-steplist" class="btn btn-light btn-fullscreen">
+                    <span class="kss-toolbar__tooltip sr-only">Toggle full screen</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="toggle-full-screen" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M16,0 L16,6.5 L13.5,4 L10.5,7 L9,5.5 L12,2.5 L9.5,0 L16,0 Z M7,10.5 L4,13.5 L6.5,16 L0,16 L0,9.5 L2.5,12 L5.5,9 L7,10.5 Z"/>
+                      </g>
+                    </svg>
+                  </a>
+                  <a href="item-components-steps-steplist.html" target="_blank" class="btn btn-light btn-newwindow">
+                    <span class="kss-toolbar__tooltip sr-only">Open in new window</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="new-tab" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M2.85714286,2 L2.85714286,13.1428571 L14,13.1428571 L14,2 L2.85714286,2 Z M13.0714286,12.2142857 L3.78571429,12.2142857 L3.78571429,2.92857143 L13.0714286,2.92857143 L13.0714286,12.2142857 Z M1.92857143,14.0714286 L1.92857143,4.32142857 L1,3.39285714 L1,15 L12.6071429,15 L11.6785714,14.0714286 L1.92857143,14.0714286 Z"/>
+                        <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.179 4.786 7.5 7.107 4.714 9.893 6.107 11.286 8.893 8.5 11.214 10.821 11.214 4.786"/>
+                      </g>
+                    </svg>
+                  </a>
+                                <a href="#components-steps-steplist" onclick="event.preventDefault();" data-kss-guides="true" class="btn btn-light btn-guides">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle example guides</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-guides" fill="none" fill-rule="evenodd">
+                      <path id="Shape" fill="#000" fill-rule="nonzero" d="M6,3 L8,3 L8,4 L6,4 L6,3 Z M9,3 L11,3 L11,4 L9,4 L9,3 Z M14,3 L14,7 L11,7 L11,6 L13,6 L13,4 L12,4 L12,3 L14,3 Z M5,6 L7,6 L7,7 L5,7 L5,6 Z M8,6 L10,6 L10,7 L8,7 L8,6 Z M3,4 L3,6 L4,6 L4,7 L2,7 L2,3 L5,3 L5,4 L3,4 Z M6,9 L8,9 L8,10 L6,10 L6,9 Z M9,9 L11,9 L11,10 L9,10 L9,9 Z M14,9 L14,13 L11,13 L11,12 L13,12 L13,10 L12,10 L12,9 L14,9 Z M5,12 L7,12 L7,13 L5,13 L5,12 Z M8,12 L10,12 L10,13 L8,13 L8,12 Z M3,10 L3,12 L4,12 L4,13 L2,13 L2,9 L5,9 L5,10 L3,10 Z M15,1 L1,1 L1,15 L15,15 L15,1 Z M16,0 L16,16 L0,16 L0,0 L16,0 Z"/>
+                    </g>
+                  </svg>
+                </a>
+                <a href="#components-steps-steplist" onclick="event.preventDefault();" data-kss-markup="true" class="btn btn-light btn-markup">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle HTML markup</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-markup" fill="none" fill-rule="evenodd">
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="10.526 11.711 11.789 12.974 16 8.763 11.789 4.553 10.526 5.816 13.474 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.474 5.816 4.211 4.553 0 8.763 4.211 12.974 5.474 11.711 2.526 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="8.807 4.007 9.721 4.256 7.194 13.52 6.28 13.27 8.807 4.007"/>
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            
+
+                          <div class="description">
+                <p>Voor het weergeven van een lijst met stappen. Deze kan in de text editor velden worden toegevoegd.</p>
+
+              </div>
+            
+            
+
+                          <div class="bd-example">
+
+                  
+                                      <div class="modifier__example">
+                      <ol class="steplist">
+    <li>
+        <h3>Maak twee versies van dezelfde brief</h3>
+        <p>Om een goede test uit te kunnen voeren, maak je twee versies van dezelfde brief. Op die manier kun je een
+            zogenaamde A/B-test uitvoeren om uit te vinden wat het beste werkt voor de doelgroep. Denk bijvoorbeeld aan
+            het gebruik van verschillende foto’s, teksten of volgorde.</p>
+    </li>
+    <li>
+        <h3>Zoek frisse testers binnen en buiten de gemeente</h3>
+        <p>Om goed te kunnen testen, is het belangrijk om testers te vinden onder de doelgroep die met een frisse blik
+            naar de brieven kunnen kijken. Ga op zoek naar intermediairs binnen en buiten de gemeente die je hierbij
+            kunnen helpen. Denk bijvoorbeeld aan collega’s die je in contact kunnen brengen met
+            vrijwilligersorganisaties, maatschappelijke stichtingen en taalambassadeurs van Stichting ABC of Stichting
+            Lezen en Schrijven..</p>
+    </li>
+    <li>
+        <h3>Stel een multidisciplinair team samen</h3>
+        <p>Om ervoor te zorgen dat de verbeteringen die gevonden worden ook doorgevoerd worden in de bestaande brief, is
+            het slim om de collega’s die de brieven schrijven te betrekken bij het testen. Doordat zij de test uitvoeren
+            en met lezers het gesprek voeren, zien zij zelf wat werkt en wat niet. Door het samen te doen werk je aan
+            een gezamenlijk beeld van benodigde verbeteringen en creëer je gezamenlijke verantwoordelijkheid.</p>
+    </li>
+    <li>
+        <h3>Bereid de testdag voor</h3>
+        <p>Als projectleider organiseer je 1 testdag, waarop alle collega’s op dezelfde manier en op dezelfde dag testen
+            uitvoeren bij de doelgroep. Zorg ervoor dat alles klaarligt en er een planning is wie waar naartoe gaat,
+            zodat de testers zich kunnen concentreren op hun taak. Maak testsetjes per brief, zorg voor een gezamenlijke
+            kick-off die inspireert en waarin nog een laatste keer de bedoeling wordt uitgelegd en plan een afsluitend
+            uur in waarin alle collega’s weer bij elkaar komen om de belangrijkste bevindingen door te spreken.</p>
+        <p>Cras ultricies ligula sed magna dictum porta. Vivamus suscipit tortor eget felis porttitor volutpat.
+            Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Quisque velit nisi, pretium ut lacinia
+            in, elementum id enim. Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh
+            pulvinar a. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut
+            lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus.</p>
+    </li>
+    <li>
+        <h3>Maak een verslag en zorg voor follow-up</h3>
+        <p>In het reflectie-uur na afloop van de testdag, haal je gezamenlijk de belangrijkste bevindingen op. Als
+            projectleider schrijf je hiervan een samenvatting met de opzet van de test, de belangrijkste bevindingen en
+            de verbeteracties. Iedere collega die een test heeft uitgevoerd, maakt hiervan een eigen verslag. Dit voeg
+            je toe aan de samenvatting. De communicatiemedewerker, redacteur of briefeigenaar die de brieven schrijft,
+            heeft dan voldoende input om de brief te herschrijven. Als projectleider houd je in de gaten of de
+            verbeteracties ook daadwerkelijk doorgevoerd worden.</p>
+    </li>
+</ol>
+                      <div class="modifier__example-footer"></div>
+                    </div>
+                  
+                  
+              </div>
+
+                              <details class="highlight">
+                  <summary style="padding: 5px 20px; cursor: pointer;">
+                                          Markup: <code>../elements/components/steplist.twig</code>
+                                      </summary>
+                  <pre><code class="language-markup" data-language="html">&lt;ol class=&quot;steplist&quot;&gt;
+    &lt;li&gt;
+        &lt;h3&gt;Maak twee versies van dezelfde brief&lt;/h3&gt;
+        &lt;p&gt;Om een goede test uit te kunnen voeren, maak je twee versies van dezelfde brief. Op die manier kun je een
+            zogenaamde A/B-test uitvoeren om uit te vinden wat het beste werkt voor de doelgroep. Denk bijvoorbeeld aan
+            het gebruik van verschillende foto’s, teksten of volgorde.&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;h3&gt;Zoek frisse testers binnen en buiten de gemeente&lt;/h3&gt;
+        &lt;p&gt;Om goed te kunnen testen, is het belangrijk om testers te vinden onder de doelgroep die met een frisse blik
+            naar de brieven kunnen kijken. Ga op zoek naar intermediairs binnen en buiten de gemeente die je hierbij
+            kunnen helpen. Denk bijvoorbeeld aan collega’s die je in contact kunnen brengen met
+            vrijwilligersorganisaties, maatschappelijke stichtingen en taalambassadeurs van Stichting ABC of Stichting
+            Lezen en Schrijven..&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;h3&gt;Stel een multidisciplinair team samen&lt;/h3&gt;
+        &lt;p&gt;Om ervoor te zorgen dat de verbeteringen die gevonden worden ook doorgevoerd worden in de bestaande brief, is
+            het slim om de collega’s die de brieven schrijven te betrekken bij het testen. Doordat zij de test uitvoeren
+            en met lezers het gesprek voeren, zien zij zelf wat werkt en wat niet. Door het samen te doen werk je aan
+            een gezamenlijk beeld van benodigde verbeteringen en creëer je gezamenlijke verantwoordelijkheid.&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;h3&gt;Bereid de testdag voor&lt;/h3&gt;
+        &lt;p&gt;Als projectleider organiseer je 1 testdag, waarop alle collega’s op dezelfde manier en op dezelfde dag testen
+            uitvoeren bij de doelgroep. Zorg ervoor dat alles klaarligt en er een planning is wie waar naartoe gaat,
+            zodat de testers zich kunnen concentreren op hun taak. Maak testsetjes per brief, zorg voor een gezamenlijke
+            kick-off die inspireert en waarin nog een laatste keer de bedoeling wordt uitgelegd en plan een afsluitend
+            uur in waarin alle collega’s weer bij elkaar komen om de belangrijkste bevindingen door te spreken.&lt;/p&gt;
+        &lt;p&gt;Cras ultricies ligula sed magna dictum porta. Vivamus suscipit tortor eget felis porttitor volutpat.
+            Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Quisque velit nisi, pretium ut lacinia
+            in, elementum id enim. Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh
+            pulvinar a. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut
+            lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus.&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;h3&gt;Maak een verslag en zorg voor follow-up&lt;/h3&gt;
+        &lt;p&gt;In het reflectie-uur na afloop van de testdag, haal je gezamenlijk de belangrijkste bevindingen op. Als
+            projectleider schrijf je hiervan een samenvatting met de opzet van de test, de belangrijkste bevindingen en
+            de verbeteracties. Iedere collega die een test heeft uitgevoerd, maakt hiervan een eigen verslag. Dit voeg
+            je toe aan de samenvatting. De communicatiemedewerker, redacteur of briefeigenaar die de brieven schrijft,
+            heeft dan voldoende input om de brief te herschrijven. Als projectleider houd je in de gaten of de
+            verbeteracties ook daadwerkelijk doorgevoerd worden.&lt;/p&gt;
+    &lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+                </details>
+              
+            
+                          <small class="text-muted">
+                Source: <code>styleguide/elements/components/steplist.scss</code>, line 1
+              </small>
+                      </section>
                                   <section id="components-steps-stepnav" class="section section--depth-3 ">
                             <h3 class="">
                 Stapnavigatie
                 <a href="#components-steps-stepnav" class="text-muted">
                   <small>#
                     <span class="sr-only">
-                      1.6.2 Components.Steps.Stepnav
+                      1.6.3 Components.Steps.Stepnav
                     </span>
                   </small>
                 </a>
