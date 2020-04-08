@@ -342,8 +342,8 @@ add_theme_support( 'genesis-responsive-viewport' );
 
 $imgbreakpoints = array(
 	'break_phone'     => array(
-		'direction'             => 'max',
-		'width'                 => '500px',
+		'direction'             => 'min',
+		'width'                 => '1px',
 		'header-padding'        => '100px',
 		'content-before'        => true,
 		'content-height'        => '150px',
@@ -1263,18 +1263,13 @@ function gc_wbvb_add_pageheader_css() {
 
 				if ( $image[1] >= IMG_SIZE_HUGE_MIN_WIDTH ) {
 
+					$BLOGBERICHTEN_CSS .= "   background-image: url('" . $image[0] . "');\n";
+
 					foreach ( $imgbreakpoints as $breakpoint ) {
 
 						$image = wp_get_attachment_image_src( get_post_thumbnail_id( $postid ), $breakpoint['img_size_archive_list'] );
 
-						$BLOGBERICHTEN_CSS .= '@media only screen and (' . $breakpoint['direction'] . '-width: ' . $breakpoint['width'] . " ) {\n";
-						$BLOGBERICHTEN_CSS .= " #" . $theid . ". { \n";
-						$BLOGBERICHTEN_CSS .= "   height: " . $breakpoint['header-padding'] . ";\n";
 						$BLOGBERICHTEN_CSS .= "   background-image: url('" . $image[0] . "');\n";
-						$BLOGBERICHTEN_CSS .= "   background-size: cover;\n";
-						$BLOGBERICHTEN_CSS .= "   background-position: center center;\n";
-						$BLOGBERICHTEN_CSS .= " } \n";
-						$BLOGBERICHTEN_CSS .= "} \n";
 
 					}
 				}
@@ -1350,50 +1345,22 @@ function gc_wbvb_add_blog_single_css() {
 
 				if ( $image[1] >= IMG_SIZE_HUGE_MIN_WIDTH ) {
 
+					$BLOGBERICHTEN_CSS .= "\n\n".
+						".content:before {\n" .
+						"   content: ' '; \n" .
+						"   display: block; \n " .
+						"} \n\n";
+
 					foreach ( $imgbreakpoints as $breakpoint ) {
 
 						$image = wp_get_attachment_image_src( get_post_thumbnail_id( $postid ), $breakpoint['img_size_archive_list'] );
 
-
-						/*
-
-												$image_width	= $image[1];
-												$image_height	= $image[2];
-
-												if ( $image_width < $image_height ) {
-
-													// landscape photo
-													$BLOGBERICHTEN_CSS .= '@media only screen and ('  . $breakpoint['direction'] .  '-width: ' . $breakpoint['width'] . " ) {\n";
-													$BLOGBERICHTEN_CSS .= " .content:before { \n";
-													$BLOGBERICHTEN_CSS .= "   content: ' ';\n";
-													$BLOGBERICHTEN_CSS .= "   display: block;\n";
-													$BLOGBERICHTEN_CSS .= "   height: " . $image_height . "px;\n";
-													$BLOGBERICHTEN_CSS .= "   width: " . $image_width . "px;\n";
-													$BLOGBERICHTEN_CSS .= "   padding-top: " . $image_height . "px;\n";
-													$BLOGBERICHTEN_CSS .= "   background-image: url('" . $image[0] . "');\n";
-													$BLOGBERICHTEN_CSS .= "   background-size: cover;\n";
-													$BLOGBERICHTEN_CSS .= "   background-position: center center;\n";
-													$BLOGBERICHTEN_CSS .= " } \n";
-													$BLOGBERICHTEN_CSS .= "} \n";
-
-												}
-												else {
-
-						*/
-
-
-						$BLOGBERICHTEN_CSS .= '@media only screen and (' . $breakpoint['direction'] . '-width: ' . $breakpoint['width'] . " ) {\n";
-						$BLOGBERICHTEN_CSS .= " .content:before { \n";
-						$BLOGBERICHTEN_CSS .= "   content: ' ';\n";
-						$BLOGBERICHTEN_CSS .= "   display: block;\n";
-						$BLOGBERICHTEN_CSS .= "   padding-top: " . $breakpoint['header-padding'] . ";\n";
-						$BLOGBERICHTEN_CSS .= "   background-image: url('" . $image[0] . "');\n";
-						$BLOGBERICHTEN_CSS .= "   background-size: cover;\n";
-						$BLOGBERICHTEN_CSS .= "   background-position: center center;\n";
-						$BLOGBERICHTEN_CSS .= " } \n";
-						$BLOGBERICHTEN_CSS .= "} \n";
-
-//						}
+						$BLOGBERICHTEN_CSS .=
+							"@media only screen and (" . $breakpoint['direction'] . "-width: " . $breakpoint['width'] . " ) {\n" .
+							"   .content:before { \n" .
+							"       background-image: url('" . $image[0] . "');\n" .
+							"   } \n" .
+							"} \n\n";
 
 					}
 
