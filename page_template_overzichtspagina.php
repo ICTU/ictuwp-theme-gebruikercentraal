@@ -158,12 +158,15 @@ function gc_page_template_loop() {
 	global $post;
 
 	$currentpageID = get_the_id();
+	$content      	= $post->post_content;
+	$pageid_beelden	= 0;
+	$hoofdcontent 	= apply_filters( 'the_content', $content );
+	$inleiding		= get_field( 'overzichtspagina_inleiding', $currentpageID );
 
-
-	$content      = $post->post_content;
-	$hoofdcontent = apply_filters( 'the_content', $content );
-
-	$inleiding = get_field( 'overzichtspagina_inleiding', $currentpageID );
+	if ( get_field( 'beelden_page_overview', 'option' ) ) {
+		// kijken of er een pagina is aangewezen die een overzicht geeft van alle beelden
+		$pageid_beelden = get_field( 'beelden_page_overview', 'option' );
+	}
 
 	echo '<article class="page entry">';
 
@@ -196,6 +199,11 @@ function gc_page_template_loop() {
 				$columncounter = 'grid--col-3';
 			}
 
+			if ( intval( $pageid_beelden ) === intval( $currentpageID ) ) {
+				// deze pagina is de overzichtspagina voor beelden
+				// dus een vierkoloms-grid
+				$columncounter = 'grid--col-4';
+			}
 
 			echo '<div class="grid ' . $columncounter . '">';
 
@@ -278,6 +286,12 @@ function gc_page_template_loop() {
 				$columncounter = 'grid--col-2';
 			} elseif ( $countcount > 2 ) {
 				$columncounter = 'grid--col-3';
+			}
+
+			if ( intval( $pageid_beelden ) === intval( $currentpageID ) ) {
+				// deze pagina is de overzichtspagina voor beelden
+				// dus een vierkoloms-grid
+				$columncounter = 'grid--col-4';
 			}
 
 			echo '<div class="grid ' . $columncounter . '">';
