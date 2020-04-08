@@ -1397,8 +1397,27 @@
 // Overzichtspagina's
 
 .gc-overviewpage(@bg: @gc_a11y_green, @color: @white) {
+
+  .site-inner:before {
+    @media @tablet_only {
+      height: 18rem;
+    }
+  }
+
+  .content-sidebar-wrap {
+    @media @tablet_only {
+      padding-top: 8rem;
+    }
+  }
+
   .grid {
-    .gc-container;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+
+    @media @desktop {
+      margin: 3rem auto 0;
+      max-width: ~"calc(@{max-width-container} + @{gutter})";
+    }
   }
 
   .inleiding {
@@ -1423,6 +1442,7 @@
 
   .entry-header + .entry-content {
     margin-top: 0;
+    position: relative;
   }
 
   .entry-content {
