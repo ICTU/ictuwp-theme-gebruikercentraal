@@ -100,10 +100,19 @@ h1 + .meta-data {
     // Negate default padding
     margin-left: -1.5rem;
     margin-right: -1.5rem;
+    height: 18rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 
     @media @tablet {
       margin-left: -3rem;
       margin-right: -3rem;
+      height: 30rem;
+    }
+
+    @media @desktop {
+      height: 40rem;
     }
   }
 }

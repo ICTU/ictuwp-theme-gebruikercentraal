@@ -1,5 +1,6 @@
 
 .text-block {
+  margin-top: @gutter;
 
   p {
     max-width: 90%;
@@ -8,6 +9,7 @@
 
   .btn {
     margin-top: 2rem;
+    margin-right: 2rem;
   }
 
   &--bg {
@@ -15,6 +17,10 @@
     .gc-padding;
     padding-top: 3rem;
     padding-bottom: 3rem;
+  }
+
+  &.l-bg-white {
+    background: @white;
   }
 
   &.l-bg-primary,
@@ -42,11 +48,19 @@
   &.l-bg-primary {
     background: @tb_primary_bg;
     color: @tb_primary_color;
+
+    .btn--read-more {
+      color: @tb_primary_color;
+    }
   }
 
   &.l-bg-secondary {
     background: @tb_secondary_bg;
     color: @tb_secondary_color;
+
+    .btn--read-more {
+      color: @tb_secondary_color;
+    }
   }
 
   &.l-text-centered {

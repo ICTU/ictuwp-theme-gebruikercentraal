@@ -1397,8 +1397,27 @@
 // Overzichtspagina's
 
 .gc-overviewpage(@bg: @gc_a11y_green, @color: @white) {
+
+  .site-inner:before {
+    @media @tablet_only {
+      height: 18rem;
+    }
+  }
+
+  .content-sidebar-wrap {
+    @media @tablet_only {
+      padding-top: 8rem;
+    }
+  }
+
   .grid {
-    .gc-container;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+
+    @media @desktop {
+      margin: 3rem auto 0;
+      max-width: ~"calc(@{max-width-container} + @{gutter})";
+    }
   }
 
   .inleiding {
@@ -1423,6 +1442,7 @@
 
   .entry-header + .entry-content {
     margin-top: 0;
+    position: relative;
   }
 
   .entry-content {
@@ -1503,7 +1523,6 @@
 // Add page in a frame, for example the blog or event single
 .gc-content-with-frame() {
 
-
   .content-sidebar-wrap {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -1520,21 +1539,27 @@
     }
   }
 
+  .site-inner:before {
+    height: 18rem;
+    
+    @media @desktop {
+
+      height: 40rem;
+    }
+  }
+
   .content {
     &:before {
       margin-top: -3rem;
-      padding-top: 24rem;
       margin-bottom: -5rem;
 
       @media @tablet {
         margin-top: -8rem;
-        padding-top: 35rem;
         margin-bottom: -8rem;
       }
 
       @media @desktop {
         margin-top: -14rem;
-        padding-top: 40rem;
         margin-bottom: -12rem;
       }
     }

@@ -66,24 +66,21 @@ if ( ! function_exists( 'ictu_gctheme_frontend_general_get_textblocks' ) ) :
 
 				// count the items
 				$countcount    = count( $textblocks );
-				$columncounter = 'grid--col-2';
 
-				if ( $countcount < 2 ) {
-					$columncounter = 'grid--col-1';
-				} elseif ( $countcount > 2 ) {
-					$columncounter = 'grid--col-3';
-				}
-
-				$return = '<section class="section section--overview">';
+				$return = '<section class="section section--text-blocks l-item-count-'. $countcount.'">';
 				$return .= '<div class="l-section-content">';
-				$return .= '<div class="grid ' . $columncounter . '">';
 
 				while ( have_rows( 'textblocks' ) ): the_row();
 
 					$textblock_title   = get_sub_field( 'textblock_title' );
 					$textblock_content = get_sub_field( 'textblock_content' );
-					$textblock_class   = get_sub_field( 'textblock_class' ) ? 'text-block ' . get_sub_field( 'textblock_class' ) : 'text-block';
+					$textblock_class   = 'text-block';
 					$title_id          = sanitize_title( $textblock_title . '-title' );
+
+					// Add class for color if value not is none
+					if(!(get_sub_field( 'textblock_class') === 'none')) {
+						$textblock_class .= ' '.get_sub_field( 'textblock_class');
+					}
 
 					$return .= '<section aria-labelledby="' . $title_id . '" class="' . $textblock_class . '">';
 
@@ -109,7 +106,6 @@ if ( ! function_exists( 'ictu_gctheme_frontend_general_get_textblocks' ) ) :
 
 				endwhile;
 
-				$return .= '</div>'; // .grid
 				$return .= '</div>'; // .l-section-content
 				$return .= '</section>'; // .text-block
 

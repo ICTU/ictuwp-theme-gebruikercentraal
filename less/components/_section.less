@@ -49,6 +49,8 @@
   }
 }
 
+// Overviews
+
 .section--overview {
   .grid + p {
     display: flex;
@@ -63,3 +65,28 @@
     }
   }
 }
+
+// Text blocks
+
+.section--text-blocks {
+  .l-section-content {
+    max-width: ~"calc(@{max-width-container} + @{gutter})";
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+
+    @media @tablet {
+      display: flex;
+
+      section {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        flex: 1;
+      }
+    }
+
+    @media @desktop {
+      margin: 5rem auto 0;
+    }
+  }
+}
+
