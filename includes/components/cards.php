@@ -30,7 +30,7 @@ if ( ! function_exists( 'ictu_gctheme_card_general' ) ) :
 	 * @return array $menuarray Array with links and link text (if $args['getmenu'] => TRUE).
 	 */
 
-	function ictu_gctheme_card_general( $post = [] ) {
+	function ictu_gctheme_card_general( $post = array(), $args = array() ) {
 
 		if ( is_object( $post ) ) {
 			$post_ID = $post->ID;
@@ -40,20 +40,38 @@ if ( ! function_exists( 'ictu_gctheme_card_general' ) ) :
 			return;
 		}
 
-		$card_title = get_the_title( $post_ID );
-		$card_text  = get_the_excerpt( $post_ID );
-		$card_link  = get_sub_field( 'home_template_teaser_link' );
-		$title_id   = sanitize_title( $card_title );
+		$defaults = array(
+			'titletag'  => 'h2',
+			'echo'      => TRUE,
+		);
 
-		$card = '<div class="card"><div class="card__content">';
-		$card .= '<h3 id="' . $title_id . '" class="card__title"><a href="' . get_permalink( $post_ID ) . '" class="link link--arrow">';
-		$card .= '<span class="arrow-link__text">' . $card_title . '</span>';
+		// Parse incoming $args into an array and merge it with $defaults
+		$args = wp_parse_args($args, $defaults);
+
+		$section_title  = get_the_title( $post_ID );
+		$section_text   = get_the_excerpt( $post_ID );
+		$title_id       = sanitize_title( $section_title );
+
+		$card = '<div class="card">';
+		$card .= '<div class="card__content">';
+		$card .= '<' . $args['titletag'] . ' id="' . $title_id . '" class="card__title"><a href="' . get_permalink( $post_ID ) . '" class="arrow-link">';
+		$card .= '<span class="arrow-link__text">' . $section_title . '</span>';
 		$card .= '<span class="arrow-link__icon">&nbsp;</span>';
-		$card .= '</a></h3>';
-		$card .= '<div></div>';
+		$card .= '</a></' . $args['titletag'] . '>';
+		if ( $section_text ) {
+			$card .= '<p>';
+			$card .=  $section_text;
+			$card .= '</p>';
+		}
+		$card .= '</div>'; // .card__content
+		$card .= '</div>'; // .card
 
-
-		echo $card;
+		if (  $args['echo'] ) {
+			echo $card;
+		}
+		else {
+			return $card;
+		}
 
 
 	}
@@ -76,7 +94,7 @@ if ( ! function_exists( 'ictu_gctheme_card_vaardigheid' ) ) :
 	 * @return array $menuarray Array with links and link text (if $args['getmenu'] => TRUE).
 	 */
 
-	function ictu_gctheme_card_vaardigheid( $post = [] ) {
+	function ictu_gctheme_card_vaardigheid( $post = array(), $args = array() ) {
 
 		if ( is_object( $post ) ) {
 			$post_ID = $post->ID;
@@ -85,6 +103,14 @@ if ( ! function_exists( 'ictu_gctheme_card_vaardigheid' ) ) :
 		} else {
 			return;
 		}
+
+		$defaults = array(
+			'titletag'  => 'h2',
+			'echo'      => TRUE,
+		);
+
+		// Parse incoming $args into an array and merge it with $defaults
+		$args = wp_parse_args($args, $defaults);
 
 		$section_title = get_the_title( $post_ID );
 		$section_text  = get_the_excerpt( $post_ID );
@@ -101,15 +127,27 @@ if ( ! function_exists( 'ictu_gctheme_card_vaardigheid' ) ) :
 		}
 
 
-		echo '<div class="card ' . $cardclass . '">';
-		echo '<h3 id="' . $title_id . '" class="' . $titleclass . '"><a href="' . get_permalink( $post_ID ) . '">' . $section_title . ' - ' . $icoon .
+		$card = '<div class="card ' . $cardclass . '">';
+		$card .= '<div class="card__content">';
+		$card .= '<' . $args['titletag'] . ' id="' . $title_id . '" class="' . $titleclass . '"><a href="' . get_permalink( $post_ID ) . '">' . $section_title . ' - ' . $icoon .
 		     '<span class="btn btn--arrow"></span>' .
-		     '</a></h3>';
-		echo '<p>';
-		echo $section_text;
-		echo '</p>';
-		echo '</div>';
+		     '</a></' . $args['titletag'] . '>';
 
+		if ( $section_text ) {
+			$card .= '<p>';
+			$card .=  $section_text;
+			$card .= '</p>';
+		}
+		$card .= '</div>'; // .card__content
+		$card .= '</div>'; // .card
+
+
+		if (  $args['echo'] ) {
+			echo $card;
+		}
+		else {
+			return $card;
+		}
 
 	}
 
@@ -131,7 +169,7 @@ if ( ! function_exists( 'ictu_gctheme_card_doelgroep' ) ) :
 	 * @return array $menuarray Array with links and link text (if $args['getmenu'] => TRUE).
 	 */
 
-	function ictu_gctheme_card_doelgroep( $post, $quoteobject ) {
+	function ictu_gctheme_card_doelgroep( $post, $quoteobject, $args = array() ) {
 
 		if ( is_object( $quoteobject ) && 'WP_Post' == get_class( $quoteobject ) ) {
 			$quoteobject_post   = get_post( $quoteobject->ID );
@@ -145,6 +183,14 @@ if ( ! function_exists( 'ictu_gctheme_card_doelgroep' ) ) :
 				return '';
 			}
 		}
+
+		$defaults = array(
+			'titletag'  => 'h2',
+			'echo'      => TRUE,
+		);
+
+		// Parse incoming $args into an array and merge it with $defaults
+		$args = wp_parse_args($args, $defaults);
 
 		$content = apply_filters( 'the_content', $content );
 
@@ -172,20 +218,24 @@ if ( ! function_exists( 'ictu_gctheme_card_doelgroep' ) ) :
 		$return = '<section aria-labelledby="' . $title_id . '" class="card card--doelgroep ' . $postpoppetje . '" id="' . $section_id . '">';
 		$return .= '<div class="card__image"></div>';
 		$return .= '<div class="card__content">';
-		$return .=
-			'<h2 class="card__title" id="' . $title_id . '">' .
-
+		$return .= '<' . $args['titletag'] . ' class="card__title" id="' . $title_id . '">' .
 			'<a href="' . get_permalink( $post->ID ) . '" class="arrow-link">' .
 			'<span class="arrow-link__descr">' . _x( 'Ontwerpen voor', 'Home section doelgroep', 'ictu-gc-posttypes-inclusie' ) . ' </span>' .
 			'<span class="arrow-link__text">' . $cardtitle . '</span>' .
 			'<span class="arrow-link__icon"></span>' .
 			'</a>' .
-			'</h2>';
+			'</' . $args['titletag'] . '>';
 		$return .= '<div class="tegeltje">' . $content . '<p><strong>' . $quoteobject_auteur . '</strong></p></div>';
 		$return .= '</div>';
 		$return .= '</section>';
 
-		return $return;
+
+		if (  $args['echo'] ) {
+			echo $return;
+		}
+		else {
+			return $return;
+		}
 
 	}
 
@@ -206,7 +256,7 @@ if ( ! function_exists( 'ictu_gctheme_card_featuredimage' ) ) :
 	 * @return array $menuarray Array with links and link text (if $args['getmenu'] => TRUE).
 	 */
 
-	function ictu_gctheme_card_featuredimage( $post ) {
+	function ictu_gctheme_card_featuredimage( $post = array(), $args = array() ) {
 
 		if ( is_object( $post ) ) {
 			$post_ID = $post->ID;
@@ -216,37 +266,55 @@ if ( ! function_exists( 'ictu_gctheme_card_featuredimage' ) ) :
 			return;
 		}
 
+		$defaults = array(
+			'titletag'  => 'h2',
+			'echo'      => TRUE,
+		);
+
+		// Parse incoming $args into an array and merge it with $defaults
+		$args = wp_parse_args($args, $defaults);
+
 		$posttype         = get_post_type( $post_ID );
 		$section_title    = get_the_title( esc_html( $post_ID ) );
 		$title_id         = sanitize_title( 'title-' . $posttype . '-' . $post_ID );
 		$section_text     = get_the_excerpt( $post_ID );
 		$block_id         = sanitize_title( 'related_' . $post_ID );
-		$image            = wp_get_attachment_image_src( get_post_thumbnail_id( $post_ID ), 'large' );
-		$imageplaceholder = '';
 		$section_meta     = '';
 
 		if ( 'post' === get_post_type() ) {
 			$section_meta = get_the_author( $post_ID ) . ' - ' . do_shortcode( '[post_date]' );
 		}
 
-		if ( $image[0] || $posttype === 'beeld' ) { // apparently beeld has another image?
-			$imageplaceholder = '<div class="card__image"></div>';
-			$has_image        = TRUE;
-		}
+		$return = '<div class="card ' . ( has_post_thumbnail( $post_ID ) ? 'card--featured-image card--with-image ' : '' ) . $posttype . '" id="' . $block_id . '">';
 
-		$return = '<div class="card ' . ( $has_image ? 'card--featured-image ' : '' ) . $posttype . '" id="' . $block_id . '">';
-		$return .= $imageplaceholder;
+		if ( has_post_thumbnail( $post_ID ) ) {
+			$return .= '  <div class="card__image">';
+			$return .= get_the_post_thumbnail( $post_ID, 'thumb-cardv3' );
+			$return .= '  </div>';
+		}		
 		$return .= '<div class="card__content">';
-		$return .= '<h2 id="' . $title_id . '" class="card__title"><a class="arrow-link" href="' . get_permalink( $post_ID ) . '">';
-		$return .= '<span class="arrow-link__text">' . od_wbvb_custom_post_title( $section_title ) . '</span><span class="arrow-link__icon"></span></a></h2>';
+		$return .= '<' . $args['titletag'] . ' id="' . $title_id . '" class="card__title"><a class="arrow-link" href="' . get_permalink( $post_ID ) . '">';
+		$return .= '<span class="arrow-link__text">' . od_wbvb_custom_post_title( $section_title ) . '</span><span class="arrow-link__icon"></span></a></' . $args['titletag'] . '>';
 		$return .= $section_meta;
-		$return .= '<p class="card__description">';
-		$return .= $section_text;
-		$return .= '</p>';
+
+		if ( GC_BEELDBANK_BEELD_CPT === $posttype ) { 
+			// geen beschrijving tonen voor beelden
+		}
+		else {
+			$return .= '<p class="card__description">';
+			$return .= $section_text;
+			$return .= '</p>';
+		}
+		
 		$return .= '</div>'; // .card__content
 		$return .= '</div>'; // .card
 
-		return $return;
+		if (  $args['echo'] ) {
+			echo $return;
+		}
+		else {
+			return $return;
+		}
 
 	}
 
