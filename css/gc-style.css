@@ -203,6 +203,10 @@ Imports
     max-width: 50rem;
   }
 }
+.site-container {
+  width: 100%;
+  overflow-x: hidden;
+}
 .site-header {
   padding: 0 2rem;
 }
@@ -6661,12 +6665,12 @@ h2.author-box-title + p {
 .btn--trigger-open {
   display: block;
 }
-.btn--read-more {
+.btn--readmore {
   font-family: 'montserratsemibold', Helvetica, Arial, sans-serif;
 }
-.btn--read-more:hover,
-.btn--read-more:focus,
-.btn--read-more:active {
+.btn--readmore:hover,
+.btn--readmore:focus,
+.btn--readmore:active {
   text-decoration: none;
 }
 /*
@@ -7701,6 +7705,9 @@ h2.author-box-title + p {
     padding-left: 3rem;
     padding-right: 3rem;
   }
+}
+.text-block.l-bg-white {
+  background: #fff;
 }
 .text-block.l-bg-primary .btn--primary,
 .text-block.l-bg-secondary .btn--primary {
