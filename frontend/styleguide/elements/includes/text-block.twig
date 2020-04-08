@@ -1,0 +1,20 @@
+
+
+<section aria-labelledby="wat-levert-het-op" class="text-block{{ modifier }}">
+
+    <h2 class="text-block__title">
+        {% if tb_title %}
+            {{ tb_title }}
+        {% else %}
+            Wat levert het op?
+        {% endif %}
+    </h2>
+    {% if descr %}
+        <p>{{ descr }}</p>
+    {% else %}
+        <p>Vivamus suscipit tortor eget felis porttitor volutpat. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus suscipit tortor eget felis porttitor volutpat. Nulla quis lorem ut libero malesuada feugiat.</p>
+    {% endif %}
+
+    {% if link_primary %}<a href="#" class="btn btn--primary">{{ link_primary }}</a>{% endif %}
+    {% if link_secondary %}<a href="#" class="btn btn--read-more">{{ link_secondary }}</a>{% endif %}
+</section>
