@@ -21,8 +21,6 @@ remove_action( 'genesis_loop', 'genesis_do_loop' );
 
 add_action( 'genesis_loop', 'gc_page_template_loop', 10 );
 
-add_action( 'wp_enqueue_scripts', 'ictu_gc_append_header_css_local' );
-
 // relevante content en externe links toevoegen
 // @since	  4.2.2
 add_action( 'wp_enqueue_scripts', 'ictu_gctheme_frontend_general_get_related_content_headercss' );
