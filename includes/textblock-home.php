@@ -159,7 +159,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 					'id'    => '',
 				),
 				'collapsed'         => 'field_5e8af09948ad7',
-				'min'               => 1,
+				'min'               => 0,
 				'max'               => 3,
 				'layout'            => 'row',
 				'button_label'      => 'Blok toevoegen',
