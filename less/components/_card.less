@@ -182,12 +182,6 @@
       .card__image {
         width: 40%;
         height: 100%;
-
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
       }
 
       .card__content {
@@ -214,20 +208,78 @@
       }
     }
   }
+
+	.grid--col-2 &,
+	.grid--col-3 &,
+	.grid--col-4 & {
+		&.beeld .card__image {
+			// een beeld wordt getoond in z'n geheel met zo min mogelijk wegsnijden
+			width: 18rem;
+			height: 15rem;
+			margin: 2rem auto 2rem;
+			img {
+				object-fit: contain;
+			}
+		}
+	}
 }
 
+.card--featured-image.brief {
+	// (PvB): deze mixin geeft een fijne ruimte om de afbeelding heen en een fijne HEMA-pantybruine kleur
+	// ik heb deze uit de beeldbank hierheen gekopieerd, want op de overzichtspagina kunnen ook 
+	// beelden getoond worden en deze overzichtspagina is gc-generiek
+	.gc-beeldbank-card();
+}
+
+// ook gekopieerd uit de beeldbank:
+.card--featured-image.beeld {
+	.card__content {
+	padding-left: 2rem;
+	padding-right: 2rem;
+	}
+	
+	.card__title {
+		.font-size(20);
+		line-height: 2.8rem;
+		border-top: .1rem solid @border_color;
+		
+		a {
+			padding-top: 1.2rem;
+			
+			&:hover,
+			&:focus {
+				.arrow-link__icon {
+					border-color: transparent;
+					box-shadow: none;
+				}
+			}
+		}
+	}
+	
+	.card__image {
+		height: 12em;
+		background-size: 60% auto;
+		
+		&:before {
+			display: none;
+		}
+	}
+}
+	
+	
+	
 .card.no-image {
-  .gc-padding;
-  align-items: flex-start;
-
-  @media @desktop {
-    padding: 3rem;
-  }
-
-  .card__title,
-  h2,
-  h3 {
-    font-family: @font_secondary;
-  }
+	.gc-padding(); // oi, voeg () toe om 'm herkenbaar te houden als mixin
+	align-items: flex-start;
+	
+	@media @desktop {
+		padding: 3rem;
+	}
+	
+	.card__title,
+	h2,
+	h3 {
+		font-family: @font_secondary;
+	}
 }
-
+	
