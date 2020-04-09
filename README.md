@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-4.3.7 - Spotlight-component toegevoegd; tekstblok-component voor home toegevoegd.
+4.3.8 - Inladen CSS herzien; layout voor overzichtspagina herzien.
 
 ## Version history
+* 4.3.8 - Inladen CSS herzien; layout voor overzichtspagina herzien.
 * 4.3.7 - Spotlight-component toegevoegd; tekstblok-component voor home toegevoegd.
 * 4.3.6 - Nieuwe beeldformaten toegevoegd. single / detailpagina's met kader. Steplist toegevoegd.
 * 4.3.5 - Verbeteringen search en niet meer dubbel tonen van leden actieteam.

@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.3.7
-// @desc.   Spotlight-component toegevoegd; tekstblok-component voor home toegevoegd.
+// @version 4.3.8
+// @desc.   Volgorde laden stylesheets herzien; Inladen CSS herzien; layout voor overzichtspagina herzien.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 //========================================================================================================
@@ -109,11 +109,6 @@ function gc_wbvb_show_page_overzichtspagina() {
 function ictu_gc_append_header_css_local() {
 
 	global $post;
-
-	wp_enqueue_style(
-		ID_BLOGBERICHTEN_CSS,
-		WBVB_THEMEFOLDER . '/css/blogberichten.css?v=' . CHILD_THEME_VERSION
-	);
 
 	$header_css          = '';
 	$currentpageID       = get_the_id();
@@ -232,7 +227,7 @@ function ictu_gc_append_header_css_local() {
 	}
 
 	if ( $header_css ) {
-		wp_add_inline_style( ID_BLOGBERICHTEN_CSS, $header_css );
+		wp_add_inline_style( ID_SKIPLINKS, $header_css );
 	}
 
 }
