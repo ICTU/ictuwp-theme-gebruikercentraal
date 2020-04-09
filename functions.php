@@ -1495,7 +1495,6 @@ function gc_wbvb_add_blog_archive_css() {
 			$extra_class  = '';
 			$class        = 'feature-image noimage';
 			$image        = '';
-			$bluh         = '';
 
 			$BLOGBERICHTEN_CSS .= '/* gc_wbvb_add_blog_archive_css: ' . sanitize_title( $the_image_ID ) . " */\n";
 
@@ -1513,13 +1512,18 @@ function gc_wbvb_add_blog_archive_css() {
 
 						foreach ( $imgbreakpoints as $breakpoint ) {
 
+echo '<pre>';
+var_dump( $breakpoint );
+echo '</pre>';
+
+
 							$breakpointcounter ++;
 
 							$theID2 = $theID;
 
-							if ( $breakpointcounter === 1 ) {
-								$theID2 = $theID . '.feature-image';
-							}
+//							if ( $breakpointcounter === 1 ) {
+//								$theID2 = $theID . '.feature-image';
+//							}
 							$image             = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), $breakpoint['img_size_archive_list'] );
 							$BLOGBERICHTEN_CSS .= '@media only screen and (' . $breakpoint['direction'] . '-width: ' . $breakpoint['width'] . " ) {\n";
 							$BLOGBERICHTEN_CSS .= ' #' . $theID2 . " { \n";
@@ -2510,7 +2514,6 @@ function gc_wbvb_archive_loop() {
 			$the_image_ID   = 'image_' . $theID; // HIERO, the loop
 			$extra_cssclass = ' ' . $posttype;
 			$class          = 'feature-image noimage';
-			$bluh           = '';
 			$image          = [];
 
 			// check of het eerste bericht een enorme afbeelding heeft
@@ -2523,7 +2526,6 @@ function gc_wbvb_archive_loop() {
 						$class = 'feature-image has-image';
 						if ( 'post' == $posttype ) {
 							$extra_cssclass .= ' enorm-huge';
-							$bluh           = sanitize_title( $image[0] );
 						}
 					} else {
 
@@ -2531,7 +2533,6 @@ function gc_wbvb_archive_loop() {
 
 						if ( isset( $image[0] ) ) {
 							$class = 'feature-image has-image';
-							$bluh  = sanitize_title( $image[0] );
 						}
 					}
 				}
@@ -2553,17 +2554,21 @@ function gc_wbvb_archive_loop() {
 
 				}
 
-				if ( isset( $image[0] ) ) {
-					$bluh = sanitize_title( $image[0] );
-				}
-
 			}
 
-			echo '<section class="entry teaser' . $extra_cssclass . ( $bluh ? ' teaser--with-image' : ' teaser--without-image' ) . '" itemscope itemtype="http://schema.org/SocialMediaPosting" id="' . $theID . '">';
+			echo '<section class="entry teaser' . $extra_cssclass . ( has_post_thumbnail( $getid ) ? ' teaser--with-image' : ' teaser--without-image' ) . '" itemscope itemtype="http://schema.org/SocialMediaPosting" id="' . $theID . '">';
 			echo '<a href="' . $permalink . '" itemprop="url" class="teaser__link">';
-			if ( $bluh ) {
-				echo '<div id="' . $the_image_ID . '" class="feature-image teaser__image" data-bluh="' . $bluh . '">&nbsp;</div>';
+
+			if ( $countertje == 1 && 'post' === get_post_type() ) {
+				// voor de eerste post is voor zover ik nu weet geen styling, dus ik skip het uitschrijven van het plaatje en
+				// laat dit nu even zitten voor wat het is.
+			} elseif ( has_post_thumbnail( $getid ) ) {
+				echo '  <div class="feature-image teaser__image">';
+//				echo get_the_post_thumbnail( $getid, 'thumb-cardv3' ); // dit beeldformaat is ongelimiteerd breed en max. 600px hoog
+				echo get_the_post_thumbnail( $getid, BLOG_SINGLE_DESKTOP ); // dit beeldformaat is max. 380px breed en ongelimiteerd hoog
+				echo '  </div>';
 			}
+				
 			echo '<div class="bloginfo">';
 
 			if ( date( "Y" ) == get_the_date( 'Y' ) ) {
