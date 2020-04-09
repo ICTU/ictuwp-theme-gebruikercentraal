@@ -90,7 +90,10 @@ if ( ! defined( 'GC_TAX_LICENTIE' ) ) {
 if ( ! defined( 'GC_TAX_ORGANISATIE' ) ) {
 	define( 'GC_TAX_ORGANISATIE', 'organisatie' );
 }
-
+if ( ! defined( 'GC_TAX_BRIEFTYPE' ) ) {
+	// wordt gebruikt op de beeldbank
+	define( 'GC_TAX_BRIEFTYPE', 'brieftype' );
+}
 
 if ( ! defined( 'ICTU_GC_CPT_STAP' ) ) {
 	define( 'ICTU_GC_CPT_STAP', 'stap' );   // slug for custom taxonomy 'document'
@@ -599,8 +602,22 @@ function gc_wbvb_post_append_postinfo( $post_info ) {
 					return do_shortcode( '[post_terms taxonomy="' . GC_TAX_LICENTIE . '" before=""] - [post_terms taxonomy="' . GC_TAX_ORGANISATIE . '" before=""]' );
 				}
 			} elseif ( GC_BEELDBANK_BRIEF_CPT == get_post_type() ) {
+				// toon info over een brief: taxonomie organisatie en brieftype
 				if ( is_single() ) {
-					return do_shortcode( '[post_terms taxonomy="' . GC_TAX_ORGANISATIE . '" before=""]' );
+					$term1 = do_shortcode( '[post_terms taxonomy="' . GC_TAX_ORGANISATIE . '" before=""]' );
+					$term2 = do_shortcode( '[post_terms taxonomy="' . GC_TAX_BRIEFTYPE . '" before=""]' );
+					if ( $term1 ) {
+						$term1 = '<span class="meta-data__item">' . $term1 . '</span>';
+					}
+					if ( $term2 ) {
+						$term2 = '<span class="meta-data__item">' . $term2 . '</span>';
+					}
+					if ( $term1 || $term1 ) {
+						return '<span class="metadata">' . $term1 . $term2 . '</span>';
+					}
+					else {
+						return '';
+					}
 				}
 			} elseif ( 'post' == get_post_type() ) {
 				if ( is_single() ) {
