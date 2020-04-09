@@ -282,7 +282,16 @@ if ( ! function_exists( 'ictu_gctheme_card_featuredimage' ) ) :
 		$section_meta     = '';
 
 		if ( 'post' === get_post_type() ) {
-			$section_meta = get_the_author( $post_ID ) . ' - ' . do_shortcode( '[post_date]' );
+//			$section_meta = get_the_author( $post_ID ) . ' - ' . do_shortcode( '[post_date]' );
+			
+
+			$section_meta = 	'		<div class="meta-data">';
+			$section_meta .=	'			<span class="meta-data__item" itemprop="datePublished" content="' . get_the_date( 'Y-m-d' ) . '">' . get_the_date() . '</span>';
+			$section_meta .=	'			<span class="meta-data__item" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">' . get_the_author_meta( 'nicename' ) . '</span></span>';
+			$section_meta .=	'  	</div>';
+
+
+
 		}
 
 		$return = '<div class="card ' . ( has_post_thumbnail( $post_ID ) ? 'card--featured-image card--with-image ' : '' ) . $posttype . '" id="' . $block_id . '">';
@@ -295,7 +304,6 @@ if ( ! function_exists( 'ictu_gctheme_card_featuredimage' ) ) :
 		$return .= '<div class="card__content">';
 		$return .= '<' . $args['titletag'] . ' id="' . $title_id . '" class="card__title"><a class="arrow-link" href="' . get_permalink( $post_ID ) . '">';
 		$return .= '<span class="arrow-link__text">' . od_wbvb_custom_post_title( $section_title ) . '</span><span class="arrow-link__icon"></span></a></' . $args['titletag'] . '>';
-		$return .= $section_meta;
 
 		if ( GC_BEELDBANK_BEELD_CPT === $posttype ) { 
 			// geen beschrijving tonen voor beelden
@@ -306,6 +314,7 @@ if ( ! function_exists( 'ictu_gctheme_card_featuredimage' ) ) :
 			$return .= '</p>';
 		}
 		
+		$return .= $section_meta;
 		$return .= '</div>'; // .card__content
 		$return .= '</div>'; // .card
 
@@ -331,11 +340,6 @@ endif;
 function ictu_gctheme_card_append_header_css() {
 
 	global $post;
-
-	wp_enqueue_style(
-		ID_BLOGBERICHTEN_CSS,
-		WBVB_THEMEFOLDER . '/css/blogberichten.css?v=' . CHILD_THEME_VERSION
-	);
 
 	$header_css          = '/* ictu_gctheme_card_append_header_css */ ';
 	$acfid               = get_the_id();
@@ -391,7 +395,7 @@ function ictu_gctheme_card_append_header_css() {
 	}
 
 	if ( $header_css ) {
-		wp_add_inline_style( ID_BLOGBERICHTEN_CSS, $header_css );
+		wp_add_inline_style( ID_SKIPLINKS, $header_css );
 	}
 
 }
