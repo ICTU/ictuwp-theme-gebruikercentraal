@@ -57,7 +57,6 @@ if ( ! function_exists( 'ictu_gctheme_frontend_general_get_textblocks' ) ) :
 		// Parse incoming $args into an array and merge it with $defaults
 		$args = wp_parse_args( $args, $defaults );
 
-
 		if ( function_exists( 'get_field' ) ) {
 
 			$textblocks = get_field( 'textblocks', $post->ID );
@@ -65,9 +64,9 @@ if ( ! function_exists( 'ictu_gctheme_frontend_general_get_textblocks' ) ) :
 			if ( $textblocks ):
 
 				// count the items
-				$countcount    = count( $textblocks );
+				$countcount = count( $textblocks );
 
-				$return = '<section class="section section--text-blocks l-item-count-'. $countcount.'">';
+				$return = '<section class="section section--text-blocks l-item-count-' . $countcount . '">';
 				$return .= '<div class="l-section-content">';
 
 				while ( have_rows( 'textblocks' ) ): the_row();
@@ -78,8 +77,8 @@ if ( ! function_exists( 'ictu_gctheme_frontend_general_get_textblocks' ) ) :
 					$title_id          = sanitize_title( $textblock_title . '-title' );
 
 					// Add class for color if value not is none
-					if(!(get_sub_field( 'textblock_class') === 'none')) {
-						$textblock_class .= ' '.get_sub_field( 'textblock_class');
+					if ( ! ( get_sub_field( 'textblock_class' ) === 'none' ) ) {
+						$textblock_class .= ' ' . get_sub_field( 'textblock_class' );
 					}
 
 					$return .= '<section aria-labelledby="' . $title_id . '" class="' . $textblock_class . '">';
@@ -155,7 +154,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 					'id'    => '',
 				),
 				'collapsed'         => 'field_5e8af09948ad7',
-				'min'               => 1,
+				'min'               => 0,
 				'max'               => 3,
 				'layout'            => 'row',
 				'button_label'      => 'Blok toevoegen',

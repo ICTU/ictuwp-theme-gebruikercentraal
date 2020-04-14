@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.3.7
-// @desc.   Spotlight-component toegevoegd; tekstblok-component voor home toegevoegd.
+// @version 4.3.8
+// @desc.   Volgorde laden stylesheets herzien; Inladen CSS herzien; layout voor overzichtspagina herzien.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '4.3.7' );
-define( 'CHILD_THEME_DESCRIPTION', "4.3.7 - Spotlight-component toegevoegd; tekstblok-component voor home toegevoegd." );
+define( 'CHILD_THEME_VERSION', '4.3.8' );
+define( 'CHILD_THEME_DESCRIPTION', "4.3.8 - Volgorde laden stylesheets herzien; Inladen CSS herzien; layout voor overzichtspagina herzien." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -90,7 +90,10 @@ if ( ! defined( 'GC_TAX_LICENTIE' ) ) {
 if ( ! defined( 'GC_TAX_ORGANISATIE' ) ) {
 	define( 'GC_TAX_ORGANISATIE', 'organisatie' );
 }
-
+if ( ! defined( 'GC_TAX_BRIEFTYPE' ) ) {
+	// wordt gebruikt op de beeldbank
+	define( 'GC_TAX_BRIEFTYPE', 'brieftype' );
+}
 
 if ( ! defined( 'ICTU_GC_CPT_STAP' ) ) {
 	define( 'ICTU_GC_CPT_STAP', 'stap' );   // slug for custom taxonomy 'document'
@@ -599,8 +602,22 @@ function gc_wbvb_post_append_postinfo( $post_info ) {
 					return do_shortcode( '[post_terms taxonomy="' . GC_TAX_LICENTIE . '" before=""] - [post_terms taxonomy="' . GC_TAX_ORGANISATIE . '" before=""]' );
 				}
 			} elseif ( GC_BEELDBANK_BRIEF_CPT == get_post_type() ) {
+				// toon info over een brief: taxonomie organisatie en brieftype
 				if ( is_single() ) {
-					return do_shortcode( '[post_terms taxonomy="' . GC_TAX_ORGANISATIE . '" before=""]' );
+					$term1 = do_shortcode( '[post_terms taxonomy="' . GC_TAX_ORGANISATIE . '" before=""]' );
+					$term2 = do_shortcode( '[post_terms taxonomy="' . GC_TAX_BRIEFTYPE . '" before=""]' );
+					if ( $term1 ) {
+						$term1 = '<span class="meta-data__item">' . $term1 . '</span>';
+					}
+					if ( $term2 ) {
+						$term2 = '<span class="meta-data__item">' . $term2 . '</span>';
+					}
+					if ( $term1 || $term1 ) {
+						return '<span class="metadata">' . $term1 . $term2 . '</span>';
+					}
+					else {
+						return '';
+					}
 				}
 			} elseif ( 'post' == get_post_type() ) {
 				if ( is_single() ) {
@@ -1225,12 +1242,7 @@ function gc_wbvb_add_pageheader_css() {
 	if ( is_singular( ICTU_GCCONF_CPT_SPEAKER ) ) {
 		return;
 	}
-	/*
-		wp_enqueue_style(
-			ID_SINGLE_CSS,
-			WBVB_THEMEFOLDER . '/blogberichten.css?v=' . CHILD_THEME_VERSION
-		);
-	*/
+
 	$BLOGBERICHTEN_CSS = '';
 
 
@@ -1296,14 +1308,8 @@ function gc_wbvb_add_blog_single_css() {
 	if ( is_singular( ICTU_GCCONF_CPT_SPEAKER ) ) {
 		return;
 	}
-	/*
-		wp_enqueue_style(
-			ID_SINGLE_CSS,
-			WBVB_THEMEFOLDER . '/blogberichten.css?v=' . CHILD_THEME_VERSION
-		);
-	*/
-	$BLOGBERICHTEN_CSS = '';
 
+	$BLOGBERICHTEN_CSS = '';
 
 	if ( have_posts() ) :
 
@@ -1428,12 +1434,7 @@ function gc_wbvb_add_berichten_widget_css() {
 
 
 	$sidebarposts = new WP_query( $args );
-	/*
-		wp_enqueue_style(
-			ID_BLOG_WIDGET_CSS,
-			WBVB_THEMEFOLDER . '/css/blanco.css'
-		);
-	*/
+
 	$custom_css = '';
 
 	$countertje = 0; // Run your normal loop
@@ -1475,13 +1476,6 @@ function gc_wbvb_add_berichten_widget_css() {
 function gc_wbvb_add_blog_archive_css() {
 
 	global $imgbreakpoints;
-	/*
-		wp_enqueue_style(
-			ID_BLOGBERICHTEN_CSS,
-			WBVB_THEMEFOLDER . '/blogberichten.css?v=' . CHILD_THEME_VERSION
-		);
-	*/
-
 
 	$BLOGBERICHTEN_CSS = '';
 	$countertje        = 0;
@@ -1592,11 +1586,16 @@ function gc_wbvb_add_blog_archive_css() {
 
 function gc_wbvb_add_css() {
 
+//			$dependencies = array( ID_SKIPLINKS );
+			$dependencies = array( );
 
 	wp_enqueue_style(
 		ID_SKIPLINKS,
-		get_stylesheet_directory_uri() . '/css/gc-style.css?v=' . CHILD_THEME_VERSION
-	);
+		get_stylesheet_directory_uri() . '/css/gc-style.css',
+		$dependencies,
+		CHILD_THEME_VERSION,
+    	'all'
+    );
 
 	$custom_css = '
 	ul#' . ID_SKIPLINKS . ', ul#' . ID_SKIPLINKS . ' li {

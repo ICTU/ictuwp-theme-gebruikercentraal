@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.3.7
-// @desc.   Spotlight-component toegevoegd; tekstblok-component voor home toegevoegd.
+// @version 4.3.8
+// @desc.   Volgorde laden stylesheets herzien; Inladen CSS herzien; layout voor overzichtspagina herzien.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -20,8 +20,6 @@
 remove_action( 'genesis_loop', 'genesis_do_loop' );
 
 add_action( 'genesis_loop', 'gc_page_template_loop', 10 );
-
-add_action( 'wp_enqueue_scripts', 'ictu_gc_append_header_css_local' );
 
 // relevante content en externe links toevoegen
 // @since	  4.2.2
@@ -46,11 +44,6 @@ genesis();
 function ictu_gc_append_header_css_local() {
 
 	global $post;
-
-	wp_enqueue_style(
-		ID_BLOGBERICHTEN_CSS,
-		WBVB_THEMEFOLDER . '/css/blogberichten.css?v=' . CHILD_THEME_VERSION
-	);
 
 	$header_css          = '';
 	$currentpageID       = get_the_id();
@@ -141,7 +134,7 @@ function ictu_gc_append_header_css_local() {
 	}
 
 	if ( $header_css ) {
-		wp_add_inline_style( ID_BLOGBERICHTEN_CSS, $header_css );
+		wp_add_inline_style( ID_SKIPLINKS, $header_css );
 	}
 
 }
@@ -160,12 +153,15 @@ function gc_page_template_loop() {
 	global $post;
 
 	$currentpageID = get_the_id();
+	$content      	= $post->post_content;
+	$pageid_beelden	= 0;
+	$hoofdcontent 	= apply_filters( 'the_content', $content );
+	$inleiding		= get_field( 'overzichtspagina_inleiding', $currentpageID );
 
-
-	$content      = $post->post_content;
-	$hoofdcontent = apply_filters( 'the_content', $content );
-
-	$inleiding = get_field( 'overzichtspagina_inleiding', $currentpageID );
+	if ( get_field( 'beelden_page_overview', 'option' ) ) {
+		// kijken of er een pagina is aangewezen die een overzicht geeft van alle beelden
+		$pageid_beelden = get_field( 'beelden_page_overview', 'option' );
+	}
 
 	echo '<article class="page entry">';
 
@@ -198,6 +194,11 @@ function gc_page_template_loop() {
 				$columncounter = 'grid--col-3';
 			}
 
+			if ( intval( $pageid_beelden ) === intval( $currentpageID ) ) {
+				// deze pagina is de overzichtspagina voor beelden
+				// dus een vierkoloms-grid
+				$columncounter = 'grid--col-4';
+			}
 
 			echo '<div class="grid ' . $columncounter . '">';
 
@@ -280,6 +281,12 @@ function gc_page_template_loop() {
 				$columncounter = 'grid--col-2';
 			} elseif ( $countcount > 2 ) {
 				$columncounter = 'grid--col-3';
+			}
+
+			if ( intval( $pageid_beelden ) === intval( $currentpageID ) ) {
+				// deze pagina is de overzichtspagina voor beelden
+				// dus een vierkoloms-grid
+				$columncounter = 'grid--col-4';
 			}
 
 			echo '<div class="grid ' . $columncounter . '">';

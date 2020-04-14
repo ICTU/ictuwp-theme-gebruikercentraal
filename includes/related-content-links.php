@@ -1,22 +1,20 @@
 <?php
 
-///
-// * Gebruiker Centraal - related-content-links.php
-// * ----------------------------------------------------------------------------------
-// * Functies voor het tonen van gerelateerde content en gerelateerde (externe) links.
-// *
-// * Deze functies worden gebruikt in het GC theme en in plugins.
-// * - ictu-gc-posttypes-brieven-beelden
-// * - ictu-gc-posttypes-inclusie
-// * ----------------------------------------------------------------------------------
-// * @package gebruiker-centraal
-// * @author  Paul van Buuren
-// * @license GPL-2.0+
-// * @version 4.1.3
-// * @since   4.1.1
-// * @desc.   Copied styling for .cards and various subsets from inclusie to gc-theme.
-// * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
-///
+// Gebruiker Centraal - related-content-links.php
+// ----------------------------------------------------------------------------------
+// Functies voor het tonen van gerelateerde content en gerelateerde (externe) links.
+//
+// Deze functies worden gebruikt in het GC theme en in plugins.
+// - ictu-gc-posttypes-brieven-beelden
+// - ictu-gc-posttypes-inclusie
+// ----------------------------------------------------------------------------------
+// @package gebruiker-centraal
+// @author  Paul van Buuren
+// @license GPL-2.0+
+// @version 4.3.8
+// @since   4.1.1
+// @desc.   Volgorde laden stylesheets herzien; Inladen CSS herzien; layout voor overzichtspagina herzien.
+// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
 
@@ -81,13 +79,8 @@ if ( !function_exists( 'ictu_gctheme_frontend_general_get_related_content_header
 	    } // if ( function_exists( 'get_field' ) ) {
 
     if ($header_css) {
-
-		wp_enqueue_style(
-			ID_BLOGBERICHTEN_CSS,
-			WBVB_THEMEFOLDER . '/css/blogberichten.css?v=' . CHILD_THEME_VERSION
-		);
 	    
-        wp_add_inline_style(ID_BLOGBERICHTEN_CSS, $header_css);
+        wp_add_inline_style(ID_SKIPLINKS, $header_css);
     }
 
     

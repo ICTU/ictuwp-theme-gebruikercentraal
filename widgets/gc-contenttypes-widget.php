@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.3.4
-// @desc.   Betere checks op get_field, ofwel: is ACF-plugin actief?
+// @version 4.3.8
+// @desc.   Volgorde laden stylesheets herzien; Inladen CSS herzien; layout voor overzichtspagina herzien.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -162,13 +162,7 @@ function append_header_css_for_gc_beeldbank_homewidget() {
 	}
 	
 	if ( $header_css ) {
-
-		wp_enqueue_style(
-			ID_BLOGBERICHTEN_CSS,
-			WBVB_THEMEFOLDER . '/css/blogberichten.css?v=' . CHILD_THEME_VERSION
-		);
-		
-		wp_add_inline_style( ID_BLOGBERICHTEN_CSS, $header_css );
+		wp_add_inline_style( ID_SKIPLINKS, $header_css );
 	}
 
 }

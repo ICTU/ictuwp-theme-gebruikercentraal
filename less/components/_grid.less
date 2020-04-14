@@ -13,6 +13,26 @@
     margin-right: ( @gutter / -2 );
   }
 
+	&--col-4 {
+		@media only screen and ( min-width: ( @break_phone )) {
+		
+			> div,
+			> section {
+				width: ~"calc(50% - @{gutter})";
+				margin-left: ( @gutter / 2 );
+				margin-right: ( @gutter / 2 );
+			}
+		}
+		
+		@media only screen and ( min-width: ( @break_fullwidth )) {
+			> div,
+			> section {
+				width: ~"calc(25% - @{gutter})";
+			}
+		}
+	}
+
+
   &--col-3 {
 
     @media only screen and ( min-width: ( @break_phone )) {
