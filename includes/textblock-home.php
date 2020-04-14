@@ -136,6 +136,9 @@ endif;
 
 if ( function_exists( 'acf_add_local_field_group' ) ):
 
+
+/*
+
 	acf_add_local_field_group( array(
 		'key'                   => 'group_5e8b140493a09',
 		'title'                 => '03 - tekstblokken voor home',
@@ -319,6 +322,9 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 		'active'                => true,
 		'description'           => '',
 	) );
+
+	*/
+
 
 endif;
 
