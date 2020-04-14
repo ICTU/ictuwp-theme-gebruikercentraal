@@ -234,7 +234,7 @@ if ( ! function_exists( 'ictu_gctheme_card_featuredimage' ) ) :
 			$has_image        = TRUE;
 		}
 
-		$return = '<div class="card ' . ( $has_image ? 'card--featured-image ' : '' ) . $posttype . '" id="' . $block_id . '">';
+		$return = '<div class="card ' . ( $has_image ? 'card--featured-image ' : '' ) . 'card--type-'.$posttype . '" id="' . $block_id . '">';
 		$return .= $imageplaceholder;
 		$return .= '<div class="card__content">';
 		$return .= '<h2 id="' . $title_id . '" class="card__title"><a class="arrow-link" href="' . get_permalink( $post_ID ) . '">';

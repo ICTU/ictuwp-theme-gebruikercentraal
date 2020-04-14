@@ -1,7 +1,6 @@
 @import "../../../less/abstracts/_variables";
 @import "../../../less/abstracts/_mixins";
 
-
 @import "../../../less/components/_stepchart";
 @import "../../../less/components/_stepnav";
 
@@ -174,6 +173,7 @@ h1 {
 
 .page-navigation {
   background: @gc_blue_dark;
+
   .container {
     display: flex;
     align-items: center;
@@ -251,7 +251,7 @@ h1 {
       }
 
       &.back-to-top {
-        margin-top :2rem;
+        margin-top: 2rem;
         border-top: .1rem solid @border_color;
         padding-top: 1rem;
         font-size: @font_small;
@@ -274,6 +274,40 @@ h1 {
       }
     }
   }
+}
+
+.nav-item {
+
+  a {
+    display: flex;
+    padding: .2rem;
+  }
+
+  &.nav-item--main {
+    border-top: .1rem solid @border_color;
+
+    a {
+      padding: 1rem .2rem;
+      font-family: @font_primary_semi;
+    }
+  }
+
+  &.nav-item--sub {
+    padding-left: .3rem;
+    font-size: @font_small;
+
+    .nav-item__ref-number {
+      min-width: 3.7rem;
+    }
+
+    + .nav-item--main {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.nav-item__ref-number {
+  display: inline-block;
 }
 
 .stepchart {

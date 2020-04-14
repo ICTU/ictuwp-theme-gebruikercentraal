@@ -69,11 +69,13 @@
                 <ul class="section-nav nav">
                   <li class="toc-entry toc-h1 nav-item"><a href="#main-content" class="h6 text-secondary"><span class="nav__name">{{ menu_item.header }}</span></a></li>
                   {% for menu_child in menu_item.children %}
-                    <li class="toc-entry toc-h2 nav-item">
-                      <a class="menu-link nav-link" href="#{{ menu_child.referenceURI }}">
-                        <span class="ref sr-only{% if menu_child.isGrandChild %} child{% endif %}">{{ menu_child.referenceNumber }}</span> <span class="nav__name">{{ menu_child.header }}</span>
-                      </a>
+
+                    <li class="nav-item {{ menu_child.isGrandChild ? 'nav-item--sub' : 'nav-item--main' }}">
+                      <a class="nav-item__link" href="#{{ menu_child.referenceURI }}">
+                        <span class="nav-item__ref-number">{{ menu_child.referenceNumber }}</span>
+                        <span class="nav-item__item">{{ menu_child.header }}</span></a>
                     </li>
+
                   {% endfor %}
                   <li class="toc-entry toc-h2">
                     <a href="#main-content" class="back-to-top">
