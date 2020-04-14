@@ -803,6 +803,32 @@
 .section-nav > li.toc-h2 > a {
   padding-left: 2rem;
 }
+.nav-item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.2rem;
+}
+.nav-item.nav-item--main {
+  border-top: 0.1rem solid #D1DFE3;
+}
+.nav-item.nav-item--main a {
+  padding: 1rem 0.2rem;
+  font-family: 'montserratsemibold', Helvetica, Arial, sans-serif;
+}
+.nav-item.nav-item--sub {
+  padding-left: 0.3rem;
+  font-size: 1.4rem;
+}
+.nav-item.nav-item--sub .nav-item__ref-number {
+  min-width: 3.7rem;
+}
+.nav-item.nav-item--sub + .nav-item--main {
+  margin-top: 1rem;
+}
+.nav-item__ref-number {
+  display: inline-block;
+}
 .stepchart {
   margin-top: 0 !important;
 }
