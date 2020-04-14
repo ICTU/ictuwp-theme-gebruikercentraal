@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <title>Gebruiker Centraal Living Styleguide</title>
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <link rel="shortcut icon" href="" type="image/vnd.microsoft.icon" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="../css/gc-style.css"/>
+<link rel="stylesheet" href="../../gebruiker-centraal/frontend/styleguide/css/styleguide.css"/>
+
+  <link rel="stylesheet" href="kss-assets/lib/docs.css">
+  <link rel="stylesheet" href="assets/css/styleguide.css">
+</head>
+<body id="" >
+  <div class="layout-container">
+    <a href="#main-content" class="sr-only sr-only-focusable"> Skip to main content </a>
+      <div class="page-navigation" id="navigation" style="top:0px">
+      <nav role="navigation" aria-labelledby="block-mainnavigation-menu" class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="./" title="Home" rel="home">
+            <img src="assets/images/logo.svg" alt="Gebruiker Centraal Living Styleguide" />
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                              <li class="nav-item"><a class="nav-link is-active " href="section-base.html">Base</a></li>
+                              <li class="nav-item"><a class="nav-link" href="section-components.html">Components</a></li>
+                              <li class="nav-item"><a class="nav-link" href="section-sections.html">Sections</a></li>
+                          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+      <div class="container">
+      <div class="row flex-xl-nowrap">
+                  <div class="d-none d-md-block col-md-3 col-xl-2 bd-toc" id="scrollspy" >
+                                          <div class="btn-group btn-group-sm float-right" role="group" aria-label="Example toolbar">
+                  <a href="#" onclick="event.preventDefault();" data-kss-guides="true" class="btn btn-light btn-guides">
+                    <span class="kss-toolbar__tooltip sr-only">Toggle example guides</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="toggle-guides" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M6,3 L8,3 L8,4 L6,4 L6,3 Z M9,3 L11,3 L11,4 L9,4 L9,3 Z M14,3 L14,7 L11,7 L11,6 L13,6 L13,4 L12,4 L12,3 L14,3 Z M5,6 L7,6 L7,7 L5,7 L5,6 Z M8,6 L10,6 L10,7 L8,7 L8,6 Z M3,4 L3,6 L4,6 L4,7 L2,7 L2,3 L5,3 L5,4 L3,4 Z M6,9 L8,9 L8,10 L6,10 L6,9 Z M9,9 L11,9 L11,10 L9,10 L9,9 Z M14,9 L14,13 L11,13 L11,12 L13,12 L13,10 L12,10 L12,9 L14,9 Z M5,12 L7,12 L7,13 L5,13 L5,12 Z M8,12 L10,12 L10,13 L8,13 L8,12 Z M3,10 L3,12 L4,12 L4,13 L2,13 L2,9 L5,9 L5,10 L3,10 Z M15,1 L1,1 L1,15 L15,15 L15,1 Z M16,0 L16,16 L0,16 L0,0 L16,0 Z"/>
+                      </g>
+                    </svg>
+                  </a>
+                  <a href="#" onclick="event.preventDefault();" data-kss-markup="true" class="btn btn-light btn-markup">
+                    <span class="kss-toolbar__tooltip sr-only">Toggle HTML markup</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="toggle-markup" fill="none" fill-rule="evenodd">
+                        <polygon id="Shape" fill="#000" fill-rule="nonzero" points="10.526 11.711 11.789 12.974 16 8.763 11.789 4.553 10.526 5.816 13.474 8.763"/>
+                        <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.474 5.816 4.211 4.553 0 8.763 4.211 12.974 5.474 11.711 2.526 8.763"/>
+                        <polygon id="Shape" fill="#000" fill-rule="nonzero" points="8.807 4.007 9.721 4.256 7.194 13.52 6.28 13.27 8.807 4.007"/>
+                      </g>
+                    </svg>
+                  </a>
+                </div>
+
+                <ul class="section-nav nav">
+                  <li class="toc-entry toc-h1 nav-item"><a href="#main-content" class="h6 text-secondary"><span class="nav__name">Base</span></a></li>
+                  
+                    <li class="nav-item nav-item--main">
+                      <a class="nav-item__link" href="#base-colors">
+                        <span class="nav-item__ref-number">1.1</span>
+                        <span class="nav-item__item">Kleuren</span></a>
+                    </li>
+
+                  
+                    <li class="nav-item nav-item--sub">
+                      <a class="nav-item__link" href="#base-colors-01gcbase">
+                        <span class="nav-item__ref-number">1.1.1</span>
+                        <span class="nav-item__item">Primaire en secundaire kleuren</span></a>
+                    </li>
+
+                  
+                    <li class="nav-item nav-item--sub">
+                      <a class="nav-item__link" href="#base-colors-02gcweb">
+                        <span class="nav-item__ref-number">1.1.2</span>
+                        <span class="nav-item__item">Webkleuren</span></a>
+                    </li>
+
+                  
+                    <li class="nav-item nav-item--sub">
+                      <a class="nav-item__link" href="#base-colors-bb">
+                        <span class="nav-item__ref-number">1.1.3</span>
+                        <span class="nav-item__item">Beeldbank</span></a>
+                    </li>
+
+                  
+                    <li class="nav-item nav-item--sub">
+                      <a class="nav-item__link" href="#base-colors-inclusie">
+                        <span class="nav-item__ref-number">1.1.4</span>
+                        <span class="nav-item__item">Inclusie</span></a>
+                    </li>
+
+                  
+                    <li class="nav-item nav-item--sub">
+                      <a class="nav-item__link" href="#base-colors-nlds">
+                        <span class="nav-item__ref-number">1.1.5</span>
+                        <span class="nav-item__item">NL Design System</span></a>
+                    </li>
+
+                  
+                    <li class="nav-item nav-item--sub">
+                      <a class="nav-item__link" href="#base-colors-od">
+                        <span class="nav-item__ref-number">1.1.6</span>
+                        <span class="nav-item__item">Optimaal Digitaal</span></a>
+                    </li>
+
+                                    <li class="toc-entry toc-h2">
+                    <a href="#main-content" class="back-to-top">
+                      <span>Back to top</span>
+                    </a>
+                  </li>
+                </ul>
+                                                                                        </div>
+                      <main class="col-12 col-md-9 col-xl-10 py-md-3 bd-content" role="main">
+          <a id="main-content" tabindex="-1"></a>
+            
+                                    <div id="base" class="section section--depth-1 ">
+                            <h1 class="bd-title">
+                Base
+                <a href="#base" class="text-muted">
+                  <small>#
+                    <span class="sr-only">
+                      1 Base
+                    </span>
+                  </small>
+                </a>
+              </h1>
+
+            
+
+            
+            
+
+            
+                      </div>
+                                  <section id="base-colors" class="section section--depth-2 ">
+                            <h2 class="">
+                Kleuren
+                <a href="#base-colors" class="text-muted">
+                  <small>#
+                    <span class="sr-only">
+                      1.1 Base.Colors
+                    </span>
+                  </small>
+                </a>
+              </h2>
+
+            
+
+            
+            
+
+            
+                      </section>
+                                  <section id="base-colors-01gcbase" class="section section--depth-3 ">
+                            <h3 class="">
+                Primaire en secundaire kleuren
+                <a href="#base-colors-01gcbase" class="text-muted">
+                  <small>#
+                    <span class="sr-only">
+                      1.1.1 Base.Colors.01GCBase
+                    </span>
+                  </small>
+                </a>
+              </h3>
+
+                          <div class="btn-group btn-group-sm bd-toolbar" role="group" aria-label="Example toolbar">
+                                  <a href="#base-colors-01gcbase" onclick="event.preventDefault();" data-kss-fullscreen="base-colors-01gcbase" class="btn btn-light btn-fullscreen">
+                    <span class="kss-toolbar__tooltip sr-only">Toggle full screen</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="toggle-full-screen" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M16,0 L16,6.5 L13.5,4 L10.5,7 L9,5.5 L12,2.5 L9.5,0 L16,0 Z M7,10.5 L4,13.5 L6.5,16 L0,16 L0,9.5 L2.5,12 L5.5,9 L7,10.5 Z"/>
+                      </g>
+                    </svg>
+                  </a>
+                  <a href="item-base-colors-01gcbase.html" target="_blank" class="btn btn-light btn-newwindow">
+                    <span class="kss-toolbar__tooltip sr-only">Open in new window</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="new-tab" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M2.85714286,2 L2.85714286,13.1428571 L14,13.1428571 L14,2 L2.85714286,2 Z M13.0714286,12.2142857 L3.78571429,12.2142857 L3.78571429,2.92857143 L13.0714286,2.92857143 L13.0714286,12.2142857 Z M1.92857143,14.0714286 L1.92857143,4.32142857 L1,3.39285714 L1,15 L12.6071429,15 L11.6785714,14.0714286 L1.92857143,14.0714286 Z"/>
+                        <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.179 4.786 7.5 7.107 4.714 9.893 6.107 11.286 8.893 8.5 11.214 10.821 11.214 4.786"/>
+                      </g>
+                    </svg>
+                  </a>
+                                <a href="#base-colors-01gcbase" onclick="event.preventDefault();" data-kss-guides="true" class="btn btn-light btn-guides">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle example guides</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-guides" fill="none" fill-rule="evenodd">
+                      <path id="Shape" fill="#000" fill-rule="nonzero" d="M6,3 L8,3 L8,4 L6,4 L6,3 Z M9,3 L11,3 L11,4 L9,4 L9,3 Z M14,3 L14,7 L11,7 L11,6 L13,6 L13,4 L12,4 L12,3 L14,3 Z M5,6 L7,6 L7,7 L5,7 L5,6 Z M8,6 L10,6 L10,7 L8,7 L8,6 Z M3,4 L3,6 L4,6 L4,7 L2,7 L2,3 L5,3 L5,4 L3,4 Z M6,9 L8,9 L8,10 L6,10 L6,9 Z M9,9 L11,9 L11,10 L9,10 L9,9 Z M14,9 L14,13 L11,13 L11,12 L13,12 L13,10 L12,10 L12,9 L14,9 Z M5,12 L7,12 L7,13 L5,13 L5,12 Z M8,12 L10,12 L10,13 L8,13 L8,12 Z M3,10 L3,12 L4,12 L4,13 L2,13 L2,9 L5,9 L5,10 L3,10 Z M15,1 L1,1 L1,15 L15,15 L15,1 Z M16,0 L16,16 L0,16 L0,0 L16,0 Z"/>
+                    </g>
+                  </svg>
+                </a>
+                <a href="#base-colors-01gcbase" onclick="event.preventDefault();" data-kss-markup="true" class="btn btn-light btn-markup">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle HTML markup</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-markup" fill="none" fill-rule="evenodd">
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="10.526 11.711 11.789 12.974 16 8.763 11.789 4.553 10.526 5.816 13.474 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.474 5.816 4.211 4.553 0 8.763 4.211 12.974 5.474 11.711 2.526 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="8.807 4.007 9.721 4.256 7.194 13.52 6.28 13.27 8.807 4.007"/>
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            
+
+                          <div class="description">
+                <p>De Gebruiker Centraal huisstijlkleuren, ongefilterd voor accessability. Alle gebruikte kleuren zijn afgeleid van deze.</p>
+
+              </div>
+            
+            
+
+                          <div class="bd-example">
+
+                  
+                                      <div class="modifier__example">
+                      
+<h2>Primaire kleuren</h2>
+
+<div class="gc-sg-color-wrapper">
+
+    <div class="kleur">
+
+    <span class="kleur__staaltje gc-green">@gc_green</span>
+    <span class="kleur__naam">GC Groen</span>
+
+            <p class="descr">Dé standaard Gebruiker Centraal Groen</p>
+    </div>
+    <div class="kleur">
+
+    <span class="kleur__staaltje gc-dark-blue">@gc_dark_blue</span>
+    <span class="kleur__naam">GC Dark Blue</span>
+
+            <p class="descr">Wordt gebruikt als tekstkleur en achtergrondkleur</p>
+    </div>
+    <div class="kleur">
+
+    <span class="kleur__staaltje gc-pantybrown">@gc_pantybrown</span>
+    <span class="kleur__naam">GC Pantybrown</span>
+
+            <p class="descr">Achtergondkleur voor web én print</p>
+    </div>
+</div>
+
+<h2>Secundaire kleuren</h2>
+
+<div class="gc-sg-color-wrapper">
+
+    <div class="kleur">
+
+    <span class="kleur__staaltje gc-dark-purple">@gc_dark_purple</span>
+    <span class="kleur__naam">GC Dark Purple</span>
+
+    </div>
+    <div class="kleur">
+
+    <span class="kleur__staaltje gc-blue">@gc_blue</span>
+    <span class="kleur__naam">GC Blue</span>
+
+    </div>
+    <div class="kleur">
+
+    <span class="kleur__staaltje gc-pink">@gc_pink</span>
+    <span class="kleur__naam">GC Pink</span>
+
+    </div>
+    <div class="kleur">
+
+    <span class="kleur__staaltje gc-orange">@gc_orange</span>
+    <span class="kleur__naam">GC Orange</span>
+
+    </div>
+    <div class="kleur">
+
+    <span class="kleur__staaltje gc-cyan">@gc_cyan</span>
+    <span class="kleur__naam">GC Cyan</span>
+
+    </div>
+
+</div>
+
+                      <div class="modifier__example-footer"></div>
+                    </div>
+                  
+                  
+              </div>
+
+                              <details class="highlight">
+                  <summary style="padding: 5px 20px; cursor: pointer;">
+                                          Markup: <code>../elements/base/colors-gc.twig</code>
+                                      </summary>
+                  <pre><code class="language-markup" data-language="html">
+&lt;h2&gt;Primaire kleuren&lt;/h2&gt;
+
+&lt;div class=&quot;gc-sg-color-wrapper&quot;&gt;
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;GC Groen&#039;,
+        &#039;kleurtje&#039;: &#039;gc-green&#039;,
+        &#039;varname&#039;: &#039;@gc_green&#039;,
+        &#039;descr&#039;: &#039;Dé standaard Gebruiker Centraal Groen&#039;} %}
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;GC Dark Blue&#039;,
+        &#039;kleurtje&#039;: &#039;gc-dark-blue&#039;,
+        &#039;varname&#039;: &#039;@gc_dark_blue&#039;,
+        &#039;descr&#039;: &#039;Wordt gebruikt als tekstkleur en achtergrondkleur&#039;} %}
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;GC Pantybrown&#039;,
+        &#039;kleurtje&#039;: &#039;gc-pantybrown&#039;,
+        &#039;varname&#039;: &#039;@gc_pantybrown&#039;,
+        &#039;descr&#039;: &#039;Achtergondkleur voor web én print&#039;} %}
+
+&lt;/div&gt;
+
+&lt;h2&gt;Secundaire kleuren&lt;/h2&gt;
+
+&lt;div class=&quot;gc-sg-color-wrapper&quot;&gt;
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;GC Dark Purple&#039;,
+        &#039;kleurtje&#039;: &#039;gc-dark-purple&#039;,
+        &#039;varname&#039;: &#039;@gc_dark_purple&#039;
+    } %}
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;GC Blue&#039;,
+        &#039;kleurtje&#039;: &#039;gc-blue&#039;,
+        &#039;varname&#039;: &#039;@gc_blue&#039;
+    } %}
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;GC Pink&#039;,
+        &#039;kleurtje&#039;: &#039;gc-pink&#039;,
+        &#039;varname&#039;: &#039;@gc_pink&#039;
+    } %}
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;GC Orange&#039;,
+        &#039;kleurtje&#039;: &#039;gc-orange&#039;,
+        &#039;varname&#039;: &#039;@gc_orange&#039;
+    } %}
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;GC Cyan&#039;,
+        &#039;kleurtje&#039;: &#039;gc-cyan&#039;,
+        &#039;varname&#039;: &#039;@gc_cyan&#039;
+    } %}
+
+
+&lt;/div&gt;
+</code></pre>
+
+                </details>
+              
+            
+                          <small class="text-muted">
+                Source: <code>styleguide/elements/base/colors-gc.scss</code>, line 1
+              </small>
+                      </section>
+                                  <section id="base-colors-02gcweb" class="section section--depth-3 ">
+                            <h3 class="">
+                Webkleuren
+                <a href="#base-colors-02gcweb" class="text-muted">
+                  <small>#
+                    <span class="sr-only">
+                      1.1.2 Base.Colors.02GCWeb
+                    </span>
+                  </small>
+                </a>
+              </h3>
+
+                          <div class="btn-group btn-group-sm bd-toolbar" role="group" aria-label="Example toolbar">
+                                  <a href="#base-colors-02gcweb" onclick="event.preventDefault();" data-kss-fullscreen="base-colors-02gcweb" class="btn btn-light btn-fullscreen">
+                    <span class="kss-toolbar__tooltip sr-only">Toggle full screen</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="toggle-full-screen" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M16,0 L16,6.5 L13.5,4 L10.5,7 L9,5.5 L12,2.5 L9.5,0 L16,0 Z M7,10.5 L4,13.5 L6.5,16 L0,16 L0,9.5 L2.5,12 L5.5,9 L7,10.5 Z"/>
+                      </g>
+                    </svg>
+                  </a>
+                  <a href="item-base-colors-02gcweb.html" target="_blank" class="btn btn-light btn-newwindow">
+                    <span class="kss-toolbar__tooltip sr-only">Open in new window</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="new-tab" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M2.85714286,2 L2.85714286,13.1428571 L14,13.1428571 L14,2 L2.85714286,2 Z M13.0714286,12.2142857 L3.78571429,12.2142857 L3.78571429,2.92857143 L13.0714286,2.92857143 L13.0714286,12.2142857 Z M1.92857143,14.0714286 L1.92857143,4.32142857 L1,3.39285714 L1,15 L12.6071429,15 L11.6785714,14.0714286 L1.92857143,14.0714286 Z"/>
+                        <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.179 4.786 7.5 7.107 4.714 9.893 6.107 11.286 8.893 8.5 11.214 10.821 11.214 4.786"/>
+                      </g>
+                    </svg>
+                  </a>
+                                <a href="#base-colors-02gcweb" onclick="event.preventDefault();" data-kss-guides="true" class="btn btn-light btn-guides">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle example guides</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-guides" fill="none" fill-rule="evenodd">
+                      <path id="Shape" fill="#000" fill-rule="nonzero" d="M6,3 L8,3 L8,4 L6,4 L6,3 Z M9,3 L11,3 L11,4 L9,4 L9,3 Z M14,3 L14,7 L11,7 L11,6 L13,6 L13,4 L12,4 L12,3 L14,3 Z M5,6 L7,6 L7,7 L5,7 L5,6 Z M8,6 L10,6 L10,7 L8,7 L8,6 Z M3,4 L3,6 L4,6 L4,7 L2,7 L2,3 L5,3 L5,4 L3,4 Z M6,9 L8,9 L8,10 L6,10 L6,9 Z M9,9 L11,9 L11,10 L9,10 L9,9 Z M14,9 L14,13 L11,13 L11,12 L13,12 L13,10 L12,10 L12,9 L14,9 Z M5,12 L7,12 L7,13 L5,13 L5,12 Z M8,12 L10,12 L10,13 L8,13 L8,12 Z M3,10 L3,12 L4,12 L4,13 L2,13 L2,9 L5,9 L5,10 L3,10 Z M15,1 L1,1 L1,15 L15,15 L15,1 Z M16,0 L16,16 L0,16 L0,0 L16,0 Z"/>
+                    </g>
+                  </svg>
+                </a>
+                <a href="#base-colors-02gcweb" onclick="event.preventDefault();" data-kss-markup="true" class="btn btn-light btn-markup">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle HTML markup</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-markup" fill="none" fill-rule="evenodd">
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="10.526 11.711 11.789 12.974 16 8.763 11.789 4.553 10.526 5.816 13.474 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.474 5.816 4.211 4.553 0 8.763 4.211 12.974 5.474 11.711 2.526 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="8.807 4.007 9.721 4.256 7.194 13.52 6.28 13.27 8.807 4.007"/>
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            
+
+                          <div class="description">
+                <p>Aanvullende kleuren die worden gebruikt op de websites</p>
+
+              </div>
+            
+            
+
+                          <div class="bd-example">
+
+                  
+                                      <div class="modifier__example">
+                      <div class="gc-sg-color-wrapper">
+
+    <div class="kleur">
+
+    <span class="kleur__staaltje gc-darker-blue">@gc_darkerblue</span>
+    <span class="kleur__naam">GC Darker Blue</span>
+
+            <p class="descr">Wordt bijvoorbeeld gebruikt in de headers en footers</p>
+    </div>
+    <div class="kleur">
+
+    <span class="kleur__staaltje gc-greyblue">@gc_greyblue</span>
+    <span class="kleur__naam">Greyblue</span>
+
+            <p class="descr">Wordt bijvoorbeeld gebruikt voor metadata</p>
+    </div>
+    <div class="kleur">
+
+    <span class="kleur__staaltje gc-blue-x-light">@gc_blue_x_light</span>
+    <span class="kleur__naam">Greyblue Xtra Light</span>
+
+            <p class="descr">Wordt gebruikt voor borders (@border_color) en lichtblauwe achtergronden</p>
+    </div></div>
+
+<div class="gc-sg-color-wrapper">
+
+    <div class="kleur">
+
+    <span class="kleur__staaltje gc-a11y-green">@gc_a11y_green</span>
+    <span class="kleur__naam">GC Accessible Green</span>
+
+            <p class="descr">De accessible variant van GC Groen. Op deze kleur kan je witte tekst gebruiken.</p>
+    </div>
+    <div class="kleur">
+
+    <span class="kleur__staaltje gc-a11y-green-dark">@gc_a11y_green_dark</span>
+    <span class="kleur__naam">GC Accessible Dark Green</span>
+
+            <p class="descr">De nog iets donkerdere accessible groen. Voor als er 2 vlakken groen bij eklaar worden weergegeven, bijvoorbeeld in een button</p>
+    </div>
+    <div class="kleur">
+
+    <span class="kleur__staaltje gc-pantybrown-light">@gc_pantybrown_light</span>
+    <span class="kleur__naam">GC Pantybrown Light</span>
+
+            <p class="descr">Voor iets lichtere achtergronden, bijvoorbeeld bij pagina's.</p>
+    </div>
+    <div class="kleur">
+
+    <span class="kleur__staaltje gc-pantybrown-xlight">@gc_pantybrown_xlight</span>
+    <span class="kleur__naam">GC Pantybrown Xtra Light</span>
+
+            <p class="descr">Voor achtergronden in inhoud, schuine achtergronden of bij cards. Contrasteert iets met Pantybrown Light.</p>
+    </div>
+</div>
+
+                      <div class="modifier__example-footer"></div>
+                    </div>
+                  
+                  
+              </div>
+
+                              <details class="highlight">
+                  <summary style="padding: 5px 20px; cursor: pointer;">
+                                          Markup: <code>../elements/base/colors-web.twig</code>
+                                      </summary>
+                  <pre><code class="language-markup" data-language="html">&lt;div class=&quot;gc-sg-color-wrapper&quot;&gt;
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;GC Darker Blue&#039;,
+        &#039;kleurtje&#039;: &#039;gc-darker-blue&#039;,
+        &#039;varname&#039;: &#039;@gc_darkerblue&#039;,
+        &#039;descr&#039;: &#039;Wordt bijvoorbeeld gebruikt in de headers en footers&#039;} %}
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;Greyblue&#039;,
+        &#039;kleurtje&#039;: &#039;gc-greyblue&#039;,
+        &#039;varname&#039;: &#039;@gc_greyblue&#039;,
+        &#039;descr&#039;: &#039;Wordt bijvoorbeeld gebruikt voor metadata&#039;} %}
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;Greyblue Xtra Light&#039;,
+        &#039;kleurtje&#039;: &#039;gc-blue-x-light&#039;,
+        &#039;varname&#039;: &#039;@gc_blue_x_light&#039;,
+        &#039;descr&#039;: &#039;Wordt gebruikt voor borders (@border_color) en lichtblauwe achtergronden&#039;} %}
+&lt;/div&gt;
+
+&lt;div class=&quot;gc-sg-color-wrapper&quot;&gt;
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;GC Accessible Green&#039;,
+        &#039;kleurtje&#039;: &#039;gc-a11y-green&#039;,
+        &#039;varname&#039;: &#039;@gc_a11y_green&#039;,
+        &#039;descr&#039;: &#039;De accessible variant van GC Groen. Op deze kleur kan je witte tekst gebruiken.&#039;} %}
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;GC Accessible Dark Green&#039;,
+        &#039;kleurtje&#039;: &#039;gc-a11y-green-dark&#039;,
+        &#039;varname&#039;: &#039;@gc_a11y_green_dark&#039;,
+        &#039;descr&#039;: &#039;De nog iets donkerdere accessible groen. Voor als er 2 vlakken groen bij eklaar worden weergegeven, bijvoorbeeld in een button&#039;} %}
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;GC Pantybrown Light&#039;,
+        &#039;kleurtje&#039;: &#039;gc-pantybrown-light&#039;,
+        &#039;varname&#039;: &#039;@gc_pantybrown_light&#039;,
+        &#039;descr&#039;: &#039;Voor iets lichtere achtergronden, bijvoorbeeld bij pagina\&#039;s.&#039;} %}
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;GC Pantybrown Xtra Light&#039;,
+        &#039;kleurtje&#039;: &#039;gc-pantybrown-xlight&#039;,
+        &#039;varname&#039;: &#039;@gc_pantybrown_xlight&#039;,
+        &#039;descr&#039;: &#039;Voor achtergronden in inhoud, schuine achtergronden of bij cards. Contrasteert iets met Pantybrown Light.&#039;} %}
+
+&lt;/div&gt;
+</code></pre>
+
+                </details>
+              
+            
+                          <small class="text-muted">
+                Source: <code>styleguide/elements/base/colors-web.scss</code>, line 1
+              </small>
+                      </section>
+                                  <section id="base-colors-bb" class="section section--depth-3 ">
+                            <h3 class="">
+                Beeldbank
+                <a href="#base-colors-bb" class="text-muted">
+                  <small>#
+                    <span class="sr-only">
+                      1.1.3 Base.Colors.BB
+                    </span>
+                  </small>
+                </a>
+              </h3>
+
+                          <div class="btn-group btn-group-sm bd-toolbar" role="group" aria-label="Example toolbar">
+                                  <a href="#base-colors-bb" onclick="event.preventDefault();" data-kss-fullscreen="base-colors-bb" class="btn btn-light btn-fullscreen">
+                    <span class="kss-toolbar__tooltip sr-only">Toggle full screen</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="toggle-full-screen" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M16,0 L16,6.5 L13.5,4 L10.5,7 L9,5.5 L12,2.5 L9.5,0 L16,0 Z M7,10.5 L4,13.5 L6.5,16 L0,16 L0,9.5 L2.5,12 L5.5,9 L7,10.5 Z"/>
+                      </g>
+                    </svg>
+                  </a>
+                  <a href="item-base-colors-bb.html" target="_blank" class="btn btn-light btn-newwindow">
+                    <span class="kss-toolbar__tooltip sr-only">Open in new window</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="new-tab" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M2.85714286,2 L2.85714286,13.1428571 L14,13.1428571 L14,2 L2.85714286,2 Z M13.0714286,12.2142857 L3.78571429,12.2142857 L3.78571429,2.92857143 L13.0714286,2.92857143 L13.0714286,12.2142857 Z M1.92857143,14.0714286 L1.92857143,4.32142857 L1,3.39285714 L1,15 L12.6071429,15 L11.6785714,14.0714286 L1.92857143,14.0714286 Z"/>
+                        <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.179 4.786 7.5 7.107 4.714 9.893 6.107 11.286 8.893 8.5 11.214 10.821 11.214 4.786"/>
+                      </g>
+                    </svg>
+                  </a>
+                                <a href="#base-colors-bb" onclick="event.preventDefault();" data-kss-guides="true" class="btn btn-light btn-guides">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle example guides</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-guides" fill="none" fill-rule="evenodd">
+                      <path id="Shape" fill="#000" fill-rule="nonzero" d="M6,3 L8,3 L8,4 L6,4 L6,3 Z M9,3 L11,3 L11,4 L9,4 L9,3 Z M14,3 L14,7 L11,7 L11,6 L13,6 L13,4 L12,4 L12,3 L14,3 Z M5,6 L7,6 L7,7 L5,7 L5,6 Z M8,6 L10,6 L10,7 L8,7 L8,6 Z M3,4 L3,6 L4,6 L4,7 L2,7 L2,3 L5,3 L5,4 L3,4 Z M6,9 L8,9 L8,10 L6,10 L6,9 Z M9,9 L11,9 L11,10 L9,10 L9,9 Z M14,9 L14,13 L11,13 L11,12 L13,12 L13,10 L12,10 L12,9 L14,9 Z M5,12 L7,12 L7,13 L5,13 L5,12 Z M8,12 L10,12 L10,13 L8,13 L8,12 Z M3,10 L3,12 L4,12 L4,13 L2,13 L2,9 L5,9 L5,10 L3,10 Z M15,1 L1,1 L1,15 L15,15 L15,1 Z M16,0 L16,16 L0,16 L0,0 L16,0 Z"/>
+                    </g>
+                  </svg>
+                </a>
+                <a href="#base-colors-bb" onclick="event.preventDefault();" data-kss-markup="true" class="btn btn-light btn-markup">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle HTML markup</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-markup" fill="none" fill-rule="evenodd">
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="10.526 11.711 11.789 12.974 16 8.763 11.789 4.553 10.526 5.816 13.474 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.474 5.816 4.211 4.553 0 8.763 4.211 12.974 5.474 11.711 2.526 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="8.807 4.007 9.721 4.256 7.194 13.52 6.28 13.27 8.807 4.007"/>
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            
+
+                          <div class="description">
+                <p>Gebruikte kleuren voor de Beeldbank Subsite. Prefix: <pre>@bb-</pre></p>
+
+              </div>
+            
+            
+
+                          <div class="bd-example">
+
+                  
+                                      <div class="modifier__example">
+                      
+
+<div class="gc-sg-color-wrapper">
+
+    <div class="kleur">
+
+    <span class="kleur__staaltje gc-cyan">@gc_cyan</span>
+    <span class="kleur__naam">Brand kleur</span>
+
+            <p class="descr">Primaire Beeldbank kleur. Wordt gebruikt als achtergrond in de header.</p>
+    </div>
+    <div class="kleur">
+
+    <span class="kleur__staaltje gc-dark-purple">@gc_dark_purple</span>
+    <span class="kleur__naam">Intro + tekstblok kleur</span>
+
+            <p class="descr">Kleur welke wordt gebruikt voor de intro's en tekstblokken met een kleur</p>
+    </div>
+    <div class="kleur">
+
+    <span class="kleur__staaltje gc-pink">@gc_pink</span>
+    <span class="kleur__naam">Knopkleur</span>
+
+            <p class="descr">Kleur welke wordt gebruikt  als achtergrond voor de primary buttons</p>
+    </div>
+</div>
+
+
+                      <div class="modifier__example-footer"></div>
+                    </div>
+                  
+                  
+              </div>
+
+                              <details class="highlight">
+                  <summary style="padding: 5px 20px; cursor: pointer;">
+                                          Markup: <code>../elements/base/colors-bb.twig</code>
+                                      </summary>
+                  <pre><code class="language-markup" data-language="html">
+
+&lt;div class=&quot;gc-sg-color-wrapper&quot;&gt;
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;Brand kleur&#039;,
+        &#039;kleurtje&#039;: &#039;gc-cyan&#039;,
+        &#039;varname&#039;: &#039;@gc_cyan&#039;,
+        &#039;descr&#039;: &#039;Primaire Beeldbank kleur. Wordt gebruikt als achtergrond in de header.&#039;
+    } %}
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;Intro + tekstblok kleur&#039;,
+        &#039;kleurtje&#039;: &#039;gc-dark-purple&#039;,
+        &#039;varname&#039;: &#039;@gc_dark_purple&#039;,
+        &#039;descr&#039;: &#039;Kleur welke wordt gebruikt voor de intro\&#039;s en tekstblokken met een kleur&#039;
+    } %}
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;Knopkleur&#039;,
+        &#039;kleurtje&#039;: &#039;gc-pink&#039;,
+        &#039;varname&#039;: &#039;@gc_pink&#039;,
+        &#039;descr&#039;: &#039;Kleur welke wordt gebruikt  als achtergrond voor de primary buttons&#039;
+    } %}
+
+&lt;/div&gt;
+
+</code></pre>
+
+                </details>
+              
+            
+                          <small class="text-muted">
+                Source: <code>styleguide/elements/base/colors-bb.scss</code>, line 1
+              </small>
+                      </section>
+                                  <section id="base-colors-inclusie" class="section section--depth-3 ">
+                            <h3 class="">
+                Inclusie
+                <a href="#base-colors-inclusie" class="text-muted">
+                  <small>#
+                    <span class="sr-only">
+                      1.1.4 Base.Colors.Inclusie
+                    </span>
+                  </small>
+                </a>
+              </h3>
+
+                          <div class="btn-group btn-group-sm bd-toolbar" role="group" aria-label="Example toolbar">
+                                  <a href="#base-colors-inclusie" onclick="event.preventDefault();" data-kss-fullscreen="base-colors-inclusie" class="btn btn-light btn-fullscreen">
+                    <span class="kss-toolbar__tooltip sr-only">Toggle full screen</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="toggle-full-screen" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M16,0 L16,6.5 L13.5,4 L10.5,7 L9,5.5 L12,2.5 L9.5,0 L16,0 Z M7,10.5 L4,13.5 L6.5,16 L0,16 L0,9.5 L2.5,12 L5.5,9 L7,10.5 Z"/>
+                      </g>
+                    </svg>
+                  </a>
+                  <a href="item-base-colors-inclusie.html" target="_blank" class="btn btn-light btn-newwindow">
+                    <span class="kss-toolbar__tooltip sr-only">Open in new window</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="new-tab" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M2.85714286,2 L2.85714286,13.1428571 L14,13.1428571 L14,2 L2.85714286,2 Z M13.0714286,12.2142857 L3.78571429,12.2142857 L3.78571429,2.92857143 L13.0714286,2.92857143 L13.0714286,12.2142857 Z M1.92857143,14.0714286 L1.92857143,4.32142857 L1,3.39285714 L1,15 L12.6071429,15 L11.6785714,14.0714286 L1.92857143,14.0714286 Z"/>
+                        <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.179 4.786 7.5 7.107 4.714 9.893 6.107 11.286 8.893 8.5 11.214 10.821 11.214 4.786"/>
+                      </g>
+                    </svg>
+                  </a>
+                                <a href="#base-colors-inclusie" onclick="event.preventDefault();" data-kss-guides="true" class="btn btn-light btn-guides">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle example guides</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-guides" fill="none" fill-rule="evenodd">
+                      <path id="Shape" fill="#000" fill-rule="nonzero" d="M6,3 L8,3 L8,4 L6,4 L6,3 Z M9,3 L11,3 L11,4 L9,4 L9,3 Z M14,3 L14,7 L11,7 L11,6 L13,6 L13,4 L12,4 L12,3 L14,3 Z M5,6 L7,6 L7,7 L5,7 L5,6 Z M8,6 L10,6 L10,7 L8,7 L8,6 Z M3,4 L3,6 L4,6 L4,7 L2,7 L2,3 L5,3 L5,4 L3,4 Z M6,9 L8,9 L8,10 L6,10 L6,9 Z M9,9 L11,9 L11,10 L9,10 L9,9 Z M14,9 L14,13 L11,13 L11,12 L13,12 L13,10 L12,10 L12,9 L14,9 Z M5,12 L7,12 L7,13 L5,13 L5,12 Z M8,12 L10,12 L10,13 L8,13 L8,12 Z M3,10 L3,12 L4,12 L4,13 L2,13 L2,9 L5,9 L5,10 L3,10 Z M15,1 L1,1 L1,15 L15,15 L15,1 Z M16,0 L16,16 L0,16 L0,0 L16,0 Z"/>
+                    </g>
+                  </svg>
+                </a>
+                <a href="#base-colors-inclusie" onclick="event.preventDefault();" data-kss-markup="true" class="btn btn-light btn-markup">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle HTML markup</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-markup" fill="none" fill-rule="evenodd">
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="10.526 11.711 11.789 12.974 16 8.763 11.789 4.553 10.526 5.816 13.474 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.474 5.816 4.211 4.553 0 8.763 4.211 12.974 5.474 11.711 2.526 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="8.807 4.007 9.721 4.256 7.194 13.52 6.28 13.27 8.807 4.007"/>
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            
+
+            
+            
+
+                          <div class="bd-example">
+
+                                      <!--<div class="kss-modifier__default-name kss-style">
+                      Default styling
+                    </div>-->
+                  
+                  
+                                      <code class="modifier__name kss-style">
+                      Aanvullende kleuren voor de Inclusie Subsite. Prefix
+                    </code>
+                    <div class="modifier__description kss-style">
+                      @inc-
+                    </div>
+                    <div class="modifier__example">
+                      <h2>Inclusie kleuren</h2>
+
+<div class="gc-sg-color-wrapper">
+
+    <div class="kleur">
+
+    <span class="kleur__staaltje inc-orange">@inc_orange</span>
+    <span class="kleur__naam">Inclusie Orange</span>
+
+            <p class="descr">Inclusie Brandkleur</p>
+    </div></div>
+
+<div class="gc-sg-color-wrapper">
+    <div class="kleur">
+
+    <span class="kleur__staaltje inc-a11y-orange">@inc_a11y_orange</span>
+    <span class="kleur__naam">Brandkleur</span>
+
+            <p class="descr">Primaire brandkleur.</p>
+    </div>
+    <div class="kleur">
+
+    <span class="kleur__staaltje inc-a11y-orange">@inc_a11y_orange</span>
+    <span class="kleur__naam">Brandkleur - Accessible</span>
+
+            <p class="descr">Wanneer je echt witte tekst op de brandkleur wil gebruiken.</p>
+    </div>
+    <div class="kleur">
+
+    <span class="kleur__staaltje gc-a11y-green">@gc_a11y_green</span>
+    <span class="kleur__naam">Intro + tekstblok kleur</span>
+
+            <p class="descr">Kleur welke wordt gebruikt voor de intro's en tekstblokken met een kleur</p>
+    </div>
+    <div class="kleur">
+
+    <span class="kleur__staaltje gc-a11y-green">@gc_a11y_green</span>
+    <span class="kleur__naam">Knopkleur</span>
+
+            <p class="descr">Kleur welke wordt gebruikt als achtergrond voor de primary buttons</p>
+    </div></div>
+
+                    </div>
+                  
+              </div>
+
+                              <details class="highlight">
+                  <summary style="padding: 5px 20px; cursor: pointer;">
+                                          Markup: <code>../elements/base/colors-inclusie.twig</code>
+                                      </summary>
+                  <pre><code class="language-markup" data-language="html">&lt;h2&gt;Inclusie kleuren&lt;/h2&gt;
+
+&lt;div class=&quot;gc-sg-color-wrapper&quot;&gt;
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;Inclusie Orange&#039;,
+        &#039;kleurtje&#039;: &#039;inc-orange&#039;,
+        &#039;varname&#039;: &#039;@inc_orange&#039;,
+        &#039;descr&#039;: &#039;Inclusie Brandkleur&#039;} %}
+&lt;/div&gt;
+
+&lt;div class=&quot;gc-sg-color-wrapper&quot;&gt;
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;Brandkleur&#039;,
+        &#039;kleurtje&#039;: &#039;inc-a11y-orange&#039;,
+        &#039;varname&#039;: &#039;@inc_a11y_orange&#039;,
+        &#039;descr&#039;: &#039;Primaire brandkleur.&#039;} %}
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;Brandkleur - Accessible&#039;,
+        &#039;kleurtje&#039;: &#039;inc-a11y-orange&#039;,
+        &#039;varname&#039;: &#039;@inc_a11y_orange&#039;,
+        &#039;descr&#039;: &#039;Wanneer je echt witte tekst op de brandkleur wil gebruiken.&#039;} %}
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;Intro + tekstblok kleur&#039;,
+        &#039;kleurtje&#039;: &#039;gc-a11y-green&#039;,
+        &#039;varname&#039;: &#039;@gc_a11y_green&#039;,
+        &#039;descr&#039;: &#039;Kleur welke wordt gebruikt voor de intro\&#039;s en tekstblokken met een kleur&#039;} %}
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;Knopkleur&#039;,
+        &#039;kleurtje&#039;: &#039;gc-a11y-green&#039;,
+        &#039;varname&#039;: &#039;@gc_a11y_green&#039;,
+        &#039;descr&#039;: &#039;Kleur welke wordt gebruikt als achtergrond voor de primary buttons&#039;} %}
+&lt;/div&gt;
+</code></pre>
+
+                </details>
+              
+            
+                          <small class="text-muted">
+                Source: <code>styleguide/elements/base/colors-inclusie.scss</code>, line 1
+              </small>
+                      </section>
+                                  <section id="base-colors-nlds" class="section section--depth-3 ">
+                            <h3 class="">
+                NL Design System
+                <a href="#base-colors-nlds" class="text-muted">
+                  <small>#
+                    <span class="sr-only">
+                      1.1.5 Base.Colors.NLDS
+                    </span>
+                  </small>
+                </a>
+              </h3>
+
+                          <div class="btn-group btn-group-sm bd-toolbar" role="group" aria-label="Example toolbar">
+                                  <a href="#base-colors-nlds" onclick="event.preventDefault();" data-kss-fullscreen="base-colors-nlds" class="btn btn-light btn-fullscreen">
+                    <span class="kss-toolbar__tooltip sr-only">Toggle full screen</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="toggle-full-screen" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M16,0 L16,6.5 L13.5,4 L10.5,7 L9,5.5 L12,2.5 L9.5,0 L16,0 Z M7,10.5 L4,13.5 L6.5,16 L0,16 L0,9.5 L2.5,12 L5.5,9 L7,10.5 Z"/>
+                      </g>
+                    </svg>
+                  </a>
+                  <a href="item-base-colors-nlds.html" target="_blank" class="btn btn-light btn-newwindow">
+                    <span class="kss-toolbar__tooltip sr-only">Open in new window</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="new-tab" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M2.85714286,2 L2.85714286,13.1428571 L14,13.1428571 L14,2 L2.85714286,2 Z M13.0714286,12.2142857 L3.78571429,12.2142857 L3.78571429,2.92857143 L13.0714286,2.92857143 L13.0714286,12.2142857 Z M1.92857143,14.0714286 L1.92857143,4.32142857 L1,3.39285714 L1,15 L12.6071429,15 L11.6785714,14.0714286 L1.92857143,14.0714286 Z"/>
+                        <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.179 4.786 7.5 7.107 4.714 9.893 6.107 11.286 8.893 8.5 11.214 10.821 11.214 4.786"/>
+                      </g>
+                    </svg>
+                  </a>
+                                <a href="#base-colors-nlds" onclick="event.preventDefault();" data-kss-guides="true" class="btn btn-light btn-guides">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle example guides</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-guides" fill="none" fill-rule="evenodd">
+                      <path id="Shape" fill="#000" fill-rule="nonzero" d="M6,3 L8,3 L8,4 L6,4 L6,3 Z M9,3 L11,3 L11,4 L9,4 L9,3 Z M14,3 L14,7 L11,7 L11,6 L13,6 L13,4 L12,4 L12,3 L14,3 Z M5,6 L7,6 L7,7 L5,7 L5,6 Z M8,6 L10,6 L10,7 L8,7 L8,6 Z M3,4 L3,6 L4,6 L4,7 L2,7 L2,3 L5,3 L5,4 L3,4 Z M6,9 L8,9 L8,10 L6,10 L6,9 Z M9,9 L11,9 L11,10 L9,10 L9,9 Z M14,9 L14,13 L11,13 L11,12 L13,12 L13,10 L12,10 L12,9 L14,9 Z M5,12 L7,12 L7,13 L5,13 L5,12 Z M8,12 L10,12 L10,13 L8,13 L8,12 Z M3,10 L3,12 L4,12 L4,13 L2,13 L2,9 L5,9 L5,10 L3,10 Z M15,1 L1,1 L1,15 L15,15 L15,1 Z M16,0 L16,16 L0,16 L0,0 L16,0 Z"/>
+                    </g>
+                  </svg>
+                </a>
+                <a href="#base-colors-nlds" onclick="event.preventDefault();" data-kss-markup="true" class="btn btn-light btn-markup">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle HTML markup</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-markup" fill="none" fill-rule="evenodd">
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="10.526 11.711 11.789 12.974 16 8.763 11.789 4.553 10.526 5.816 13.474 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.474 5.816 4.211 4.553 0 8.763 4.211 12.974 5.474 11.711 2.526 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="8.807 4.007 9.721 4.256 7.194 13.52 6.28 13.27 8.807 4.007"/>
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            
+
+                          <div class="description">
+                <p>Aanvullende kleuren voor de NL Design System Subsite. Prefix: @nlds-</p>
+
+              </div>
+            
+            
+
+                          <div class="bd-example">
+
+                  
+                                      <div class="modifier__example">
+                      
+
+<div class="gc-sg-color-wrapper">
+
+    <div class="kleur">
+
+    <span class="kleur__staaltje gc-blue">@gc_blue</span>
+    <span class="kleur__naam">GC Blue</span>
+
+            <p class="descr">GC Blauw is de primaire kleur voor het NL Design System</p>
+    </div>
+    <div class="kleur">
+
+    <span class="kleur__staaltje nlds-purplish">@nlds_purplish</span>
+    <span class="kleur__naam">NLDS Purplish</span>
+
+            <p class="descr">Deze kleur is speciaal voor het NL Design systeem en wordt gebruikt als secundaire kleur</p>
+    </div>
+</div>
+
+<div class="gc-sg-color-wrapper">
+    <div class="kleur">
+
+    <span class="kleur__staaltje gc-blue">@gc_blue</span>
+    <span class="kleur__naam">Brandkleur</span>
+
+            <p class="descr">Primaire brandkleur. Wordt gebruikt als achtergrond van de pagina's in de header.</p>
+    </div>
+    <div class="kleur">
+
+    <span class="kleur__staaltje gc-a11y-blue">@gc_a11y-blue</span>
+    <span class="kleur__naam">Brandkleur - Accessible</span>
+
+            <p class="descr">Wanneer je echt witte tekst op de brandkleur wil gebruiken.</p>
+    </div>
+    <div class="kleur">
+
+    <span class="kleur__staaltje nlds-purplish">@nlds_purplish</span>
+    <span class="kleur__naam">Intro + tekstblok kleur</span>
+
+            <p class="descr">Kleur welke wordt gebruikt voor de intro's en tekstblokken met een kleur</p>
+    </div>
+    <div class="kleur">
+
+    <span class="kleur__staaltje gc-a11y-green">@gc_a11y_green</span>
+    <span class="kleur__naam">Knopkleur</span>
+
+            <p class="descr">Kleur welke wordt gebruikt als achtergrond voor de primary buttons</p>
+    </div></div>
+
+                      <div class="modifier__example-footer"></div>
+                    </div>
+                  
+                  
+              </div>
+
+                              <details class="highlight">
+                  <summary style="padding: 5px 20px; cursor: pointer;">
+                                          Markup: <code>../elements/base/colors-nlds.twig</code>
+                                      </summary>
+                  <pre><code class="language-markup" data-language="html">
+
+&lt;div class=&quot;gc-sg-color-wrapper&quot;&gt;
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;GC Blue&#039;,
+        &#039;kleurtje&#039;: &#039;gc-blue&#039;,
+        &#039;varname&#039;: &#039;@gc_blue&#039;,
+        &#039;descr&#039;: &#039;GC Blauw is de primaire kleur voor het NL Design System&#039; } %}
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;NLDS Purplish&#039;,
+        &#039;kleurtje&#039;: &#039;nlds-purplish&#039;,
+        &#039;varname&#039;: &#039;@nlds_purplish&#039;,
+        &#039;descr&#039;: &#039;Deze kleur is speciaal voor het NL Design systeem en wordt gebruikt als secundaire kleur&#039; } %}
+
+&lt;/div&gt;
+
+&lt;div class=&quot;gc-sg-color-wrapper&quot;&gt;
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;Brandkleur&#039;,
+        &#039;kleurtje&#039;: &#039;gc-blue&#039;,
+        &#039;varname&#039;: &#039;@gc_blue&#039;,
+        &#039;descr&#039;: &#039;Primaire brandkleur. Wordt gebruikt als achtergrond van de pagina\&#039;s in de header.&#039;} %}
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;Brandkleur - Accessible&#039;,
+        &#039;kleurtje&#039;: &#039;gc-a11y-blue&#039;,
+        &#039;varname&#039;: &#039;@gc_a11y-blue&#039;,
+        &#039;descr&#039;: &#039;Wanneer je echt witte tekst op de brandkleur wil gebruiken.&#039;} %}
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;Intro + tekstblok kleur&#039;,
+        &#039;kleurtje&#039;: &#039;nlds-purplish&#039;,
+        &#039;varname&#039;: &#039;@nlds_purplish&#039;,
+        &#039;descr&#039;: &#039;Kleur welke wordt gebruikt voor de intro\&#039;s en tekstblokken met een kleur&#039;} %}
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;Knopkleur&#039;,
+        &#039;kleurtje&#039;: &#039;gc-a11y-green&#039;,
+        &#039;varname&#039;: &#039;@gc_a11y_green&#039;,
+        &#039;descr&#039;: &#039;Kleur welke wordt gebruikt als achtergrond voor de primary buttons&#039;} %}
+&lt;/div&gt;
+</code></pre>
+
+                </details>
+              
+            
+                          <small class="text-muted">
+                Source: <code>styleguide/elements/base/colors-nlds.scss</code>, line 1
+              </small>
+                      </section>
+                                  <section id="base-colors-od" class="section section--depth-3 ">
+                            <h3 class="">
+                Optimaal Digitaal
+                <a href="#base-colors-od" class="text-muted">
+                  <small>#
+                    <span class="sr-only">
+                      1.1.6 Base.Colors.OD
+                    </span>
+                  </small>
+                </a>
+              </h3>
+
+                          <div class="btn-group btn-group-sm bd-toolbar" role="group" aria-label="Example toolbar">
+                                  <a href="#base-colors-od" onclick="event.preventDefault();" data-kss-fullscreen="base-colors-od" class="btn btn-light btn-fullscreen">
+                    <span class="kss-toolbar__tooltip sr-only">Toggle full screen</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="toggle-full-screen" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M16,0 L16,6.5 L13.5,4 L10.5,7 L9,5.5 L12,2.5 L9.5,0 L16,0 Z M7,10.5 L4,13.5 L6.5,16 L0,16 L0,9.5 L2.5,12 L5.5,9 L7,10.5 Z"/>
+                      </g>
+                    </svg>
+                  </a>
+                  <a href="item-base-colors-od.html" target="_blank" class="btn btn-light btn-newwindow">
+                    <span class="kss-toolbar__tooltip sr-only">Open in new window</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="new-tab" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M2.85714286,2 L2.85714286,13.1428571 L14,13.1428571 L14,2 L2.85714286,2 Z M13.0714286,12.2142857 L3.78571429,12.2142857 L3.78571429,2.92857143 L13.0714286,2.92857143 L13.0714286,12.2142857 Z M1.92857143,14.0714286 L1.92857143,4.32142857 L1,3.39285714 L1,15 L12.6071429,15 L11.6785714,14.0714286 L1.92857143,14.0714286 Z"/>
+                        <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.179 4.786 7.5 7.107 4.714 9.893 6.107 11.286 8.893 8.5 11.214 10.821 11.214 4.786"/>
+                      </g>
+                    </svg>
+                  </a>
+                                <a href="#base-colors-od" onclick="event.preventDefault();" data-kss-guides="true" class="btn btn-light btn-guides">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle example guides</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-guides" fill="none" fill-rule="evenodd">
+                      <path id="Shape" fill="#000" fill-rule="nonzero" d="M6,3 L8,3 L8,4 L6,4 L6,3 Z M9,3 L11,3 L11,4 L9,4 L9,3 Z M14,3 L14,7 L11,7 L11,6 L13,6 L13,4 L12,4 L12,3 L14,3 Z M5,6 L7,6 L7,7 L5,7 L5,6 Z M8,6 L10,6 L10,7 L8,7 L8,6 Z M3,4 L3,6 L4,6 L4,7 L2,7 L2,3 L5,3 L5,4 L3,4 Z M6,9 L8,9 L8,10 L6,10 L6,9 Z M9,9 L11,9 L11,10 L9,10 L9,9 Z M14,9 L14,13 L11,13 L11,12 L13,12 L13,10 L12,10 L12,9 L14,9 Z M5,12 L7,12 L7,13 L5,13 L5,12 Z M8,12 L10,12 L10,13 L8,13 L8,12 Z M3,10 L3,12 L4,12 L4,13 L2,13 L2,9 L5,9 L5,10 L3,10 Z M15,1 L1,1 L1,15 L15,15 L15,1 Z M16,0 L16,16 L0,16 L0,0 L16,0 Z"/>
+                    </g>
+                  </svg>
+                </a>
+                <a href="#base-colors-od" onclick="event.preventDefault();" data-kss-markup="true" class="btn btn-light btn-markup">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle HTML markup</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-markup" fill="none" fill-rule="evenodd">
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="10.526 11.711 11.789 12.974 16 8.763 11.789 4.553 10.526 5.816 13.474 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.474 5.816 4.211 4.553 0 8.763 4.211 12.974 5.474 11.711 2.526 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="8.807 4.007 9.721 4.256 7.194 13.52 6.28 13.27 8.807 4.007"/>
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            
+
+                          <div class="description">
+                <p>Aanvullende kleuren voor de NL Design System Site. Prefix: @od-</p>
+
+              </div>
+            
+            
+
+                          <div class="bd-example">
+
+                  
+                                      <div class="modifier__example">
+                      <div class="gc-sg-color-wrapper">
+
+    <div class="kleur">
+
+    <span class="kleur__staaltje od-orange">@od_orange</span>
+    <span class="kleur__naam">OD Orange</span>
+
+            <p class="descr">Primaire brandkleur</p>
+    </div>
+    <div class="kleur">
+
+    <span class="kleur__staaltje od-orange-darker">@od_orange_darker</span>
+    <span class="kleur__naam">OD Orange Darker</span>
+
+            <p class="descr">Aanvullende kleur voor contrasterende vlakken</p>
+    </div>
+</div>
+
+<div class="gc-sg-color-wrapper">
+    <div class="kleur">
+
+    <span class="kleur__staaltje od-orange">@od_orange</span>
+    <span class="kleur__naam">Brandkleur</span>
+
+            <p class="descr">Primaire brandkleur. Wordt gebruikt als achtergrond van de pagina's in de header.</p>
+    </div>
+
+    <div class="kleur">
+
+    <span class="kleur__staaltje gc-a11y-green">@gc_a11y_green</span>
+    <span class="kleur__naam">Intro + tekstblok kleur</span>
+
+            <p class="descr">Kleur welke wordt gebruikt voor de intro's en tekstblokken met een kleur</p>
+    </div>
+    <div class="kleur">
+
+    <span class="kleur__staaltje gc-a11y-green">@gc_a11y_green</span>
+    <span class="kleur__naam">Knopkleur</span>
+
+            <p class="descr">Kleur welke wordt gebruikt als achtergrond voor de primary buttons</p>
+    </div></div>
+
+<div class="gc-sg-color-wrapper">
+
+    <div class="colors-smaller">
+        <h3>Commitment</h3>
+
+        <div class="kleur">
+
+    <span class="kleur__staaltje gc-a11y-green-lg"></span>
+    <span class="kleur__naam"></span>
+
+            <p class="descr">Achtergrond</p>
+    </div>
+        <div class="kleur">
+
+    <span class="kleur__staaltje gc-a11y-green"></span>
+    <span class="kleur__naam"></span>
+
+            <p class="descr">Achtergrond, tipkaart onderkant</p>
+    </div>
+        <div class="kleur">
+
+    <span class="kleur__staaltje gc-green"></span>
+    <span class="kleur__naam"></span>
+
+            <p class="descr">Lichter (lijnen, tipkaart detail)</p>
+    </div>
+    </div>
+
+    <div class="colors-smaller">
+        <h3>Procesaanpak</h3>
+
+        <div class="kleur">
+
+    <span class="kleur__staaltje gc-a11y-cyan-lg"></span>
+    <span class="kleur__naam"></span>
+
+            <p class="descr">Achtergrond</p>
+    </div>
+        <div class="kleur">
+
+    <span class="kleur__staaltje gc-cyan"></span>
+    <span class="kleur__naam"></span>
+
+            <p class="descr">Achtergrond, tipkaart onderkant</p>
+    </div>
+        <div class="kleur">
+
+    <span class="kleur__staaltje gc-cyan"></span>
+    <span class="kleur__naam"></span>
+
+            <p class="descr">Lichter (lijnen, tipkaart detail)</p>
+    </div>
+    </div>
+
+    <div class="colors-smaller">
+        <h3>Gebruiksgemak</h3>
+
+        <div class="kleur">
+
+    <span class="kleur__staaltje gc-dark-purple"></span>
+    <span class="kleur__naam"></span>
+
+            <p class="descr">Achtergrond</p>
+    </div>
+        <div class="kleur">
+
+    <span class="kleur__staaltje gc-dark-purple-darker"></span>
+    <span class="kleur__naam"></span>
+
+            <p class="descr">Achtergrond, tipkaart onderkant</p>
+    </div>
+        <div class="kleur">
+
+    <span class="kleur__staaltje gc-dark-purple-lighter"></span>
+    <span class="kleur__naam"></span>
+
+            <p class="descr">Lichter (lijnen, tipkaart detail)</p>
+    </div>
+    </div>
+
+
+    <div class="colors-smaller">
+        <h3>Informatieveiligheid</h3>
+
+        <div class="kleur">
+
+    <span class="kleur__staaltje gc-pink"></span>
+    <span class="kleur__naam"></span>
+
+            <p class="descr">Achtergrond</p>
+    </div>
+        <div class="kleur">
+
+    <span class="kleur__staaltje gc-pink-darker"></span>
+    <span class="kleur__naam"></span>
+
+            <p class="descr">Achtergrond, tipkaart onderkant</p>
+    </div>
+        <div class="kleur">
+
+    <span class="kleur__staaltje gc-pink-lighter"></span>
+    <span class="kleur__naam"></span>
+
+            <p class="descr">Lichter (lijnen, tipkaart detail)</p>
+    </div>    </div>
+
+    <div class="colors-smaller">
+        <h3>Kanaalsturing</h3>
+
+        <div class="kleur">
+
+    <span class="kleur__staaltje gc-orange-a11y-lg"></span>
+    <span class="kleur__naam"></span>
+
+            <p class="descr">Achtergrond</p>
+    </div>
+        <div class="kleur">
+
+    <span class="kleur__staaltje gc-orange"></span>
+    <span class="kleur__naam"></span>
+
+            <p class="descr">Achtergrond, tipkaart onderkant</p>
+    </div>
+        <div class="kleur">
+
+    <span class="kleur__staaltje gc-orange-a11y-lg"></span>
+    <span class="kleur__naam"></span>
+
+            <p class="descr">Lichter (lijnen, tipkaart detail)</p>
+    </div>
+    </div>
+
+    <div class="colors-smaller">
+        <h3>Samenwerking</h3>
+
+        <div class="kleur">
+
+    <span class="kleur__staaltje gc-blue"></span>
+    <span class="kleur__naam"></span>
+
+            <p class="descr">Achtergrond</p>
+    </div>
+        <div class="kleur">
+
+    <span class="kleur__staaltje gc-blue-darker"></span>
+    <span class="kleur__naam"></span>
+
+            <p class="descr">Achtergrond, tipkaart onderkant</p>
+    </div>
+        <div class="kleur">
+
+    <span class="kleur__staaltje gc-blue"></span>
+    <span class="kleur__naam"></span>
+
+            <p class="descr">Lichter (lijnen, tipkaart detail)</p>
+    </div>
+    </div>
+
+    <div class="colors-smaller">
+        <h3>Inclusie</h3>
+
+        <div class="kleur">
+
+    <span class="kleur__staaltje inc-orange"></span>
+    <span class="kleur__naam"></span>
+
+            <p class="descr">Achtergrond</p>
+    </div>
+        <div class="kleur">
+
+    <span class="kleur__staaltje inc-a11y-orange"></span>
+    <span class="kleur__naam"></span>
+
+            <p class="descr">Achtergrond, tipkaart onderkant</p>
+    </div>
+        <div class="kleur">
+
+    <span class="kleur__staaltje gc-orange"></span>
+    <span class="kleur__naam"></span>
+
+            <p class="descr">Lichter (lijnen, tipkaart detail)</p>
+    </div>
+    </div>
+</div>
+                      <div class="modifier__example-footer"></div>
+                    </div>
+                  
+                  
+              </div>
+
+                              <details class="highlight">
+                  <summary style="padding: 5px 20px; cursor: pointer;">
+                                          Markup: <code>../elements/base/colors-od.twig</code>
+                                      </summary>
+                  <pre><code class="language-markup" data-language="html">&lt;div class=&quot;gc-sg-color-wrapper&quot;&gt;
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;OD Orange&#039;,
+        &#039;kleurtje&#039;: &#039;od-orange&#039;,
+        &#039;varname&#039;: &#039;@od_orange&#039;,
+        &#039;descr&#039;: &#039;Primaire brandkleur&#039; } %}
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;OD Orange Darker&#039;,
+        &#039;kleurtje&#039;: &#039;od-orange-darker&#039;,
+        &#039;varname&#039;: &#039;@od_orange_darker&#039;,
+        &#039;descr&#039;: &#039;Aanvullende kleur voor contrasterende vlakken&#039; } %}
+
+&lt;/div&gt;
+
+&lt;div class=&quot;gc-sg-color-wrapper&quot;&gt;
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;Brandkleur&#039;,
+        &#039;kleurtje&#039;: &#039;od-orange&#039;,
+        &#039;varname&#039;: &#039;@od_orange&#039;,
+        &#039;descr&#039;: &#039;Primaire brandkleur. Wordt gebruikt als achtergrond van de pagina\&#039;s in de header.&#039;} %}
+
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;Intro + tekstblok kleur&#039;,
+        &#039;kleurtje&#039;: &#039;gc-a11y-green&#039;,
+        &#039;varname&#039;: &#039;@gc_a11y_green&#039;,
+        &#039;descr&#039;: &#039;Kleur welke wordt gebruikt voor de intro\&#039;s en tekstblokken met een kleur&#039;} %}
+
+    {% include &#039;../includes/kleurtje.twig&#039; with {
+        &#039;naam&#039;: &#039;Knopkleur&#039;,
+        &#039;kleurtje&#039;: &#039;gc-a11y-green&#039;,
+        &#039;varname&#039;: &#039;@gc_a11y_green&#039;,
+        &#039;descr&#039;: &#039;Kleur welke wordt gebruikt als achtergrond voor de primary buttons&#039;} %}
+&lt;/div&gt;
+
+&lt;div class=&quot;gc-sg-color-wrapper&quot;&gt;
+
+    &lt;div class=&quot;colors-smaller&quot;&gt;
+        &lt;h3&gt;Commitment&lt;/h3&gt;
+
+        {% include &#039;../includes/kleurtje.twig&#039; with {
+            &#039;kleurtje&#039;: &#039;gc-a11y-green-lg&#039;,
+            &#039;descr&#039;: &#039;Achtergrond&#039;
+        } %}
+
+        {% include &#039;../includes/kleurtje.twig&#039; with {
+            &#039;kleurtje&#039;: &#039;gc-a11y-green&#039;,
+            &#039;descr&#039;: &#039;Achtergrond, tipkaart onderkant&#039;
+        } %}
+
+        {% include &#039;../includes/kleurtje.twig&#039; with {
+            &#039;kleurtje&#039;: &#039;gc-green&#039;,
+            &#039;descr&#039;: &#039;Lichter (lijnen, tipkaart detail)&#039;
+        } %}
+
+    &lt;/div&gt;
+
+    &lt;div class=&quot;colors-smaller&quot;&gt;
+        &lt;h3&gt;Procesaanpak&lt;/h3&gt;
+
+        {% include &#039;../includes/kleurtje.twig&#039; with {
+            &#039;kleurtje&#039;: &#039;gc-a11y-cyan-lg&#039;,
+            &#039;descr&#039;: &#039;Achtergrond&#039;
+        } %}
+
+        {% include &#039;../includes/kleurtje.twig&#039; with {
+            &#039;kleurtje&#039;: &#039;gc-cyan&#039;,
+            &#039;descr&#039;: &#039;Achtergrond, tipkaart onderkant&#039;
+        } %}
+
+        {% include &#039;../includes/kleurtje.twig&#039; with {
+            &#039;kleurtje&#039;: &#039;gc-cyan&#039;,
+            &#039;descr&#039;: &#039;Lichter (lijnen, tipkaart detail)&#039;
+        } %}
+
+    &lt;/div&gt;
+
+    &lt;div class=&quot;colors-smaller&quot;&gt;
+        &lt;h3&gt;Gebruiksgemak&lt;/h3&gt;
+
+        {% include &#039;../includes/kleurtje.twig&#039; with {
+            &#039;kleurtje&#039;: &#039;gc-dark-purple&#039;,
+            &#039;descr&#039;: &#039;Achtergrond&#039;
+        } %}
+
+        {% include &#039;../includes/kleurtje.twig&#039; with {
+            &#039;kleurtje&#039;: &#039;gc-dark-purple-darker&#039;,
+            &#039;descr&#039;: &#039;Achtergrond, tipkaart onderkant&#039;
+        } %}
+
+        {% include &#039;../includes/kleurtje.twig&#039; with {
+            &#039;kleurtje&#039;: &#039;gc-dark-purple-lighter&#039;,
+            &#039;descr&#039;: &#039;Lichter (lijnen, tipkaart detail)&#039;
+        } %}
+
+    &lt;/div&gt;
+
+
+    &lt;div class=&quot;colors-smaller&quot;&gt;
+        &lt;h3&gt;Informatieveiligheid&lt;/h3&gt;
+
+        {% include &#039;../includes/kleurtje.twig&#039; with {
+            &#039;kleurtje&#039;: &#039;gc-pink&#039;,
+            &#039;descr&#039;: &#039;Achtergrond&#039;
+        } %}
+
+        {% include &#039;../includes/kleurtje.twig&#039; with {
+            &#039;kleurtje&#039;: &#039;gc-pink-darker&#039;,
+            &#039;descr&#039;: &#039;Achtergrond, tipkaart onderkant&#039;
+        } %}
+
+        {% include &#039;../includes/kleurtje.twig&#039; with {
+            &#039;kleurtje&#039;: &#039;gc-pink-lighter&#039;,
+            &#039;descr&#039;: &#039;Lichter (lijnen, tipkaart detail)&#039;
+        } %}
+    &lt;/div&gt;
+
+    &lt;div class=&quot;colors-smaller&quot;&gt;
+        &lt;h3&gt;Kanaalsturing&lt;/h3&gt;
+
+        {% include &#039;../includes/kleurtje.twig&#039; with {
+            &#039;kleurtje&#039;: &#039;gc-orange-a11y-lg&#039;,
+            &#039;descr&#039;: &#039;Achtergrond&#039;
+        } %}
+
+        {% include &#039;../includes/kleurtje.twig&#039; with {
+            &#039;kleurtje&#039;: &#039;gc-orange&#039;,
+            &#039;descr&#039;: &#039;Achtergrond, tipkaart onderkant&#039;
+        } %}
+
+        {% include &#039;../includes/kleurtje.twig&#039; with {
+            &#039;kleurtje&#039;: &#039;gc-orange-a11y-lg&#039;,
+            &#039;descr&#039;: &#039;Lichter (lijnen, tipkaart detail)&#039;
+        } %}
+
+    &lt;/div&gt;
+
+    &lt;div class=&quot;colors-smaller&quot;&gt;
+        &lt;h3&gt;Samenwerking&lt;/h3&gt;
+
+        {% include &#039;../includes/kleurtje.twig&#039; with {
+            &#039;kleurtje&#039;: &#039;gc-blue&#039;,
+            &#039;descr&#039;: &#039;Achtergrond&#039;
+        } %}
+
+        {% include &#039;../includes/kleurtje.twig&#039; with {
+            &#039;kleurtje&#039;: &#039;gc-blue-darker&#039;,
+            &#039;descr&#039;: &#039;Achtergrond, tipkaart onderkant&#039;
+        } %}
+
+        {% include &#039;../includes/kleurtje.twig&#039; with {
+            &#039;kleurtje&#039;: &#039;gc-blue&#039;,
+            &#039;descr&#039;: &#039;Lichter (lijnen, tipkaart detail)&#039;
+        } %}
+
+    &lt;/div&gt;
+
+    &lt;div class=&quot;colors-smaller&quot;&gt;
+        &lt;h3&gt;Inclusie&lt;/h3&gt;
+
+        {% include &#039;../includes/kleurtje.twig&#039; with {
+            &#039;kleurtje&#039;: &#039;inc-orange&#039;,
+            &#039;descr&#039;: &#039;Achtergrond&#039;
+        } %}
+
+        {% include &#039;../includes/kleurtje.twig&#039; with {
+            &#039;kleurtje&#039;: &#039;inc-a11y-orange&#039;,
+            &#039;descr&#039;: &#039;Achtergrond, tipkaart onderkant&#039;
+        } %}
+
+        {% include &#039;../includes/kleurtje.twig&#039; with {
+            &#039;kleurtje&#039;: &#039;gc-orange&#039;,
+            &#039;descr&#039;: &#039;Lichter (lijnen, tipkaart detail)&#039;
+        } %}
+
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                </details>
+              
+            
+                          <small class="text-muted">
+                Source: <code>styleguide/elements/base/colors-od.scss</code>, line 1
+              </small>
+                      </section>
+          
+        </main>
+            </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+
+
+  <script src="kss-assets/lib/kss-fullscreen.js"></script>
+  <script src="kss-assets/lib/kss-guides.js"></script>
+  <script src="kss-assets/lib/kss-markup.js"></script>
+  <script src="kss-assets/lib/prism.js"></script>
+  <script src="kss-assets/lib/prism-scss.min.js"></script>
+
+  <script src="../styleguide/kss-assets/lib/jquery-3.4.1.min.js"></script>
+<script src="../../../../../wp-content/plugins/ictu-gc-posttypes-inclusie/js/libs/jquery.waypoints.min.js"></script>
+<script src="../../../../../wp-content/plugins/ictu-gc-posttypes-inclusie/js/min/stepchart-min.js"></script>
+
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <script>
+    // Escape code
+    // ============================================================
+
+    var $lang_markup       = document.querySelectorAll('pre.language-html code'),
+        $lang_js           = document.querySelectorAll('script.atomic-js'),
+        $lang_jscode       = document.querySelectorAll('pre code.language-javascript'),
+        lang_markupsnippet = [],
+        lang_jsnippet      = [];
+
+    // Markup
+    // order matters!
+    // ============================================================
+
+    for(var i = 0, l = $lang_markup.length; i < l; i++) {
+      lang_markupsnippet.push(
+        $lang_markup[i].innerHTML.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      );
+      $lang_markup[i].innerHTML = lang_markupsnippet[i];
+    }
+
+    // JavaScript
+    // order matters!
+    // ============================================================
+    for(var i = 0, l = $lang_jscode.length; i < l; i++) {
+      lang_jsnippet.push(
+        $lang_jscode[i].innerHTML.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      );
+    }
+
+    for(var i = 0, l = $lang_js.length; i < l; i++) {
+      $lang_js[i].innerHTML = lang_jsnippet[i];
+    }
+
+    var KssFullScreen = new KssFullScreen({
+      idPrefix: 'fullscreen-',
+      bodyClass: 'kss-fullscreen-mode',
+      elementClass: 'is-fullscreen'
+    });
+    var kssGuides = new KssGuides({
+      bodyClass: 'guides-mode'
+    });
+    var kssMarkup = new KssMarkup({
+      bodyClass: 'markup-mode',
+      detailsClass: 'highlight'
+    });
+
+  </script>
+
+  <script src="kss-assets/styleguide.js"></script>
+</body>
+</html>

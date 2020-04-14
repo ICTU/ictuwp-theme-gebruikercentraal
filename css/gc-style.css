@@ -54,6 +54,8 @@ License URI: http://www.opensource.org/licenses/gpl-license.php
  * Variables, mixins, extendables - things we use everywhere
  */
 @import "../fonts/fonts.css";
+/* Inclusie */
+/* NLDS */
 .gc-list-title {
   font-size: 18px;
   font-size: 1.8rem;
@@ -10306,18 +10308,18 @@ h1 + .meta-data {
   color: #fff;
 }
 .card.tipkaart.procesaanpak a:before {
-  background-color: #009F98;
+  background-color: #009C95;
 }
 .card.tipkaart.procesaanpak a:hover,
 .card.tipkaart.procesaanpak a:active,
 .card.tipkaart.procesaanpak a:focus {
   color: #fff;
-  border-color: #009F98;
+  border-color: #009C95;
 }
 .card.tipkaart.procesaanpak a:hover:before,
 .card.tipkaart.procesaanpak a:active:before,
 .card.tipkaart.procesaanpak a:focus:before {
-  border-color: #009F98;
+  border-color: #009C95;
 }
 .card.tipkaart.procesaanpak .contentinfo {
   background-image: url('images/optimaal-digitaal/icon-procesaanpak.svg');
@@ -10362,18 +10364,18 @@ h1 + .meta-data {
   color: #fff;
 }
 .card.tipkaart.inclusie a:before {
-  background-color: #ad391a;
+  background-color: #9a2f13;
 }
 .card.tipkaart.inclusie a:hover,
 .card.tipkaart.inclusie a:active,
 .card.tipkaart.inclusie a:focus {
   color: #fff;
-  border-color: #ad391a;
+  border-color: #9a2f13;
 }
 .card.tipkaart.inclusie a:hover:before,
 .card.tipkaart.inclusie a:active:before,
 .card.tipkaart.inclusie a:focus:before {
-  border-color: #ad391a;
+  border-color: #9a2f13;
 }
 .card.tipkaart.inclusie .contentinfo {
   background-image: url('images/optimaal-digitaal/icon-inclusie.svg');

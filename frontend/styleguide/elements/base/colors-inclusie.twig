@@ -1,0 +1,36 @@
+<h2>Inclusie kleuren</h2>
+
+<div class="gc-sg-color-wrapper">
+
+    {% include '../includes/kleurtje.twig' with {
+        'naam': 'Inclusie Orange',
+        'kleurtje': 'inc-orange',
+        'varname': '@inc_orange',
+        'descr': 'Inclusie Brandkleur'} %}
+</div>
+
+<div class="gc-sg-color-wrapper">
+    {% include '../includes/kleurtje.twig' with {
+        'naam': 'Brandkleur',
+        'kleurtje': 'inc-a11y-orange',
+        'varname': '@inc_a11y_orange',
+        'descr': 'Primaire brandkleur.'} %}
+
+    {% include '../includes/kleurtje.twig' with {
+        'naam': 'Brandkleur - Accessible',
+        'kleurtje': 'inc-a11y-orange',
+        'varname': '@inc_a11y_orange',
+        'descr': 'Wanneer je echt witte tekst op de brandkleur wil gebruiken.'} %}
+
+    {% include '../includes/kleurtje.twig' with {
+        'naam': 'Intro + tekstblok kleur',
+        'kleurtje': 'gc-a11y-green',
+        'varname': '@gc_a11y_green',
+        'descr': 'Kleur welke wordt gebruikt voor de intro\'s en tekstblokken met een kleur'} %}
+
+    {% include '../includes/kleurtje.twig' with {
+        'naam': 'Knopkleur',
+        'kleurtje': 'gc-a11y-green',
+        'varname': '@gc_a11y_green',
+        'descr': 'Kleur welke wordt gebruikt als achtergrond voor de primary buttons'} %}
+</div>
