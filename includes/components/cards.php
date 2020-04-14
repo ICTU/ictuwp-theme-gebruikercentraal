@@ -287,33 +287,33 @@ if ( ! function_exists( 'ictu_gctheme_card_featuredimage' ) ) :
 
 		}
 
-		$return = '<div class="card ' . ( has_post_thumbnail( $post_ID ) ? 'card--featured-image card--with-image ' : '' ) . $posttype . '" id="' . $block_id . '">';
+		$card = '<div class="card ' . ( has_post_thumbnail( $post_ID ) ? 'card--featured-image' : '' ) . ' card--type-' . $posttype . '" id="' . $block_id . '">';
 
 		if ( has_post_thumbnail( $post_ID ) ) {
-			$return .= '  <div class="card__image">';
-			$return .= get_the_post_thumbnail( $post_ID, 'thumb-cardv3' );
-			$return .= '  </div>';
+			$card .= '  <div class="card__image">';
+			$card .= get_the_post_thumbnail( $post_ID, 'thumb-cardv3' );
+			$card .= '  </div>';
 		}
-		$return .= '<div class="card__content">';
-		$return .= '<' . $args['titletag'] . ' id="' . $title_id . '" class="card__title"><a class="arrow-link" href="' . get_permalink( $post_ID ) . '">';
-		$return .= '<span class="arrow-link__text">' . od_wbvb_custom_post_title( $section_title ) . '</span><span class="arrow-link__icon"></span></a></' . $args['titletag'] . '>';
+		$card .= '<div class="card__content">';
+		$card .= '<' . $args['titletag'] . ' id="' . $title_id . '" class="card__title"><a class="arrow-link" href="' . get_permalink( $post_ID ) . '">';
+		$card .= '<span class="arrow-link__text">' . od_wbvb_custom_post_title( $section_title ) . '</span><span class="arrow-link__icon"></span></a></' . $args['titletag'] . '>';
 
 		if ( GC_BEELDBANK_BEELD_CPT === $posttype ) {
 			// geen beschrijving tonen voor beelden
 		} else {
-			$return .= '<p class="card__description">';
-			$return .= $section_text;
-			$return .= '</p>';
+			$card .= '<p class="card__description">';
+			$card .= $section_text;
+			$card .= '</p>';
 		}
 
-		$return .= $section_meta;
-		$return .= '</div>'; // .card__content
-		$return .= '</div>'; // .card
+		$card .= $section_meta;
+		$card .= '</div>'; // .card__content
+		$card .= '</div>'; // .card
 
 		if ( $args['echo'] ) {
-			echo $return;
+			echo $card;
 		} else {
-			return $return;
+			return $card;
 		}
 
 	}

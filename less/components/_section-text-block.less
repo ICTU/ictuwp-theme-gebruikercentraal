@@ -1,0 +1,86 @@
+// Section
+
+.section--text-blocks {
+  .l-section-content {
+    max-width: ~"calc(@{max-width-container} + @{gutter})";
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+
+    @media @tablet {
+      display: flex;
+
+      section {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        flex: 1;
+      }
+    }
+
+    @media @desktop {
+      margin: 5rem auto 0;
+    }
+  }
+}
+
+
+
+// Text blocks
+
+
+.text-block {
+  margin-top: @gutter;
+
+  p {
+    max-width: 90%;
+    margin: 1.8rem 0 0 0;
+  }
+
+  .btn {
+    margin-top: 2rem;
+    margin-right: 2rem;
+  }
+
+  .l-bg & { // If it's within a section with a bg option specifiekd
+    .gc-box-shadow;
+    padding: 2rem;
+
+    @media @tablet {
+      padding: 3rem;
+    }
+  }
+
+  .l-bg--white & { // if secti bg is set to white
+    background: @white;
+  }
+
+  .l-bg--colored & { // if secti bg is set to white
+    background: @tb_color_bg;
+    color: @tb_color;
+
+    h2, h3 {
+      color: @tb_heading;
+    }
+
+    .btn--primary {
+      background: @tb_btn_bg;
+      color: @tb_btn_color;
+
+      &:after {
+        background-color: @tb_btn_arrow_bg;
+        background-image: url('../images/arrow-right-blue.svg');
+      }
+
+      &:hover, &:active, &:focus {
+        background-color: lighten(@tb_btn_arrow_bg, 10%);
+      }
+    }
+  }
+}
+
+
+.text-block__title {
+  .gc-section-heading;
+  font-family: @font_secondary;
+  margin: 0;
+  padding: 0;
+}
