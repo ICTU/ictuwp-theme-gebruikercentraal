@@ -1512,19 +1512,10 @@ function gc_wbvb_add_blog_archive_css() {
 
 						foreach ( $imgbreakpoints as $breakpoint ) {
 
-echo '<pre>';
-var_dump( $breakpoint );
-echo '</pre>';
-
-
 							$breakpointcounter ++;
 
-							$theID2 = $theID;
-
-//							if ( $breakpointcounter === 1 ) {
-//								$theID2 = $theID . '.feature-image';
-//							}
-							$image             = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), $breakpoint['img_size_archive_list'] );
+							$theID2 			= $theID;
+							$image             	= wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), $breakpoint['img_size_archive_list'] );
 							$BLOGBERICHTEN_CSS .= '@media only screen and (' . $breakpoint['direction'] . '-width: ' . $breakpoint['width'] . " ) {\n";
 							$BLOGBERICHTEN_CSS .= ' #' . $theID2 . " { \n";
 							$BLOGBERICHTEN_CSS .= "	background-image: url('" . $image[0] . "');\n";
