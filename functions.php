@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.3.8
-// @desc.   Volgorde laden stylesheets herzien; Inladen CSS herzien; layout voor overzichtspagina herzien.
+// @version 4.3.9
+// @desc.   Volgorde laden stylesheets herzien; Opmaak van tekstblokken home herzien. Plaatjes tonen op blog-archief. 
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '4.3.8' );
-define( 'CHILD_THEME_DESCRIPTION', "4.3.8 - Volgorde laden stylesheets herzien; Inladen CSS herzien; layout voor overzichtspagina herzien." );
+define( 'CHILD_THEME_VERSION', '4.3.9' );
+define( 'CHILD_THEME_DESCRIPTION', "4.3.9 - Volgorde laden stylesheets herzien; Opmaak van tekstblokken home herzien. Plaatjes tonen op blog-archief. " );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
