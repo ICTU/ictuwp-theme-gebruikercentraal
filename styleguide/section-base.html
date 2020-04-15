@@ -114,6 +114,34 @@
                         <span class="nav-item__item">Optimaal Digitaal</span></a>
                     </li>
 
+                  
+                    <li class="nav-item nav-item--main">
+                      <a class="nav-item__link" href="#base-text">
+                        <span class="nav-item__ref-number">1.2</span>
+                        <span class="nav-item__item">Fonts</span></a>
+                    </li>
+
+                  
+                    <li class="nav-item nav-item--sub">
+                      <a class="nav-item__link" href="#base-text-fonts">
+                        <span class="nav-item__ref-number">1.2.1</span>
+                        <span class="nav-item__item">Lettertypes</span></a>
+                    </li>
+
+                  
+                    <li class="nav-item nav-item--sub">
+                      <a class="nav-item__link" href="#base-text-styles">
+                        <span class="nav-item__ref-number">1.2.2</span>
+                        <span class="nav-item__item">Tekststijlen</span></a>
+                    </li>
+
+                  
+                    <li class="nav-item nav-item--sub">
+                      <a class="nav-item__link" href="#base-text-z01elements">
+                        <span class="nav-item__ref-number">1.2.3</span>
+                        <span class="nav-item__item">Elementen</span></a>
+                    </li>
+
                                     <li class="toc-entry toc-h2">
                     <a href="#main-content" class="back-to-top">
                       <span>Back to top</span>
@@ -157,6 +185,10 @@
 
             
 
+                          <div class="description">
+                <p>Alle kleuren die in de websites gebruikt worden. Wanneer de tekst in het vlak wit is is deze accessible en kan er witte tekst op getoond worden.</p>
+
+              </div>
             
             
 
@@ -773,7 +805,7 @@
 <div class="gc-sg-color-wrapper">
     <div class="kleur">
 
-    <span class="kleur__staaltje inc-a11y-orange">@inc_a11y_orange</span>
+    <span class="kleur__staaltje inc-orange">@inc_orange</span>
     <span class="kleur__naam">Brandkleur</span>
 
             <p class="descr">Primaire brandkleur.</p>
@@ -783,7 +815,7 @@
     <span class="kleur__staaltje inc-a11y-orange">@inc_a11y_orange</span>
     <span class="kleur__naam">Brandkleur - Accessible</span>
 
-            <p class="descr">Wanneer je echt witte tekst op de brandkleur wil gebruiken.</p>
+            <p class="descr">Wanneer je witte tekst op de brandkleur wil gebruiken.</p>
     </div>
     <div class="kleur">
 
@@ -822,15 +854,15 @@
 &lt;div class=&quot;gc-sg-color-wrapper&quot;&gt;
     {% include &#039;../includes/kleurtje.twig&#039; with {
         &#039;naam&#039;: &#039;Brandkleur&#039;,
-        &#039;kleurtje&#039;: &#039;inc-a11y-orange&#039;,
-        &#039;varname&#039;: &#039;@inc_a11y_orange&#039;,
+        &#039;kleurtje&#039;: &#039;inc-orange&#039;,
+        &#039;varname&#039;: &#039;@inc_orange&#039;,
         &#039;descr&#039;: &#039;Primaire brandkleur.&#039;} %}
 
     {% include &#039;../includes/kleurtje.twig&#039; with {
         &#039;naam&#039;: &#039;Brandkleur - Accessible&#039;,
         &#039;kleurtje&#039;: &#039;inc-a11y-orange&#039;,
         &#039;varname&#039;: &#039;@inc_a11y_orange&#039;,
-        &#039;descr&#039;: &#039;Wanneer je echt witte tekst op de brandkleur wil gebruiken.&#039;} %}
+        &#039;descr&#039;: &#039;Wanneer je witte tekst op de brandkleur wil gebruiken.&#039;} %}
 
     {% include &#039;../includes/kleurtje.twig&#039; with {
         &#039;naam&#039;: &#039;Intro + tekstblok kleur&#039;,
@@ -1510,6 +1542,508 @@
             
                           <small class="text-muted">
                 Source: <code>styleguide/elements/base/colors-od.scss</code>, line 1
+              </small>
+                      </section>
+                                  <section id="base-text" class="section section--depth-2 ">
+                            <h2 class="">
+                Fonts
+                <a href="#base-text" class="text-muted">
+                  <small>#
+                    <span class="sr-only">
+                      1.2 Base.Text
+                    </span>
+                  </small>
+                </a>
+              </h2>
+
+            
+
+                          <div class="description">
+                <p>De gebruikte lettertypes en tekststijlen</p>
+
+              </div>
+            
+            
+
+            
+                      </section>
+                                  <section id="base-text-fonts" class="section section--depth-3 ">
+                            <h3 class="">
+                Lettertypes
+                <a href="#base-text-fonts" class="text-muted">
+                  <small>#
+                    <span class="sr-only">
+                      1.2.1 Base.Text.Fonts
+                    </span>
+                  </small>
+                </a>
+              </h3>
+
+                          <div class="btn-group btn-group-sm bd-toolbar" role="group" aria-label="Example toolbar">
+                                  <a href="#base-text-fonts" onclick="event.preventDefault();" data-kss-fullscreen="base-text-fonts" class="btn btn-light btn-fullscreen">
+                    <span class="kss-toolbar__tooltip sr-only">Toggle full screen</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="toggle-full-screen" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M16,0 L16,6.5 L13.5,4 L10.5,7 L9,5.5 L12,2.5 L9.5,0 L16,0 Z M7,10.5 L4,13.5 L6.5,16 L0,16 L0,9.5 L2.5,12 L5.5,9 L7,10.5 Z"/>
+                      </g>
+                    </svg>
+                  </a>
+                  <a href="item-base-text-fonts.html" target="_blank" class="btn btn-light btn-newwindow">
+                    <span class="kss-toolbar__tooltip sr-only">Open in new window</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="new-tab" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M2.85714286,2 L2.85714286,13.1428571 L14,13.1428571 L14,2 L2.85714286,2 Z M13.0714286,12.2142857 L3.78571429,12.2142857 L3.78571429,2.92857143 L13.0714286,2.92857143 L13.0714286,12.2142857 Z M1.92857143,14.0714286 L1.92857143,4.32142857 L1,3.39285714 L1,15 L12.6071429,15 L11.6785714,14.0714286 L1.92857143,14.0714286 Z"/>
+                        <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.179 4.786 7.5 7.107 4.714 9.893 6.107 11.286 8.893 8.5 11.214 10.821 11.214 4.786"/>
+                      </g>
+                    </svg>
+                  </a>
+                                <a href="#base-text-fonts" onclick="event.preventDefault();" data-kss-guides="true" class="btn btn-light btn-guides">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle example guides</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-guides" fill="none" fill-rule="evenodd">
+                      <path id="Shape" fill="#000" fill-rule="nonzero" d="M6,3 L8,3 L8,4 L6,4 L6,3 Z M9,3 L11,3 L11,4 L9,4 L9,3 Z M14,3 L14,7 L11,7 L11,6 L13,6 L13,4 L12,4 L12,3 L14,3 Z M5,6 L7,6 L7,7 L5,7 L5,6 Z M8,6 L10,6 L10,7 L8,7 L8,6 Z M3,4 L3,6 L4,6 L4,7 L2,7 L2,3 L5,3 L5,4 L3,4 Z M6,9 L8,9 L8,10 L6,10 L6,9 Z M9,9 L11,9 L11,10 L9,10 L9,9 Z M14,9 L14,13 L11,13 L11,12 L13,12 L13,10 L12,10 L12,9 L14,9 Z M5,12 L7,12 L7,13 L5,13 L5,12 Z M8,12 L10,12 L10,13 L8,13 L8,12 Z M3,10 L3,12 L4,12 L4,13 L2,13 L2,9 L5,9 L5,10 L3,10 Z M15,1 L1,1 L1,15 L15,15 L15,1 Z M16,0 L16,16 L0,16 L0,0 L16,0 Z"/>
+                    </g>
+                  </svg>
+                </a>
+                <a href="#base-text-fonts" onclick="event.preventDefault();" data-kss-markup="true" class="btn btn-light btn-markup">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle HTML markup</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-markup" fill="none" fill-rule="evenodd">
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="10.526 11.711 11.789 12.974 16 8.763 11.789 4.553 10.526 5.816 13.474 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.474 5.816 4.211 4.553 0 8.763 4.211 12.974 5.474 11.711 2.526 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="8.807 4.007 9.721 4.256 7.194 13.52 6.28 13.27 8.807 4.007"/>
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            
+
+            
+            
+
+                          <div class="bd-example">
+
+                  
+                                      <div class="modifier__example">
+                      
+
+<h2>Primair font</h2>
+
+<p>Als primair font wordt Montserrat gebruikt, een gratis te gebruiken Google Font. Het wordt gebruikt voor alle teksten.</p>
+
+<p>Alle stijlen voor het primaire font zijn geprefixed met <code>@font_primary</code>. Er worden er geen font weights gebruikt. Voor <strong>vetgedrukte</strong> tekst gebruik je dus <code>font-family: @font_primary_body</code>.
+
+<div class="gc-sg-font-wrapper">
+
+    <div class="font sg-font-block font-primary-light">
+    <span class="font__sample">Aa</span>
+    <span class="font__name">Montserrat Light</span>
+    <span class="font__varname">@font_primary_light</span>
+</div>
+    <div class="font sg-font-block font-primary">
+    <span class="font__sample">Aa</span>
+    <span class="font__name">Montserrat Regular</span>
+    <span class="font__varname">@font_primary</span>
+</div>
+    <div class="font sg-font-block font-primary-semi">
+    <span class="font__sample">Aa</span>
+    <span class="font__name">Montserrat Semibold</span>
+    <span class="font__varname">@font_primary_semi</span>
+</div>
+    <div class="font sg-font-block font-primary-bold">
+    <span class="font__sample">Aa</span>
+    <span class="font__name">Montserrat Bold</span>
+    <span class="font__varname">@font_primary_bold</span>
+</div>
+</div>
+
+
+<h2>Secundair font</h2>
+
+<p>Als secundair font wordt Leage Gothic gebruikt, een gratis te gebruiken lettertype. Het wordt gebruikt voor koppen en accentteksten.</p>
+
+<p>Voor het secundaire font gebruik je de variabele <code>@font_secondary</code>. Dit lettertype wordt in koppen vaak UPPERCASE gebruikt.
+
+<div class="gc-sg-font-wrapper">
+
+    <div class="font sg-font-block font-secondary">
+    <span class="font__sample">Aa</span>
+    <span class="font__name">League Gothic</span>
+    <span class="font__varname">@font_secondary</span>
+</div>
+
+</div>
+
+                      <div class="modifier__example-footer"></div>
+                    </div>
+                  
+                  
+              </div>
+
+                              <details class="highlight">
+                  <summary style="padding: 5px 20px; cursor: pointer;">
+                                          Markup: <code>../elements/base/fonts-base.twig</code>
+                                      </summary>
+                  <pre><code class="language-markup" data-language="html">
+
+&lt;h2&gt;Primair font&lt;/h2&gt;
+
+&lt;p&gt;Als primair font wordt Montserrat gebruikt, een gratis te gebruiken Google Font. Het wordt gebruikt voor alle teksten.&lt;/p&gt;
+
+&lt;p&gt;Alle stijlen voor het primaire font zijn geprefixed met &lt;code&gt;@font_primary&lt;/code&gt;. Er worden er geen font weights gebruikt. Voor &lt;strong&gt;vetgedrukte&lt;/strong&gt; tekst gebruik je dus &lt;code&gt;font-family: @font_primary_body&lt;/code&gt;.
+
+&lt;div class=&quot;gc-sg-font-wrapper&quot;&gt;
+
+    {% include &#039;../includes/font-style.twig&#039; with {
+        &#039;name&#039;: &#039;Montserrat Light&#039;,
+        &#039;varname&#039;: &#039;@font_primary_light&#039;,
+        &#039;style&#039;: &#039;font-primary-light&#039;
+    } %}
+
+    {% include &#039;../includes/font-style.twig&#039; with {
+        &#039;name&#039;: &#039;Montserrat Regular&#039;,
+        &#039;varname&#039;: &#039;@font_primary&#039;,
+        &#039;style&#039;: &#039;font-primary&#039;
+    } %}
+
+    {% include &#039;../includes/font-style.twig&#039; with {
+        &#039;name&#039;: &#039;Montserrat Semibold&#039;,
+        &#039;varname&#039;: &#039;@font_primary_semi&#039;,
+        &#039;style&#039;: &#039;font-primary-semi&#039;
+    } %}
+
+    {% include &#039;../includes/font-style.twig&#039; with {
+        &#039;name&#039;: &#039;Montserrat Bold&#039;,
+        &#039;varname&#039;: &#039;@font_primary_bold&#039;,
+        &#039;style&#039;: &#039;font-primary-bold&#039;
+    } %}
+
+&lt;/div&gt;
+
+
+&lt;h2&gt;Secundair font&lt;/h2&gt;
+
+&lt;p&gt;Als secundair font wordt Leage Gothic gebruikt, een gratis te gebruiken lettertype. Het wordt gebruikt voor koppen en accentteksten.&lt;/p&gt;
+
+&lt;p&gt;Voor het secundaire font gebruik je de variabele &lt;code&gt;@font_secondary&lt;/code&gt;. Dit lettertype wordt in koppen vaak UPPERCASE gebruikt.
+
+&lt;div class=&quot;gc-sg-font-wrapper&quot;&gt;
+
+    {% include &#039;../includes/font-style.twig&#039; with {
+        &#039;name&#039;: &#039;League Gothic&#039;,
+        &#039;varname&#039;: &#039;@font_secondary&#039;,
+        &#039;style&#039;: &#039;font-secondary&#039;
+    } %}
+
+
+&lt;/div&gt;
+</code></pre>
+
+                </details>
+              
+            
+                          <small class="text-muted">
+                Source: <code>styleguide/elements/base/fonts-base.scss</code>, line 1
+              </small>
+                      </section>
+                                  <section id="base-text-styles" class="section section--depth-3 ">
+                            <h3 class="">
+                Tekststijlen
+                <a href="#base-text-styles" class="text-muted">
+                  <small>#
+                    <span class="sr-only">
+                      1.2.2 Base.Text.Styles
+                    </span>
+                  </small>
+                </a>
+              </h3>
+
+                          <div class="btn-group btn-group-sm bd-toolbar" role="group" aria-label="Example toolbar">
+                                  <a href="#base-text-styles" onclick="event.preventDefault();" data-kss-fullscreen="base-text-styles" class="btn btn-light btn-fullscreen">
+                    <span class="kss-toolbar__tooltip sr-only">Toggle full screen</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="toggle-full-screen" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M16,0 L16,6.5 L13.5,4 L10.5,7 L9,5.5 L12,2.5 L9.5,0 L16,0 Z M7,10.5 L4,13.5 L6.5,16 L0,16 L0,9.5 L2.5,12 L5.5,9 L7,10.5 Z"/>
+                      </g>
+                    </svg>
+                  </a>
+                  <a href="item-base-text-styles.html" target="_blank" class="btn btn-light btn-newwindow">
+                    <span class="kss-toolbar__tooltip sr-only">Open in new window</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="new-tab" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M2.85714286,2 L2.85714286,13.1428571 L14,13.1428571 L14,2 L2.85714286,2 Z M13.0714286,12.2142857 L3.78571429,12.2142857 L3.78571429,2.92857143 L13.0714286,2.92857143 L13.0714286,12.2142857 Z M1.92857143,14.0714286 L1.92857143,4.32142857 L1,3.39285714 L1,15 L12.6071429,15 L11.6785714,14.0714286 L1.92857143,14.0714286 Z"/>
+                        <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.179 4.786 7.5 7.107 4.714 9.893 6.107 11.286 8.893 8.5 11.214 10.821 11.214 4.786"/>
+                      </g>
+                    </svg>
+                  </a>
+                                <a href="#base-text-styles" onclick="event.preventDefault();" data-kss-guides="true" class="btn btn-light btn-guides">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle example guides</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-guides" fill="none" fill-rule="evenodd">
+                      <path id="Shape" fill="#000" fill-rule="nonzero" d="M6,3 L8,3 L8,4 L6,4 L6,3 Z M9,3 L11,3 L11,4 L9,4 L9,3 Z M14,3 L14,7 L11,7 L11,6 L13,6 L13,4 L12,4 L12,3 L14,3 Z M5,6 L7,6 L7,7 L5,7 L5,6 Z M8,6 L10,6 L10,7 L8,7 L8,6 Z M3,4 L3,6 L4,6 L4,7 L2,7 L2,3 L5,3 L5,4 L3,4 Z M6,9 L8,9 L8,10 L6,10 L6,9 Z M9,9 L11,9 L11,10 L9,10 L9,9 Z M14,9 L14,13 L11,13 L11,12 L13,12 L13,10 L12,10 L12,9 L14,9 Z M5,12 L7,12 L7,13 L5,13 L5,12 Z M8,12 L10,12 L10,13 L8,13 L8,12 Z M3,10 L3,12 L4,12 L4,13 L2,13 L2,9 L5,9 L5,10 L3,10 Z M15,1 L1,1 L1,15 L15,15 L15,1 Z M16,0 L16,16 L0,16 L0,0 L16,0 Z"/>
+                    </g>
+                  </svg>
+                </a>
+                <a href="#base-text-styles" onclick="event.preventDefault();" data-kss-markup="true" class="btn btn-light btn-markup">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle HTML markup</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-markup" fill="none" fill-rule="evenodd">
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="10.526 11.711 11.789 12.974 16 8.763 11.789 4.553 10.526 5.816 13.474 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.474 5.816 4.211 4.553 0 8.763 4.211 12.974 5.474 11.711 2.526 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="8.807 4.007 9.721 4.256 7.194 13.52 6.28 13.27 8.807 4.007"/>
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            
+
+            
+            
+
+                          <div class="bd-example">
+
+                  
+                                      <div class="modifier__example">
+                      <div class="font-style">
+
+    <strong>Meta data</strong>
+    <div class="meta-data">
+        <span class="meta-data__item">Een meta data item</span>
+        <span class="meta-data__item">En nog een</span>
+    </div>
+</div>
+
+
+<div class="font-style">
+    <strong>Kleinere tekst</strong>
+    <span class="font-smaller">Gebruik font-size: @font_small</span>
+</div>
+
+<div class="font-style">
+    <strong>Sectie of bloktitle</strong>
+    <h2 class="section__title">Een sectieheading of bloktitel</h2>
+    <p>Gebruik class <code>.section__title</code> of mixin <code>.gc-section-heading()</code></p>
+</div>
+
+
+                      <div class="modifier__example-footer"></div>
+                    </div>
+                  
+                  
+              </div>
+
+                              <details class="highlight">
+                  <summary style="padding: 5px 20px; cursor: pointer;">
+                                          Markup: <code>../elements/base/fonts-styles.twig</code>
+                                      </summary>
+                  <pre><code class="language-markup" data-language="html">&lt;div class=&quot;font-style&quot;&gt;
+
+    &lt;strong&gt;Meta data&lt;/strong&gt;
+    &lt;div class=&quot;meta-data&quot;&gt;
+        &lt;span class=&quot;meta-data__item&quot;&gt;Een meta data item&lt;/span&gt;
+        &lt;span class=&quot;meta-data__item&quot;&gt;En nog een&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&quot;font-style&quot;&gt;
+    &lt;strong&gt;Kleinere tekst&lt;/strong&gt;
+    &lt;span class=&quot;font-smaller&quot;&gt;Gebruik font-size: @font_small&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;font-style&quot;&gt;
+    &lt;strong&gt;Sectie of bloktitle&lt;/strong&gt;
+    &lt;h2 class=&quot;section__title&quot;&gt;Een sectieheading of bloktitel&lt;/h2&gt;
+    &lt;p&gt;Gebruik class &lt;code&gt;.section__title&lt;/code&gt; of mixin &lt;code&gt;.gc-section-heading()&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+</code></pre>
+
+                </details>
+              
+            
+                          <small class="text-muted">
+                Source: <code>styleguide/elements/base/fonts-styles.scss</code>, line 1
+              </small>
+                      </section>
+                                  <section id="base-text-z01elements" class="section section--depth-3 ">
+                            <h3 class="">
+                Elementen
+                <a href="#base-text-z01elements" class="text-muted">
+                  <small>#
+                    <span class="sr-only">
+                      1.2.3 Base.Text.Z01Elements
+                    </span>
+                  </small>
+                </a>
+              </h3>
+
+                          <div class="btn-group btn-group-sm bd-toolbar" role="group" aria-label="Example toolbar">
+                                  <a href="#base-text-z01elements" onclick="event.preventDefault();" data-kss-fullscreen="base-text-z01elements" class="btn btn-light btn-fullscreen">
+                    <span class="kss-toolbar__tooltip sr-only">Toggle full screen</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="toggle-full-screen" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M16,0 L16,6.5 L13.5,4 L10.5,7 L9,5.5 L12,2.5 L9.5,0 L16,0 Z M7,10.5 L4,13.5 L6.5,16 L0,16 L0,9.5 L2.5,12 L5.5,9 L7,10.5 Z"/>
+                      </g>
+                    </svg>
+                  </a>
+                  <a href="item-base-text-z01elements.html" target="_blank" class="btn btn-light btn-newwindow">
+                    <span class="kss-toolbar__tooltip sr-only">Open in new window</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                      <g id="new-tab" fill="none" fill-rule="evenodd">
+                        <path id="Shape" fill="#000" fill-rule="nonzero" d="M2.85714286,2 L2.85714286,13.1428571 L14,13.1428571 L14,2 L2.85714286,2 Z M13.0714286,12.2142857 L3.78571429,12.2142857 L3.78571429,2.92857143 L13.0714286,2.92857143 L13.0714286,12.2142857 Z M1.92857143,14.0714286 L1.92857143,4.32142857 L1,3.39285714 L1,15 L12.6071429,15 L11.6785714,14.0714286 L1.92857143,14.0714286 Z"/>
+                        <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.179 4.786 7.5 7.107 4.714 9.893 6.107 11.286 8.893 8.5 11.214 10.821 11.214 4.786"/>
+                      </g>
+                    </svg>
+                  </a>
+                                <a href="#base-text-z01elements" onclick="event.preventDefault();" data-kss-guides="true" class="btn btn-light btn-guides">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle example guides</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-guides" fill="none" fill-rule="evenodd">
+                      <path id="Shape" fill="#000" fill-rule="nonzero" d="M6,3 L8,3 L8,4 L6,4 L6,3 Z M9,3 L11,3 L11,4 L9,4 L9,3 Z M14,3 L14,7 L11,7 L11,6 L13,6 L13,4 L12,4 L12,3 L14,3 Z M5,6 L7,6 L7,7 L5,7 L5,6 Z M8,6 L10,6 L10,7 L8,7 L8,6 Z M3,4 L3,6 L4,6 L4,7 L2,7 L2,3 L5,3 L5,4 L3,4 Z M6,9 L8,9 L8,10 L6,10 L6,9 Z M9,9 L11,9 L11,10 L9,10 L9,9 Z M14,9 L14,13 L11,13 L11,12 L13,12 L13,10 L12,10 L12,9 L14,9 Z M5,12 L7,12 L7,13 L5,13 L5,12 Z M8,12 L10,12 L10,13 L8,13 L8,12 Z M3,10 L3,12 L4,12 L4,13 L2,13 L2,9 L5,9 L5,10 L3,10 Z M15,1 L1,1 L1,15 L15,15 L15,1 Z M16,0 L16,16 L0,16 L0,0 L16,0 Z"/>
+                    </g>
+                  </svg>
+                </a>
+                <a href="#base-text-z01elements" onclick="event.preventDefault();" data-kss-markup="true" class="btn btn-light btn-markup">
+                  <span class="kss-toolbar__tooltip sr-only">Toggle HTML markup</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g id="toggle-markup" fill="none" fill-rule="evenodd">
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="10.526 11.711 11.789 12.974 16 8.763 11.789 4.553 10.526 5.816 13.474 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="5.474 5.816 4.211 4.553 0 8.763 4.211 12.974 5.474 11.711 2.526 8.763"/>
+                      <polygon id="Shape" fill="#000" fill-rule="nonzero" points="8.807 4.007 9.721 4.256 7.194 13.52 6.28 13.27 8.807 4.007"/>
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            
+
+            
+            
+
+                          <div class="bd-example">
+
+                  
+                                      <div class="modifier__example">
+                      <div class="sg-fonts-elements-wrapper">
+
+    <h1>Een heading 1</h1>
+    <h2>Een heading 2</h2>
+    <h3>Een heading 3</h3>
+    <h4>Een heading 4</h4>
+    <h5>Een heading 5</h5>
+
+    <p>Een gewone paragraaf. Sed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet
+        dui. Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis
+        at tellus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.</p>
+    <a class="btn btn--primary" href="#">Met een button</a>
+
+    <ul>
+        <li>Een gewoon lijstje</li>
+        <li>Met meerdere items</li>
+        <li>Kan je toevoegen in teksten</li>
+    </ul>
+
+    <ul class="fancy-list">
+        <li>Een fancy lijstje</li>
+        <li>Met meerdere items</li>
+        <li>Kan je toevoegen in teksten</li>
+    </ul>
+
+    <ol>
+        <li>Een genummerd lijstje</li>
+        <li>Met meerdere items</li>
+        <li>Kan je toevoegen in teksten</li>
+    </ol>
+
+    <ol class="steplist">
+        <li>
+            <h3>Een step lijstje</h3>
+            <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Cras ultricies ligula sed magna dictum porta. Nulla quis lorem ut libero malesuada feugiat.</p>
+        </li>
+
+        <li>
+            <h3>Met nog een item</h3>
+            <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
+        </li>
+
+        <li>
+            <h3>En nog 1, gewoon omdat het kan!</h3>
+            <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
+        </li>
+    </ol>
+
+
+</div>
+
+
+                      <div class="modifier__example-footer"></div>
+                    </div>
+                  
+                  
+              </div>
+
+                              <details class="highlight">
+                  <summary style="padding: 5px 20px; cursor: pointer;">
+                                          Markup: <code>../elements/base/fonts-elements.twig</code>
+                                      </summary>
+                  <pre><code class="language-markup" data-language="html">&lt;div class=&quot;sg-fonts-elements-wrapper&quot;&gt;
+
+    &lt;h1&gt;Een heading 1&lt;/h1&gt;
+    &lt;h2&gt;Een heading 2&lt;/h2&gt;
+    &lt;h3&gt;Een heading 3&lt;/h3&gt;
+    &lt;h4&gt;Een heading 4&lt;/h4&gt;
+    &lt;h5&gt;Een heading 5&lt;/h5&gt;
+
+    &lt;p&gt;Een gewone paragraaf. Sed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet
+        dui. Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis
+        at tellus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.&lt;/p&gt;
+    &lt;a class=&quot;btn btn--primary&quot; href=&quot;#&quot;&gt;Met een button&lt;/a&gt;
+
+    &lt;ul&gt;
+        &lt;li&gt;Een gewoon lijstje&lt;/li&gt;
+        &lt;li&gt;Met meerdere items&lt;/li&gt;
+        &lt;li&gt;Kan je toevoegen in teksten&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;ul class=&quot;fancy-list&quot;&gt;
+        &lt;li&gt;Een fancy lijstje&lt;/li&gt;
+        &lt;li&gt;Met meerdere items&lt;/li&gt;
+        &lt;li&gt;Kan je toevoegen in teksten&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;ol&gt;
+        &lt;li&gt;Een genummerd lijstje&lt;/li&gt;
+        &lt;li&gt;Met meerdere items&lt;/li&gt;
+        &lt;li&gt;Kan je toevoegen in teksten&lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;ol class=&quot;steplist&quot;&gt;
+        &lt;li&gt;
+            &lt;h3&gt;Een step lijstje&lt;/h3&gt;
+            &lt;p&gt;Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Cras ultricies ligula sed magna dictum porta. Nulla quis lorem ut libero malesuada feugiat.&lt;/p&gt;
+        &lt;/li&gt;
+
+        &lt;li&gt;
+            &lt;h3&gt;Met nog een item&lt;/h3&gt;
+            &lt;p&gt;Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.&lt;/p&gt;
+        &lt;/li&gt;
+
+        &lt;li&gt;
+            &lt;h3&gt;En nog 1, gewoon omdat het kan!&lt;/h3&gt;
+            &lt;p&gt;Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.&lt;/p&gt;
+        &lt;/li&gt;
+    &lt;/ol&gt;
+
+
+&lt;/div&gt;
+
+</code></pre>
+
+                </details>
+              
+            
+                          <small class="text-muted">
+                Source: <code>styleguide/elements/base/fonts-elements.scss</code>, line 1
               </small>
                       </section>
           

@@ -65,6 +65,25 @@ License URI: http://www.opensource.org/licenses/gpl-license.php
 /*
 Imports
 ---------------------------------------------------------------------------------------------------- */
+ul.fancy-list {
+  margin: 2rem 0 0;
+  padding: 0;
+}
+ul.fancy-list li {
+  position: relative;
+  list-style: none;
+  padding: 0 0 0 2rem;
+}
+ul.fancy-list li:before {
+  content: " ";
+  background: #004152;
+  position: absolute;
+  top: 1.1rem;
+  left: 0;
+  width: 0.4rem;
+  height: 0.4rem;
+  display: block;
+}
 @media only screen and (max-width: 900px) {
   .admin-bar .nav-primary.active {
     top: 120px;

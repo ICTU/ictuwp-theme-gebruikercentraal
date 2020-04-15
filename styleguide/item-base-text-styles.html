@@ -25,20 +25,20 @@
                       <main class="col-12 bd-content" role="main">
           <a id="main-content" tabindex="-1"></a>
             
-                                    <div id="base-colors-inclusie" class="section section--depth-3 is-fullscreen">
+                                    <div id="base-text-styles" class="section section--depth-3 is-fullscreen">
                             <h3 class="">
-                Inclusie
-                <a href="#base-colors-inclusie" class="text-muted">
+                Tekststijlen
+                <a href="#base-text-styles" class="text-muted">
                   <small>#
                     <span class="sr-only">
-                      1.1.4 Base.Colors.Inclusie
+                      1.2.2 Base.Text.Styles
                     </span>
                   </small>
                 </a>
               </h3>
 
                           <div class="btn-group btn-group-sm bd-toolbar" role="group" aria-label="Example toolbar">
-                                <a href="#base-colors-inclusie" onclick="event.preventDefault();" data-kss-guides="true" class="btn btn-light btn-guides">
+                                <a href="#base-text-styles" onclick="event.preventDefault();" data-kss-guides="true" class="btn btn-light btn-guides">
                   <span class="kss-toolbar__tooltip sr-only">Toggle example guides</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                     <g id="toggle-guides" fill="none" fill-rule="evenodd">
@@ -46,7 +46,7 @@
                     </g>
                   </svg>
                 </a>
-                <a href="#base-colors-inclusie" onclick="event.preventDefault();" data-kss-markup="true" class="btn btn-light btn-markup">
+                <a href="#base-text-styles" onclick="event.preventDefault();" data-kss-markup="true" class="btn btn-light btn-markup">
                   <span class="kss-toolbar__tooltip sr-only">Toggle HTML markup</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                     <g id="toggle-markup" fill="none" fill-rule="evenodd">
@@ -64,111 +64,68 @@
 
                           <div class="bd-example">
 
-                                      <!--<div class="kss-modifier__default-name kss-style">
-                      Default styling
-                    </div>-->
                   
+                                      <div class="modifier__example">
+                      <div class="font-style">
+
+    <strong>Meta data</strong>
+    <div class="meta-data">
+        <span class="meta-data__item">Een meta data item</span>
+        <span class="meta-data__item">En nog een</span>
+    </div>
+</div>
+
+
+<div class="font-style">
+    <strong>Kleinere tekst</strong>
+    <span class="font-smaller">Gebruik font-size: @font_small</span>
+</div>
+
+<div class="font-style">
+    <strong>Sectie of bloktitle</strong>
+    <h2 class="section__title">Een sectieheading of bloktitel</h2>
+    <p>Gebruik class <code>.section__title</code> of mixin <code>.gc-section-heading()</code></p>
+</div>
+
+
+                      <div class="modifier__example-footer"></div>
+                    </div>
                   
-                                      <code class="modifier__name kss-style">
-                      Aanvullende kleuren voor de Inclusie Subsite. Prefix
-                    </code>
-                    <div class="modifier__description kss-style">
-                      @inc-
-                    </div>
-                    <div class="modifier__example">
-                      <h2>Inclusie kleuren</h2>
-
-<div class="gc-sg-color-wrapper">
-
-    <div class="kleur">
-
-    <span class="kleur__staaltje inc-orange">@inc_orange</span>
-    <span class="kleur__naam">Inclusie Orange</span>
-
-            <p class="descr">Inclusie Brandkleur</p>
-    </div></div>
-
-<div class="gc-sg-color-wrapper">
-    <div class="kleur">
-
-    <span class="kleur__staaltje inc-orange">@inc_orange</span>
-    <span class="kleur__naam">Brandkleur</span>
-
-            <p class="descr">Primaire brandkleur.</p>
-    </div>
-    <div class="kleur">
-
-    <span class="kleur__staaltje inc-a11y-orange">@inc_a11y_orange</span>
-    <span class="kleur__naam">Brandkleur - Accessible</span>
-
-            <p class="descr">Wanneer je witte tekst op de brandkleur wil gebruiken.</p>
-    </div>
-    <div class="kleur">
-
-    <span class="kleur__staaltje gc-a11y-green">@gc_a11y_green</span>
-    <span class="kleur__naam">Intro + tekstblok kleur</span>
-
-            <p class="descr">Kleur welke wordt gebruikt voor de intro's en tekstblokken met een kleur</p>
-    </div>
-    <div class="kleur">
-
-    <span class="kleur__staaltje gc-a11y-green">@gc_a11y_green</span>
-    <span class="kleur__naam">Knopkleur</span>
-
-            <p class="descr">Kleur welke wordt gebruikt als achtergrond voor de primary buttons</p>
-    </div></div>
-
-                    </div>
                   
               </div>
 
                               <details class="highlight">
                   <summary style="padding: 5px 20px; cursor: pointer;">
-                                          Markup: <code>../elements/base/colors-inclusie.twig</code>
+                                          Markup: <code>../elements/base/fonts-styles.twig</code>
                                       </summary>
-                  <pre><code class="language-markup" data-language="html">&lt;h2&gt;Inclusie kleuren&lt;/h2&gt;
+                  <pre><code class="language-markup" data-language="html">&lt;div class=&quot;font-style&quot;&gt;
 
-&lt;div class=&quot;gc-sg-color-wrapper&quot;&gt;
-
-    {% include &#039;../includes/kleurtje.twig&#039; with {
-        &#039;naam&#039;: &#039;Inclusie Orange&#039;,
-        &#039;kleurtje&#039;: &#039;inc-orange&#039;,
-        &#039;varname&#039;: &#039;@inc_orange&#039;,
-        &#039;descr&#039;: &#039;Inclusie Brandkleur&#039;} %}
+    &lt;strong&gt;Meta data&lt;/strong&gt;
+    &lt;div class=&quot;meta-data&quot;&gt;
+        &lt;span class=&quot;meta-data__item&quot;&gt;Een meta data item&lt;/span&gt;
+        &lt;span class=&quot;meta-data__item&quot;&gt;En nog een&lt;/span&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;gc-sg-color-wrapper&quot;&gt;
-    {% include &#039;../includes/kleurtje.twig&#039; with {
-        &#039;naam&#039;: &#039;Brandkleur&#039;,
-        &#039;kleurtje&#039;: &#039;inc-orange&#039;,
-        &#039;varname&#039;: &#039;@inc_orange&#039;,
-        &#039;descr&#039;: &#039;Primaire brandkleur.&#039;} %}
 
-    {% include &#039;../includes/kleurtje.twig&#039; with {
-        &#039;naam&#039;: &#039;Brandkleur - Accessible&#039;,
-        &#039;kleurtje&#039;: &#039;inc-a11y-orange&#039;,
-        &#039;varname&#039;: &#039;@inc_a11y_orange&#039;,
-        &#039;descr&#039;: &#039;Wanneer je witte tekst op de brandkleur wil gebruiken.&#039;} %}
-
-    {% include &#039;../includes/kleurtje.twig&#039; with {
-        &#039;naam&#039;: &#039;Intro + tekstblok kleur&#039;,
-        &#039;kleurtje&#039;: &#039;gc-a11y-green&#039;,
-        &#039;varname&#039;: &#039;@gc_a11y_green&#039;,
-        &#039;descr&#039;: &#039;Kleur welke wordt gebruikt voor de intro\&#039;s en tekstblokken met een kleur&#039;} %}
-
-    {% include &#039;../includes/kleurtje.twig&#039; with {
-        &#039;naam&#039;: &#039;Knopkleur&#039;,
-        &#039;kleurtje&#039;: &#039;gc-a11y-green&#039;,
-        &#039;varname&#039;: &#039;@gc_a11y_green&#039;,
-        &#039;descr&#039;: &#039;Kleur welke wordt gebruikt als achtergrond voor de primary buttons&#039;} %}
+&lt;div class=&quot;font-style&quot;&gt;
+    &lt;strong&gt;Kleinere tekst&lt;/strong&gt;
+    &lt;span class=&quot;font-smaller&quot;&gt;Gebruik font-size: @font_small&lt;/span&gt;
 &lt;/div&gt;
+
+&lt;div class=&quot;font-style&quot;&gt;
+    &lt;strong&gt;Sectie of bloktitle&lt;/strong&gt;
+    &lt;h2 class=&quot;section__title&quot;&gt;Een sectieheading of bloktitel&lt;/h2&gt;
+    &lt;p&gt;Gebruik class &lt;code&gt;.section__title&lt;/code&gt; of mixin &lt;code&gt;.gc-section-heading()&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+
 </code></pre>
 
                 </details>
               
             
                           <small class="text-muted">
-                Source: <code>styleguide/elements/base/colors-inclusie.scss</code>, line 1
+                Source: <code>styleguide/elements/base/fonts-styles.scss</code>, line 1
               </small>
                       </div>
           

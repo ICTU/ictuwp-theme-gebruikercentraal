@@ -871,6 +871,7 @@
 @media only screen and (min-width: 650px) {
   .colors-smaller {
     width: 50%;
+    max-width: 50rem;
   }
 }
 .kleur {
@@ -1017,4 +1018,65 @@
 }
 .gc-blue-darker {
   background: #007BB0;
+}
+/*
+ * Fonts en fontstijlen
+ */
+.gc-sg-font-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
+.font {
+  border: 0.1rem solid #D1DFE3;
+  padding: 2rem;
+  width: 20rem;
+  margin-top: 3rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+.font__sample {
+  font-size: 6rem;
+  line-height: 7rem;
+  border-bottom: 0.1rem solid #D1DFE3;
+  width: 100%;
+  display: block;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+.font__varname {
+  font-family: 'montserratregular', Helvetica, Arial, sans-serif;
+  font-size: 1.4rem;
+}
+.font-primary-light {
+  font-family: 'montserratlight', Helvetica, Arial, sans-serif;
+}
+.font-primary {
+  font-family: 'montserratregular', Helvetica, Arial, sans-serif;
+}
+.font-primary-semi {
+  font-family: 'montserratsemibold', Helvetica, Arial, sans-serif;
+}
+.font-primary-bold {
+  font-family: 'montserratbold', Helvetica, Arial, sans-serif;
+}
+.font-secondary {
+  font-family: 'league_gothicregular', Impact, Helvetica, Arial, sans-serif;
+}
+.font-secondary .font__name {
+  font-size: 2.6rem;
+}
+.font-style {
+  display: block;
+  margin-top: 3rem;
+}
+.font-style strong {
+  display: block;
+}
+.font-smaller {
+  font-size: 1.4rem;
 }

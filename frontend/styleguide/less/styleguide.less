@@ -350,6 +350,7 @@ h1 {
 
   @media @tablet {
     width: 50%;
+    max-width: 50rem;
   }
 }
 
@@ -536,4 +537,79 @@ h1 {
 
 .gc-blue-darker {
   background: @gc_a11y_blue;
+}
+
+
+/*
+ * Fonts en fontstijlen
+ */
+
+.gc-sg-font-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -@gutter / 2;
+  margin-right: -@gutter / 2;
+}
+
+.font {
+  border: .1rem solid @border_color;
+  padding: 2rem;
+  width: 20rem;
+  margin-top: @gutter;
+  margin-left: @gutter / 2;
+  margin-right: @gutter / 2;
+}
+
+.font__sample {
+  font-size: 6rem;
+  line-height: 7rem;
+  border-bottom: .1rem solid @border_color;
+  width: 100%;
+  display: block;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.font__varname {
+  font-family: @font_primary;
+  font-size: @font_small;
+}
+
+.font-primary-light {
+  font-family: @font_primary_light;
+}
+
+.font-primary {
+  font-family: @font_primary;
+}
+
+.font-primary-semi {
+  font-family: @font_primary_semi;
+}
+
+.font-primary-bold {
+  font-family: @font_primary_bold;
+}
+
+.font-secondary {
+  font-family: @font_secondary;
+
+  .font__name {
+    font-size: 2.6rem;
+  }
+}
+
+// Styles
+
+.font-style {
+  display: block;
+  margin-top: 3rem;
+
+  strong {
+    display: block;
+  }
+}
+
+.font-smaller {
+  font-size: @font_small;
 }

@@ -25,20 +25,20 @@
                       <main class="col-12 bd-content" role="main">
           <a id="main-content" tabindex="-1"></a>
             
-                                    <div id="base-colors-inclusie" class="section section--depth-3 is-fullscreen">
+                                    <div id="base-text-fonts" class="section section--depth-3 is-fullscreen">
                             <h3 class="">
-                Inclusie
-                <a href="#base-colors-inclusie" class="text-muted">
+                Lettertypes
+                <a href="#base-text-fonts" class="text-muted">
                   <small>#
                     <span class="sr-only">
-                      1.1.4 Base.Colors.Inclusie
+                      1.2.1 Base.Text.Fonts
                     </span>
                   </small>
                 </a>
               </h3>
 
                           <div class="btn-group btn-group-sm bd-toolbar" role="group" aria-label="Example toolbar">
-                                <a href="#base-colors-inclusie" onclick="event.preventDefault();" data-kss-guides="true" class="btn btn-light btn-guides">
+                                <a href="#base-text-fonts" onclick="event.preventDefault();" data-kss-guides="true" class="btn btn-light btn-guides">
                   <span class="kss-toolbar__tooltip sr-only">Toggle example guides</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                     <g id="toggle-guides" fill="none" fill-rule="evenodd">
@@ -46,7 +46,7 @@
                     </g>
                   </svg>
                 </a>
-                <a href="#base-colors-inclusie" onclick="event.preventDefault();" data-kss-markup="true" class="btn btn-light btn-markup">
+                <a href="#base-text-fonts" onclick="event.preventDefault();" data-kss-markup="true" class="btn btn-light btn-markup">
                   <span class="kss-toolbar__tooltip sr-only">Toggle HTML markup</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                     <g id="toggle-markup" fill="none" fill-rule="evenodd">
@@ -64,103 +64,119 @@
 
                           <div class="bd-example">
 
-                                      <!--<div class="kss-modifier__default-name kss-style">
-                      Default styling
-                    </div>-->
                   
+                                      <div class="modifier__example">
+                      
+
+<h2>Primair font</h2>
+
+<p>Als primair font wordt Montserrat gebruikt, een gratis te gebruiken Google Font. Het wordt gebruikt voor alle teksten.</p>
+
+<p>Alle stijlen voor het primaire font zijn geprefixed met <code>@font_primary</code>. Er worden er geen font weights gebruikt. Voor <strong>vetgedrukte</strong> tekst gebruik je dus <code>font-family: @font_primary_body</code>.
+
+<div class="gc-sg-font-wrapper">
+
+    <div class="font sg-font-block font-primary-light">
+    <span class="font__sample">Aa</span>
+    <span class="font__name">Montserrat Light</span>
+    <span class="font__varname">@font_primary_light</span>
+</div>
+    <div class="font sg-font-block font-primary">
+    <span class="font__sample">Aa</span>
+    <span class="font__name">Montserrat Regular</span>
+    <span class="font__varname">@font_primary</span>
+</div>
+    <div class="font sg-font-block font-primary-semi">
+    <span class="font__sample">Aa</span>
+    <span class="font__name">Montserrat Semibold</span>
+    <span class="font__varname">@font_primary_semi</span>
+</div>
+    <div class="font sg-font-block font-primary-bold">
+    <span class="font__sample">Aa</span>
+    <span class="font__name">Montserrat Bold</span>
+    <span class="font__varname">@font_primary_bold</span>
+</div>
+</div>
+
+
+<h2>Secundair font</h2>
+
+<p>Als secundair font wordt Leage Gothic gebruikt, een gratis te gebruiken lettertype. Het wordt gebruikt voor koppen en accentteksten.</p>
+
+<p>Voor het secundaire font gebruik je de variabele <code>@font_secondary</code>. Dit lettertype wordt in koppen vaak UPPERCASE gebruikt.
+
+<div class="gc-sg-font-wrapper">
+
+    <div class="font sg-font-block font-secondary">
+    <span class="font__sample">Aa</span>
+    <span class="font__name">League Gothic</span>
+    <span class="font__varname">@font_secondary</span>
+</div>
+
+</div>
+
+                      <div class="modifier__example-footer"></div>
+                    </div>
                   
-                                      <code class="modifier__name kss-style">
-                      Aanvullende kleuren voor de Inclusie Subsite. Prefix
-                    </code>
-                    <div class="modifier__description kss-style">
-                      @inc-
-                    </div>
-                    <div class="modifier__example">
-                      <h2>Inclusie kleuren</h2>
-
-<div class="gc-sg-color-wrapper">
-
-    <div class="kleur">
-
-    <span class="kleur__staaltje inc-orange">@inc_orange</span>
-    <span class="kleur__naam">Inclusie Orange</span>
-
-            <p class="descr">Inclusie Brandkleur</p>
-    </div></div>
-
-<div class="gc-sg-color-wrapper">
-    <div class="kleur">
-
-    <span class="kleur__staaltje inc-orange">@inc_orange</span>
-    <span class="kleur__naam">Brandkleur</span>
-
-            <p class="descr">Primaire brandkleur.</p>
-    </div>
-    <div class="kleur">
-
-    <span class="kleur__staaltje inc-a11y-orange">@inc_a11y_orange</span>
-    <span class="kleur__naam">Brandkleur - Accessible</span>
-
-            <p class="descr">Wanneer je witte tekst op de brandkleur wil gebruiken.</p>
-    </div>
-    <div class="kleur">
-
-    <span class="kleur__staaltje gc-a11y-green">@gc_a11y_green</span>
-    <span class="kleur__naam">Intro + tekstblok kleur</span>
-
-            <p class="descr">Kleur welke wordt gebruikt voor de intro's en tekstblokken met een kleur</p>
-    </div>
-    <div class="kleur">
-
-    <span class="kleur__staaltje gc-a11y-green">@gc_a11y_green</span>
-    <span class="kleur__naam">Knopkleur</span>
-
-            <p class="descr">Kleur welke wordt gebruikt als achtergrond voor de primary buttons</p>
-    </div></div>
-
-                    </div>
                   
               </div>
 
                               <details class="highlight">
                   <summary style="padding: 5px 20px; cursor: pointer;">
-                                          Markup: <code>../elements/base/colors-inclusie.twig</code>
+                                          Markup: <code>../elements/base/fonts-base.twig</code>
                                       </summary>
-                  <pre><code class="language-markup" data-language="html">&lt;h2&gt;Inclusie kleuren&lt;/h2&gt;
+                  <pre><code class="language-markup" data-language="html">
 
-&lt;div class=&quot;gc-sg-color-wrapper&quot;&gt;
+&lt;h2&gt;Primair font&lt;/h2&gt;
 
-    {% include &#039;../includes/kleurtje.twig&#039; with {
-        &#039;naam&#039;: &#039;Inclusie Orange&#039;,
-        &#039;kleurtje&#039;: &#039;inc-orange&#039;,
-        &#039;varname&#039;: &#039;@inc_orange&#039;,
-        &#039;descr&#039;: &#039;Inclusie Brandkleur&#039;} %}
+&lt;p&gt;Als primair font wordt Montserrat gebruikt, een gratis te gebruiken Google Font. Het wordt gebruikt voor alle teksten.&lt;/p&gt;
+
+&lt;p&gt;Alle stijlen voor het primaire font zijn geprefixed met &lt;code&gt;@font_primary&lt;/code&gt;. Er worden er geen font weights gebruikt. Voor &lt;strong&gt;vetgedrukte&lt;/strong&gt; tekst gebruik je dus &lt;code&gt;font-family: @font_primary_body&lt;/code&gt;.
+
+&lt;div class=&quot;gc-sg-font-wrapper&quot;&gt;
+
+    {% include &#039;../includes/font-style.twig&#039; with {
+        &#039;name&#039;: &#039;Montserrat Light&#039;,
+        &#039;varname&#039;: &#039;@font_primary_light&#039;,
+        &#039;style&#039;: &#039;font-primary-light&#039;
+    } %}
+
+    {% include &#039;../includes/font-style.twig&#039; with {
+        &#039;name&#039;: &#039;Montserrat Regular&#039;,
+        &#039;varname&#039;: &#039;@font_primary&#039;,
+        &#039;style&#039;: &#039;font-primary&#039;
+    } %}
+
+    {% include &#039;../includes/font-style.twig&#039; with {
+        &#039;name&#039;: &#039;Montserrat Semibold&#039;,
+        &#039;varname&#039;: &#039;@font_primary_semi&#039;,
+        &#039;style&#039;: &#039;font-primary-semi&#039;
+    } %}
+
+    {% include &#039;../includes/font-style.twig&#039; with {
+        &#039;name&#039;: &#039;Montserrat Bold&#039;,
+        &#039;varname&#039;: &#039;@font_primary_bold&#039;,
+        &#039;style&#039;: &#039;font-primary-bold&#039;
+    } %}
+
 &lt;/div&gt;
 
-&lt;div class=&quot;gc-sg-color-wrapper&quot;&gt;
-    {% include &#039;../includes/kleurtje.twig&#039; with {
-        &#039;naam&#039;: &#039;Brandkleur&#039;,
-        &#039;kleurtje&#039;: &#039;inc-orange&#039;,
-        &#039;varname&#039;: &#039;@inc_orange&#039;,
-        &#039;descr&#039;: &#039;Primaire brandkleur.&#039;} %}
 
-    {% include &#039;../includes/kleurtje.twig&#039; with {
-        &#039;naam&#039;: &#039;Brandkleur - Accessible&#039;,
-        &#039;kleurtje&#039;: &#039;inc-a11y-orange&#039;,
-        &#039;varname&#039;: &#039;@inc_a11y_orange&#039;,
-        &#039;descr&#039;: &#039;Wanneer je witte tekst op de brandkleur wil gebruiken.&#039;} %}
+&lt;h2&gt;Secundair font&lt;/h2&gt;
 
-    {% include &#039;../includes/kleurtje.twig&#039; with {
-        &#039;naam&#039;: &#039;Intro + tekstblok kleur&#039;,
-        &#039;kleurtje&#039;: &#039;gc-a11y-green&#039;,
-        &#039;varname&#039;: &#039;@gc_a11y_green&#039;,
-        &#039;descr&#039;: &#039;Kleur welke wordt gebruikt voor de intro\&#039;s en tekstblokken met een kleur&#039;} %}
+&lt;p&gt;Als secundair font wordt Leage Gothic gebruikt, een gratis te gebruiken lettertype. Het wordt gebruikt voor koppen en accentteksten.&lt;/p&gt;
 
-    {% include &#039;../includes/kleurtje.twig&#039; with {
-        &#039;naam&#039;: &#039;Knopkleur&#039;,
-        &#039;kleurtje&#039;: &#039;gc-a11y-green&#039;,
-        &#039;varname&#039;: &#039;@gc_a11y_green&#039;,
-        &#039;descr&#039;: &#039;Kleur welke wordt gebruikt als achtergrond voor de primary buttons&#039;} %}
+&lt;p&gt;Voor het secundaire font gebruik je de variabele &lt;code&gt;@font_secondary&lt;/code&gt;. Dit lettertype wordt in koppen vaak UPPERCASE gebruikt.
+
+&lt;div class=&quot;gc-sg-font-wrapper&quot;&gt;
+
+    {% include &#039;../includes/font-style.twig&#039; with {
+        &#039;name&#039;: &#039;League Gothic&#039;,
+        &#039;varname&#039;: &#039;@font_secondary&#039;,
+        &#039;style&#039;: &#039;font-secondary&#039;
+    } %}
+
+
 &lt;/div&gt;
 </code></pre>
 
@@ -168,7 +184,7 @@
               
             
                           <small class="text-muted">
-                Source: <code>styleguide/elements/base/colors-inclusie.scss</code>, line 1
+                Source: <code>styleguide/elements/base/fonts-base.scss</code>, line 1
               </small>
                       </div>
           
