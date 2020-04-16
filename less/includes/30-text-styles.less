@@ -1,17 +1,15 @@
-
 .basefont() {
 
-// Gebruiker Centraal - 30-text-styles.less
-// ----------------------------------------------------------------------------------
-// bevat gedeelde CSS voor zowel de front-end styling als admin WYSIWYG editor
-// ----------------------------------------------------------------------------------
-// @package gebruiker-centraal
-// @author  Paul van Buuren
-// @license GPL-2.0+
-// @version 3.27.9
-// @desc.   Bugfix social media widget, div styling fixes.
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
-
+  // Gebruiker Centraal - 30-text-styles.less
+  // ----------------------------------------------------------------------------------
+  // bevat gedeelde CSS voor zowel de front-end styling als admin WYSIWYG editor
+  // ----------------------------------------------------------------------------------
+  // @package gebruiker-centraal
+  // @author  Paul van Buuren
+  // @license GPL-2.0+
+  // @version 3.27.9
+  // @desc.   Bugfix social media widget, div styling fixes.
+  // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
   color: @txt;
@@ -34,7 +32,6 @@
   .write-table();
   .write-headings();
 }
-
 
 
 .write-defaults() {
@@ -63,17 +60,17 @@
   }
 
 
-	ol,
-	ul {
-		padding: 0 0 0 @padding;
+  ol,
+  ul {
+    padding: 0 0 0 @padding;
 
-		li {
-			.children {
-				// ul or ol
-				padding-top: 0.5em;
-			}
-		}
-	}
+    li {
+      .children {
+        // ul or ol
+        padding-top: 0.5em;
+      }
+    }
+  }
 
   .entry-content code {
     background-color: @code-bg;
@@ -84,34 +81,36 @@
     font-style: normal;
   }
 
-	aside {
-		font-size: 110%;
-		float: none;
-		display: block;
-		border-top: 1px solid @border_grijs;
-		border-bottom: 1px solid @border_grijs;
-		padding: .5rem 1rem;
-		text-align: center;
-		margin: .5rem 0 .5rem 1rem;
+  aside {
+    font-size: 110%;
+    float: none;
+    display: block;
+    border-top: 1px solid @border_grijs;
+    border-bottom: 1px solid @border_grijs;
+    padding: .5rem 1rem;
+    text-align: center;
+    margin: .5rem 0 .5rem 1rem;
 
-		&.alignleft,
-		&.alignright {
-			max-width: 40%;
-			display: inline-block;
-		}
-		&.alignleft {
-			float: left;
-		}
-		&.alignright {
-			float: right;
-		}
+    &.alignleft,
+    &.alignright {
+      max-width: 40%;
+      display: inline-block;
+    }
 
-		@media only screen and (min-width: ( @break_tablet ) ) {
-			font-size: 125%;
-			margin: 0 4rem 3rem 4rem;
-		}
+    &.alignleft {
+      float: left;
+    }
 
-	}
+    &.alignright {
+      float: right;
+    }
+
+    @media only screen and (min-width: ( @break_tablet ) ) {
+      font-size: 125%;
+      margin: 0 4rem 3rem 4rem;
+    }
+
+  }
 
   p {
     -webkit-hyphens: auto;
@@ -137,7 +136,7 @@
 
   ul li {
     list-style-image: url('../images/bullet.png');
-    .iconaddbullet( '../images/bullet.svg', @txt );
+    .iconaddbullet('../images/bullet.svg', @txt);
   }
 
 
@@ -185,12 +184,13 @@
   }
 
   .thumbnail {
-	  &.alignleft {
-		  margin: .5rem 1rem 1rem 0;
-	  }
-	  &.alignright {
-		  margin: .5rem 0 1rem 1rem;
-	  }
+    &.alignleft {
+      margin: .5rem 1rem 1rem 0;
+    }
+
+    &.alignright {
+      margin: .5rem 0 1rem 1rem;
+    }
   }
 
   .wp-caption {
@@ -209,104 +209,91 @@
     width: 100%;
     margin-bottom: 1em;
 
+    .wp-caption {
+      border: .2rem solid @border_color;
+      position: relative;
+      padding: 2rem;
+      max-width: none;
+      width: 100% !important; //rare inline styles?
+      margin: 0;
+      z-index: 5;
+
+      &:before {
+        top: 0;
+        left: 0;
+        right: 0;
+        content: " ";
+        position: absolute;
+        height: 21rem;
+        background: @gc_pantybrown_xlight;
+        z-index: -1;
+      }
+
+      > img {
+        background: @white;
+        .gc-box-shadow;
+        display: block;
+        height: 15rem;
+        width: auto;
+        margin: 0 auto 5rem;
+      }
+
+      &:after {
+        content: " ";
+        padding: .3rem 1rem .3rem 3rem;
+        color: @white;
+        text-transform: lowercase;
+        top: 1.5rem;
+        right: 1.5rem;
+        position: absolute;
+        display: block;
+        background-repeat: no-repeat;
+        background-size: 1.2rem auto;
+        background-position: 10px 45%;
+        font-size: @font_small;
+        font-family: @font_primary_semi;
+      }
+
+      + .wp-caption {
+        border-top: 0;
+      }
+    }
+
+    .bad-example:after {
+      content: "Niet zo";
+      background-color: @inc_a11y_orange;
+      background-image: url('../images/icon-dosdonts-dont-white.svg');
+    }
+
+    .good-example:after {
+      content: "Maar zo";
+      background-color: @gc_a11y_green;
+      background-image: url('../images/icon-dosdonts-do-white.svg');
+    }
+
     @media only screen and (min-width: @break_tablet ) {
-      background: @light_gray;
       display: flex;
-      padding-top: .5em;
-      padding-bottom: .5em;
+
+      .wp-caption {
+        width: 50%;
+        padding: 3rem 3rem 2rem;
+
+        + .wp-caption {
+          border-top: .2rem solid @border_color;
+          border-left: none;
+        }
+      }
     }
 
     .wp-caption-text {
       border-bottom-style: none;
       font-size: 1.6rem;
+      margin-top: 2rem;
     }
 
-@breakpoint_nzmz: ( 2 * 300px );
-
-
-    .good-example,
-    .bad-example,
-    .wp-caption {
-      width: 100%;
-      max-width: 100% !important;
-      padding: 1.5em;
-
-      // for smaller screens
-      @media only screen and (max-width: @breakpoint_nzmz ) {
-        border: .5em solid @light_gray;
-        border-top-width: .25em;
-        border-bottom-width: .25em;
-        margin-top: 0;
-
-        &:first-of-type {
-          border-top-width: .5em;
-        }
-        &:last-of-type {
-          border-bottom-width: .5em;
-        }
-      }
-
-      @media only screen and (min-width: @breakpoint_nzmz ) {
-        max-width: 49% !important;
-        width: 49%;
-        flex: 1;
-        margin: 0 .5% 0 .5%;
-      }
+    + p, + h2, + h3 {
+      margin-top: 3rem;
     }
-
-    .wp-caption {
-      text-align: center;
-      background: @wit;
-
-
-      @media only screen and (min-width: @breakpoint_nzmz ) {
-        &:first-of-type {
-          margin-left: 1%;
-        }
-        &:last-of-type {
-          margin-right: 1%;
-        }
-      }
-    }
-
-		.good-example,
-		.bad-example {
-			position: relative;
-
-			&:after {
-				content: ' ';
-				color: @wit;
-				text-indent: 25px;
-				display: block;
-				border-radius: 8px;
-				background-color: @mess_ok_color;
-				position: absolute;
-				top: 4px;
-				right: 4px;
-				background-repeat: no-repeat;
-				background-position: 3px center;
-				background-size: 20px 20px;
-				padding-right: 5px;
-			}
-		}
-
-		.good-example {
-			&:after {
-				content: 'maar zo';
-				background-color: @mess_ok_color;
-				background-image: url('../images/icon-circle-check.svg');
-				background-position: 4px center;
-			}
-		}
-		.bad-example {
-			&:after {
-				content: 'niet zo';
-				background-color: @mess_error_color;
-				background-image: url('../images/icon-circle-error.svg');
-				text-indent: 24px;
-			}
-		}
-
   }
 
   .wp-caption-text {
@@ -319,12 +306,12 @@
   }
 
   .alignright .wp-caption-text {
-      margin-left: 10px;
-      margin-bottom: 0 !important;
+    margin-left: 10px;
+    margin-bottom: 0 !important;
   }
   .alignleft .wp-caption-text {
-      margin-right: 10px;
-      margin-bottom: 0 !important;
+    margin-right: 10px;
+    margin-bottom: 0 !important;
   }
 
   .gallery-caption {
@@ -336,70 +323,70 @@
 
 .write-headings() {
 
-    b,strong {
-        font-weight: bold;
-        -webkit-hyphens: manual;
-        -moz-hyphens: manual;
-        -ms-hyphens: manual;
-        -o-hyphens: manual;
-        hyphens: manual;
-    }
+  b, strong {
+    font-weight: bold;
+    -webkit-hyphens: manual;
+    -moz-hyphens: manual;
+    -ms-hyphens: manual;
+    -o-hyphens: manual;
+    hyphens: manual;
+  }
 
 
-    /* Headings
-    --------------------------------------------- */
+  /* Headings
+  --------------------------------------------- */
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-		font-weight: normal;
-		line-height: 1.2;
-		margin: ( @gutter / 2 ) 0 ( @gutter / 4 );
-		padding: 1em 0 .3em 0;
-		text-rendering: optimizeLegibility;
-		-webkit-font-smoothing: antialiased;
-		font-family: @montserrat_semibold;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: normal;
+    line-height: 1.2;
+    margin: ( @gutter / 2 ) 0 ( @gutter / 4 );
+    padding: 1em 0 .3em 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-family: @montserrat_semibold;
 
 
-      a {
-        color: @txt;
-        text-decoration: none;
+    a {
+      color: @txt;
+      text-decoration: none;
 
-        &:hover, &:focus, &:active {
-          color: @a_hover;
-          text-decoration: underline;
-        }
+      &:hover, &:focus, &:active {
+        color: @a_hover;
+        text-decoration: underline;
       }
     }
+  }
 
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-//      font-family: @headerfont2;
-//      font-weight: bold;
-    }
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    //      font-family: @headerfont2;
+    //      font-weight: bold;
+  }
 
 
-    h3, .sidebar h2 {
-      .fontsize( @fontsize_title_h3 );
-    }
+  h3, .sidebar h2 {
+    .fontsize(@fontsize_title_h3);
+  }
 
-    h4 {
-      .fontsize( @fontsize_title_h4 );
-    }
+  h4 {
+    .fontsize(@fontsize_title_h4);
+  }
 
-    h5 {
-      .fontsize( @fontsize_title_h5 );
-    }
+  h5 {
+    .fontsize(@fontsize_title_h5);
+  }
 
-    h6 {
-      .fontsize( @fontsize_title_h6 );
-    }
+  h6 {
+    .fontsize(@fontsize_title_h6);
+  }
 }
 
 .write-table() {
@@ -418,15 +405,17 @@
       width: 20%;
       min-width: 80px;
     }
+
     .topic, .presentor {
       width: 30%;
     }
+
     .topic {
       width: 45%;
     }
 
     tbody {
-//      border-top: 1px solid @border_color;
+      //      border-top: 1px solid @border_color;
     }
 
     th,
@@ -439,11 +428,14 @@
     th {
       .bold-font();
 
-		@media only screen {
-			text-transform: uppercase;
-		}
+      @media only screen {
+        text-transform: uppercase;
+      }
 
     }
   }
 }
 
+ul.fancy-list {
+  .gc-fancy-list;
+}
