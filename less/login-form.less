@@ -53,7 +53,7 @@
  * Variables, mixins, extendables - things we use everywhere
  */
 
-//@import "../fonts/fonts.css";
+@import "../fonts/fonts.css";
 @import "abstracts/_variables.less";
 @import "abstracts/_mixins.less";
 @import "abstracts/_normalize.less";
@@ -79,7 +79,7 @@ body#error-page {
 }
 
 body.login, #error-page {
-	
+
 	background: @gc_blue_darkest;
 	padding-bottom: 3em;
 	
@@ -90,14 +90,20 @@ body.login, #error-page {
 		.basefont();
 		
 		h1:not(.admin-email__heading) {
-			background-image: url('../images/logos/gc-edo-beeldmerk.svg?asdf');
+			background-image: url('../images/logos/gc-edo-beeldmerk.svg');
 			background-position: center center;
 			background-repeat: no-repeat;
 			background-size: contain;
 			height: 150px;
+			margin-bottom: 2rem;
+			
 			a {
 				.visuallyhidden();
 			}
+		}
+		
+		form#loginform {
+			padding: 1rem;
 		}
 		
 		form#loginform, form#lostpasswordform, form#registerform {
@@ -116,11 +122,7 @@ body.login, #error-page {
 					
 					input#wp-submit {
 						.button-shared();
-						border: 2px solid @gc_a11y_green;
 						height: auto !important;
-						line-height: 1 !important;
-						text-shadow: none;
-						border-radius: 0;
 					}
 				}
 			}
