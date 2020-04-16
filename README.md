@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-4.3.9 - Opmaak van tekstblokken home herzien. Plaatjes tonen op blog-archief. 
+4.3.10 - Opmaak niet-zo-maar-zo-blokken herzien voor beeldbank. Tonen beelden in blogoverzicht. 
 
 ## Version history
+* 4.3.10 - Opmaak niet-zo-maar-zo-blokken herzien voor beeldbank. Tonen beelden in blogoverzicht. 
 * 4.3.9 - Opmaak van tekstblokken home herzien. Plaatjes tonen op blog-archief. 
 * 4.3.8 - Inladen CSS herzien; layout voor overzichtspagina herzien.
 * 4.3.7 - Spotlight-component toegevoegd; tekstblok-component voor home toegevoegd.
