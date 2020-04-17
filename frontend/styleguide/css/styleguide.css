@@ -1080,3 +1080,7 @@
 .font-smaller {
   font-size: 1.4rem;
 }
+.grid--col-4,
+.grid--col-3 {
+  max-width: 1150px;
+}

@@ -9775,6 +9775,141 @@ h1 + .meta-data {
 .card.no-image h3 {
   font-family: 'league_gothicregular', Impact, Helvetica, Arial, sans-serif;
 }
+.tipkaart {
+  -webkit-box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  background: #1DA742;
+  text-align: center;
+  overflow: hidden;
+  min-height: 36rem;
+}
+.tipkaart h2,
+.tipkaart h3 {
+  color: #fff;
+}
+.tipkaart > a:hover {
+  background: #199139;
+  border-color: #148839;
+}
+.tipkaart:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 14rem;
+  background: #148839;
+  margin: 0 -5rem -5rem -5rem;
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+}
+.tipkaart--gebruiksgemak {
+  background: #4c2974;
+}
+.tipkaart--gebruiksgemak:before {
+  background: #2D114E;
+}
+.tipkaart--gebruiksgemak > a:hover,
+.tipkaart--gebruiksgemak > a:focus,
+.tipkaart--gebruiksgemak > a:active {
+  background: #402261;
+  border-color: #2D114E;
+}
+.tipkaart--informatieveiligheid {
+  background: #c42c76;
+}
+.tipkaart--informatieveiligheid:before {
+  background: #A20E56;
+}
+.tipkaart--informatieveiligheid > a:hover,
+.tipkaart--informatieveiligheid > a:focus,
+.tipkaart--informatieveiligheid > a:active {
+  background: #af2769;
+  border-color: #A20E56;
+}
+.tipkaart--procesaanpak {
+  background: #009C95;
+}
+.tipkaart--procesaanpak:before {
+  background: #00b4ac;
+}
+.tipkaart--procesaanpak > a:hover,
+.tipkaart--procesaanpak > a:focus,
+.tipkaart--procesaanpak > a:active {
+  background: #009b94;
+  border-color: #00b4ac;
+}
+.tipkaart--kanaalsturing {
+  background: #D77D00;
+}
+.tipkaart--kanaalsturing:before {
+  background: #f99d1c;
+}
+.tipkaart--kanaalsturing > a:hover,
+.tipkaart--kanaalsturing > a:focus,
+.tipkaart--kanaalsturing > a:active {
+  background: #be6e00;
+  border-color: #f99d1c;
+}
+.tipkaart--samenwerking {
+  background: #0095da;
+}
+.tipkaart--samenwerking:before {
+  background: #007BB0;
+}
+.tipkaart--samenwerking > a:hover,
+.tipkaart--samenwerking > a:focus,
+.tipkaart--samenwerking > a:active {
+  background: #0084c1;
+  border-color: #007BB0;
+}
+.tipkaart--inclusie {
+  background: #D94721;
+}
+.tipkaart--inclusie:before {
+  background: #c73d19;
+}
+.tipkaart--inclusie > a:hover,
+.tipkaart--inclusie > a:focus,
+.tipkaart--inclusie > a:active {
+  background: #c3401e;
+  border-color: #c73d19;
+}
+.tipkaart__link {
+  color: #fff;
+  padding: 2rem 2rem 2.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  border: 0.3rem solid transparent;
+  -webkit-transition: border-color 0.2s, padding 0.3s, background-color 0.2s;
+  transition: border-color 0.2s, padding 0.3s, background-color 0.2s;
+}
+.tipkaart__link:hover,
+.tipkaart__link:focus,
+.tipkaart__link:active {
+  color: #fff;
+  padding-bottom: 2rem;
+}
+.tipkaart__link:hover .tipkaart__title,
+.tipkaart__link:focus .tipkaart__title,
+.tipkaart__link:active .tipkaart__title {
+  text-decoration: underline;
+}
+@media only screen and (min-width: 960px) {
+  .tipkaart__link {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
 .tipkaart__nummer {
   font-family: 'league_gothicregular', Impact, Helvetica, Arial, sans-serif;
   text-transform: uppercase;
@@ -9799,341 +9934,30 @@ h1 + .meta-data {
   content: ' _';
   margin-left: 8px;
 }
-.tipkaart__categorie {
-  position: relative;
-  font-family: 'league_gothicregular', Impact, Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  display: block;
-  font-size: 2.4rem;
-  margin-top: auto;
-}
-.tipkaart__categorie:before {
-  content: " ";
-  display: block;
-  width: 9rem;
-  height: 10rem;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: bottom center;
-  margin: 0 auto;
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-.card.tipkaart {
-  text-align: center;
-  position: relative;
-  background: #D1DFE3;
-  color: #fff;
-}
-.card.tipkaart * {
-  padding: 0;
-}
-.card.tipkaart a {
-  text-decoration: none;
-  color: #00303d;
-  border: 3px solid transparent;
-  padding: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100%;
-}
-@media only screen and (min-width: 960px) {
-  .card.tipkaart a {
-    padding: 3rem;
-  }
-}
-.card.tipkaart a:before {
-  position: absolute;
-  content: ' ';
-  display: block;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 10rem;
-  border: 5px solid transparent;
-  border-top-style: none;
-  background-color: #b1c9d0;
-  -webkit-clip-path: polygon(0 14%, 100% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(0 14%, 100% 0, 100% 100%, 0% 100%);
-  speak: none;
-}
-.card.tipkaart a:hover,
-.card.tipkaart a:active,
-.card.tipkaart a:focus {
-  text-decoration: underline;
-  color: #00303d;
-  border-color: #fff;
-}
-.card.tipkaart a:hover:before,
-.card.tipkaart a:active:before,
-.card.tipkaart a:focus:before {
-  border-color: #fff;
-}
-.card.tipkaart a:hover .tipkaart__categorie:before,
-.card.tipkaart a:active .tipkaart__categorie:before,
-.card.tipkaart a:focus .tipkaart__categorie:before {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-.card.tipkaart h3,
-.card.tipkaart h2 {
-  min-height: 15rem;
-  font-family: 'montserratbold', Helvetica, Arial, sans-serif;
-  font-size: 28px;
-  font-size: 2.8rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  line-height: 3.8rem;
-  max-width: 90%;
-  margin: 0 auto;
-}
-.card.tipkaart .contentinfo {
-  font-family: 'league_gothicregular', Impact, Helvetica, Arial, sans-serif;
+.tipkaart__title {
   font-size: 24px;
   font-size: 2.4rem;
-  text-transform: uppercase;
+  line-height: 3.2rem;
+  margin: 0;
+  padding: 0;
+  word-break: break-word;
+}
+.tipkaart__categorie {
   position: relative;
-  background-position: center top;
-  background-repeat: no-repeat;
   margin-top: auto;
+  font-family: 'league_gothicregular', Impact, Helvetica, Arial, sans-serif;
 }
-.card.tipkaart .contentinfo span {
-  margin-top: 8rem;
-  margin-bottom: 1rem;
-  display: inline-block;
+.tipkaart__categorie span {
+  font-size: 2.2rem;
+  line-height: 3rem;
+  text-transform: uppercase;
+  display: block;
+  padding-top: 0.5rem;
 }
-.card.tipkaart.commitment {
-  background-color: #25b34b;
-}
-.card.tipkaart.commitment a {
-  color: #fff;
-}
-.card.tipkaart.commitment a:before {
-  background-color: #1D9D42;
-}
-.card.tipkaart.commitment a:hover,
-.card.tipkaart.commitment a:active,
-.card.tipkaart.commitment a:focus {
-  color: #fff;
-  border-color: #1D9D42;
-}
-.card.tipkaart.commitment a:hover:before,
-.card.tipkaart.commitment a:active:before,
-.card.tipkaart.commitment a:focus:before {
-  border-color: #1D9D42;
-}
-.card.tipkaart.commitment .contentinfo {
-  background-image: url('images/optimaal-digitaal/icon-draagvlak.svg');
-  background-size: 90px 90px;
-  background-position: center top;
-}
-.card.tipkaart.commitment .tipkaart__categorie:before {
-  background-image: url('images/optimaal-digitaal/icon-draagvlak.svg');
-}
-.card.tipkaart.draagvlak {
-  background-color: #25b34b;
-}
-.card.tipkaart.draagvlak a {
-  color: #fff;
-}
-.card.tipkaart.draagvlak a:before {
-  background-color: #1D9D42;
-}
-.card.tipkaart.draagvlak a:hover,
-.card.tipkaart.draagvlak a:active,
-.card.tipkaart.draagvlak a:focus {
-  color: #fff;
-  border-color: #1D9D42;
-}
-.card.tipkaart.draagvlak a:hover:before,
-.card.tipkaart.draagvlak a:active:before,
-.card.tipkaart.draagvlak a:focus:before {
-  border-color: #1D9D42;
-}
-.card.tipkaart.draagvlak .contentinfo {
-  background-image: url('images/optimaal-digitaal/icon-draagvlak.svg');
-  background-size: 90px 90px;
-  background-position: center top;
-}
-.card.tipkaart.draagvlak .tipkaart__categorie:before {
-  background-image: url('images/optimaal-digitaal/icon-draagvlak.svg');
-}
-.card.tipkaart.gebruiksgemak {
-  background-color: #4c2974;
-}
-.card.tipkaart.gebruiksgemak a {
-  color: #fff;
-}
-.card.tipkaart.gebruiksgemak a:before {
-  background-color: #361454;
-}
-.card.tipkaart.gebruiksgemak a:hover,
-.card.tipkaart.gebruiksgemak a:active,
-.card.tipkaart.gebruiksgemak a:focus {
-  color: #fff;
-  border-color: #361454;
-}
-.card.tipkaart.gebruiksgemak a:hover:before,
-.card.tipkaart.gebruiksgemak a:active:before,
-.card.tipkaart.gebruiksgemak a:focus:before {
-  border-color: #361454;
-}
-.card.tipkaart.gebruiksgemak .contentinfo {
-  background-image: url('images/optimaal-digitaal/icon-mobiel.svg');
-  background-size: 90px 90px;
-  background-position: center top;
-}
-.card.tipkaart.gebruiksgemak .tipkaart__categorie:before {
-  background-image: url('images/optimaal-digitaal/icon-mobiel.svg');
-}
-.card.tipkaart.informatieveiligheid {
-  background-color: #c42c76;
-}
-.card.tipkaart.informatieveiligheid a {
-  color: #fff;
-}
-.card.tipkaart.informatieveiligheid a:before {
-  background-color: #B1266B;
-}
-.card.tipkaart.informatieveiligheid a:hover,
-.card.tipkaart.informatieveiligheid a:active,
-.card.tipkaart.informatieveiligheid a:focus {
-  color: #fff;
-  border-color: #B1266B;
-}
-.card.tipkaart.informatieveiligheid a:hover:before,
-.card.tipkaart.informatieveiligheid a:active:before,
-.card.tipkaart.informatieveiligheid a:focus:before {
-  border-color: #B1266B;
-}
-.card.tipkaart.informatieveiligheid .contentinfo {
-  background-image: url('images/optimaal-digitaal/icon-mobiel.svg');
-  background-size: 90px 90px;
-  background-position: center top;
-}
-.card.tipkaart.informatieveiligheid .tipkaart__categorie:before {
-  background-image: url('images/optimaal-digitaal/icon-mobiel.svg');
-}
-.card.tipkaart.kanaalsturing {
-  background-color: #f99d1c;
-}
-.card.tipkaart.kanaalsturing a {
-  color: #fff;
-}
-.card.tipkaart.kanaalsturing a:before {
-  background-color: #F89521;
-}
-.card.tipkaart.kanaalsturing a:hover,
-.card.tipkaart.kanaalsturing a:active,
-.card.tipkaart.kanaalsturing a:focus {
-  color: #fff;
-  border-color: #F89521;
-}
-.card.tipkaart.kanaalsturing a:hover:before,
-.card.tipkaart.kanaalsturing a:active:before,
-.card.tipkaart.kanaalsturing a:focus:before {
-  border-color: #F89521;
-}
-.card.tipkaart.kanaalsturing .contentinfo {
-  background-image: url('images/optimaal-digitaal/icon-kannibaalsturing.svg');
-  background-size: 90px 90px;
-  background-position: center top;
-}
-.card.tipkaart.kanaalsturing .tipkaart__categorie:before {
-  background-image: url('images/optimaal-digitaal/icon-kannibaalsturing.svg');
-}
-.card.tipkaart.procesaanpak {
-  background-color: #00b4ac;
-}
-.card.tipkaart.procesaanpak a {
-  color: #fff;
-}
-.card.tipkaart.procesaanpak a:before {
-  background-color: #009C95;
-}
-.card.tipkaart.procesaanpak a:hover,
-.card.tipkaart.procesaanpak a:active,
-.card.tipkaart.procesaanpak a:focus {
-  color: #fff;
-  border-color: #009C95;
-}
-.card.tipkaart.procesaanpak a:hover:before,
-.card.tipkaart.procesaanpak a:active:before,
-.card.tipkaart.procesaanpak a:focus:before {
-  border-color: #009C95;
-}
-.card.tipkaart.procesaanpak .contentinfo {
-  background-image: url('images/optimaal-digitaal/icon-procesaanpak.svg');
-  background-size: 90px 90px;
-  background-position: center top;
-}
-.card.tipkaart.procesaanpak .tipkaart__categorie:before {
-  background-image: url('images/optimaal-digitaal/icon-procesaanpak.svg');
-}
-.card.tipkaart.samenwerking {
-  background-color: #0095da;
-}
-.card.tipkaart.samenwerking a {
-  color: #fff;
-}
-.card.tipkaart.samenwerking a:before {
-  background-color: #0086C0;
-}
-.card.tipkaart.samenwerking a:hover,
-.card.tipkaart.samenwerking a:active,
-.card.tipkaart.samenwerking a:focus {
-  color: #fff;
-  border-color: #0086C0;
-}
-.card.tipkaart.samenwerking a:hover:before,
-.card.tipkaart.samenwerking a:active:before,
-.card.tipkaart.samenwerking a:focus:before {
-  border-color: #0086C0;
-}
-.card.tipkaart.samenwerking .contentinfo {
-  background-image: url('images/optimaal-digitaal/icon-deel.svg');
-  background-size: 90px 90px;
-  background-position: center top;
-}
-.card.tipkaart.samenwerking .tipkaart__categorie:before {
-  background-image: url('images/optimaal-digitaal/icon-deel.svg');
-}
-.card.tipkaart.inclusie {
-  background-color: #D94721;
-}
-.card.tipkaart.inclusie a {
-  color: #fff;
-}
-.card.tipkaart.inclusie a:before {
-  background-color: #9a2f13;
-}
-.card.tipkaart.inclusie a:hover,
-.card.tipkaart.inclusie a:active,
-.card.tipkaart.inclusie a:focus {
-  color: #fff;
-  border-color: #9a2f13;
-}
-.card.tipkaart.inclusie a:hover:before,
-.card.tipkaart.inclusie a:active:before,
-.card.tipkaart.inclusie a:focus:before {
-  border-color: #9a2f13;
-}
-.card.tipkaart.inclusie .contentinfo {
-  background-image: url('images/optimaal-digitaal/icon-inclusie.svg');
-  background-size: 90px 90px;
-  background-position: center top;
-}
-.card.tipkaart.inclusie .tipkaart__categorie:before {
-  background-image: url('images/optimaal-digitaal/icon-inclusie.svg');
+.icon--tipkaart {
+  fill: #fff;
+  width: 8rem;
+  height: 7rem;
 }
 .card--doelgroep {
   padding: 0;
