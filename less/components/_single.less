@@ -80,6 +80,31 @@ h1 + .meta-data {
   }
 }
 
+// Overrides die moeten
+
+.social-links {
+  display: flex;
+
+  .social-links__item {
+    list-style: none;
+    margin-right: 1rem;
+  }
+
+  .entry-content & {
+    margin: 0;
+  }
+}
+
+
+.entry-content  .link--social {
+  color: transparent;
+
+  &:hover, &:active, &:focus {
+    color: transparent;
+  }
+}
+
+
 // Entry blog, can contain image
 
 .single-post {
