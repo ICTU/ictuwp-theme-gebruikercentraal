@@ -1,3 +1,32 @@
+input:not([type=submit]),
+select, textarea {
+  box-sizing: border-box;
+  background: @white;
+  padding: 1.5rem;
+  font-family: @font_primary;
+  font-size: @base_font_size;
+  width: 100%;
+  transition: background-color 0.2s, border-color 0.2s;
+  border: .2rem solid @border_color;
+  outline: none;
+  -webkit-appearance: none;
+  color: @base_font_color;
+  border-radius: 0;
+  font-weight: 100;
+
+  &:focus {
+    border-color: @gc_green;
+    box-shadow: .3rem .3rem 0 rgba(@gc_green, 0.3);
+  }
+}
+
+form label,
+fieldset legend {
+  font-weight: normal;
+  font-family: @font_primary_semi;
+}
+
+
 .formstyling() {
 
   // Gebruiker Centraal - 80-structure.less
@@ -5,7 +34,7 @@
   // bevat CSS voor formulierelementen
   // ----------------------------------------------------------------------------------
   // @package gebruiker-centraal
-  // @author  Paul van Buuren
+  // @author  Paul van Buuren, Tamara de Haas
   // @license GPL-2.0+
   // @version 3.23.1
   // @desc.   Step table, search resultpagina, bugfixes voor soc.media knopjes.
@@ -14,50 +43,6 @@
 
   /* Forms
   --------------------------------------------- */
-
-  input[type="text"],
-  input[type="password"],
-  input[type="color"],
-  input[type="date"],
-  input[type="datetime"],
-  input[type="datetime-local"],
-  input[type="email"],
-  input[type="month"],
-  input[type="number"],
-  input[type="range"],
-  input[type="search"],
-  input[type="tel"],
-  input[type="time"],
-  input[type="url"],
-  input[type="week"],
-  select,
-  textarea {
-    .inputborder-shared();
-  }
-
-  input[type="text"],
-  input[type="password"],
-  input[type="color"],
-  input[type="date"],
-  input[type="datetime"],
-  input[type="datetime-local"],
-  input[type="email"],
-  input[type="month"],
-  input[type="number"],
-  input[type="range"],
-  input[type="search"],
-  input[type="tel"],
-  input[type="time"],
-  input[type="url"],
-  input[type="week"],
-  textarea {
-    -webkit-appearance: none;
-  }
-
-  input:focus,
-  textarea:focus {
-    color: darken(@txt, 20%);
-  }
 
   ::-moz-placeholder {
     opacity: 1;
@@ -71,11 +56,6 @@
   fieldset {
     border-style: none;
     overflow: hidden;
-  }
-
-  fieldset legend,
-  label {
-    font-weight: 700;
   }
 
   [type="radio"],
