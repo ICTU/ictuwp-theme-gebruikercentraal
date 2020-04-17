@@ -1,133 +1,127 @@
-
 .formstyling() {
 
-// Gebruiker Centraal - 80-structure.less
-// ----------------------------------------------------------------------------------
-// bevat CSS voor formulierelementen
-// ----------------------------------------------------------------------------------
-// @package gebruiker-centraal
-// @author  Paul van Buuren
-// @license GPL-2.0+
-// @version 3.23.1
-// @desc.   Step table, search resultpagina, bugfixes voor soc.media knopjes.
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+  // Gebruiker Centraal - 80-structure.less
+  // ----------------------------------------------------------------------------------
+  // bevat CSS voor formulierelementen
+  // ----------------------------------------------------------------------------------
+  // @package gebruiker-centraal
+  // @author  Paul van Buuren
+  // @license GPL-2.0+
+  // @version 3.23.1
+  // @desc.   Step table, search resultpagina, bugfixes voor soc.media knopjes.
+  // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
+  /* Forms
+  --------------------------------------------- */
 
-  
-	/* Forms
-	--------------------------------------------- */
-	
-	input[type="text"],
-	input[type="password"],
-	input[type="color"],
-	input[type="date"],
-	input[type="datetime"],
-	input[type="datetime-local"],
-	input[type="email"],
-	input[type="month"],
-	input[type="number"],
-	input[type="range"],
-	input[type="search"],
-	input[type="tel"],
-	input[type="time"],
-	input[type="url"],
-	input[type="week"],
-	select,
-	textarea {
-		.inputborder-shared();
-	}
-	
-	input[type="text"],
-	input[type="password"],
-	input[type="color"],
-	input[type="date"],
-	input[type="datetime"],
-	input[type="datetime-local"],
-	input[type="email"],
-	input[type="month"],
-	input[type="number"],
-	input[type="range"],
-	input[type="search"],
-	input[type="tel"],
-	input[type="time"],
-	input[type="url"],
-	input[type="week"],
-	textarea {
-		-webkit-appearance: none;  
-	}
-	
-	input:focus,
-	textarea:focus {
-		color: darken(@txt, 20%);
-	}
-	
-	::-moz-placeholder {
-		opacity: 1;
-	}
-	
-	::-webkit-input-placeholder,
-	::-moz-placeholder {
-		color: @txt;
-	}
-	
-	fieldset {
-		border-style: none;
-		overflow: hidden;
-	}
-	
-	fieldset legend,
-	label {
-		font-weight: 700;			
-	}
+  input[type="text"],
+  input[type="password"],
+  input[type="color"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="email"],
+  input[type="month"],
+  input[type="number"],
+  input[type="range"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"],
+  select,
+  textarea {
+    .inputborder-shared();
+  }
 
-	[type="radio"],
-	[type="checkbox"] {
-		& + label {
-			font-weight: normal;
-		}
-	}
+  input[type="text"],
+  input[type="password"],
+  input[type="color"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="email"],
+  input[type="month"],
+  input[type="number"],
+  input[type="range"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"],
+  textarea {
+    -webkit-appearance: none;
+  }
 
-	a.download,
-	input[type="button"],
-	input[type="reset"],
-	input[type="submit"] {
-		.button-shared();
-	}
-	
-	a.download {
-		background-color: @gc_a11y_green;
-		.icon_replace_filler('../images/icon-download.svg', '#fff', @wit );
-		background-position: .75em center;
-		padding: .5em 1em .5em 2.5em;
-		.font-size( 22 );
-		line-height: 1.4;
-		box-shadow: 3px 3px 0px rgba(#000, 0.2);
-		border: 2px solid @gc_a11y_green;
-		text-decoration: none;
+  input:focus,
+  textarea:focus {
+    color: darken(@txt, 20%);
+  }
 
-		&:hover,
-		&:focus,
-		&:active {
-			.icon_replace_filler('../images/icon-download.svg', '#fff', @gc_a11y_green );
-			background-position: .75em center;
-			background-color: @wit;
-			text-decoration: underline;
-		}
-	}
-  
+  ::-moz-placeholder {
+    opacity: 1;
+  }
+
+  ::-webkit-input-placeholder,
+  ::-moz-placeholder {
+    color: @txt;
+  }
+
+  fieldset {
+    border-style: none;
+    overflow: hidden;
+  }
+
+  fieldset legend,
+  label {
+    font-weight: 700;
+  }
+
+  [type="radio"],
+  [type="checkbox"] {
+    & + label {
+      font-weight: normal;
+    }
+  }
+
+  a.download,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    .button-shared();
+  }
+
+  a.download {
+    background-color: @gc_a11y_green;
+    .icon_replace_filler('../images/icon-download.svg', '#fff', @wit);
+    background-position: .75em center;
+    padding: .5em 1em .5em 2.5em;
+    .font-size(22);
+    line-height: 1.4;
+    box-shadow: 3px 3px 0px rgba(#000, 0.2);
+    border: 2px solid @gc_a11y_green;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      .icon_replace_filler('../images/icon-download.svg', '#fff', @gc_a11y_green);
+      background-position: .75em center;
+      background-color: @wit;
+      text-decoration: underline;
+    }
+  }
+
   .sidebar,
   .footer-widgets {
 
-		input:not([type="submit"]:not[type="button"]) {
-			border-color: lighten(@sidebarwidget, 10%);
-		}
-	}
-  
-  
-  
-  
-  
+    input:not([type="submit"]:not[type="button"]) {
+      border-color: lighten(@sidebarwidget, 10%);
+    }
+  }
+
+
   input[type="search"]::-webkit-search-cancel-button,
   input[type="search"]::-webkit-search-results-button {
     display: none;
@@ -138,24 +132,25 @@
   .wpcf7 {
     padding: 0;
     margin: 0;
-    
+
     .wpcf7-display-none {
       display: none;
     }
-    
+
     .wpcf7-response-output {
       padding: .5em;
       color: @txt;
       .mess_ok();
     }
-    
+
     .wpcf7-not-valid-tip {
       padding: .1em .5em .5em .5em;
       .mess_error();
       transform: translateY(-2px);
       width: 100%;
       display: inline-block;
-      border-top-color: lighten(@mess_error_color,35%);
+      border-top-color: lighten(@mess_error_color, 35%);
+
       &:before {
         content: '!';
         color: @wit;
@@ -166,12 +161,15 @@
         font-weight: normal;
       }
     }
+
     input.wpcf7-not-valid {
       border-color: @mess_error_color;
     }
+
     .wpcf7-validation-errors {
       .mess_error();
     }
+
     .screen-reader-response {
       position: absolute;
       overflow: hidden;
@@ -182,141 +180,147 @@
       padding: 0;
       border: 0;
     }
-    
+
     fieldset,
     .wpcf7-checkbox,
     .wpcf7-radio {
       overflow: hidden;
       display: block;
-      
+
       legend {
         padding: 0;
         margin: 0;
       }
 
       // collection of list items with radiobuttons
-      
+
       .wpcf7-list-item {
         display: block;
         clear: both;
         float: none;
         padding-left: .5em;
+
         .wpcf7-list-item-label {
           display: inline-block;
           margin-left: .5em;
           margin-right: .5em;
+
           & + .wpcf7-list-item-label {
             margin-top: .5em;
           }
         }
       }
     }
-    
+
   }
-  
+
   .sidebar .wpcf7 {
-      .wpcf7-not-valid-tip {
-          color: @wit;
-      }
-      input[type="submit"] {
-          float: right;
-      }
-  }
+    .wpcf7-not-valid-tip {
+      color: @wit;
+    }
 
-
-	/* Gravity Forms
-	--------------------------------------------- */
-	.gform_wrapper {
-		ul.gform_fields {
-			
-			padding-top: 0;
-			margin-top: 0;
-			
-			&, li {
-				list-style: none;
-				margin-left: 0;
-				padding-left: 0;
-			
-				li.gfield {
-					margin-bottom: 1em;
-				}
-				h2 {
-					padding-top: 0;
-					margin-top: 0;
-				}
-			}
-		}
-		input[type="submit"],
-		button[type="submit"] {
-			float: right;
-			clear: both;
-		}
-	
-		.ginput_complex label {
-			padding: 0;
-		}
-			
-		.ginput_container_checkbox,
-		.ginput_container_radio {
-			ul {
-				margin-left: 0;
-				
-				input[type="checkbox"],
-				input[type="radio"] {
-					margin-left: .25em;          
-					margin-right: .5em;          
-					float: left;
-				}
-				li {
-					float: none;
-					clear: both;
-					overflow: hidden;
-				}
-			}
-		}
-	
-		.ginput_container_checkbox,
-		.ginput_container_radio {
-			input[type="checkbox"],
-			input[type="radio"] {
-				
-				&  + label {
-					font-weight: normal;
-				}
-			}
-		}
-		
-		[type="radio"] + [type="text"] {
-			float: left;	
-			width: 96%;		
-		}
-
-		
-	}
-  
-	.gform_save_link {
-		display: block;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-  
-	.gform_validation_container {
-		.visuallyhidden();
-	}
-	
-  .conf-days {
-    input[type="checkbox"],
-    input[type="radio"] {
-      margin-top: 1.5em;          
+    input[type="submit"] {
+      float: right;
     }
   }
 
-	.gform_body {
-		background: @sitecontainer_bg;
-		padding: 1em;
-		margin-top: 1em;
-		margin-bottom: 1em;
-	}
+
+  /* Gravity Forms
+  --------------------------------------------- */
+  .gform_wrapper {
+    ul.gform_fields {
+
+      padding-top: 0;
+      margin-top: 0;
+
+      &, li {
+        list-style: none;
+        margin-left: 0;
+        padding-left: 0;
+
+        li.gfield {
+          margin-bottom: 1em;
+        }
+
+        h2 {
+          padding-top: 0;
+          margin-top: 0;
+        }
+      }
+    }
+
+    input[type="submit"],
+    button[type="submit"] {
+      float: right;
+      clear: both;
+    }
+
+    .ginput_complex label {
+      padding: 0;
+    }
+
+    .ginput_container_checkbox,
+    .ginput_container_radio {
+      ul {
+        margin-left: 0;
+
+        input[type="checkbox"],
+        input[type="radio"] {
+          margin-left: .25em;
+          margin-right: .5em;
+          float: left;
+        }
+
+        li {
+          float: none;
+          clear: both;
+          overflow: hidden;
+        }
+      }
+    }
+
+    .ginput_container_checkbox,
+    .ginput_container_radio {
+      input[type="checkbox"],
+      input[type="radio"] {
+
+        & + label {
+          font-weight: normal;
+        }
+      }
+    }
+
+    [type="radio"] + [type="text"] {
+      float: left;
+      width: 96%;
+    }
+
+
+  }
+
+  .gform_save_link {
+    display: block;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  .gform_validation_container {
+    .visuallyhidden();
+  }
+
+  .conf-days {
+    input[type="checkbox"],
+    input[type="radio"] {
+      margin-top: 1.5em;
+    }
+  }
+
+  .gform_body {
+    background: @sitecontainer_bg;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
 
   /* Event Manager Forms
   --------------------------------------------- */
@@ -330,7 +334,7 @@
       padding: .5em;
       margin-bottom: 1em;
       .mess_ok();
-      
+
       p {
         margin-top: .25em;
         margin-bottom: .25em;
@@ -344,508 +348,246 @@
           .fontsize(18);
           font-weight: normal;
         }
-        
+
       }
-      
+
     }
 
     .em-booking-message-error {
       .mess_error();
     }
+
     .em-booking-message-success {
       .mess_ok();
     }
-    
-    
-  }
-  
-	.em-booking-login-form,
-	.em-booking-form {
-		overflow: hidden;
-		
-		fieldset,
-		p {
-		  margin-bottom: 1em;
-		}
-		fieldset {
-		  border: 0;
-		  padding: 0.01em 0 0 0;
-		  margin: 0 0 1em 0;
-		  display: table-cell;
-		}
-		legend {
-		  display: table;      
-		  padding: 0;
-		  padding-inline-start: 0;
-		  width: 100%;
-		  
-		  & + * {
-		    clear: both;
-		  }
-		}
-		
-		@pijl_breedte:	48px;
-		@pijl_hoogte:	63px;
-		
-		label {
-			display: inline-block;
-			position: relative;
-			z-index: 600;
-			
-			div {
-			    background: @gc_a11y_green;
-				float: left;
-				@media only screen and ( min-width: @break_show_menu_button ) {
-					width: @pijl_breedte;
-					height: @pijl_hoogte;
-				}
-				margin-right: 2rem;
-				position: relative;
-				padding: 0;
-		
-				&:after {
-					content: ' ';
-					display: inline-block;
-					width: 24px;
-					height: 24px;
-					background: @gc_a11y_green;
-					position: absolute;
-					top: ( @pijlgrootte * 1 );
-					right: 0;
-					margin-right: -2px;
-					z-index: -1;
-					transform: rotateZ(-45deg);
-				}
-		
-				span {
-					color: @wit;
-					font-size: 1.8rem;
-					text-align: center;
-					line-height: 1;
-					display: block;
-					float: none;
-					clear: both;
-					@media only screen and ( max-width: @break_show_menu_button ) {
-						.fontsize(24);
-					}
-					@media only screen and ( min-width: @break_show_menu_button ) {
-						.fontsize(36);
-					}
-					width: 100%;
-					padding-top: 6px;
-					padding-bottom: 0;
-					padding-left: 8px;
-					padding-right: 6px;
-					margin: 0;
-					font-weight: 400;
-
-					@media only screen {
-						text-transform: uppercase;
-					}
-					
-					& + span {
-						font-size: 1rem;
-						font-family: @bodyfont;
-						padding-top: 0;
-						padding-bottom: 6px;
-					}
-				}
-			}
-		}
-		    
-		.label-extras {
-		    float: left;
-			width: 96%;
-			width: calc( 100% - 32px );
-			
-		    label {
-				display: block;
-		    }
-		}
-		.input-extras {
-		    float: left;
-		    min-width: 24px;
-		    width: 3%;
-		}
-		
-		
-		
-		legend,
-		label {
-		  font-weight: 700;
-		
-		  & + .input-group {
-		    display: block;
-		    clear: both;
-		    float: none;
-		  }
-		}
-		
-		.input-field-days {
-			label {
-				font-family: @headerfont;
-				font-weight: 400;
-				line-height: 1;
-
-				@media only screen {
-					text-transform: uppercase;
-				}
-				
-				@media only screen and ( max-width: @break_show_menu_button ) {
-					.fontsize(24);
-				}
-				@media only screen and ( min-width: @break_show_menu_button ) {
-					.fontsize(32);
-				}
-			}
-		}
-	}
-  
-	select {
-		height: 2.5em;
-	}
-	
-	.longdescription,
-	.datelabel {
-		display: inline-block;
-		float: left;
-	}
-	.datelabel {
-		width: 20%;
-		background: @txt;
-		color: @wit;
-		padding: .25em .5em;
-		margin-right: 1em;
-	}
-	.longdescription {
-		width: 79%;
-	}
-  
-	.mc4wp-checkbox-events-manager, 
-	.input-group {
-		float: none;
-		clear: both;
-		overflow: hidden;
-		
-		div.separator {
-			overflow: hidden;
-			margin-bottom: .25em;
-		}
-		
-		input[type="checkbox"],
-		input[type="radio"] {
-			float: left;
-			clear: both;
-			margin: .25em .5em .5em .25em;
-			border-color: @txt;
-			
-			&:focus {
-				outline: 2px solid @txt;
-				background: white;	      
-			}
-		}
-		
-		label {
-			float: none;
-			clear: both;
-		}
-	}
-
-	body:not(.logged-in) {
-		.em-booking-login-form,
-		.em-booking-form {
-			@media only screen and ( min-width: @break_show_menu_button ) {
-				.input-name,
-				.input-dbem_country,
-				.input-field-organisation,
-				.input-dbem_phone,
-				.input-user_email,
-				.input-dbem_phone,
-				.input-field-linkedin_profile,
-				.input-field-twitter_handle {
-					padding-right: 1em;
-					width: 50%;
-					float: left;
-					clear: none;
-					min-height: 70px;
-					
-					input[type="text"],
-					select {
-						height: 40px;
-					}
-				}
-				.input-group +  .input-field-type_of_organisation {
-					float: none;
-					clear: both					
-				}
-				/*
-				.input-field-organisation,
-				.input-dbem_phone,
-				.input-field-twitter_handle {
-					padding-right: 0;
-					padding-left: 1em;
-				}
-				*/
-			}
-		}
-	}
-}
 
 
-
-
-.comment_form_styling() {
-
-  
-  /* Comments
-  --------------------------------------------- */
-  #comments {
-
-    .comments-title {
-      margin-top: 1em;      
-    }
-    
-    .comment-list {
-		.gc-box-shadow;
-      overflow: hidden;
-      border-left: 1px solid @border_grijs;
-      border-top: 1px solid @border_grijs;
-      margin-bottom: 2em;
-    }    
-
-
-    ul, ol {
-      padding-left: 0;
-
-      &, li {
-        list-style: none;
-      }
-      li {
-        margin: 0;
-        padding: .5em;
-      }
-      li:nth-child(even) {
-        background: @comment-list-even;
-        border-top: 1px solid @border_grijs;
-        border-bottom: 1px solid @border_grijs;
-      }
-      li:nth-child(odd) {
-        background: @comment-list-odd;
-
-        ul, ol {
-          li:nth-child(odd) {
-            background: @comment-list-even;
-          }
-          li:nth-child(even) {
-            background: @comment-list-odd;
-          }
-        }
-      }
-      ul, ol {
-        border-top: 1px solid @border_grijs;
-        border-bottom: 1px solid @border_grijs;
-        border-left: 8px solid @border_grijs;
-        margin: .5em .5em .5em 0;
-      }
-      
-      [data-status="comment-awaiting-moderation"] {
-        border: 5px solid darken(@warning, 50%);
-        background: @warning !important;
-      }   
-      
-    }  
   }
 
-  .entry-comments,
-  .entry-pings {
-    background-color: @wit;
-    margin-bottom: @padding;
-  }
-  
-  .entry-comments {
-    padding: @padding;
-  }
-
-  .entry-pings {
-    padding: @padding;
-  }
-  
-  .comment-respond a,
-  .entry-comments a {
-  //    text-decoration: underline;
-  }
-  
-  .comment-author,
-  .comment-content {
-  }
-  .comment-author {
-    font-weight: bold;
-  }
-  
-  .entry-comments .comment-author {
-    margin-bottom: 0;
-  }
-  
-  .comment-respond {
-    display: block;
-    overflow: hidden;
-    
-    label {
-      display: block;
-      margin-right: @padding;
-    }
-  }
-
-  .comment-meta {
-    a {
-      text-decoration: none;
-      font-size: 80%;
-    } 
-  }
-  .reply {
-    display: inline;
-    float: right;
-  }
-
-  .comment-list li,
-  .ping-list li {
-    list-style-type: none;
-  }
-  
-  li.comment {
-    border-right: none;
-  }
-  
-  .comment .avatar {
-    margin: 0 @padding @padding 0;
-  }
-  
-  .entry-pings .reply {
-    display: none;
-  }
-  
-  .bypostauthor {
-  }
-  
-  .form-allowed-tags {
-    .fontsize(14);
-    padding: @padding;
-  }
-  
   .em-booking-login-form,
-  .em-booking-form,
-  .form-submit {
-    [type="submit"] {
-      float: right;
-    }
-  }
+  .em-booking-form {
+    overflow: hidden;
 
-  @media only screen and (min-width: @break_tablet ) {
+    fieldset,
+    p {
+      margin-bottom: 1em;
+    }
 
-    .comment-respond {
-      .comment.author,
-      .comment.email {
-         width: 50%;
-         float: left;
-      }
-      .comment.author {
-        padding-right: 1em;        
-      }
-      .comment.email {
-        padding-left: 1em;        
+    fieldset {
+      border: 0;
+      padding: 0.01em 0 0 0;
+      margin: 0 0 1em 0;
+      display: table-cell;
+    }
+
+    legend {
+      display: table;
+      padding: 0;
+      padding-inline-start: 0;
+      width: 100%;
+
+      & + * {
+        clear: both;
       }
     }
-    
-    #comments {
-      ul, ol {
-        padding-left: 0;
-        
-        li {
-          padding: 1em;
+
+    @pijl_breedte: 48px;
+    @pijl_hoogte: 63px;
+
+    label {
+      display: inline-block;
+      position: relative;
+      z-index: 600;
+
+      div {
+        background: @gc_a11y_green;
+        float: left;
+        @media only screen and ( min-width: @break_show_menu_button ) {
+          width: @pijl_breedte;
+          height: @pijl_hoogte;
         }
-        ul, ol {
-          margin: 1em 1em 1em 0;
+        margin-right: 2rem;
+        position: relative;
+        padding: 0;
+
+        &:after {
+          content: ' ';
+          display: inline-block;
+          width: 24px;
+          height: 24px;
+          background: @gc_a11y_green;
+          position: absolute;
+          top: ( @pijlgrootte * 1 );
+          right: 0;
+          margin-right: -2px;
+          z-index: -1;
+          transform: rotateZ(-45deg);
         }
-      }  
+
+        span {
+          color: @wit;
+          font-size: 1.8rem;
+          text-align: center;
+          line-height: 1;
+          display: block;
+          float: none;
+          clear: both;
+          @media only screen and ( max-width: @break_show_menu_button ) {
+            .fontsize(24);
+          }
+          @media only screen and ( min-width: @break_show_menu_button ) {
+            .fontsize(36);
+          }
+          width: 100%;
+          padding-top: 6px;
+          padding-bottom: 0;
+          padding-left: 8px;
+          padding-right: 6px;
+          margin: 0;
+          font-weight: 400;
+
+          @media only screen {
+            text-transform: uppercase;
+          }
+
+          & + span {
+            font-size: 1rem;
+            font-family: @bodyfont;
+            padding-top: 0;
+            padding-bottom: 6px;
+          }
+        }
+      }
     }
-    
+
+    .label-extras {
+      float: left;
+      width: 96%;
+      width: calc(100% - 32px);
+
+      label {
+        display: block;
+      }
+    }
+
+    .input-extras {
+      float: left;
+      min-width: 24px;
+      width: 3%;
+    }
+
+
+    legend,
+    label {
+      font-weight: 700;
+
+      & + .input-group {
+        display: block;
+        clear: both;
+        float: none;
+      }
+    }
+
+    .input-field-days {
+      label {
+        font-family: @headerfont;
+        font-weight: 400;
+        line-height: 1;
+
+        @media only screen {
+          text-transform: uppercase;
+        }
+
+        @media only screen and ( max-width: @break_show_menu_button ) {
+          .fontsize(24);
+        }
+        @media only screen and ( min-width: @break_show_menu_button ) {
+          .fontsize(32);
+        }
+      }
+    }
   }
-  
-  
-  // meuk voor Gravity Forms 
-  .gform_page_footer {
-	  margin-bottom: 1em;
+
+  select {
+    height: 2.5em;
   }
-  
 
-	input[type="button"].gform_previous_button {
-		padding-left: ( @padding * 2 );
-		padding-right: @padding;
-		
-		background: @button-normal url('../images/icon-knop-groen-inverse.png') no-repeat left center;
-		background-image: url('../images/icon-knop-groen-inverse.svg'), none;
-		
-		& + input[type="button"].gform_next_button {
-			float: right;
-			clear: right;
-		}
-	}
-	.gform_save_link {
-		display: block;
-		clear: both;
-		margin-top: 1em;
-	}
+  .longdescription,
+  .datelabel {
+    display: inline-block;
+    float: left;
+  }
+  .datelabel {
+    width: 20%;
+    background: @txt;
+    color: @wit;
+    padding: .25em .5em;
+    margin-right: 1em;
+  }
+  .longdescription {
+    width: 79%;
+  }
 
-@rbinputmaxwidth2: 20px;
-@rbinputmaxwidth: ( 2 * @rbinputmaxwidth2 );
+  .mc4wp-checkbox-events-manager,
+  .input-group {
+    float: none;
+    clear: both;
+    overflow: hidden;
 
-	.gf_page_steps {
-		display: flex;
-		.gf_step {
-			border-bottom: 3px solid white;
-			padding: .5em 1em;
-			flex: 1;
-			margin: .25em .25em -3px .25em;
-			
-			.gf_step_label {
-				visibility: hidden;
-			}
-			&.gf_step_active {
-				.gf_step_label {
-					visibility: visible;
-				}
-			}
-		}
-	}
+    div.separator {
+      overflow: hidden;
+      margin-bottom: .25em;
+    }
 
+    input[type="checkbox"],
+    input[type="radio"] {
+      float: left;
+      clear: both;
+      margin: .25em .5em .5em .25em;
+      border-color: @txt;
 
-	.gform_page_fields {
-		
-		
-		ul {
-			&, li {
-				list-style: none;
-				padding-left: 0;
-				margin-left: 0;
-			}		
-			li {
-				overflow: hidden;
-				
-				input {
-//					margin: .5%;
-//					width: @rbinputmaxwidth; 
-//					display: block;
-//					float: left;
-					
-					& + label {
-						display: block;
-						float: left;
-						max-width: ~"calc(99% - @{rbinputmaxwidth})";
-					}
-				}
-			}
-		}		
-	}
+      &:focus {
+        outline: 2px solid @txt;
+        background: white;
+      }
+    }
 
-    
+    label {
+      float: none;
+      clear: both;
+    }
+  }
+
+  body:not(.logged-in) {
+    .em-booking-login-form,
+    .em-booking-form {
+      @media only screen and ( min-width: @break_show_menu_button ) {
+        .input-name,
+        .input-dbem_country,
+        .input-field-organisation,
+        .input-dbem_phone,
+        .input-user_email,
+        .input-dbem_phone,
+        .input-field-linkedin_profile,
+        .input-field-twitter_handle {
+          padding-right: 1em;
+          width: 50%;
+          float: left;
+          clear: none;
+          min-height: 70px;
+
+          input[type="text"],
+          select {
+            height: 40px;
+          }
+        }
+
+        .input-group + .input-field-type_of_organisation {
+          float: none;
+          clear: both
+        }
+      }
+    }
+  }
 }
+

@@ -515,17 +515,11 @@ body .sidebar .widget_oa_social_login .oneall_social_login {
   padding: @padding 0 0 0;
 }
 
-.entry-comments-link::before {
-  content: "\2014";
-  margin: 0 6px 0 2px;
-}
-
 .entry-categories,
 .entry-tags {
   display: block;
 }
 
-.comment_form_styling(); // from 40-forms.less
 
 /*
 Social media buttons
@@ -869,9 +863,7 @@ Media Queries
 
   .archive-description,
   .author-box,
-  .comment-respond,
   .entry,
-  .entry-comments,
   .entry-footer .entry-meta,
   .header-image .site-header .widget-area,
   .sidebar .widget,
@@ -944,23 +936,12 @@ Media Queries
   @position_navbar2: ( @position_navbar + @bigmargin );
 
 
-  #respond,
-  .entry-comments {
+  #respond {
     margin-top: @padding;
   }
 
   #reply-title {
     padding-top: ( @padding / 2 );
-  }
-
-  .entry-comments {
-    padding-bottom: @padding;
-    ul.children {
-      border-left: 4px solid @light_gray;
-      border-bottom: 4px solid @light_gray;
-      padding-bottom: @padding;
-      margin-bottom: ( @padding );
-    }
   }
 }
 
