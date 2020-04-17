@@ -10,7 +10,6 @@ h1 + .meta-data {
   max-width: @max-width-inner;
   margin-left: auto;
   margin-right: auto;
-	overflow: hidden;
 }
 
 .entry-header {
@@ -144,17 +143,6 @@ h1 + .meta-data {
   }
 }
 
-.comments-area {
-  .gc-rotated-bg;
-  padding-bottom: 3rem;
-  margin-bottom: -3rem;
-
-  @media @tablet {
-    padding-bottom: 8rem;
-    margin-bottom: -5rem;
-  }
-}
-
 // Location teaser
 
 .entry.location {
@@ -206,6 +194,123 @@ h1 + .meta-data {
 
     h3 {
       width: calc(100% - 4.5rem);
+    }
+  }
+}
+
+/* Comments */
+
+.comment-list {
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+.comment {
+  .gc-box-shadow;
+  border: .1rem solid @border_color;
+  padding: 2rem;
+
+  @media @tablet {
+    padding: 2.5rem 3rem 3rem;
+  }
+
+  @media @desktop {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .comment {
+    border-top: .2rem solid @border_color;
+    padding: 2rem;
+    margin-top: @gutter;
+    box-shadow: none;
+
+    @media @desktop {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  + .comment {
+    margin-top: @gutter;
+  }
+}
+
+.comment-author {
+  color: @meta_color;
+  font-size: @font_small;
+  font-family: @font_primary_semi;
+}
+
+.comment-content {
+  margin-top: 1.5rem;
+}
+
+.comment-meta {
+  color: @meta_color;
+  font-size: @font_small;
+  font-family: @font_primary_semi;
+  display: flex;
+
+  .reply {
+    margin-left: auto;
+    padding-left: 2rem;
+  }
+
+  a {
+    display: inline-block;
+  }
+}
+
+.comment-respond {
+  margin-top: 3rem;
+  padding-bottom: 3rem;
+
+  @media @desktop {
+    padding-bottom: 5rem;
+    margin-top: 5rem;
+  }
+
+  h3 {
+    font-size: 2.2rem;
+  }
+}
+
+.comment-form {
+  label {
+    + input,
+    + textarea {
+      margin-top: .5rem;
+    }
+  }
+
+  .form-submit {
+    margin-top: @gutter;
+  }
+
+  @media @tablet {
+    display: flex;
+    flex-wrap: wrap;
+
+    .comment-form-comment,
+    .form-submit {
+      width: 100%;
+    }
+
+    .author,
+    .email {
+      width: 50%;
+    }
+
+    .author {
+      padding-right: @gutter / 2;
+    }
+
+    .email {
+      padding-left: @gutter / 2;
     }
   }
 }
