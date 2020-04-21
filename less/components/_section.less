@@ -66,3 +66,47 @@
   }
 }
 
+.section--actual {
+  .section__title {
+    border: none;
+  }
+
+  .teaser--small {
+    margin-top: 2rem;
+  }
+
+  .btn {
+    margin-top: @gutter;
+  }
+
+  .grid {
+    margin-top: @gutter;
+  }
+
+  @media @tablet {
+    .l-section-content {
+      display: flex;
+
+      .grid {
+        margin-left: -@gutter / 2;
+        margin-right: -@gutter / 2;
+      }
+    }
+  }
+}
+
+.l-section-col {
+  &.col--50-width {
+    @media @tablet {
+      width: 50%;
+
+      &:nth-child(odd){
+        margin-right: @gutter / 2;
+      }
+
+      &:nth-child(even){
+        margin-left: @gutter / 2;
+      }
+    }
+  }
+}
