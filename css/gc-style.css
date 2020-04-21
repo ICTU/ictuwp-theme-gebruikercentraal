@@ -223,7 +223,7 @@ ul.fancy-list li:before {
     max-width: 50rem;
   }
 }
-input:not([type=submit]),
+input:not([type=submit]):not([type=checkbox]):not([type=radio]),
 select,
 textarea {
   -webkit-box-sizing: border-box;
@@ -242,17 +242,65 @@ textarea {
   border-radius: 0;
   font-weight: 100;
 }
-input:not([type=submit]):focus,
+input:not([type=submit]):not([type=checkbox]):not([type=radio]):focus,
 select:focus,
 textarea:focus {
   border-color: #25b34b;
   -webkit-box-shadow: 0.3rem 0.3rem 0 rgba(37, 179, 75, 0.3);
           box-shadow: 0.3rem 0.3rem 0 rgba(37, 179, 75, 0.3);
 }
+input[type=checkbox] {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-right: 1.4rem;
+}
 form label,
 fieldset legend {
   font-weight: normal;
   font-family: 'montserratsemibold', Helvetica, Arial, sans-serif;
+}
+.form-item--checkbox {
+  position: relative;
+}
+.form-item--checkbox input {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+.form-item--checkbox label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.form-item--checkbox label:before {
+  content: " ";
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  border: 0.2rem solid #D1DFE3;
+  margin-right: 1.5rem;
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+}
+.form-item--checkbox label:hover,
+.form-item--checkbox label:focus {
+  text-decoration: underline;
+}
+.form-item--checkbox label:hover:before,
+.form-item--checkbox label:focus:before {
+  border-color: #004152;
+}
+.form-item--checkbox input:checked + label:before {
+  border-color: #25b34b;
+  -webkit-box-shadow: 0.3rem 0.3rem 0 rgba(37, 179, 75, 0.3);
+          box-shadow: 0.3rem 0.3rem 0 rgba(37, 179, 75, 0.3);
+  background: #fff url('../images/ico-check.svg') center center no-repeat;
+  background-size: 1.2rem auto;
 }
 .site-container {
   width: 100%;
@@ -8518,6 +8566,69 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
 .page-template-conf-overviewpage .entry-content {
   max-width: 1180px;
   padding-left: 0;
+}
+/*
+ * Filters
+ */
+.form--filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.form-item--filter {
+  margin: 1.4rem 0.7rem 0;
+}
+.form-item--filter label {
+  border: 0.2rem solid #e8d8c7;
+  padding: 0.7rem 1rem 0.5rem;
+  -webkit-transition: background 0.2s, border-color 0.2s;
+  transition: background 0.2s, border-color 0.2s;
+}
+.form-item--filter label:before {
+  border-color: #004152;
+  border-width: 0.1rem;
+}
+.form-item--filter.is-active input + label {
+  color: #fff;
+}
+.form-item--filter.is-active input + label:before {
+  border-color: #fff;
+}
+.form-item--filter.is-active label[for='commitment'] {
+  background: #148839;
+  border-color: #25b34b;
+}
+.form-item--filter.is-active label[for='gebruiksgemak'] {
+  background: #4c2974;
+  border-color: #2D114E;
+}
+.form-item--filter.is-active label[for='informatieveiligheid'] {
+  background: #c42c76;
+  border-color: #A20E56;
+}
+.form-item--filter.is-active label[for='kanaalsturing'] {
+  background: #f99d1c;
+  border-color: #D77D00;
+  color: #004152;
+}
+.form-item--filter.is-active label[for='procesaanpak'] {
+  background: #009C95;
+  border-color: #00b4ac;
+}
+.form-item--filter.is-active label[for='inclusie'] {
+  background: #c73d19;
+  border-color: #D94721;
+}
+.form-item--filter.is-active label[for='samenwerking'] {
+  background: #007BB0;
+  border-color: #0095da;
 }
 .entry-header + .entry-content {
   margin-top: 1.8rem;

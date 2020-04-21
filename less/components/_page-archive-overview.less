@@ -108,3 +108,78 @@
     padding-left: 0;
   }
 }
+
+/*
+ * Filters
+ */
+
+.form--filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: @max-width-content;
+  margin: 0 auto;
+}
+
+.form-item--filter {
+  margin: 1.4rem .7rem 0;
+
+  label {
+    border: .2rem solid @gc_pantybrown;
+    padding: .7rem 1rem .5rem;
+    transition: background .2s, border-color .2s;
+
+    &:before {
+      border-color: @gc_blue_dark;
+      border-width: .1rem;
+    }
+  }
+
+  // Optimaal Digitaal Kleurtjes
+  &.is-active {
+    input + label {
+      color: @white;
+
+      &:before {
+        border-color: @white;
+      }
+    }
+
+    label[for='commitment'] {
+      background: @gc_a11y_green;
+      border-color: @gc_green;
+    }
+
+    label[for='gebruiksgemak'] {
+      background: @gc_dark_purple;
+      border-color: @gc_dark_purple_darker;
+    }
+
+    label[for='informatieveiligheid'] {
+      background: @gc_pink;
+      border-color: @gc_pink_darker;
+    }
+
+    label[for='kanaalsturing'] {
+      background: @gc_orange;
+      border-color: @gc_a11y_orange_lg;
+      color: @gc_blue_dark;
+    }
+
+    label[for='procesaanpak'] {
+      background: @gc_a11y_cyan_lg;
+      border-color: @gc_cyan;
+    }
+
+    label[for='inclusie'] {
+      background: @inc_a11y_orange;
+      border-color: @inc_orange;
+    }
+
+    label[for='samenwerking'] {
+      background: @gc_a11y_blue;
+      border-color: @gc_blue;
+    }
+  }
+}
+

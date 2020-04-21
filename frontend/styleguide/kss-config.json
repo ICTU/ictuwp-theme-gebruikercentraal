@@ -10,7 +10,6 @@
   ],
   "js": [
     "../styleguide/kss-assets/lib/jquery-3.4.1.min.js",
-    "../../../../../wp-content/plugins/ictu-gc-posttypes-inclusie/js/libs/jquery.waypoints.min.js",
-    "../../../../../wp-content/plugins/ictu-gc-posttypes-inclusie/js/min/stepchart-min.js"
+    "../js/gc-main-min.js"
   ]
 }

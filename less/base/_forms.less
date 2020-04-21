@@ -1,4 +1,4 @@
-input:not([type=submit]),
+input:not([type=submit]):not([type=checkbox]):not([type=radio]),
 select, textarea {
   box-sizing: border-box;
   background: @white;
@@ -20,12 +20,54 @@ select, textarea {
   }
 }
 
+input[type=checkbox] {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-right: 1.4rem;
+}
+
 form label,
 fieldset legend {
   font-weight: normal;
   font-family: @font_primary_semi;
 }
 
+.form-item--checkbox {
+  position: relative;
+
+  input {
+    .visuallyhidden;
+  }
+
+  label {
+    display: flex;
+
+    &:before {
+      content: " ";
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      border: .2rem solid @border_color;
+      margin-right: 1.5rem;
+      transition: border-color .2s;
+    }
+
+    &:hover, &:focus {
+      text-decoration: underline;
+
+      &:before {
+        border-color: @gc_blue_dark;
+      }
+    }
+  }
+
+  input:checked + label:before {
+    border-color: @gc_green;
+    box-shadow: .3rem .3rem 0 rgba(@gc_green, 0.3);
+    background: @white url('../images/ico-check.svg') center center no-repeat;
+    background-size: 1.2rem auto;
+  }
+}
 
 .formstyling() {
 
