@@ -148,6 +148,65 @@
   }
 }
 
+.tipkaart__toptip {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 7.5rem;
+  height: 7.5rem;
+  color: transparent;
+  overflow: hidden;
+
+  &:after,
+  &:before {
+    content: " ";
+    display: block;
+    position: absolute;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+    width: 10rem;
+    background: @gc_a11y_green;
+    height: 5rem;
+    top: 0;
+    left: 0;
+    margin: -1rem 0 0 1rem;
+
+    .tipkaart--informatieveiligheid & {
+      background: @gc_pink_darker;
+    }
+
+    .tipkaart--samenwerking & {
+      background: @gc_a11y_blue;
+    }
+
+    .tipkaart--procesaanpak & {
+      background: @gc_cyan;
+    }
+
+    .tipkaart--gebruiksgemak & {
+      background: @gc_dark_purple_darker;
+    }
+
+    .tipkaart--kanaalsturing & {
+      background: @gc_orange;
+    }
+
+    .tipkaart--inclusie & {
+      background: @inc_a11y_orange;
+    }
+  }
+
+  &:after {
+    width: 3.8rem;
+    height: 3.8rem;
+    top: 0;
+    right: 0;
+    background: url('../images/ico-star.svg') center center no-repeat;
+  }
+}
+
 .tipkaart__nummer {
   font-family: @font_secondary;
   text-transform: uppercase;

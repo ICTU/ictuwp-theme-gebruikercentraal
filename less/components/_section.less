@@ -16,7 +16,7 @@
   max-width: @contentmaxwidth;
   margin: 0 auto;
 
-  .grid:not(.grid--col-3){
+  .grid:not(.grid--col-3) {
     max-width: ~"calc(@{max-width-inner} + @{gutter})";
     margin: 0 auto;
   }
@@ -66,6 +66,8 @@
   }
 }
 
+/* Actueel - events & blogs */
+
 .section--actual {
   .section__title {
     border: none;
@@ -100,13 +102,29 @@
     @media @tablet {
       width: 50%;
 
-      &:nth-child(odd){
+      &:nth-child(odd) {
         margin-right: @gutter / 2;
       }
 
-      &:nth-child(even){
+      &:nth-child(even) {
         margin-left: @gutter / 2;
       }
     }
   }
 }
+
+/* Tips */
+
+.section--toptips {
+  .section__title {
+    border: none;
+
+    + p {
+      margin-top: 2rem;
+    }
+  }
+  .l-section-content .grid {
+    max-width: ~"calc(@{max-width-container} + @{gutter})";
+  }
+}
+

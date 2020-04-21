@@ -7049,6 +7049,7 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
     margin-top: 4.5rem;
   }
 }
+/* Actueel - events & blogs */
 .section--actual .section__title {
   border: none;
 }
@@ -7082,6 +7083,16 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
   .l-section-col.col--50-width:nth-child(even) {
     margin-left: 1.5rem;
   }
+}
+/* Tips */
+.section--toptips .section__title {
+  border: none;
+}
+.section--toptips .section__title + p {
+  margin-top: 2rem;
+}
+.section--toptips .l-section-content .grid {
+  max-width: calc(1180px + 3rem);
 }
 .link--linklist {
   font-family: 'montserratbold', Helvetica, Arial, sans-serif;
@@ -10012,6 +10023,56 @@ h1 + .meta-data {
     padding-left: 3rem;
     padding-right: 3rem;
   }
+}
+.tipkaart__toptip {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 7.5rem;
+  height: 7.5rem;
+  color: transparent;
+  overflow: hidden;
+}
+.tipkaart__toptip:after,
+.tipkaart__toptip:before {
+  content: " ";
+  display: block;
+  position: absolute;
+}
+.tipkaart__toptip:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 10rem;
+  background: #148839;
+  height: 5rem;
+  top: 0;
+  left: 0;
+  margin: -1rem 0 0 1rem;
+}
+.tipkaart--informatieveiligheid .tipkaart__toptip:before {
+  background: #A20E56;
+}
+.tipkaart--samenwerking .tipkaart__toptip:before {
+  background: #007BB0;
+}
+.tipkaart--procesaanpak .tipkaart__toptip:before {
+  background: #00b4ac;
+}
+.tipkaart--gebruiksgemak .tipkaart__toptip:before {
+  background: #2D114E;
+}
+.tipkaart--kanaalsturing .tipkaart__toptip:before {
+  background: #f99d1c;
+}
+.tipkaart--inclusie .tipkaart__toptip:before {
+  background: #c73d19;
+}
+.tipkaart__toptip:after {
+  width: 3.8rem;
+  height: 3.8rem;
+  top: 0;
+  right: 0;
+  background: url('../images/ico-star.svg') center center no-repeat;
 }
 .tipkaart__nummer {
   font-family: 'league_gothicregular', Impact, Helvetica, Arial, sans-serif;

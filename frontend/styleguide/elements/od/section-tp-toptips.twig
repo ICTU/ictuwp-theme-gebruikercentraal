@@ -1,0 +1,43 @@
+<section class="section section--tipcards section--toptips l-text-centered">
+    <div class="l-section-top">
+        <h2 class="section__title">Onze toptips</h2>
+        <p>Optimaal Digitaal bestaat uit meer dan 100 tips uit de (online) dienstverlening. </p>
+    </div>
+
+    <div class="l-section-content">
+
+        <div class="grid grid--col-4">
+
+            {% include '../includes/card--tipkaart.twig' with {
+                'modifier': 'Samenwerking',
+                'number': '27',
+                'card_title': 'Leer van elkaar',
+                'toptip': 'TRUE'
+            } %}
+
+            {% include '../includes/card--tipkaart.twig' with {
+                'modifier': 'Procesaanpak',
+                'number': '23',
+                'card_title': 'Ga gewoon van start, verbeter gaandeweg',
+                'toptip': 'TRUE'
+            } %}
+
+            {% include '../includes/card--tipkaart.twig' with {
+                'modifier': 'Gebruiksgemak',
+                'number': '72',
+                'card_title': 'Test met échte gebruikers',
+                'toptip': 'TRUE'
+            } %}
+
+            {% include '../includes/card--tipkaart.twig' with {
+                'modifier': 'Kanaalsturing',
+                'number': '1',
+                'card_title': 'Laat weten dat digitaal bestaat',
+                'toptip': 'TRUE'
+            } %}
+
+        </div>
+
+    </div>
+
+</section>

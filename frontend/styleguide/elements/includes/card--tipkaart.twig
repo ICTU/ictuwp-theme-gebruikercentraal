@@ -1,6 +1,10 @@
 <div class="tipkaart tipkaart--{{ modifier|lower }}">
     <a class="tipkaart__link" class=tipkaart__link" title="Neem als bestuurder verant­woordelijkheid voor informatie­veiligheid" href="#">
 
+        {% if toptip %}
+            <span class="tipkaart__toptip">Is toptip</span>
+        {% endif %}
+
         <span class="tipkaart__nummer">Tip {% if number %}{{ number }}{% else %}94{% endif %}</span>
         <h3 class="tipkaart__title">
             {% if card_title %}
