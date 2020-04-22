@@ -1,4 +1,3 @@
-
 //========================================================================================================
 
 // Gebruiker Centraal - 50-header-logo-menu.less
@@ -17,507 +16,114 @@
 //@import "../abstracts/_variables"; // wordt niet zelfstandig gecompiled, dus geen includes
 //@import "../abstracts/_mixins";
 
-@maxwidth_wraps:	1180px;
-@inputwidthsearch:	( @widget_area_button - 2px );
-@extra:				15px;
+@maxwidth_wraps: 1180px;
+@inputwidthsearch: ( @widget_area_button - 2px );
+@extra: 15px;
 
-.header-logo() {
-	
-	@keyframes logosizechange {
-		0%		{
-			background-size: @logo_desktop_width @logo_desktop_height;		
-		}
-		100%	{ 
-			background-size: ( @logo_desktop_width + @extra ) ( @logo_desktop_height + @extra );
-		}
-	}
-	@keyframes logosizechange_variant2 {
-		0%		{
-			background-size: @logogc_desktop_width @logogc_desktop_height;		
-		}
-		100%	{ 
-			background-size: ( @logogc_desktop_width + @extra ) ( @logogc_desktop_height + @extra );
-		}
-	}
-
-	.site-header {
-	    background-color: @header_bg_color;
-	    
-
-		.title-area {
-
-		    a {
-				display: inline-block;
-
-				&:before {
-					content: ' ';
-					display: inline-block;
-					float: left;
-
-					width: @logo_mobile_width;
-					height: @logo_mobile_height;
-
-//					background-image: url('../images/logos/logo-gebruikercentraal-v2.svg');
-					background-image: url('../images/logos/gc-edo-beeldmerk.svg');
-					background-repeat: no-repeat;
-					background-position: center center;
-
-				}
-
-				color: @wit;
-				overflow: hidden;
-				text-decoration: none;
-				
-				&:hover,
-				&:focus,
-				&:active {
-					&:before {
-						animation: logosizechange .1s; 
-						background-size: ( @logo_desktop_width + @extra ) ( @logo_desktop_height + @extra );
-					}
-				}
-			   
-			   
-				//----------------------------------------------------------------------------
-			  
-				@media only screen and ( max-width: @break_show_menu_button ) {
-					&:before {
-						background-size: @logo_mobile_width @logo_mobile_height;
-						margin-top: .5em;
-						width: @logo_mobile_width;
-						height: @logo_mobile_height;
-					}		
-				}		
-				  
-				//----------------------------------------------------------------------------
-			  
-				@media only screen and ( min-width: @break_show_menu_button ) {
-
-					transform: translateX( ( -1 * ( @extra / 2 ) ) );
-					margin-top: .5rem;
-
-					&:before {
-						background-size: @logo_desktop_width @logo_desktop_height;
-						width: ( @logo_desktop_width + @extra );
-						height: ( @logo_desktop_height + @extra );
-						margin-right: .25em;
-					}		
-		
-				}		
-				  
-				//----------------------------------------------------------------------------
-			   
-				&:hover,
-				&:focus,
-				&:active {
-				   span {
-					   border-color: @wit;
-				   }
-			    }
-			    
-				&.no-description {
-					.blog-name {
-						line-height: ( @logo_desktop_height + @extra );
-						padding: 0;
-					}
-					span {
-						border-bottom-style: none;
-					}
-				    &:hover,
-				    &:active,
-				    &:focus {
-					    &, span {
-							text-decoration: underline;
-					    }
-					}
-				}
-		    }
-
-
-			&.inclusie {
-			    a:before {
-					background-image: url('../images/logos/logo-inclusie.svg');
-				}
-			}
-			&.beeldbank {
-			    a:before {
-					background-image: url('../images/logos/beeldmerk-beeldbank.svg');
-				}
-			}
-			&.rotterdammercentraal {
-			    a:before {
-					background-image: url('../images/logos/logo-rotterdammercentraal.svg');
-				}
-			}
-			&.beeldbank {
-			    a:before {
-					background-image: url('../images/logos/beeldmerk-beeldbank.svg');
-				}
-			}
-			&.gebruikercentraal {
-				@media only screen and ( max-width: @break_show_menu_button ) {
-				    a {
-					    &:before {
-							margin-top: 0;
-							background-size: @logogc_mobile_width @logogc_mobile_height;
-							width: ( @logogc_mobile_width + 30 );
-							background-position: 11px 10px; // left center
-						}
-					}
-				}
-				
-				@media only screen and ( min-width: @break_show_menu_button ) {
-				    a {
-					    &:before {
-							background-size: @logogc_desktop_width @logogc_desktop_height;
-							width: 136px;
-						}
-
-						&:hover,
-						&:focus,
-						&:active {
-							&:before {
-								animation: logosizechange_variant2 .1s; 
-								background-size: ( @logogc_desktop_width + @extra ) ( @logogc_desktop_height + @extra );
-							}
-						}
-					}
-				}
-			}			
-	    }
-	}
-
-    .site-title {
-	    display: inline-block;
-	    float: left;
-	    padding: 0;
-	    margin: 0;
-    }
-    
-    .blog-name,
-    .blog-description {
-	    display: inline-block;
-	    border-bottom: 1px solid transparent;
-	    padding-top: 2px;
-	    padding-bottom: 2px;
-//	    background: green;
-    }
-
-    .blog-name {
-		font-family: @headerfont;
-		text-transform: uppercase;
-    }
-    .blog-description {
-		font-family: @montserrat_semibold;
-    }
-
-
-	@media only screen and ( max-width: @break_show_menu_button ) {
-		.blog-name,
-		.site-title-description {
-			.visuallyhidden();
-		}
-    }
-
-	@media only screen and ( min-width: @break_show_menu_button ) {
-
-		.site-title-description {
-			float: left;
-			display: block;
-			overflow: hidden;
-
-			&.met {
-			    .blog-name {
-					margin-top: 12px;
-				}    
-			}    
-			&.zonder {
-			    .blog-name {
-					margin-top: 22px;
-				}    
-			}    
-		}    
-
-		@media only screen {
-		    .blog-name {
-				text-transform: uppercase;
-		    }
-	    }
-
-	    .blog-name {
-			// hugely on non-mobile
-			.fontsize( 42 );
-			word-break: break-word;
-			white-space: nowrap;
-			hyphens: none;
-			padding-top: 2px;
-			line-height: 36px;
-		}	    
-	    .blog-description {
-			.fontsize( 12 );
-			display: inline-block;
-			transform: translateY(-4px);
-			line-height: 15px;
-	    }
-		
-    }
-    
-	.site-description {
-		  
-		//--------------------------------------------------------------------------------
-		
-		@media only screen and ( max-width: @break_show_menu_button ) {
-			// hide on mobile
-			.visuallyhidden();
-		}		
-		  
-		//--------------------------------------------------------------------------------
-		
-		@media only screen and ( min-width: @break_show_menu_button ) {
-			// visible on mobile
-			background: @header_bg_color;
-			display: inline-block;
-			padding-left: .5em;
-			padding-right: .5em;
-			margin-left: @logo_desktop_padding;
-			transform: translateX(-.5em);
-		}		
-		  
-		//--------------------------------------------------------------------------------
-		
-	}
-
-
-	#zoeken_no_result,
-	#zoeken {
-		position: relative;
-		height: @widget_area_button;
-
-		input[type="submit"] {
-		    border-color: @header_bg_color;
-		    background-color: @header_bg_color;
-		    .pijltje_wit('../images/vergrootglas.svg', @wit);
-			background-position: center center;
-			background-repeat: no-repeat;
-			text-indent: -999em;
-			width: ( @widget_area_button - 0 );
-			padding: 0;
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			height: 38px;
-
-			@media only screen and ( max-width: @break_show_menu_button ) {
-				margin-right: 0;
-				right: 0;
-			}			
-			@media only screen and ( min-width: @break_show_menu_button ) {
-				right: 2px;
-			}			
-			
-			&:focus {
-				background-color: @wit;
-				border-color: @txt;
-				outline: none;
-			    .pijltje_wit('../images/vergrootglas.svg', @txt);
-			}
-		}
-	}
-	#zoeken {
-		border: 1px solid #6F99A3; // @wit;
-		  
-		//--------------------------------------------------------------------------------
-		
-		@media only screen and ( max-width: @break_show_menu_button ) {
-			float: left;
-			margin-top: 1.8rem;
-		}		
-		  
-		//--------------------------------------------------------------------------------
-		
-		@media only screen and ( min-width: @break_show_menu_button ) {
-			margin-top: 2.5rem;
-			float: right;
-			width: 24.58333333rem; // 295px
-		}		
-		  
-		//--------------------------------------------------------------------------------
-		
-		&:focus-within {
-			background-color: @wit;
-
-			input[type="search"] {
-				background-color: @wit;
-				color: @txt;
-
-				&:placeholder,
-				&::-webkit-input-placeholder,
-				&:-moz-placeholder { 
-					color: @txt_grijs;
-				}
-				&:focus {
-					&:placeholder,
-					&::-webkit-input-placeholder,
-					&:-moz-placeholder { 
-						color: @wit;
-					}
-				}
-			}
-		}
-
-
-		input[type="search"] {
-		    background-color: @header_bg_color;
-			color: @wit;
-			outline: none;
-			border-style: none;
-			margin-left: 0;
-			margin-right: 0;
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			width: ~"calc(100% - @{inputwidthsearch})";
-			line-height: 38px;
-			box-shadow: none;
-			padding-left: 1.5rem;
-			font-family: @montserrat_semibold;		
-			height: 38px;
-			
-			&::placeholder { 
-				color: @wit !important;
-			}
-			&:focus {
-				background-color: @wit;
-				box-shadow: inset 0 0 4px #aaaaaa;
-				// voor IE11: expliciet tekst NIET wit maken
-				color: @txt;
-			}
-
-			//----------------------------------------------------------------------------
-			
-			@media only screen and ( max-width: @break_show_menu_button ) {
-			}			
-		  
-
-			//----------------------------------------------------------------------------
-			
-			@media only screen and ( max-width: @break_show_menu_button ) {
-				width: ~"calc(99% - @{widget_area_button})";
-				right: @widget_area_button;
-			}			
-		  
-			//----------------------------------------------------------------------------
-			
-		}
-		
-		
-	}
-	
-}
-
-//========================================================================================================
+//====================================================================================================
 
 .menustyling() {
-	
 
-	//------------------------------------------------------------------------------------
-	
-	@media only screen and ( max-width: @break_show_menu_button ) {
 
-		.site-container.menuopen {
-		    position: relative;
-		    overflow: hidden;
-		    overflow-y: scroll;
-		}	
+  //------------------------------------------------------------------------------------
 
-		#maincontent.menuopen {
-			transform: translateX( @mainmenu_mobile_width );
-			transition: opacity 400ms, width 0.1s 400ms, height 0.1s 400ms;
-		}
+  @media only screen and ( max-width: @break_show_menu_button ) {
 
-		.site-header.menu-met-js.active {
-			position: fixed;
-			top: 0;
-			left: 0;
-			right: 0;
-			z-index: 9999;
-		}
+    .site-container.menuopen {
+      position: relative;
+      overflow: hidden;
+      overflow-y: scroll;
+    }
 
-		.admin-bar .site-header.menu-met-js.active {
-			top: 96px;
-		}
-		
-	}
+    #maincontent.menuopen {
+      transform: translateX(@mainmenu_mobile_width);
+      transition: opacity 400ms, width 0.1s 400ms, height 0.1s 400ms;
+    }
 
-	//------------------------------------------------------------------------------------
+    .site-header.menu-met-js.active {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+    }
 
-	
-	#menu-button {
-		border-style: none;
-		background: @header_bg_color;
-		margin-right: 1rem;
-		margin-top: 1.8rem;
-		padding: 0;
-		text-align: right;
-		font-family: @bodyfont;
-		text-transform: none;
-//		letter-spacing: normal;
-		font-size: 1.4rem;
-		position: relative;
-		height: ( @widget_area_button - 2px );
-		transform: translateY(1px);
-		
-		&:hover,
-		&:active,
-		&:focus {
-			outline: 1px solid @wit;
-			
-			&, * {
-				color: @wit;
-				text-decoration: none;
-			}
-		}
+    .admin-bar .site-header.menu-met-js.active {
+      top: 96px;
+    }
 
-		i,
-		b {
-			
-		}
-		
-		i {
-			font-style: normal;
-			font-size: 3.8rem;
-			line-height: 1;
-			position: absolute;
-			left: 10px;
-			top: 0;
-			&.close {
-				top: -1px;
-				font-size: 50px;
-				line-height: 38px;
-			}
-		}	
-		b {
-			display: inline-block;
-			line-height: 2.8;
-			position: absolute;
-			top: 0;
-			left: 38px;
-			text-transform: capitalize;
-		}
-	}
+  }
+
+  //------------------------------------------------------------------------------------
+
+
+  #menu-button {
+    border-style: none;
+    background: @header_bg_color;
+    margin-right: 1rem;
+    margin-top: 1.8rem;
+    padding: 0;
+    text-align: right;
+    font-family: @bodyfont;
+    text-transform: none;
+    //		letter-spacing: normal;
+    font-size: 1.4rem;
+    position: relative;
+    height: ( @widget_area_button - 2px );
+    transform: translateY(1px);
+
+    &:hover,
+    &:active,
+    &:focus {
+      outline: 1px solid @wit;
+
+      &, * {
+        color: @wit;
+        text-decoration: none;
+      }
+    }
+
+    i,
+    b {
+
+    }
+
+    i {
+      font-style: normal;
+      font-size: 3.8rem;
+      line-height: 1;
+      position: absolute;
+      left: 10px;
+      top: 0;
+
+      &.close {
+        top: -1px;
+        font-size: 50px;
+        line-height: 38px;
+      }
+    }
+
+    b {
+      display: inline-block;
+      line-height: 2.8;
+      position: absolute;
+      top: 0;
+      left: 38px;
+      text-transform: capitalize;
+    }
+  }
 }
 
 //========================================================================================================
 
 
 .admin-bar {
-	.nav-primary {
-		@media only screen and ( max-width: @break_show_menu_button ) {
-			&.active {
-				top: 120px; // 70px + admin-bar
-			}
-		}
-	}
+  .nav-primary {
+    @media only screen and ( max-width: @break_show_menu_button ) {
+      &.active {
+        top: 120px; // 70px + admin-bar
+      }
+    }
+  }
 }
  

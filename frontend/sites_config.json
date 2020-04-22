@@ -7,48 +7,32 @@
     "type": "theme"
   },
   "inclusie": {
-    "name":            "GC Inclusie plugin",
-    "type":            "plugin",
-    "path":            "../../../plugins/ictuwp-plugin-inclusie/",
-    "proxy":           "inclusie.gebruikercentraal.co.uk/",
-    "dest":            "../../../plugins/ictuwp-plugin-inclusie/css/",
-    "csssource":       "../development/plugins/ictuwp-plugin-inclusie/less/",
-    "plugindevpath":   "../development/plugins/ictuwp-plugin-inclusie/",
-    "pluginsource":    "../development/plugins/ictuwp-plugin-inclusie/**/",
-    "plugintarget":    "../../../plugins/ictuwp-plugin-inclusie/"
+    "name": "GC Inclusie plugin",
+    "type": "plugin",
+    "path": "../../../plugins/ictuwp-plugin-inclusie/",
+    "proxy": "inclusie.gebruikercentraal.co.uk/",
+    "dest": "../../../plugins/ictuwp-plugin-inclusie/css/"
   },
   "beeldbank": {
-    "name":            "GC Beeldbank plugin",
-    "type":            "plugin",
-    "proxy":           "beeldbank.gebruikercentraal.co.uk/",
-    "path":            "../../../plugins/ictuwp-plugin-beeldbank/",
-    "dest":            "../../../plugins/ictuwp-plugin-beeldbank/css/",
-    "csssource":       "../development/plugins/ictuwp-plugin-beeldbank/less/",
-    "plugindevpath":   "../development/plugins/ictuwp-plugin-beeldbank/",
-    "pluginsource":    "../development/plugins/ictuwp-plugin-beeldbank/**/",
-    "plugintarget":    "../../../plugins/ictuwp-plugin-beeldbank/"
-  },
-  "maturityscore": {
-    "name":            "GC maturityscore plugin",
-    "type":            "plugin",
-    "proxy":           "volwassenheidsscan.gebruikercentraal.co.uk/",
-    "path":            "../development/plugins/ictuwp-plugin-maturityscore/",
-    "csssource":       "../development/plugins/ictuwp-plugin-maturityscore/less/",
-    "dest":            "../development/plugins/ictuwp-plugin-maturityscore/assets/css",
-    "plugindevpath":   "../development/plugins/ictuwp-plugin-maturityscore/",
-    "pluginsource":    "../development/plugins/ictuwp-plugin-maturityscore/**/",
-    "plugintarget":    "../../../plugins/ictuwp-plugin-maturityscore/"
+    "name": "GC Beeldbank plugin",
+    "type": "plugin",
+    "proxy": "beeldbank.gebruikercentraal.co.uk/",
+    "path": "../../../plugins/ictuwp-plugin-beeldbank/",
+    "dest": "../../../plugins/ictuwp-plugin-beeldbank/css/"
   },
   "conference": {
-    "name":            "GC Conference Plugin",
-    "type":            "plugin",
-    "path":            "../../../plugins/ictuwp-plugin-conference/",
-    "proxy":           "conference.gebruikercentraal.co.uk/",
-    "dest":            "../../../plugins/ictuwp-plugin-conference/css/",
-    "csssource":       "../development/plugins/ictuwp-plugin-inclusie/less/",
-    "plugindevpath":   "../development/plugins/ictuwp-plugin-inclusie/",
-    "pluginsource":    "../development/plugins/ictuwp-plugin-inclusie/**/",
-    "plugintarget":    "../../../plugins/ictuwp-plugin-inclusie/"
+    "name": "Conferentieplugin",
+    "type": "plugin",
+    "proxy": "conference.gebruikercentraal.co.uk/",
+    "path": "../../../plugins/ictuwp-plugin-conference/",
+    "dest": "../../../plugins/ictuwp-plugin-conference/css/"
+  },
+  "dd": {
+    "name": "Direct Duidelijk subsite",
+    "path": "../",
+    "dest": "../css/",
+    "proxy": "directduidelijk.gebruikercentraal.co.uk",
+    "type": "theme"
   }
 }
 

@@ -63,81 +63,83 @@ if ( ! function_exists( 'ictu_gctheme_frontend_general_get_spotlight' ) ) :
 			$spotlight_blokken = get_field( 'spotlight_blokken', $post->ID );
 
 			// count the items
-			$countcount = count( $spotlight_blokken );
+			if ( ! empty( $spotlight__blokken ) ) {
+				$countcount = count( $spotlight_blokken );
 
-			if ( $countcount > 0 ) :
-				$columncounter = 'l-item-count-2';
+				if ( $countcount > 0 ) :
+					$columncounter = 'l-item-count-2';
 
-				if ( $countcount < 2 ) {
-					$columncounter = 'l-item-count-1';
-				}
+					if ( $countcount < 2 ) {
+						$columncounter = 'l-item-count-1';
+					}
 
-				$return = '<div class="section section--spotlight">';
-				$return .= '<div class="l-spotlight-wrapper ' . $columncounter . '">';
+					$return = '<div class="section section--spotlight">';
+					$return .= '<div class="l-spotlight-wrapper ' . $columncounter . '">';
 
-				while ( have_rows( 'spotlight_blokken' ) ): the_row();
+					while ( have_rows( 'spotlight_blokken' ) ): the_row();
 
-					$spotlight_titel    = get_sub_field( 'spotlight_titel' );
-					$spotlight__image   = get_sub_field( 'spotlight__image' );
-					$spotlight__content = get_sub_field( 'spotlight__content' );
+						$spotlight_titel    = get_sub_field( 'spotlight_titel' );
+						$spotlight__image   = get_sub_field( 'spotlight__image' );
+						$spotlight__content = get_sub_field( 'spotlight__content' );
 
-					if ( $spotlight_titel && $spotlight_titel ) :
+						if ( $spotlight_titel && $spotlight_titel ) :
 
-						$return .= '<div class="spotlight">';
+							$return .= '<div class="spotlight">';
 
-						if ( $spotlight__image ) {
+							if ( $spotlight__image ) {
 
-							$url   = $spotlight__image['url'];
-							$alt   = $spotlight__image['alt'];
-							$title = $spotlight__image['title'];
-							$size  = 'large';
-							$thumb = $spotlight__image['sizes'][ $size ];
-							//						$width  = $spotlight__image['sizes'][ $size . '-width' ];
-							//						$height = $spotlight__image['sizes'][ $size . '-height' ];
+								$url   = $spotlight__image['url'];
+								$alt   = $spotlight__image['alt'];
+								$title = $spotlight__image['title'];
+								$size  = 'large';
+								$thumb = $spotlight__image['sizes'][ $size ];
+								//						$width  = $spotlight__image['sizes'][ $size . '-width' ];
+								//						$height = $spotlight__image['sizes'][ $size . '-height' ];
 
-							if ( ! $alt ) {
-								if ( $title ) {
-									$alt = $title;
+								if ( ! $alt ) {
+									if ( $title ) {
+										$alt = $title;
+									}
 								}
+
+								$return .= '<figure class="spotlight__image" ><img src = "' . $thumb . '" alt = "' . $alt . '" ></figure >';
 							}
 
-							$return .= '<figure class="spotlight__image" ><img src = "' . $thumb . '" alt = "' . $alt . '" ></figure >';
-						}
+							$return .= '<div class="spotlight__content">';
+							$return .= '<' . $args['titletag'] . '>' . $spotlight_titel . '</' . $args['titletag'] . '>';
+							$return .= '<p>';
+							$return .= $spotlight__content;
+							$return .= '</p>';
 
-						$return .= '<div class="spotlight__content">';
-						$return .= '<' . $args['titletag'] . '>' . $spotlight_titel . '</' . $args['titletag'] . '>';
-						$return .= '<p>';
-						$return .= $spotlight__content;
-						$return .= '</p>';
+							if ( have_rows( 'spotlight__links' ) ):
+								while ( have_rows( 'spotlight__links' ) ): the_row();
 
-						if ( have_rows( 'spotlight__links' ) ):
-							while ( have_rows( 'spotlight__links' ) ): the_row();
+									$link = get_sub_field( 'spotlight__link' );
+									if ( $link ):
+										$link_url    = $link['url'];
+										$link_title  = $link['title'];
+										$link_target = $link['target'] ? ' target="' . $link['target'] . '"' : '';
+										$link_class  = get_sub_field( 'spotlight__link_class' );
+										$return      .= '<a href="' . $link_url . '" class="btn btn--' . esc_attr( $link_class ) . '"' . esc_attr( $link_target ) . '">' . $link_title . '</a>';
+									endif;
 
-								$link = get_sub_field( 'spotlight__link' );
-								if ( $link ):
-									$link_url    = $link['url'];
-									$link_title  = $link['title'];
-									$link_target = $link['target'] ? ' target="' . $link['target'] . '"' : '';
-									$link_class  = get_sub_field( 'spotlight__link_class' );
-									$return      .= '<a href="' . $link_url . '" class="btn btn--' . esc_attr( $link_class ) . '"' . esc_attr( $link_target ) . '">' . $link_title . '</a>';
-								endif;
+								endwhile;
+							endif; //if( get_sub_field('spotlight__links') ):
 
-							endwhile;
-						endif; //if( get_sub_field('spotlight__links') ):
+							$return .= '</div>'; // .spotlight__content
+							$return .= '</div>'; // .spotlight
 
-						$return .= '</div>'; // .spotlight__content
-						$return .= '</div>'; // .spotlight
-
-					endif; //if(  $spotlight_titel && $spotlight_titel
+						endif; //if(  $spotlight_titel && $spotlight_titel
 
 
-				endwhile;
+					endwhile;
 
-				$return .= '</div>'; // .section section--spotlight
-				$return .= '</div>'; // .l-spotlight-wrapper
+					$return .= '</div>'; // .section section--spotlight
+					$return .= '</div>'; // .l-spotlight-wrapper
 
-			endif;
+				endif;
 
+			} // if there are any spotlight blokken
 		} // if ( function_exists( 'get_field' ) )
 		else {
 			$return = 'Activeer ACF plugin';
