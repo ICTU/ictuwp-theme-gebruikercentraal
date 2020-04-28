@@ -22,9 +22,11 @@
 // Mediaqueries
 
 @mobile:                    ~"only screen and (max-width: @{break_phone})";
-@tablet_only:               ~"only screen and (max-width: calc(@{break_tablet} - 1px))";
+@mobile_only:               ~"only screen and (max-width: calc(@{break_phone} - 1px))";
 @tablet:                    ~"only screen and (min-width: @{break_tablet})";
+@tablet_only:               ~"only screen and (max-width: calc(@{break_tablet} - 1px))";
 @desktop:                   ~"only screen and (min-width: @{break_fullwidth})";
+@desktop_only:              ~"only screen and (max-width: calc(@{break_fullwidth} - 1px))";
 @desktop-xl:                ~"only screen and (min-width: @{break_xlarge})";
 @cm:                        ~"only screen and (min-width: 1000px)";
 

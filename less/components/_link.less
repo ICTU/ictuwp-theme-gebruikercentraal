@@ -25,17 +25,57 @@
 
   &--social {
     color: transparent;
+    background: @white;
+    border: .1rem solid @border_color;
+    display: block;
+    width: 2em;
+    height: 2em;
+    overflow: hidden;
+    transition: border-color .2s;
+
+    background-color: @white;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 14px;
 
     &:active,
     &:focus,
     &:hover {
       color: transparent;
+      border-color: @gc_green;
+    }
+
+    &.facebook {
+      background-image: url('../images/icon-facebook.png');
+      .icon_socmed_icon('../images/icon-facebook.svg', @gc_blue_darkest);
+
+      &:hover, &:active, &:focus {
+        .icon_socmed_icon('../images/icon-facebook.svg', @gc_a11y_green);
+      }
+    }
+
+    &.linkedin {
+      background-image: url('../images/icon-linkedin.png');
+      .icon_socmed_icon('../images/icon-linkedin.svg', @gc_blue_darkest);
+
+      &:hover, &:active, &:focus {
+        .icon_socmed_icon('../images/icon-linkedin.svg', @gc_a11y_green);
+      }
+    }
+
+    &.twitter {
+      background-image: url('../images/icon-twitter.png');
+      .icon_socmed_icon('../images/icon-twitter.svg', @gc_blue_darkest);
+
+      &:hover, &:active, &:focus {
+        .icon_socmed_icon('../images/icon-twitter.svg', @gc_a11y_green);
+      }
     }
   }
 
   &--contact {
     border: .1rem solid @border_color;
-    display: inline-block;
+    display: inline-flex;
     padding: .2rem 1rem;
     transition: border-color .2s;
     text-decoration: none;
@@ -48,6 +88,7 @@
       margin: .5rem 1rem 0 0;
       float: left;
       transition: margin .2s;
+      background-size: auto 10px;
     }
 
     &:hover,
@@ -62,14 +103,74 @@
     }
 
     &.link--phone:before {
-      background: url('../images/icon-mail.png') no-repeat center center;
+      background: url('../images/icon-mail.png') no-repeat top center;
       .icon_replace_filler('../images/icon-mail.svg', @gc_darkblue, @txt);
-      height: 12px;
     }
 
     &.link--email:before {
-      background: url('../images/icon-phone.png') no-repeat center center;
+      background: url('../images/icon-phone.png') no-repeat top center;
       .icon_replace_filler('../images/icon-phone.svg', @gc_darkblue, @txt);
+    }
+
+    &.link--website:before {
+      background: url('../images/icon-personallink.png') no-repeat top center;
+      .icon_replace_filler('../images/icon-personallink.svg', @gc_darkblue, @txt);
+      background-size: auto 12px;
+    }
+  }
+
+  &--arrow {
+    display: block;
+    position: relative;
+    padding-right: 5rem;
+
+    &:after {
+      content: " ";
+      width: 3rem;
+      height: 3rem;
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: url('../images/arrow-right-blue.svg') center center no-repeat;
+      background-size: 1rem auto;
+      transition: margin .2s
+    }
+
+    &:hover, &:focus, &:active {
+      &:after {
+        margin-right: -.2rem;
+      }
+    }
+  }
+
+  // With SVG icon
+  &--arrow-icon {
+    display: block;
+    position: relative;
+    padding-right: 5rem;
+    font-family: @font_primary_semi;
+    text-decoration: none;
+    margin-top: 1rem;
+
+    .icon {
+      display: inline-block;
+      width: 1.1rem;
+      height: 1.1rem;
+      transition: margin .2s;
+      margin-left: .2rem;
+    }
+
+    svg {
+      fill: @color_primary;
+    }
+
+    &:hover, &:focus, &:active {
+      text-decoration:underline;
+
+      .icon {
+        margin-left: .4rem;
+      }
     }
   }
 }

@@ -4,7 +4,7 @@
 // Functionaliteit voor tonen / verbergen mobiel menu
 // ----------------------------------------------------------------------------------
 // @package gebruiker-centraal
-// @author  Paul van Buuren
+// @author  Tamara de Haas, Paul van Buuren
 // @license GPL-2.0+
 // @version 3.15.9
 // @desc.   CTA-kleuren, a11y groen, sharing buttons optional, beeldbank CPT code separation.

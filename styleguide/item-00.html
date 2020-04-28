@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <title>Gebruiker Centraal Living Styleguide</title>
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <link rel="shortcut icon" href="" type="image/vnd.microsoft.icon" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="../css/gc-style.css"/>
+<link rel="stylesheet" href="../../gebruiker-centraal/frontend/styleguide/css/styleguide.css"/>
+
+  <link rel="stylesheet" href="kss-assets/lib/docs.css">
+  <link rel="stylesheet" href="assets/css/styleguide.css">
+</head>
+<body id="" class="fullscreen-mode">
+  <div class="layout-container">
+    <a href="#main-content" class="sr-only sr-only-focusable"> Skip to main content </a>
+      <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+                      <main class="col-12 bd-content" role="main">
+          <a id="main-content" tabindex="-1"></a>
+            
+                                    <div id="00" class="section section--depth-1 is-fullscreen">
+                            <h1 class="bd-title">
+                00
+                <a href="#00" class="text-muted">
+                  <small>#
+                    <span class="sr-only">
+                      1 00
+                    </span>
+                  </small>
+                </a>
+              </h1>
+
+            
+
+            
+            
+
+            
+                      </div>
+          
+        </main>
+            </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+
+
+  <script src="kss-assets/lib/kss-fullscreen.js"></script>
+  <script src="kss-assets/lib/kss-guides.js"></script>
+  <script src="kss-assets/lib/kss-markup.js"></script>
+  <script src="kss-assets/lib/prism.js"></script>
+  <script src="kss-assets/lib/prism-scss.min.js"></script>
+
+  <script src="../styleguide/kss-assets/lib/jquery-3.4.1.min.js"></script>
+<script src="../../../../../wp-content/plugins/ictu-gc-posttypes-inclusie/js/libs/jquery.waypoints.min.js"></script>
+<script src="../../../../../wp-content/plugins/ictu-gc-posttypes-inclusie/js/min/stepchart-min.js"></script>
+
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <script>
+    // Escape code
+    // ============================================================
+
+    var $lang_markup       = document.querySelectorAll('pre.language-html code'),
+        $lang_js           = document.querySelectorAll('script.atomic-js'),
+        $lang_jscode       = document.querySelectorAll('pre code.language-javascript'),
+        lang_markupsnippet = [],
+        lang_jsnippet      = [];
+
+    // Markup
+    // order matters!
+    // ============================================================
+
+    for(var i = 0, l = $lang_markup.length; i < l; i++) {
+      lang_markupsnippet.push(
+        $lang_markup[i].innerHTML.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      );
+      $lang_markup[i].innerHTML = lang_markupsnippet[i];
+    }
+
+    // JavaScript
+    // order matters!
+    // ============================================================
+    for(var i = 0, l = $lang_jscode.length; i < l; i++) {
+      lang_jsnippet.push(
+        $lang_jscode[i].innerHTML.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      );
+    }
+
+    for(var i = 0, l = $lang_js.length; i < l; i++) {
+      $lang_js[i].innerHTML = lang_jsnippet[i];
+    }
+
+    var KssFullScreen = new KssFullScreen({
+      idPrefix: 'fullscreen-',
+      bodyClass: 'kss-fullscreen-mode',
+      elementClass: 'is-fullscreen'
+    });
+    var kssGuides = new KssGuides({
+      bodyClass: 'guides-mode'
+    });
+    var kssMarkup = new KssMarkup({
+      bodyClass: 'markup-mode',
+      detailsClass: 'highlight'
+    });
+
+  </script>
+
+  <script src="kss-assets/styleguide.js"></script>
+</body>
+</html>

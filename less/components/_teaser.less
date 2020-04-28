@@ -1,5 +1,5 @@
 
-.teaser {
+.archive-list .teaser {
   background: @white;
 
   h2,
@@ -12,6 +12,7 @@
   &:not(.enorm-huge) { //hihi
     max-width: @max-width-inner;
     margin: 0 auto;
+    .gc-box-shadow;
   }
 
   header {
@@ -223,8 +224,17 @@
     }
   }
 
-  .arrow-link {
-    display: block;
+  h2, h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 2.2rem;
+    line-height: 3rem;
+
+
+    .arrow-link {
+      display: block;
+      padding: 0;
+    }
   }
 
   .arrow-link__icon {
@@ -258,5 +268,42 @@
     padding-top: 2rem;
     max-width: 100%;
     padding-right: 5%;
+    margin-top: 2rem;
+  }
+
+  + .teaser {
+    border-top: .1rem solid @border_color;
+  }
+}
+
+// Small teaser
+
+.teaser--small {
+  box-shadow: none;
+
+  .teaser__image {
+    width: 100%;
+    height: auto;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  .date {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 5rem;
+  }
+
+  .teaser__title {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    margin-top: 1.6rem;
+    padding: 0;
   }
 }
