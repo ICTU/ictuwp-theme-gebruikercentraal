@@ -21,7 +21,20 @@ printf "\n"
 
 cd $deploypath
 
-ls -la
+printf "\n${GREEN}Branch ${NC}\n\n"
+git branch
+
+printf "\n"
+printf "********************************"
+printf "\n\n"
+
+
+printf "\n${GREEN}Git pull ${NC}\n\n"
+git pull
+
+printf "\n"
+printf "********************************"
+printf "\n\n"
 
 exit
 

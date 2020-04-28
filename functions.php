@@ -431,6 +431,21 @@ function allow_only_full_width_layout( $opt ) {
 
 //========================================================================================================
 
+// Add site id to body class so we can add layout for a subsite
+
+add_filter( 'body_class','gc_add_body_classes' );
+
+function gc_add_body_classes( $classes ) {
+
+	$classes[] = 'site-id-' . get_current_blog_id();
+
+	return $classes;
+
+}
+
+
+//========================================================================================================
+
 //* Reposition the breadcrumbs
 remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
 add_action( 'genesis_after_header', 'genesis_do_breadcrumbs' );
