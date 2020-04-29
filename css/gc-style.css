@@ -5894,46 +5894,46 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
   }
 }
 .site__home-link.site-id-22,
+.site__home-link.site-id-24,
 .site__home-link.rotterdammercentraal,
-.site__home-link.rotterdammer-centraal,
-.site__home-link.inclusie {
+.site__home-link.rotterdammer-centraal {
   height: 5rem;
 }
 .site__home-link.site-id-22:before,
+.site__home-link.site-id-24:before,
 .site__home-link.rotterdammercentraal:before,
-.site__home-link.rotterdammer-centraal:before,
-.site__home-link.inclusie:before {
+.site__home-link.rotterdammer-centraal:before {
   width: 5rem;
 }
 @media only screen and (min-width: 900px) {
   .site__home-link.site-id-22,
+  .site__home-link.site-id-24,
   .site__home-link.rotterdammercentraal,
-  .site__home-link.rotterdammer-centraal,
-  .site__home-link.inclusie {
+  .site__home-link.rotterdammer-centraal {
     padding-left: 8.5rem;
     height: 6.5rem;
   }
   .site__home-link.site-id-22:before,
+  .site__home-link.site-id-24:before,
   .site__home-link.rotterdammercentraal:before,
-  .site__home-link.rotterdammer-centraal:before,
-  .site__home-link.inclusie:before {
+  .site__home-link.rotterdammer-centraal:before {
     width: 6.5rem;
   }
   .site__home-link.site-id-22:hover,
+  .site__home-link.site-id-24:hover,
   .site__home-link.rotterdammercentraal:hover,
   .site__home-link.rotterdammer-centraal:hover,
-  .site__home-link.inclusie:hover,
   .site__home-link.site-id-22:focus,
+  .site__home-link.site-id-24:focus,
   .site__home-link.rotterdammercentraal:focus,
-  .site__home-link.rotterdammer-centraal:focus,
-  .site__home-link.inclusie:focus {
+  .site__home-link.rotterdammer-centraal:focus {
     padding-left: 8.7rem;
   }
 }
 .site__home-link.site-id-22:before {
   background-image: url('../images/logos/beeldmerk-beeldbank.svg');
 }
-.site__home-link.site-id-20:before {
+.site__home-link.site-id-24:before {
   background-image: url('../images/logos/logo-inclusie.svg');
 }
 .site__home-link.rotterdammer-centraal:before,
