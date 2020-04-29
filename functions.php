@@ -433,7 +433,7 @@ function allow_only_full_width_layout( $opt ) {
 
 // Add site id to body class so we can add layout for a subsite
 
-add_filter( 'body_class','gc_add_body_classes' );
+add_filter( 'body_class', 'gc_add_body_classes' );
 
 function gc_add_body_classes( $classes ) {
 
@@ -1238,9 +1238,7 @@ function gc_wbvb_add_pageheader_tags() {
 		$theid = 'imgid_' . $postid;
 
 		if ( $image[1] >= IMG_SIZE_HUGE_MIN_WIDTH ) {
-
-			echo '<div id="' . $theid . '" class="has-header-image">&nbsp;</div>';
-
+			echo '<figure class="hero-image"><img src="' . $image[0] . '" class="hero-image__image"></figure>';
 		}
 
 	}

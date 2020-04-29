@@ -27,3 +27,36 @@
     }
   }
 }
+
+
+/* Whenever there is a hero image **/
+
+.hero-image {
+  margin: 0 -1.5rem 3rem;
+  height: 20rem;
+
+  @media @tablet {
+    margin-left: -3rem;
+    margin-right: -3rem;
+    height: 30rem;
+  }
+
+  @media @desktop {
+    margin-top: -8rem;
+    height: 36rem;
+    margin-bottom: 7rem;
+  }
+
+  @media @desktop-xxl {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1900px;
+  }
+}
+
+.hero-image__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}

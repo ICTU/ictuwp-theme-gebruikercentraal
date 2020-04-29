@@ -6043,7 +6043,8 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
   display: -ms-flexbox;
   display: flex;
 }
-.author.l-with-image .author__picture {
+.author.l-with-image .author__picture,
+.author.l-with-image .author__image {
   width: 8rem;
 }
 .author.l-with-image .author__content {
@@ -6051,14 +6052,16 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
   padding-left: 3rem;
 }
 @media only screen and (min-width: 960px) {
-  .author.l-with-image .author__picture {
+  .author.l-with-image .author__picture,
+  .author.l-with-image .author__image {
     width: 14rem;
   }
   .author.l-with-image .author__content {
     width: calc(100% - 14rem);
   }
 }
-.author__picture img {
+.author__picture img,
+.author__image img {
   -webkit-box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -6615,11 +6618,11 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
     margin-right: auto;
   }
 }
-.entry-content .has-background {
+.wp-block-media-text.has-background {
   -webkit-box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
 }
-.entry-content .has-background.has-very-light-gray-background-color {
+.wp-block-media-text.has-background.has-very-light-gray-background-color {
   background: #f9f6f3;
 }
 .entry-content p + .has-background {
@@ -7939,6 +7942,39 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
 .page-template-page_actieteam .actieteam .author-info .author-box-title,
 .page-template-page_actieteam .actieteam .author-info p[itemprop="jobTitle"] {
   padding-left: 10rem;
+}
+/* Whenever there is a hero image **/
+.hero-image {
+  margin: 0 -1.5rem 3rem;
+  height: 20rem;
+}
+@media only screen and (min-width: 650px) {
+  .hero-image {
+    margin-left: -3rem;
+    margin-right: -3rem;
+    height: 30rem;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .hero-image {
+    margin-top: -8rem;
+    height: 36rem;
+    margin-bottom: 7rem;
+  }
+}
+@media only screen and (min-width: 1900px) {
+  .hero-image {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1900px;
+  }
+}
+.hero-image__image {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
 }
 /*
 ==============================================================================================================
