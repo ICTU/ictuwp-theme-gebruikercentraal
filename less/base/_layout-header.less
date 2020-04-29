@@ -105,9 +105,18 @@
     }
   }
 
-  // Ronde beeldmerken {
+  /** Site ID's */
 
-  &.beeldbank,
+  /*
+   * Beeldbank:               22
+   * Inclusie:                24
+   * Conference:              20
+   * Direct Duidelijk Tour:   30
+   */
+
+
+  // Ronde beeldmerken
+  &.site-id-22,
   &.rotterdammercentraal,
   &.rotterdammer-centraal,
   &.inclusie {
@@ -131,11 +140,13 @@
     }
   }
 
-  &.beeldbank:before {
+  // Beeldbank
+  &.site-id-22:before {
     background-image: url('../images/logos/beeldmerk-beeldbank.svg');
   }
 
-  &.inclusie:before {
+  // Inclusie
+  &.site-id-20:before {
     background-image: url('../images/logos/logo-inclusie.svg');
   }
 
@@ -147,7 +158,9 @@
   @dd_logo_size_sm: 6rem;
   @dd_logo_size_lg: 8.2rem;
 
-  &.direct-duidelijk-tour-ddtour {
+  // Direct Duidelijk Tour
+
+  &.site-id-30 {
     height: @dd_logo_size_sm;
 
     &:before {

@@ -5817,6 +5817,13 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
   height: 4.5rem;
   -webkit-transition: padding 0.2s;
   transition: padding 0.2s;
+  /** Site ID's */
+  /*
+   * Beeldbank:               22
+   * Inclusie:                24
+   * Conference:              20
+   * Direct Duidelijk Tour:   30
+   */
 }
 .site__home-link:before {
   content: " ";
@@ -5886,70 +5893,70 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
     padding-left: 12.7rem;
   }
 }
-.site__home-link.beeldbank,
+.site__home-link.site-id-22,
 .site__home-link.rotterdammercentraal,
 .site__home-link.rotterdammer-centraal,
 .site__home-link.inclusie {
   height: 5rem;
 }
-.site__home-link.beeldbank:before,
+.site__home-link.site-id-22:before,
 .site__home-link.rotterdammercentraal:before,
 .site__home-link.rotterdammer-centraal:before,
 .site__home-link.inclusie:before {
   width: 5rem;
 }
 @media only screen and (min-width: 900px) {
-  .site__home-link.beeldbank,
+  .site__home-link.site-id-22,
   .site__home-link.rotterdammercentraal,
   .site__home-link.rotterdammer-centraal,
   .site__home-link.inclusie {
     padding-left: 8.5rem;
     height: 6.5rem;
   }
-  .site__home-link.beeldbank:before,
+  .site__home-link.site-id-22:before,
   .site__home-link.rotterdammercentraal:before,
   .site__home-link.rotterdammer-centraal:before,
   .site__home-link.inclusie:before {
     width: 6.5rem;
   }
-  .site__home-link.beeldbank:hover,
+  .site__home-link.site-id-22:hover,
   .site__home-link.rotterdammercentraal:hover,
   .site__home-link.rotterdammer-centraal:hover,
   .site__home-link.inclusie:hover,
-  .site__home-link.beeldbank:focus,
+  .site__home-link.site-id-22:focus,
   .site__home-link.rotterdammercentraal:focus,
   .site__home-link.rotterdammer-centraal:focus,
   .site__home-link.inclusie:focus {
     padding-left: 8.7rem;
   }
 }
-.site__home-link.beeldbank:before {
+.site__home-link.site-id-22:before {
   background-image: url('../images/logos/beeldmerk-beeldbank.svg');
 }
-.site__home-link.inclusie:before {
+.site__home-link.site-id-20:before {
   background-image: url('../images/logos/logo-inclusie.svg');
 }
 .site__home-link.rotterdammer-centraal:before,
 .site__home-link.rotterdammercentraal:before {
   background-image: url('../images/logos/logo-rotterdammercentraal.svg');
 }
-.site__home-link.direct-duidelijk-tour-ddtour {
+.site__home-link.site-id-30 {
   height: 6rem;
 }
-.site__home-link.direct-duidelijk-tour-ddtour:before {
+.site__home-link.site-id-30:before {
   width: 6rem;
   background-image: url('../images/logos/beeldmerk-dd-tour.svg');
 }
 @media only screen and (min-width: 900px) {
-  .site__home-link.direct-duidelijk-tour-ddtour {
+  .site__home-link.site-id-30 {
     padding-left: calc(8.2rem + 2.2rem);
     height: 8.2rem;
   }
-  .site__home-link.direct-duidelijk-tour-ddtour:before {
+  .site__home-link.site-id-30:before {
     width: 8.2rem;
   }
-  .site__home-link.direct-duidelijk-tour-ddtour:hover,
-  .site__home-link.direct-duidelijk-tour-ddtour:focus {
+  .site__home-link.site-id-30:hover,
+  .site__home-link.site-id-30:focus {
     padding-left: calc(8.2rem + 2.4rem);
   }
 }
