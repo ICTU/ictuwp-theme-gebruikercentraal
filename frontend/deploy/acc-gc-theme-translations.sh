@@ -22,16 +22,16 @@ printf "\n"
 # Copy translation files to relevant target folder
 
 printf "Files for UK English\n"
-cp "${LANGFOLDERSOURCE}/en_GB.po" "${LANGFOLDERTARGET}/gebruiker-centraal-en_GB.po"
-cp "${LANGFOLDERSOURCE}/en_GB.mo" "${LANGFOLDERTARGET}/gebruiker-centraal-en_GB.mo"
+cp "${LANGFOLDERSOURCE}/en_GB.po" "${LANGFOLDERTARGET}/gebruikercentraal-en_GB.po"
+cp "${LANGFOLDERSOURCE}/en_GB.mo" "${LANGFOLDERTARGET}/gebruikercentraal-en_GB.mo"
 
 printf "Files for US English\n"
-cp "${LANGFOLDERSOURCE}/en_US.po" "${LANGFOLDERTARGET}/gebruiker-centraal-en_US.po"
-cp "${LANGFOLDERSOURCE}/en_US.mo" "${LANGFOLDERTARGET}/gebruiker-centraal-en_US.mo"
+cp "${LANGFOLDERSOURCE}/en_US.po" "${LANGFOLDERTARGET}/gebruikercentraal-en_US.po"
+cp "${LANGFOLDERSOURCE}/en_US.mo" "${LANGFOLDERTARGET}/gebruikercentraal-en_US.mo"
 
 printf "Files for NL Dutch\n"
-cp "${LANGFOLDERSOURCE}/nl_NL.po" "${LANGFOLDERTARGET}/gebruiker-centraal-nl_NL.po"
-cp "${LANGFOLDERSOURCE}/nl_NL.mo" "${LANGFOLDERTARGET}/gebruiker-centraal-nl_NL.mo"
+cp "${LANGFOLDERSOURCE}/nl_NL.po" "${LANGFOLDERTARGET}/gebruikercentraal-nl_NL.po"
+cp "${LANGFOLDERSOURCE}/nl_NL.mo" "${LANGFOLDERTARGET}/gebruikercentraal-nl_NL.mo"
 
 
 printf "\nReady...\n"
