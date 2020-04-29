@@ -127,7 +127,7 @@ if ( !function_exists( 'ictu_gctheme_home_template_stappen' ) ) :
 	                  '<button type="button" class="btn btn--close" data-trigger="action-popover-close">Sluit</button>' .
 	                  '<h3 id="' . $title_id . '" class="stepchart__title">' . get_the_title($stap->ID) . '</h3>' .
 	                  '<div class="description">' . $inleiding . '</div>' .
-	                  '<a href="' . get_permalink($stap->ID) . '" class="cta">' . $readmore . '</a>' .
+	                  '<a href="' . get_permalink($stap->ID) . '" class="btn btn--primary">' . $readmore . '</a>' .
 	                  '</section>';
 	
 	                echo '</li>';

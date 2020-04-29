@@ -1767,23 +1767,6 @@ body .sidebar .widget_oa_social_login .oneall_social_login + em {
 }
 /* Entries
 --------------------------------------------- */
-.entry-content a {
-  color: #00303d;
-}
-.entry-content a:hover,
-.entry-content a:active,
-.entry-content a:focus {
-  color: #C42C76;
-}
-.entry-content h1 a,
-.entry-content h2 a,
-.entry-content h3 a,
-.entry-content h4 a,
-.entry-content h5 a,
-.entry-content h6 a {
-  color: #00303d;
-  text-decoration: underline;
-}
 .entry-content li {
   margin-bottom: 0.5em;
 }
@@ -2098,10 +2081,6 @@ a.blocklink .default-7 {
 }
 a.blocklink img {
   margin: 5.33333333px 16px 8px 0;
-}
-a.blocklink .entry-content {
-  display: block;
-  overflow: hidden;
 }
 a.blocklink .entry-meta {
   display: block;
@@ -6324,7 +6303,7 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
 }
 .btn--close {
   background: url('../images/cross.svg') center center no-repeat;
-  background-size: 18px auto;
+  background-size: 14px auto;
   padding: 0;
   width: 3.6rem;
   height: 4.6rem;
@@ -6639,6 +6618,13 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
   .entry-content p + .has-background {
     margin-top: 5rem;
   }
+}
+.entry-content .stepchart__items {
+  margin: 0;
+  padding: 0;
+}
+.entry-content .stepchart__items li {
+  list-style: none;
 }
 .entry-content blockquote {
   font-size: 24px;
@@ -10188,7 +10174,7 @@ h1 + .meta-data {
 .card--doelgroep .card__image {
   height: 42rem;
   width: 100%;
-  background: #25b34b url('../images/avatar/poppetje-1.svg') center bottom no-repeat;
+  background: #148839 url('../images/avatar/poppetje-1.svg') center bottom no-repeat;
   background-size: auto 290px;
 }
 .card--doelgroep .card__content {
