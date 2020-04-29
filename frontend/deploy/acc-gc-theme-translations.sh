@@ -1,8 +1,9 @@
 #!/bin/sh
 
-WPROOT="${HOME}/shared-paul-files/Webs/ICTU/Gebruiker Centraal/development/"
-# WPROOT="${HOME}/www/"
+# ${WPROOT}/wp-content/themes/gebruiker-centraal/frontend/deploy/acc-gc-theme-translations.sh
 
+# WPROOT="${HOME}/shared-paul-files/Webs/ICTU/Gebruiker Centraal/development/"
+WPROOT="${HOME}/www/"
 
 LANGFOLDERSOURCE="${WPROOT%%/}/wp-content/themes/gebruiker-centraal/languages"
 LANGFOLDERTARGET="${WPROOT%%/}/wp-content/languages/themes"
