@@ -10485,6 +10485,114 @@ h1 + .meta-data {
   margin-top: 0;
   padding-top: 0;
 }
+.section--text-blocks .l-section-content {
+  max-width: calc(1180px + 3rem);
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
+@media only screen and (min-width: 650px) {
+  .section--text-blocks .l-section-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .section--text-blocks .l-section-content section {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .section--text-blocks .l-section-content {
+    margin: 5rem auto 0;
+  }
+}
+.text-block {
+  margin-top: 3rem;
+}
+.text-block p {
+  max-width: 90%;
+  margin: 1.8rem 0 0 0;
+}
+.text-block .btn {
+  margin-top: 2rem;
+  margin-right: 2rem;
+}
+.text-block--bg .text-block {
+  -webkit-box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+@media only screen and (min-width: 650px) {
+  .text-block--bg .text-block {
+    padding: 3rem;
+  }
+}
+.l-bg-white .text-block {
+  background: #fff;
+}
+.l-bg-primary .text-block {
+  background: #4c2974;
+  color: #fff;
+}
+.l-bg-primary .text-block h2,
+.l-bg-primary .text-block h3 {
+  color: #fff;
+}
+.l-bg-primary .text-block .btn--primary {
+  background: #fff;
+  color: #004152;
+}
+.l-bg-primary .text-block .btn--primary:after {
+  background-color: #D1DFE3;
+  background-image: url('../images/arrow-right-blue.svg');
+}
+.l-bg-primary .text-block .btn--primary:hover,
+.l-bg-primary .text-block .btn--primary:active,
+.l-bg-primary .text-block .btn--primary:focus {
+  background-color: #f1f5f6;
+}
+.l-bg-secondary .text-block {
+  background: #148839;
+  color: #fff;
+}
+.l-bg-secondary .text-block h2,
+.l-bg-secondary .text-block h3 {
+  color: #fff;
+}
+.l-bg-secondary .text-block .btn--primary {
+  background: #fff;
+  color: #004152;
+}
+.l-bg-secondary .text-block .btn--primary:after {
+  background-color: #D1DFE3;
+  background-image: url('../images/arrow-right-blue.svg');
+}
+.l-bg-secondary .text-block .btn--primary:hover,
+.l-bg-secondary .text-block .btn--primary:active,
+.l-bg-secondary .text-block .btn--primary:focus {
+  background-color: #f1f5f6;
+}
+.text-block__title,
+.text-block h2 {
+  font-size: 32px;
+  font-size: 3.2rem;
+  text-transform: uppercase;
+  line-height: 36px;
+  font-family: 'league_gothicregular', Impact, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+@media only screen and (min-width: 960px) {
+  .text-block__title,
+  .text-block h2 {
+    font-size: 42px;
+    font-size: 4.2rem;
+    line-height: 44px;
+  }
+}
 .brand__image {
   -webkit-box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
