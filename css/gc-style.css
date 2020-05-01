@@ -7616,58 +7616,58 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
     height: 160px;
   }
 }
-.teasear > a,
+.teaser > a,
 .teaser__link {
   text-decoration: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 2rem;
-  background: #F7F7F7;
+  background: #fff;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
 }
-.teasear > a:hover,
+.teaser > a:hover,
 .teaser__link:hover,
-.teasear > a:focus,
+.teaser > a:focus,
 .teaser__link:focus,
-.teasear > a:active,
+.teaser > a:active,
 .teaser__link:active {
   color: #004152 !important;
-  background: #fff;
+  background: #f9f6f3;
 }
-.teasear > a:hover h2,
+.teaser > a:hover h2,
 .teaser__link:hover h2,
-.teasear > a:focus h2,
+.teaser > a:focus h2,
 .teaser__link:focus h2,
-.teasear > a:active h2,
+.teaser > a:active h2,
 .teaser__link:active h2,
-.teasear > a:hover h3,
+.teaser > a:hover h3,
 .teaser__link:hover h3,
-.teasear > a:focus h3,
+.teaser > a:focus h3,
 .teaser__link:focus h3,
-.teasear > a:active h3,
+.teaser > a:active h3,
 .teaser__link:active h3,
-.teasear > a:hover .arrow-link__text,
+.teaser > a:hover .arrow-link__text,
 .teaser__link:hover .arrow-link__text,
-.teasear > a:focus .arrow-link__text,
+.teaser > a:focus .arrow-link__text,
 .teaser__link:focus .arrow-link__text,
-.teasear > a:active .arrow-link__text,
+.teaser > a:active .arrow-link__text,
 .teaser__link:active .arrow-link__text {
   text-decoration: underline;
 }
-.teasear > a:hover .arrow-link__icon,
+.teaser > a:hover .arrow-link__icon,
 .teaser__link:hover .arrow-link__icon,
-.teasear > a:focus .arrow-link__icon,
+.teaser > a:focus .arrow-link__icon,
 .teaser__link:focus .arrow-link__icon,
-.teasear > a:active .arrow-link__icon,
+.teaser > a:active .arrow-link__icon,
 .teaser__link:active .arrow-link__icon {
   -webkit-box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
   border-color: #004152;
 }
 @media only screen and (min-width: 960px) {
-  .teasear > a,
+  .teaser > a,
   .teaser__link {
     padding: 3rem 2rem 3rem;
   }

@@ -1480,7 +1480,7 @@
 }
 
 // Use this mixin at your child theme / plugin to make the intro the brand color.
-.gc-overview-intro(@bg: @brand_color) {
+.gc-overview-intro(@bg: @bg_intro) {
   .taxonomy-description {
     width: 90%;
     .gc-box-shadow;
@@ -1491,7 +1491,11 @@
     z-index: +1;
 
     h1 {
-      margin-bottom: 1.6rem;
+      margin: 0;
+
+      + p {
+        margin-top: 1.6rem;
+      }
     }
 
     @media @tablet {
@@ -1580,7 +1584,6 @@
     }
   }
 }
-
 
 
 .gc-beeldbank-card() {

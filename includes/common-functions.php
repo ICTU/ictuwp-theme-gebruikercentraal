@@ -1026,7 +1026,7 @@ if ( ! function_exists( 'ictu_gctheme_write_lightboximage' ) ) {
 		if ( ! $args['ID'] ) {
 			return;
 		}
-		if ( ! $args['alt'] ) {
+		if ( ! isset( $args['alt'] ) ) {
 			$args['alt'] = sprintf( _x( "Image for '%s'", 'Alternatief voor een ontbrekende alt-tekst: post-titel.', 'gebruikercentraal' ), get_the_title( $post->ID ) );
 		}
 		if ( $args['cssclass'] ) {
