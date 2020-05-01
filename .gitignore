@@ -31,4 +31,6 @@ development/plugins/ictuwp-plugin-maturityscore
 development/plugins/ictuwp-plugin-beeldbank
 
 includes/ignore-me.php
+
+js/gc-main-debug.js
 *.sh

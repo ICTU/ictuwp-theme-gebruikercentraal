@@ -111,12 +111,6 @@ Common Classes
 /* WordPress
 --------------------------------------------- */
 
-.avatar {
-  float: left;
-  border-radius: 50%;
-  border: 1px solid @light_gray;
-}
-
 .alignleft .avatar {
   margin-right: @padding;
 }
@@ -378,18 +372,7 @@ body .sidebar .widget_oa_social_login .oneall_social_login {
 
 
 .entry-content {
-  a {
-    color: @a-content-color;
-    &:hover, &:active, &:focus {
-      color: @a-content-hover-color;
-    }
-  }
-  h1, h2, h3, h4, h5, h6 {
-    a {
-      color: @txt;
-      text-decoration: underline;
-    }
-  }
+
   li {
     margin-bottom: .5em;
   }
@@ -515,17 +498,11 @@ body .sidebar .widget_oa_social_login .oneall_social_login {
   padding: @padding 0 0 0;
 }
 
-.entry-comments-link::before {
-  content: "\2014";
-  margin: 0 6px 0 2px;
-}
-
 .entry-categories,
 .entry-tags {
   display: block;
 }
 
-.comment_form_styling(); // from 40-forms.less
 
 /*
 Social media buttons
@@ -606,19 +583,6 @@ a {
   }
 }
 
-input[type="search"],
-input[type="text"] {
-  &:focus {
-    border-width: 2px;
-    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-  }
-}
-
-/*
-Styling voor header en logo
----------------------------------------------------------------------------------------------------- */
-.header-logo(); // afkomstig van header-logo.less
-
 /*
 Styling voor aparte paginatypes
 ---------------------------------------------------------------------------------------------------- */
@@ -680,11 +644,6 @@ a.blocklink {
 
   img {
     margin: ( @padding / 3 ) @padding ( @padding / 2 ) 0;
-  }
-
-  .entry-content {
-    display: block;
-    overflow: hidden;
   }
 
   .entry-meta {
@@ -856,7 +815,6 @@ Media Queries
     //  .sidebar-secondary,
   .sidebar-sidebar-content .content,
   .sidebar-sidebar-content .content-sidebar-wrap,
-  .site-header .widget-area,
   .site-inner,
   .wrap {
     width: 100%;
@@ -869,13 +827,9 @@ Media Queries
 
   .archive-description,
   .author-box,
-  .comment-respond,
   .entry,
-  .entry-comments,
   .entry-footer .entry-meta,
-  .header-image .site-header .widget-area,
-  .sidebar .widget,
-  .site-header {
+  .sidebar .widget {
     padding: 0;
   }
 
@@ -897,8 +851,7 @@ Media Queries
   .three-sixths,
   .two-fourths,
   .two-sixths,
-  .two-thirds,
-  .site-header .wrap {
+  .two-thirds {
     margin: 0;
     width: 100%;
   }
@@ -944,23 +897,8 @@ Media Queries
   @position_navbar2: ( @position_navbar + @bigmargin );
 
 
-  #respond,
-  .entry-comments {
-    margin-top: @padding;
-  }
-
   #reply-title {
     padding-top: ( @padding / 2 );
-  }
-
-  .entry-comments {
-    padding-bottom: @padding;
-    ul.children {
-      border-left: 4px solid @light_gray;
-      border-bottom: 4px solid @light_gray;
-      padding-bottom: @padding;
-      margin-bottom: ( @padding );
-    }
   }
 }
 

@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.3.9
-// @desc.   Volgorde laden stylesheets herzien; Opmaak van tekstblokken home herzien. Plaatjes tonen op blog-archief. 
+// @version 4.3.10
+// @desc.   Volgorde laden stylesheets herzien; Opmaak niet-zo-maar-zo-blokken herzien voor beeldbank. Tonen beelden in blogoverzicht. 
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '4.3.9' );
-define( 'CHILD_THEME_DESCRIPTION', "4.3.9 - Volgorde laden stylesheets herzien; Opmaak van tekstblokken home herzien. Plaatjes tonen op blog-archief. " );
+define( 'CHILD_THEME_VERSION', '4.3.10' );
+define( 'CHILD_THEME_DESCRIPTION', "4.3.10 - Volgorde laden stylesheets herzien; Opmaak niet-zo-maar-zo-blokken herzien voor beeldbank. Tonen beelden in blogoverzicht. " );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -431,6 +431,21 @@ function allow_only_full_width_layout( $opt ) {
 
 //========================================================================================================
 
+// Add site id to body class so we can add layout for a subsite
+
+add_filter( 'body_class', 'gc_add_body_classes' );
+
+function gc_add_body_classes( $classes ) {
+
+	$classes[] = 'site-id-' . get_current_blog_id();
+
+	return $classes;
+
+}
+
+
+//========================================================================================================
+
 //* Reposition the breadcrumbs
 remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
 add_action( 'genesis_after_header', 'genesis_do_breadcrumbs' );
@@ -614,8 +629,7 @@ function gc_wbvb_post_append_postinfo( $post_info ) {
 					}
 					if ( $term1 || $term1 ) {
 						return '<span class="metadata">' . $term1 . $term2 . '</span>';
-					}
-					else {
+					} else {
 						return '';
 					}
 				}
@@ -1224,9 +1238,7 @@ function gc_wbvb_add_pageheader_tags() {
 		$theid = 'imgid_' . $postid;
 
 		if ( $image[1] >= IMG_SIZE_HUGE_MIN_WIDTH ) {
-
-			echo '<div id="' . $theid . '" class="has-header-image">&nbsp;</div>';
-
+			echo '<figure class="hero-image"><img src="' . $image[0] . '" class="hero-image__image"></figure>';
 		}
 
 	}
@@ -1351,11 +1363,11 @@ function gc_wbvb_add_blog_single_css() {
 
 				if ( $image[1] >= IMG_SIZE_HUGE_MIN_WIDTH ) {
 
-					$BLOGBERICHTEN_CSS .= "\n\n".
-						".content:before {\n" .
-						"   content: ' '; \n" .
-						"   display: block; \n " .
-						"} \n\n";
+					$BLOGBERICHTEN_CSS .= "\n\n" .
+					                      ".content:before {\n" .
+					                      "   content: ' '; \n" .
+					                      "   display: block; \n " .
+					                      "} \n\n";
 
 					foreach ( $imgbreakpoints as $breakpoint ) {
 
@@ -1514,8 +1526,8 @@ function gc_wbvb_add_blog_archive_css() {
 
 							$breakpointcounter ++;
 
-							$theID2 			= $theID;
-							$image             	= wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), $breakpoint['img_size_archive_list'] );
+							$theID2            = $theID;
+							$image             = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), $breakpoint['img_size_archive_list'] );
 							$BLOGBERICHTEN_CSS .= '@media only screen and (' . $breakpoint['direction'] . '-width: ' . $breakpoint['width'] . " ) {\n";
 							$BLOGBERICHTEN_CSS .= ' #' . $theID2 . " { \n";
 							$BLOGBERICHTEN_CSS .= "	background-image: url('" . $image[0] . "');\n";
@@ -1582,15 +1594,15 @@ function gc_wbvb_add_blog_archive_css() {
 function gc_wbvb_add_css() {
 
 //			$dependencies = array( ID_SKIPLINKS );
-			$dependencies = array( );
+	$dependencies = array();
 
 	wp_enqueue_style(
 		ID_SKIPLINKS,
 		get_stylesheet_directory_uri() . '/css/gc-style.css',
 		$dependencies,
 		CHILD_THEME_VERSION,
-    	'all'
-    );
+		'all'
+	);
 
 	$custom_css = '
 	ul#' . ID_SKIPLINKS . ', ul#' . ID_SKIPLINKS . ' li {
@@ -2404,7 +2416,7 @@ function gc_wbvb_comment_item( $comment, $args, $depth ) {
 	}
 
 	?>
-    <<?php echo $tag ?><?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() ?>"<?php echo $status ?>>
+    <<?php echo $tag ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() ?>"<?php echo $status ?>>
 
 	<?php if ( 'div' != $args['style'] ) : ?>
         <div id="div-comment-<?php comment_ID() ?>" class="comment-body">
@@ -2559,7 +2571,7 @@ function gc_wbvb_archive_loop() {
 				echo get_the_post_thumbnail( $getid, BLOG_SINGLE_DESKTOP ); // dit beeldformaat is max. 380px breed en ongelimiteerd hoog
 				echo '  </div>';
 			}
-				
+
 			echo '<div class="bloginfo">';
 
 			if ( date( "Y" ) == get_the_date( 'Y' ) ) {
@@ -2913,28 +2925,14 @@ add_filter( 'wp_mail_from_name', 'gc_wbvb_filter_wp_mail_from_name' );
  */
 function gc_wbvb_customize_site_title( $title, $inside, $wrap ) {
 
-	$blogdescription = get_bloginfo( 'description' );
-	$blogname        = get_bloginfo( 'name' );
-	if ( ! $blogname ) {
-		// een erreur van heb ik jou daar, Jetje
-		$blogname = 'Gebruiker Centraal';
-	}
+	$blogname = ( get_bloginfo( 'name' ) ? get_bloginfo( 'name' ) : 'Gebruiker Centraal' );
 
+	$branding = '<a href="' . home_url() . '" class="site__home-link site-id-'.get_current_blog_id(). ' ' . sanitize_title_for_query( get_bloginfo( 'name' ) ) . '">';
+	$branding .= ( $blogname ? '<span class="site__name">' . $blogname . '</span>' : '' );
+	$branding .= ( get_bloginfo( 'description' ) ? '<span class="site__slogan">' . get_bloginfo( 'description' ) . '</span>' : '' );
+	$branding .= '</a>';
 
-	if ( $blogdescription ) {
-		$inside = '<a href="' . home_url() . '"><span class="site-title-description met"><span class="blog-name">' . $blogname . '</span>';
-		$inside .= '<br><span class="blog-description">' . $blogdescription . '</span>';
-	} else {
-		$inside = '<a href="' . home_url() . '"><span class="site-title-description zonder"><span class="blog-name">' . $blogname . '</span>';
-	}
-	$inside .= '</span></a>';
-
-
-	//* Build the title
-	$title = genesis_html5() ? sprintf( "<{$wrap} %s>", genesis_attr( 'site-title' ) ) : sprintf( '<%s id="title">%s</%s>', $wrap, $inside, $wrap );
-	$title .= genesis_html5() ? "{$inside}</{$wrap}>" : '';
-
-	return $title;
+	return $branding;
 }
 
 add_filter( 'genesis_seo_title', 'gc_wbvb_customize_site_title', 10, 3 );

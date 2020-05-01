@@ -1,0 +1,235 @@
+.site-header {
+  padding-left: 1.5rem;
+  background: @gc_darkerblue;
+  color: @white;
+
+  .wrap {
+    width: 100%;
+    max-width: @contentmaxwidth;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @media @nav-up {
+      height: 9rem;
+    }
+  }
+
+  .title-area {
+    margin-right: auto;
+  }
+
+  .header-widget-area {
+    width: 100%;
+    max-width: 20rem;
+  }
+
+  @media @nav-down {
+    box-shadow: .3rem .3rem 0 rgba(#000, 0.2);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    z-index: 64;
+
+    .logged-in.admin-bar & {
+      top: 4.6rem;
+    }
+  }
+
+  @media @nav-up {
+    padding: 0 2rem;
+  }
+}
+
+.site__home-link {
+  display: block;
+  margin-right: 2rem;
+  position: relative;
+  color: @white;
+  text-decoration: none;
+  height: 4.5rem;
+  transition: padding .2s;
+
+  &:before {
+    content: " ";
+    display: block;
+    width: 8.4rem;
+    height: 100%;
+    background: url('../images/logos/logo-gebruikercentraal-v2.svg') 0 50% no-repeat;
+    background-size: auto 100%;
+    transition: transform .2s;
+  }
+
+  @media @nav-down {
+    span {
+      .visuallyhidden;
+    }
+  }
+
+  &:hover, &:focus {
+    color: @white;
+
+    .site__slogan {
+      text-decoration: underline;
+    }
+
+    &:before {
+      transform: scale(1.05);
+    }
+  }
+
+  @media @nav-up {
+    height: 6rem;
+    padding: .2rem 0 0 12.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &:before {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      background-size: 100% auto;
+      width: 10.5rem;
+    }
+
+    span {
+      display: block;
+    }
+
+    &:hover, &:focus {
+      padding-left: 12.7rem;
+    }
+  }
+
+  /** Site ID's */
+
+  /*
+   * Beeldbank:               22
+   * Inclusie:                24
+   * Conference:              20
+   * Direct Duidelijk Tour:   30
+   */
+
+
+  // Ronde beeldmerken
+  &.site-id-22, //beeldbank
+  &.site-id-24, //inclusie
+  &.rotterdammercentraal,
+  &.rotterdammer-centraal {
+    height: 5rem;
+
+    &:before {
+      width: 5rem;
+    }
+
+    @media @nav-up {
+      padding-left: 8.5rem;
+      height: 6.5rem;
+
+      &:before {
+        width: 6.5rem;
+      }
+
+      &:hover, &:focus {
+        padding-left: 8.7rem;
+      }
+    }
+  }
+
+  // Beeldbank
+  &.site-id-22:before {
+    background-image: url('../images/logos/beeldmerk-beeldbank.svg');
+  }
+
+  // Inclusie
+  &.site-id-24:before {
+    background-image: url('../images/logos/logo-inclusie.svg');
+  }
+
+  &.rotterdammer-centraal:before,
+  &.rotterdammercentraal:before {
+    background-image: url('../images/logos/logo-rotterdammercentraal.svg');
+  }
+
+  @dd_logo_size_sm: 6rem;
+  @dd_logo_size_lg: 8.2rem;
+
+  // Direct Duidelijk Tour
+
+  &.site-id-30 {
+    height: @dd_logo_size_sm;
+
+    &:before {
+      width: @dd_logo_size_sm;
+      background-image: url('../images/logos/beeldmerk-dd-tour.svg');
+    }
+
+    @media @nav-up {
+      padding-left: ~"calc(@{dd_logo_size_lg} + 2.2rem)";
+      height: @dd_logo_size_lg;
+
+      &:before {
+        width: @dd_logo_size_lg;
+      }
+
+      &:hover, &:focus {
+        padding-left: ~"calc(@{dd_logo_size_lg} + 2.4rem)";
+      }
+    }
+  }
+}
+
+.site__name {
+  font-size: 4.4rem;
+  line-height: 4.4rem;
+  text-transform: uppercase;
+  font-family: @font_secondary;
+}
+
+.site__slogan {
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  font-family: @font_primary_semi;
+}
+
+#zoeken {
+  position: relative;
+
+  input {
+    &[type='search'] {
+      background: none;
+      color: @white;
+      border-color: @gc_greyblue;
+      border-width: .1rem;
+      height: 4rem;
+      font-size: @font_small;
+
+      &::placeholder {
+        color: @white;
+      }
+
+      &:focus {
+        background: @gc_blue_dark;
+        border-color: @gc_green;
+      }
+    }
+
+    &[type='submit'] {
+      border: none;
+      position: absolute;
+      color: transparent;
+      top: .1rem;
+      bottom: .1rem;
+      right: .3rem;
+      width: 4rem;
+      height: auto;
+      background: @gc_blue_darkest url('../images/vergrootglas.svg') center center no-repeat;
+      background-size: 1.8rem auto;
+      padding: 0;
+    }
+  }
+}

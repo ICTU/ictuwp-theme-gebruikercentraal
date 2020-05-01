@@ -25,9 +25,10 @@
   }
 }
 
-.entry-content {
+// makes sure it's also loaded in editor
+.wp-block-media-text {
 
-  .has-background {
+  &.has-background {
     .gc-box-shadow;
 
     &.has-very-light-gray-background-color {
@@ -35,11 +36,24 @@
     }
   }
 
+}
+
+.entry-content {
+
   p + .has-background {
     margin-top: 3rem;
 
     @media @tablet {
       margin-top: 5rem;
+    }
+  }
+
+  .stepchart__items {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
     }
   }
 

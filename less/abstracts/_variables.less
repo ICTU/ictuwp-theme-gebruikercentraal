@@ -22,10 +22,13 @@
 // Mediaqueries
 
 @mobile:                    ~"only screen and (max-width: @{break_phone})";
-@tablet_only:               ~"only screen and (max-width: calc(@{break_tablet} - 1px))";
+@mobile_only:               ~"only screen and (max-width: calc(@{break_phone} - 1px))";
 @tablet:                    ~"only screen and (min-width: @{break_tablet})";
+@tablet_only:               ~"only screen and (max-width: calc(@{break_tablet} - 1px))";
 @desktop:                   ~"only screen and (min-width: @{break_fullwidth})";
+@desktop_only:              ~"only screen and (max-width: calc(@{break_fullwidth} - 1px))";
 @desktop-xl:                ~"only screen and (min-width: @{break_xlarge})";
+@desktop-xxl:               ~"only screen and (min-width: 1900px)"; //hero image break
 @cm:                        ~"only screen and (min-width: 1000px)";
 
 @nav-up:                    ~"only screen and (min-width: @{break_show_menu_button})";
@@ -99,8 +102,6 @@
 @light_gray:                #DEDEDE;
 @border_authorbox:          #E8E8E8;
 
-@comment-list-even:         @wit;
-@comment-list-odd:          #F7F7F7;
 
 @sidebar_bg:                @wit;
 @sidebarwidget:             @gc_blue_darkest;
@@ -201,7 +202,10 @@
 @font_smaller:              1.6rem;
 @font_small:                1.4rem;
 
+@base_font_size:            1.6rem; //eigenlijk 1.8
 @baserem:                   1rem;
+
+@button_font_size:          2.6rem;
 
 @fontsize_title_h1:         ( 6.8 * @basefontsize );
 @fontsize_title_h2:         ( 4.6 * @basefontsize );
@@ -225,10 +229,9 @@
 @import "variables/_rekendingen.less";
 @import "variables/_colors";
 @import "variables/_colors-optimaaldigitaal.less";
-@import "variables/_colors-inclusie.less";
-@import "variables/_textblock.less";
 @import "variables/_steps.less";
 @import "variables/_sizes";
+@import "variables/_text-block";
 
 
 //========================================================================================================
@@ -240,7 +243,6 @@
 // variabelen voor kleuren en fonts
 @fontsize_title_h1:         ( 3.6 * @basefontsize );
 @color_primary:             @gc_a11y_green;
-//@font_secondary:            @headerfont;
 
 @dos_donts_bg_do:           @gc_a11y_orange;
 @dos_donts_bg_dont:         @gc_a11y_green;

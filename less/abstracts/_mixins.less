@@ -59,35 +59,32 @@
 //========================================================================================================
 
 .button-shared() {
-
-  box-shadow: none;
+  .gc-box-shadow;
   color: @wit;
   cursor: pointer;
   text-transform: uppercase;
   width: auto;
   border: 2px solid transparent;
-  height: 5rem;
-  line-height: 5rem;
+  height: 5.1rem;
+  line-height: 5.1rem;
   border-radius: 0;
-  .button_shared_pijltje_1();
-  .button_font_shared();
+  background: @gc_a11y_green url(../images/icon-knop-groen.svg) no-repeat right center;
   padding: 0 5rem 0 1.5rem;
+  font-size: @button_font_size;
+  font-family: @font_secondary;
+  transition: background-color .2s, padding .2s, border-color .2s;
+
 
   &:hover,
   &:active,
   &:focus {
-    //		color: @button-normal;
     text-decoration: underline;
-    //		.button_shared_pijltje_1_hover();
-    //		color: @wit;
-    //		background-color: @txt;
-    color: @txt;
-    background-color: @wit;
-    border-color: @gc_a11y_green;
+    background-color: @gc_a11y_green_darker;
+    border-color: @gc_a11y_green_dark;
+    padding-right: 5.1rem;
 
     &:after {
-      background-color: @txt;
-      .pijltje_wit('../images/arrow-wit.svg', @wit);
+      background-color: @gc_blue_darker;
     }
 
   }

@@ -1,11 +1,11 @@
-@versie: '4.3.9';
+@versie: '4.3.10';
 /*!
 Theme Name:             Gebruiker Centraal
 Description:            Wordpress-theme voor gebruikercentraal.nl
 Author:                 Paul van Buuren - Tamara de Haas
 Author URI:             https://wbvb.nl/
-Version:                4.3.9
-Version description:    Opmaak van tekstblokken home herzien. Plaatjes tonen op blog-archief. 
+Version:                4.3.10
+Version description:    Opmaak niet-zo-maar-zo-blokken herzien voor beeldbank. Tonen beelden in blogoverzicht. 
 Link:                   https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 Template: genesis
@@ -58,8 +58,8 @@ License URI: http://www.opensource.org/licenses/gpl-license.php
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.3.9
-// @desc.   Opmaak van tekstblokken home herzien. Plaatjes tonen op blog-archief. 
+// @version 4.3.10
+// @desc.   Opmaak niet-zo-maar-zo-blokken herzien voor beeldbank. Tonen beelden in blogoverzicht. 
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 /*
@@ -95,13 +95,15 @@ Imports
 @import "base/_layout";
 @import "base/_main-nav.less";
 @import "base/_base.less";
-@import "base/_layout-footer.less"; // Dit was wat er in style stond
+@import "base/_layout-footer"; // Dit was wat er in style stond
+@import "base/_layout-header";
 @import "base/_block-gallery";
 
 // Components
 @import "components/_author";
 @import "components/_btn";
 @import "components/_entry-content";
+@import "components/_date";
 @import "components/_definition-list";
 @import "components/_grid";
 @import "components/_overview";
@@ -123,7 +125,6 @@ Imports
 @import "components/_single";
 @import "components/_single-home";
 @import "components/_single-event";
-@import "components/_single-author";
 
 // cards
 @import "components/_card.less";                        // @since	  4.1.1 
@@ -135,7 +136,8 @@ Imports
 // sections
 @import "components/_section-related-content.less";     // @since	  4.1.1 
 @import "components/_section-resultaatblok.less";     		// @since	  4.1.1
-@import "components/_section-text-block";
+@import "components/_section-text-block.less"; 
+@import "components/_section-brands.less";
 
 
 // components

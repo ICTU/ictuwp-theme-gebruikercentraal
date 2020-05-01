@@ -1,0 +1,53 @@
+
+
+<h2>Primair font</h2>
+
+<p>Als primair font wordt Montserrat gebruikt, een gratis te gebruiken Google Font. Het wordt gebruikt voor alle teksten.</p>
+
+<p>Alle stijlen voor het primaire font zijn geprefixed met <code>@font_primary</code>. Er worden er geen font weights gebruikt. Voor <strong>vetgedrukte</strong> tekst gebruik je dus <code>font-family: @font_primary_body</code>.
+
+<div class="gc-sg-font-wrapper">
+
+    {% include '../includes/font-style.twig' with {
+        'name': 'Montserrat Light',
+        'varname': '@font_primary_light',
+        'style': 'font-primary-light'
+    } %}
+
+    {% include '../includes/font-style.twig' with {
+        'name': 'Montserrat Regular',
+        'varname': '@font_primary',
+        'style': 'font-primary'
+    } %}
+
+    {% include '../includes/font-style.twig' with {
+        'name': 'Montserrat Semibold',
+        'varname': '@font_primary_semi',
+        'style': 'font-primary-semi'
+    } %}
+
+    {% include '../includes/font-style.twig' with {
+        'name': 'Montserrat Bold',
+        'varname': '@font_primary_bold',
+        'style': 'font-primary-bold'
+    } %}
+
+</div>
+
+
+<h2>Secundair font</h2>
+
+<p>Als secundair font wordt Leage Gothic gebruikt, een gratis te gebruiken lettertype. Het wordt gebruikt voor koppen en accentteksten.</p>
+
+<p>Voor het secundaire font gebruik je de variabele <code>@font_secondary</code>. Dit lettertype wordt in koppen vaak UPPERCASE gebruikt.
+
+<div class="gc-sg-font-wrapper">
+
+    {% include '../includes/font-style.twig' with {
+        'name': 'League Gothic',
+        'varname': '@font_secondary',
+        'style': 'font-secondary'
+    } %}
+
+
+</div>

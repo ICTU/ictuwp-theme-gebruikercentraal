@@ -522,12 +522,12 @@ function sp_remove_comment_form_allowed_tags( $defaults ) {
 	$defaults['fields'] = array(
 
 		'author' =>
-			'<p class="comment author"><label for="author">' . _x( 'Your name', 'reactieformulier', 'gebruikercentraal' ) . '</label> ' .
+			'<p class="comment-form author"><label for="author">' . _x( 'Your name', 'reactieformulier', 'gebruikercentraal' ) . '</label> ' .
 			'<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
 			'" size="30"' . $aria_req . ' /></p>',
 
 		'email' =>
-			'<p class="comment email"><label for="email">' . _x( 'Email address', 'reactieformulier', 'gebruikercentraal' ) . '</label> ' .
+			'<p class="comment-form email"><label for="email">' . _x( 'Email address', 'reactieformulier', 'gebruikercentraal' ) . '</label> ' .
 			'<input id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) .
 			'" size="30"' . $aria_req . ' /></p>'
 	);

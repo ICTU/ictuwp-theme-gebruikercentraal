@@ -13,102 +13,199 @@
 
 @tipkleurhoogte: 10rem;
 
-.tipcardstyling() {
+.tipkaart {
+  // Default
+  .gc-box-shadow;
+  position: relative;
+  background: @gc_a11y_green_lg;
+  text-align: center;
+  overflow: hidden;
+  min-height: 36rem;
 
-  // allemaal nog maar voorlopig dit...
-  .card.tipkaart {
-    text-align: center;
-    position: relative;
-    background: @border_color;
+  h2, h3 {
     color: @white;
+  }
 
-    * {
-      padding: 0;
+  > a:hover {
+    background: darken(@gc_a11y_green_lg, 5%);
+    border-color: @gc_a11y_green;
+  }
+
+  &:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 14rem;
+    background: @gc_a11y_green;
+    margin: 0 -5rem -5rem -5rem;
+    transform: rotate(-3deg);
+  }
+
+  &--gebruiksgemak {
+    background: @gc_dark_purple;
+
+    &:before {
+      background: @gc_dark_purple_darker;
     }
 
-    a {
-      text-decoration: none;
-      color: @txt;
-      border: 3px solid transparent;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
+    > a:hover, > a:focus, > a:active {
+      background: darken(@gc_dark_purple, 5%);
+      border-color: @gc_dark_purple_darker;
+    }
+  }
 
-      @media @desktop {
-        padding: 3rem;
-      }
+  &--informatieveiligheid {
+    background: @gc_pink;
 
-      &:before {
-        position: absolute;
-        content: ' ';
-        display: block;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: @tipkleurhoogte;
-        border: 5px solid transparent;
-        border-top-style: none;
-        background-color: darken(@border_color, 10%);
-        clip-path: polygon(0 14%, 100% 0, 100% 100%, 0% 100%);
-        speak: none;
-      }
-
-      &:hover,
-      &:active,
-      &:focus {
-        text-decoration: underline;
-        color: @txt;
-        border-color: @wit;
-
-        &:before {
-          border-color: @wit;
-        }
-
-        .tipkaart__categorie:before {
-          transform: scale(1.1);
-        }
-      }
+    &:before {
+      background: @gc_pink_darker;
     }
 
-    h3, h2 {
-      min-height: 15rem;
-      font-family: @bodyfont_bold;
-      .font-size(28);
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-      line-height: 3.8rem;
-      max-width: 90%;
-      margin: 0 auto;
+    > a:hover, > a:focus, > a:active {
+      background: darken(@gc_pink, 5%);
+      border-color: @gc_pink_darker;
+    }
+  }
+
+  &--procesaanpak {
+    background: @gc_a11y_cyan_lg;
+
+    &:before {
+      background: @gc_cyan;
     }
 
-    .contentinfo {
-      font-family: @headerfont;
-      .font-size(24);
-      text-transform: uppercase;
-      position: relative;
-      background-position: center top;
-      background-repeat: no-repeat;
-      margin-top: auto;
+    > a:hover, > a:focus, > a:active {
+      background: darken(@gc_cyan, 5%);
+      border-color: @gc_cyan;
+    }
+  }
 
-      span {
-        margin-top: 8rem;
-        margin-bottom: 1rem;
-        display: inline-block;
-      }
+  &--kanaalsturing {
+    background: @gc_a11y_orange_lg;
+
+    &:before {
+      background: @gc_orange;
     }
 
-    .odcard_color_icon(commitment, @draagvlak_groen, @draagvlak_groen_donker, @wit, 'images/optimaal-digitaal/icon-draagvlak.svg');
-    .odcard_color_icon(draagvlak, @draagvlak_groen, @draagvlak_groen_donker, @wit, 'images/optimaal-digitaal/icon-draagvlak.svg');
-    .odcard_color_icon(gebruiksgemak, @gebruiksgemak_paars, @gebruiksgemak_paars_donker, @wit, 'images/optimaal-digitaal/icon-mobiel.svg');
-    .odcard_color_icon(informatieveiligheid, @informatieveiligheid_magenta, @informatieveiligheid_magenta_donker, @wit, 'images/optimaal-digitaal/icon-mobiel.svg');
-    .odcard_color_icon(kanaalsturing, @kanaalsturing_oranje, @kanaalsturing_oranje_donker, @wit, 'images/optimaal-digitaal/icon-kannibaalsturing.svg');
-    .odcard_color_icon(procesaanpak, @procesaanpak_azuur, @procesaanpak_azuur_donker, @wit, 'images/optimaal-digitaal/icon-procesaanpak.svg');
-    .odcard_color_icon(samenwerking, @samenwerking_blauw, @samenwerking_blauw_donker, @wit, 'images/optimaal-digitaal/icon-deel.svg');
-    .odcard_color_icon(inclusie, @inclusierood, darken(@inclusierood, 10%), @wit, 'images/optimaal-digitaal/icon-inclusie.svg');
+    > a:hover, > a:focus, > a:active {
+      background: darken(@gc_a11y_orange_lg, 5%);
+      border-color: @gc_orange;
+    }
+  }
+
+  &--samenwerking {
+    background: @gc_blue;
+
+    &:before {
+      background: @gc_a11y_blue;
+    }
+
+    > a:hover, > a:focus, > a:active {
+      background: darken(@gc_blue, 5%);
+      border-color: @gc_a11y_blue;
+    }
+  }
+
+  &--inclusie {
+    background: @inc_orange;
+
+    &:before {
+      background: @inc_a11y_orange;
+    }
+
+    > a:hover, > a:focus, > a:active {
+      background: darken(@inc_orange, 5%);
+      border-color: @inc_a11y_orange;
+    }
   }
 }
 
+.tipkaart__link {
+  color: @white;
+  padding: 2rem 2rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  border: .3rem solid transparent;
+  transition: border-color .2s, padding .3s, background-color .2s;
+
+  &:hover, &:focus, &:active {
+    color: @white;
+    padding-bottom: 2rem;
+
+    .tipkaart__title {
+      text-decoration: underline;
+    }
+  }
+
+  @media @desktop {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.tipkaart__toptip {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 7.5rem;
+  height: 7.5rem;
+  color: transparent;
+  overflow: hidden;
+
+  &:after,
+  &:before {
+    content: " ";
+    display: block;
+    position: absolute;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+    width: 10rem;
+    background: @gc_a11y_green;
+    height: 5rem;
+    top: 0;
+    left: 0;
+    margin: -1rem 0 0 1rem;
+
+    .tipkaart--informatieveiligheid & {
+      background: @gc_pink_darker;
+    }
+
+    .tipkaart--samenwerking & {
+      background: @gc_a11y_blue;
+    }
+
+    .tipkaart--procesaanpak & {
+      background: @gc_cyan;
+    }
+
+    .tipkaart--gebruiksgemak & {
+      background: @gc_dark_purple_darker;
+    }
+
+    .tipkaart--kanaalsturing & {
+      background: @gc_orange;
+    }
+
+    .tipkaart--inclusie & {
+      background: @inc_a11y_orange;
+    }
+  }
+
+  &:after {
+    width: 3.8rem;
+    height: 3.8rem;
+    top: 0;
+    right: 0;
+    background: url('../images/ico-star.svg') center center no-repeat;
+  }
+}
 
 .tipkaart__nummer {
   font-family: @font_secondary;
@@ -129,80 +226,37 @@
     content: '_ ';
     margin-right: 8px;
   }
+
   &:after {
     content: ' _';
     margin-left: 8px;
   }
 }
 
-
-//=========================================================================================================
-// locale mixin voor het combineren van een class met de juiste optimaal-digitaal-icoontjes
-// W.I.P
-
-.odcard_color_icon(
-  @classname,
-  @backgroundcolor: red,
-  @backgroundcolor_dark: red,
-  @fontcolor: @wit,
-  @odicon: '../images/svg/thema-inclusie.svg' ) {
-
-  &.@{classname} {
-    background-color: @backgroundcolor;
-
-    a {
-      color: @fontcolor;
-
-      &:before {
-        background-color: @backgroundcolor_dark;
-      }
-
-      &:hover,
-      &:active,
-      &:focus {
-        color: @fontcolor;
-        border-color: @backgroundcolor_dark;
-        &:before {
-          border-color: @backgroundcolor_dark;
-        }
-      }
-
-    }
-
-    .contentinfo {
-      background-image: ~"url('@{odicon}')";
-      background-size: 90px 90px;
-      background-position: center top;
-    }
-
-    .tipkaart__categorie:before {
-      background-image: ~"url('@{odicon}')";
-    }
-  }
+.tipkaart__title {
+  .font-size(24);
+  line-height: 3.2rem;
+  margin: 0;
+  padding: 0;
+  word-break: break-word;
 }
 
 .tipkaart__categorie {
   position: relative;
-  font-family: @font_secondary;
-  text-transform: uppercase;
-  display: block;
-  font-size: 2.4rem;
   margin-top: auto;
+  font-family: @font_secondary;
 
-  &:before {
-    content: " ";
+  span {
+    font-size: 2.2rem;
+    line-height: 3rem;
+    text-transform: uppercase;
     display: block;
-    width: 9rem;
-    height: 10rem;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: bottom center;
-    margin: 0 auto;
-    transition: transform .2s;
-    transform: scale(1);
+    padding-top: .5rem;
   }
 }
 
-//=========================================================================================================
-
-.tipcardstyling();
+.icon--tipkaart {
+  fill: @white;
+  width: 8rem;
+  height: 7rem;
+}

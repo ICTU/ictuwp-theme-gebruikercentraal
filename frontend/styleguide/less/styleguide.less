@@ -321,3 +321,305 @@ h1 {
 .stepnav:before {
   margin: 0 !important;
 }
+
+.gc-sg-color-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -@gutter / 2;
+  margin-right: -@gutter / 2;
+
+  + .gc-sg-color-wrapper {
+    border-top: .1rem solid @border_color;
+    margin-top: 1.5rem;
+    padding-top: @gutter;
+  }
+
+  > h3 {
+    width: 100%;
+  }
+}
+
+.colors-smaller {
+  display: flex;
+  flex-wrap: wrap;
+
+  > h3 {
+    width: 100%;
+    padding-left: 1.5rem;
+  }
+
+  @media @tablet {
+    width: 50%;
+    max-width: 50rem;
+  }
+}
+
+.kleur {
+  margin-left: @gutter / 2;
+  margin-right: @gutter / 2;
+  width: 22rem;
+
+  .descr {
+    font-size: @font_small;
+    color: @meta_color;
+    margin-top: .5rem;
+  }
+
+  .colors-smaller & {
+    width: 10rem;
+  }
+}
+
+.kleur__staaltje {
+  .gc-box-shadow;
+  width: 100%;
+  height: 18rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: @font_primary_bold;
+
+  .colors-smaller & {
+    height: 10rem;
+  }
+}
+
+
+.kleur__naam {
+  display: block;
+  margin-top: 1.6rem;
+  font-family: @font_primary_bold;
+  font-size: 1.8rem;
+}
+
+/*
+ * Kleurekes
+ */
+
+// Base
+.gc-green {
+  background: @gc_green;
+}
+
+.gc-dark-blue {
+  background: @gc_darkblue;
+  color: @white;
+}
+
+.gc-pantybrown {
+  background: @gc_pantybrown;
+}
+
+// Secundair
+
+.gc-dark-purple {
+  background: @gc_dark_purple;
+  color: @white;
+}
+
+.gc-blue {
+  background: @gc_blue;
+}
+
+.gc-pink {
+  background: @gc_pink;
+  color: @white;
+}
+
+.gc-orange {
+  background: @gc_orange;
+}
+
+.gc-cyan {
+  background: @gc_cyan;
+}
+
+// Web
+
+/* ---- Blauwtjes */
+.gc-darker-blue {
+  background: @gc_darkerblue;
+  color: @white;
+}
+
+.gc-greyblue {
+  background: @gc_greyblue;
+  color: @white;
+}
+
+.gc-blue-x-light {
+  background: @gc_blue_xlight;
+}
+
+/* ---- Groentjes en bruintjes */
+
+.gc-a11y-green {
+  background: @gc_a11y_green;
+  color: @white;
+}
+
+.gc-a11y-green-dark {
+  background: @gc_a11y_green_dark;
+  color: @white;
+}
+
+.gc-pantybrown-light {
+  background: @gc_pantybrown_light;
+}
+
+.gc-pantybrown-xlight {
+  background: @gc_pantybrown_xlight;
+}
+
+
+/* ---- Inclusie */
+
+.inc-orange {
+  background: @inc_orange;
+}
+
+.inc-a11y-orange {
+  background: @inc_a11y_orange;
+  color: @white;
+}
+
+/* ---- NL Design System */
+
+.nlds-purplish {
+  background: @nlds_purplish;
+  color: @white;
+}
+
+.gc-a11y-blue {
+  background: @gc_a11y_blue;
+  color: @white;
+}
+
+/* ---- Optimaal Digiraal */
+
+.od-orange {
+  background: @od_orange;
+  color: @white;
+}
+
+.od-orange-darker {
+  background: @od_orange_darker;
+  color: @white;
+}
+
+.gc-a11y-green-lg {
+  background: @gc_a11y_green_lg;
+}
+
+.gc-orange-a11y-lg {
+  background: @gc_a11y_orange_lg;
+}
+
+.gc-a11y-cyan-lg {
+  background: @gc_a11y_cyan_lg;
+}
+
+.gc-dark-purple-darker {
+  background: @gc_dark_purple_darker;
+}
+
+.gc-dark-purple-lighter {
+  background: @gc_dark_purple_lighter;
+}
+
+.gc-pink-darker {
+  background: @gc_pink_darker;
+}
+
+.gc-pink-lighter {
+  background: @gc_pink_lighter;
+}
+
+.gc-blue-darker {
+  background: @gc_a11y_blue;
+}
+
+
+/*
+ * Fonts en fontstijlen
+ */
+
+.gc-sg-font-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -@gutter / 2;
+  margin-right: -@gutter / 2;
+}
+
+.font {
+  border: .1rem solid @border_color;
+  padding: 2rem;
+  width: 20rem;
+  margin-top: @gutter;
+  margin-left: @gutter / 2;
+  margin-right: @gutter / 2;
+}
+
+.font__sample {
+  font-size: 6rem;
+  line-height: 7rem;
+  border-bottom: .1rem solid @border_color;
+  width: 100%;
+  display: block;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.font__varname {
+  font-family: @font_primary;
+  font-size: @font_small;
+}
+
+.font-primary-light {
+  font-family: @font_primary_light;
+}
+
+.font-primary {
+  font-family: @font_primary;
+}
+
+.font-primary-semi {
+  font-family: @font_primary_semi;
+}
+
+.font-primary-bold {
+  font-family: @font_primary_bold;
+}
+
+.font-secondary {
+  font-family: @font_secondary;
+
+  .font__name {
+    font-size: 2.6rem;
+  }
+}
+
+// Styles
+
+.font-style {
+  display: block;
+  margin-top: 3rem;
+
+  strong {
+    display: block;
+  }
+}
+
+.font-smaller {
+  font-size: @font_small;
+}
+
+.grid--col-4,
+.grid--col-3 {
+  max-width: 1150px;
+}
+
+#od-filters .bd-example {
+  background: @gc_pantybrown_light;
+  padding: 5rem;
+}
