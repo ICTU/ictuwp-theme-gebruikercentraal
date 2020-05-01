@@ -748,6 +748,8 @@ function gc_add_siteclass( $attributes ) {
 		$class = "inclusie";
 	} elseif ( 'beeldbank.gebruikercentraal.co.uk' == $_SERVER["HTTP_HOST"] || 'accept.beeldbank.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] || 'beeldbank.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] ) {
 		$class = "beeldbank";
+	} elseif ( 'directduidelijk.gebruikercentraal.co.uk' == $_SERVER["HTTP_HOST"] || 'accept.directduidelijk.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] || 'directduidelijk.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] ) {
+		$class = "directduidelijk";
 	}
 //		$class = "rotterdammercentraal";
 //		$class = "inclusie";
@@ -1016,6 +1018,7 @@ if ( ! function_exists( 'ictu_gctheme_write_lightboximage' ) ) {
 			'full-size'  => 'full',
 			'data-group' => 'lightbox',
 			'cssclass'   => '',
+			'alt'   	=> '',
 			'echo'       => false,
 		);
 
