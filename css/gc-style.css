@@ -8798,6 +8798,9 @@ h1 + .meta-data {
 .download-box .btn {
   margin-left: auto;
 }
+.download-box + p {
+  margin-top: 1.8rem;
+}
 @media only screen and (max-width: calc(650px - 1px)) {
   .download-box .btn {
     color: transparent;
