@@ -847,8 +847,6 @@ function gc_wbvb_comment_form_script() {
 
 		wp_localize_script( 'commentform', 'email_newsletter_widget_scripts', $params );
 
-	} else {
-
 	}
 
 }
@@ -2416,7 +2414,7 @@ function gc_wbvb_comment_item( $comment, $args, $depth ) {
 	}
 
 	?>
-    <<?php echo $tag ?><?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() ?>"<?php echo $status ?>>
+    <<?php echo $tag ?>  d<?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() ?>"<?php echo $status ?>>
 
 	<?php if ( 'div' != $args['style'] ) : ?>
         <div id="div-comment-<?php comment_ID() ?>" class="comment-body">
@@ -2530,7 +2528,7 @@ function gc_wbvb_archive_loop() {
 
 						if ( 'post' == $posttype ) {
 							$image_class .= ' enorm-huge l-has-huge-image';
-							$huge = true;
+							$huge        = true;
 						}
 					} else {
 						$image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), 'large' );
@@ -2565,7 +2563,7 @@ function gc_wbvb_archive_loop() {
 			echo '<section class="entry teaser ' . $image_class . '" itemscope itemtype="http://schema.org/SocialMediaPosting" id="' . $theID . '">';
 			echo '<a href="' . $permalink . '" itemprop="url" class="teaser__link">';
 
-			if ( $image && !($huge)) { // only sho image if layout is not enorm huge
+			if ( $image && ! ( $huge ) ) { // only sho image if layout is not enorm huge
 				echo '  <div class="feature-image teaser__image">';
 //				echo get_the_post_thumbnail( $getid, 'thumb-cardv3' ); // dit beeldformaat is ongelimiteerd breed en max. 600px hoog
 				echo get_the_post_thumbnail( $getid, BLOG_SINGLE_DESKTOP ); // dit beeldformaat is max. 380px breed en ongelimiteerd hoog
