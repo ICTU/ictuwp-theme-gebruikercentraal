@@ -147,7 +147,10 @@ function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = 
 		$displayname     = '';
 		$user_post_count = count_user_posts( $userid );
 		$contact_info    = '';
+
 		$social_links    = [];
+		$links           = [];
+
 		$author_link     = '';
 
 		if ( is_object( $user_info ) ) {
@@ -203,8 +206,10 @@ function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = 
 			$links['mail']['text']  = get_field( 'publiek_mailadres', $acf_userid );
 		}
 
-		foreach ( $links as $link ) {
-			$contact_info .= '<a href="' . $link['url'] . '" class="link link--contact link--' . $link['class'] . '" title="' . $link['title'] . '" itemprop="' . $link['class'] . '">' . $link['text'] . '</a>';
+		if($links) {
+			foreach ( $links as $link ) {
+				$contact_info .= '<a href="' . $link['url'] . '" class="link link--contact link--' . $link['class'] . '" title="' . $link['title'] . '" itemprop="' . $link['class'] . '">' . $link['text'] . '</a>';
+			}
 		}
 
 		// Social links
@@ -228,9 +233,11 @@ function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = 
 			$social_links[3]['url']   = get_field( 'facebook', $acf_userid );
 		}
 
-		foreach ( $social_links as $social_link ) {
-			$sl .= '<li class="social-links__item">' .
-			       '<a href="' . $link['url'] . '" class="link link--social ' . $social_link['class'] . '" title="' . $social_link['title'] . '">' . $social_link['title'] . '</a></li>';
+		if($social_links) {
+			foreach ( $social_links as $social_link ) {
+				$sl .= '<li class="social-links__item">' .
+				       '<a href="' . $social_link['url'] . '" class="link link--social ' . $social_link['class'] . '" title="' . $social_link['title'] . '">' . $social_link['title'] . '</a></li>';
+			}
 		}
 
 		// If there are social links we add them to contact info

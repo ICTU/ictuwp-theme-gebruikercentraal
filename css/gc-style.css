@@ -7922,10 +7922,6 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
   height: 100%;
   padding-bottom: 0;
 }
-.page-template-page_actieteam .actieteam .author-photo {
-  position: absolute;
-  max-height: 75px;
-}
 .page-template-page_actieteam .actieteam .author-info .author-box-title,
 .page-template-page_actieteam .actieteam .author-info p[itemprop="jobTitle"] {
   padding-left: 10rem;
@@ -9125,8 +9121,12 @@ h1 + .meta-data {
 .entry-list .entry--event:first-child .entry__link {
   background: #fff;
 }
+.entry-list .entry--event:first-child .entry__link:hover h3,
+.entry-list .entry--event:first-child .entry__link:focus h3 {
+  text-decoration: none;
+}
 .entry-list .entry--event:first-child header {
-  padding-left: 9rem;
+  padding-left: 7rem;
 }
 .entry-list .entry--event:not(:first-child) .excerpt,
 .entry-list .entry--event:not(:first-child) .meta-data {
@@ -9177,11 +9177,10 @@ h1 + .meta-data {
   -webkit-box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.1);
   z-index: 1;
+  text-decoration: none;
 }
-.entry__link:hover h3,
-.entry__link:focus h3,
-.entry__link:hover .excerpt,
-.entry__link:focus .excerpt {
+.entry__link:hover .arrow-link__text,
+.entry__link:focus .arrow-link__text {
   text-decoration: underline;
 }
 .entry__link:hover .arrow-link__icon,
@@ -9201,10 +9200,6 @@ h1 + .meta-data {
   color: #fff;
   text-decoration: none;
   display: block;
-}
-.entry__link:hover .arrow-link__text,
-.entry__link:focus .arrow-link__text {
-  text-decoration: underline;
 }
 .gc-actieteam-widget .author-box:before {
   display: none;

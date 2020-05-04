@@ -228,14 +228,16 @@
     &:first-child {
       .entry__link {
         background: @white;
+
+        &:hover, &:focus {
+          h3 {
+            text-decoration: none;
+          }
+        }
       }
 
       header {
-        padding-left: 9rem;
-      }
-
-      .date-badg {
-
+        padding-left: 7rem;
       }
     }
 
@@ -283,9 +285,9 @@
     color: @gc_blue_darkest;
     box-shadow: 0 0 .6rem rgba(#000, 0.1);
     z-index: +1;
+    text-decoration: none;
 
-    h3,
-    .excerpt {
+    .arrow-link__text {
       text-decoration: underline;
     }
 
@@ -304,10 +306,6 @@
         text-decoration: none;
         display: block;
       }
-    }
-
-    .arrow-link__text {
-      text-decoration: underline;
     }
   }
 }
