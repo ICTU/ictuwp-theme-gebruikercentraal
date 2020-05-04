@@ -2416,7 +2416,7 @@ function gc_wbvb_comment_item( $comment, $args, $depth ) {
 	}
 
 	?>
-    <<?php echo $tag ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() ?>"<?php echo $status ?>>
+    <<?php echo $tag ?><?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() ?>"<?php echo $status ?>>
 
 	<?php if ( 'div' != $args['style'] ) : ?>
         <div id="div-comment-<?php comment_ID() ?>" class="comment-body">
@@ -2516,8 +2516,9 @@ function gc_wbvb_archive_loop() {
 			$theID          = 'featured_image_post_' . $getid; // archive loop
 			$the_image_ID   = 'image_' . $theID; // HIERO, the loop
 			$extra_cssclass = ' ' . $posttype;
-			$class          = 'feature-image noimage';
+			$image_class    = 'l-without-image';
 			$image          = [];
+			$huge           = false;
 
 			// check of het eerste bericht een enorme afbeelding heeft
 			if ( $countertje == 1 && 'post' === get_post_type() ) {
@@ -2526,16 +2527,16 @@ function gc_wbvb_archive_loop() {
 					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), IMG_SIZE_HUGE );
 
 					if ( $image[1] >= IMG_SIZE_HUGE_MIN_WIDTH ) {
-						$class = 'feature-image has-image';
+
 						if ( 'post' == $posttype ) {
-							$extra_cssclass .= ' enorm-huge';
+							$image_class .= ' enorm-huge l-has-huge-image';
+							$huge = true;
 						}
 					} else {
-
 						$image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), 'large' );
 
 						if ( isset( $image[0] ) ) {
-							$class = 'feature-image has-image';
+							$image_class = 'l-has-image';
 						}
 					}
 				}
@@ -2555,17 +2556,16 @@ function gc_wbvb_archive_loop() {
 
 					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), 'large' );
 
+					$image_class = 'l-has-image';
+
 				}
 
 			}
 
-			echo '<section class="entry teaser' . $extra_cssclass . ( has_post_thumbnail( $getid ) ? ' teaser--with-image' : ' teaser--without-image' ) . '" itemscope itemtype="http://schema.org/SocialMediaPosting" id="' . $theID . '">';
+			echo '<section class="entry teaser ' . $image_class . '" itemscope itemtype="http://schema.org/SocialMediaPosting" id="' . $theID . '">';
 			echo '<a href="' . $permalink . '" itemprop="url" class="teaser__link">';
 
-			if ( $countertje == 1 && 'post' === get_post_type() ) {
-				// voor de eerste post is voor zover ik nu weet geen styling, dus ik skip het uitschrijven van het plaatje en
-				// laat dit nu even zitten voor wat het is.
-			} elseif ( has_post_thumbnail( $getid ) ) {
+			if ( $image && !($huge)) { // only sho image if layout is not enorm huge
 				echo '  <div class="feature-image teaser__image">';
 //				echo get_the_post_thumbnail( $getid, 'thumb-cardv3' ); // dit beeldformaat is ongelimiteerd breed en max. 600px hoog
 				echo get_the_post_thumbnail( $getid, BLOG_SINGLE_DESKTOP ); // dit beeldformaat is max. 380px breed en ongelimiteerd hoog
@@ -2927,7 +2927,7 @@ function gc_wbvb_customize_site_title( $title, $inside, $wrap ) {
 
 	$blogname = ( get_bloginfo( 'name' ) ? get_bloginfo( 'name' ) : 'Gebruiker Centraal' );
 
-	$branding = '<a href="' . home_url() . '" class="site__home-link site-id-'.get_current_blog_id(). ' ' . sanitize_title_for_query( get_bloginfo( 'name' ) ) . '">';
+	$branding = '<a href="' . home_url() . '" class="site__home-link site-id-' . get_current_blog_id() . ' ' . sanitize_title_for_query( get_bloginfo( 'name' ) ) . '">';
 	$branding .= ( $blogname ? '<span class="site__name">' . $blogname . '</span>' : '' );
 	$branding .= ( get_bloginfo( 'description' ) ? '<span class="site__slogan">' . get_bloginfo( 'description' ) . '</span>' : '' );
 	$branding .= '</a>';

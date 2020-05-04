@@ -19,7 +19,6 @@
   .footer-widgets {
     color: @txt;
     clear: both;
-    .fontsize(14);
     text-align: left;
 
     &, a {
@@ -80,17 +79,33 @@
 
 .footer-widgets {
   .gc-padding();
+  .font-size(15);
+  line-height: 2.4rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
   background-color: @nav_wrap_bg;
 
   .widget-title {
     font-family: @font_secondary;
-//    text-transform: uppercase;
-    .fontsize(24);
+    text-transform: uppercase;
+    .fontsize(22);
+    margin: 0;
+    padding: 0;
+
+    + div {
+      margin-top: 1rem;
+    }
   }
 
-  input[type="submit"]{
+  p {
+    margin: 0;
+
+    + p {
+      margin-top: 1.8rem;
+    }
+  }
+
+  input[type="submit"] {
     .gc-box-shadow();
     line-height: 2.4rem;
     .fontsize(24);
@@ -112,6 +127,7 @@
         margin: 0 ( @padding / 1 ) 0 0;
       }
     }
+
     a {
       font-weight: normal;
       text-decoration: none;
@@ -143,7 +159,9 @@
   }
 
   @media @desktop {
-    padding-top: 4rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
     .widget-area {
       &.footer-widgets-1 {
         width: ~"calc(66.666% - @{gutter})";
