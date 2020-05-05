@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gebruiker Centraal\n"
-"POT-Creation-Date: 2020-04-29 07:50+0200\n"
-"PO-Revision-Date: 2020-04-29 07:50+0200\n"
+"POT-Creation-Date: 2020-05-05 17:22+0200\n"
+"PO-Revision-Date: 2020-05-05 17:22+0200\n"
 "Last-Translator: Paul van Buuren <paul@wbvb.nl>\n"
 "Language-Team: Paul van Buuren <paul@wbvb.nl>\n"
 "Language: en_US\n"
@@ -133,121 +133,121 @@ msgstr ""
 msgid "Authors:"
 msgstr ""
 
-#: functions.php:1733
+#: functions.php:1731
 msgid "Widget in de site footer"
 msgstr ""
 
-#: functions.php:1735
+#: functions.php:1733
 msgid "Ruimte voor widgets in de site footer. Hier bijvoorbeeld footerlinks."
 msgstr ""
 
-#: functions.php:1774
+#: functions.php:1772
 msgid "Banners boven hoofdcontent"
 msgstr ""
 
-#: functions.php:1776
+#: functions.php:1774
 msgid ""
 "Widgets die op home en pagina's getoond worden boven alle verdere content. "
 "Op berichtpagina's onder de inhoud."
 msgstr ""
 
-#: functions.php:1805
+#: functions.php:1803
 msgid "Home-widget links"
 msgstr ""
 
-#: functions.php:1807
+#: functions.php:1805
 msgid "Hier kun je de widgets plaatsen voor events en blogberichten"
 msgstr ""
 
-#: functions.php:1837
+#: functions.php:1835
 msgid "Home-widget rechts"
 msgstr ""
 
-#: functions.php:1839
+#: functions.php:1837
 msgid "Hier kun je de widgets plaatsen voor o.m. het actieteam"
 msgstr ""
 
-#: functions.php:2045
+#: functions.php:2043
 msgid "fully booked"
 msgstr ""
 
-#: functions.php:2148
+#: functions.php:2146
 msgctxt "Kopje op evenementpagina"
 msgid "Programme"
 msgstr ""
 
-#: functions.php:2208
+#: functions.php:2206
 msgctxt "Kopje op berichtpagina"
 msgid "Downloads"
 msgstr ""
 
-#: functions.php:2334
+#: functions.php:2332
 msgctxt "Kopje op bericht- of evenementpagina"
 msgid "Links"
 msgstr ""
 
-#: functions.php:2381
+#: functions.php:2379
 msgid "Comment navigation"
 msgstr ""
 
-#: functions.php:2384
+#: functions.php:2382
 msgid "Older Comments"
 msgstr ""
 
-#: functions.php:2388
+#: functions.php:2386
 msgid "Newer Comments"
 msgstr ""
 
-#: functions.php:2428
+#: functions.php:2426
 msgid "Your comment is held for moderation"
 msgstr ""
 
-#: functions.php:2437
+#: functions.php:2435
 #, php-format
 msgid "<cite class=\"fn\">%s</cite> <span class=\"says\">wrote:</span>"
 msgstr ""
 
 #. translators: 1: date, 2: time
-#: functions.php:2448
+#: functions.php:2446
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: functions.php:2448
+#: functions.php:2446
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:2696
+#: functions.php:2694
 msgid "Older"
 msgstr ""
 
-#: functions.php:2708
+#: functions.php:2706
 msgid "Newer"
 msgstr ""
 
-#: functions.php:2757
+#: functions.php:2755
 msgctxt "author box"
 msgid "LinkedIn page"
 msgstr ""
 
-#: functions.php:2758 includes/author-box.php:187
+#: functions.php:2756 includes/author-box.php:190
 msgctxt "author box"
 msgid "Personal website"
 msgstr ""
 
-#: functions.php:2845
+#: functions.php:2843
 msgid "Previous"
 msgstr ""
 
-#: functions.php:2846
+#: functions.php:2844
 msgid "Next"
 msgstr ""
 
-#: functions.php:3001
+#: functions.php:2999
 msgid "LinkedIn-profiel"
 msgstr ""
 
-#: functions.php:3007
+#: functions.php:3005
 msgid "Twitter-account"
 msgstr ""
 
@@ -256,32 +256,32 @@ msgctxt "author box"
 msgid "Posts by"
 msgstr ""
 
-#: includes/author-box.php:194
+#: includes/author-box.php:197
 msgctxt "author box"
 msgid "Phone number"
 msgstr ""
 
-#: includes/author-box.php:201
+#: includes/author-box.php:204
 msgctxt "author box"
 msgid "E-mail adress"
 msgstr ""
 
-#: includes/author-box.php:215
+#: includes/author-box.php:220
 msgctxt "author box"
 msgid "Twitter account"
 msgstr ""
 
-#: includes/author-box.php:221
+#: includes/author-box.php:226
 msgctxt "author box"
 msgid "Linked-In profiel"
 msgstr ""
 
-#: includes/author-box.php:227
+#: includes/author-box.php:232
 msgctxt "author box"
 msgid "Facebook profiel"
 msgstr ""
 
-#: includes/author-box.php:244
+#: includes/author-box.php:251
 msgctxt "author box"
 msgid "All posts"
 msgstr ""
@@ -430,7 +430,7 @@ msgctxt "label zoekknop"
 msgid "Zoeken"
 msgstr ""
 
-#: includes/common-functions.php:1032
+#: includes/common-functions.php:1033
 #, php-format
 msgctxt "Alternatief voor een ontbrekende alt-tekst: post-titel."
 msgid "Image for '%s'"
@@ -1311,25 +1311,26 @@ msgstr ""
 msgid "Location not found"
 msgstr ""
 
-#: plugins/events-manager/placeholders/attendeeslist.php:84
+#: plugins/events-manager/placeholders/attendeeslist.php:87
 #, php-format
 msgid "%s attendee"
 msgid_plural "%s attendees"
 msgstr[0] ""
 msgstr[1] ""
 
-#: plugins/events-manager/placeholders/attendeeslist.php:88
+#: plugins/events-manager/placeholders/attendeeslist.php:91
 #, php-format
 msgid "%s attendee not shown"
 msgid_plural "%s attendees not shown"
 msgstr[0] ""
 msgstr[1] ""
 
-#: plugins/events-manager/placeholders/attendeeslist.php:92
+#: plugins/events-manager/placeholders/attendeeslist.php:98
 msgid "Other attendees"
 msgstr ""
 
-#: plugins/events-manager/placeholders/bookingform.php:64
+#: plugins/events-manager/placeholders/bookingform.php:61
+msgctxt "Titel boven inschrijfformulier"
 msgid "Join this event"
 msgstr ""
 
