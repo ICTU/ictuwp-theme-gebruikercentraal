@@ -99,6 +99,9 @@ ul.fancy-list li:before {
 .footer-widgets {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
   background-color: #004152;
@@ -111,8 +114,20 @@ ul.fancy-list li:before {
 }
 .footer-widgets .widget-title {
   font-family: 'league_gothicregular', Impact, Helvetica, Arial, sans-serif;
-  font-size: 24px;
-  font-size: 2.4rem;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-size: 2.2rem;
+  margin: 0;
+  padding: 0;
+}
+.footer-widgets .widget-title + div {
+  margin-top: 1rem;
+}
+.footer-widgets p {
+  margin: 0;
+}
+.footer-widgets p + p {
+  margin-top: 1.8rem;
 }
 .footer-widgets input[type="submit"] {
   -webkit-box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
@@ -162,7 +177,8 @@ ul.fancy-list li:before {
 }
 @media only screen and (min-width: 960px) {
   .footer-widgets {
-    padding-top: 4rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
   .footer-widgets .widget-area.footer-widgets-1 {
     width: calc(66.666% - 3rem);
@@ -2777,10 +2793,6 @@ input[type="search"]::-webkit-search-results-button {
 }
 /* Event Manager Forms
   --------------------------------------------- */
-.content #em-booking h2,
-.content #em-booking h3 {
-  padding: 0.75em 1em 0.25em 0;
-}
 .content #em-booking .em-booking-message {
   padding: 0.5em;
   margin-bottom: 1em;
@@ -3805,8 +3817,6 @@ aside.sidebar .widget article {
 .footer-widgets {
   color: #00303d;
   clear: both;
-  font-size: 14px;
-  font-size: 1.4rem;
   text-align: left;
 }
 .site-footer,
@@ -7581,12 +7591,12 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
 .archive-list .teaser + .teaser {
   border-top: 0.1rem solid #D1DFE3;
 }
-.archive-list .teaser--with-image .bloginfo {
+.archive-list .teaser.l-has-image .bloginfo {
   width: calc(100% - 4rem);
   padding-left: 3rem;
   padding-right: 1rem;
 }
-.archive-list .teaser--without-image .blog-info {
+.archive-list .teaser.l-without-image .blog-info {
   width: 100%;
   padding-left: 0;
 }
@@ -7616,7 +7626,6 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
     height: 160px;
   }
 }
-.teaser > a,
 .teaser__link {
   text-decoration: none;
   display: -webkit-box;
@@ -7627,47 +7636,31 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
 }
-.teaser > a:hover,
 .teaser__link:hover,
-.teaser > a:focus,
 .teaser__link:focus,
-.teaser > a:active,
 .teaser__link:active {
   color: #004152 !important;
   background: #f9f6f3;
 }
-.teaser > a:hover h2,
 .teaser__link:hover h2,
-.teaser > a:focus h2,
 .teaser__link:focus h2,
-.teaser > a:active h2,
 .teaser__link:active h2,
-.teaser > a:hover h3,
 .teaser__link:hover h3,
-.teaser > a:focus h3,
 .teaser__link:focus h3,
-.teaser > a:active h3,
 .teaser__link:active h3,
-.teaser > a:hover .arrow-link__text,
 .teaser__link:hover .arrow-link__text,
-.teaser > a:focus .arrow-link__text,
 .teaser__link:focus .arrow-link__text,
-.teaser > a:active .arrow-link__text,
 .teaser__link:active .arrow-link__text {
   text-decoration: underline;
 }
-.teaser > a:hover .arrow-link__icon,
 .teaser__link:hover .arrow-link__icon,
-.teaser > a:focus .arrow-link__icon,
 .teaser__link:focus .arrow-link__icon,
-.teaser > a:active .arrow-link__icon,
 .teaser__link:active .arrow-link__icon {
   -webkit-box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
   border-color: #004152;
 }
 @media only screen and (min-width: 960px) {
-  .teaser > a,
   .teaser__link {
     padding: 3rem 2rem 3rem;
   }
@@ -7681,6 +7674,11 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
 }
 .enorm-huge .teaser__link {
   background: none;
+}
+.enorm-huge .teaser__link:hover,
+.enorm-huge .teaser__link:focus,
+.enorm-huge .teaser__link:active {
+  background: rgba(76, 41, 116, 0.2);
 }
 .enorm-huge .arrow-link {
   padding-top: 0;
@@ -9439,23 +9437,32 @@ h1 + .meta-data {
     margin-left: -8rem;
     margin-right: -3rem;
     margin-top: 8rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 }
 @media only screen and (min-width: 960px) {
   .event-bookings {
     margin-left: -3rem;
+    padding-bottom: 5rem;
   }
 }
 .event-bookings h2 {
   margin: 2rem 0 0 0;
 }
+.event-bookings .em-booking > h2 {
+  padding: 0;
+  margin: 0;
+}
 .booking-message {
   -webkit-box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
-  margin-top: 2rem;
   background: #fff;
   color: #004152;
   padding: 1rem 2rem;
+}
+.entry-content .booking-message {
+  margin: 2rem 0 0 0;
 }
 .entry-content .event-attendees {
   margin: 2rem 0 0 0;
@@ -10980,4 +10987,36 @@ h1 + .meta-data {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
+}
+/*
+ * For adding small overrides for a subsite which don't really need their own theme / plugin
+ */
+.site-id-30 .footer-widget-area .widget + .widget {
+  margin-top: 3rem;
+}
+@media only screen and (min-width: 650px) {
+  .site-id-30 .footer-widgets .widget-area {
+    width: calc(50% - 3rem);
+  }
+}
+.site-id-30 .footer-widgets-2 {
+  position: relative;
+  padding-left: calc(12rem + 3rem);
+}
+.site-id-30 .footer-widgets-2:before {
+  -webkit-box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  content: " ";
+  width: 12rem;
+  height: 8.5rem;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #fff url('../images/subsites/dd-checkmark.svg') center center no-repeat;
+  background-size: auto 60%;
+}
+.site-id-30 .custom-html-widget {
+  background: none;
+  padding: 0;
 }

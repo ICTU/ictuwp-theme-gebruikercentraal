@@ -44,7 +44,7 @@
     border-top: .1rem solid @border_color;
   }
 
-  &--with-image {
+  &.l-has-image {
     .bloginfo {
       width: ~"calc(100% - 4rem)";
       padding-left: @gutter;
@@ -52,7 +52,7 @@
     }
   }
 
-  &--without-image {
+  &.l-without-image {
     .blog-info {
       width: 100%;
       padding-left: 0;
@@ -90,7 +90,6 @@
 }
 
 
-.teaser > a,
 .teaser__link {
   text-decoration: none;
   display: flex;
@@ -125,6 +124,10 @@
 
   .teaser__link {
     background: none;
+
+    &:hover, &:focus, &:active {
+      background: rgba(@gc_dark_purple, 0.2);
+    }
   }
 
   .arrow-link {

@@ -1,0 +1,45 @@
+/*
+ * For adding small overrides for a subsite which don't really need their own theme / plugin
+ */
+
+
+// Direct Duidelijk
+
+@dd-logo-width:   12rem;
+
+.site-id-30 {
+  .footer-widget-area {
+    .widget + .widget {
+      margin-top: @gutter;
+    }
+  }
+
+  .footer-widgets .widget-area {
+    @media @tablet {
+      width: ~"calc(50% - @{gutter})";
+    }
+  }
+
+  .footer-widgets-2 {
+    position: relative;
+    padding-left: ~"calc(@{dd-logo-width} + 3rem)";
+
+    &:before {
+      .gc-box-shadow;
+      content: " ";
+      width: @dd-logo-width;
+      height: 8.5rem;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: @white url('../images/subsites/dd-checkmark.svg') center center no-repeat;
+      background-size: auto 60%;
+    }
+  }
+
+  .custom-html-widget {
+    background: none;
+    padding: 0;
+  }
+}
