@@ -8950,6 +8950,11 @@ h1 + .meta-data {
 .page-template-page_home-php .l-widget-wrapper {
   margin-top: 3rem;
 }
+@media only screen and (max-width: calc(650px - 1px)) {
+  .page-template-page_home-php .l-widget-wrapper #home-widgets-right {
+    margin-top: 3rem;
+  }
+}
 @media only screen and (min-width: 650px) {
   .page-template-page_home-php .l-widget-wrapper {
     display: -webkit-box;
@@ -8961,19 +8966,17 @@ h1 + .meta-data {
   .page-template-page_home-php .l-widget-wrapper .manifest {
     width: 100%;
   }
+  .page-template-page_home-php .l-widget-wrapper > div {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
   .page-template-page_home-php .l-widget-wrapper #home-widgets-left {
+    width: 60%;
     padding-right: 1.5rem;
   }
   .page-template-page_home-php .l-widget-wrapper #home-widgets-right {
-    padding-left: 1.5rem;
-  }
-}
-@media only screen and (min-width: 960px) {
-  .page-template-page_home-php .l-widget-wrapper #home-widgets-left {
-    width: 60%;
-  }
-  .page-template-page_home-php .l-widget-wrapper #home-widgets-right {
     width: 40%;
+    padding-left: 1.5rem;
   }
 }
 .manifest {
@@ -11001,7 +11004,17 @@ h1 + .meta-data {
 }
 .site-id-30 .footer-widgets-2 {
   position: relative;
-  padding-left: calc(12rem + 3rem);
+}
+@media only screen and (max-width: calc(650px - 1px)) {
+  .site-id-30 .footer-widgets-2 {
+    margin-top: 3rem;
+    padding-top: 11rem;
+  }
+}
+@media only screen and (min-width: 650px) {
+  .site-id-30 .footer-widgets-2 {
+    padding-left: calc(12rem + 3rem);
+  }
 }
 .site-id-30 .footer-widgets-2:before {
   -webkit-box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);

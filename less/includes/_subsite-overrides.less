@@ -22,7 +22,15 @@
 
   .footer-widgets-2 {
     position: relative;
-    padding-left: ~"calc(@{dd-logo-width} + 3rem)";
+
+    @media @tablet_only {
+      margin-top: @gutter;
+      padding-top: 11rem;
+    }
+
+    @media @tablet {
+      padding-left: ~"calc(@{dd-logo-width} + 3rem)";
+    }
 
     &:before {
       .gc-box-shadow;

@@ -45,6 +45,12 @@
   .l-widget-wrapper {
     margin-top: 3rem;
 
+    @media @tablet_only {
+      #home-widgets-right {
+        margin-top: @gutter;
+      }
+    }
+
     @media @tablet {
       display: flex;
       flex-wrap: wrap;
@@ -53,22 +59,18 @@
         width: 100%;
       }
 
+      > div {
+        box-sizing: border-box;
+      }
+
       #home-widgets-left {
+        width: 60%;
         padding-right: @gutter / 2;
       }
 
       #home-widgets-right {
-        padding-left: @gutter / 2;
-      }
-    }
-
-    @media @desktop {
-      #home-widgets-left {
-        width: 60%;
-      }
-
-      #home-widgets-right {
         width: 40%;
+        padding-left: @gutter / 2;
       }
     }
   }
