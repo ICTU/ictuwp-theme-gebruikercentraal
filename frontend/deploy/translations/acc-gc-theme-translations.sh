@@ -17,12 +17,12 @@ PREFIX="gebruiker-centraal-"
 printf "\n\n"
 printf "********************************"
 printf "\n"
-printf "\n ${GREEN}Translations ${NC}"
+printf "\n ${GREEN}Translations ${NC}\n"
 printf "\n Source:      ${GREEN}$LANGSOURCEDIR ${NC}"
 printf "\n Dest:        ${GREEN}$LANGTARGET ${NC} \n"
 printf "\n"
 printf "********************************"
-printf "\n"
+printf "\n\n"
 
 
 for file in ${LANGSOURCEFILES}; do
@@ -35,6 +35,8 @@ if [ ! $file_ext = "pot" ] && [ ! -d "$file" ]; then
 
   FILESOURCE="${LANGSOURCEDIR}${file_name}"
   FILEDEST="${LANGTARGET}${PREFIX}${file_name}"
+
+  mv "${FILESOURCE}" "${FILEDEST}"
 
   printf "${GREEN}mv${NC} ${FILESOURCE} > ${FILEDEST} \n"
 fi
