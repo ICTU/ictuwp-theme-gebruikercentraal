@@ -15,7 +15,6 @@
 var header = $('.site-header'),
   mainMenu = document.querySelector('.nav-primary');
 
-
 function navDesktop() {
 
   // Remove menu button if there
@@ -30,7 +29,7 @@ function navDesktop() {
 
     // Add a button to each link with a submenu
     $(this).find('a:first').after('<button class="icon icon--arrow icon--small" aria-expanded="false" data-ol-has-click-handler aria-expanded="false">' +
-      '<span class="visuallyhidden">Open submenu ' + $(this).find('a:first span').text() + '</span>' +
+      '<span class="visuallyhidden">' + menustrings.showsubmenu + ' ' + $(this).find('a:first span').text() + '</span>' +
       '</button>');
 
     $(this).find('.sub-menu').attr('aria-hidden', true);
@@ -70,12 +69,12 @@ function navDesktop() {
         currentActive.find('button').attr('aria-expanded', false);
       }
 
-      $(this).attr('aria-expanded', true).find('span').text('Sluit ' + menuItem.find('a:first span').text());
+      $(this).attr('aria-expanded', true).find('span').text( menustrings.closesubmenu + ' ' + menuItem.find('a:first span').text());
       menuItem.addClass('open').find('.sub-menu').attr('aria-hidden', false);
 
     } else if (menuItem.hasClass('open')) {
       // Submenu is open, has to close
-      $(this).attr('aria-expanded', false).find('span').text('Open ' + menuItem.find('a:first span').text());
+      $(this).attr('aria-expanded', false).find('span').text( menustrings.showsubmenu + ' ' + menuItem.find('a:first span').text());
       menuItem.removeClass('open').find('.sub-menu').attr('aria-hidden', true);
     }
   });
