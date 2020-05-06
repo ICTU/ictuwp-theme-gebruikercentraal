@@ -1,44 +1,28 @@
 #!/bin/sh
 
-# ${WPROOT}/wp-content/themes/gebruiker-centraal/frontend/deploy/acc-gc-theme-translations.sh
+# set proper folder locations
+WWWROOT="/home/acccentraal/www/wp-content"
 
-# WPROOT="${HOME}/shared-paul-files/Webs/ICTU/Gebruiker Centraal/development/"
-WPROOT="${HOME}/www/"
+#translations
+LANGSOURCEDIR="${WWWROOT%%/}/themes/gebruiker-centraal/languages/"
+LANGSOURCEFILES="${WWWROOT%%/}/themes/gebruiker-centraal/languages/**"
 
-LANGFOLDERSOURCE="${WPROOT%%/}/wp-content/themes/gebruiker-centraal/languages"
-LANGFOLDERTARGET="${WPROOT%%/}/wp-content/languages/themes"
+LANGTARGET="${WWWROOT%%/}/languages/themes/gebruiker-centraal/"
 
+PREFIX="gebruiker-centraal-"
 
-printf "\n\n"
-printf "********************************"
-printf "\n"
+for file in ${SOURCEFILES}; do
 
+  file_name="${file##*/}"
+  file_ext="${file##*.}"
 
-printf "Source folder: ${LANGFOLDERSOURCE}\n"
-printf "Target folder: ${LANGFOLDERTARGET}\n"
+# If it's not a pot file and not a directory move to new location and prefix
+if [ ! $file_ext = "pot" ] && [ ! -d "$file" ]; then
 
-printf "\n"
+  FILESOURCE="${LANGSOURCEDIR}${file_name}"
+  FILEDEST="${LANGTARGET}${PREFIX}${file_name}"
 
-# Copy translation files to relevant target folder
+  printf "$file_name > $PREFIX$file_name \n"
+fi
 
-printf "Files for UK English\n"
-cp "${LANGFOLDERSOURCE}/en_GB.po" "${LANGFOLDERTARGET}/gebruikercentraal-en_GB.po"
-cp "${LANGFOLDERSOURCE}/en_GB.mo" "${LANGFOLDERTARGET}/gebruikercentraal-en_GB.mo"
-
-printf "Files for US English\n"
-cp "${LANGFOLDERSOURCE}/en_US.po" "${LANGFOLDERTARGET}/gebruikercentraal-en_US.po"
-cp "${LANGFOLDERSOURCE}/en_US.mo" "${LANGFOLDERTARGET}/gebruikercentraal-en_US.mo"
-
-printf "Files for NL Dutch\n"
-cp "${LANGFOLDERSOURCE}/nl_NL.po" "${LANGFOLDERTARGET}/gebruikercentraal-nl_NL.po"
-cp "${LANGFOLDERSOURCE}/nl_NL.mo" "${LANGFOLDERTARGET}/gebruikercentraal-nl_NL.mo"
-
-
-printf "\nReady...\n"
-printf "********************************"
-printf "\n\n"
-
-
-exit
-
-EOF
+done
