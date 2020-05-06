@@ -15,7 +15,7 @@ LANGTARGET="${WWWROOT}/languages/themes/gebruiker-centraal"
 
 #For newsletters
 
-ELANGSOURCEDIR="${WWWROOT}/themes/gebruiker-centraal/languages/e-newsletters"
+ELANGSOURCEDIR="${WWWROOT}/themes/gebruiker-centraal/languages/e-newsletters/"
 ELANGSOURCEFILES="${WWWROOT}/themes/gebruiker-centraal/languages/e-newsletters/**"
 
 ELANGTARGET="${WWWROOT}/languages/themes/gebruiker-centraal/e-newsletters"
