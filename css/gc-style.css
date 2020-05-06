@@ -245,7 +245,7 @@ textarea {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: #fff;
-  padding: 1.5rem;
+  padding: 1rem 1.5rem;
   font-family: 'montserratregular', Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
   width: 100%;
@@ -265,6 +265,13 @@ textarea:focus {
   -webkit-box-shadow: 0.3rem 0.3rem 0 rgba(37, 179, 75, 0.3);
           box-shadow: 0.3rem 0.3rem 0 rgba(37, 179, 75, 0.3);
 }
+.em-booking-form input:not([type=submit]):not([type=checkbox]):not([type=radio]):focus,
+.em-booking-form select:focus,
+.em-booking-form textarea:focus {
+  border-color: #0095da;
+  -webkit-box-shadow: 0.3rem 0.3rem 0 rgba(0, 65, 82, 0.3);
+          box-shadow: 0.3rem 0.3rem 0 rgba(0, 65, 82, 0.3);
+}
 input[type=checkbox] {
   width: 2.4rem;
   height: 2.4rem;
@@ -274,6 +281,10 @@ form label,
 fieldset legend {
   font-weight: normal;
   font-family: 'montserratsemibold', Helvetica, Arial, sans-serif;
+}
+.content form label + input[type=text],
+.content form label + textarea {
+  margin-top: 0.7rem;
 }
 .form-item--checkbox {
   position: relative;
@@ -3042,21 +3053,13 @@ select {
 }
 @media only screen and (min-width: 900px) {
   body:not(.logged-in) .em-booking-login-form .input-name,
-  body:not(.logged-in) .em-booking-form .input-name,
   body:not(.logged-in) .em-booking-login-form .input-dbem_country,
-  body:not(.logged-in) .em-booking-form .input-dbem_country,
   body:not(.logged-in) .em-booking-login-form .input-field-organisation,
-  body:not(.logged-in) .em-booking-form .input-field-organisation,
   body:not(.logged-in) .em-booking-login-form .input-dbem_phone,
-  body:not(.logged-in) .em-booking-form .input-dbem_phone,
   body:not(.logged-in) .em-booking-login-form .input-user_email,
-  body:not(.logged-in) .em-booking-form .input-user_email,
   body:not(.logged-in) .em-booking-login-form .input-dbem_phone,
-  body:not(.logged-in) .em-booking-form .input-dbem_phone,
   body:not(.logged-in) .em-booking-login-form .input-field-linkedin_profile,
-  body:not(.logged-in) .em-booking-form .input-field-linkedin_profile,
-  body:not(.logged-in) .em-booking-login-form .input-field-twitter_handle,
-  body:not(.logged-in) .em-booking-form .input-field-twitter_handle {
+  body:not(.logged-in) .em-booking-login-form .input-field-twitter_handle {
     padding-right: 1em;
     width: 50%;
     float: left;
@@ -3064,41 +3067,24 @@ select {
     min-height: 70px;
   }
   body:not(.logged-in) .em-booking-login-form .input-name input[type="text"],
-  body:not(.logged-in) .em-booking-form .input-name input[type="text"],
   body:not(.logged-in) .em-booking-login-form .input-dbem_country input[type="text"],
-  body:not(.logged-in) .em-booking-form .input-dbem_country input[type="text"],
   body:not(.logged-in) .em-booking-login-form .input-field-organisation input[type="text"],
-  body:not(.logged-in) .em-booking-form .input-field-organisation input[type="text"],
   body:not(.logged-in) .em-booking-login-form .input-dbem_phone input[type="text"],
-  body:not(.logged-in) .em-booking-form .input-dbem_phone input[type="text"],
   body:not(.logged-in) .em-booking-login-form .input-user_email input[type="text"],
-  body:not(.logged-in) .em-booking-form .input-user_email input[type="text"],
   body:not(.logged-in) .em-booking-login-form .input-dbem_phone input[type="text"],
-  body:not(.logged-in) .em-booking-form .input-dbem_phone input[type="text"],
   body:not(.logged-in) .em-booking-login-form .input-field-linkedin_profile input[type="text"],
-  body:not(.logged-in) .em-booking-form .input-field-linkedin_profile input[type="text"],
   body:not(.logged-in) .em-booking-login-form .input-field-twitter_handle input[type="text"],
-  body:not(.logged-in) .em-booking-form .input-field-twitter_handle input[type="text"],
   body:not(.logged-in) .em-booking-login-form .input-name select,
-  body:not(.logged-in) .em-booking-form .input-name select,
   body:not(.logged-in) .em-booking-login-form .input-dbem_country select,
-  body:not(.logged-in) .em-booking-form .input-dbem_country select,
   body:not(.logged-in) .em-booking-login-form .input-field-organisation select,
-  body:not(.logged-in) .em-booking-form .input-field-organisation select,
   body:not(.logged-in) .em-booking-login-form .input-dbem_phone select,
-  body:not(.logged-in) .em-booking-form .input-dbem_phone select,
   body:not(.logged-in) .em-booking-login-form .input-user_email select,
-  body:not(.logged-in) .em-booking-form .input-user_email select,
   body:not(.logged-in) .em-booking-login-form .input-dbem_phone select,
-  body:not(.logged-in) .em-booking-form .input-dbem_phone select,
   body:not(.logged-in) .em-booking-login-form .input-field-linkedin_profile select,
-  body:not(.logged-in) .em-booking-form .input-field-linkedin_profile select,
-  body:not(.logged-in) .em-booking-login-form .input-field-twitter_handle select,
-  body:not(.logged-in) .em-booking-form .input-field-twitter_handle select {
+  body:not(.logged-in) .em-booking-login-form .input-field-twitter_handle select {
     height: 40px;
   }
-  body:not(.logged-in) .em-booking-login-form .input-group + .input-field-type_of_organisation,
-  body:not(.logged-in) .em-booking-form .input-group + .input-field-type_of_organisation {
+  body:not(.logged-in) .em-booking-login-form .input-group + .input-field-type_of_organisation {
     float: none;
     clear: both;
   }
@@ -9436,6 +9422,13 @@ h1 + .meta-data {
     padding-right: 3rem;
   }
 }
+.event-bookings a {
+  color: #fff;
+}
+.event-bookings a:hover,
+.event-bookings a:focus {
+  color: #D1DFE3;
+}
 @media only screen and (min-width: 650px) {
   .event-bookings {
     margin-left: -8rem;
@@ -9457,6 +9450,30 @@ h1 + .meta-data {
 .event-bookings .em-booking > h2 {
   padding: 0;
   margin: 0;
+}
+.em-booking-form {
+  margin-top: 2rem;
+}
+@media only screen and (min-width: 650px) {
+  .em-booking-form-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .em-booking-form-details p {
+    width: 100%;
+  }
+  .em-booking-form-details .input-user-field {
+    width: 50%;
+  }
+  .em-booking-form-details .input-user-field.input-name {
+    padding-right: 1.5rem;
+  }
+  .em-booking-form-details .input-user-field.input-user_email {
+    padding-left: 1.5rem;
+  }
 }
 .booking-message {
   -webkit-box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);

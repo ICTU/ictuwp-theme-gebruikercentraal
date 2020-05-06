@@ -142,6 +142,14 @@
   padding-bottom: 3rem;
   margin-top: 3rem;
 
+  a {
+    color: @white;
+
+    &:hover, &:focus {
+      color: @gc_blue_xlight;
+    }
+  }
+
   @media @tablet {
     margin-left: -8rem;
     margin-right: -3rem;
@@ -163,6 +171,34 @@
     > h2 {
       padding: 0;
       margin: 0;
+    }
+  }
+}
+
+.em-booking-form {
+  margin-top: 2rem;
+}
+
+.em-booking-form-details {
+
+  @media @tablet {
+    display: flex;
+    flex-wrap: wrap;
+
+    p {
+      width: 100%;
+    }
+
+    .input-user-field {
+      width: 50%;
+
+      &.input-name {
+        padding-right: @gutter / 2;
+      }
+
+      &.input-user_email {
+        padding-left: @gutter / 2;
+      }
     }
   }
 }
