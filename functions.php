@@ -310,6 +310,11 @@ if ( file_exists( GC_FOLDER . '/includes/ignore-me.php' ) ) {
 require_once( GC_FOLDER . '/includes/spotlight.php' );
 require_once( GC_FOLDER . '/includes/textblock-home.php' );
 
+// ACF definitie voor titel bij inschrijformulier
+// misschien nog checken of Event Manager actief is?
+// @since	4.3.10
+require_once( GC_FOLDER . '/includes/acf-definition-bookingform-eventtitle.php' );
+
 //========================================================================================================
 
 require_once( get_stylesheet_directory() . '/nojs.php' );
