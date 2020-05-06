@@ -1,17 +1,29 @@
 #!/bin/sh
 
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+
 # set proper folder locations
-WWWROOT="/home/acccentraal/www/wp-content/"
+WWWROOT="/home/acccentraal/www/wp-content"
 
 #translations
-LANGSOURCEDIR="${WWWROOT%%/}themes/gebruiker-centraal/languages/"
-LANGSOURCEFILES="${WWWROOT%%/}themes/gebruiker-centraal/languages/**"
+LANGSOURCEDIR="${WWWROOT}/themes/gebruiker-centraal/languages/"
+LANGSOURCEFILES="${WWWROOT}/themes/gebruiker-centraal/languages/**"
 
-LANGTARGET="${WWWROOT%%/}/languages/themes/gebruiker-centraal/"
+LANGTARGET="${WWWROOT}/languages/themes/gebruiker-centraal/"
 
 PREFIX="gebruiker-centraal-"
 
-printf "yep"
+printf "\n\n"
+printf "********************************"
+printf "\n"
+printf "\n ${GREEN}Translations ${NC}"
+printf "\n Source:      ${GREEN}$LANGSOURCEDIR ${NC}"
+printf "\n Dest:        ${GREEN}$LANGTARGET ${NC} \n"
+printf "\n"
+printf "********************************"
+printf "\n"
+
 
 for file in ${LANGSOURCEFILES}; do
 
@@ -24,7 +36,7 @@ if [ ! $file_ext = "pot" ] && [ ! -d "$file" ]; then
   FILESOURCE="${LANGSOURCEDIR}${file_name}"
   FILEDEST="${LANGTARGET}${PREFIX}${file_name}"
 
-  printf "$file_name > $PREFIX$file_name \n"
+  printf "${GREEN}mv${NC} ${FILESOURCE} > ${FILEDEST} \n"
 fi
 
 done
