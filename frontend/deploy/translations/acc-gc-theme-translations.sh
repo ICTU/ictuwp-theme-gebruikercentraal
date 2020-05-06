@@ -7,10 +7,18 @@ NC='\033[0m' # No Color
 WWWROOT="/home/acccentraal/www/wp-content"
 
 #translations
+
 LANGSOURCEDIR="${WWWROOT}/themes/gebruiker-centraal/languages/"
 LANGSOURCEFILES="${WWWROOT}/themes/gebruiker-centraal/languages/**"
 
 LANGTARGET="${WWWROOT}/languages/themes/gebruiker-centraal"
+
+#For newsletters
+
+ELANGSOURCEDIR="${WWWROOT}/themes/gebruiker-centraal/languages/e-newsletters"
+ELANGSOURCEFILES="${WWWROOT}/themes/gebruiker-centraal/languages/e-newsletters/**"
+
+ELANGTARGET="${WWWROOT}/languages/themes/gebruiker-centraal/e-newsletters"
 
 PREFIX="gebruiker-centraal-"
 
@@ -41,6 +49,25 @@ if [ ! $file_ext = "pot" ] && [ ! -d "$file" ]; then
   mv "${FILESOURCE}" "${FILEDEST}"
 
   printf "${GREEN}mv${NC} ${FILESOURCE} > ${FILEDEST} \n"
+fi
+
+# Make directory for newsletters if not there
+[ ! -d "$ELANGTARGET" ] && mkdir -p "$ELANGTARGET"
+
+for file in ${ELANGSOURCEFILES}; do
+
+  file_name="${file##*/}"
+  file_ext="${file##*.}"
+
+# If it's not a pot file and not a directory move to new location and prefix
+if [ ! $file_ext = "pot" ] && [ ! -d "$file" ]; then
+
+  NSOURCE="${ELANGSOURCEDIR}${file_name}"
+  NDEST="${ELANGTARGET}/${file_name}"
+
+  mv "${NSOURCE}" "${NDEST}"
+
+  printf "${GREEN}mv${NC} ${NSOURCE} > ${NDEST} \n"
 fi
 
 done
