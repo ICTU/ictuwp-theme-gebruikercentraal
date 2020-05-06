@@ -51,6 +51,8 @@ if [ ! $file_ext = "pot" ] && [ ! -d "$file" ]; then
   printf "${GREEN}mv${NC} ${FILESOURCE} > ${FILEDEST} \n"
 fi
 
+done
+
 # Make directory for newsletters if not there
 [ ! -d "$ELANGTARGET" ] && mkdir -p "$ELANGTARGET"
 
