@@ -1,17 +1,19 @@
 #!/bin/sh
 
 # set proper folder locations
-WWWROOT="/home/acccentraal/www/wp-content"
+WWWROOT="/home/acccentraal/www/wp-content/"
 
 #translations
-LANGSOURCEDIR="${WWWROOT%%/}/themes/gebruiker-centraal/languages/"
-LANGSOURCEFILES="${WWWROOT%%/}/themes/gebruiker-centraal/languages/**"
+LANGSOURCEDIR="${WWWROOT%%/}themes/gebruiker-centraal/languages/"
+LANGSOURCEFILES="${WWWROOT%%/}themes/gebruiker-centraal/languages/**"
 
 LANGTARGET="${WWWROOT%%/}/languages/themes/gebruiker-centraal/"
 
 PREFIX="gebruiker-centraal-"
 
-for file in ${LANGSOURCEDIR}; do
+printf "yep"
+
+for file in ${LANGSOURCEFILES}; do
 
   file_name="${file##*/}"
   file_ext="${file##*.}"
