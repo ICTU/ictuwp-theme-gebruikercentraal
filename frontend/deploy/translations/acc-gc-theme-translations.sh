@@ -10,7 +10,7 @@ WWWROOT="/home/acccentraal/www/wp-content"
 LANGSOURCEDIR="${WWWROOT}/themes/gebruiker-centraal/languages/"
 LANGSOURCEFILES="${WWWROOT}/themes/gebruiker-centraal/languages/**"
 
-LANGTARGET="${WWWROOT}/languages/themes/gebruiker-centraal/"
+LANGTARGET="${WWWROOT}/languages/themes/gebruiker-centraal"
 
 PREFIX="gebruiker-centraal-"
 
@@ -24,6 +24,8 @@ printf "\n"
 printf "********************************"
 printf "\n\n"
 
+# Make directory if not there
+[ ! -d "$LANGTARGET" ] && mkdir -p "$LANGTARGET"
 
 for file in ${LANGSOURCEFILES}; do
 
@@ -34,7 +36,7 @@ for file in ${LANGSOURCEFILES}; do
 if [ ! $file_ext = "pot" ] && [ ! -d "$file" ]; then
 
   FILESOURCE="${LANGSOURCEDIR}${file_name}"
-  FILEDEST="${LANGTARGET}${PREFIX}${file_name}"
+  FILEDEST="${LANGTARGET}/${PREFIX}${file_name}"
 
   mv "${FILESOURCE}" "${FILEDEST}"
 
