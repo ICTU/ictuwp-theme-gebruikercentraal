@@ -58,10 +58,23 @@ debugmessage('show_tickets: ' . $show_tickets );
 
 */
 
+
+// * @since	4.3.10
+$formtitle = _x( 'Join this event', 'Titel boven inschrijfformulier', 'gebruikercentraal' );
+
+if ( function_exists( 'get_field' ) ) {
+    // ACF is actief
+    if ( get_field('event_bookingform_title', $post ) && $formtitle !== get_field('event_bookingform_title', $post ) ) {
+        // er is een waarde gevonden voor event_bookingform_title en deze
+        // waarde is niet gelijk aan de standaardwaarde voor $formtitle
+	    $formtitle = get_field('event_bookingform_title', $post );
+    }
+}
+
 ?>
 <div id="em-booking" class="em-booking <?php if( get_option('dbem_css_rsvp') ) echo 'css-booking'; ?>">
 
-  <h2><?php _e( 'Join this event', 'gebruikercentraal' ) ?></h2>
+  <h2><?php echo $formtitle ?></h2>
   <?php 
     // We are firstly checking if the user has already booked a ticket at this event, if so offer a link to view their bookings.
     $EM_Booking = $EM_Event->get_bookings()->has_booking();
