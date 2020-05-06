@@ -11,7 +11,7 @@ LANGTARGET="${WWWROOT%%/}/languages/themes/gebruiker-centraal/"
 
 PREFIX="gebruiker-centraal-"
 
-for file in ${SOURCEFILES}; do
+for file in ${LANGSOURCEDIR}; do
 
   file_name="${file##*/}"
   file_ext="${file##*.}"
