@@ -45,6 +45,27 @@
   .l-widget-wrapper {
     margin-top: 3rem;
 
+    .widget_custom_html .textwidget {
+      .gc-box-shadow;
+      background: @white;
+      padding: 2rem;
+
+      p {
+        margin: 0;
+
+        + p {
+          margin-top: 1.8rem;
+        }
+      }
+
+      .cta {
+        float: none;
+        margin-top: 1.5rem;
+        display: inline-block;
+        clear: both;
+      }
+    }
+
     @media @tablet_only {
       #home-widgets-right {
         margin-top: @gutter;
@@ -91,6 +112,7 @@
 
   header {
     background: @gc_a11y_green_dark;
+
     h1 {
       margin: 0;
       padding: 0;
@@ -350,17 +372,19 @@
         .author-box-title {
           color: @groen_2;
           text-decoration: underline;
+
           &:after {
             .icon_separator_fill('../images/cta-pijl.svg', @txt);
             margin-left: .2rem;
           }
         }
+
         .ezelsoortje();
       }
     }
 
 
-    &:nth-child(odd){
+    &:nth-child(odd) {
       a {
         padding-left: 2rem;
         padding-right: 12rem;
@@ -372,7 +396,7 @@
       }
     }
 
-    &:nth-child(even){
+    &:nth-child(even) {
       a {
         padding-left: 12rem;
       }
@@ -400,6 +424,7 @@
   .author-box {
     margin: 0;
     padding: 0;
+
     + .author-box {
       border-top: 2px solid @border_authorbox;
     }
