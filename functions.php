@@ -2523,10 +2523,16 @@ function gc_wbvb_archive_loop() {
 			$image          = [];
 			$huge           = false;
 
-			// check of het eerste bericht een enorme afbeelding heeft
-			if ( $countertje == 1 && 'post' === get_post_type() ) {
 
-				if ( has_post_thumbnail( $getid ) ) {
+			if ( has_post_thumbnail( $getid ) ) {
+
+				$image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), 'large' );
+
+				$image_class = 'l-has-image';
+
+				// check of het eerste bericht een enorme afbeelding heeft
+				if ( $countertje == 1 ) {
+
 					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), IMG_SIZE_HUGE );
 
 					if ( $image[1] >= IMG_SIZE_HUGE_MIN_WIDTH ) {
@@ -2543,33 +2549,19 @@ function gc_wbvb_archive_loop() {
 						}
 					}
 				}
-			} else {
-
-				if ( GC_BEELDBANK_BEELD_CPT == get_post_type() ) {
-
-					// @since 4.3.4
-					if ( function_exists( 'get_field' ) ) {
-						$attachment = get_field( 'beeld_foto', $getid );
-						if ( isset( $attachment['ID'] ) ) {
-							$image = wp_get_attachment_image_src( $attachment['ID'], 'large' );
-						}
-					}
-
-				} elseif ( has_post_thumbnail( $getid ) ) {
-
-					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), 'large' );
-
-					$image_class = 'l-has-image';
-
-				}
-
 			}
+
+
 
 			echo '<section class="entry teaser ' . $image_class . '" itemscope itemtype="http://schema.org/SocialMediaPosting" id="' . $theID . '">';
 			echo '<a href="' . $permalink . '" itemprop="url" class="teaser__link">';
 
 			if ( $image && ! ( $huge ) ) { // only sho image if layout is not enorm huge
 				echo '  <div class="feature-image teaser__image">';
+//				echo 'ID: ' . $getid . '<br>';
+//				echo '<pre>';
+//				var_dump( $image );
+//				echo '</pre>';
 //				echo get_the_post_thumbnail( $getid, 'thumb-cardv3' ); // dit beeldformaat is ongelimiteerd breed en max. 600px hoog
 				echo get_the_post_thumbnail( $getid, BLOG_SINGLE_DESKTOP ); // dit beeldformaat is max. 380px breed en ongelimiteerd hoog
 				echo '  </div>';

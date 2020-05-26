@@ -1483,12 +1483,16 @@
 .gc-overview-intro(@bg: @bg_intro) {
   .taxonomy-description {
     width: 90%;
-    .gc-box-shadow;
+    .gc-box-shadow();
     background: @intro_bg;
     color: @intro_color;
     padding: 2rem;
     position: relative;
     z-index: +1;
+
+    a {
+      color: @intro_color;
+    }
 
     h1 {
       margin: 0;
