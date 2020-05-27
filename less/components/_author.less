@@ -36,16 +36,30 @@
 
 
   &.l-with-image {
-    display: flex;
 
-    .author__picture,
-    .author__image {
-      width: 8rem;
+    .author__picture {
+      max-width: 10rem;
+      //margin: 0 auto;
     }
 
     .author__content {
-      width: calc(100% - 14rem);
-      padding-left: @gutter;
+      margin-top: 1.6rem;
+    }
+
+    @media @tablet {
+
+      display: flex;
+
+      .author__picture,
+      .author__image {
+        max-width: none;
+      }
+
+      .author__content {
+        width: calc(100% - 14rem);
+        padding-left: @gutter;
+        margin-top: 0;
+      }
     }
 
     @media @desktop {

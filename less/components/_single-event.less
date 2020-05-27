@@ -97,6 +97,13 @@
     }
   }
 
+
+  #programma {
+    margin-top: 2rem;
+    border-top: .1rem solid @gc_a11y_green_dark;
+    padding-top: 2rem;
+  }
+
   > div > h2 {
     .font-size(32);
     line-height: 3.2rem;
@@ -111,6 +118,12 @@
     display: flex;
     margin-left: -5rem;
     width: auto;
+
+    #programma {
+      margin-top: 0;
+      padding-top: 0;
+      border: none;
+    }
 
     > div {
       width: 50%;
@@ -127,6 +140,37 @@
 
   @media @desktop {
     margin-left: auto;
+  }
+}
+
+.event-program {
+  li {
+    display: flex;
+  }
+
+  .tijd {
+    width: 40%;
+    padding-right: 1.5rem;
+    font-family: @font_primary_semi;
+  }
+
+  .beschrijving {
+    width: 60%;
+  }
+
+  .entry-content & {
+    margin: 0;
+    padding: 0;
+  }
+
+  @media @tablet {
+    .tijd {
+      width: 30%;
+    }
+
+    .beschrijving {
+      width: 70%;
+    }
   }
 }
 
