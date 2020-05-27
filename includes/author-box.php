@@ -257,16 +257,20 @@ function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = 
 		 * Section HTML
 		 */
 
+
+
 		// Plaatje
 		$author_box = '<section class="author ' . ( is_archive() ? 'author--full' : 'author--box' ) . ' ' . ( $image ? 'l-with-image' : 'l-without-image' ) . '" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">' .
 		              ( $image ? '<figure class="author__picture">' . $image . '</figure>' : '' );
 
 		// Content
 		$author_box .= '<div class="author__content">' .
+		               '<div class="l-author-header">'.
 		               '<' . $header_tag . ' class="' . ( is_archive() ? 'page__title' : 'author__title' ) . '">'
 		               . $author_title . '</' . $header_tag . '>' .
 		               ( $functiebeschrijving ? '<span class="meta-data__item author__function">' . $functiebeschrijving . '</span>' : '' ) .
-		               ( $biografie ? '<hr><p>' . $biografie . '</p>' : '' );
+		               '</div>'. // End header
+		               ( $biografie ? '<p>' . $biografie . '</p>' : '' );
 
 		// Info
 		$author_box .= '<div class="author__contact-info">' . $contact_info . '</div>';

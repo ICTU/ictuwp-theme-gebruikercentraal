@@ -5,20 +5,51 @@
     .grid-col-2;
     box-shadow: none;
 
+    .author {
+      .link--contact + .social-links {
+        margin-left: 0;
+      }
+    }
+
     .author-box:before {
       display: none;
     }
 
-    .author-box {
-      height: 100%;
-      padding-bottom: 0;
+    .author__contact-info {
+      display: block;
     }
-    
 
-    .author-info {
-      .author-box-title,
-      p[itemprop="jobTitle"] {
-        padding-left: 10rem;
+
+    .author.l-with-image {
+
+      @media @tablet {
+        .author__picture {
+          width: 6rem;
+        }
+
+        .l-author-header {
+          padding-left: 0;
+          padding-top: 8rem;
+        }
+      }
+
+      @media @desktop {
+        .author__picture {
+          width: 8rem;
+          position: absolute;
+          left: 3rem;
+          top: 3rem;
+        }
+
+        .l-author-header {
+          padding-left: 10.5rem;
+          padding-top: 0;
+          min-height: 9rem;
+        }
+
+        .author__content {
+          padding-left: 0;
+        }
       }
     }
   }
