@@ -26,8 +26,11 @@
 
 .steplist {
   counter-reset: steplist;
-  margin: 2rem 0 0 0;
-  padding: 0;
+
+  .entry-content & {
+    margin: 2rem 0 0 1rem;
+    padding: 0;
+  }
 
   @media @tablet {
     margin-top: 3rem;

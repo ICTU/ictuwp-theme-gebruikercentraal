@@ -7329,7 +7329,9 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
 }
 .steplist {
   counter-reset: steplist;
-  margin: 2rem 0 0 0;
+}
+.entry-content .steplist {
+  margin: 2rem 0 0 1rem;
   padding: 0;
 }
 @media only screen and (min-width: 650px) {
