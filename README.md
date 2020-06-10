@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-4.3.12 - Icoontjes mail en telefoon bij auteursinfo omgewisseld.
+4.3.13 - Logo voor NL Design System toegevoegd.
 
 ## Version history
+* 4.3.13 - Logo voor NL Design System toegevoegd.
 * 4.3.12 - Icoontjes mail en telefoon bij auteursinfo omgewisseld.
 * 4.3.11 - Vormgeving van lijst blogberichten / beelden herzien, tbv livegang beeldbank. 
 * 4.3.10 - Opmaak niet-zo-maar-zo-blokken herzien voor beeldbank. Tonen beelden in blogoverzicht. 
