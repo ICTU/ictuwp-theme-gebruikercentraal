@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '4.3.11' );
-define( 'CHILD_THEME_DESCRIPTION', "4.3.11 - Vormgeving van lijst blogberichten / beelden herzien, tbv livegang beeldbank. " );
+define( 'CHILD_THEME_VERSION', '4.3.12' );
+define( 'CHILD_THEME_DESCRIPTION', "4.3.12 - Icoontjes mail en telefoon bij auteursinfo omgewisseld." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
