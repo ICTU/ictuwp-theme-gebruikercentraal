@@ -33,7 +33,15 @@
     "dest": "../css/",
     "proxy": "directduidelijk.gebruikercentraal.co.uk",
     "type": "theme"
+  },
+  "designsystem": {
+    "name": "Design System",
+    "path": "../",
+    "dest": "../css/",
+    "proxy": "designsystem.gebruikercentraal.co.uk",
+    "type": "theme"
   }
+
 }
 
 
