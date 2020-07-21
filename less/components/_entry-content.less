@@ -99,8 +99,7 @@
     }
   }
 
-  .infoblock,
-  .call-to-action {
+  .infoblock {
     background: @gc_pantybrown_xlight;
     border-color: @gc_pantybrown;
     padding: 2rem;
@@ -116,27 +115,6 @@
 
     @media @tablet {
       padding: 3rem;
-    }
-  }
-
-  .call-to-action {
-    .gc-box-shadow;
-    background: @gc_a11y_green;
-    color: @white;
-    margin-top: 5rem;
-
-    h2, h3 {
-      .gc-section-heading;
-      color: @white;
-    }
-
-    a {
-      color: @white;
-
-      &:hover,
-      &:focus {
-        text-decoration: none;
-      }
     }
   }
 
@@ -167,6 +145,72 @@
 
     > .social-media {
       margin-left: -5.5rem;
+    }
+  }
+}
+
+
+.call-to-action {
+  padding: 2rem;
+
+  @media @tablet {
+    padding: 3rem;
+  }
+
+  h2 {
+    padding: 0;
+    margin: 0;
+  }
+
+  ul,
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  ul {
+    margin: 2rem 0 0 .5rem;
+
+    li {
+      list-style: square;
+    }
+  }
+
+  &.primary {
+    .gc-box-shadow;
+    background: @gc_a11y_green;
+    color: @white;
+    margin-top: 5rem;
+
+    h2, h3 {
+      .gc-section-heading;
+      color: @white;
+    }
+
+    a {
+      color: @white;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+
+    .btn--primary,
+    .cta {
+      background: @white;
+      color: @base_font_color;
+      margin-top: 2rem;
+      transition: background-color .2s;
+
+      &:after {
+        background: @gc_blue_xlight url('../images/arrow-right-blue.svg') center center no-repeat;
+        background-size: 1rem auto;
+      }
+
+      &:hover, &:focus {
+        background: @gc_blue_xlight;
+        text-decoration: underline;
+      }
     }
   }
 }

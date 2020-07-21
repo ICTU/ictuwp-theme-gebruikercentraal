@@ -183,3 +183,36 @@
   }
 }
 
+.em-pagination {
+  margin-top: 3rem;
+  display: flex;
+  font-family: @font_primary_semi;
+
+  strong, a {
+    display: block;
+    padding: .8rem 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  strong {
+    .gc-box-shadow;
+    background: @gc_a11y_green;
+    color: @white;
+  }
+
+  a {
+    text-decoration: none;
+    border: .1rem solid transparent;
+    padding: .8rem 1.2rem;
+    transition: border-color .2s;
+
+    &:focus,
+    &:hover {
+      .gc-box-shadow;
+      border-color: @gc_darkblue;
+      text-decoration: underline;
+      color: @gc_darkblue;
+    }
+  }
+
+}

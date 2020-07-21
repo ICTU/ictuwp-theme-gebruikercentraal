@@ -221,6 +221,8 @@
 
 .teaser--event {
   .gc-box-shadow;
+  overflow: hidden;
+
   .teaser__link {
     display: block;
 
@@ -278,6 +280,25 @@
 
   + .teaser {
     border-top: .1rem solid @border_color;
+  }
+}
+
+// dingen voor events
+.tickets.unavailable {
+  background: @oranje;
+  color: @wit;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  padding: 0 3em;
+  margin: -3rem -2.5rem 0 0;
+  transform: rotate(45deg) translate(50px, -25px);
+  font-family: @headerfont;
+  .fontsize(18);
+
+  @media only screen {
+    text-transform: uppercase;
   }
 }
 
