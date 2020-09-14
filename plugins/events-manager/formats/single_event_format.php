@@ -143,10 +143,12 @@ else {
 
 ?>
 
-    <header class="wrap">#_AVAILABILITYCHECK
+    <header class="wrap">
         <div class="date-badge">#_DATEBADGE</div>
         <h1 itemprop="name">#_EVENTNAME</h1>
-        <div class="meta-data"><?php echo $header_meta_info ?></div>
+        <div class="meta-data">
+            #_AVAILABILITYCHECK<?php echo $header_meta_info ?>
+        </div>
 
     </header>
 	<?php

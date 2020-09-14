@@ -41,10 +41,9 @@ $header_meta_info = $event_times . $event_location;
 
 echo '<section class="teaser teaser--event"><a class="teaser__link" href="#_EVENTURL">';
 echo '<header class="wrap' . $classmultiple . '">
-        #_AVAILABILITYCHECK
         <div class="date-badge">#_DATEBADGE</div>
         <h3 itemprop="name"><span class="arrow-link"><span class="arrow-link__text">#_EVENTNAME</span><span class="arrow-link__icon"></span></span></h3>
-        <div class="meta-data">' .  $header_meta_info . '</div>
+        <div class="meta-data">#_AVAILABILITYCHECK' .  $header_meta_info . '</div>
     </header>';
 
 if ( has_excerpt() ) { 

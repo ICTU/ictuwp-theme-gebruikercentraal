@@ -7905,24 +7905,12 @@ figcaption.blockgallery--primary-caption:not(.has-caption-color) {
   border-top: 0.1rem solid #D1DFE3;
 }
 .tickets.unavailable {
-  background: #F7941E;
+  background: #c42c76;
+  margin-right: 1.5rem;
+  padding: 0.1rem 1.3rem;
+  display: inline-block;
   color: #fff;
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: block;
-  padding: 0 3em;
-  margin: -3rem -2.5rem 0 0;
-  -webkit-transform: rotate(45deg) translate(50px, -25px);
-          transform: rotate(45deg) translate(50px, -25px);
-  font-family: 'league_gothicregular', Impact, Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  font-size: 1.8rem;
-}
-@media only screen {
-  .tickets.unavailable {
-    text-transform: uppercase;
-  }
+  font-family: 'montserratbold', Helvetica, Arial, sans-serif;
 }
 .teaser--small {
   -webkit-box-shadow: none;
