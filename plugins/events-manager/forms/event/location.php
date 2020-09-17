@@ -67,6 +67,7 @@ foreach( EM_Event_Locations\Event_Locations::get_types() as $event_location_type
 				<th><?php esc_html_e('Location:','events-manager') ?> </th>
 				<td>
 					<select name="location_id" id='location-select-id' size="1">
+						<option>- Geen fysieke locatie voor dit event-</option>
 						<?php
 						$ddm_args = array('private'=>$EM_Event->can_manage('read_private_locations'));
 						$ddm_args['owner'] = (is_user_logged_in() && !current_user_can('read_others_locations')) ? get_current_user_id() : false;
