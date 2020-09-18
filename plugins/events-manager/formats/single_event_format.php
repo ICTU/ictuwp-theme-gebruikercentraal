@@ -17,6 +17,7 @@ showdebug( __FILE__, 'formats' );
 
 global $post;
 global $EM_Event;
+global $EM_Location;
 global $EM_gc_wbvb_single_event_availability;
 global $EM_gc_wbvb_single_event_aanmeldingen;
 global $EM_gc_wbvb_single_event_organizor;
@@ -77,7 +78,7 @@ if ( $event_start_datetime && ( $EM_Event->event_start_date === $EM_Event->event
 
 
 $header_meta_info = '';
-$lebookings       = $EM_Event->bookings;
+$lebookings       = is_object( $EM_Event->bookings ) ? $EM_Event->bookings : "";
 $event_cost       = __( 'Free of charge', 'gebruikercentraal' );
 $price_min        = 0;
 $price_max        = 0;
@@ -200,9 +201,17 @@ if ( $EM_gc_wbvb_single_event_links ) {
  */
 
 $locationurl      = '';
-$locationname     = $EM_Event->output( '#_LOCATIONNAME' );
-$locationurl      = $EM_Event->output( '#_EVENTLOCATION{url}' );
-$locationlinktext = $EM_Event->output( '#_EVENTLOCATION{_self}' );
+$locationname     = '';
+$locationurl      = '';
+$locationlinktext = '';
+
+if ( ! is_null( $EM_Location ) ) {
+	$locationname     = $EM_Location->output( '#_LOCATIONNAME' );
+	$locationurl      = $EM_Location->output( '#_EVENTLOCATION{url}' );
+	$locationlinktext = $EM_Location->output( '#_EVENTLOCATION{_self}' );
+}
+else {
+}
 
 if ( $locationname && ( ! $locationurl ) ) {
 	// situate 1:
@@ -306,7 +315,7 @@ if ( $locationname && ( ! $locationurl ) ) {
 	if ( $EM_gc_wbvb_single_event_programma ) {
 		echo '<!--  4b: Geen locatie + wel programma  -->';
 		?>
-        <div id="event_map_en_programma" class="wrap">
+        <div class="wrap">
 			<?php echo $EM_gc_wbvb_single_event_programma; ?>
         </div>
 		<?php
