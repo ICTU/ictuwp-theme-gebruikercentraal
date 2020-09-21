@@ -28,6 +28,7 @@
 /* @var $EM_Event EM_Event */   
 global $EM_Notices;
 global $show_tickets;
+global $post;
 
 //count tickets and available tickets
 $tickets_count            = count($EM_Event->get_bookings()->get_tickets()->tickets);

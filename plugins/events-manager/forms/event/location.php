@@ -30,7 +30,6 @@ foreach( EM_Event_Locations\Event_Locations::get_types() as $event_location_type
 <div class="em-input-field em-input-field-select em-location-types <?php if( count($location_types) == 1 ) echo 'em-location-types-single'; ?>">
 	<label><?php esc_html_e ( 'Location Type', 'events-manager')?></label>
 	<select name="location_type" class="em-location-types-select"> 
-		<option <?php if( empty($location_type_option['selected']) ) echo 'selected="selected"'; ?>>- Geen locaties -</option>
 		<?php foreach( $location_types as $location_type => $location_type_option ): ?>
 		<option value="<?php echo esc_attr($location_type); ?>" <?php if( !empty($location_type_option['selected']) ) echo 'selected="selected"'; ?> data-display-class="<?php if( !empty($location_type_option['display-class']) ) echo esc_attr($location_type_option['display-class']); ?>">
 			<?php echo esc_html($location_type_option['description']); ?>
