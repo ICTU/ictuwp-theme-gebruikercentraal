@@ -8,7 +8,7 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.3.16.a
+// @version 4.3.16
 // @desc.   Logo voor expertpanel toegevoegd.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '4.3.16.a' );
-define( 'CHILD_THEME_DESCRIPTION', "4.3.16.a - Logo voor expertpanel toegevoegd." );
+define( 'CHILD_THEME_VERSION', '4.3.16' );
+define( 'CHILD_THEME_DESCRIPTION', "4.3.16 - Logo voor expertpanel toegevoegd." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
