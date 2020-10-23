@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.3.13
-// @desc.   Logo voor NL Design System toegevoegd.
+// @version 4.3.15
+// @desc.   Spotlight block bleek niet zichtbaar.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '4.3.13' );
-define( 'CHILD_THEME_DESCRIPTION', "4.3.13 - Logo voor NL Design System toegevoegd." );
+define( 'CHILD_THEME_VERSION', '4.3.15' );
+define( 'CHILD_THEME_DESCRIPTION', "4.3.15 - Spotlight block bleek niet zichtbaar." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
