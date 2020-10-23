@@ -112,6 +112,7 @@
    * Inclusie:                24
    * Conference:              20
    * Direct Duidelijk Tour:   30
+   * Expertpanel:   		  34
    */
 
 
@@ -119,6 +120,7 @@
   &.site-id-22, //beeldbank
   &.site-id-24, //inclusie
   &.site-id-26, // NL design system
+  &.site-id-34, &.expertpanel, // Expert panel, zie common-functions.php function: gc_add_siteclass()
   &.rotterdammercentraal,
   &.rotterdammer-centraal {
     height: 5rem;
@@ -154,6 +156,12 @@
   // NL design system
   &.site-id-26:before {
     background-image: url('../images/logos/gc-nlds-beeldmerk.svg');
+  }
+
+  // Expert panel
+  &.expertpanel:before,
+  &.site-id-34:before {
+    background-image: url('../images/logos/expertpanel-beeldmerk.svg');
   }
 
   &.rotterdammer-centraal:before,

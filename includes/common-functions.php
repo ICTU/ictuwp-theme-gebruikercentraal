@@ -8,8 +8,8 @@
 // * @package gebruiker-centraal
 // * @author  Paul van Buuren
 // * @license GPL-2.0+
-// * @version 4.3.4
-// * @desc.   Betere checks op get_field, ofwel: is ACF-plugin actief?
+// * @version 4.3.16
+// * @desc.   Logo voor expertpanel toegevoegd.
 // * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 ///
 
@@ -750,6 +750,8 @@ function gc_add_siteclass( $attributes ) {
 		$class = "beeldbank";
 	} elseif ( 'directduidelijk.gebruikercentraal.co.uk' == $_SERVER["HTTP_HOST"] || 'accept.directduidelijk.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] || 'directduidelijk.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] ) {
 		$class = "directduidelijk";
+	} elseif ( 'expertpanel.gebruikercentraal.co.uk' == $_SERVER["HTTP_HOST"] || 'accept.expertpanel.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] || 'expertpanel.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] ) {
+		$class = "expertpanel";
 	}
 //		$class = "rotterdammercentraal";
 //		$class = "inclusie";
