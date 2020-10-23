@@ -11,9 +11,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.3.7
-// @version 4.3.7
-// @desc.   Spotlight-component toegevoegd; tekstblok-component voor home toegevoegd.
+// @version 4.3.15
+// @desc.   Spotlight block bleek niet zichtbaar.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 ///
 

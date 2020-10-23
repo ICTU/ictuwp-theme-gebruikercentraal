@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.3.7
-// @desc.   Spotlight-component toegevoegd; tekstblok-component voor home toegevoegd.
+// @version 4.3.15
+// @desc.   Spotlight block bleek niet zichtbaar.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 //========================================================================================================
@@ -30,9 +30,9 @@ add_filter('genesis_attr_entry-footer', 'gc_shared_add_wrap_class');
 // @since	  4.2.2
 add_action('wp_enqueue_scripts', 'ictu_gctheme_frontend_general_get_related_content_headercss' );
 
-add_action( 'genesis_loop', 'ictu_gctheme_frontend_general_get_spotlight', 12 );
-
 add_action( 'genesis_loop', 'ictu_gctheme_frontend_general_get_related_content', 16 );
+
+add_action( 'genesis_loop', 'ictu_gctheme_frontend_general_get_spotlight', 18 );
 
 
 showdebug(__FILE__, '/');
