@@ -3053,3 +3053,15 @@ function rhswp_embed_defaults( $embed_size ) {
 
 //========================================================================================================
 
+/*
+voor de podcast: laat de castos plugin naar het bestand zelf verwijzen, niet via
+een maskering van de URL voor het MP3-bestand
+*/
+add_filter( 'ssp_episode_download_link', 'ssp_use_raw_audio_file_url', 10, 3 );
+
+function ssp_use_raw_audio_file_url ( $url, $episode_id, $file ) {
+	return $file;
+}
+
+//========================================================================================================
+
