@@ -60,11 +60,10 @@ if ( ! function_exists( 'ictu_gctheme_frontend_general_get_spotlight' ) ) :
 		if ( function_exists( 'get_field' ) ) {
 
 			$spotlight_blokken = get_field( 'spotlight_blokken', $post->ID );
-			$countcount        = count( $spotlight_blokken );
 
-			// count the items
-			if ( $countcount ) {
+			if ( have_rows( 'spotlight_blokken' ) ) {
 
+				$countcount    = count( $spotlight_blokken );
 				$columncounter = 'l-item-count-2';
 
 				if ( $countcount < 2 ) {
