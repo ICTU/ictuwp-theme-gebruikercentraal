@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-4.3.16 - Logo voor expertpanel toegevoegd.
+4.3.17 - Mogelijkheid om uitgelichte afbeelding te verbergen toegevoegd aan GC_berichten_widget.
 
 ## Version history
+* 4.3.17 - Mogelijkheid om uitgelichte afbeelding te verbergen toegevoegd aan GC_berichten_widget.
 * 4.3.16 - Logo voor expertpanel toegevoegd.
 * 4.3.14 - Basale styling voor podcast-metadata.
 * 4.3.13 - Logo voor NL Design System toegevoegd.

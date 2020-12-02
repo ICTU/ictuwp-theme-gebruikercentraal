@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.3.16
-// @desc.   Logo voor expertpanel toegevoegd.
+// @version 4.3.17
+// @desc.   Mogelijkheid om uitgelichte afbeelding te verbergen toegevoegd aan GC_berichten_widget.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '4.3.16' );
-define( 'CHILD_THEME_DESCRIPTION', "4.3.16 - Logo voor expertpanel toegevoegd." );
+define( 'CHILD_THEME_VERSION', '4.3.17' );
+define( 'CHILD_THEME_DESCRIPTION', "4.3.17 - Mogelijkheid om uitgelichte afbeelding te verbergen toegevoegd aan GC_berichten_widget." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -217,7 +217,8 @@ if ( ! defined( 'GC_ALLOWED' ) ) {
 		4 => GC_BEELDBANK_BRIEF_CPT,
 		5 => GC_BEELDBANK_BEELD_CPT,
 		6 => ICTU_GC_CPT_VAARDIGHEDEN,
-		7 => ICTU_GC_CPT_PROCESTIP
+		7 => ICTU_GC_CPT_PROCESTIP,
+		8 => 'podcast'
 	) );
 }
 

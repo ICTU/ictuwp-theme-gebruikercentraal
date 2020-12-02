@@ -7,8 +7,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 3.10.1
-// @desc.   Bugfixes voor get_field, create_function en 404-pagina.
+// @version 4.3.17
+// @desc.   Mogelijkheid om uitgelichte afbeelding te verbergen toegevoegd aan GC_berichten_widget.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
