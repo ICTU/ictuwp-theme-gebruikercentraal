@@ -414,7 +414,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 				'label'             => 'Inleiding',
 				'name'              => 'overzichtspagina_inleiding',
 				'type'              => 'textarea',
-				'instructions'      => 'deze tekst wordt getoond onder de titel in het groene vlak',
+				'instructions'      => 'deze tekst wordt getoond onder de titel in het introductie-vlak',
 				'required'          => 0,
 				'conditional_logic' => 0,
 				'wrapper'           => [

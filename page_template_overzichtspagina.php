@@ -152,11 +152,11 @@ function gc_page_template_loop() {
 
 	global $post;
 
-	$currentpageID = get_the_id();
-	$content      	= $post->post_content;
-	$pageid_beelden	= 0;
-	$hoofdcontent 	= apply_filters( 'the_content', $content );
-	$inleiding		= get_field( 'overzichtspagina_inleiding', $currentpageID );
+	$currentpageID  = get_the_id();
+	$content        = $post->post_content;
+	$pageid_beelden = 0;
+	$hoofdcontent   = apply_filters( 'the_content', $content );
+	$inleiding      = get_field( 'overzichtspagina_inleiding', $currentpageID );
 
 	if ( get_field( 'beelden_page_overview', 'option' ) ) {
 		// kijken of er een pagina is aangewezen die een overzicht geeft van alle beelden
@@ -214,6 +214,8 @@ function gc_page_template_loop() {
 					echo ictu_gctheme_card_doelgroep( $post, $citaat );
 				} elseif ( ( 'post' == get_post_type( $post ) ) || ( 'page' == get_post_type( $post ) ) ) {
 					echo ictu_gctheme_card_featuredimage( $post );
+				} elseif ( ( 'podcast' == get_post_type( $post ) ) ) {
+					echo ictu_gctheme_card_featuredimage( $post );
 				} elseif ( ( GC_BEELDBANK_BRIEF_CPT == get_post_type( $post ) ) || ( GC_BEELDBANK_BEELD_CPT == get_post_type( $post ) ) ) {
 					echo ictu_gctheme_card_featuredimage( $post );
 				} elseif ( ( ICTU_GC_CPT_VAARDIGHEDEN == get_post_type( $post ) ) ) {
@@ -239,6 +241,8 @@ function gc_page_template_loop() {
 		$tipspagina         = get_field( 'themesettings_inclusie_tipspagina', 'option' );
 		$brievenpagina      = get_field( 'themesettings_inclusie_brievenpagina', 'option' );
 		$beeldenpagina      = get_field( 'themesettings_inclusie_beeldenpagina', 'option' );
+		$podcastpagina      = get_field( 'themesettings_gc_podcastoverview', 'option' );
+
 
 		// by default select vaardigheden
 		$select_contenttype = ICTU_GC_CPT_VAARDIGHEDEN;
@@ -258,6 +262,9 @@ function gc_page_template_loop() {
 		} elseif ( is_object( $beeldenpagina ) && $beeldenpagina->ID == $currentpageID ) {
 			// overzichtspagina voor beelden
 			$select_contenttype = GC_BEELDBANK_BEELD_CPT;
+		} elseif ( is_object( $podcastpagina ) && $podcastpagina->ID == $currentpageID ) {
+			// overzichtspagina voor beelden
+			$select_contenttype = 'podcast';
 		}
 
 
@@ -274,6 +281,12 @@ function gc_page_template_loop() {
 
 			$columncounter = 'grid--col-2';
 			$countcount    = $items->found_posts;
+
+			if ( 'podcast' === $select_contenttype ) {
+				if ( $countcount < 3 ) {
+					$countcount = 3;
+				}
+			}
 
 			if ( $countcount < 2 ) {
 				$columncounter = 'grid--col-1';
@@ -300,6 +313,8 @@ function gc_page_template_loop() {
 					$citaat = get_field( 'facts_citaten', $post->ID );
 					echo ictu_gctheme_card_doelgroep( $post, $citaat );
 				} elseif ( ( GC_BEELDBANK_BRIEF_CPT == get_post_type( $post ) ) || ( GC_BEELDBANK_BEELD_CPT == get_post_type( $post ) ) ) {
+					echo ictu_gctheme_card_featuredimage( $post );
+				} elseif ( ( 'podcast' == get_post_type( $post ) ) ) {
 					echo ictu_gctheme_card_featuredimage( $post );
 				} elseif ( ( ICTU_GC_CPT_VAARDIGHEDEN == get_post_type( $post ) ) ) {
 					echo ictu_gctheme_card_vaardigheid( $post );
