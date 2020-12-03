@@ -2420,7 +2420,7 @@ function gc_wbvb_comment_item( $comment, $args, $depth ) {
 	}
 
 	?>
-    <<?php echo $tag ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() ?>"<?php echo $status ?>>
+    <<?php echo $tag ?><?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() ?>"<?php echo $status ?>>
 
 	<?php if ( 'div' != $args['style'] ) : ?>
         <div id="div-comment-<?php comment_ID() ?>" class="comment-body">
@@ -2553,7 +2553,6 @@ function gc_wbvb_archive_loop() {
 			}
 
 
-
 			echo '<section class="entry teaser ' . $image_class . '" itemscope itemtype="http://schema.org/SocialMediaPosting" id="' . $theID . '">';
 			echo '<a href="' . $permalink . '" itemprop="url" class="teaser__link">';
 
@@ -2626,7 +2625,21 @@ function gc_wbvb_add_taxonomy_description() {
 
 
 	if ( ! is_category() && ! is_tag() && ! is_tax() && ! is_page() ) {
-		return;
+
+		if ( ! is_category() && ! is_tag() && ! is_tax() && ! is_page() ) {
+			if ( is_post_type_archive( 'podcast' ) ) {
+				$object     = get_post_type_object( get_post_type() )->labels;
+				$site_title = get_bloginfo( 'name' );
+				$headline   = sprintf( '<h1 class="archive-title">%s</h1>', $site_title . ' podcasts' );
+				if ( $headline || $intro_text ) {
+					printf( '<div class="taxonomy-description">%s</div>', $headline );
+				} else {
+					echo '';
+				}
+			}
+
+			return;
+		}
 	}
 
 //    if ( get_query_var( 'paged' ) >= 2 )
@@ -3060,7 +3073,7 @@ een maskering van de URL voor het MP3-bestand
 */
 add_filter( 'ssp_episode_download_link', 'ssp_use_raw_audio_file_url', 10, 3 );
 
-function ssp_use_raw_audio_file_url ( $url, $episode_id, $file ) {
+function ssp_use_raw_audio_file_url( $url, $episode_id, $file ) {
 	return $file;
 }
 
