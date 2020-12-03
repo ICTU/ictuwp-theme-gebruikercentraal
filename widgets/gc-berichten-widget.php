@@ -52,7 +52,7 @@ class GC_berichten_widget extends WP_Widget {
 
 		echo '<p><label for="' . $this->get_field_id( 'verberg_uitgelichte_afbeelding' ) . '">';
 		echo '<input type="checkbox" id="' . $this->get_field_id( 'verberg_uitgelichte_afbeelding' ) . '" name="' . $this->get_field_name( 'verberg_uitgelichte_afbeelding' ) . '"' . $checked . '>';
-		echo __( "Vink aan om de uitgelichte afbeelding te verbergen:", 'gebruikercentraal' );
+		echo __( "Vink aan om de uitgelichte afbeelding te verbergen", 'gebruikercentraal' );
 		echo '</label></p>';
 
 
