@@ -113,14 +113,14 @@ function gc_wbvb_authorbox_actieteamlid( $userid ) {
 
 function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = '' ) {
 
-	if ( ( GC_BEELDBANK_BEELD_CPT == get_post_type() ) || ( GC_BEELDBANK_BRIEF_CPT == get_post_type() ) ) {
+	// niet tonen voor de beeldbank-CPTs en podcast
+	if ( ( GC_BEELDBANK_BEELD_CPT == get_post_type() ) || ( GC_BEELDBANK_BRIEF_CPT == get_post_type() ) || ( 'podcast' == get_post_type() ) ) {
 		return;
 	}
 
 	global $default_persoon_plaatje;
 
 	$header_tag = 'h2';
-
 	if ( is_archive() ) {
 		$header_tag = 'h1';
 		$prefix     = _x( 'Posts by', 'author box', 'gebruikercentraal' );
@@ -224,7 +224,7 @@ function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = 
 		if ( get_field( 'linkedin', $acf_userid ) ) {
 			$social_links[2]['class'] = 'linkedin';
 			$social_links[2]['title'] = _x( 'Linked-In profiel', 'author box', 'gebruikercentraal' ) . ' van ' . $gebruikersnaam;
-			$social_links[2]['url']   = get_field( 'twitter', $acf_userid );
+			$social_links[2]['url']   = get_field( 'linkedin', $acf_userid );
 		}
 
 		if ( get_field( 'facebook', $acf_userid ) ) {
