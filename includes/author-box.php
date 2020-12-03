@@ -113,7 +113,8 @@ function gc_wbvb_authorbox_actieteamlid( $userid ) {
 
 function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = '' ) {
 
-	if ( ( GC_BEELDBANK_BEELD_CPT == get_post_type() ) || ( GC_BEELDBANK_BRIEF_CPT == get_post_type() ) ) {
+	// niet tonen voor de beeldbank-CPTs en podcast
+	if ( ( GC_BEELDBANK_BEELD_CPT == get_post_type() ) || ( GC_BEELDBANK_BRIEF_CPT == get_post_type() ) || ( 'podcast' == get_post_type() ) ) {
 		return;
 	}
 
