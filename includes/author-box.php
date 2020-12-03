@@ -121,7 +121,6 @@ function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = 
 	global $default_persoon_plaatje;
 
 	$header_tag = 'h2';
-
 	if ( is_archive() ) {
 		$header_tag = 'h1';
 		$prefix     = _x( 'Posts by', 'author box', 'gebruikercentraal' );
@@ -225,7 +224,7 @@ function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = 
 		if ( get_field( 'linkedin', $acf_userid ) ) {
 			$social_links[2]['class'] = 'linkedin';
 			$social_links[2]['title'] = _x( 'Linked-In profiel', 'author box', 'gebruikercentraal' ) . ' van ' . $gebruikersnaam;
-			$social_links[2]['url']   = get_field( 'twitter', $acf_userid );
+			$social_links[2]['url']   = get_field( 'linkedin', $acf_userid );
 		}
 
 		if ( get_field( 'facebook', $acf_userid ) ) {
