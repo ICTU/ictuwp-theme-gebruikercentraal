@@ -788,7 +788,7 @@ function gc_shared_add_menu_script() {
 
 	if ( ! is_admin() ) {
 
-		wp_enqueue_script( 'gc-shared-menu', WBVB_THEMEFOLDER . '/js/gc-main-min.js', '', '', true );
+		wp_enqueue_script( 'gc-shared-menu', WBVB_THEMEFOLDER . '/js/gc-main-min.js', array( 'jquery' ), '', true );
 		$params = array(
 			'showsubmenu'  => _x( 'Show submenu for', 'Screen reader text for menu', 'gebruikercentraal' ),
 			'closesubmenu' => _x( 'Hide submenu for', 'Screen reader text for menu', 'gebruikercentraal' ),
