@@ -577,6 +577,7 @@ function gc_wbvb_post_append_postinfo( $post_info ) {
 
 	global $wp_query;
 	global $post;
+	
 
 	// @since 4.3.4
 	if ( ! function_exists( 'get_field' ) ) {
@@ -615,6 +616,10 @@ function gc_wbvb_post_append_postinfo( $post_info ) {
 		} else {
 
 			if ( 'event' == get_post_type() ) {
+				return '';
+//			} elseif ( 'page' == get_post_type() ) {
+//				return '';
+			} elseif ( 'podcast' == get_post_type() ) {
 				return '';
 			} elseif ( ICTU_GC_CPT_STAP == get_post_type() ) {
 				return '';
@@ -690,6 +695,10 @@ function gc_wbvb_add_single_socialmedia_buttons() {
 
 
 	$show_socialmedia_buttons_on_this_page = '';
+
+	if ( 'podcast' == get_post_type() ) {
+		return;
+	}
 
 	if ( function_exists( 'get_field' ) ) {
 
