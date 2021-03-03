@@ -577,7 +577,7 @@ function gc_wbvb_post_append_postinfo( $post_info ) {
 
 	global $wp_query;
 	global $post;
-	
+
 
 	// @since 4.3.4
 	if ( ! function_exists( 'get_field' ) ) {
@@ -3088,3 +3088,99 @@ function ssp_use_raw_audio_file_url( $url, $episode_id, $file ) {
 
 //========================================================================================================
 
+// bij het wijzigen van de avatar van een slaan we de URL voor de foto op als een
+// globaal beschikbare waarde voor de gebruiker.
+// zo is de avatar die je invoerde op site [x] ook beschikbaar op site [y]
+// de user variable 'auteursfoto_url' kan ook door andere themes (zoals ictuwp-theme-gc2020)
+// worden gebruikt.
+
+add_action( 'acf/save_post', 'gc_wbvb_update_auteursfoto' );
+
+function gc_wbvb_update_auteursfoto( $post_id ) {
+
+	$user_id     = str_replace( "user_", "", $post_id );
+	$auteursfoto = get_user_meta( $user_id, 'auteursfoto', true );
+	$size        = 'thumb-cardv3';
+
+	if ( $auteursfoto ) {
+		$image = wp_get_attachment_image_src( $auteursfoto, $size );
+		if ( $image[0] ) {
+			update_user_meta( $user_id, 'auteursfoto_url', $image[0] );
+		}
+	}
+
+}
+
+//========================================================================================================
+
+function gc_wbvb_auteursfoto_waarschuwing( $value, $post_id, $field ) {
+
+	$size                 = 'thumb-cardv3';
+	$authorfoto_acf_field = wp_get_attachment_image_src( $value, $size );
+	$user_id              = str_replace( "user_", "", $post_id );
+	$authorfoto_url       = get_user_meta( $user_id, 'auteursfoto_url', true );
+	$warning              = '';
+
+	if ( ! $authorfoto_acf_field ) {
+		// er is geen mediabestand gevonden voor dit ID, dus
+		// mediabestand bestaat niet op deze omgeving
+		$warning = '<div style="border: 1px solid silver; background: white; padding: 1rem; overflow:hidden;">';
+		if ( $authorfoto_url ) {
+			$warning .= '<a href="' . $authorfoto_url . '" target="_blank"><img alt="" src="' . $authorfoto_url . '" width="150" style="float: left; margin-right: 1rem;"></a>';
+			$warning .= '<h1 style="margin: 0; padding: 0;">Let op!</h1>';
+			$warning .= '<p>De auteursfoto die je hiernaast ziet is geupload via een andere subsite op deze WordPress-omgeving.<br>';
+			$warning .= 'Daarom zie je hieronder als waarde voor de auteurs-foto: ';
+			$warning .= '<strong><em>Geen afbeelding geselecteerd</em></strong><br>';
+		} else {
+			// nog geen plaatje beschikbaar
+			$warning .= '<h1 style="margin: 0; padding: 0;">Let op!</h1>';
+		}
+		$warning .= 'De foto die je hier uploadt, wordt hierna getoond op elke andere subsite die het Gebruiker Centraal-theme gebruikt.<br>';
+		$warning .= 'Er is maar 1 auteursfoto mogelijk voor een auteur. ';
+		$warning .= 'Een gebruiker / auteur MOET een auteursfoto hebben. Als je geen auteursfoto meer wil, upload dan een neutraal plaatje.</p>';
+		$warning .= '</div>';
+
+	} else {
+
+		// voor het ID is wel een mediabestand gevonden. Als de URL hiervan ook in de metadata voor de gebruiker staat
+		// weten we zeker dat dit de goede avatar is. Anders is het misschien een willekeurig plaatje dat op een andere
+		// subsite hoort bij de gebruiker, maar daar nooit eerder is opgeslagen in de metadata voor de gebruiker
+
+		if ( $authorfoto_url === $authorfoto_acf_field[0] ) {
+			// prima
+		} else {
+			//
+			$warning = '<div style="border: 1px solid silver; background: white; padding: 1rem; overflow:hidden;">';
+
+			if ( $authorfoto_acf_field[0] ) {
+
+				// voor de zekerheid slaan we de foto alvast op
+				update_user_meta( $user_id, 'auteursfoto_url',  $authorfoto_acf_field[0] );
+
+				$warning .= '<a href="' . $authorfoto_acf_field[0] . '" target="_blank"><img alt="" src="' . $authorfoto_acf_field[0] . '" width="150" style="float: left; margin-right: 1rem;"></a>';
+				$warning .= '<h1 style="margin: 0; padding: 0;">Let op!</h1>';
+				$warning .= '<p>We weten niet zeker dat de foto die je hiernaast ziet, de avatar is die je bedoeld had.';
+				$warning .= 'De foto staat namelijk nog niet in de metadata voor deze gebruiker. ';
+				$warning .= 'Doordat deze metadata  pas sinds maart 2021 beschikbaar zijn, is het dus goed mogelijk dat de foto VOOR deze tijd is toegevoegd. <br>';
+				$warning .= 'Als deze foto wel klopt, kun je op \'opslaan\' klikken en dan zie je deze waarschuwing niet meer.<br> Wil je de foto opnieuw uploaden? Klik op de foto om deze in een nieuw tabblad te openen. Sla deze foto op en uploadt opnieuw. <br>';
+			}
+			$warning .= 'De foto die je hier uploadt, wordt hierna getoond op elke andere subsite die het Gebruiker Centraal-theme gebruikt.<br>';
+			$warning .= 'Er is maar 1 auteursfoto mogelijk voor een auteur. ';
+			$warning .= 'Een gebruiker / auteur MOET een auteursfoto hebben. Als je geen auteursfoto meer wil, upload dan een neutraal plaatje.</p>';
+			$warning .= '</div>';
+
+		}
+
+	}
+
+	if ( is_admin() ) {
+		echo $warning;
+	}
+
+	return $value;
+}
+
+// Apply to auteursfoto field
+add_filter( 'acf/load_value/name=auteursfoto', 'gc_wbvb_auteursfoto_waarschuwing', 10, 3 );
+
+//========================================================================================================
