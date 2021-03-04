@@ -52,24 +52,20 @@ function gc_wbvb_authorbox_actieteamlid( $userid ) {
 			$twitter = preg_replace( '/@/i', '', $twitter );
 		}
 
-		$authorfoto = get_field( 'auteursfoto', $acf_userid );
+		$imagetag       = '';
+		$img_width      = 300;
+		$img_height     = 300;
+		$img_alt        = $gebruikersnaam;
+		$authorfoto_url = get_user_meta( $userid, 'auteursfoto_url', true );
 
-		$image    = wp_get_attachment_image_src( $authorfoto['id'], 'thumbnail' );
-		$imagetag = '';
-
-		if ( $image[0] ) {
-			$imagetag = '            <img alt="" src="' . $image[0] . '" class="author-photo photo avatar" height="' . $image[2] . '" width="' . $image[1] . '" alt="' . $authorfoto['id'] . '" />';
-		} else {
-
-			$imagetag = '            <img alt="" src="' . WBVB_THEMEFOLDER . '/images/' . $default_persoon_plaatje . '" class="author-photo photo avatar" height="' . $image[2] . '" width="' . $image[1] . '" alt="' . $authorfoto['id'] . '" />';
-
+		if ( ! $authorfoto_url ) {
+			$authorfoto     = get_field( 'auteursfoto', $acf_userid );
+			$authorfoto_url = wp_get_attachment_image_src( $authorfoto['id'], 'thumbnail' );
 		}
 
-
-		if ( $image[0] ) {
-			$imagetag = '            <img src="' . $image[0] . '" class="author-photo photo avatar" height="' . $image[2] . '" width="' . $image[1] . '" alt="' . $authorfoto['id'] . '" />';
+		if ( $authorfoto_url ) {
+			$imagetag = '            <img alt="" src="' . $authorfoto_url . '" class="author-photo photo avatar" height="' . $img_height . '" width="' . $img_width . '" alt="' . $img_alt . '" />';
 		} else {
-
 			$args = array(
 				'size'  => 82,
 				'class' => 'author-photo photo avatar',
@@ -112,7 +108,6 @@ function gc_wbvb_authorbox_actieteamlid( $userid ) {
 
 
 function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = '' ) {
-
 	// niet tonen voor de beeldbank-CPTs en podcast
 	if ( ( GC_BEELDBANK_BEELD_CPT == get_post_type() ) || ( GC_BEELDBANK_BRIEF_CPT == get_post_type() ) || ( 'podcast' == get_post_type() ) ) {
 		return;
@@ -148,10 +143,10 @@ function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = 
 		$user_post_count = count_user_posts( $userid );
 		$contact_info    = '';
 
-		$social_links    = [];
-		$links           = [];
+		$social_links = [];
+		$links        = [];
 
-		$author_link     = '';
+		$author_link = '';
 
 		if ( is_object( $user_info ) ) {
 			$gebruikersnaam = $user_info->display_name;
@@ -164,22 +159,44 @@ function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = 
 		$functiebeschrijving = get_field( 'functiebeschrijving', $acf_userid );
 
 		// Avatar
-		$authorfoto = get_field( 'auteursfoto', $acf_userid );
-		$image      = wp_get_attachment_image_src( $authorfoto['id'], 'thumbnail' );
+		$imagetag       = '';
+		$img_width      = 300;
+		$img_height     = 300;
+		$img_alt        = $gebruikersnaam;
+		$authorfoto_url = get_user_meta( $userid, 'auteursfoto_url', true );
 
-		if ( $image[0] ) {
-			$image = '<img src="' . $image[0] . '" class="author-photo photo avatar" height="' . $image[2] . '" width="' . $image[1] . '" alt="' . $authorfoto['id'] . '" />';
+		if ( ! $authorfoto_url ) {
+			// hopelijk een eenmalige actie
+			// geen waarde gevonden voor 'auteursfoto_url' dus we gaan de waarde van het ACF-veld voor
+			// 'auteursfoto' opzoeken. Als dat er is, slaan we de URL op in 'auteursfoto_url'.
+			// Daarmee zou dit dus een eenmalige actie moeten zijn
+			$authorfoto       = get_field( 'auteursfoto', $acf_userid );
+			$authorfoto_array = wp_get_attachment_image_src( $authorfoto['id'], 'thumbnail' );
+
+			if ( $authorfoto_array ) {
+
+				$authorfoto_url = $authorfoto_array[0];
+				$img_width      = $authorfoto_array[1];
+				$img_height     = $authorfoto_array[2];
+
+				if ( $authorfoto_url ) {
+					update_user_meta( $userid, 'auteursfoto_url', $authorfoto_url );
+				}
+			}
+		}
+
+		if ( $authorfoto_url ) {
+			$imagetag = '<img alt="" src="' . $authorfoto_url . '" class="author-photo photo avatar" height="' . $img_height . '" width="' . $img_width . '" alt="' . $img_alt . '" />';
 		} else {
-
 			$args = array(
 				'size'  => 82,
 				'class' => 'author-photo photo avatar',
 			);
 
 			$defaultplaatje = get_stylesheet_directory_uri() . '/images/' . $default_persoon_plaatje;
-			$image          = get_avatar( $userid, 82, $defaultplaatje, $authorfoto['id'], $args );
-		}
+			$imagetag       = get_avatar( $userid, 82, $defaultplaatje, $authorfoto['id'], $args );
 
+		}
 
 		// Contact info
 		$contact_fields['tel']  = get_field( 'publiek_telefoonnummer', $acf_userid );
@@ -206,7 +223,7 @@ function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = 
 			$links['mail']['text']  = get_field( 'publiek_mailadres', $acf_userid );
 		}
 
-		if($links) {
+		if ( $links ) {
 			foreach ( $links as $link ) {
 				$contact_info .= '<a href="' . $link['url'] . '" class="link link--contact link--' . $link['class'] . '" title="' . $link['title'] . '" itemprop="' . $link['class'] . '">' . $link['text'] . '</a>';
 			}
@@ -233,7 +250,7 @@ function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = 
 			$social_links[3]['url']   = get_field( 'facebook', $acf_userid );
 		}
 
-		if($social_links) {
+		if ( $social_links ) {
 			foreach ( $social_links as $social_link ) {
 				$sl .= '<li class="social-links__item">' .
 				       '<a href="' . $social_link['url'] . '" class="link link--social ' . $social_link['class'] . '" title="' . $social_link['title'] . '">' . $social_link['title'] . '</a></li>';
@@ -257,19 +274,17 @@ function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = 
 		 * Section HTML
 		 */
 
-
-
 		// Plaatje
-		$author_box = '<section class="author ' . ( is_archive() ? 'author--full' : 'author--box' ) . ' ' . ( $image ? 'l-with-image' : 'l-without-image' ) . '" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">' .
-		              ( $image ? '<figure class="author__picture">' . $image . '</figure>' : '' );
+		$author_box = '<section class="author ' . ( is_archive() ? 'author--full' : 'author--box' ) . ' ' . ( $imagetag ? 'l-with-image' : 'l-without-image' ) . '" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">' .
+		              ( $imagetag ? '<figure class="author__picture">' . $imagetag . '</figure>' : '' );
 
 		// Content
 		$author_box .= '<div class="author__content">' .
-		               '<div class="l-author-header">'.
+		               '<div class="l-author-header">' .
 		               '<' . $header_tag . ' class="' . ( is_archive() ? 'page__title' : 'author__title' ) . '">'
 		               . $author_title . '</' . $header_tag . '>' .
 		               ( $functiebeschrijving ? '<span class="meta-data__item author__function">' . $functiebeschrijving . '</span>' : '' ) .
-		               '</div>'. // End header
+		               '</div>' . // End header
 		               ( $biografie ? '<p>' . $biografie . '</p>' : '' );
 
 		// Info
