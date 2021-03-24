@@ -73,9 +73,12 @@ img {
   height: auto;
 }
 
-iframe {
+iframe[src*="vimeo"],
+iframe[src*="youtube"] {
+	// specifiek voor iframes van Vimeo en YouTube, 
+	// om te voorkomen dat de captcha meuk van Google er ook last van heeft
   @media only screen and (max-width: @break_tablet ) {
-    max-width: 95% !important;
+    max-width: 100% !important;
     max-height: 320px;
   }
   @media only screen and (min-width: @break_tablet ) {
