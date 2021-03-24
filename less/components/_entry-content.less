@@ -118,13 +118,15 @@
     }
   }
 
-  @media @tablet {
+  @media @desktop {
+    padding-left: 0;
+
     position: relative;
 
     > .social-media {
       position: absolute;
       max-width: 3.2rem;
-      margin: 0;
+      margin: 0 0 0 -5.5rem;
       top: 0;
       left: 0;
 
@@ -135,16 +137,6 @@
           margin-top: .4rem;
         }
       }
-    }
-
-    // not for pages without social
-  }
-
-  @media @desktop {
-    padding-left: 0;
-
-    > .social-media {
-      margin-left: -5.5rem;
     }
   }
 }
