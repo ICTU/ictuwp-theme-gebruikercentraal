@@ -186,7 +186,7 @@ function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = 
 		}
 
 		if ( $authorfoto_url ) {
-			$imagetag = '<img alt="" src="' . $authorfoto_url . '" class="author-photo photo avatar" height="' . $img_height . '" width="' . $img_width . '" alt="' . $img_alt . '" />';
+			$imagetag = '<img src="' . $authorfoto_url . '" class="author-photo photo avatar" height="' . $img_height . '" width="' . $img_width . '" alt="' . $img_alt . '" />';
 		} else {
 			$args = array(
 				'size'  => 82,
