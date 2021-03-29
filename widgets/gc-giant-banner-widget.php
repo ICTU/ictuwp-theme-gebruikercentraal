@@ -191,12 +191,6 @@ function append_header_css_for_gc_giant_banner_widget() {
 							$header_css .= " background-image: url('" . $image['url'] . "');\n";
 							$header_css .= "} \n";
 						}
-
-						$header_css .= ' $widget_id: ' . $widget_id . "  \n";
-						$header_css .= ' $image_alignment: ' . $image_alignment . "  \n";
-
-						$header_css .= "  breakpoint['id']: " . $breakpoint['id'] . " */\n";
-
 					}
 				}
 			}
