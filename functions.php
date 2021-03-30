@@ -791,6 +791,9 @@ function gc_wbvb_single_post_meta( $post_meta ) {
 		( ( 'event' == get_post_type() ) && ( is_single() ) )
 	) {
 
+	    // remove the footer markup
+		remove_action( 'genesis_entry_footer', 'genesis_entry_footer_markup_open', 5 );
+		remove_action( 'genesis_entry_footer', 'genesis_entry_footer_markup_close', 15 );
 
 		if ( 'post' == get_post_type() ) {
 //            $return = '[post_categories]    [post_tags]';
