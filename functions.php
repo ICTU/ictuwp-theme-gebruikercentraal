@@ -791,7 +791,7 @@ function gc_wbvb_single_post_meta( $post_meta ) {
 		( ( 'event' == get_post_type() ) && ( is_single() ) )
 	) {
 
-	    // remove the footer markup
+		// remove the footer markup
 		remove_action( 'genesis_entry_footer', 'genesis_entry_footer_markup_open', 5 );
 		remove_action( 'genesis_entry_footer', 'genesis_entry_footer_markup_close', 15 );
 
@@ -1249,12 +1249,12 @@ function gc_wbvb_add_pageheader_tags() {
 	// check of het eerste bericht een enorme afbeelding heeft
 	if ( has_post_thumbnail( $postid ) && 'ja' === $featimg_automatic_insert ) {
 
-		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $postid ), IMG_SIZE_HUGE );
-
-		$theid = 'imgid_' . $postid;
+		$img_id = get_post_thumbnail_id( $postid );
+		$image  = wp_get_attachment_image_src( $img_id, IMG_SIZE_HUGE );
+		$alt_text = get_post_meta( $img_id, '_wp_attachment_image_alt', true );
 
 		if ( $image[1] >= IMG_SIZE_HUGE_MIN_WIDTH ) {
-			echo '<figure class="hero-image"><img src="' . $image[0] . '" class="hero-image__image"></figure>';
+			echo '<figure class="hero-image"><img src="' . $image[0] . '" class="hero-image__image" alt="' . $alt_text . '"></figure>';
 		}
 
 	}
@@ -3158,7 +3158,7 @@ function gc_wbvb_auteursfoto_waarschuwing( $value, $post_id, $field ) {
 			if ( $authorfoto_acf_field[0] ) {
 
 				// voor de zekerheid slaan we de foto alvast op
-				update_user_meta( $user_id, 'auteursfoto_url',  $authorfoto_acf_field[0] );
+				update_user_meta( $user_id, 'auteursfoto_url', $authorfoto_acf_field[0] );
 
 				$warning .= '<a href="' . $authorfoto_acf_field[0] . '" target="_blank"><img alt="" src="' . $authorfoto_acf_field[0] . '" width="150" style="float: left; margin-right: 1rem;"></a>';
 				$warning .= '<h1 style="margin: 0; padding: 0;">Let op!</h1>';
