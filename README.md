@@ -4,8 +4,6 @@
 
 Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.nl)
 
-Test voor Github workflow.
-
 ## Contact
 * Victor Zuydweg
 * Paul van Buuren: paul@wbvb.nl
