@@ -1057,3 +1057,13 @@ if ( ! function_exists( 'ictu_gctheme_write_lightboximage' ) ) {
 
 //========================================================================================================
 
+
+// Give widget title an H2, instead of the default H4
+// https://trello.com/c/6InxI8zn/468-widgettitel-in-footer-gc-heeft-h4-en-slaat-niveaus-over
+add_filter( 'genesis_register_sidebar_defaults', 'ictu_gctheme_widget_title_headerlevel' );
+
+function ictu_gctheme_widget_title_headerlevel( $defaults ) {
+	$defaults['before_title'] = '<h2 class="widget-title widgettitle">';
+	$defaults['after_title'] = '</h2>';
+	return $defaults;
+}
