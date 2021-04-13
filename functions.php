@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.3.18
-// @desc.   Betere styling iframes, socialmediaknopjes en attendeelist op tablet en smaller.
+// @version 4.3.19
+// @desc.   Kleine verbeteringen omwille van de toegankelijkheidscheck.
 // @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '4.3.18' );
-define( 'CHILD_THEME_DESCRIPTION', "4.3.18 - Betere styling iframes, socialmediaknopjes en attendeelist op tablet en smaller." );
+define( 'CHILD_THEME_VERSION', '4.3.19' );
+define( 'CHILD_THEME_DESCRIPTION', "4.3.19 - Kleine verbeteringen omwille van de toegankelijkheidscheck." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );

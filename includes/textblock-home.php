@@ -82,7 +82,7 @@ if ( ! function_exists( 'ictu_gctheme_frontend_general_get_textblocks' ) ) :
 					$title_id          = sanitize_title( $textblock_title . '-title' );
 
 					$return .= '<section aria-labelledby="' . $title_id . '" class="text-block">';
-					$return .= '<' . $args['titletag'] . ' class="text-block__title">' . $textblock_title . '</' . $args['titletag'] . '>';
+					$return .= '<' . $args['titletag'] . ' id="' . $title_id . '" class="text-block__title">' . $textblock_title . '</' . $args['titletag'] . '>';
 					$return .= $textblock_content;
 
 					if ( have_rows( 'optional_links' ) ):
