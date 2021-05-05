@@ -273,6 +273,8 @@ add_filter( 'get_the_author_genesis_author_box_archive', '__return_true' );
 remove_action( 'genesis_after_entry', 'genesis_do_author_box_single', 8 );
 add_action( 'genesis_entry_content', 'genesis_do_author_box_single', 20 );
 
+
+
 //========================================================================================================
 
 //* voor de widgets
@@ -491,7 +493,7 @@ function gc_wbvb_breadcrumb_args( $args ) {
 
 	$args['list_sep'] = ', '; // Genesis 1.5 and later
 
-	$args['prefix'] = '<div class="breadcrumb"><div class="wrap"><nav class="breadlist">';
+	$args['prefix'] = '<div class="breadcrumb"><div class="wrap"><nav class="breadlist" aria-label="' . _x( "Kruimelpad", 'Aria-label', 'gebruikercentraal' ) . '">';
 	$args['suffix'] = '</nav></div></div>';
 
 	$args['heirarchial_attachments'] = true; // Genesis 1.5 and later
@@ -680,10 +682,12 @@ function gc_wbvb_get_date_badge() {
 	if ( date( "Y" ) == get_the_date( 'Y' ) ) {
 		$jaar = '';
 	} else {
-		$jaar = '<span class="jaar">' . get_the_date( 'Y' ) . '</span>';
+		$jaar = '<span class="jaar" aria-hidden="true">' . get_the_date( 'Y' ) . '</span>';
 	}
 
-	echo ' <span class="date-badge" itemprop="datePublished" content="' . $publishdate . '"><span class="dag">' . get_the_date( 'd' ) . '</span> <span class="maand">' . get_the_date( 'M' ) . '</span>' . $jaar . '</span>';
+	$publishdate_label = sprintf( __( 'Gepubliceerd op %s', 'gebruikercentraal' ), $publishdate );
+
+	echo ' <span class="date-badge" itemprop="datePublished" content="' . $publishdate . '" aria-labelledby="johohohohoho"><span class="dag" aria-hidden="true">' . get_the_date( 'd' ) . '</span> <span class="maand" aria-hidden="true">' . get_the_date( 'M' ) . '</span>' . $jaar . '<span id="johohohohoho" class="visuallyhidden">' . $publishdate_label . '</span></span>';
 
 }
 
