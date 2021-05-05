@@ -9,7 +9,7 @@
 // @license GPL-2.0+
 // @version 4.3.7
 // @desc.   Spotlight-component toegevoegd; tekstblok-component voor home toegevoegd.
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 
 
 //* Template Name: GC-pagina - Alle auteurs
@@ -48,7 +48,7 @@ function gc_wbvb_show_alle_auteurs() {
 
 	echo '<div class="actieteam">';
 
-	// Iterate through users, filtering out the ones which don't have the roles we want 
+	// Iterate through users, filtering out the ones which don't have the roles we want
 	foreach ( array_filter( $users, 'filter_two_roles' ) as $user ) {
 		$user_post_count = count_user_posts( $user->ID );
 		if ( $user_post_count > 0 ) {

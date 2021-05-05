@@ -8,7 +8,7 @@
 // @license GPL-2.0+
 // @version 3.15.9
 // @desc.   CTA-kleuren, a11y groen, sharing buttons optional, beeldbank CPT code separation.
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 
 
 // Vars

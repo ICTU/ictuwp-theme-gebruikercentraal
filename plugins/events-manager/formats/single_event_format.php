@@ -10,7 +10,7 @@
 // @license GPL-2.0+
 // @version 4.3.4
 // @desc.   Event-single: niet meer tonen van samenvatting.
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 
 
 showdebug( __FILE__, 'formats' );
@@ -171,8 +171,8 @@ if ( $EM_gc_wbvb_single_event_links ) {
  * Er zijn twee soorten locaties:
  * - fysieke locatie
  * - URL (een webinar)
- * 
- * En inmiddels zijn er events toegevoegd met een nep-URL. Een soort fysieke locatie met 
+ *
+ * En inmiddels zijn er events toegevoegd met een nep-URL. Een soort fysieke locatie met
  * geen ander doel dan het omzeilen van de plicht om een locatie toe te voegen.
  *
  * De code moet er ook rekening mee houden dat er geen locatie noch URl ingevoerd is.
@@ -336,5 +336,5 @@ if ( $locationname && ( ! $locationurl ) ) {
     </div>
 </div>
 {/has_bookings}
-    
+
 

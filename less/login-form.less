@@ -9,7 +9,7 @@
 // @license GPL-2.0+
 // @version 4.1.6
 // @desc.   Separate CSS files restored. Login form slightly retouched.
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 
 <!--                                                            -->
 <!-- ========================================================   -->
@@ -61,7 +61,7 @@
 @import "includes/30-text-styles.less";                 // font-styles, shared with admin editor-styles.less */
 
 /*
----------------------------------------------------------------------------------------------------- */ 
+---------------------------------------------------------------------------------------------------- */
 
 .button_shared_pijltje_1() {
     background: @button-normal url('../images/icon-knop-groen.svg') no-repeat right center;
@@ -82,13 +82,13 @@ body.login, #error-page {
 
 	background: @gc_blue_darkest;
 	padding-bottom: 3em;
-	
+
 	div#login {
-		
+
 		padding-top: 2%;
-		
+
 		.basefont();
-		
+
 		h1:not(.admin-email__heading) {
 			background-image: url('../images/logos/logo-gebruikercentraal-v2.svg');
 			background-position: center center;
@@ -96,40 +96,40 @@ body.login, #error-page {
 			background-size: contain;
 			height: 150px;
 			margin-bottom: 2rem;
-			
+
 			a {
 				.visuallyhidden();
 			}
 		}
-		
+
 		form#loginform {
 			padding: 1rem;
 		}
-		
+
 		form#loginform, form#lostpasswordform, form#registerform {
 			p, label {
 				color: @txt;
 			}
-			
+
 			p {
 				&.forgetmenot {
 					input#rememberme {
 					}
 				}
-				
+
 				&.submit {
 					clear: both;
-					
+
 					input#wp-submit {
 						.button-shared();
 						height: auto !important;
 					}
 				}
 			}
-			
+
 			input {
-				&#user_login, 
-				&#user_pass, 
+				&#user_login,
+				&#user_pass,
 				&#user_email {
 					.inputborder-shared();
 				}
@@ -143,7 +143,7 @@ body.login, #error-page {
 				border-radius: 0;
 			}
 		}
-		
+
 		#nav, #backtoblog {
 			&, a {
 			color: @wit;

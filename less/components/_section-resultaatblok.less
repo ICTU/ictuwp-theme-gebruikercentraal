@@ -8,7 +8,7 @@
 // @license GPL-2.0+
 // @version 4.1.2
 // @desc.   Copied styling for .cards and various subsets from inclusie to gc-theme.
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 
 //=========================================================================================================
 
@@ -38,7 +38,7 @@
 
 		display: flex;
 		flex-direction: column;
-	
+
 		background: @wit;
 		border: @section_border_width solid @border_color;
 		margin-right: ( ( @section_border_width / 2 ) * -1 );
@@ -55,26 +55,26 @@
 		& + .section--resultaten_block {
 			margin-left: ( ( @section_border_width / 2 ) * -1 );
 		}
-	}	
+	}
 
 	&.item-count-even {
 		.section--resultaten_block {
 			margin-left: ( ( @section_border_width / 2 ) * -1 );
 			margin-bottom: ( @section_border_width * -1 );
-		}	
-	}	
+		}
+	}
 
 	&.item-count-veel {
 
 		// .item-count-veel:
 		// 3 blokken of meer mogen gestapeld worden, met een grote boven en twee kleine onder
-		
+
 		// .item-count-even:
 		// twee blokken mogen naast elkaar, met elk 50% breedte
-		
+
 		// .item-count-1:
 		// 1 enkel blok is 100% breed
-		
+
 		.section--resultaten_block {
 			&:first-of-type {
 				flex-basis: 100%;
@@ -86,7 +86,7 @@
 					flex-direction: column;
 					justify-content: center;
 				}
-								
+
 				.resultaten_block_text,
 				.resultaten_block_image {
 					flex: 1 0 50%;
@@ -96,7 +96,7 @@
 					background: @wit;
 					overflow: hidden;
 					position: relative;
-					
+
 					&:before {
 						content: ' ';
 						background: @gc_pantybrown_xlight;
@@ -125,7 +125,7 @@
 		padding-bottom: 4rem;
 		flex-basis: 45rem;
 		display: flex;
-		
+
 		div.imgcontainer, a {
 			margin: auto;
 			height: auto;
@@ -156,7 +156,7 @@
 		top: 2rem;
 		padding: .75rem 1rem;
 		line-height: 1;
-		
+
 		&.nietzo,
 		&.maarzo {
 			background-image: url('../images/icon-dosdonts-do-white.svg');
@@ -171,19 +171,19 @@
 			background-image: url('../images/icon-dosdonts-dont-white.svg');
 			background-color: @dos_donts_bg_do;
 			color: @wit;
-		}	
+		}
 		&.maarzo {
 			background-image: url('../images/icon-dosdonts-do-white.svg');
 			background-color: @dos_donts_bg_dont;
 			color: @wit;
 			&:before {
 				content: ' ';
-			}	
-			
-		}	
-	
+			}
+
+		}
+
 	}
-	
+
 	h2, h3, h4 {
 		margin-top: 0;
 		padding-top: 0;

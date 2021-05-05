@@ -8,9 +8,9 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.3.19
-// @desc.   Kleine verbeteringen omwille van de toegankelijkheidscheck.
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// @version 4.3.20
+// @desc.   a11y check; URL van git-repo aangepast.
+// @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 
 
 /**
@@ -22,9 +22,9 @@ require_once( get_template_directory() . '/lib/init.php' );
  * Define child theme constants.
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
-define( 'CHILD_THEME_URL', 'https://wbvb.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '4.3.19' );
-define( 'CHILD_THEME_DESCRIPTION', "4.3.19 - Kleine verbeteringen omwille van de toegankelijkheidscheck." );
+define( 'CHILD_THEME_URL', 'https://www.gebruikercentraal.nl/themes/gebruikercentraal' );
+define( 'CHILD_THEME_VERSION', '4.3.20' );
+define( 'CHILD_THEME_DESCRIPTION', "4.3.20 - a11y check; URL van git-repo aangepast." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -1778,7 +1778,7 @@ function gc_wbvb_bg_custom_footer() {
 //========================================================================================================
 
 
-// Right widget space on home page 
+// Right widget space on home page
 function gc_wbvb_write_widget_home_widget_beforecontent() {
 	if ( ! dynamic_sidebar( GC_WBVB_WIDGET_BANNERWIDGETS ) ) {
 		// do nothing
@@ -1809,7 +1809,7 @@ genesis_register_sidebar(
 
 //========================================================================================================
 
-// Left widget space on home page 
+// Left widget space on home page
 function gc_wbvb_write_widget_home_widget_left() {
 	if ( ! dynamic_sidebar( GC_WBVB_WIDGET_HOME_WIDGET_1 ) ) {
 		// do nothing
@@ -1841,7 +1841,7 @@ genesis_register_sidebar(
 //========================================================================================================
 
 
-// Right widget space on home page 
+// Right widget space on home page
 function gc_wbvb_write_widget_home_widget_right() {
 	if ( ! dynamic_sidebar( GC_WBVB_WIDGET_HOME_WIDGET_2 ) ) {
 		// do nothing
@@ -2702,7 +2702,7 @@ function gc_wbvb_add_taxonomy_description() {
 add_filter( 'theme_page_templates', 'gc_wbvb_remove_genesis_page_templates' );
 
 function gc_wbvb_remove_genesis_page_templates( $page_templates ) {
-	// deze paginatemplates zijn verwijderd als php bestand 
+	// deze paginatemplates zijn verwijderd als php bestand
 	// * @since	  4.2.2
 	unset( $page_templates['page_archive.php'] );
 	unset( $page_templates['page_blog.php'] );

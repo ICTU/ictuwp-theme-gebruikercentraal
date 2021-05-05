@@ -10,7 +10,7 @@
 // @license GPL-2.0+
 // @version 3.13.1
 // @desc.   Extra settings in customizer: choice of logos.
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 ///
 
 

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * Gebruiker Centraal
@@ -10,13 +10,13 @@
  * @license GPL-2.0+
  * @version 3.4.11
  * @desc.   Tabs to spaces, tabs to spaces
- * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+ * @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
  */
 
-    
-    showdebug(__FILE__, 'templates search'); 
-/* This general search will find matches within event_name, event_notes, and the location_name, address, town, state and country. */ 
-$args = !empty($args) ? $args:array(); /* @var $args array */ 
+
+    showdebug(__FILE__, 'templates search');
+/* This general search will find matches within event_name, event_notes, and the location_name, address, town, state and country. */
+$args = !empty($args) ? $args:array(); /* @var $args array */
 ?>
 <!-- START General Search -->
 <div class="em-search-text em-search-field">

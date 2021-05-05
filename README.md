@@ -9,10 +9,11 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-4.3.19 - Kleine verbeteringen omwille van de toegankelijkheidscheck.
+4.3.20 - a11y check; URL van git-repo aangepast.
 
 ## Version history
-* 4.3.19 - Kleine verbeteringen omwille van de toegankelijkheidscheck.
+* 4.3.20 - a11y check; URL van git-repo aangepast.
+* 4.3.19 - Kleine verbeteringen omwille van de toegxankelijkheidscheck.
 * 4.3.18 - Betere styling iframes, socialmediaknopjes en attendeelist op tablet en smaller.
 * 4.3.17 - Mogelijkheid om uitgelichte afbeelding te verbergen toegevoegd aan GC_berichten_widget.
 * 4.3.16 - Logo voor expertpanel toegevoegd.

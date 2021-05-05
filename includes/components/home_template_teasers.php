@@ -11,7 +11,7 @@
 // * @since   4.1.4
 // * @version 4.1.5
 // * @desc.   Functionality for home -> stappen moved to theme.
-// * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// * @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 ///
 
 
@@ -37,20 +37,20 @@ if ( !function_exists( 'ictu_gctheme_home_template_teasers' ) ) :
 	 */
 
 	function ictu_gctheme_home_template_teasers( $post = [] ) {
-	
+
 	    global $post;
-	
+
 	    if (function_exists('get_field')) {
-	
+
 	        $home_teasers = get_field('home_template_teasers', $post->ID);
-	
+
 	        if (have_rows('home_template_teasers')):
-	
+
 	            echo '<div id="home_template_teasers">';
-	
+
 				$columncounter = 'grid--col-2';
 				$countcount = count( $home_teasers );
-			
+
 				if ( $countcount < 2  ) {
 					$columncounter = 'grid--col-1';
 				}
@@ -60,19 +60,19 @@ if ( !function_exists( 'ictu_gctheme_home_template_teasers' ) ) :
 				elseif ( $countcount > 2  ) {
 					$columncounter = 'grid--col-3';
 				}
-	
-	
+
+
 	            echo '<div class="grid ' . $columncounter . '">';
-	
-	
+
+
 	            // loop through the rows of data
 	            while (have_rows('home_template_teasers')) : the_row();
-	
+
 	                $section_title = get_sub_field('home_template_teaser_title');
 	                $section_text = get_sub_field('home_template_teaser_text');
 	                $section_link = get_sub_field('home_template_teaser_link');
 	                $title_id = sanitize_title($section_title);
-	
+
 	                echo '<section aria-labelledby="' . $title_id . '" class="text-block">';
 	                echo '<h2 id="' . $title_id . '" class="text-block__title">' . $section_title . '</h2>';
 	                echo $section_text;
@@ -81,13 +81,13 @@ if ( !function_exists( 'ictu_gctheme_home_template_teasers' ) ) :
 	                    echo '<a class="btn btn--primary" href="' . $section_link['url'] . '">' . $section_link['title'] . '</a>';
 	                }
 	                echo '</section>';
-	
+
 	            endwhile;
 	            echo '</div>';
 	            echo '</div>';
-	
+
 	        endif;
-	
+
 	    }
 	}
 

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * Gebruiker Centraal
@@ -10,11 +10,11 @@
  * @license GPL-2.0+
  * @version 3.4.11
  * @desc.   Tabs to spaces, tabs to spaces
- * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+ * @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
  */
 
-    
-    showdebug(__FILE__, 'search'); 
+
+    showdebug(__FILE__, 'search');
 
     $args = !empty($args) ? $args:array(); /* @var $args array */ ?>
 <!-- START Region Search -->
@@ -22,7 +22,7 @@
   <label><?php echo esc_html($args['region_label']); ?></label>
   <select name="region" class="em-search-region em-events-search-region">
     <option value=''><?php echo esc_html(get_option('dbem_search_form_regions_label')); ?></option>
-    <?php 
+    <?php
     global $wpdb;
     $em_states = $cond = array();
     if( !empty($args['country']) ) $cond[] = $wpdb->prepare("AND location_country=%s", $args['country']);
@@ -32,9 +32,9 @@
     foreach($em_states as $region){
       ?>
        <option<?php echo (!empty($args['region']) && $args['region'] == $region[0]) ? ' selected="selected"':''; ?>><?php echo esc_html($region[0]); ?></option>
-      <?php 
+      <?php
     }
     ?>
   </select>
-</div>  
+</div>
 <!-- END Region Search -->

@@ -10,9 +10,9 @@
 // @license GPL-2.0+
 // @version 3.12.1
 // @desc.   Renamed functions for better sharing.
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
  */
- 
+
 
 add_action( 'widgets_init', 'gc_wbvb_load_widgets' );
 /**
@@ -88,11 +88,11 @@ class GC_WBVB_WIDGET_user_welcome extends WP_Widget {
 
       if ( ! empty( $instance['title'] ) ) {
           $titelstring = $instance['title'];
-          
+
 //                if ( $current_user->user_firstname != '' ) {
 //                    $titelstring .= " " . $current_user->user_firstname;
 //                }
-      
+
         echo $args['before_title'] . apply_filters( 'widget_title', $titelstring, $instance, $this->id_base ) . $args['after_title'];
       }
 

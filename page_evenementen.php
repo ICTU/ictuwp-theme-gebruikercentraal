@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 
 /**
@@ -11,14 +11,14 @@
  * @license GPL-2.0+
  * @version 3.6.6
  * @desc.   mobile menu, infoblock, naming convention functions
- * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+ * @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
  */
 
-showdebug(__FILE__, 'page_evenementen'); 
+showdebug(__FILE__, 'page_evenementen');
 
 // Template naam hernoemd
 // * @since	  4.2.2
-//* Template Name: GC-events - pagina met overzicht van de agenda  
+//* Template Name: GC-events - pagina met overzicht van de agenda
 
 
 
@@ -31,9 +31,9 @@ remove_action( 'genesis_entry_footer', 'genesis_entry_footer_markup_close', 15 )
 // in dit theme wordt de weergave van een evenement afgehandeld door bestanden in de folder
 // /gebruiker-centraal/plugins/events-manager/
 
-// meer specifiek: de opbouw van een single event komt uit 
+// meer specifiek: de opbouw van een single event komt uit
 // <themes>/gebruiker-centraal/plugins/events-manager/formats/single_event_format.php
-// met wat hulpfuncties in functions.php, die aangeroepen worden in 
+// met wat hulpfuncties in functions.php, die aangeroepen worden in
 // <themes>/gebruiker-centraal/plugins/events-manager/templates/event-single.php
 // deze variabelen worden later door die functies van een waarde voorzien.
 // ofzoiets.
@@ -46,7 +46,7 @@ add_action( 'genesis_before_footer', 'gc_wbvb_andere_bijeenkomsten', 5 );
 add_filter( 'genesis_attr_entry', 'page_evenement_change_schema_attribute' );
 
 function page_evenement_change_schema_attribute( $attributes ) {
- 
+
  $attributes['itemtype'] = 'http://schema.org/Event';
  return $attributes;
 
@@ -59,47 +59,47 @@ add_filter( 'genesis_attr_entry-content', 'page_evenement_change_content_attribu
 //add_filter( 'genesis_attr_entry', 'page_evenement_change_content_attribute' );
 
 function page_evenement_change_content_attribute( $attributes ) {
- 
+
  $attributes['itemprop'] = '';
 
  return $attributes;
- 
+
 }
 
 //========================================================================================================
 
 function gc_wbvb_andere_bijeenkomsten( ) {
-  
+
 
   if ( function_exists( 'get_field' ) ) {
-      
+
     $andere_bijeenkomsten    = get_field('toon_andere_bijeenkomsten');
 
     if( have_rows( 'bijeenkomsten' ) ):
 
       $titel      = get_field('titel');
       $inleiding  = get_field('inleiding');
-      
-      echo '<div class="andere-bijeenkomsten">'; 
-      echo '<div class="wrap"><h2 class="entry-title">' . $titel . '</h2>'; 
-      echo '<p>' . $inleiding . '</p>'; 
-      
+
+      echo '<div class="andere-bijeenkomsten">';
+      echo '<div class="wrap"><h2 class="entry-title">' . $titel . '</h2>';
+      echo '<p>' . $inleiding . '</p>';
+
       echo '<ul class="event-program">';
-    
+
       // loop through the rows of data
       while ( have_rows('bijeenkomsten') ) : the_row();
-      
+
         $naam_bijeenkomst = strip_tags( get_sub_field('naam_bijeenkomst'), '<br>' );
         $bijeenkomst_URL  = strip_tags( get_sub_field('bijeenkomst_URL'), '<br>' );
-  
+
         echo '<li><a href="' . $bijeenkomst_URL  . '">' . $naam_bijeenkomst . '</a></li>';
-      
+
       endwhile;
-    
+
       echo '</ul>';
 
-      echo '</div>'; 
-      echo '</div>'; 
+      echo '</div>';
+      echo '</div>';
 
   endif;
 

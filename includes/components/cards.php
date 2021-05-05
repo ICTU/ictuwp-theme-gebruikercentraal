@@ -11,7 +11,7 @@
 // * @since   4.1.3
 // * @version 4.1.9
 // * @desc.   Card-type 'card--vaardigheid' added.
-// * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// * @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 ///
 
 

@@ -9,7 +9,7 @@
 // @license GPL-2.0+
 // @version 4.3.7
 // @desc.   Spotlight-component toegevoegd; tekstblok-component voor home toegevoegd.
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 
 //* Template Name: GC-pagina - Sitemap
 

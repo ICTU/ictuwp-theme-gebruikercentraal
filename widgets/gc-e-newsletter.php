@@ -10,7 +10,7 @@
  * @license GPL-2.0+
  * @version 3.7.5
  * @desc.   Beta-versie voor live-gang. CSS-corrections. Post - file-uploads. Corrections for mobile menu button. Widget-corrections.
- * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+ * @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
  */
 
 
@@ -25,13 +25,13 @@ class gc_newsletter_subscribe extends WP_Widget {
     function __construct() {
 
         $widget_ops = array( 'description' => __( 'Aangepaste versie van de e-newsletter widget voor het inschrijven op de nieuwsbrief.', 'gebruikercentraal' ) );
-        parent::__construct(false, $name = __( 'GC - Mailinglijstwidget', 'gebruikercentraal' ), $widget_ops);  
+        parent::__construct(false, $name = __( 'GC - Mailinglijstwidget', 'gebruikercentraal' ), $widget_ops);
 
     }
 
 
     //====================================================================================================
-    
+
     /** @see WP_Widget::widget */
     function widget( $args, $instance ) {
         global $email_newsletter;
@@ -99,7 +99,7 @@ class gc_newsletter_subscribe extends WP_Widget {
             ';
         }
         ?>
-        
+
         <p>
             <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title', 'gebruikercentraal' ) ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
@@ -133,9 +133,9 @@ class gc_newsletter_subscribe extends WP_Widget {
                 'echo'             => 1,
                 'name'             => $this->get_field_name('inschrpagina')
             );
-            
+
             wp_dropdown_pages( $args );
-            
+
             echo '</label></p>';
 
 
@@ -157,20 +157,20 @@ if ( isset( $email_newsletter ) ) {
  */
 function gc_wbvb_load_subscribe_widget() {
 
-    // unregister bbpres groups widget  
+    // unregister bbpres groups widget
     unregister_widget('e_newsletter_subscribe');
 
-    // register bbpres groups widget  
+    // register bbpres groups widget
   register_widget( 'gc_newsletter_subscribe' );
-  
-  
+
+
 }
 
 
 function wpdocs_dequeue_script() {
-//  wp_deregister_script( 'email-newsletter-widget-scripts' ); 
+//  wp_deregister_script( 'email-newsletter-widget-scripts' );
 
-  wp_dequeue_script( 'email-newsletter-widget-scripts' ); 
+  wp_dequeue_script( 'email-newsletter-widget-scripts' );
 }
 add_action( 'wp_print_scripts', 'wpdocs_dequeue_script', 100 );
 
@@ -183,7 +183,7 @@ add_action( 'wp_print_scripts', 'wpdocs_dequeue_script', 100 );
 
         $displaynone = ' aria-hidden="true"';
         $displaynoneclass = ' class="display-none"';
-                
+
 
         $groups = $email_newsletter->get_groups(1);
 
@@ -207,45 +207,45 @@ add_action( 'wp_print_scripts', 'wpdocs_dequeue_script', 100 );
 
         if ( !isset($current_user->data->ID) ) {
             $view = "add_member";
-        } 
+        }
         else if ( $current_user->data && $subscribe_to_groups && !$show_groups ) {
             if( $member_groups && !array_diff($subscribe_to_groups, $member_groups) )
                 $view = "unsubscribe_from_groups";
             else
                 $view = "subscribe_to_groups";
-        } 
+        }
         else if ( isset( $member_data['unsubscribe_code'] ) && "" != $member_data['unsubscribe_code'] && 0 < $current_user->data->ID ) {
             $view = "manage_subscriptions";
-        } 
+        }
         else if ( $current_user->data && 0 < $current_user->data->ID ) {
             $view = "subscribe";
-        } 
+        }
         else {
             $view = "";
         }
-        
+
         if ( (  $inschrpagina  ) && ( ! is_user_logged_in() ) ) {
                 $inschrpagina    = '<p><a href="' . get_permalink($inschrpagina) . '">' . __( 'Schrijf je in via deze pagina', 'gebruikercentraal' ) . '</a></p>';
         }
         else {
             $inschrpagina    = '<p><a href="/wp-admin/admin.php?page=newsletters-subscribes">' . __( 'Je instellingen voor de nieuwsbrief', 'gebruikercentraal' ) . '</a></p>';
         }
-        
 
-        
+
+
         $return = '
         <div class="e-newsletter-widget">
             <div id="message"' . $displaynone . '></div>
             <noscript>' . $inschrpagina . '</noscript>
-            
+
             <form action="/" method="post" name="subscribes_form" id="subscribes_form" class="nojs">
             <fieldset>
-            
+
 
 
 
                 <legend>' . __("Voer een geldig e-mailadres in om voortaan via mail op de hoogte gehouden te worden van alles nieuws rond Gebruiker Centraal", "gebruikercentraal") . '</legend>
-            
+
                 <input type="hidden" name="newsletter_action" id="newsletter_action" value="" />';
         if(is_array($subscribe_to_groups))
             foreach($subscribe_to_groups as $group_id )
@@ -305,7 +305,7 @@ add_action( 'wp_print_scripts', 'wpdocs_dequeue_script', 100 );
         if( count($groups) > 0 )
             foreach( (array) $subscribe_to_groups as $subscribe_to_group_id )
                 $return .= '<input type="hidden" name="e_newsletter_add_groups_id[]" value="'.$subscribe_to_group_id.'"/>';
-        
+
                 $return .= '
                             <p>
                                 <input type="button" id="subscribe_to_groups_button" class="enewletter_widget_submit" value="'.__( 'Subscribe', 'gebruikercentraal' ).'" />
@@ -358,15 +358,15 @@ add_action( 'wp_print_scripts', 'wpdocs_dequeue_script', 100 );
                 else {
                     $checked = '';
                 }
-                
+
                 if(!isset($only_public) || ($only_public && $group['public']) || !$only_public)
                     $return .= '<li><input type="checkbox" name="e_newsletter_groups_id[]" value="'.$group['group_id'].'" '.$checked.' id="e_newsletter_groups_id_'.$group['group_id'].'" class="e_newsletter_groups_id_'.$group['group_id'].'" /><label for="e_newsletter_groups_id_'.$group['group_id'].'">'.$group['group_name'].'</label></li>';
             }
-            
+
             $return .= '</ul></p>
                     <p><input type="button" id="save_subscribes" class="enewletter_widget_button" value="'.__( 'Save Subscriptions', 'gebruikercentraal' ).'" /></p>';
         }
-        
+
         $return .= '<p><a href="#" id="unsubscribe" class="enewletter_widget_submit" >'.__( 'Unsubscribe', 'gebruikercentraal' ).'</a></p>';
         $return .= '</div>';
 
@@ -376,7 +376,7 @@ add_action( 'wp_print_scripts', 'wpdocs_dequeue_script', 100 );
         else {
             $return .= '<div id="subscribe" class="e-newsletter-widget-screen">';
         }
-            
+
         $return .= '
                     <input type="submit" id="subscribe_submit" class="enewletter_widget_submit" value="'.__( 'Subscribe to Newsletters', 'gebruikercentraal' ).'" />
                 </div>

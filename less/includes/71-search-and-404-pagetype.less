@@ -10,18 +10,18 @@
 // @license GPL-2.0+
 // @version 3.28.1
 // @desc.   Styling voor 404-pagina.
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 
 
 	// ================================================================================
 
 	@nosearchbuttonwidth: 38px;
-	
+
 	.error404,
 	.error404.full-width-content,
 	.search,
 	.search.full-width-content {
-		
+
 		main section {
 			padding-left: 2rem;
 			background-image: url('../images/icon-list-item.svg');
@@ -31,7 +31,7 @@
 			padding-bottom: 2rem;
 			border-top: 1px solid @border_color;
 			border-bottom: 1px solid @border_color;
-			
+
 			h2, h3 {
 				margin-top: 0;
 				padding-top: 0;
@@ -45,29 +45,29 @@
 					margin-top: 1rem;
 				}
 			}
-			
+
 			& + section {
 				border-top-style: none;
 			}
-			
+
 			.meta {
 				color: @gc_greyblue;
 				.font-size( 12 );
-				text-transform: lowercase;				
+				text-transform: lowercase;
 			}
 		}
-		
+
 		 .content-sidebar-wrap > .content {
 			 .gc-inner-container;
 			background: @wit;
 			padding: 2rem !important;
 			float: none;
-	
+
 		    @media only screen and (min-width: @break_tablet ) {
-				padding-left: 4em;			
-				padding-right: 4em;			
+				padding-left: 4em;
+				padding-right: 4em;
 			}
-			
+
 			#zoeken_404,
 			#zoeken_no_result {
 				background: @gc_blue_dark;
@@ -78,14 +78,14 @@
 
 					@media only screen and ( min-width: @break_show_menu_button ) {
 						width: ~"calc(99% - @{nosearchbuttonwidth})";
-					}			
+					}
 				}
 			}
 		}
 	}
 
 	// ================================================================================
-	
+
 /*
 ==============================================================================================================
 */

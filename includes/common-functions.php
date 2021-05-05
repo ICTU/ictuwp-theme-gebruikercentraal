@@ -10,7 +10,7 @@
 // * @license GPL-2.0+
 // * @version 4.3.16
 // * @desc.   Logo voor expertpanel toegevoegd.
-// * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// * @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 ///
 
 
@@ -1034,7 +1034,7 @@ if ( ! function_exists( 'ictu_gctheme_write_lightboximage' ) ) {
 			return;
 		}
 		if ( ! $args['alt'] ) {
-			// prevent empty alt attributes 
+			// prevent empty alt attributes
 			$args['alt'] = sprintf( _x( "Image for '%s'", 'Alternatief voor een ontbrekende alt-tekst: post-titel.', 'gebruikercentraal' ), get_the_title( $post->ID ) );
 		}
 		if ( $args['cssclass'] ) {
@@ -1042,7 +1042,7 @@ if ( ! function_exists( 'ictu_gctheme_write_lightboximage' ) ) {
 		}
 
 
-		// tobi 
+		// tobi
 		// see: https://codepen.io/rqrauhvmra/pen/PvKVxp
 
 		$image = wp_get_attachment_image_src( $args['ID'], $args['full-size'] );

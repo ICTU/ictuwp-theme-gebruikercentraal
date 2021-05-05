@@ -10,7 +10,7 @@
 // @license GPL-2.0+
 // @version 4.3.8
 // @desc.   Volgorde laden stylesheets herzien; Inladen CSS herzien; layout voor overzichtspagina herzien.
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 
 
 
@@ -53,14 +53,14 @@ class GC_Widget_home_featuredcontent extends WP_Widget {
 
     function form($instance) {
 
-	    $instance = wp_parse_args( (array) $instance, 
-	        array( 
+	    $instance = wp_parse_args( (array) $instance,
+	        array(
 	            'title'              		=> '',
-	            ) 
+	            )
 	        );
-	
+
 	    $title      = apply_filters( 'widget_title', $instance['title'] );
-	
+
 	    ?>
 	    <p>
 	        <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title', 'gebruikercentraal' ) ?></label>
@@ -86,7 +86,7 @@ class GC_Widget_home_featuredcontent extends WP_Widget {
         extract($args, EXTR_SKIP);
 
         $title 		= empty($instance['title']) ? '' : $instance['title'] ;
-		
+
 
         echo $before_widget;
 		echo $before_title . $title . $after_title;
@@ -111,37 +111,37 @@ function append_header_css_for_gc_beeldbank_homewidget() {
 	* image is available
 	*/
 
-	global $wp_registered_widgets;    
-	
+	global $wp_registered_widgets;
+
 	$header_css = '';
 
 	if ( ! function_exists( 'get_field' ) ) {
 		return;
 	}
 	else {
-	
+
 		if ( is_array( $wp_registered_widgets )  ) {
-	
+
 			foreach ( $wp_registered_widgets as $breakpoint ) {
-				
+
 				if ( WBVB_GC_BEELDEN_HOMEWIDGET == $breakpoint['name'] ) {
-				
-					$widget_id = $breakpoint['id'];	
-	
+
+					$widget_id = $breakpoint['id'];
+
 					$posts = get_field( 'selecteer_content', 'widget_' . $widget_id );
-					
+
 					if ( $posts ) {
-						
+
 					 	// loop through the rows of data
 					    foreach( $posts as $p ):
-				
+
 							$getid        	= $p->ID;
 							$the_image_ID	= $widget_id . '_widget_posts_' . $getid;
-				          
+
 							if (has_post_thumbnail( $getid ) ) {
-		
+
 								$image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), 'medium' );
-								
+
 								if ( $image[0] ) {
 									$header_css .= '#' . $the_image_ID . " { \n";
 									$header_css .= " background-image: url('" . $image[0] . "');\n";
@@ -150,17 +150,17 @@ function append_header_css_for_gc_beeldbank_homewidget() {
 									$header_css .= '/* append_header_css_for_gc_beeldbank_homewidget: ' . sanitize_title( $image[0] ) . " */\n";
 								}
 							}
-							    
+
 					    endforeach;
-			
+
 					}
 				}
 			}
 		}
-	
-		
+
+
 	}
-	
+
 	if ( $header_css ) {
 		wp_add_inline_style( ID_SKIPLINKS, $header_css );
 	}
@@ -194,11 +194,11 @@ function filter_for_gc_beeldbank_homewidget( $params ) {
 	}
 
 	$posts = get_field( 'selecteer_content', 'widget_' . $widget_id );
-	
+
 	if( $posts ):
 
 		$params[0]['after_title'] .= '<div class="bg-color">';
-			
+
 	 	// loop through the rows of data
 	    foreach( $posts as $p ):
 
@@ -210,32 +210,32 @@ function filter_for_gc_beeldbank_homewidget( $params ) {
 			$the_image_ID	= $widget_id . '_widget_posts_' . $getid;
 			$datebadge		= '';
 			$theexcerpt		= '';
-			
+
 			$params[0]['after_title'] .= '<section class="entry" itemid="' . $permalink . '" itemscope itemtype="http://schema.org/SocialMediaPosting">';
 			$params[0]['after_title'] .= '<a href="' . $permalink . '" itemprop="url">';
-          
+
 			$class = 'feature-image noimage';
-          
+
 			if (has_post_thumbnail( $getid ) ) {
 				$image = wp_get_attachment_image_src( get_post_thumbnail_id( $getid ), 'medium' );
-				
+
 				if ( $image[0] ) {
 					$class = 'feature-image';
 				}
 			}
-				
+
 			if ( date("Y") == get_the_date( 'Y' ) ) {
 				$jaar =  '';
 			}
 			else {
 				$jaar =  '<span class="jaar">' . get_the_date( 'Y' ) . '</span>';
 			}
-			
+
 			if ( 'post' === get_post_type( $getid ) ) {
 				$datebadge = '<span class="date-badge" itemprop="datePublished" content="' . $publishdate . '"><span class="dag">' . get_the_date( 'd' ) . '</span> <span class="maand">' . get_the_date( 'M' ) . '</span>' . $jaar . '</span>';
 			}
 
-			if ( 
+			if (
 				( 'page' === get_post_type( $getid ) ) ||
 				( GC_BEELDBANK_BRIEF_CPT === get_post_type( $getid ) ) ||
 				( GC_BEELDBANK_BEELD_CPT === get_post_type( $getid ) ) ||
@@ -247,17 +247,17 @@ function filter_for_gc_beeldbank_homewidget( $params ) {
 
 			$params[0]['after_title'] .= '<div id="' . $the_image_ID . '" class="' . $class . '">&nbsp;</div>';
 			$params[0]['after_title'] .= '<div class="bloginfo"> ';
-			$params[0]['after_title'] .= '<header>' . $datebadge;        
+			$params[0]['after_title'] .= '<header>' . $datebadge;
 			$params[0]['after_title'] .= '<h3 class="entry-title" itemprop="headline">' . get_the_title( $getid ) . '</h3></header>';
 			$params[0]['after_title'] .= $theexcerpt;
 			$params[0]['after_title'] .= '</div>';
 			$params[0]['after_title'] .= '</a>';
-			$params[0]['after_title'] .= '</section>'; 
-	
+			$params[0]['after_title'] .= '</section>';
+
 	    endforeach;
 
 		$params[0]['after_title'] .= '</div>';
-	
+
 	endif;
 
 	// return
