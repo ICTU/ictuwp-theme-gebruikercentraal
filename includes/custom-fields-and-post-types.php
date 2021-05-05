@@ -1302,7 +1302,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ):
 				'label'             => 'Voeg stappen toe aan stappenplan',
 				'name'              => '',
 				'type'              => 'accordion',
-				'instructions'      => '<img src="/wp-content/themes/gebruiker-centraal/images/stappenplan.jpg" alt="Screenshot van stappenplan" widt"400" height="198" /> Voer hieronder de stappen van je stappenplan in, minimaal 2 stappen, maximaal 5',
+				'instructions'      => '<img src="/wp-content/themes/ictuwp-theme-gebruikercentraal/images/stappenplan.jpg" alt="Screenshot van stappenplan" widt"400" height="198" /> Voer hieronder de stappen van je stappenplan in, minimaal 2 stappen, maximaal 5',
 				'required'          => 0,
 				'conditional_logic' => array(
 					array(

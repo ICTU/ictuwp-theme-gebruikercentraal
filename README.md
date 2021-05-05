@@ -122,7 +122,7 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 ## Theme structure
 
 ```web root
-themes/gebruiker-centraal/                        # → Folder met alle theme-bestanden
+themes/ictuwp-theme-gebruikercentraal/                        # → Folder met alle theme-bestanden
 │  
 ├── css/                                          # → Extra CSS-bestanden
 │   ├── addenda-tips.css                          # → 
