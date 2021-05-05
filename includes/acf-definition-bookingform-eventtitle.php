@@ -9,7 +9,7 @@
  * @package gebruiker-centraal
  * @author  Paul van Buuren
  * @license GPL-2.0+
- * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+ * @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
  */
 
 // * @since	4.3.10

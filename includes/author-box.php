@@ -10,7 +10,7 @@
 // @license GPL-2.0+
 // @version 4.3.1
 // @desc.   Fixes voor actieteamwidget bug (sanitize_title) en authorbox (get user ID from get_queried_object).
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 
 
 //========================================================================================================
@@ -123,7 +123,7 @@ function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = 
 
 
 	if ( ! $userid ) {
-		// * @since	  4.3.1	
+		// * @since	  4.3.1
 		$userid = get_queried_object()->data->ID;
 	}
 

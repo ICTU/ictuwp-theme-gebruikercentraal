@@ -10,7 +10,7 @@
 // @license GPL-2.0+
 // @version 4.2.1
 // @desc.   ACF bidirectional relationship function; function voor een lightbox.
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 
 
 $samenvattingverplicht = false;
@@ -439,7 +439,7 @@ if ( function_exists( 'register_field_group' ) ) {
 						'label'             => 'Beschrijving',
 						'name'              => 'programmaonderdeel_beschrijving',
 						'type'              => 'textarea',
-						'instructions'      => 'Hier kun je de beschrijving voor het programmaonderdeel invoeren. 
+						'instructions'      => 'Hier kun je de beschrijving voor het programmaonderdeel invoeren.
     <br>Gebruik liever geen HTML.',
 						'required'          => 1,
 						'conditional_logic' => 0,
@@ -1569,6 +1569,6 @@ if ( ! function_exists( 'bidirectional_acf_update_value' ) ) {
 	}
 
 }
-	
-	
+
+
 

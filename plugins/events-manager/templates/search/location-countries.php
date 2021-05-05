@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * Gebruiker Centraal
@@ -10,11 +10,11 @@
  * @license GPL-2.0+
  * @version 3.4.11
  * @desc.   Tabs to spaces, tabs to spaces
- * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+ * @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
  */
 
-    
-    showdebug(__FILE__, 'templates search'); 
+
+    showdebug(__FILE__, 'templates search');
 
     $args = !empty($args) ? $args:array(); /* @var $args array */ ?>
 <!-- START Country Search -->
@@ -22,7 +22,7 @@
   <label><?php echo esc_html($args['country_label']); ?></label>
   <select name="country" class="em-search-country em-events-search-country">
     <option value=''><?php echo esc_html($args['countries_label']); ?></option>
-    <?php 
+    <?php
     //get the counties from locations table
     global $wpdb;
     $countries = em_get_countries();
@@ -34,7 +34,7 @@
     }
     asort($ddm_countries);
     foreach( $ddm_countries as $country_code => $country_name ):
-    //we're not using esc_ functions here because values are hard-coded within em_get_countries() 
+    //we're not using esc_ functions here because values are hard-coded within em_get_countries()
     ?>
     <option value="<?php echo $country_code; ?>"<?php echo (!empty($args['country']) && $args['country'] == $country_code) ? ' selected="selected"':''; ?>><?php echo $country_name; ?></option>
     <?php endforeach; ?>

@@ -11,7 +11,7 @@
 // * @since   4.1.5
 // * @version 4.1.5
 // * @desc.   Functionality for home -> stappen moved to theme.
-// * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// * @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 ///
 
 
@@ -39,65 +39,65 @@ if ( !function_exists( 'ictu_gctheme_home_template_stappen' ) ) :
 	function ictu_gctheme_home_template_stappen( $post = [], $bgimage = '' ) {
 
 		global $post;
-	
+
 		if ( ! $bgimage ) {
 			$bgimage = ICTU_GC_BEELDBANK_IMAGES . 'stappenplan-bg-fullscreen.svg';
 		}
-		
+
 	    if (function_exists('get_field')) {
-			
+
 			$home_inleiding		= get_field('home_template_inleiding', $post->ID);
 	        $home_stappen 		= get_field('home_template_stappen', $post->ID);
 	        $poster				= get_field('home_template_poster', $post->ID);
 	        $poster_linktekst 	= get_field('home_template_poster_linktekst', $post->ID);
-	
+
 	        echo '<div class="region region--intro">' .
 	          '<div class="entry__intro">' .
 	          '<h1 class="entry-title">' . get_the_title() . '</h1>';
-	
-	
+
+
 	        if ($home_inleiding) {
 	            echo $home_inleiding;
 	        }
-	
+
 	        if ($poster && $poster_linktekst) {
 	            echo '<a href="' . $poster['url'] . '" class="btn btn--download">' . $poster_linktekst . '</a>';
 	        }
-	
+
 	        echo '</div>'; // Einde Intro
-	
+
 	        if ($home_stappen):
-	
+
 	            $section_title 	= _x('Stappen', 'titel op home-pagina', 'ictu-gc-posttypes-inclusie');
 	            $title_id 		= sanitize_title($section_title . '-' . $post->ID);
 	            $stepcounter 	= 0;
-	
+
 	            echo '<div aria-labelledby="' . $title_id . '" class="stepchart">';
 	            echo '<h2 id="' . $title_id . '" class="visuallyhidden">' . $section_title . '</h2>';
-	
+
 	            echo '<div class="stepchart__bg">' .
 	              '<img src="' . $bgimage . '" alt="">' .
 	              '</div>';
-	
+
 	            echo '<ol class="stepchart__items" role="tablist">';
-	
+
 	            foreach ($home_stappen as $stap):
-	
+
 	                $stepcounter++;
-	
+
 	                if (get_field('stap_verkorte_titel', $stap->ID)) {
 	                    $titel = get_field('stap_verkorte_titel', $stap->ID);
 	                }
 	                else {
 	                    $titel = get_the_title($stap->ID);
 	                }
-	
+
 	                $class = 'deel';
 	                if (get_field('stap_icon', $stap->ID)) {
 	                    $class = get_field('stap_icon', $stap->ID);
 	                }
-	
-	
+
+
 	                if (get_field('stap_inleiding', $stap->ID)) {
 	                    $inleiding	= get_field('stap_inleiding', $stap->ID);
 	                }
@@ -106,13 +106,13 @@ if ( !function_exists( 'ictu_gctheme_home_template_stappen' ) ) :
 	                    $content 	= $stap_post->post_content;
 	                    $inleiding 	= apply_filters('the_content', $content);
 	                }
-	
+
 	                $xtraclass 		= ' hidden';
 	                $title_id 		= sanitize_title(get_the_title($stap->ID) . '-' . $stepcounter);
 	                $steptitle 		= sprintf(_x('%s. %s', 'Label stappen', 'ictu-gc-posttypes-inclusie'), $stepcounter, $titel);
 	                $readmore 		= sprintf(_x('%s <span class="visuallyhidden">over %s</span>', 'home lees meer', 'ictu-gc-posttypes-inclusie'), _x('Lees meer', 'home lees meer', 'ictu-gc-posttypes-inclusie'), get_the_title($stap->ID));
-	
-	
+
+
 	                echo '<li class="stepchart__item">';
 
 	                // SVG sprites a
@@ -122,30 +122,30 @@ if ( !function_exists( 'ictu_gctheme_home_template_stappen' ) ) :
                       '</svg> '.
 	                  '<span class="btn__text">' . $steptitle . '</span>' .
 	                  '</button>';
-	
+
 	                echo '<section class="stepchart__description" aria-hidden="true" aria-labelledby="' . $title_id . '" role="tabpanel">' .
 	                  '<button type="button" class="btn btn--close" data-trigger="action-popover-close">Sluit</button>' .
 	                  '<h3 id="' . $title_id . '" class="stepchart__title">' . get_the_title($stap->ID) . '</h3>' .
 	                  '<div class="description">' . $inleiding . '</div>' .
 	                  '<a href="' . get_permalink($stap->ID) . '" class="btn btn--primary">' . $readmore . '</a>' .
 	                  '</section>';
-	
+
 	                echo '</li>';
-	
+
 	            endforeach;
-	
+
 	            echo '</ol>';
 	            echo '</div>';
-	
+
 	        endif;
-	
-	
+
+
 	        echo '</div>'; // region--intro, lekker herbruikbaar!
-	
+
 	        echo '</div>'; // Section content-top
-	
-	
-	    }	
+
+
+	    }
 	}
 
 
@@ -163,7 +163,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 	$DOELGROEPDEFINTIESHOMEPAGE = '';
 
 	if ( 'inclusie.gebruikercentraal.co.uk' == $_SERVER["HTTP_HOST"] || 'accept.inclusie.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] || 'inclusie.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] ) {
-	
+
 		$DOELGROEPDEFINTIESHOMEPAGE = 			array(
 					'key' => 'field_5c90e096cca0a',
 					'label' => 'Teasers / doelgroepen',
@@ -229,8 +229,8 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 						),
 					),
 				);
-	} 
-	
+	}
+
 
 	// this means the ACF plugin is active and we can add new field definitions
 

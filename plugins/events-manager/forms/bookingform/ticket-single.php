@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * Gebruiker Centraal
@@ -10,13 +10,13 @@
  * @license GPL-2.0+
  * @version 3.5.1
  * @desc.   Comments, bookingform
- * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+ * @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
  */
 
-    
-    showdebug(__FILE__, 'forms bookingform'); 
 
-/* 
+    showdebug(__FILE__, 'forms bookingform');
+
+/*
  * This file generates the input fields for an event with a single ticket and settings set to not show a table for single tickets (default setting)
  * If you want to add to this form this, you'd be better off hooking into the actions below.
  */
@@ -31,7 +31,7 @@ do_action('em_booking_form_ticket_header', $EM_Ticket); //do not delete
 $collumns = $EM_Event->get_tickets()->get_ticket_collumns(); //array of collumn type => title
 foreach( $collumns as $type => $name ): ?>
   <?php
-  //output collumn by type, or call a custom action 
+  //output collumn by type, or call a custom action
   switch($type){
     case 'type':
       if(!empty($EM_Ticket->ticket_description)){ //show description if there is one
@@ -42,10 +42,10 @@ foreach( $collumns as $type => $name ): ?>
       ?><p class="ticket-price"><label><?php echo $name; ?></label><strong><?php echo $EM_Ticket->get_price(true); ?></strong></p><?php
       break;
     case 'spaces':
-      if( $EM_Ticket->get_available_spaces() > 1 && ( empty($EM_Ticket->ticket_max) || $EM_Ticket->ticket_max > 1 ) ): //more than one space available ?>        
+      if( $EM_Ticket->get_available_spaces() > 1 && ( empty($EM_Ticket->ticket_max) || $EM_Ticket->ticket_max > 1 ) ): //more than one space available ?>
         <p class="em-tickets-spaces">
           <label for='em_tickets'><?php echo $name; ?></label>
-          <?php 
+          <?php
             $default = !empty($_REQUEST['em_tickets'][$EM_Ticket->ticket_id]['spaces']) ? $_REQUEST['em_tickets'][$EM_Ticket->ticket_id]['spaces']:0;
             $spaces_options = $EM_Ticket->get_spaces_options(false,$default);
             if( $spaces_options ){

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * Gebruiker Centraal
@@ -10,11 +10,11 @@
  * @license GPL-2.0+
  * @version 3.4.11
  * @desc.   Tabs to spaces, tabs to spaces
- * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+ * @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
  */
 
-    
-    showdebug(__FILE__, 'templates search'); 
+
+    showdebug(__FILE__, 'templates search');
 
     $args = !empty($args) ? $args:array(); /* @var $args array */ ?>
 <!-- START City Search -->
@@ -34,7 +34,7 @@
     foreach($em_towns as $town){
       ?>
        <option<?php echo (!empty($args['town']) && $args['town'] == $town[0]) ? ' selected="selected"':''; ?>><?php echo esc_html($town[0]); ?></option>
-      <?php 
+      <?php
     }
     ?>
   </select>

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * Gebruiker Centraal
@@ -10,11 +10,11 @@
  * @license GPL-2.0+
  * @version 3.4.11
  * @desc.   Tabs to spaces, tabs to spaces
- * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+ * @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
  */
 
-    
-    showdebug(__FILE__, 'template'); 
+
+    showdebug(__FILE__, 'template');
 /*
  * This page displays a printable view of bookings for a single event.
  * You can override the default display settings pages by copying this file to yourthemefolder/plugins/events-manager/templates/ and modifying it however you need.
@@ -31,28 +31,28 @@ global $EM_Event;
 </head>
 <body id="printable">
   <div id="container">
-  <h1><?php echo sprintf(__('Bookings for %s','events-manager'), $EM_Event->name); ?></h1> 
+  <h1><?php echo sprintf(__('Bookings for %s','events-manager'), $EM_Event->name); ?></h1>
   <p><?php echo $EM_Event->output("#d #M #Y"); ?></p>
-  <p><?php echo $EM_Event->output("#_LOCATION, #_ADDRESS, #_TOWN"); ?></p>   
+  <p><?php echo $EM_Event->output("#_LOCATION, #_ADDRESS, #_TOWN"); ?></p>
   <h2><?php _e('Bookings data', 'events-manager');?></h2>
   <table id="bookings-table">
     <tr>
       <th scope='col'><?php _e('Name', 'events-manager')?></th>
       <th scope='col'><?php _e('E-mail', 'events-manager')?></th>
-      <th scope='col'><?php _e('Phone number', 'events-manager')?></th> 
+      <th scope='col'><?php _e('Phone number', 'events-manager')?></th>
       <th scope='col'><?php _e('Spaces', 'events-manager')?></th>
       <th scope='col'><?php _e('Comment', 'events-manager')?></th>
-    </tr> 
-    <?php foreach($EM_Event->get_bookings()->bookings as $EM_Booking) {       
+    </tr>
+    <?php foreach($EM_Event->get_bookings()->bookings as $EM_Booking) {
       if( $EM_Booking->status == 1){
         ?>
     <tr>
-      
-      <td><?php echo $EM_Booking->person->get_name() ?></td> 
+
+      <td><?php echo $EM_Booking->person->get_name() ?></td>
       <td><?php echo $EM_Booking->person->user_email ?></td>
       <td><?php echo $EM_Booking->person->phone ?></td>
       <td class='spaces-number'><?php echo $EM_Booking->get_spaces() ?></td>
-      <td><?php echo $EM_Booking->booking_comment ?></td> 
+      <td><?php echo $EM_Booking->booking_comment ?></td>
     </tr>
        <?php }} ?>
       <tr id='booked-spaces'>
@@ -61,11 +61,11 @@ global $EM_Event;
       <td class='spaces-number'><?php echo $EM_Event->get_bookings()->get_booked_spaces(); ?></td>
     </tr>
     <tr id='available-spaces'>
-      <td colspan='3'>&nbsp;</td> 
-      <td class='total-label'><?php _e('Available', 'events-manager')?>:</td>  
+      <td colspan='3'>&nbsp;</td>
+      <td class='total-label'><?php _e('Available', 'events-manager')?>:</td>
       <td class='spaces-number'><?php echo $EM_Event->get_bookings()->get_available_spaces(); ?></td>
     </tr>
-  </table>  
+  </table>
   </div>
 </body>
 </html>

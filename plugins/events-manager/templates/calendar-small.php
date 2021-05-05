@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * Gebruiker Centraal
@@ -10,21 +10,21 @@
  * @license GPL-2.0+
  * @version 3.4.11
  * @desc.   Tabs to spaces, tabs to spaces
- * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+ * @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
  */
 
-    
-    showdebug(__FILE__, 'templates'); 
+
+    showdebug(__FILE__, 'templates');
 
 
 /*
  * This file contains the HTML generated for small calendars. You can copy this file to yourthemefolder/plugins/events-manager/templates and modify it in an upgrade-safe manner.
- * 
- * There are two variables made available to you: 
- * 
+ *
+ * There are two variables made available to you:
+ *
  *   $calendar - contains an array of information regarding the calendar and is used to generate the content
  *  $args - the arguments passed to EM_Calendar::output()
- * 
+ *
  * Note that leaving the class names for the previous/next links will keep the AJAX navigation working.
  */
 ?>
@@ -48,7 +48,7 @@
       foreach($calendar['cells'] as $date => $cell_data ){
         $class = ( !empty($cell_data['events']) && count($cell_data['events']) > 0 ) ? 'eventful':'eventless';
         if(!empty($cell_data['type'])){
-          $class .= "-".$cell_data['type']; 
+          $class .= "-".$cell_data['type'];
         }
         ?>
         <td class="<?php echo esc_attr($class); ?>">
@@ -62,7 +62,7 @@
         //create a new row once we reach the end of a table collumn
         $col_count= ($col_count == $col_max ) ? 1 : $col_count+1;
         echo ($col_count == 1 && $count < $cal_count) ? '</tr><tr>':'';
-        $count ++; 
+        $count ++;
       }
       ?>
     </tr>

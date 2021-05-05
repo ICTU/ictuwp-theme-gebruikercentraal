@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * Gebruiker Centraal
@@ -10,12 +10,12 @@
  * @license GPL-2.0+
  * @version 3.5.1
  * @desc.   Comments, bookingform
- * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+ * @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
  */
 
-    
-    showdebug(__FILE__, 'forms bookingform'); 
-/* 
+
+    showdebug(__FILE__, 'forms bookingform');
+/*
  * This file generates a tabular list of tickets for the event booking forms with input values for choosing ticket spaces.
  * If you want to add to this form this, you'd be better off hooking into the actions below.
  */
@@ -40,7 +40,7 @@ $collumns = $EM_Tickets->get_ticket_collumns(); //array of collumn type => title
       <tr class="em-ticket" id="em-ticket-<?php echo $EM_Ticket->ticket_id; ?>">
         <?php foreach( $collumns as $type => $name ): ?>
           <?php
-          //output collumn by type, or call a custom action 
+          //output collumn by type, or call a custom action
           switch($type){
             case 'type':
               ?>
@@ -55,7 +55,7 @@ $collumns = $EM_Tickets->get_ticket_collumns(); //array of collumn type => title
             case 'spaces':
               ?>
               <td class="em-bookings-ticket-table-spaces">
-                <?php 
+                <?php
                   $default = !empty($_REQUEST['em_tickets'][$EM_Ticket->ticket_id]['spaces']) ? $_REQUEST['em_tickets'][$EM_Ticket->ticket_id]['spaces']:0;
                   $spaces_options = $EM_Ticket->get_spaces_options(true,$default);
                   echo ( $spaces_options ) ? $spaces_options:"<strong>".__('N/A','events-manager')."</strong>";
@@ -69,7 +69,7 @@ $collumns = $EM_Tickets->get_ticket_collumns(); //array of collumn type => title
           }
           ?>
         <?php endforeach; ?>
-      </tr>    
+      </tr>
       <?php do_action('em_booking_form_tickets_loop_footer', $EM_Ticket); //do not delete ?>
     <?php endif; ?>
   <?php endforeach; ?>

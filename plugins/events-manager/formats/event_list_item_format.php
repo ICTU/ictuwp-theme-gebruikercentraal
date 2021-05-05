@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 //
 // Gebruiker Centraal
@@ -10,12 +10,12 @@
 // @license GPL-2.0+
 // @version 3.15.9
 // @desc.   Extra checkbox for mailinglist, a11y improvements.
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 
-    
-showdebug(__FILE__, 'formats'); 
 
-global $post;    
+showdebug(__FILE__, 'formats');
+
+global $post;
 global $EM_Event;
 global $EM_Events;
 
@@ -26,7 +26,7 @@ $classmultiple 			= '';
 
 if ( is_object( $EM_Event ) ) {
 	$event_start_datetime     = strtotime( $EM_Event->event_start_date . ' ' . $EM_Event->event_start_time );
-	
+
 	if ( $EM_Event->event_start_date == $EM_Event->event_end_date ) {
 		$classmultiple = ' ' . $EM_Event->event_start_date . ' '  . $EM_Event->event_end_date;
 	} else {
@@ -35,7 +35,7 @@ if ( is_object( $EM_Event ) ) {
 }
 
 $event_times      = '<div class="meta-data__item meta-data--with-icon event-times">#_EVENTTIMES</div>';
-$event_location   = '#_EVENTLOCATIONMETA'; 
+$event_location   = '#_EVENTLOCATIONMETA';
 $header_meta_info = $event_times . $event_location;
 
 
@@ -46,7 +46,7 @@ echo '<header class="wrap' . $classmultiple . '">
         <div class="meta-data">#_AVAILABILITYCHECK' .  $header_meta_info . '</div>
     </header>';
 
-if ( has_excerpt() ) { 
+if ( has_excerpt() ) {
   echo '<div class="wrap excerpt">#_EVENTEXCERPT</div>';
 }
 echo '</a></section>';

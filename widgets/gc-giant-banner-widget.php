@@ -10,7 +10,7 @@
 // @license GPL-2.0+
 // @version 4.3.4
 // @desc.   Betere checks op get_field, ofwel: is ACF-plugin actief?
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 
 
 //========================================================================================================

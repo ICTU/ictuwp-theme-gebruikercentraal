@@ -9,14 +9,14 @@
 // @license GPL-2.0+
 // @version 3.25.1
 // @desc.   Logo hernoemd. Sitemap aangepast. Pagina layout voorbereid op nieuwe stijl.
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 
 
-  
-  
+
+
   /* Float Clearing
   --------------------------------------------- */
-  
+
   .archive-pagination:before,
   .clearfix:before,
   .entry:before,
@@ -32,7 +32,7 @@
     content: " ";
     display: table;
   }
-  
+
   .archive-pagination:after,
   .clearfix:after,
   .entry:after,
@@ -50,11 +50,11 @@
     display: table;
   }
 
-  
+
   /*
   Structure and Layout
   ---------------------------------------------------------------------------------------------------- */
-  
+
   /* Site Containers
   --------------------------------------------- */
 
@@ -62,10 +62,10 @@
     clear: both;
   //  background: @wit;
   }
-  
+
   /* Column Widths and Positions
   --------------------------------------------- */
-  
+
   /* Wrapping div for .content and .sidebar-primary */
 
   .content-sidebar-sidebar .content-sidebar-wrap,
@@ -74,43 +74,43 @@
 //    width: ( @break_fullwidth - ( 1 * ( @gutter + @sidebar_width ) ) );
     width: ( @break_fullwidth - ( 1 * ( @gutterpx + @sidebar_width ) ) );
   }
-  
+
   .content-sidebar-sidebar .content-sidebar-wrap {
     float: left;
   }
-  
+
   .sidebar-content-sidebar .content-sidebar-wrap,
   .sidebar-sidebar-content .content-sidebar-wrap {
     float: right;
   }
-  
+
   /* Content */
-  
+
   .content {
 //    width: ( @break_fullwidth - ( @gutter + @sidebar_width ) ) ;
     width: ( @break_fullwidth - ( @gutterpx + @sidebar_width ) ) ;
 //    width: 100%;
   }
-  
+
   .content-sidebar .content,
   .content-sidebar-sidebar .content,
   .sidebar-content-sidebar .content {
     float: left;
   }
-  
+
   .content-sidebar-sidebar .content,
   .sidebar-content-sidebar .content,
   .sidebar-sidebar-content .content {
 //    width: ( @break_fullwidth - ( 2 * ( @gutter + @sidebar_width ) ) );
     width: ( @break_fullwidth - ( 2 * ( @gutterpx + @sidebar_width ) ) );
   }
-  
-  
+
+
 
   .full-width-content {
 
     &.single-stap,
-    &.single-vaardigheid,   
+    &.single-vaardigheid,
     &.page,
     &.page,
     &.search,
@@ -150,49 +150,49 @@
 				padding-bottom: 3rem;
 			}
 		}
-		
+
 		section a {
 			text-decoration: none;
-			
+
 			&:hover,
 			&:active,
 			&:focus {
 				text-decoration: underline;
 			}
-		}    
+		}
 	}
 
 	.page-template-page_sitemap {
-	
+
 	}
-  
+
   /* Primary Sidebar */
-  
+
   .sidebar-primary {
     float: right;
     width: @sidebar_width;
   }
-  
+
   .sidebar-content .sidebar-primary,
   .sidebar-sidebar-content .sidebar-primary {
     float: left;
   }
-  
+
   /* Secondary Sidebar */
-  
+
   .sidebar-secondary {
     float: left;
     width: @sidebar_width - ( -1 * @sidebar_marginright );
   }
-  
+
   .content-sidebar-sidebar .sidebar-secondary {
     float: right;
   }
-  
+
   /* Column Classes
     Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css
   --------------------------------------------- */
-  
+
   .five-sixths,
   .four-sixths,
   .one-fourth,
@@ -207,50 +207,50 @@
     float: left;
     margin-left: 2.564102564102564%;
   }
-  
+
   .one-half,
   .three-sixths,
   .two-fourths {
     width: 48.717948717948715%;
   }
-  
+
   .one-third,
   .two-sixths {
     width: 31.623931623931625%;
   }
-  
+
   .four-sixths,
   .two-thirds {
     width: 65.81196581196582%;
   }
-  
+
   .one-fourth {
     width: 23.076923076923077%;
   }
-  
+
   .three-fourths {
     width: 74.35897435897436%;
   }
-  
+
   .one-sixth {
     width: 14.52991452991453%;
   }
-  
+
   .five-sixths {
     width: 82.90598290598291%;
   }
-  
+
   .first {
     clear: both;
     margin-left: 0;
   }
-  
+
   .connected-files {
     clear: both;
     float: none;
     overflow: hidden;
   }
-  
+
 }
 
 

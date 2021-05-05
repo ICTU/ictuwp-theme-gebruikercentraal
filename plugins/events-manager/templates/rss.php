@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * Gebruiker Centraal
@@ -10,18 +10,18 @@
  * @license GPL-2.0+
  * @version 3.4.11
  * @desc.   Tabs to spaces, tabs to spaces
- * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+ * @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
  */
 
-    
-    showdebug(__FILE__, 'templates'); 
+
+    showdebug(__FILE__, 'templates');
 
 /*
  * RSS Page
  * This page handles the even RSS feed.
  * You can override this file by and copying it to yourthemefolder/plugins/events-manager/templates/ and modifying as necessary.
- * 
- */ 
+ *
+ */
 header ( "Content-type: application/rss+xml; charset=UTF-8" );
 echo '<?xml version="1.0" encoding="UTF-8" ?>'."\n";
 ?>
@@ -36,7 +36,7 @@ echo '<?xml version="1.0" encoding="UTF-8" ?>'."\n";
     <?php
     $description_format = str_replace ( ">", "&gt;", str_replace ( "<", "&lt;", get_option ( 'dbem_rss_description_format' ) ) );
         $rss_limit = get_option('dbem_rss_limit');
-        $page_limit = $rss_limit > 50 || !$rss_limit ? 50 : $rss_limit; //set a limit of 50 to output at a time, unless overall limit is lower    
+        $page_limit = $rss_limit > 50 || !$rss_limit ? 50 : $rss_limit; //set a limit of 50 to output at a time, unless overall limit is lower
     $args = !empty($args) ? $args:array(); /* @var $args array */
     $args = array_merge(array('scope'=>get_option('dbem_rss_scope'), 'owner'=>false, 'limit'=>$page_limit, 'page'=>1, 'order'=>get_option('dbem_rss_order'), 'orderby'=>get_option('dbem_rss_orderby')), $args);
     $args = apply_filters('em_rss_template_args',$args);
@@ -59,7 +59,7 @@ echo '<?xml version="1.0" encoding="UTF-8" ?>'."\n";
         <?php
         $count++;
       }
-          if( $rss_limit != 0 && $count >= $rss_limit ){ 
+          if( $rss_limit != 0 && $count >= $rss_limit ){
               //we've reached our limit, or showing one event only
               break;
           }else{
@@ -69,6 +69,6 @@ echo '<?xml version="1.0" encoding="UTF-8" ?>'."\n";
           }
     }
     ?>
-    
+
   </channel>
 </rss>

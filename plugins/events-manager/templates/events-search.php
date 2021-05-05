@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * Gebruiker Centraal
@@ -10,18 +10,18 @@
  * @license GPL-2.0+
  * @version 3.4.11
  * @desc.   Tabs to spaces, tabs to spaces
- * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+ * @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
  */
 
-    
-    showdebug(__FILE__, 'templates'); 
 
-/* WARNING!!! (2013-07-10) We intend to add a few more fields into this search form over the coming weeks/months. 
- * Overriding shouldn't hinder functionality at all but these new search options won't appear on your form! 
- */ 
-/* 
+    showdebug(__FILE__, 'templates');
+
+/* WARNING!!! (2013-07-10) We intend to add a few more fields into this search form over the coming weeks/months.
+ * Overriding shouldn't hinder functionality at all but these new search options won't appear on your form!
+ */
+/*
  * By modifying this in your theme folder within plugins/events-manager/templates/events-search.php, you can change the way the search form will look.
- * To ensure compatability, it is recommended you maintain class, id and form name attributes, unless you now what you're doing. 
+ * To ensure compatability, it is recommended you maintain class, id and form name attributes, unless you now what you're doing.
  * You also have an $args array available to you with search options passed on by your EM settings or shortcode
  */
 $args = !empty($args) ? $args:array(); /* @var $args array */
@@ -33,7 +33,7 @@ $args = !empty($args) ? $args:array(); /* @var $args array */
     <?php if( $args['show_main'] ): //show the 'main' search form ?>
     <div class="em-search-main">
       <?php do_action('em_template_events_search_form_header'); //hook in here to add extra fields, text etc. ?>
-      <?php 
+      <?php
       //search text
       if( !empty($args['search_term']) ) em_locate_template('templates/search/search.php',true,array('args'=>$args));
       if( !empty($args['search_geo']) ) em_locate_template('templates/search/geo.php',true,array('args'=>$args));

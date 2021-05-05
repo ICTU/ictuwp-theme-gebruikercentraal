@@ -7,7 +7,7 @@
 // @author  Tamara de Haas
 // @license GPL-2.0+
 // @version 3.15.9
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 
 
 var filterLabel = $('.form-item--filter label');
