@@ -9,12 +9,12 @@
 // @license GPL-2.0+
 // @version 3.10.1
 // @desc.   Bugfixes voor get_field, create_function en 404-pagina.
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 
 class GC_event_widget extends WP_Widget {
-  
+
   var $defaults;
-  
+
     /** constructor */
   public function __construct() {
     $this->defaults = array(
@@ -28,14 +28,14 @@ class GC_event_widget extends WP_Widget {
       'orderby'         => 'event_start_date,event_start_time,event_name',
       'all_events'      => 0,
       'all_events_text' => __('alle events', 'gebruikercentraal'),
-      'no_events_text'  => __('De agenda is leeg', 'gebruikercentraal') 
+      'no_events_text'  => __('De agenda is leeg', 'gebruikercentraal')
     );
     $this->em_orderby_options = apply_filters('em_settings_events_default_orderby_ddm', array(
       'event_start_date,event_start_time,event_name'  => __('start date, start time, event name','gebruikercentraal'),
       'event_name,event_start_date,event_start_time'  => __('name, start date, start time','gebruikercentraal'),
       'event_name,event_end_date,event_end_time'      => __('name, end date, end time','gebruikercentraal'),
       'event_end_date,event_end_time,event_name'      => __('end date, end time, event name','gebruikercentraal'),
-    )); 
+    ));
 
 
     $widget_ops = array(
@@ -44,14 +44,14 @@ class GC_event_widget extends WP_Widget {
     );
 
 
-        parent::__construct(false, $name = 'GC - Event-widget', $widget_ops);  
+        parent::__construct(false, $name = 'GC - Event-widget', $widget_ops);
     }
 
     /** @see WP_Widget::widget */
     function widget($args, $instance) {
       $instance = array_merge($this->defaults, $instance);
-      $instance = $this->fix_scope($instance); // depcreciate  
-      
+      $instance = $this->fix_scope($instance); // depcreciate
+
 
       //remove owner searches
       $instance['owner'] = false;
@@ -70,16 +70,16 @@ class GC_event_widget extends WP_Widget {
           'end_time'    => 'event_end_time',
           'start_time'  => 'event_start_time'
         );
-        
+
         foreach($old_vals as $old_val => $new_val){
           $instance['orderby'] = str_replace($old_val, $new_val, $instance['orderby']);
         }
       }
-      
+
       //get events
       $events       = EM_Events::get(apply_filters('em_widget_events_get_args',$instance));
       $icounter      = 0;
-      
+
       if ( count($events) > 0 ){
 
         echo $args['before_widget'];
@@ -89,25 +89,25 @@ class GC_event_widget extends WP_Widget {
           echo apply_filters('widget_title',$instance['title'], $instance, $this->id_base);
           echo $args['after_title'];
         }
-        
+
         echo '<div class="entry-list entry-list--events">';
-        
-        foreach($events as $event){    
-          
+
+        foreach($events as $event){
+
           $icounter++;
-          
+
           if ( $icounter == 1 ) {
             echo '<section class="entry entry--event first" itemscope itemtype="http://schema.org/Event">';
           }
           else {
             echo '<section class="entry entry--event" itemscope itemtype="http://schema.org/Event">';
           }
-          
+
           echo '<a class="entry__link" itemprop="url" href="' .get_permalink( $event->post_id ) . '">';
-          
+
           $eventstart   = strtotime( $event->event_start_date );
           $eventend     = strtotime( $event->event_end_date );
-          
+
           $availability = '';
 
           if ( date("Y") == date_i18n('Y', $eventstart) ) {
@@ -116,49 +116,49 @@ class GC_event_widget extends WP_Widget {
           else {
             $jaar =  '<span class="jaar">' . date_i18n('Y', $eventstart) . '</span>';
           }
-            
 
-          echo '<header>' . $availability . '<span class="date-badge" itemprop="startDate" content="' . date('c', $eventstart) . '"><span class="dag">' . date_i18n('d', $eventstart) . '</span> <span class="maand">' . date_i18n('M', $eventstart) . '</span>' . $jaar . '</span>';        
+
+          echo '<header>' . $availability . '<span class="date-badge" itemprop="startDate" content="' . date('c', $eventstart) . '"><span class="dag">' . date_i18n('d', $eventstart) . '</span> <span class="maand">' . date_i18n('M', $eventstart) . '</span>' . $jaar . '</span>';
           echo '<h3 class="entry-title" itemprop="name"><span class="arrow-link"><span class="arrow-link__text">';
           echo $event->event_name;
           echo '</span><span class="arrow-link__icon"></span></span></h3>';
-          
+
           echo '<div class="meta-data">';
-          
+
           if ( $event->output( '#_EVENTTIMES' ) ) {
             echo '<span class="meta-data__item meta-data--with-icon event-times">' . $event->output( '#_EVENTTIMES' ) . '</span>';
           }
-          
+
           if ( $event->output( '#_LOCATIONNAME' ) ) {
             echo '<span class="meta-data__item event-location meta-data--with-icon">' . $event->output( '#_LOCATIONNAME' ) . '</span>';
           }
-          
+
           echo '</div>';
           echo '</header>';
-          
+
           echo '<div class="excerpt" itemprop="description">';
           echo $event->output( '#_EVENTEXCERPT{20}' );
           echo '</div>';
-          
+
           echo '</a>';
           echo '</section>';
 
         }
-        
+
         echo '</div>';
 
         if ( !empty($instance['all_events']) ){
           $events_link = (!empty($instance['all_events_text'])) ? em_get_link($instance['all_events_text']) : em_get_link(__('all events','gebruikercentraal'));
           echo $events_link;
         }
-        
+
         echo $args['after_widget'];
 
       }
       else{
 //        echo $instance['no_events_text'];
       }
-      
+
 
     }
 
@@ -194,10 +194,10 @@ class GC_event_widget extends WP_Widget {
       <input type="text" id="<?php echo $this->get_field_id('limit'); ?>" name="<?php echo $this->get_field_name('limit'); ?>" size="3" value="<?php echo esc_attr($instance['limit']); ?>" />
     </p>
     <p>
-      
+
       <label for="<?php echo $this->get_field_id('scope'); ?>"><?php esc_html_e('Scope','gebruikercentraal'); ?>: </label><br/>
       <select id="<?php echo $this->get_field_id('scope'); ?>" name="<?php echo $this->get_field_name('scope'); ?>" class="widefat" >
-        <?php foreach( em_get_scopes() as $key => $value) : ?>   
+        <?php foreach( em_get_scopes() as $key => $value) : ?>
         <option value='<?php echo esc_attr($key); ?>' <?php echo ($key == $instance['scope']) ? "selected='selected'" : ''; ?>>
           <?php echo esc_html($value); ?>
         </option>
@@ -207,23 +207,23 @@ class GC_event_widget extends WP_Widget {
     <p>
       <label for="<?php echo $this->get_field_id('order'); ?>"><?php esc_html_e('Sortering','gebruikercentraal'); ?>: </label>
       <select  id="<?php echo $this->get_field_id('orderby'); ?>" name="<?php echo $this->get_field_name('orderby'); ?>" class="widefat">
-        <?php foreach($this->em_orderby_options as $key => $value) : ?>   
+        <?php foreach($this->em_orderby_options as $key => $value) : ?>
          <option value='<?php echo esc_attr($key); ?>' <?php echo ( !empty($instance['orderby']) && $key == $instance['orderby']) ? "selected='selected'" : ''; ?>>
            <?php echo esc_html($value); ?>
          </option>
         <?php endforeach; ?>
-      </select> 
+      </select>
     </p>
     <p>
       <label for="<?php echo $this->get_field_id('order'); ?>"><?php esc_html_e('Sorteervolgorde','gebruikercentraal'); ?>: </label>
       <select id="<?php echo $this->get_field_id('order'); ?>" name="<?php echo $this->get_field_name('order'); ?>" class="widefat">
-        <?php 
+        <?php
         $order_options = apply_filters('GC_event_widget_order_ddm', array(
           'ASC' => __('Ascending','gebruikercentraal'),
           'DESC' => __('Descending','gebruikercentraal')
-        )); 
+        ));
         ?>
-        <?php foreach( $order_options as $key => $value) : ?>   
+        <?php foreach( $order_options as $key => $value) : ?>
          <option value='<?php echo esc_attr($key); ?>' <?php echo ($key == $instance['order']) ? "selected='selected'" : ''; ?>>
            <?php echo esc_html($value); ?>
          </option>
@@ -249,7 +249,7 @@ class GC_event_widget extends WP_Widget {
           jQuery(this).parent().next().show();
       }else{
         jQuery(this).parent().next().hide();
-      } 
+      }
     }).trigger('change');
     </script>
     <em><?php echo sprintf( esc_html__('The list is wrapped in a %s tag, so if an %s tag is not wrapping the formats below it will be added automatically.','gebruikercentraal'), '<code>&lt;ul&gt;</code>', '<code>&lt;li&gt;</code>'); ?></em>
@@ -261,9 +261,9 @@ class GC_event_widget extends WP_Widget {
       <label for="<?php echo $this->get_field_id('no_events_text'); ?>"><?php _e('No events message','gebruikercentraal'); ?>: </label>
       <input type="text" id="<?php echo $this->get_field_id('no_events_text'); ?>" name="<?php echo $this->get_field_name('no_events_text'); ?>" value="<?php echo esc_attr( $instance['no_events_text'] ); ?>" >
     </p>
-        <?php 
+        <?php
     }
-    
+
     /**
      * Backwards compatability for an old setting which is now just another scope.
      * @param unknown_type $instance

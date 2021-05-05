@@ -7,7 +7,7 @@
 // @license GPL-2.0+
 // @version 4.1.2
 // @desc.   Copied styling for .cards and various subsets from inclusie to gc-theme.
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 
 //=========================================================================================================
 
@@ -226,7 +226,7 @@
 
 .card--featured-image.brief {
 	// (PvB): deze mixin geeft een fijne ruimte om de afbeelding heen en een fijne HEMA-pantybruine kleur
-	// ik heb deze uit de beeldbank hierheen gekopieerd, want op de overzichtspagina kunnen ook 
+	// ik heb deze uit de beeldbank hierheen gekopieerd, want op de overzichtspagina kunnen ook
 	// beelden getoond worden en deze overzichtspagina is gc-generiek
 	.gc-beeldbank-card();
 }
@@ -237,15 +237,15 @@
 	padding-left: 2rem;
 	padding-right: 2rem;
 	}
-	
+
 	.card__title {
 		.font-size(20);
 		line-height: 2.8rem;
 		border-top: .1rem solid @border_color;
-		
+
 		a {
 			padding-top: 1.2rem;
-			
+
 			&:hover,
 			&:focus {
 				.arrow-link__icon {
@@ -255,31 +255,31 @@
 			}
 		}
 	}
-	
+
 	.card__image {
 		height: 12em;
 		background-size: 60% auto;
-		
+
 		&:before {
 			display: none;
 		}
 	}
 }
-	
-	
-	
+
+
+
 .card.no-image {
 	.gc-padding(); // oi, voeg () toe om 'm herkenbaar te houden als mixin
 	align-items: flex-start;
-	
+
 	@media @desktop {
 		padding: 3rem;
 	}
-	
+
 	.card__title,
 	h2,
 	h3 {
 		font-family: @font_secondary;
 	}
 }
-	
+

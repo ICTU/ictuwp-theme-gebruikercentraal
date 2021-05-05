@@ -10,7 +10,7 @@
 // @license GPL-2.0+
 // @version 3.27.9
 // @desc.   Bugfix social media widget, div styling fixes.
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 
 //========================================================================================================
 
@@ -56,7 +56,7 @@ class CZO_Socialmedia_widget extends WP_Widget {
 
 		// set up ACF fields
 		if( function_exists('acf_add_local_field_group') ):
-			
+
 			acf_add_local_field_group(array(
 				'key' => 'group_5dc3d4a1b1d8a',
 				'title' => 'Social media accounts',
@@ -166,7 +166,7 @@ class CZO_Socialmedia_widget extends WP_Widget {
 				'active' => true,
 				'description' => '',
 			));
-			
+
 		endif;
 
 		$this->defaults = array(
@@ -203,7 +203,7 @@ class CZO_Socialmedia_widget extends WP_Widget {
 	 * @param array $instance The settings for the particular instance of the widget.
 	 */
 	public function widget( $args, $instance ) {
-		
+
         extract($args, EXTR_SKIP);
 
         $title                  	= empty($instance['title']) ? '' : $instance['title'] ;
@@ -213,7 +213,7 @@ class CZO_Socialmedia_widget extends WP_Widget {
             echo $before_title . $title . $after_title;
 	        echo $after_widget;
         }
-		
+
 	}
 
   //------------------------------------------------------------------------------------------------------
@@ -270,9 +270,9 @@ class CZO_Socialmedia_widget extends WP_Widget {
 //========================================================================================================
 
 function gc_wbvb_widget_socmed_add_acf_links( $params ) {
-	
+
 	global $post;
-	
+
 	// get widget vars
 	$widget_name  	= $params[0]['widget_name'];
 	$widget_id    	= $params[0]['widget_id'];
@@ -283,35 +283,35 @@ function gc_wbvb_widget_socmed_add_acf_links( $params ) {
 		return $params;
 	}
 
-	if( have_rows( 'socmed_widget_links', 'widget_' . $widget_id ) ): 
-	
+	if( have_rows( 'socmed_widget_links', 'widget_' . $widget_id ) ):
+
 		$widget_links = '<ul class="social-media">';
-	
-		while( have_rows( 'socmed_widget_links', 'widget_' . $widget_id ) ): the_row(); 
-	
+
+		while( have_rows( 'socmed_widget_links', 'widget_' . $widget_id ) ): the_row();
+
 			// vars
 			$socmed_widget_type			= get_sub_field('socmed_widget_type');
 			$socmed_widget_url			= get_sub_field('socmed_widget_url');
 			$socmed_widget_linktekst	= get_sub_field('socmed_widget_linktekst');
-			
+
 			if ( $socmed_widget_url && $socmed_widget_linktekst ) {
-	
+
 				$widget_links .= '<li>';
 				$widget_links .= '<a class="' . $socmed_widget_type . '" href="' . $socmed_widget_url . '">' . sanitize_text_field( $socmed_widget_linktekst ) . '</a>';
 				$widget_links .= '</a></li>';
-				
+
 			}
-	
-		endwhile; 
-	
+
+		endwhile;
+
 		$widget_links .= '</ul>';
 
 		$params[0]['after_title'] .= $widget_links;
 
-	else:	
+	else:
 
 		$params[0]['after_title'] = 'grumpy cat';
-	
+
 	endif;
 
 	// return

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * Gebruiker Centraal
@@ -10,12 +10,12 @@
  * @license GPL-2.0+
  * @version 3.5.1
  * @desc.   Comments, bookingform
- * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+ * @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
  */
 
-    
-    showdebug(__FILE__, 'forms bookingform'); 
-/* 
+
+    showdebug(__FILE__, 'forms bookingform');
+/*
  * This file generates the default login form within the booking form (if enabled in options).
  */
 ?>
@@ -38,7 +38,7 @@
   <?php
   //Signup Links
   if ( get_option('users_can_register') ) {
-    echo "<br />";  
+    echo "<br />";
     if ( function_exists('bp_get_signup_page') ) { //Buddypress
       $register_link = bp_get_signup_page();
     }elseif ( file_exists( ABSPATH."/wp-signup.php" ) ) { //MU + WP3
@@ -47,10 +47,10 @@
       $register_link = site_url('wp-login.php?action=register', 'login');
     }
     ?>
-    <a href="<?php echo $register_link ?>"><?php esc_html_e('Sign Up','events-manager') ?></a>&nbsp;&nbsp;|&nbsp;&nbsp; 
+    <a href="<?php echo $register_link ?>"><?php esc_html_e('Sign Up','events-manager') ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;
     <?php
   }
-  ?>                      
-  <a href="<?php echo site_url('wp-login.php?action=lostpassword', 'login') ?>" title="<?php esc_html_e('Password Lost and Found', 'events-manager') ?>"><?php esc_html_e('Lost your password?', 'events-manager') ?></a>                        
+  ?>
+  <a href="<?php echo site_url('wp-login.php?action=lostpassword', 'login') ?>" title="<?php esc_html_e('Password Lost and Found', 'events-manager') ?>"><?php esc_html_e('Lost your password?', 'events-manager') ?></a>
   </form>
 </div>

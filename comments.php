@@ -9,7 +9,7 @@
 // @license GPL-2.0+
 // @version 3.15.3
 // @desc.   Translation improved (most string now originally in English)
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 
 
 if ( post_password_required() ) {

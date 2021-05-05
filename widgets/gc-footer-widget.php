@@ -10,7 +10,7 @@
 // @license GPL-2.0+
 // @version 3.27.4j
 // @desc.   Soc-med widget toegevoegd. Betere opzet footerwidget; 'font-display: swap' toegevoegd; meta-info voor events betere styling.
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 
 
 
@@ -29,15 +29,15 @@ class gc_show_footer_widget extends WP_Widget {
     parent::__construct( 'gc_show_footer_widget', 'GC - Sitefooter', $widget_ops );
   }
 
-     
+
     function form($instance) {
-        $instance = wp_parse_args( (array) $instance, 
-            array( 
-                'title'              => '', 
-                'gc_fw_cta_link'      => '', 
-                'gc_fw_korte_beschrijving'  => '', 
-                'gc_fw_url_meer_info'    => '' 
-                ) 
+        $instance = wp_parse_args( (array) $instance,
+            array(
+                'title'              => '',
+                'gc_fw_cta_link'      => '',
+                'gc_fw_korte_beschrijving'  => '',
+                'gc_fw_url_meer_info'    => ''
+                )
             );
 
         $title						= apply_filters( 'widget_title', $instance['title'] );
@@ -61,17 +61,17 @@ class gc_show_footer_widget extends WP_Widget {
             <label for="<?php echo $this->get_field_id( 'gc_fw_cta_link' ); ?>"><?php _e( 'Linktekst', 'gebruikercentraal' ) ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'gc_fw_cta_link' ); ?>" name="<?php echo $this->get_field_name( 'gc_fw_cta_link' ); ?>" type="text" value="<?php echo $gc_fw_cta_link; ?>" />
         </p>
-        
+
         <p>
             <label for="<?php echo $this->get_field_id( 'gc_fw_url_meer_info' ); ?>"><?php _e( 'Link (URL)', 'gebruikercentraal' ) ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'gc_fw_url_meer_info' ); ?>" name="<?php echo $this->get_field_name( 'gc_fw_url_meer_info' ); ?>" type="url" value="<?php echo $gc_fw_url_meer_info; ?>" />
         </p>
-        
+
         <?php
 
-            
+
     }
-     
+
     function update($new_instance, $old_instance) {
         $instance = $old_instance;
         $instance['title']						= strip_tags($new_instance['title']);
@@ -80,7 +80,7 @@ class gc_show_footer_widget extends WP_Widget {
         $instance['gc_fw_cta_link']				= $new_instance['gc_fw_cta_link'];
         return $instance;
     }
-     
+
     function widget($args, $instance) {
 
 
@@ -93,24 +93,24 @@ class gc_show_footer_widget extends WP_Widget {
         $linkafter          		= '';
         $linkbefore          		= '';
 
-        
+
 		if ( $gc_fw_url_meer_info && $gc_fw_cta_link ) {
-			
+
 			if ( intval( $gc_fw_url_meer_info ) > 0 ) {
 				$gc_fw_url_meer_info = get_permalink( intval( $gc_fw_url_meer_info ) );
 			}
-            
+
             $linkbefore         = '<p><a href="' . $gc_fw_url_meer_info. '" class="cta">';
             $linkafter          = '</a></p>';
-            
+
         }
-         
-         
+
+
         echo $before_widget;
 
         if ( $title )
             echo $before_title . $title . $after_title;
-        
+
         echo '<div class="banner">';
         echo '<p>' . nl2br($gc_fw_korte_beschrijving) . '</p>';
         echo $linkbefore . $gc_fw_cta_link . $linkafter;

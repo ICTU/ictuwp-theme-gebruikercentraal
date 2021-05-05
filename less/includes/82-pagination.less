@@ -10,13 +10,13 @@
 // @license GPL-2.0+
 // @version 3.27.2
 // @desc.   Totale make-over van zoekresultaat-pagina.
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
-	
-	
-	
+// @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
+
+
+
 	@pijltje_active: 10px;
-	
-	
+
+
 	/* Pagination
 	--------------------------------------------- */
 	.prev-next-navigation,
@@ -28,34 +28,34 @@
 		margin: 0 0 @padding 0;
 		padding: 0;
 		overflow: hidden;
-		
+
 		font-family: @headerfont;
 		text-transform: uppercase;
 		font-weight: normal;
-		
+
 		li, div {
 			display: inline;
 		}
-		
+
 		ul {
 			padding: 0;
 			overflow: hidden;
 			padding-right: ( @pagination_button_width + ( 2 * @pagination_button_offset ) );
 			padding-left: ( @pagination_button_width + ( 2 * @pagination_button_offset ) );
 			position: relative;
-			
+
 			&, li {
 				overflow: hidden;
 			}
 		}
-		
+
 		li {
 			padding: 0;
 			display: block;
 			margin: 0 .5em 0 0;
 			float: left;
 		}
-		
+
 		li.pagination-omission,
 		a {
 			color: @txt;
@@ -70,50 +70,50 @@
 			margin-top: .5em;
 			overflow: hidden;
 		}
-		
+
 		a {
 			cursor: pointer;
-			
+
 			&:hover,
 			&:active,
 			&:focus {
 				text-decoration: underline;
 			}
 		}
-		
+
 		li a:hover,
 		li.active a {
 			background-color: @txt;
 			color: @wit;
 		}
-		
+
 		li.active  {
 			position: relative;
-			
+
 			&:before {
 				content: ' ';
 				display: inline-block;
 				z-index: 888;
-				
+
 				width: 0;
 				height: 0;
-				
+
 				background: transparent;
 				position: absolute;
 				left: 7px;
 				top: 0;
 				margin-top: -15px;
-				
+
 				border-right: @pijltje_active solid transparent;
 				border-left: @pijltje_active solid transparent;
 				border-top: @pijltje_active solid transparent;
 				border-bottom: @pijltje_active solid @txt;
 				position: absolute;
 				top: @pijltje_active;
-				
+
 			}
 		}
-		
+
 		.archive {
 			.pagination-next,
 			.alignright,
@@ -124,16 +124,16 @@
 				margin: 0;
 			}
 		}
-		
+
 		.pagination-next,
 		.alignright,
 		.pagination-previous,
 		.alignleft {
-			
+
 			@media only screen and (min-width: ( @break_tablet ) ) {
 				max-width: 50%;
 			}
-			
+
 			a {
 				border: 2px solid @wit;
 				padding: 0;
@@ -142,7 +142,7 @@
 				.fontsize(16);
 				text-transform: none;
 				min-height: @pagination_button_height;
-				
+
 				&:before,
 				&:after,
 				span {
@@ -173,13 +173,13 @@
 				}
 			}
 		}
-		
+
 		.pagination-next,
 		.alignright {
 			float: right;
 			text-align: right;
 			right: @pagination_button_offset;
-			
+
 			a {
 				padding-left: @padding;
 //				padding-right: @pagination_button_width;
@@ -198,13 +198,13 @@
 				*/
 			}
 		}
-		
+
 		.pagination-previous,
 		.alignleft {
 			float: left;
 			text-align: left;
 			left: @pagination_button_offset;
-			
+
 			a {
 				padding-right: @padding;
 //				padding-left: @pagination_button_width;
@@ -231,18 +231,18 @@
 				padding-right: @padding;
 				position: inherit;
 			}
-			
+
 			.pagination-next,
 			.alignright,
 			.pagination-previous,
 			.alignleft {
 				position: inherit;
-				
+
 				a {
 					padding-top: .2em;
 					padding-bottom: .2em;
 					line-height: 1;
-					
+
 					span {
 						margin-top: .3em;
 						margin-bottom: .3em;
@@ -253,7 +253,7 @@
 			}
 		}
 	}
-	
+
 	// event-manager pagination
 	.em-pagination {
 		display: block;
@@ -263,20 +263,20 @@
 		text-align: center;
 		padding-top: 1em;
 		padding-bottom: .25em;
-		
+
 		.page-numbers,
 		strong {
 			text-align: center;
 			display: inline-block;
 		}
-		
+
 		a.page-numbers {
 			text-decoration: none;
 			border: 3px solid transparent;
 			background-color: transparent;
 			padding-left: .5em;
 			padding-right: .5em;
-			
+
 			&:hover,
 			&:active,
 			&:focus {
@@ -285,7 +285,7 @@
 				text-decoration: underline;
 			}
 		}
-		
+
 		strong {
 			border: 3px solid @txt;
 			background-color: @wit;

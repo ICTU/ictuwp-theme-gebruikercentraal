@@ -10,7 +10,7 @@
 // @license GPL-2.0+
 // @version 3.12.1
 // @desc.   Renamed functions for better sharing.
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
  */
 
 
@@ -30,7 +30,7 @@ function gc_wbvb_load_widgets() {
   register_widget( 'GC_WBVB_WIDGET_user_welcome' );
 }
 
-    
+
 
 //========================================================================================================
 
@@ -85,25 +85,25 @@ class GC_WBVB_WIDGET_user_welcome extends WP_Widget {
 
 
         if ( $current_user->ID ) {
-            
+
             // alleen dingen doen als de gebruiker ingelogd is.
             echo $args['before_widget'];
-            
+
             wp_get_current_user();
-            
+
             if ( ! empty( $instance['title'] ) ) {
                 $titelstring = $instance['title'];
               echo $args['before_title'] . apply_filters( 'widget_title', $titelstring, $instance, $this->id_base ) . $args['after_title'];
             }
-            
-            
+
+
             if ( $current_user->display_name != '' ) {
                 echo _e( 'Je bent ingelogd als', 'gebruikercentraal' ) . ' ' . $current_user->display_name . "\n";
-                 
+
             }
-            
+
             wp_nav_menu( array( 'fallback_cb' => '', 'menu' => $nav_menu ) );
-            
+
             echo $args['after_widget'];
 
         }

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * Gebruiker Centraal
@@ -10,16 +10,16 @@
  * @license GPL-2.0+
  * @version 3.4.11
  * @desc.   Tabs to spaces, tabs to spaces
- * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+ * @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
  */
 
-    
-    showdebug(__FILE__, 'placeholder'); 
+
+    showdebug(__FILE__, 'placeholder');
 /*
  * This file contains the HTML generated for a single location Google map. You can copy this file to yourthemefolder/plugins/events/templates and modify it in an upgrade-safe manner.
- * 
+ *
  * There is one argument passed to you, which is the $args variable. This contains the arguments you could pass into shortcodes, template tags or functions like EM_Events::get().
- * 
+ *
  * In this template, we encode the $args array into JSON for javascript to easily parse and request the locations from the server via AJAX.
  */
   /* @var $EM_Location EM_Location */
@@ -51,5 +51,4 @@
   elseif( is_object($EM_Location) && $EM_Location->location_latitude == 0 && $EM_Location->location_longitude == 0 ){
     echo '<i>'. _x('Map Unavailable', 'Single event', 'gebruikercentraal') .'</i>';
   }
-  
-  
+

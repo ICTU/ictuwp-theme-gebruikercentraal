@@ -9,7 +9,7 @@
 // @license GPL-2.0+
 // @version 3.15.1
 // @desc.   Restyling main nav menu.
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 
 
 //* Template Name: GC-pagina - Homepage
@@ -25,7 +25,7 @@ showdebug(__FILE__, '/');
 
 
 if ( is_home() || is_front_page() ) {
-  
+
   remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
   remove_action( 'genesis_after_header', 'genesis_do_breadcrumbs' );
   remove_action( 'genesis_loop', 'genesis_do_loop' );
@@ -38,7 +38,7 @@ elseif ( is_archive() ) {
 
     remove_action( 'genesis_loop', 'genesis_do_loop' );
     add_action( 'genesis_loop', 'gc_wbvb_archive_loop' );
-    
+
 }
 
 genesis();

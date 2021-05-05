@@ -1834,7 +1834,7 @@ msgid "Paul van Buuren - Tamara de Haas"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://wbvb.nl/"
+msgid "https://www.gebruikercentraal.nl/"
 msgstr ""
 
 #. Template Name of the plugin/theme

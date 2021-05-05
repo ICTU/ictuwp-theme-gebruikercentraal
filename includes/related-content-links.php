@@ -14,7 +14,7 @@
 // @version 4.3.8
 // @since   4.1.1
 // @desc.   Volgorde laden stylesheets herzien; Inladen CSS herzien; layout voor overzichtspagina herzien.
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 
 
 
@@ -52,39 +52,39 @@ if ( !function_exists( 'ictu_gctheme_frontend_general_get_related_content_header
             if ( 'ja' === $gerelateerdecontent ) {
 
 		        $items = get_field('content_block_items', $currentpageID );
-		
+
 		        if ($items) {
 
 		            foreach ($items as $post):
-		
+
 			            setup_postdata($post);
-		
+
 						$currentpageID = $post->ID;
 						$image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large');
-						
+
 			            if ($image[0]) {
 			                $header_css .= "#related_" . $currentpageID . " .card__image { ";
 			                $header_css .= "background-image: url('" . $image[0] . "'); ";
 			                $header_css .= "} ";
 			            }
-		
+
 		            endforeach;
-			        
+
 		            wp_reset_query();
-		
+
 		        } // if ($items) {
 
 		    } // if ( 'ja' === $gerelateerdecontent ) {
-		    
+
 	    } // if ( function_exists( 'get_field' ) ) {
 
     if ($header_css) {
-	    
+
         wp_add_inline_style(ID_SKIPLINKS, $header_css);
     }
 
-    
-    
+
+
     }
 
 endif;
@@ -109,7 +109,7 @@ if ( !function_exists( 'ictu_gctheme_frontend_general_get_related_content' ) ) :
 	 * @return array $menuarray Array with links and link text (if $args['getmenu'] => TRUE).
 	 * @return string $return HTML string with related links (if $args['echo'] => FALSE).
 	 */
- 	
+
     function ictu_gctheme_frontend_general_get_related_content( $args = [] ) {
 
         global $post;
@@ -147,7 +147,7 @@ if ( !function_exists( 'ictu_gctheme_frontend_general_get_related_content' ) ) :
 
 					$columncounter  = 'col-2';
 					$countcount     = count( $related_items );
-				
+
 					if ( $countcount < 2  ) {
 						$columncounter = 'col-1';
 					}
@@ -173,7 +173,7 @@ if ( !function_exists( 'ictu_gctheme_frontend_general_get_related_content' ) ) :
                 foreach ( $related_items as $post ):
 
 					setup_postdata( $post );
-					
+
 					$theid          = $post->ID;
 					$section_title	= get_the_title( $theid );
 					$section_text   = get_the_excerpt( $theid );
@@ -196,7 +196,7 @@ if ( !function_exists( 'ictu_gctheme_frontend_general_get_related_content' ) ) :
 							$imageplaceholder .= '<!-- ' . sanitize_title( $image[0] ) . '-->';
 							$image = true;
 						}
-						
+
 						$return .= '<div class="card'.($image ? ' card--featured-image' : '').'" id="' . $block_id . '">';
 						$return .= $imageplaceholder;
 						$return .= '<div class="card__content">';
@@ -254,7 +254,7 @@ if ( !function_exists( 'ictu_gctheme_frontend_general_get_related_content' ) ) :
                         $return .= '<ul class="item-list">';
 
 						while ( have_rows( 'links_block_items' ) ): the_row();
-							
+
 							$item_url           = get_sub_field( 'links_block_item_url' );
 							$item_linktext      = get_sub_field( 'links_block_item_linktext' );
 							$item_description   = get_sub_field( 'links_block_item_description' );
@@ -306,15 +306,15 @@ endif;
 //========================================================================================================
 
 /**
- * Add ACF field definitions for 
+ * Add ACF field definitions for
  *
  * This function either returns an array with links, or returns an HTML string, or echoes HTML string
  *
  * @since	  4.1.1
- * @global string ICTU_GC_CPT_DOELGROEP Custom Post Type for doelgroep ('doelgroep', see functions.php). 
- * @global string ICTU_GC_CPT_STAP Custom Post Type for stap ('stap', see functions.php). 
- * @global string GC_BEELDBANK_BEELD_CPT Custom Post Type for beeld ('beeld', see functions.php). 
- * @global string GC_BEELDBANK_BRIEF_CPT Custom Post Type for brief ('brief', see functions.php). 
+ * @global string ICTU_GC_CPT_DOELGROEP Custom Post Type for doelgroep ('doelgroep', see functions.php).
+ * @global string ICTU_GC_CPT_STAP Custom Post Type for stap ('stap', see functions.php).
+ * @global string GC_BEELDBANK_BEELD_CPT Custom Post Type for beeld ('beeld', see functions.php).
+ * @global string GC_BEELDBANK_BRIEF_CPT Custom Post Type for brief ('brief', see functions.php).
  *
  * @param array $args Argument for what to do: echo or return links or return HTML string.
  * @return array $menuarray Array with links and link text ( if $args['getmenu'] => TRUE ).
@@ -327,65 +327,65 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 
     //====================================================================================================
     // ACF definition for 'gerelateerde_content_toevoegen'
-    // 
+    //
 	// not all CPTs are active on every site; so on some sites adding GC_BEELDBANK_BRIEF_CPT
 	// is not useful. But this function is called before the posttypes are actually registered.
 	//  ¯\_(ツ)_/¯
 	// TODO
 
 	$related_locations = array(
-			array( 
-				array( 
+			array(
+				array(
 					'param' => 'post_type',
 					'operator' => '==',
 					'value' => ICTU_GC_CPT_STAP,
 				 ),
 			 ),
-			array( 
-				array( 
+			array(
+				array(
 					'param' => 'post_type',
 					'operator' => '==',
 					'value' => 'page',
 				 ),
 			 ),
-			array( 
-				array( 
+			array(
+				array(
 					'param' => 'post_type',
 					'operator' => '==',
 					'value' => ICTU_GC_CPT_DOELGROEP,
 				 ),
 			 ),
-			array( 
-				array( 
+			array(
+				array(
 					'param' => 'post_type',
 					'operator' => '==',
 					'value' => GC_BEELDBANK_BRIEF_CPT,
 				 ),
 			 ),
-			array( 
-				array( 
+			array(
+				array(
 					'param' => 'post_type',
 					'operator' => '==',
 					'value' => GC_BEELDBANK_BEELD_CPT,
 				 ),
 			 ),
-			array( 
-				array( 
+			array(
+				array(
 					'param' => 'post_type',
 					'operator' => '==',
 					'value' => ICTU_GC_CPT_VAARDIGHEDEN,
 				 ),
 			 ),
-		 );	
+		 );
 
     //====================================================================================================
     // ACF definition for 'handige_links_toevoegen'
-    // 
-	acf_add_local_field_group( array( 
+    //
+	acf_add_local_field_group( array(
 		'key' => 'group_5c8f9ba967736',
 		'title' => '03 - Gerelateerde content (GC-theme, inclusie, beeldbank)',
-		'fields' => array( 
-			array( 
+		'fields' => array(
+			array(
 				'key' => 'field_5c8fe203a8435',
 				'label' => 'Gerelateerde content toevoegen?',
 				'name' => 'gerelateerde_content_toevoegen',
@@ -393,12 +393,12 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 				'instructions' => '',
 				'required' => 0,
 				'conditional_logic' => 0,
-				'wrapper' => array( 
+				'wrapper' => array(
 					'width' => '',
 					'class' => '',
 					'id' => '',
 				 ),
-				'choices' => array( 
+				'choices' => array(
 					'ja' => 'Ja',
 					'nee' => 'Nee',
 				 ),
@@ -409,23 +409,23 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 				'return_format' => 'value',
 				'save_other_choice' => 0,
 			 ),
-			array( 
+			array(
 				'key' => 'field_5c8fd404bd765',
 				'label' => 'Titel',
 				'name' => 'content_block_title',
 				'type' => 'text',
 				'instructions' => '',
 				'required' => 1,
-				'conditional_logic' => array( 
-					array( 
-						array( 
+				'conditional_logic' => array(
+					array(
+						array(
 							'field' => 'field_5c8fe203a8435',
 							'operator' => '==',
 							'value' => 'ja',
 						 ),
 					 ),
 				 ),
-				'wrapper' => array( 
+				'wrapper' => array(
 					'width' => '',
 					'class' => '',
 					'id' => '',
@@ -436,30 +436,30 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 				'append' => '',
 				'maxlength' => '',
 			 ),
-			array( 
+			array(
 				'key' => 'field_5c8fd42e15a23',
 				'label' => 'Items',
 				'name' => 'content_block_items',
 				'type' => 'relationship',
 				'instructions' => '',
 				'required' => 0,
-				'conditional_logic' => array( 
-					array( 
-						array( 
+				'conditional_logic' => array(
+					array(
+						array(
 							'field' => 'field_5c8fe203a8435',
 							'operator' => '==',
 							'value' => 'ja',
 						 ),
 					 ),
 				 ),
-				'wrapper' => array( 
+				'wrapper' => array(
 					'width' => '',
 					'class' => '',
 					'id' => '',
 				 ),
 				'post_type' => GC_ALLOWED,
 				'taxonomy' => '',
-				'filters' => array( 
+				'filters' => array(
 					0 => 'search',
 					1 => 'post_type',
 					2 => 'taxonomy',
@@ -484,7 +484,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 
     //====================================================================================================
     // ACF definition for 'handige_links_toevoegen'
-    // 
+    //
 	acf_add_local_field_group( array(
 		'key' => 'group_5c8fdeebf0c34',
 		'title' => '03 - Gerelateerde externe links (GC-theme, inclusie, beeldbank)',
@@ -637,7 +637,7 @@ if ( function_exists( 'acf_add_local_field_group' ) ) :
 
 
 
-		
+
 endif;
 
 //========================================================================================================

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * Gebruiker Centraal
@@ -10,11 +10,11 @@
  * @license GPL-2.0+
  * @version 3.4.11
  * @desc.   Tabs to spaces, tabs to spaces
- * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+ * @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
  */
 
-    
-    showdebug(__FILE__, 'templates'); 
+
+    showdebug(__FILE__, 'templates');
 
 //define and clean up formats for display
 $summary_format = str_replace ( ">", "&gt;", str_replace ( "<", "&lt;", get_option ( 'dbem_ical_description_format' ) ) );
@@ -56,12 +56,12 @@ while ( count($EM_Events) > 0 ){
     }else{
         $dateModified = get_gmt_from_date($EM_Event->post_modified, 'Ymd\THis\Z');
     }
-    
+
     //formats
     $summary = $EM_Event->output($summary_format,'ical');
     $description = $EM_Event->output($description_format,'ical');
     $location = $EM_Event->output($location_format, 'ical');
-    
+
     //create a UID
     $UID = sprintf( '%04x%04x-%04x-%04x-%04x-%04x%04x%04x',
           // 32 bits for "time_low"
@@ -78,8 +78,8 @@ while ( count($EM_Events) > 0 ){
           // 48 bits for "node"
           mt_rand( 0, 0xffff ), mt_rand( 0, 0xffff ), mt_rand( 0, 0xffff )
       );
-    
-//output ical item    
+
+//output ical item
 $output = "
 BEGIN:VEVENT
 UID:{$UID}
@@ -100,7 +100,7 @@ END:VEVENT";
     echo preg_replace("/([^\r])\n/", "$1\r\n", $output);
     $count++;
   }
-  if( $ical_limit != 0 && $count >= $ical_limit ){ 
+  if( $ical_limit != 0 && $count >= $ical_limit ){
       //we've reached our limit, or showing one event only
       break;
   }else{

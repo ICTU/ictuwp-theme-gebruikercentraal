@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * Gebruiker Centraal
@@ -10,11 +10,11 @@
  * @license GPL-2.0+
  * @version 3.4.11
  * @desc.   Tabs to spaces, tabs to spaces
- * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+ * @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
  */
 
-    
-    showdebug(__FILE__, 'templates'); 
+
+    showdebug(__FILE__, 'templates');
 
 
     do_action('em_template_my_bookings_header'); ?>
@@ -39,7 +39,7 @@
     <div class='em-my-bookings'>
         <?php if ( $bookings_count >= $limit ) : ?>
         <div class='tablenav'>
-          <?php 
+          <?php
           if ( $bookings_count >= $limit ) {
             $link = em_add_get_params($_SERVER['REQUEST_URI'], array('pno'=>'%PAGE%'), false); //don't html encode, so em_paginate does its thing
             $bookings_nav = em_paginate( $link, $bookings_count, $limit, $page);
@@ -63,13 +63,13 @@
             </tr>
           </thead>
           <tbody>
-            <?php 
+            <?php
             $rowno = 0;
             $event_count = 0;
             $nonce = wp_create_nonce('booking_cancel');
             foreach ($EM_Bookings as $EM_Booking) {
               /* @var $EM_Booking EM_Booking */
-              $EM_Event = $EM_Booking->get_event();            
+              $EM_Event = $EM_Booking->get_event();
               if( ($rowno < $limit || empty($limit)) && ($event_count >= $offset || $offset === 0) ) {
                 $rowno++;
                 ?>
@@ -90,7 +90,7 @@
                     echo apply_filters('em_my_bookings_booking_actions', $cancel_link, $EM_Booking);
                     ?>
                   </td>
-                </tr>                
+                </tr>
                 <?php
               }
               do_action('em_my_bookings_booking_loop',$EM_Booking);

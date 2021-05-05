@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * Gebruiker Centraal
@@ -10,17 +10,17 @@
  * @license GPL-2.0+
  * @version 3.4.11
  * @desc.   Tabs to spaces, tabs to spaces
- * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+ * @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
  */
 
-    
-    showdebug(__FILE__, 'tables'); 
+
+    showdebug(__FILE__, 'tables');
 
   global $wpdb, $EM_Notices;
-  //add new button will only appear if called from em_location_admin template tag, or if the $show_add_new var is set  
+  //add new button will only appear if called from em_location_admin template tag, or if the $show_add_new var is set
   if(!empty($show_add_new) && current_user_can('edit_locations')) echo '<a class="em-button button add-new-h2" href="'.em_add_get_params($_SERVER['REQUEST_URI'],array('action'=>'edit','scope'=>null,'status'=>null,'location_id'=>null)).'">'.__('Add New','events-manager').'</a>';
 ?>
-<?php if(!is_admin()) echo $EM_Notices; ?>        
+<?php if(!is_admin()) echo $EM_Notices; ?>
 <form id='locations-filter' method='post' action=''>
   <input type='hidden' name='pno' value='<?php echo esc_attr($page) ?>' />
   <div class="subsubsub">
@@ -29,9 +29,9 @@
     &nbsp;|&nbsp;
     <a href='<?php echo em_add_get_params($_SERVER['REQUEST_URI'], array('view'=>'others', 'pno'=>null)); ?>' <?php echo ( !empty($_REQUEST['view']) && $_REQUEST['view'] == 'others' ) ? 'class="current"':''; ?>><?php echo sprintf( __( 'All %s', 'events-manager'), __('Locations','events-manager')); ?><span class="count">(<?php echo $locations_all_count; ?>)</span></a>
     <?php endif; ?>
-  </div>            
+  </div>
   <?php if ( $locations_count > 0 ) : ?>
-  <div class='tablenav'>          
+  <div class='tablenav'>
     <?php if( (empty($_REQUEST['view']) && current_user_can('delete_events')) || (!empty($_REQUEST['view']) && $_REQUEST['view'] == 'others' && current_user_can('delete_others_events')) ): ?>
     <div class="alignleft actions">
       <select name="action">
@@ -39,8 +39,8 @@
         <?php if( empty($_REQUEST['view']) && current_user_can('delete_events') ) : ?>
         <option value="location_delete"><?php _e ( 'Delete selected','events-manager'); ?></option>
         <?php endif; ?>
-      </select> 
-      <input type="submit" value="<?php _e ( 'Apply' ); ?>" id="doaction2" class="button-secondary action" /> 
+      </select>
+      <input type="submit" value="<?php _e ( 'Apply' ); ?>" id="doaction2" class="button-secondary action" />
     </div>
     <?php else: $hide_checkboxes = true; /* @todo this and the first condition of this if statement will need to change when other bulk actions are added */ ?>
     <?php endif; ?>
@@ -59,9 +59,9 @@
         <?php endif; ?>
         <th><?php _e('Name', 'events-manager') ?></th>
         <th><?php _e('Address', 'events-manager') ?></th>
-        <th><?php _e('State', 'events-manager') ?></th>  
-        <th><?php _e('Country', 'events-manager') ?></th>                
-      </tr> 
+        <th><?php _e('State', 'events-manager') ?></th>
+        <th><?php _e('Country', 'events-manager') ?></th>
+      </tr>
     </thead>
     <tfoot>
       <tr>
@@ -70,9 +70,9 @@
         <?php endif; ?>
         <th><?php _e('Name', 'events-manager') ?></th>
         <th><?php _e('Address', 'events-manager') ?></th>
-        <th><?php _e('State', 'events-manager') ?></th> 
-        <th><?php _e('Country', 'events-manager') ?></th>      
-      </tr>             
+        <th><?php _e('State', 'events-manager') ?></th>
+        <th><?php _e('Country', 'events-manager') ?></th>
+      </tr>
     </tfoot>
     <tbody>
       <?php $rowno = 0; ?>
@@ -89,13 +89,13 @@
             <?php if( $EM_Location->can_manage('edit_events','edit_others_events') ): ?>
             <a href='<?php echo esc_url($EM_Location->get_edit_url()); ?>'><?php echo esc_html($EM_Location->location_name); ?></a>
             <?php else: ?>
-            <strong><?php echo esc_html($EM_Location->location_name) ?></strong> - 
+            <strong><?php echo esc_html($EM_Location->location_name) ?></strong> -
             <a href='<?php echo $EM_Location->output('#_LOCATIONURL'); ?>'><?php esc_html_e('View') ?></a>
             <?php endif; ?>
           </td>
           <td><?php echo esc_html(implode(', ', array($EM_Location->location_address,$EM_Location->location_town,$EM_Location->location_postcode))); ?></td>
-          <td><?php echo esc_html($EM_Location->location_state) ?></td>  
-          <td><?php echo $EM_Location->get_country() ?></td>                             
+          <td><?php echo esc_html($EM_Location->location_state) ?></td>
+          <td><?php echo $EM_Location->get_country() ?></td>
         </tr>
       <?php endforeach; ?>
     </tbody>
@@ -104,6 +104,6 @@
   <br class="clear" />
   <p><?php esc_html_e('No locations have been inserted yet!', 'events-manager') ?></p>
   <?php endif; ?>
-  
+
   <?php if ( !empty($locations_nav) ) echo $locations_nav; ?>
 </form>

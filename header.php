@@ -10,7 +10,7 @@
 // @license GPL-2.0+
 // @version 3.15.1
 // @desc.   Restyling main nav menu.
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
  */
 
 

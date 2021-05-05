@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * Gebruiker Centraal
@@ -10,11 +10,11 @@
  * @license GPL-2.0+
  * @version 3.6.5
  * @desc.   Widgets, pages
- * @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+ * @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
  */
 
-    
-    showdebug(__FILE__, 'placeholders'); 
+
+    showdebug(__FILE__, 'placeholders');
 /* @var $EM_Event EM_Event */
 $people = array();
 $EM_Bookings = $EM_Event->get_bookings();

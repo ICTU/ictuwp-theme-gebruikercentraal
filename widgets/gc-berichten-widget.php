@@ -9,7 +9,7 @@
 // @license GPL-2.0+
 // @version 4.3.17
 // @desc.   Mogelijkheid om uitgelichte afbeelding te verbergen toegevoegd aan GC_berichten_widget.
-// @link    https://github.com/ICTU/gebruiker-centraal-wordpress-theme
+// @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 
 
 //========================================================================================================
