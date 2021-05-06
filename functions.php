@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.3.20
-// @desc.   a11y check; URL van git-repo aangepast.
+// @version 4.3.21
+// @desc.   HSTS-header verwijderd.
 // @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://www.gebruikercentraal.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '4.3.20' );
-define( 'CHILD_THEME_DESCRIPTION', "4.3.20 - a11y check; URL van git-repo aangepast." );
+define( 'CHILD_THEME_VERSION', '4.3.21' );
+define( 'CHILD_THEME_DESCRIPTION', "4.3.21 - HSTS-header verwijderd." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -2781,9 +2781,6 @@ function gc_wbvb_modify_contact_methods( $profile_fields ) {
 	// Add new fields
 	$profile_fields['linkedin']    = _x( 'LinkedIn page', 'author box', 'gebruikercentraal' );
 	$profile_fields['personalurl'] = _x( 'Personal website', 'author box', 'gebruikercentraal' );
-//	$profile_fields['twitter']  = 'Twitter Username';
-//	$profile_fields['facebook'] = 'Facebook URL';
-//	$profile_fields['gplus']    = 'Google+ URL';
 
 	// Remove old fields
 	unset( $profile_fields['user-url'] );
