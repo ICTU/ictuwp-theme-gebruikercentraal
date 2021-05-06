@@ -34,7 +34,9 @@ define( 'WP_THEME_DEBUG', false );
 //define( 'WP_THEME_DEBUG', true );
 
 $sharedfolder = get_template_directory();
-$sharedfolder = preg_replace( '|genesis|i', 'gebruiker-centraal', $sharedfolder );
+$sharedfolder = preg_replace( '|genesis|i', 'ictuwp-theme-gebruikercentraal', $sharedfolder );
+
+$sharedfolder = get_stylesheet_directory();
 
 $default_persoon_plaatje = 'voorbeeld-persoon-1.png';
 
@@ -2788,22 +2790,6 @@ function gc_wbvb_modify_contact_methods( $profile_fields ) {
 	unset( $profile_fields['aim'] );
 
 	return $profile_fields;
-}
-
-//========================================================================================================
-
-add_action( 'send_headers', 'wbvb_set_hsts_policy' );
-/**
- * Enables the HTTP Strict Transport Security (HSTS) header.
- *
- * @since 1.0.0
- */
-function wbvb_set_hsts_policy() {
-
-	// 2 year expiration: 63072000
-	header( 'Strict-Transport-Security: max-age=63072000; includeSubDomains; preload' );
-
-
 }
 
 //========================================================================================================
