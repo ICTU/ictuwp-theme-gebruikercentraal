@@ -36,12 +36,12 @@ remove_action( 'genesis_entry_footer', 'genesis_entry_footer_markup_close', 15 )
 
 // deze pagina zou moeten worden gebruikt voor een single event.
 // in dit theme wordt de weergave van een evenement afgehandeld door bestanden in de folder
-// /gebruiker-centraal/plugins/events-manager/
+// /ictuwp-theme-gebruikercentraal/plugins/events-manager/
 
 // meer specifiek: de opbouw van een single event komt uit
-// <themes>/gebruiker-centraal/plugins/events-manager/formats/single_event_format.php
+// <themes>/ictuwp-theme-gebruikercentraal/plugins/events-manager/formats/single_event_format.php
 // met wat hulpfuncties in functions.php, die aangeroepen worden in
-// <themes>/gebruiker-centraal/plugins/events-manager/templates/event-single.php
+// <themes>/ictuwp-theme-gebruikercentraal/plugins/events-manager/templates/event-single.php
 // deze variabelen worden later door die functies van een waarde voorzien.
 // ofzoiets.
 

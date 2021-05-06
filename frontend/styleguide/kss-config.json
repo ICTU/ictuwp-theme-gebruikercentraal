@@ -6,7 +6,7 @@
   "homepage": "styleguide/homepage.md",
   "css": [
     "../css/gc-style.css",
-    "../../gebruiker-centraal/frontend/styleguide/css/styleguide.css"
+    "../../ictuwp-theme-gebruikercentraal/frontend/styleguide/css/styleguide.css"
   ],
   "js": [
     "../styleguide/kss-assets/lib/jquery-3.4.1.min.js",
