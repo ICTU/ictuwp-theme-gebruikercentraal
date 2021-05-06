@@ -5,7 +5,7 @@
 
 Dit is de Living Styleguide voor het Gebruiker Centraal thema. Hier vind je (bijna) alle componenten die gebruikt worden in de diverse layouts. Hij is beschikbaar onder URL:
 
-[siteurl]/wp-content/themes/gebruiker-centraal/styleguide
+[siteurl]/wp-content/themes/ictuwp-theme-gebruikercentraal/styleguide
 
 Deze styleguide maakt gebruikt van de CSS uit het Gebruiker Centraal thema.
 

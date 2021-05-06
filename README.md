@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-4.3.20 - a11y check; URL van git-repo aangepast.
+4.3.21 - HSTS-header verwijderd.
 
 ## Version history
+* 4.3.21 - HSTS-header verwijderd.
 * 4.3.20 - a11y check; URL van git-repo aangepast.
 * 4.3.19 - Kleine verbeteringen omwille van de toegxankelijkheidscheck.
 * 4.3.18 - Betere styling iframes, socialmediaknopjes en attendeelist op tablet en smaller.
@@ -122,7 +123,7 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 ## Theme structure
 
 ```web root
-themes/gebruiker-centraal/                        # → Folder met alle theme-bestanden
+themes/ictuwp-theme-gebruikercentraal/                        # → Folder met alle theme-bestanden
 │  
 ├── css/                                          # → Extra CSS-bestanden
 │   ├── addenda-tips.css                          # → 

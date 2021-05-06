@@ -3,27 +3,27 @@
     "name": "GC - Base Theme",
     "path": "../",
     "dest": "../css/",
-    "proxy": "live-gebruikercentraal.co.uk",
+    "proxy": "www.gebruikercentraal.test",
     "type": "theme"
   },
   "inclusie": {
     "name": "GC Inclusie plugin",
     "type": "plugin",
     "path": "../../../plugins/ictuwp-plugin-inclusie/",
-    "proxy": "inclusie.gebruikercentraal.co.uk/",
+    "proxy": "inclusie.gebruikercentraal.test",
     "dest": "../../../plugins/ictuwp-plugin-inclusie/css/"
   },
   "beeldbank": {
     "name": "GC Beeldbank plugin",
     "type": "plugin",
-    "proxy": "beeldbank.gebruikercentraal.co.uk/",
+    "proxy": "beeldbank.gebruikercentraal.test",
     "path": "../../../plugins/ictuwp-plugin-beeldbank/",
     "dest": "../../../plugins/ictuwp-plugin-beeldbank/css/"
   },
   "conference": {
     "name": "Conferentieplugin",
     "type": "plugin",
-    "proxy": "conference.gebruikercentraal.co.uk/",
+    "proxy": "conference.gebruikercentraal.test",
     "path": "../../../plugins/ictuwp-plugin-conference/",
     "dest": "../../../plugins/ictuwp-plugin-conference/css/"
   },
@@ -31,14 +31,14 @@
     "name": "Direct Duidelijk subsite",
     "path": "../",
     "dest": "../css/",
-    "proxy": "directduidelijk.gebruikercentraal.co.uk",
+    "proxy": "directduidelijk.gebruikercentraal.test",
     "type": "theme"
   },
   "designsystem": {
     "name": "Design System",
     "path": "../",
     "dest": "../css/",
-    "proxy": "designsystem.gebruikercentraal.co.uk",
+    "proxy": "designsystem.gebruikercentraal.test",
     "type": "theme"
   }
 

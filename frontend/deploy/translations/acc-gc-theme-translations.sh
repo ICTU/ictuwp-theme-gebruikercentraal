@@ -8,17 +8,17 @@ WWWROOT="/home/acccentraal/www/wp-content"
 
 #translations
 
-LANGSOURCEDIR="${WWWROOT}/themes/gebruiker-centraal/languages/"
-LANGSOURCEFILES="${WWWROOT}/themes/gebruiker-centraal/languages/**"
+LANGSOURCEDIR="${WWWROOT}/themes/ictuwp-theme-gebruikercentraal/languages/"
+LANGSOURCEFILES="${WWWROOT}/themes/ictuwp-theme-gebruikercentraal/languages/**"
 
 LANGTARGET="${WWWROOT}/languages/themes/gebruiker-centraal"
 
 #For newsletters
 
-ELANGSOURCEDIR="${WWWROOT}/themes/gebruiker-centraal/languages/e-newsletters/"
-ELANGSOURCEFILES="${WWWROOT}/themes/gebruiker-centraal/languages/e-newsletters/**"
+ELANGSOURCEDIR="${WWWROOT}/themes/ictuwp-theme-gebruikercentraal/languages/e-newsletters/"
+ELANGSOURCEFILES="${WWWROOT}/themes/ictuwp-theme-gebruikercentraal/languages/e-newsletters/**"
 
-ELANGTARGET="${WWWROOT}/languages/themes/gebruiker-centraal/e-newsletters"
+ELANGTARGET="${WWWROOT}/languages/themes/ictuwp-theme-gebruikercentraal/e-newsletters"
 
 PREFIX="gebruiker-centraal-"
 
