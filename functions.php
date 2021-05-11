@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.3.21
-// @desc.   HSTS-header verwijderd.
+// @version 4.3.22
+// @desc.   Styling voor honeypot toegevoegd.
 // @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://www.gebruikercentraal.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '4.3.21' );
-define( 'CHILD_THEME_DESCRIPTION', "4.3.21 - HSTS-header verwijderd." );
+define( 'CHILD_THEME_VERSION', '4.3.22' );
+define( 'CHILD_THEME_DESCRIPTION', "4.3.22 - Styling voor honeypot toegevoegd." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );

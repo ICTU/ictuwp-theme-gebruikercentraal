@@ -9,9 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-4.3.21 - HSTS-header verwijderd.
+4.3.22 - Styling voor honeypot toegevoegd.
 
 ## Version history
+* 4.3.22 - Styling voor honeypot toegevoegd.
 * 4.3.21 - HSTS-header verwijderd.
 * 4.3.20 - a11y check; URL van git-repo aangepast.
 * 4.3.19 - Kleine verbeteringen omwille van de toegxankelijkheidscheck.
