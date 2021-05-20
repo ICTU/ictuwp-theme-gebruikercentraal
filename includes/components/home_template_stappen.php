@@ -160,7 +160,7 @@ endif;
 
 if ( function_exists( 'acf_add_local_field_group' ) ) :
 
-	$DOELGROEPDEFINTIESHOMEPAGE = null;
+	$DOELGROEPDEFINTIESHOMEPAGE = array();
 
 	if ( is_plugin_active( 'ictuwp-plugin-inclusie/ictuwp-plugin-inclusie.php' ) ) {
 
