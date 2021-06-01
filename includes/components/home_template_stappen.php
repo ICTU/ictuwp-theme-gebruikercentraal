@@ -160,9 +160,12 @@ endif;
 
 if ( function_exists( 'acf_add_local_field_group' ) ) :
 
-	$DOELGROEPDEFINTIESHOMEPAGE = '';
+	$DOELGROEPDEFINTIESHOMEPAGE = array();
 
-	if ( 'inclusie.gebruikercentraal.co.uk' == $_SERVER["HTTP_HOST"] || 'accept.inclusie.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] || 'inclusie.gebruikercentraal.nl' == $_SERVER["HTTP_HOST"] ) {
+	if ( is_plugin_active( 'ictuwp-plugin-inclusie/ictuwp-plugin-inclusie.php' ) ) {
+
+		// De inclusieplugin staat dus aan.
+		// Hierin wordt ondermeer het posttype ICTU_GC_CPT_DOELGROEP geactiveerd.
 
 		$DOELGROEPDEFINTIESHOMEPAGE = 			array(
 					'key' => 'field_5c90e096cca0a',

@@ -89,7 +89,7 @@ if ( is_array( $lebookings ) || is_object( $lebookings ) ) {
 	$header_meta_info .= $event_times;
 	$header_meta_info .= $event_location;
 
-	if ( is_object( $lebookings ) ) {
+	if ( is_object( $lebookings->tickets ) && property_exists( $lebookings, 'tickets' ) ) {
 
 		foreach ( $lebookings->tickets->tickets as $leticket ) {
 			// get min & max price
@@ -137,11 +137,11 @@ if ( is_array( $lebookings ) || is_object( $lebookings ) ) {
 ?>
 
 <header class="wrap">
-    <div class="date-badge">#_DATEBADGE</div>
-    <h1 itemprop="name">#_EVENTNAME</h1>
-    <div class="meta-data">
-        #_AVAILABILITYCHECK<?php echo $header_meta_info ?>
-    </div>
+	<div class="date-badge">#_DATEBADGE</div>
+	<h1 itemprop="name">#_EVENTNAME</h1>
+	<div class="meta-data">
+		#_AVAILABILITYCHECK<?php echo $header_meta_info ?>
+	</div>
 
 </header>
 <?php
@@ -149,7 +149,7 @@ if ( is_array( $lebookings ) || is_object( $lebookings ) ) {
 ?>
 <div class="wrap description" itemprop="description">
 	<?php echo gc_wbvb_check_socialbuttons( $post, '' ) ?>
-    #_EVENTNOTES
+	#_EVENTNOTES
 </div>
 
 <?php // echo $EM_gc_wbvb_single_event_organizor;
@@ -209,8 +209,7 @@ if ( ! is_null( $EM_Location ) ) {
 	$locationname     = $EM_Location->output( '#_LOCATIONNAME' );
 	$locationurl      = $EM_Location->output( '#_EVENTLOCATION{url}' );
 	$locationlinktext = $EM_Location->output( '#_EVENTLOCATION{_self}' );
-}
-else {
+} else {
 }
 
 if ( $locationname && ( ! $locationurl ) ) {
@@ -219,9 +218,9 @@ if ( $locationname && ( ! $locationurl ) ) {
 		echo '<!--  1b: Wel locatie + wel programma  -->';
 		// wel locatie, wel programma
 		?>
-        <div id="event_map_en_programma" class="wrap">
-            {has_location}
-            <div itemprop="location" itemscope itemtype="http://schema.org/Place" id="event_map">
+		<div id="event_map_en_programma" class="wrap">
+			{has_location}
+			<div itemprop="location" itemscope itemtype="http://schema.org/Place" id="event_map">
 				<?php
 				if ( 22 == 33 ) {
 					/*
@@ -231,17 +230,17 @@ if ( $locationname && ( ! $locationurl ) ) {
 					*/
 				}
 				?>
-                <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                    <h2 itemprop="name">#_LOCATIONNAME</span></h2>
-                    <span itemprop="streetAddress">#_LOCATIONADDRESS</span><br>
-                    <span itemprop="postalCode">#_LOCATIONPOSTCODE</span><br>
-                    <span itemprop="addressLocality">#_LOCATIONTOWN</span>
+				<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+					<h2 itemprop="name">#_LOCATIONNAME</span></h2>
+					<span itemprop="streetAddress">#_LOCATIONADDRESS</span><br>
+					<span itemprop="postalCode">#_LOCATIONPOSTCODE</span><br>
+					<span itemprop="addressLocality">#_LOCATIONTOWN</span>
 
-                </div>
-            </div>
-            {/has_location}
+				</div>
+			</div>
+			{/has_location}
 			<?php echo $EM_gc_wbvb_single_event_programma ?>
-        </div>
+		</div>
 
 		<?php
 
@@ -249,9 +248,9 @@ if ( $locationname && ( ! $locationurl ) ) {
 		// wel locatie, geen programma
 		echo '<!--  1a: Wel locatie + geen programma  -->';
 		?>
-        {has_location}
-        <div itemprop="location" itemscope itemtype="http://schema.org/Place" id="event_map"
-             class="wrap geen-programma">
+		{has_location}
+		<div itemprop="location" itemscope itemtype="http://schema.org/Place" id="event_map"
+			 class="wrap geen-programma">
 			<?php
 			if ( 22 == 33 ) {
 				/*
@@ -261,15 +260,15 @@ if ( $locationname && ( ! $locationurl ) ) {
 				*/
 			}
 			?>
-            <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                <h2 itemprop="name">#_LOCATIONNAME</span></h2>
-                <span itemprop="streetAddress">#_LOCATIONADDRESS</span><br>
-                <span itemprop="postalCode">#_LOCATIONPOSTCODE</span><br>
-                <span itemprop="addressLocality">#_LOCATIONTOWN</span>
+			<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				<h2 itemprop="name">#_LOCATIONNAME</span></h2>
+				<span itemprop="streetAddress">#_LOCATIONADDRESS</span><br>
+				<span itemprop="postalCode">#_LOCATIONPOSTCODE</span><br>
+				<span itemprop="addressLocality">#_LOCATIONTOWN</span>
 
-            </div>
-        </div>
-        {/has_location}
+			</div>
+		</div>
+		{/has_location}
 		<?php
 	}
 } elseif ( $locationurl ) {
@@ -279,22 +278,22 @@ if ( $locationname && ( ! $locationurl ) ) {
 			// 2b: wel een link en wel een programma
 			echo '<!--  2b: wel een link en wel een programma  -->';
 			?>
-            <div id="event_map_en_programma" class="wrap">
-                <div id="event_map">
-                    <h2><?php echo __( 'Link voor dit webinar', 'gebruikercentraal' ) ?></h2>
-                    <p><?php echo $locationlinktext ?></p>
-                </div>
+			<div id="event_map_en_programma" class="wrap">
+				<div id="event_map">
+					<h2><?php echo __( 'Link voor dit webinar', 'gebruikercentraal' ) ?></h2>
+					<p><?php echo $locationlinktext ?></p>
+				</div>
 				<?php echo $EM_gc_wbvb_single_event_programma ?>
-            </div>
+			</div>
 			<?php
 		} else {
 			// 2a: wel een link, maar geen programma
 			echo '<!--  2a: wel een link, maar geen programma  -->';
 			?>
-            <div class="wrap">
-                <h2><?php echo __( 'Link voor dit webinar', 'gebruikercentraal' ) ?></h2>
-                <p><?php echo $locationlinktext ?></p>
-            </div>
+			<div class="wrap">
+				<h2><?php echo __( 'Link voor dit webinar', 'gebruikercentraal' ) ?></h2>
+				<p><?php echo $locationlinktext ?></p>
+			</div>
 			<?php
 		}
 	} else {
@@ -302,9 +301,9 @@ if ( $locationname && ( ! $locationurl ) ) {
 		if ( $EM_gc_wbvb_single_event_programma ) {
 			echo '<!--  3b: Online maar ongeldige URL + wel programma  -->';
 			?>
-            <div id="event_map_en_programma" class="wrap">
+			<div id="event_map_en_programma" class="wrap">
 				<?php echo $EM_gc_wbvb_single_event_programma; ?>
-            </div>
+			</div>
 			<?php
 		} else {
 			echo '<!--  3a: Online maar ongeldige URL + geen programma  -->';
@@ -315,9 +314,9 @@ if ( $locationname && ( ! $locationurl ) ) {
 	if ( $EM_gc_wbvb_single_event_programma ) {
 		echo '<!--  4b: Geen locatie + wel programma  -->';
 		?>
-        <div class="wrap">
+		<div class="wrap">
 			<?php echo $EM_gc_wbvb_single_event_programma; ?>
-        </div>
+		</div>
 		<?php
 	} else {
 		echo '<!--  4a: Geen locatie + geen programma  -->';
@@ -330,10 +329,10 @@ if ( $locationname && ( ! $locationurl ) ) {
 
 {has_bookings}
 <div class="event-bookings">
-    <div class="wrap">
-        #_BOOKINGFORM
-        #_ATTENDEESLIST
-    </div>
+	<div class="wrap">
+		#_BOOKINGFORM
+		#_ATTENDEESLIST
+	</div>
 </div>
 {/has_bookings}
 

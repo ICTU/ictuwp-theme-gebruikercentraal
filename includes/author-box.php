@@ -124,7 +124,9 @@ function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = 
 
 	if ( ! $userid ) {
 		// * @since	  4.3.1
-		$userid = get_queried_object()->data->ID;
+		if ( property_exists( get_queried_object()->dat, 'ID' ) ) {
+			$userid = get_queried_object()->data->ID;
+		}
 	}
 
 	if ( $default_persoon_plaatje == 'voorbeeld-persoon-2.png' ) {
@@ -170,17 +172,21 @@ function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = 
 			// geen waarde gevonden voor 'auteursfoto_url' dus we gaan de waarde van het ACF-veld voor
 			// 'auteursfoto' opzoeken. Als dat er is, slaan we de URL op in 'auteursfoto_url'.
 			// Daarmee zou dit dus een eenmalige actie moeten zijn
-			$authorfoto       = get_field( 'auteursfoto', $acf_userid );
-			$authorfoto_array = wp_get_attachment_image_src( $authorfoto['id'], 'thumbnail' );
+			$authorfoto = get_field( 'auteursfoto', $acf_userid );
 
-			if ( $authorfoto_array ) {
+			if ( $authorfoto ) {
 
-				$authorfoto_url = $authorfoto_array[0];
-				$img_width      = $authorfoto_array[1];
-				$img_height     = $authorfoto_array[2];
+				$authorfoto_array = wp_get_attachment_image_src( $authorfoto['id'], 'thumbnail' );
 
-				if ( $authorfoto_url ) {
-					update_user_meta( $userid, 'auteursfoto_url', $authorfoto_url );
+				if ( $authorfoto_array ) {
+
+					$authorfoto_url = $authorfoto_array[0];
+					$img_width      = $authorfoto_array[1];
+					$img_height     = $authorfoto_array[2];
+
+					if ( $authorfoto_url ) {
+						update_user_meta( $userid, 'auteursfoto_url', $authorfoto_url );
+					}
 				}
 			}
 		}
@@ -194,7 +200,7 @@ function gc_wbvb_authorbox_compose_box( $userid, $gravatar = '', $sectiontype = 
 			);
 
 			$defaultplaatje = get_stylesheet_directory_uri() . '/images/' . $default_persoon_plaatje;
-			$imagetag       = get_avatar( $userid, 82, $defaultplaatje, $authorfoto['id'], $args );
+			$imagetag       = get_avatar( $userid, 82, $defaultplaatje, '', $args );
 
 		}
 
