@@ -186,8 +186,8 @@ function add_defer_to_javascripts( $url ) {
 		$huidigeurl = $_SERVER['REQUEST_URI'];
 
 		if ( ( strpos( $huidigeurl, "group-avatar" ) > 0 )
-		     || ( strpos( $huidigeurl, "customize.php" ) > 0 )
-		     || ( strpos( $huidigeurl, "change-avatar" ) > 0 ) ) {
+			 || ( strpos( $huidigeurl, "customize.php" ) > 0 )
+			 || ( strpos( $huidigeurl, "change-avatar" ) > 0 ) ) {
 			// vuige hack om te voorkomen dat ik buddypress moet herschrijven.
 			// dit gaat om het croppen van een plaatje voor een ava.
 			// zie: <buddypress>/bp-core/bp-core-cssjs.php
@@ -455,17 +455,17 @@ function gc_wbvb_related_content( $thepost ) {
 		}
 	}
 	?>
-    <section class="<?php echo $type; ?>">
-        <a href="<?php echo get_permalink( $thepost->ID ); ?>">
-            <h3><?php echo get_the_title( $thepost->ID ); ?></h3>
+	<section class="<?php echo $type; ?>">
+		<a href="<?php echo get_permalink( $thepost->ID ); ?>">
+			<h3><?php echo get_the_title( $thepost->ID ); ?></h3>
 			<?php
 			if ( ! empty( $samenvatting ) ) {
 				echo wpautop( $samenvatting );
 			}
 			?>
-            <div class="read-more"><span><?php echo __( "Read more", 'gebruikercentraal' ) ?></span></div>
-        </a>
-    </section>
+			<div class="read-more"><span><?php echo __( "Read more", 'gebruikercentraal' ) ?></span></div>
+		</a>
+	</section>
 
 	<?php
 
@@ -641,16 +641,16 @@ if ( ! function_exists( 'gc_shared_gravatar' ) ) {
 //add_action( 'genesis_doctype', 'gc_wbvb_set_doctype' );
 function gc_wbvb_set_doctype() {
 	?>
-    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-    <!--[if lt IE 7 ]> <html class="ie6" xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes( 'xhtml' ); ?>> <![endif]-->
-    <!--[if IE 7 ]>    <html class="ie7" xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes( 'xhtml' ); ?>> <![endif]-->
-    <!--[if IE 8 ]>    <html class="ie8" xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes( 'xhtml' ); ?>> <![endif]-->
-    <!--[if IE 9 ]>    <html class="ie9" xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes( 'xhtml' ); ?>> <![endif]-->
-    <!--[if (gt IE 9)|!(IE)]><!-->
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<!--[if lt IE 7 ]> <html class="ie6" xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes( 'xhtml' ); ?>> <![endif]-->
+	<!--[if IE 7 ]>    <html class="ie7" xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes( 'xhtml' ); ?>> <![endif]-->
+	<!--[if IE 8 ]>    <html class="ie8" xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes( 'xhtml' ); ?>> <![endif]-->
+	<!--[if IE 9 ]>    <html class="ie9" xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes( 'xhtml' ); ?>> <![endif]-->
+	<!--[if (gt IE 9)|!(IE)]><!-->
 <html class="" xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes( 'xhtml' ); ?>> <!--<![endif]-->
 <head profile="http://gmpg.org/xfn/11">
-    <meta http-equiv="Content-Type"
-          content="<?php bloginfo( 'html_type' ); ?>; charset=<?php bloginfo( 'charset' ); ?>"/>
+	<meta http-equiv="Content-Type"
+		  content="<?php bloginfo( 'html_type' ); ?>; charset=<?php bloginfo( 'charset' ); ?>"/>
 	<?php
 }
 
@@ -792,9 +792,9 @@ function gc_shared_add_menu_script() {
 		$params = array(
 			'showsubmenu'  => _x( 'Show submenu for', 'Screen reader text for menu', 'gebruikercentraal' ),
 			'closesubmenu' => _x( 'Hide submenu for', 'Screen reader text for menu', 'gebruikercentraal' ),
-			'showmenu'  => _x( 'Show menu', 'Screen reader text for menu', 'gebruikercentraal' ),
-			'closemenu' => _x( 'Close menu', 'Screen reader text for menu', 'gebruikercentraal' ),
-			'menuname'  => _x( 'Menu', 'Screen reader text for menu', 'gebruikercentraal' ),
+			'showmenu'     => _x( 'Show menu', 'Screen reader text for menu', 'gebruikercentraal' ),
+			'closemenu'    => _x( 'Close menu', 'Screen reader text for menu', 'gebruikercentraal' ),
+			'menuname'     => _x( 'Menu', 'Screen reader text for menu', 'gebruikercentraal' ),
 		);
 
 		wp_localize_script( 'gc-shared-menu', 'menustrings', $params );
@@ -1022,7 +1022,7 @@ if ( ! function_exists( 'ictu_gctheme_write_lightboximage' ) ) {
 			'full-size'  => 'full',
 			'data-group' => 'lightbox',
 			'cssclass'   => '',
-			'alt'   	=> '',
+			'alt'        => '',
 			'echo'       => false,
 		);
 
@@ -1064,6 +1064,7 @@ add_filter( 'genesis_register_sidebar_defaults', 'ictu_gctheme_widget_title_head
 
 function ictu_gctheme_widget_title_headerlevel( $defaults ) {
 	$defaults['before_title'] = '<h2 class="widget-title widgettitle">';
-	$defaults['after_title'] = '</h2>';
+	$defaults['after_title']  = '</h2>';
+
 	return $defaults;
 }
