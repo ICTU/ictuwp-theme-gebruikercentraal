@@ -35,4 +35,3 @@ includes/ignore-me.php
 js/gc-main-debug.js
 .idea/
 
-yarn.lock
