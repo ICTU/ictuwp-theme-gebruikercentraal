@@ -788,7 +788,14 @@ function gc_shared_add_menu_script() {
 
 	if ( ! is_admin() ) {
 
-		wp_enqueue_script( 'gc-shared-menu', WBVB_THEMEFOLDER . '/js/gc-main-min.js', array( 'jquery' ), '', true );
+		$versie = CHILD_THEME_VERSION;
+
+		if ( WP_DEBUG ) {
+			$file   = get_stylesheet_directory() . '/js/gc-main-min.js';
+			$versie = filemtime( $file );
+		}
+
+		wp_enqueue_script( 'gc-shared-menu', WBVB_THEMEFOLDER . '/js/gc-main-min.js', array( 'jquery' ), $versie, true );
 		$params = array(
 			'showsubmenu'  => _x( 'Show submenu for', 'Screen reader text for menu', 'gebruikercentraal' ),
 			'closesubmenu' => _x( 'Hide submenu for', 'Screen reader text for menu', 'gebruikercentraal' ),
