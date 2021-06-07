@@ -276,7 +276,6 @@ remove_action( 'genesis_after_entry', 'genesis_do_author_box_single', 8 );
 add_action( 'genesis_entry_content', 'genesis_do_author_box_single', 20 );
 
 
-
 //========================================================================================================
 
 //* voor de widgets
@@ -666,15 +665,15 @@ function gc_wbvb_post_append_postinfo( $post_info ) {
 function gc_wbvb_get_date_badge() {
 
 	if ( ( GC_BEELDBANK_BEELD_CPT == get_post_type() )
-	     || ( GC_BEELDBANK_BRIEF_CPT == get_post_type() )
-	     || ( ICTU_GC_CPT_STAP == get_post_type() )
-	     || ( ICTU_GC_CPT_CITAAT == get_post_type() )
-	     || ( ICTU_GC_CPT_DOELGROEP == get_post_type() )
-	     || ( ICTU_GC_CPT_VAARDIGHEDEN == get_post_type() )
-	     || ( ICTU_GC_CPT_METHODE == get_post_type() )
-	     || ( ICTU_GCCONF_CPT_SPEAKER == get_post_type() )
-	     || ( ICTU_GCCONF_CPT_KEYNOTE == get_post_type() )
-	     || ( ICTU_GCCONF_CPT_SESSION == get_post_type() )
+		 || ( GC_BEELDBANK_BRIEF_CPT == get_post_type() )
+		 || ( ICTU_GC_CPT_STAP == get_post_type() )
+		 || ( ICTU_GC_CPT_CITAAT == get_post_type() )
+		 || ( ICTU_GC_CPT_DOELGROEP == get_post_type() )
+		 || ( ICTU_GC_CPT_VAARDIGHEDEN == get_post_type() )
+		 || ( ICTU_GC_CPT_METHODE == get_post_type() )
+		 || ( ICTU_GCCONF_CPT_SPEAKER == get_post_type() )
+		 || ( ICTU_GCCONF_CPT_KEYNOTE == get_post_type() )
+		 || ( ICTU_GCCONF_CPT_SESSION == get_post_type() )
 	) {
 		return;
 	}
@@ -1055,10 +1054,10 @@ function gc_wbvb_404() {
 
 		if ( $count_pages ) {
 			?>
-            <h2><?php _e( 'Pages:', 'gebruikercentraal' ); ?></h2>
-            <ul>
+			<h2><?php _e( 'Pages:', 'gebruikercentraal' ); ?></h2>
+			<ul>
 				<?php wp_list_pages( 'exclude=78,80&title_li=' ); ?>
-            </ul>
+			</ul>
 			<?php
 		}
 
@@ -1070,19 +1069,19 @@ function gc_wbvb_404() {
 			echo '<h2>' . sprintf( __( 'The %s most recent posts', 'gebruikercentraal' ), $maxnr ) . '</h2>';
 			?>
 
-            <ul>
+			<ul>
 				<?php wp_get_archives( array( 'type' => 'postbypost', 'limit' => $maxnr ) ); ?>
-            </ul>
+			</ul>
 
-            <h2><?php _e( 'Topics:', 'gebruikercentraal' ); ?></h2>
-            <ul>
+			<h2><?php _e( 'Topics:', 'gebruikercentraal' ); ?></h2>
+			<ul>
 				<?php wp_list_categories( 'sort_column=name&title_li=' ); ?>
-            </ul>
+			</ul>
 
-            <h2><?php _e( 'Authors:', 'gebruikercentraal' ); ?></h2>
-            <ul>
+			<h2><?php _e( 'Authors:', 'gebruikercentraal' ); ?></h2>
+			<ul>
 				<?php wp_list_authors( 'exclude_admin=0&optioncount=0' ); ?>
-            </ul>
+			</ul>
 			<?php
 		}
 
@@ -1255,8 +1254,8 @@ function gc_wbvb_add_pageheader_tags() {
 	// check of het eerste bericht een enorme afbeelding heeft
 	if ( has_post_thumbnail( $postid ) && 'ja' === $featimg_automatic_insert ) {
 
-		$img_id = get_post_thumbnail_id( $postid );
-		$image  = wp_get_attachment_image_src( $img_id, IMG_SIZE_HUGE );
+		$img_id   = get_post_thumbnail_id( $postid );
+		$image    = wp_get_attachment_image_src( $img_id, IMG_SIZE_HUGE );
 		$alt_text = get_post_meta( $img_id, '_wp_attachment_image_alt', true );
 
 		if ( $image[1] >= IMG_SIZE_HUGE_MIN_WIDTH ) {
@@ -1386,10 +1385,10 @@ function gc_wbvb_add_blog_single_css() {
 				if ( $image[1] >= IMG_SIZE_HUGE_MIN_WIDTH ) {
 
 					$BLOGBERICHTEN_CSS .= "\n\n" .
-					                      ".content:before {\n" .
-					                      "   content: ' '; \n" .
-					                      "   display: block; \n " .
-					                      "} \n\n";
+										  ".content:before {\n" .
+										  "   content: ' '; \n" .
+										  "   display: block; \n " .
+										  "} \n\n";
 
 					foreach ( $imgbreakpoints as $breakpoint ) {
 
@@ -1615,7 +1614,6 @@ function gc_wbvb_add_blog_archive_css() {
 
 function gc_wbvb_add_css() {
 
-//			$dependencies = array( ID_SKIPLINKS );
 	$dependencies = array();
 
 	wp_enqueue_style(
@@ -2009,8 +2007,8 @@ function gc_wbvb_eventmanager_custom_formats( $array_in ) {
 
 
 	if ( ( 'page' == get_post_type() ) ||
-	     ( 'post' == get_post_type() ) ||
-	     ( 'event' == get_post_type() )
+		 ( 'post' == get_post_type() ) ||
+		 ( 'event' == get_post_type() )
 	) {
 		if ( is_page() ) {
 			$my_formats = array(
@@ -2397,9 +2395,9 @@ if ( ! function_exists( 'gc_wbvb_comment_nav' ) ) :
 		// Are there comments to navigate through?
 		if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
 			?>
-            <nav class="navigation comment-navigation" role="navigation">
-                <h2 class="screen-reader-text"><?php _e( 'Comment navigation', 'gebruikercentraal' ); ?></h2>
-                <div class="nav-links">
+			<nav class="navigation comment-navigation" role="navigation">
+				<h2 class="screen-reader-text"><?php _e( 'Comment navigation', 'gebruikercentraal' ); ?></h2>
+				<div class="nav-links">
 					<?php
 					if ( $prev_link = get_previous_comments_link( __( 'Older Comments', 'gebruikercentraal' ) ) ) :
 						printf( '<div class="nav-previous">%s</div>', $prev_link );
@@ -2409,8 +2407,8 @@ if ( ! function_exists( 'gc_wbvb_comment_nav' ) ) :
 						printf( '<div class="nav-next">%s</div>', $next_link );
 					endif;
 					?>
-                </div><!-- .nav-links -->
-            </nav><!-- .comment-navigation -->
+				</div><!-- .nav-links -->
+			</nav><!-- .comment-navigation -->
 
 		<?php
 		endif;
@@ -2438,49 +2436,49 @@ function gc_wbvb_comment_item( $comment, $args, $depth ) {
 	}
 
 	?>
-    <<?php echo $tag ?><?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() ?>"<?php echo $status ?>>
+	<<?php echo $tag ?><?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() ?>"<?php echo $status ?>>
 
 	<?php if ( 'div' != $args['style'] ) : ?>
-        <div id="div-comment-<?php comment_ID() ?>" class="comment-body">
+		<div id="div-comment-<?php comment_ID() ?>" class="comment-body">
 	<?php endif; ?>
 
 	<?php if ( $comment->comment_approved == '0' ) : ?>
-        <em class="comment-awaiting-moderation"><?php _e( 'Your comment is held for moderation', 'gebruikercentraal' ); ?></em>
-        <br/>
+		<em class="comment-awaiting-moderation"><?php _e( 'Your comment is held for moderation', 'gebruikercentraal' ); ?></em>
+		<br/>
 	<?php endif; ?>
 
 
-    <div class="comment-author vcard">
+	<div class="comment-author vcard">
 		<?php if ( $args['avatar_size'] != 0 ) {
 			echo get_avatar( $comment, $args['avatar_size'] );
 		} ?>
 		<?php printf( __( '<cite class="fn">%s</cite> <span class="says">wrote:</span>' ), get_comment_author_link() ); ?>
-    </div>
+	</div>
 
-    <div class="comment-content">
+	<div class="comment-content">
 		<?php comment_text(); ?>
-    </div>
+	</div>
 
-    <div class="comment-meta commentmetadata"><a
-                href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">
+	<div class="comment-meta commentmetadata"><a
+			href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">
 			<?php
 			/* translators: 1: date, 2: time */
 			printf( __( '%1$s at %2$s' ), get_comment_date(), get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)' ), '  ', '' );
 		?>
 
-        <div class="reply">
+		<div class="reply">
 			<?php comment_reply_link( array_merge( $args, array(
 				'add_below' => $add_below,
 				'depth'     => $depth,
 				'max_depth' => $args['max_depth']
 			) ) ); ?>
-        </div>
+		</div>
 
-    </div>
+	</div>
 
 
 	<?php if ( 'div' != $args['style'] ) : ?>
-        </div>
+		</div>
 	<?php endif; ?>
 	<?php
 }
@@ -2597,15 +2595,15 @@ function gc_wbvb_archive_loop() {
 			echo '<header>';
 
 			if ( ( GC_BEELDBANK_BEELD_CPT == get_post_type() )
-			     || ( GC_BEELDBANK_BRIEF_CPT == get_post_type() )
-			     || ( ICTU_GC_CPT_STAP == get_post_type() )
-			     || ( ICTU_GC_CPT_CITAAT == get_post_type() )
-			     || ( ICTU_GC_CPT_DOELGROEP == get_post_type() )
-			     || ( ICTU_GC_CPT_VAARDIGHEDEN == get_post_type() )
-			     || ( ICTU_GC_CPT_METHODE == get_post_type() )
-			     || ( ICTU_GCCONF_CPT_SPEAKER == get_post_type() )
-			     || ( ICTU_GCCONF_CPT_KEYNOTE == get_post_type() )
-			     || ( ICTU_GCCONF_CPT_SESSION == get_post_type() )
+				 || ( GC_BEELDBANK_BRIEF_CPT == get_post_type() )
+				 || ( ICTU_GC_CPT_STAP == get_post_type() )
+				 || ( ICTU_GC_CPT_CITAAT == get_post_type() )
+				 || ( ICTU_GC_CPT_DOELGROEP == get_post_type() )
+				 || ( ICTU_GC_CPT_VAARDIGHEDEN == get_post_type() )
+				 || ( ICTU_GC_CPT_METHODE == get_post_type() )
+				 || ( ICTU_GCCONF_CPT_SPEAKER == get_post_type() )
+				 || ( ICTU_GCCONF_CPT_KEYNOTE == get_post_type() )
+				 || ( ICTU_GCCONF_CPT_SESSION == get_post_type() )
 			) {
 				// nothing
 			} else {
