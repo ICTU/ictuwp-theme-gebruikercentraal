@@ -1615,12 +1615,18 @@ function gc_wbvb_add_blog_archive_css() {
 function gc_wbvb_add_css() {
 
 	$dependencies = array();
+	$versie       = CHILD_THEME_VERSION;
+
+	if ( WP_DEBUG ) {
+		$file   = get_stylesheet_directory() . '/css/gc-style.css';
+		$versie = filemtime( $file );
+	}
 
 	wp_enqueue_style(
 		ID_SKIPLINKS,
 		get_stylesheet_directory_uri() . '/css/gc-style.css',
 		$dependencies,
-		CHILD_THEME_VERSION,
+		$versie,
 		'all'
 	);
 
