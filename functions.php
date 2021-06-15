@@ -8,8 +8,8 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.3.23
-// @desc.   PHP-codecheck: variabelen netjes declareren.
+// @version 4.3.24
+// @desc.   Correcties voor logo-widget. PHP-variabelencheck.
 // @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://www.gebruikercentraal.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '4.3.23' );
-define( 'CHILD_THEME_DESCRIPTION', "4.3.23 - PHP-codecheck: variabelen netjes declareren." );
+define( 'CHILD_THEME_VERSION', '4.3.24' );
+define( 'CHILD_THEME_DESCRIPTION', "4.3.24 - Correcties voor logo-widget. PHP-variabelencheck." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
