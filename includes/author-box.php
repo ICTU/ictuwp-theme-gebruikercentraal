@@ -59,8 +59,10 @@ function gc_wbvb_authorbox_actieteamlid( $userid ) {
 		$authorfoto_url = get_user_meta( $userid, 'auteursfoto_url', true );
 
 		if ( ! $authorfoto_url ) {
-			$authorfoto     = get_field( 'auteursfoto', $acf_userid );
-			$authorfoto_url = wp_get_attachment_image_src( $authorfoto['id'], 'thumbnail' );
+			$authorfoto = get_field( 'auteursfoto', $acf_userid );
+			if ( isset( $authorfoto['id'] ) ) {
+				$authorfoto_url = wp_get_attachment_image_src( $authorfoto['id'], 'thumbnail' );
+			}
 		}
 
 		if ( $authorfoto_url ) {
@@ -72,8 +74,9 @@ function gc_wbvb_authorbox_actieteamlid( $userid ) {
 			);
 
 			$defaultplaatje = get_stylesheet_directory_uri() . '/images/' . $default_persoon_plaatje;
-			$imagetag       = get_avatar( $userid, 82, $defaultplaatje, $authorfoto['id'], $args );
-
+			if ( isset( $authorfoto['id'] ) ) {
+				$imagetag = get_avatar( $userid, 82, $defaultplaatje, $authorfoto['id'], $args );
+			}
 		}
 
 	}
