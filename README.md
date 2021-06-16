@@ -9,10 +9,10 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-4.3.24 - Correcties voor logo-widget. PHP-variabelencheck.
+4.3.25.p - Werking nav-menu voor desktop aangepast.
 
 ## Version history
-* 4.3.24 - Correcties voor logo-widget. PHP-variabelencheck.
+* 4.3.25.p - Werking nav-menu voor desktop aangepast.
 * 4.3.23 - PHP-codecheck: variabelen netjes declareren.
 * 4.3.22 - Styling voor honeypot toegevoegd.
 * 4.3.21 - HSTS-header verwijderd.

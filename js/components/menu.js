@@ -27,12 +27,13 @@ const menuItems = document.querySelectorAll("li.menu-item-has-children");
 function navDesktop() {
 
   // Remove menu button if there
-  if($('.btn--toggle-menu').length){
+  if ($('.btn--toggle-menu').length) {
     $('.btn--toggle-menu').remove();
   }
 
   // Add buttons
   $('.nav-primary .menu-item-has-children').each(function () {
+    console.log('Add buttons');
 
     $(this).find('a:first').attr('aria-expanded', true);
 
@@ -48,6 +49,7 @@ function navDesktop() {
   $('.menu-primary > li.menu-item-has-children > a').mouseenter(function () {
     if (!($(this).hasClass('open'))) {
       // Unset other active if there
+      console.log('mouseenter op a');
       $('.menu-primary').find('.open').removeClass('open');
       $('.menu-primary').find('ul[aria-hidden="false"]').attr('aria-hidden', 'true');
 
@@ -57,41 +59,94 @@ function navDesktop() {
     }
   });
 
-  // And remove again on mouseleave
+  $('.menu-primary > li.menu-item-has-children').focusin(function () {
+
+    var currentsubmenu = $(this).find('.sub-menu');
+    var menuItem = $(this);
+
+    var allclasses = menuItem.attr("class")
+    console.log('focusin');
+
+    if (!(menuItem.hasClass('menu-item-has-focus'))) {
+      menuItem.addClass('menu-item-has-focus');
+    }
+
+  });
+
+  $('.menu-primary > li.menu-item-has-children').focusout(function () {
+      var currentsubmenu = $(this).find('.sub-menu');
+      var currentbutton = $(this).find('button');
+      var menuItem = $(this);
+
+      var allclasses = menuItem.attr("class");
+      console.log("focusout \n" + allclasses + "\n");
+
+      if (menuItem.hasClass('menu-item-has-focus') && menuItem.hasClass('open')) {
+
+        var button_has_attr_expanded = String(currentbutton.attr("aria-expanded"));
+        var submenu_has_attr_ariahidden = String(currentsubmenu.attr("aria-hidden"));
+
+        if (button_has_attr_expanded == "true" && submenu_has_attr_ariahidden == "false") {
+          console.log('focusout functie menu item heeft class open, button expanded: ' + button_has_attr_expanded + ', aria hidden: ' + submenu_has_attr_ariahidden + '.');
+
+//          closeMenuItems();
+//        console.log('WOEPIEDEPOEPIE button expanded: ' + button_has_attr_expanded + ', aria hidden: ' + submenu_has_attr_ariahidden + '.');
+//          menuItem.removeClass('open');
+//          menuItem.removeClass('menu-item-has-focus');
+//        currentbutton.attr('aria-expanded', false);
+//          currentsubmenu.attr('aria-hidden', true);
+        }
+
+      }
+
+    }
+  )
+  ;
+
+// And remove again on mouseleave
   $('.menu-primary > li.menu-item-has-children .sub-menu').mouseleave(function () {
+
+    console.log('sub-menu mouseleave');
+
     // Add attributes to current menu
     $(this).parent().removeClass('open');
     $(this).attr('aria-hidden', 'true');
     $(this).parent().find('a:first-child').attr('aria-expanded', 'false');
+
   });
 
-  // Add toggle behaviour on click
+// Add toggle behaviour on click
   $('.nav-primary .menu-item-has-children > button').click(function () {
+
+    console.log('BUTTON KLIK');
+
     var menuItem = $(this).parent();
     var currentActive = $('.nav-primary .menu-item.open');
 
     if (!(menuItem.hasClass('open'))) {
+      console.log('klik op button en menu item IS NIET OPEN !!!');
       //Submenu is closed, has to open
-      if(currentActive.length){
+      if (currentActive.length) {
         //If there is another item open remove it
         currentActive.removeClass('open').find('.sub-menu').attr('aria-hidden', true);
         currentActive.find('button').attr('aria-expanded', false);
       }
 
-      $(this).attr('aria-expanded', true).find('span').text( menustrings.closesubmenu + ' ' + menuItem.find('a:first span').text());
+      $(this).attr('aria-expanded', true).find('span').text(menustrings.closesubmenu + ' ' + menuItem.find('a:first span').text());
       menuItem.addClass('open').find('.sub-menu').attr('aria-hidden', false);
       menuItem.find('.sub-menu').removeClass('visuallyhidden');
 
 
     } else if (menuItem.hasClass('open')) {
+      console.log('klik op button en menu item is OPEN');
       // Submenu is open, has to close
-      $(this).attr('aria-expanded', false).find('span').text( menustrings.showsubmenu + ' ' + menuItem.find('a:first span').text());
+      $(this).attr('aria-expanded', false).find('span').text(menustrings.showsubmenu + ' ' + menuItem.find('a:first span').text());
       menuItem.removeClass('open').find('.sub-menu').attr('aria-hidden', true);
       menuItem.find('.sub-menu').addClass('visuallyhidden');
     }
   });
 
-  //Remove open
+//Remove open
 }
 
 function navMobile() {
@@ -99,7 +154,7 @@ function navMobile() {
   const menuBtn = $('.btn--toggle-menu');
 
   // Unset desktop things
-  if($('button.icon').length){
+  if ($('button.icon').length) {
     $('button.icon').remove();
   }
 
@@ -114,12 +169,12 @@ function navMobile() {
     '<i>&#x2261;</i><span class="btn__text">Menu</span>' +
     '</button>';
 
-  if(!(menuBtn.length)) {
+  if (!(menuBtn.length)) {
     $('.site-header > .wrap').append(menuBtnHtml);
   }
 
-  $('.btn--toggle-menu').click(function(){
-    if($(this).hasClass('active')){
+  $('.btn--toggle-menu').click(function () {
+    if ($(this).hasClass('active')) {
       $(this).find('i').html('&#x2261;');
     } else {
       $(this).find('i').html('&times;');
@@ -141,8 +196,7 @@ function WidthChange(mq) {
     // window width is at least 830px
     // don't show menu button
     navDesktop(document, window);
-  }
-  else {
+  } else {
     // window width is less than 830px
     // DO show menu button
     navMobile(document, window);
@@ -165,6 +219,8 @@ if (matchMedia && mainMenu) {
 // functie om alle opengeklapte items in het menu weer te sluiten
 function closeMenuItems() {
 
+  console.log('closeMenuItems');
+
   var width = window.innerWidth;
   var listitems = document.querySelectorAll(".menu-item-has-children");
 
@@ -175,12 +231,14 @@ function closeMenuItems() {
     if (width > breakpointmenu) {
 
       var buttonExists = el.querySelector('button');
+      var submenu = el.querySelector('ul.sub-menu');
 
       if (buttonExists && typeof buttonExists != 'undefined') {
         buttonExists.setAttribute('aria-expanded', "false");
         buttonExists.classList.remove('open-list');
       }
       el.querySelector('ul.sub-menu').classList.add('visuallyhidden');
+      el.querySelector('ul.sub-menu').setAttribute('aria-hidden', 'true');
 
     }
 
@@ -196,8 +254,7 @@ function istotalMenuElementMenu(event) {
     closeMenuItems();
     console.log('Event is BUITEN totalmenu');
     totalMenuElement.classList.remove('hasfocus');
-  }
-  else {
+  } else {
     console.log('Event is BINNEN totalmenu');
     totalMenuElement.classList.add('hasfocus');
   }

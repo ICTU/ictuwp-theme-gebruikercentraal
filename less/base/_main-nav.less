@@ -143,8 +143,37 @@
       margin-right: auto;
       display: flex;
 
+      .rood-lijntje {
+        border: 5px solid red !important;
+      }
+
+
       > li {
         display: inline-block;
+
+        &.open {
+
+          a {
+            color: red !important;
+            background: white !important;
+          }
+        }
+
+        &.menu-item-has-focus {
+          border: 5px dashed rebeccapurple !important;
+        }
+
+        button[aria-expanded="false"] {
+          border: 10px solid red;
+        }
+
+        button[aria-expanded="true"] {
+          border: 10px solid green;
+        }
+
+        button:focus {
+          border: 10px solid blue;
+        }
 
         > a {
           font-family: @font_primary_bold;
