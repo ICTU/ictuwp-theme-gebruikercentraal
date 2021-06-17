@@ -1218,7 +1218,13 @@
 }
 
 .gc-heading-medium() {
-  .font-size(26);
+
+  .font-size(24);
+
+  @media @desktop {
+    .font-size(26);
+  }
+
   font-family: @font_secondary;
   line-height: 28px;
 
@@ -1319,9 +1325,14 @@
   font-size: ( ( @input / @basefontsize ) * @baserem );
 }
 
-.gc-list-title {
-  .font-size(18);
-  line-height: 2.8rem;
+.gc-list-title() {
+  .font-size(14);
+  line-height: 1.5;
+
+  @media @desktop {
+    .font-size(18);
+    line-height: 2.8rem;
+  }
   font-family: @font_primary_bold;
 }
 
