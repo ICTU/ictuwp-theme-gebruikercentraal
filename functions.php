@@ -1618,8 +1618,10 @@ function gc_wbvb_add_css() {
 	$versie       = CHILD_THEME_VERSION;
 
 	if ( WP_DEBUG ) {
-		$file   = get_stylesheet_directory() . '/css/gc-style.css';
-		$versie = filemtime( $file );
+		$file = get_stylesheet_directory() . '/css/gc-style.css';
+		if ( file_exists( $file ) ) {
+			$versie = filemtime( $file );
+		}
 	}
 
 	wp_enqueue_style(
