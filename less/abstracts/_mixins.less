@@ -188,6 +188,7 @@
   position: relative;
   border: @borderwidth solid @bordercolor;
   box-shadow: 3px 3px 0px rgba(#000, 0.2);
+  padding: 5px 15px;
 
   .button_font_shared(@fontsize);
   color: @fontcolor;
@@ -1041,7 +1042,6 @@
 
   & > .sub-menu {
     opacity: 1;
-    left: 0;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -1326,7 +1326,7 @@
 }
 
 .gc-list-title() {
-  .font-size(14);
+  .font-size(16);
   line-height: 1.5;
 
   @media @desktop {

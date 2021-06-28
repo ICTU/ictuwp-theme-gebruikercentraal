@@ -185,6 +185,7 @@
       margin-top: 2rem;
       flex: 0 1 32px;
     }
+
     .entry-title {
       margin-right: 2rem;
       padding-bottom: 2rem;
@@ -220,9 +221,11 @@
   // With images (blog)
   &--with-image {
     .entry__link {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
+      @media @tablet {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
     }
 
     .bloginfo {
@@ -230,6 +233,18 @@
 
       @media @tablet_only {
         flex: 1 0 ~"calc(100% - @{fi_md})";
+
+
+        .date-badge {
+          position: absolute;
+          top: 0;
+          left: 0;
+          margin: 4.1rem 0 0 0;
+        }
+
+        .entry-title {
+          padding-left: 2rem;
+        }
       }
 
       @media @desktop {
@@ -239,7 +254,6 @@
   }
 
   // Event
-
   &--event {
     .entry__link {
       min-height: 10rem;
@@ -295,15 +309,14 @@
 }
 
 .entry__featured-image {
-  flex: 0 1 @fi_sm;
-//  width: @fi_sm;
-  height: @fi_sm;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  height: 90px;
+  width: 190px;
 
   @media @tablet {
-//    width: @fi_md;
+    width: auto;
     flex: 0 1 @fi_md;
     height: @fi_md;
   }
@@ -324,6 +337,14 @@
   transition: color .2s, background .2s;
   position: relative;
 
+  .arrow-link__text {
+    padding-right: 0;
+  }
+
+  .date-badge {
+    background: @white;
+  }
+
   &:hover,
   &:focus {
     background: @white;
@@ -332,6 +353,10 @@
     box-shadow: 0 0 .6rem rgba(#000, 0.1);
     z-index: +1;
     text-decoration: none;
+
+    .date-badge {
+      color: @base_font_color;
+    }
 
     .arrow-link__text {
       text-decoration: underline;
