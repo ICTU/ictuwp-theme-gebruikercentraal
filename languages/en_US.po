@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gebruiker Centraal\n"
-"POT-Creation-Date: 2021-06-07 16:34+0200\n"
-"PO-Revision-Date: 2021-06-07 16:35+0200\n"
+"POT-Creation-Date: 2021-06-29 16:43+0200\n"
+"PO-Revision-Date: 2021-06-29 16:43+0200\n"
 "Last-Translator: Paul van Buuren <poedit@wbvb.nl>\n"
 "Language-Team: Paul van Buuren <paul@wbvb.nl>\n"
 "Language: en_US\n"
@@ -240,7 +240,7 @@ msgctxt "author box"
 msgid "LinkedIn page"
 msgstr ""
 
-#: functions.php:2787 includes/author-box.php:213
+#: functions.php:2787 includes/author-box.php:216
 msgctxt "author box"
 msgid "Personal website"
 msgstr ""
@@ -261,37 +261,37 @@ msgstr ""
 msgid "Twitter-account"
 msgstr ""
 
-#: includes/author-box.php:121
+#: includes/author-box.php:124
 msgctxt "author box"
 msgid "Posts by"
 msgstr ""
 
-#: includes/author-box.php:220
+#: includes/author-box.php:223
 msgctxt "author box"
 msgid "Phone number"
 msgstr ""
 
-#: includes/author-box.php:227
+#: includes/author-box.php:230
 msgctxt "author box"
 msgid "E-mail adress"
 msgstr ""
 
-#: includes/author-box.php:243
+#: includes/author-box.php:246
 msgctxt "author box"
 msgid "Twitter account"
 msgstr ""
 
-#: includes/author-box.php:249
+#: includes/author-box.php:252
 msgctxt "author box"
 msgid "Linked-In profiel"
 msgstr ""
 
-#: includes/author-box.php:255
+#: includes/author-box.php:258
 msgctxt "author box"
 msgid "Facebook profiel"
 msgstr ""
 
-#: includes/author-box.php:274
+#: includes/author-box.php:277
 msgctxt "author box"
 msgid "All posts"
 msgstr ""
