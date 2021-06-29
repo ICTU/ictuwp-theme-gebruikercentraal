@@ -50,9 +50,23 @@
 
   &.l-has-image {
     .bloginfo {
-      width: ~"calc(100% - 4rem)";
-      padding-left: @gutter;
-      padding-right: 1rem;
+      flex: 1 0 80%;
+      padding-left: 3rem;
+
+      header {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: flex-start;
+
+        .date-badge {
+          flex: 0 1 32px;
+        }
+        .entry-title {
+          margin-right: 2rem;
+          flex: 1 0 60%;
+        }
+      }
     }
   }
 
@@ -74,12 +88,12 @@
 
 
 .teaser__image {
-  width: 6rem;
+  flex: 0 1 6rem;
   height: 4rem;
   background-size: cover;
   background-position: center center;
   overflow: hidden;
-  
+
 	img {
 		width: 100%;
 		height: 100%;
@@ -88,8 +102,9 @@
 	}
 
   @media @desktop {
-    width: 220px;
+    flex: 0 1 220px;
     height: 160px;
+    min-width: 167px;
   }
 }
 
