@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gebruiker Centraal\n"
-"POT-Creation-Date: 2021-06-18 13:41+0200\n"
-"PO-Revision-Date: 2021-06-18 13:41+0200\n"
+"POT-Creation-Date: 2021-06-29 16:43+0200\n"
+"PO-Revision-Date: 2021-06-29 16:43+0200\n"
 "Last-Translator: Paul van Buuren <poedit@wbvb.nl>\n"
 "Language-Team: Paul van Buuren <paul@wbvb.nl>\n"
 "Language: en_US\n"
@@ -143,121 +143,121 @@ msgstr ""
 msgid "Authors:"
 msgstr ""
 
-#: functions.php:1759
+#: functions.php:1757
 msgid "Widget in de site footer"
 msgstr ""
 
-#: functions.php:1761
+#: functions.php:1759
 msgid "Ruimte voor widgets in de site footer. Hier bijvoorbeeld footerlinks."
 msgstr ""
 
-#: functions.php:1800
+#: functions.php:1798
 msgid "Banners boven hoofdcontent"
 msgstr ""
 
-#: functions.php:1802
+#: functions.php:1800
 msgid ""
 "Widgets die op home en pagina's getoond worden boven alle verdere content. "
 "Op berichtpagina's onder de inhoud."
 msgstr ""
 
-#: functions.php:1831
+#: functions.php:1829
 msgid "Home-widget links"
 msgstr ""
 
-#: functions.php:1833
+#: functions.php:1831
 msgid "Hier kun je de widgets plaatsen voor events en blogberichten"
 msgstr ""
 
-#: functions.php:1863
+#: functions.php:1861
 msgid "Home-widget rechts"
 msgstr ""
 
-#: functions.php:1865
+#: functions.php:1863
 msgid "Hier kun je de widgets plaatsen voor o.m. het actieteam"
 msgstr ""
 
-#: functions.php:2071
+#: functions.php:2069
 msgid "fully booked"
 msgstr ""
 
-#: functions.php:2174
+#: functions.php:2172
 msgctxt "Kopje op evenementpagina"
 msgid "Programme"
 msgstr ""
 
-#: functions.php:2234
+#: functions.php:2232
 msgctxt "Kopje op berichtpagina"
 msgid "Downloads"
 msgstr ""
 
-#: functions.php:2360
+#: functions.php:2358
 msgctxt "Kopje op bericht- of evenementpagina"
 msgid "Links"
 msgstr ""
 
-#: functions.php:2407
+#: functions.php:2405
 msgid "Comment navigation"
 msgstr ""
 
-#: functions.php:2410
+#: functions.php:2408
 msgid "Older Comments"
 msgstr ""
 
-#: functions.php:2414
+#: functions.php:2412
 msgid "Newer Comments"
 msgstr ""
 
-#: functions.php:2454
+#: functions.php:2452
 msgid "Your comment is held for moderation"
 msgstr ""
 
-#: functions.php:2463
+#: functions.php:2461
 #, php-format
 msgid "<cite class=\"fn\">%s</cite> <span class=\"says\">wrote:</span>"
 msgstr ""
 
 #. translators: 1: date, 2: time
-#: functions.php:2474
+#: functions.php:2472
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: functions.php:2474
+#: functions.php:2472
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:2727
+#: functions.php:2725
 msgid "Older"
 msgstr ""
 
-#: functions.php:2739
+#: functions.php:2737
 msgid "Newer"
 msgstr ""
 
-#: functions.php:2788
+#: functions.php:2786
 msgctxt "author box"
 msgid "LinkedIn page"
 msgstr ""
 
-#: functions.php:2789 includes/author-box.php:216
+#: functions.php:2787 includes/author-box.php:216
 msgctxt "author box"
 msgid "Personal website"
 msgstr ""
 
-#: functions.php:2857
+#: functions.php:2855
 msgid "Previous"
 msgstr ""
 
-#: functions.php:2858
+#: functions.php:2856
 msgid "Next"
 msgstr ""
 
-#: functions.php:3013
+#: functions.php:3011
 msgid "LinkedIn-profiel"
 msgstr ""
 
-#: functions.php:3019
+#: functions.php:3017
 msgid "Twitter-account"
 msgstr ""
 
