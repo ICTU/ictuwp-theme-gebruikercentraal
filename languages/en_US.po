@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gebruiker Centraal\n"
-"POT-Creation-Date: 2021-07-02 12:37+0200\n"
-"PO-Revision-Date: 2021-07-02 12:37+0200\n"
+"POT-Creation-Date: 2021-07-02 15:36+0200\n"
+"PO-Revision-Date: 2021-07-02 15:36+0200\n"
 "Last-Translator: Paul van Buuren <poedit@wbvb.nl>\n"
 "Language-Team: Paul van Buuren <paul@wbvb.nl>\n"
 "Language: en_US\n"
@@ -253,11 +253,16 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
-#: functions.php:3005
+#: functions.php:2940
+msgctxt "link op logo"
+msgid ", to the homepage"
+msgstr ""
+
+#: functions.php:3007
 msgid "LinkedIn-profiel"
 msgstr ""
 
-#: functions.php:3011
+#: functions.php:3013
 msgid "Twitter-account"
 msgstr ""
 
