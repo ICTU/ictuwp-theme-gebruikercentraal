@@ -2939,10 +2939,14 @@ function gc_wbvb_customize_site_title( $title, $inside, $wrap ) {
 
 	$blogname = ( get_bloginfo( 'name' ) ? get_bloginfo( 'name' ) : 'Gebruiker Centraal' );
 
-	$branding = '<a href="' . home_url() . '" class="site__home-link site-id-' . get_current_blog_id() . ' ' . sanitize_title_for_query( get_bloginfo( 'name' ) ) . '">';
+
+	$branding = '<div class="site__home-link">';
+	$branding .= '<a href="' . home_url() . '" class="site-id-' . get_current_blog_id() . ' ' . sanitize_title_for_query( get_bloginfo( 'name' ) ) . '" rel="home">';
 	$branding .= ( $blogname ? '<span class="site__name">' . $blogname . '</span>' : '' );
-	$branding .= ( get_bloginfo( 'description' ) ? '<span class="site__slogan">' . get_bloginfo( 'description' ) . '</span>' : '' );
+	$branding .= '<span class="screen-reader-text">' .  _x( "Link to the homepage", 'link op logo', 'gebruikercentraal' ) . '</span>';
 	$branding .= '</a>';
+	$branding .= ( get_bloginfo( 'description' ) ? '<span class="site__slogan">' . get_bloginfo( 'description' ) . '</span>' : '' );
+	$branding .= '</div>';
 
 	return $branding;
 }

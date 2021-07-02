@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gebruiker Centraal\n"
-"POT-Creation-Date: 2021-07-02 13:23+0200\n"
-"PO-Revision-Date: 2021-07-02 13:23+0200\n"
+"POT-Creation-Date: 2021-07-02 13:47+0200\n"
+"PO-Revision-Date: 2021-07-02 13:47+0200\n"
 "Last-Translator: Paul van Buuren <poedit@wbvb.nl>\n"
 "Language-Team: paul@wbvb.nl\n"
 "Language: nl_NL\n"
@@ -255,11 +255,16 @@ msgstr "Vorige"
 msgid "Next"
 msgstr "Volgende"
 
-#: functions.php:3011
+#: functions.php:2946
+msgctxt "link op logo"
+msgid "Link to the homepage"
+msgstr "Link naar homepage"
+
+#: functions.php:3015
 msgid "LinkedIn-profiel"
 msgstr ""
 
-#: functions.php:3017
+#: functions.php:3021
 msgid "Twitter-account"
 msgstr ""
 
@@ -298,162 +303,161 @@ msgctxt "author box"
 msgid "All posts"
 msgstr "Alle berichten"
 
-#: includes/common-functions.php:64 includes/common-functions.php:86
-#: includes/common-functions.php:99
-msgctxt "search label and placeholder text"
-msgid "Search this site"
-msgstr "Zoeken"
-
-#: includes/common-functions.php:75
+#: includes/common-functions.php:64
 msgctxt "search button text"
 msgid "Search"
 msgstr "Zoek"
 
-#: includes/common-functions.php:490
+#: includes/common-functions.php:80
+msgctxt "search label and placeholder text"
+msgid "Search this site"
+msgstr "Zoeken"
+
+#: includes/common-functions.php:471
 msgid "Read more"
 msgstr "Meer lezen"
 
-#: includes/common-functions.php:517
+#: includes/common-functions.php:498
 msgctxt "comment title"
 msgid "Comments"
 msgstr "Reacties"
 
-#: includes/common-functions.php:542
+#: includes/common-functions.php:523
 msgid "Join the discussion"
 msgstr "Reageer"
 
-#: includes/common-functions.php:544
+#: includes/common-functions.php:525
 msgctxt "reactieformulier"
 msgid "Your reply"
 msgstr "Jouw reactie"
 
-#: includes/common-functions.php:549
+#: includes/common-functions.php:530
 msgctxt "reactieformulier"
 msgid "Your name"
 msgstr "Je naam"
 
-#: includes/common-functions.php:554
+#: includes/common-functions.php:535
 msgctxt "reactieformulier"
 msgid "Email address"
 msgstr "Je mailadres"
 
-#: includes/common-functions.php:562
+#: includes/common-functions.php:543
 msgid "Reply"
 msgstr "Reageer"
 
-#: includes/common-functions.php:718
+#: includes/common-functions.php:699
 msgctxt "begroeting inlogmail"
 msgid "Hallo,"
 msgstr ""
 
-#: includes/common-functions.php:720
+#: includes/common-functions.php:701
 msgctxt "inlogmail"
 msgid ""
 "We kregen via de website het verzoek om een nieuw wachtwoord te sturen voor "
 "het account met de inlognaam:"
 msgstr ""
 
-#: includes/common-functions.php:723
+#: includes/common-functions.php:704
 msgctxt "inlogmail"
 msgid "Om je wachtwoord opnieuw in te stellen, klik je op deze link:"
 msgstr ""
 
-#: includes/common-functions.php:728
+#: includes/common-functions.php:709
 msgctxt "inlogmail"
 msgid "Deze link is maar 1 keer te gebruiken."
 msgstr ""
 
-#: includes/common-functions.php:730
+#: includes/common-functions.php:711
 msgctxt "inlogmail"
 msgid "Als je geen nieuw wachtwoord wilt, hoef je niets te doen."
 msgstr ""
 
-#: includes/common-functions.php:734
+#: includes/common-functions.php:715
 msgctxt "afsluiting inlogmail"
 msgid "Met vriendelijke groet,"
 msgstr ""
 
-#: includes/common-functions.php:736
+#: includes/common-functions.php:717
 msgctxt "afsluiting inlogmail"
 msgid "het Gebruiker Centraal-team"
 msgstr ""
 
-#: includes/common-functions.php:824
+#: includes/common-functions.php:805
 msgctxt "Screen reader text for menu"
 msgid "Show submenu for"
 msgstr "Toon submenu voor"
 
-#: includes/common-functions.php:825
+#: includes/common-functions.php:806
 msgctxt "Screen reader text for menu"
 msgid "Hide submenu for"
 msgstr "Verberg submenu voor"
 
-#: includes/common-functions.php:826
+#: includes/common-functions.php:807
 msgctxt "Screen reader text for menu"
 msgid "Show menu"
 msgstr ""
 
-#: includes/common-functions.php:827
+#: includes/common-functions.php:808
 msgctxt "Screen reader text for menu"
 msgid "Close menu"
 msgstr ""
 
-#: includes/common-functions.php:828
+#: includes/common-functions.php:809
 msgctxt "Screen reader text for menu"
 msgid "Menu"
 msgstr ""
 
-#: includes/common-functions.php:855
+#: includes/common-functions.php:836
 msgctxt "lightbox"
 msgid "Previous image"
 msgstr "Vorige afbeelding"
 
-#: includes/common-functions.php:856
+#: includes/common-functions.php:837
 msgctxt "lightbox"
 msgid "Next image"
 msgstr "Volgende afbeelding"
 
-#: includes/common-functions.php:857
+#: includes/common-functions.php:838
 msgctxt "lightbox"
 msgid " < "
 msgstr ""
 
-#: includes/common-functions.php:858
+#: includes/common-functions.php:839
 msgctxt "lightbox"
 msgid " > "
 msgstr ""
 
-#: includes/common-functions.php:861
+#: includes/common-functions.php:842
 msgctxt "lightbox"
 msgid "Close lightbox"
 msgstr "Vergrote afbeelding niet meer tonen"
 
-#: includes/common-functions.php:862
+#: includes/common-functions.php:843
 msgctxt "lightbox"
 msgid "×"
 msgstr ""
 
-#: includes/common-functions.php:863
+#: includes/common-functions.php:844
 msgctxt "lightbox"
 msgid "Zoom"
 msgstr "Vergroot afbeelding"
 
-#: includes/common-functions.php:864
+#: includes/common-functions.php:845
 msgctxt "lightbox"
 msgid "Download image"
 msgstr "Afbeelding downloaden"
 
-#: includes/common-functions.php:865
+#: includes/common-functions.php:846
 msgctxt "lightbox"
 msgid "Image is loading"
 msgstr "Afbeelding wordt geladen"
 
-#: includes/common-functions.php:917
+#: includes/common-functions.php:898
 msgctxt "label zoekknop"
 msgid "Zoeken"
 msgstr ""
 
-#: includes/common-functions.php:1069
+#: includes/common-functions.php:1050
 #, php-format
 msgctxt "Alternatief voor een ontbrekende alt-tekst: post-titel."
 msgid "Image for '%s'"
