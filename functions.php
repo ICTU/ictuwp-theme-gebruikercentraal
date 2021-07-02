@@ -909,7 +909,6 @@ add_action( 'genesis_before_header', 'gc_wbvb_add_skip_link' );
 
 function gc_wbvb_add_skip_link() {
 
-
 	$skip_to_maincontent = '';
 	$skip_to_main        = sprintf( '<li><a href="#%1$s">%2$s</a></li>', ID_MAINCONTENT, _x( 'Jump to main content', 'Skiplinks', 'gebruikercentraal' ) );
 
@@ -919,8 +918,7 @@ function gc_wbvb_add_skip_link() {
 	}
 
 	echo sprintf( '<ul id="%1$s">' . $skip_to_main . $skip_to_maincontent . '</ul>', ID_SKIPLINKS );
-
-
+	
 }
 
 //========================================================================================================
