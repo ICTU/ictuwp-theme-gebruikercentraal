@@ -8,7 +8,7 @@
 // @package gebruiker-centraal
 // @author  Paul van Buuren
 // @license GPL-2.0+
-// @version 4.3.24
+// @version 4.3.24.a
 // @desc.   Correcties voor logo-widget. PHP-variabelencheck.
 // @link    https://github.com/ICTU/ictuwp-theme-gebruikercentraal
 
@@ -23,8 +23,8 @@ require_once( get_template_directory() . '/lib/init.php' );
  */
 define( 'CHILD_THEME_NAME', 'Gebruiker Centraal' );
 define( 'CHILD_THEME_URL', 'https://www.gebruikercentraal.nl/themes/gebruikercentraal' );
-define( 'CHILD_THEME_VERSION', '4.3.24' );
-define( 'CHILD_THEME_DESCRIPTION', "4.3.24 - Correcties voor logo-widget. PHP-variabelencheck." );
+define( 'CHILD_THEME_VERSION', '4.3.24.a' );
+define( 'CHILD_THEME_DESCRIPTION', "4.3.24.a - Correcties voor logo-widget. PHP-variabelencheck." );
 
 define( 'GC_TWITTERACCOUNT', 'gebrcentraal' );
 define( 'GC_TWITTER_URL', 'https://twitter.com/' );
@@ -918,7 +918,7 @@ function gc_wbvb_add_skip_link() {
 	}
 
 	echo sprintf( '<ul id="%1$s">' . $skip_to_main . $skip_to_maincontent . '</ul>', ID_SKIPLINKS );
-	
+
 }
 
 //========================================================================================================
@@ -2940,13 +2940,11 @@ function gc_wbvb_customize_site_title( $title, $inside, $wrap ) {
 	$blogname = ( get_bloginfo( 'name' ) ? get_bloginfo( 'name' ) : 'Gebruiker Centraal' );
 
 
-	$branding = '<div class="site__home-link">';
-	$branding .= '<a href="' . home_url() . '" class="site-id-' . get_current_blog_id() . ' ' . sanitize_title_for_query( get_bloginfo( 'name' ) ) . '" rel="home">';
+	$branding = '<a href="' . home_url() . '" class="site__home-link site-id-' . get_current_blog_id() . ' ' . sanitize_title_for_query( get_bloginfo( 'name' ) ) . '" rel="home">';
 	$branding .= ( $blogname ? '<span class="site__name">' . $blogname . '</span>' : '' );
-	$branding .= '<span class="screen-reader-text">' .  _x( "Link to the homepage", 'link op logo', 'gebruikercentraal' ) . '</span>';
+	$branding .= ( get_bloginfo( 'description' ) ? '<span class="site__slogan"> ' . get_bloginfo( 'description' ) . '</span>' : '' );
+	$branding .= '<span class="screen-reader-text">' .  _x( ", to the homepage", 'link op logo', 'gebruikercentraal' ) . '</span>';
 	$branding .= '</a>';
-	$branding .= ( get_bloginfo( 'description' ) ? '<span class="site__slogan">' . get_bloginfo( 'description' ) . '</span>' : '' );
-	$branding .= '</div>';
 
 	return $branding;
 }
