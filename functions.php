@@ -910,18 +910,16 @@ add_action( 'genesis_before_header', 'gc_wbvb_add_skip_link' );
 
 function gc_wbvb_add_skip_link() {
 
-	echo sprintf(
-		'<ul id="%5$s">
-			<li><a href="#%3$s">%1$s</a></li>
-			<li><a href="#%4$s">%2$s</a></li>
-		</ul>',
-		_x( 'Jump to main content', 'Skiplinks', 'gebruikercentraal' ),
-		_x( 'Jump to main navigation', 'Skiplinks', 'gebruikercentraal' ),
-		ID_MAINCONTENT,
-		ID_MAINNAV,
-		ID_SKIPLINKS
-	);
+	$skip_to_maincontent = '';
+	$skip_to_main        = sprintf( '<li><a href="#%1$s">%2$s</a></li>', ID_MAINCONTENT, _x( 'Jump to main content', 'Skiplinks', 'gebruikercentraal' ) );
 
+	if ( has_nav_menu( 'primary' ) ) {
+		// skiplink alleen toevoegen als er op 'primary' menu locatie een menu actief is
+		$skip_to_maincontent = sprintf( '<li><a href="#%1$s">%2$s</a></li>', ID_MAINNAV, _x( 'Jump to main navigation', 'Skiplinks', 'gebruikercentraal' ) );
+	}
+
+	echo sprintf( '<ul id="%1$s">' . $skip_to_main . $skip_to_maincontent . '</ul>', ID_SKIPLINKS );
+	
 }
 
 //========================================================================================================
