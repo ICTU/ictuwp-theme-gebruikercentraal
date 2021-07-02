@@ -56,17 +56,6 @@ function gc_wbvb_add_id_to_search_form( $form ) {
 
 //========================================================================================================
 
-//* Customize search form label
-add_filter( 'genesis_search_form_label', 'gc_wbvb_searchform_label_text' );
-
-function gc_wbvb_searchform_label_text( $text ) {
-
-	return esc_attr( _x( "Search this site", 'search label and placeholder text', 'gebruikercentraal' ) );
-
-}
-
-//========================================================================================================
-
 //* Customize search form input button text
 add_filter( 'genesis_search_button_text', 'gc_wbvb_searchform_submitbutton_text' );
 
@@ -79,18 +68,10 @@ function gc_wbvb_searchform_submitbutton_text( $text ) {
 //========================================================================================================
 
 //* Customize search form input box text
-add_filter( 'genesis_search_text', 'gc_wbvb_searchform_text' );
-
-function gc_wbvb_searchform_label_text( $text ) {
-
-	return esc_attr( _x( "Search this site", 'search label and placeholder text', 'gebruikercentraal' ) );
-
-}
-
-//========================================================================================================
-
-//* Customize search form input box text
 add_filter( 'genesis_search_text', 'gc_wbvb_searchform_placeholder_text' );
+
+//* Customize search form label
+add_filter( 'genesis_search_form_label', 'gc_wbvb_searchform_placeholder_text' );
 
 function gc_wbvb_searchform_placeholder_text( $text ) {
 
