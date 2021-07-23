@@ -79,17 +79,6 @@ function gc_wbvb_searchform_submitbutton_text( $text ) {
 //========================================================================================================
 
 //* Customize search form input box text
-add_filter( 'genesis_search_text', 'gc_wbvb_searchform_text' );
-
-function gc_wbvb_searchform_label_text( $text ) {
-
-	return esc_attr( _x( "Search this site", 'search label and placeholder text', 'gebruikercentraal' ) );
-
-}
-
-//========================================================================================================
-
-//* Customize search form input box text
 add_filter( 'genesis_search_text', 'gc_wbvb_searchform_placeholder_text' );
 
 function gc_wbvb_searchform_placeholder_text( $text ) {
