@@ -9,9 +9,11 @@ Dit theme wordt gebruikt op [gebruikercentraal.nl](http://www.gebruikercentraal.
 * Paul van Buuren: paul@wbvb.nl
 
 ## Current version:
-4.3.23 - PHP-codecheck: variabelen netjes declareren.
+4.3.25 - Correcties n.a.v. a11y-check: SC 1.4.10 Reflow + 1.4.4 Herschalen
 
 ## Version history
+* 4.3.25 - Correcties n.a.v. a11y-check: SC 1.4.10 Reflow + 1.4.4 Herschalen
+* 4.3.24 - Correcties voor logo-widget. PHP-variabelencheck.
 * 4.3.23 - PHP-codecheck: variabelen netjes declareren.
 * 4.3.22 - Styling voor honeypot toegevoegd.
 * 4.3.21 - HSTS-header verwijderd.

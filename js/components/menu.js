@@ -14,6 +14,15 @@
 // Vars
 var header = $('.site-header'),
   mainMenu = document.querySelector('.nav-primary');
+const breakpointmenu = 900; // op 900px toggle tussen desktop / mobiel
+
+// dit is het hele menu-object. Als BUITEN dit object geklikt wordt, dan moeten alle
+// menu-elementen weer ingeklapt worden
+const totalMenuElement = document.getElementById("mainnav");
+
+// Dit zijn alle menu-items met een submenu
+const menuItems = document.querySelectorAll("li.menu-item-has-children");
+
 
 function navDesktop() {
 
@@ -71,11 +80,14 @@ function navDesktop() {
 
       $(this).attr('aria-expanded', true).find('span').text( menustrings.closesubmenu + ' ' + menuItem.find('a:first span').text());
       menuItem.addClass('open').find('.sub-menu').attr('aria-hidden', false);
+      menuItem.find('.sub-menu').removeClass('visuallyhidden');
+
 
     } else if (menuItem.hasClass('open')) {
       // Submenu is open, has to close
       $(this).attr('aria-expanded', false).find('span').text( menustrings.showsubmenu + ' ' + menuItem.find('a:first span').text());
       menuItem.removeClass('open').find('.sub-menu').attr('aria-hidden', true);
+      menuItem.find('.sub-menu').addClass('visuallyhidden');
     }
   });
 
@@ -148,5 +160,57 @@ if (matchMedia && mainMenu) {
   WidthChange(mq);
 }
 
+// =========================================================================================================
+
+// functie om alle opengeklapte items in het menu weer te sluiten
+function closeMenuItems() {
+
+  var width = window.innerWidth;
+  var listitems = document.querySelectorAll(".menu-item-has-children");
+
+  Array.prototype.forEach.call(menuItems, function (el, i) {
+    el.classList.remove("open");
+    el.querySelector('a').setAttribute('aria-expanded', "false");
+
+    if (width > breakpointmenu) {
+
+      var buttonExists = el.querySelector('button');
+
+      if (buttonExists && typeof buttonExists != 'undefined') {
+        buttonExists.setAttribute('aria-expanded', "false");
+        buttonExists.classList.remove('open-list');
+      }
+      el.querySelector('ul.sub-menu').classList.add('visuallyhidden');
+
+    }
+
+  });
+}
+
+// functie om te checken of binnen of buiten het menu ergens op geklikt wordt;
+// als er buiten het menu ergens op geklikt wordt, dan moeten alle opengeklapte items
+// in het menu weer sluiten
+function istotalMenuElementMenu(event) {
+
+  if (totalMenuElement !== event.target && !totalMenuElement.contains(event.target)) {
+    closeMenuItems();
+    console.log('Event is BUITEN totalmenu');
+    totalMenuElement.classList.remove('hasfocus');
+  }
+  else {
+    console.log('Event is BINNEN totalmenu');
+    totalMenuElement.classList.add('hasfocus');
+  }
+}
+
+document.onkeydown = function (evt) {
+  // menu-items ook laten sluiten met ESC-toets
+  evt = evt || window.event;
+  if (evt.keyCode == 27) {
+    // close with ESC
+    closeMenuItems();
+  }
+};
+document.addEventListener('click', istotalMenuElementMenu);
 
 // =========================================================================================================

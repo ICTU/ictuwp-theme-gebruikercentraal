@@ -17,8 +17,24 @@
 
 .gc-event-widget {
   .widget-wrap > a {
-    float: right;
+    display: block;
+    text-align: right;
     margin-top: 2rem;
+    padding-right: 1.5rem;
+    text-decoration: none;
+
+    background-image: url('../images/cta-pijl.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+    .icon_separator_fill('../images/cta-pijl.svg', @groen_2);
+    text-transform: lowercase;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+    }
+
   }
 }
 
